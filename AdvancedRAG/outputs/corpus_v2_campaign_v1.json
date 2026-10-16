@@ -82,47 +82,6 @@
         }
       }
     },
-    "advanced-v2": {
-      "development14": {
-        "suites": 42,
-        "fully_passing": 14,
-        "fpsr": 33.3,
-        "tpr": 82.4,
-        "statements": 73.21,
-        "branches": 79.09,
-        "coverage_reports": 42,
-        "statuses": {
-          "test_failures": 28,
-          "passed": 14
-        }
-      },
-      "heldout16": {
-        "suites": 48,
-        "fully_passing": 2,
-        "fpsr": 4.2,
-        "tpr": 73.5,
-        "statements": 85.22,
-        "branches": 75.17,
-        "coverage_reports": 48,
-        "statuses": {
-          "test_failures": 46,
-          "passed": 2
-        }
-      },
-      "all30": {
-        "suites": 90,
-        "fully_passing": 16,
-        "fpsr": 17.8,
-        "tpr": 76.8,
-        "statements": 79.62,
-        "branches": 77.0,
-        "coverage_reports": 90,
-        "statuses": {
-          "test_failures": 74,
-          "passed": 16
-        }
-      }
-    },
     "advanced-v3": {
       "development14": {
         "suites": 42,
@@ -188,26 +147,6 @@
         "mcnemar_exact_p": 0.0192
       }
     },
-    "advanced-v2": {
-      "development14": {
-        "pairs": 42,
-        "only_config_passes": 8,
-        "only_llm_only_passes": 4,
-        "mcnemar_exact_p": 0.3877
-      },
-      "heldout16": {
-        "pairs": 48,
-        "only_config_passes": 2,
-        "only_llm_only_passes": 3,
-        "mcnemar_exact_p": 1.0
-      },
-      "all30": {
-        "pairs": 90,
-        "only_config_passes": 10,
-        "only_llm_only_passes": 7,
-        "mcnemar_exact_p": 0.6291
-      }
-    },
     "advanced-v3": {
       "development14": {
         "pairs": 42,
@@ -233,181 +172,151 @@
     "AccessControl": {
       "llm-only": 1,
       "rag-v2": 3,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "Adoption": {
       "llm-only": 0,
       "rag-v2": 3,
-      "advanced-v2": 3,
       "advanced-v3": 0
     },
     "Auction": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "Counter": {
       "llm-only": 0,
       "rag-v2": 1,
-      "advanced-v2": 2,
       "advanced-v3": 3
     },
     "Crowdfunding": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "Escrow": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "MetaCoin": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "MultiSigWallet": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "PaymentSplitter": {
       "llm-only": 0,
       "rag-v2": 1,
-      "advanced-v2": 0,
       "advanced-v3": 1
     },
     "Registry": {
       "llm-only": 2,
       "rag-v2": 3,
-      "advanced-v2": 2,
       "advanced-v3": 3
     },
     "SimpleStorage": {
       "llm-only": 3,
       "rag-v2": 3,
-      "advanced-v2": 3,
       "advanced-v3": 3
     },
     "TimelockVault": {
       "llm-only": 1,
       "rag-v2": 3,
-      "advanced-v2": 0,
       "advanced-v3": 1
     },
     "Token": {
       "llm-only": 1,
       "rag-v2": 2,
-      "advanced-v2": 1,
       "advanced-v3": 2
     },
     "Voting": {
       "llm-only": 2,
       "rag-v2": 1,
-      "advanced-v2": 3,
       "advanced-v3": 3
     },
     "BatchTransfer": {
       "llm-only": 1,
       "rag-v2": 1,
-      "advanced-v2": 1,
       "advanced-v3": 0
     },
     "BondingCurve": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "CrossChainBridge": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "DAOGovernor": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "DEX": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "GaslessRelayer": {
       "llm-only": 0,
       "rag-v2": 3,
-      "advanced-v2": 0,
       "advanced-v3": 2
     },
     "InsurancePool": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "LendingPool": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 1,
       "advanced-v3": 1
     },
     "MerkleAirdrop": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "NFTMarketplace": {
       "llm-only": 2,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "NFTStaking": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "PriceOracle": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "RateLimiter": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "SubscriptionService": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 1
     },
     "TokenVesting": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     },
     "YieldVault": {
       "llm-only": 0,
       "rag-v2": 0,
-      "advanced-v2": 0,
       "advanced-v3": 0
     }
   },
@@ -426,13 +335,6 @@
       "invented function/API": 21,
       "other": 19
     },
-    "advanced-v2": {
-      "invented event": 29,
-      "revert mismatch": 102,
-      "other": 48,
-      "wrong assertion value": 55,
-      "invented function/API": 15
-    },
     "advanced-v3": {
       "invented event": 32,
       "other": 46,
@@ -447,10 +349,6 @@
       "heldout16": "48/48"
     },
     "rag-v2": {
-      "development14": "42/42",
-      "heldout16": "48/48"
-    },
-    "advanced-v2": {
       "development14": "42/42",
       "heldout16": "48/48"
     },

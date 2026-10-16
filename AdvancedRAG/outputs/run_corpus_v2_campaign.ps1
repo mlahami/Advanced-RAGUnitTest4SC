@@ -1,4 +1,5 @@
-# Corpus v2 campaign: RAG v2 and Advanced v2, ethers 6, 30 contracts x 3 repetitions.
+# Corpus v2 campaign: RAGUnitTest4SC (rag-v2), ethers 6, 30 contracts x 3 repetitions.
+# Advanced-RAGUnitTest4SC (advanced-v3) is run by run_advanced_v3_campaign.ps1.
 # Resumable: rerun the same script; completed generations are reused, finished runs are skipped quickly.
 # LLM-only ethers 6: development14 runs already exist; heldout16 runs come from run_heldout16_llm_only_ethers6.ps1.
 # Run from the AdvancedRAG folder:  powershell -ExecutionPolicy Bypass -File outputs\run_corpus_v2_campaign.ps1
@@ -7,7 +8,7 @@ $manifest='..\RAGUnitTest4SC-\data\benchmarks\enase30\manifest.json'
 $hh='..\RAGUnitTest4SC-\src\main\resources\HardhatProject-ethers6'
 $splits=@{ 'development14'='development-original14'; 'heldout16'='heldout-new16' }
 $jobs=@()
-foreach($rep in 'rep01','rep02','rep03'){ foreach($cfg in 'rag-v2','advanced-v2'){ foreach($s in 'development14','heldout16'){
+foreach($rep in 'rep01','rep02','rep03'){ foreach($cfg in 'rag-v2'){ foreach($s in 'development14','heldout16'){
   $jobs += ,@($s, $splits[$s], "outputs\$s-$cfg-ethers6-v1", "$s-$cfg-ethers6-v1-$rep") } } }
 "=== preflight $(Get-Date -Format s)"
 foreach($j in $jobs){

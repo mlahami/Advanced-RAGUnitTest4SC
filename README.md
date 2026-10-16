@@ -108,6 +108,11 @@ powershell -ExecutionPolicy Bypass -File outputs\run_advanced_v3_campaign.ps1
 Because the provider may change the model behind an API name, regenerated suites may differ from the
 stored ones; the stored prompts, traces and outputs are the reference for the paper.
 
+## Licence
+
+The code and data of this repository are released under the MIT licence (see [LICENSE](LICENSE)),
+except the corpus pairs described below.
+
 ## Corpus licences
 
 The 225 corpus pairs (`AdvancedRAG/data/corpus-v2/pairs/`) are third-party code collected from public

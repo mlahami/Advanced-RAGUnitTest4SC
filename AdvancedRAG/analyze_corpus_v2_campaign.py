@@ -1,4 +1,4 @@
-"""Compare LLM-only, RAG v2 and Advanced v2 (ethers 6, corpus v2) on 30 contracts x 3 repetitions.
+"""Compare LLM-only, RAGUnitTest4SC (rag-v2) and Advanced-RAGUnitTest4SC (advanced-v3) (ethers 6, corpus v2) on 30 contracts x 3 repetitions.
 
 Primary endpoint: fully passing suite rate (FPSR). Paired comparison per (contract, repetition) against
 LLM-only with an exact two-sided McNemar test on discordant pairs. Coverage: target contract only.
@@ -12,7 +12,7 @@ from analyze_oracle import category, mean
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'outputs'
-CONFIGS = ['llm-only', 'rag-v2', 'advanced-v2', 'advanced-v3']
+CONFIGS = ['llm-only', 'rag-v2', 'advanced-v3']
 SPLITS = ['development14', 'heldout16']
 REPS = ['rep01', 'rep02', 'rep03']
 EXPECTED = {'development14': 14, 'heldout16': 16}
@@ -68,27 +68,27 @@ def main():
             report['paired_vs_llm_only'].setdefault(c, {})[scope] = dict(pairs=len(pairs), only_config_passes=b,
                                                                        only_llm_only_passes=d, mcnemar_exact_p=mcnemar(b, d))
     (OUT / 'corpus_v2_campaign_v1.json').write_text(json.dumps(report, indent=2), encoding='utf-8')
-    lines = ['# Campagne corpus v2 — LLM seul, RAG v2, Advanced v2 (ethers 6)', '',
-             'Codestral 2508, température 0, seed 42, 4096 tokens, fixtures v2, aucune correction manuelle. '
-             'Prompt = prompt LLM seul ethers 6 + tests récupérés (RAG v2, Advanced v2) ; aucune autre différence. '
-             'Corpus v2 figé (225 paires, `5cabf7d0…`), pivot fonction → tests.', '',
-             '| Configuration | Portée | Suites | Réussies | FPSR | TPR | Instr. | Branches |', '|---|---|---:|---:|---:|---:|---:|---:|']
+    lines = ['# Corpus v2 campaign: LLM-only, RAGUnitTest4SC (rag-v2), Advanced-RAGUnitTest4SC (advanced-v3), ethers 6', '',
+             'Codestral 2508, temperature 0, seed 42, 4096 tokens, fixtures v2, no manual correction. '
+             'Prompt = LLM-only ethers 6 prompt + retrieved tests (rag-v2, advanced-v3); no other difference. '
+             'Frozen corpus v2 (225 pairs, `5cabf7d0...`), function-to-test pivot.', '',
+             '| Configuration | Scope | Suites | Fully passing | FPSR | TPR | Statements | Branches |', '|---|---|---:|---:|---:|---:|---:|---:|']
     for c in CONFIGS:
         for scope in SPLITS + ['all30']:
             s = report['summary'][c][scope]
             lines.append(f"| {c} | {scope} | {s['suites']} | {s['fully_passing']} | {s['fpsr']} % | {s['tpr']} % | {s['statements']} | {s['branches']} |")
-    lines += ['', '## Comparaison appariée avec le LLM seul (contrat × répétition)', '',
-              '| Configuration | Portée | Paires | Seule la config. réussit | Seul le LLM seul réussit | McNemar exact p |',
+    lines += ['', '## Paired comparison with LLM-only (contract x repetition)', '',
+              '| Configuration | Scope | Pairs | Only the configuration passes | Only LLM-only passes | Exact McNemar p |',
               '|---|---|---:|---:|---:|---:|']
     for c in CONFIGS[1:]:
         for scope, p in report['paired_vs_llm_only'][c].items():
             lines.append(f"| {c} | {scope} | {p['pairs']} | {p['only_config_passes']} | {p['only_llm_only_passes']} | {p['mcnemar_exact_p']} |")
-    lines += ['', '## Répétitions réussies par contrat (sur 3)', '', '| Contrat | ' + ' | '.join(CONFIGS) + ' |', '|---|' + '---:|' * len(CONFIGS)]
+    lines += ['', '## Fully passing repetitions per contract (out of 3)', '', '| Contract | ' + ' | '.join(CONFIGS) + ' |', '|---|' + '---:|' * len(CONFIGS)]
     for contract in sorted(report['per_contract']):
         lines.append(f"| {contract} | " + ' | '.join(str(report['per_contract'][contract].get(c, '–')) for c in CONFIGS) + ' |')
-    lines += ['', f"Complétude : {json.dumps(report['completeness'])}", '',
-              "Limites : répétitions non indépendantes (température 0, même seed) ; le split development14 a servi à la conception ; "
-              "heldout16 est le jeu de confirmation. Les couvertures sont des moyennes sur les rapports disponibles, fixtures exclues."]
+    lines += ['', f"Completeness: {json.dumps(report['completeness'])}", '',
+              "Limitations: repetitions are not independent (temperature 0, same seed); development14 was used for the design "
+              "of the pipeline and heldout16 is the confirmation set. Coverage values are means over the available reports, fixtures excluded."]
     (OUT / 'CORPUS_V2_CAMPAIGN_RESULTS.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
     print('\n'.join(lines))
 
