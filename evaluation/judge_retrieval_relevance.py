@@ -116,8 +116,10 @@ def metrics(ratings):
     r = [x['rating'] for x in ratings]
     dcg = sum((2 ** g - 1) / math.log2(i + 2) for i, g in enumerate(r))
     ideal = sum((2 ** g - 1) / math.log2(i + 2) for i, g in enumerate(sorted(r, reverse=True)))
+    # Reciprocal rank of the first directly adaptable test (rating 2) in prompt order; 0 when there is none.
+    mrr = next((1 / (i + 1) for i, g in enumerate(r) if g == 2), 0.0)
     return dict(relevance=sum(r) / (2 * len(r)), precision=sum(g >= 1 for g in r) / len(r), adaptable=sum(g == 2 for g in r) / len(r),
-                ndcg=dcg / ideal if ideal else 0.0)
+                mrr=mrr, ndcg=dcg / ideal if ideal else 0.0)
 
 
 def outcomes():
@@ -140,9 +142,9 @@ def report(args):
     from scipy.stats import spearmanr, wilcoxon
     rows = [json.loads(p.read_text(encoding='utf-8')) for p in sorted((OUT / 'scores' / args.judge).glob('*.json'))]
     per = {(r['config'], r['contract']): metrics(r['ratings']) for r in rows}
-    names = ['relevance', 'precision', 'adaptable', 'ndcg']
-    labels = dict(relevance='Mean graded relevance (/2)', precision='Precision (rating >= 1)', adaptable='Directly adaptable (rating 2)',
-                  ndcg='nDCG (prompt order)')
+    names = ['relevance', 'precision', 'adaptable', 'mrr', 'ndcg']
+    labels = dict(relevance='Mean graded relevance (/2)', precision='Precision@K (rating >= 1)', adaptable='Precision@K (rating 2)',
+                  mrr='MRR (rating 2)', ndcg='nDCG@K (graded, prompt order)')
     lines = [f'# Relevance of the retrieved tests ({args.judge}, {PROTOCOL})', '',
              'One judge call per retrieved test; rubric 0/1/2 for template value (see judge_retrieval_relevance.py). '
              'Means over contracts; LLM-only has no retrieved context.', '',
