@@ -1,0 +1,82 @@
+{
+  "pair": "mh-token--gzliudan",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:51:57.627929+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MhToken.sol": "f26003300df1802a78f8d781962ff150144da143a110c8bae9abe976dc4ba669",
+    "LICENSE": "66d9bd8de4b4baddaabbe38e8a57168e39fb615eddfe2bcf17b54c60ebbf085b",
+    "manifest.json": "919e4e911b16b6bb4853e9d0084c5b8b07ab44dfcc20bcb22ed475a57c5cac21",
+    "test/MhToken.js": "00a7b0fe76dde210e0cfdd852e42b0878f9e615b3c7b0be5d0cf94ad60fcf5fe"
+  },
+  "pair_sha256": "034f0584253a130e3678347b318426174e3d684b61ae3e0f0c9b2c5e5f6a851f",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MhToken.sol",
+        "reference": "MetaCoin.sol",
+        "structural": 0.312,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "MhToken.sol",
+        "reference": "Token.sol",
+        "structural": 0.161,
+        "signatures": 0.25,
+        "min_functions": 2
+      },
+      {
+        "contract": "MhToken.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.159,
+        "signatures": 0.111,
+        "min_functions": 2
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.69,
+      "mocha": {
+        "tests": 5,
+        "passes": 5,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.7,
+      "mocha": {
+        "tests": 5,
+        "passes": 5,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MhToken.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

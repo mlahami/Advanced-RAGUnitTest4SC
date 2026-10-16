@@ -1,0 +1,117 @@
+{
+  "pair": "fiduciary-duty--laprop",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:10:02.952669+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/FiduciaryDuty.sol": "1cf8992fcca822c420b2ff1c5b8569d01158990c575ce3a8be3f03b709bc459c",
+    "contracts/IERC3009Partial.sol": "15d2aa08657b0800c0a50f399a564f47f3b7f5330d3075af6782f1eae69a7e50",
+    "contracts/IWhiteList.sol": "9c1bc931a8713d5bd77caec29f5842d08e20f42c16acecd8b97a27bf44712f6f",
+    "contracts/MockERC3009.sol": "e6a9b5cd68cf1f51536c8a01154fafbb75382458326a5a84e0a31b635bd5be6e",
+    "contracts/MockForwarder.sol": "3ca9390b672775cb0b3fd643f884a624a9c2df09a78bea839269536f75ae421b",
+    "contracts/WhiteList.sol": "6eeb04ccfedb8c70140defe85058b17cdf23675fa31ebb110fbdd1739d47050f",
+    "LICENSE": "cad780003a52e3c7a0099fae43b885a3f38035a3595ca03707fa5c5bcdf03c87",
+    "manifest.json": "fd0e31b4921972f2946c74085476952c0ca98991336bbfd7ce45cf9dc250b954",
+    "test/FiduciaryDutyTest.js": "d4a1cc08858432fdba259b56d28bcbb9ec259cee2f40bbff962d86d105bb19dc"
+  },
+  "pair_sha256": "a93171ae2a16043317a4ece427c2474b45d281bc52a1843cdf697583612cb507",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "IWhiteList.sol",
+        "reference": "SimpleStorage.sol",
+        "structural": 0.125,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "MockERC3009.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.114,
+        "signatures": 0.083,
+        "min_functions": 4
+      },
+      {
+        "contract": "IWhiteList.sol",
+        "reference": "MetaCoin.sol",
+        "structural": 0.114,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.0,
+      "mocha": {
+        "tests": 31,
+        "passes": 31,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.88,
+      "mocha": {
+        "tests": 31,
+        "passes": 31,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "FiduciaryDuty.sol": {
+          "statements": 87.76,
+          "branches": 78.57,
+          "functions": 80.0,
+          "lines": 87.76
+        },
+        "IERC3009Partial.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IWhiteList.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockERC3009.sol": {
+          "statements": 84.62,
+          "branches": 50.0,
+          "functions": 80.0,
+          "lines": 84.62
+        },
+        "MockForwarder.sol": {
+          "statements": 0.0,
+          "branches": 100.0,
+          "functions": 0.0,
+          "lines": 0.0
+        },
+        "WhiteList.sol": {
+          "statements": 59.09,
+          "branches": 27.78,
+          "functions": 57.14,
+          "lines": 59.09
+        }
+      }
+    }
+  },
+  "accepted": true
+}

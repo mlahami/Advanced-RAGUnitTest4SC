@@ -1,0 +1,37 @@
+{
+  "id": "sale-vesting--bonabuild",
+  "domain": "vesting",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "SaleVesting.sol",
+    "BonaToken.sol",
+    "MockGranter.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/bonabuild/bona-contracts",
+    "commit": "9da35f2070c65c837944bb5210bb31cd500f6b45",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/SaleVesting.sol",
+      "contracts/BonaToken.sol",
+      "contracts/test/MockGranter.sol"
+    ],
+    "test_paths": [
+      "test/SaleVesting.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/SaleVesting.sol": "cccb6547ba16d5dc39bd33ed219e2dacfdc73e9d7e1f8314bef230b871f38a68",
+      "contracts/BonaToken.sol": "14955bbab60f3028eb698e225c2cbbe292eae07b549aa5278eeff7e462fb69c2",
+      "contracts/test/MockGranter.sol": "d180ad3708c9f2fe6f46d1ad018c05b920878ce2e872d1f9b47be888e5378c70",
+      "test/SaleVesting.test.js": "a0aa57693c429a4cc6d63013f59a7e7beaa4a4e254ad88853d66c6b18115ee6a"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 410 lines, closure 523 lines, 3 files; 32 it blocks; history: 10 commits 2026-08-30..2026-09-14",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:31:25.051072+00:00"
+}

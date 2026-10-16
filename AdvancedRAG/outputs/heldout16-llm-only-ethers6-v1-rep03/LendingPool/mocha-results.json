@@ -1,0 +1,171 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 10,
+    "passes": 8,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-09-30T20:59:11.317Z",
+    "end": "2026-09-30T20:59:12.320Z",
+    "duration": 1003
+  },
+  "tests": [
+    {
+      "title": "Should set the correct loan token",
+      "fullTitle": "LendingPool Deployment Should set the correct loan token",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should have correct constants",
+      "fullTitle": "LendingPool Deployment Should have correct constants",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should deposit ETH as collateral",
+      "fullTitle": "LendingPool depositCollateral Should deposit ETH as collateral",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should revert when depositing zero ETH",
+      "fullTitle": "LendingPool depositCollateral Should revert when depositing zero ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 23,
+      "err": {}
+    },
+    {
+      "title": "Should allow borrowing within collateral limit",
+      "fullTitle": "LendingPool borrow Should allow borrowing within collateral limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 27,
+      "err": {}
+    },
+    {
+      "title": "Should revert when borrowing exceeds collateral limit",
+      "fullTitle": "LendingPool borrow Should revert when borrowing exceeds collateral limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 11,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Undercollateralized', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Undercollateralized', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:76:7)"
+      }
+    },
+    {
+      "title": "Should allow repaying debt",
+      "fullTitle": "LendingPool repay Should allow repaying debt",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 29,
+      "err": {}
+    },
+    {
+      "title": "Should revert when repaying more than debt",
+      "fullTitle": "LendingPool repay Should revert when repaying more than debt",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should liquidate undercollateralized position",
+      "fullTitle": "LendingPool liquidate Should liquidate undercollateralized position",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Position healthy'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Position healthy'\n    at LendingPool.liquidate (runs/heldout16-llm-only-ethers6-v1-rep03/LendingPool/contracts/LendingPool.sol:100)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.liquidate (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:131:7)"
+      }
+    },
+    {
+      "title": "Should revert when liquidating healthy position",
+      "fullTitle": "LendingPool liquidate Should revert when liquidating healthy position",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should revert when borrowing exceeds collateral limit",
+      "fullTitle": "LendingPool borrow Should revert when borrowing exceeds collateral limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 11,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Undercollateralized', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Undercollateralized', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:76:7)"
+      }
+    },
+    {
+      "title": "Should liquidate undercollateralized position",
+      "fullTitle": "LendingPool liquidate Should liquidate undercollateralized position",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Position healthy'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Position healthy'\n    at LendingPool.liquidate (runs/heldout16-llm-only-ethers6-v1-rep03/LendingPool/contracts/LendingPool.sol:100)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.liquidate (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:131:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct loan token",
+      "fullTitle": "LendingPool Deployment Should set the correct loan token",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should have correct constants",
+      "fullTitle": "LendingPool Deployment Should have correct constants",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should deposit ETH as collateral",
+      "fullTitle": "LendingPool depositCollateral Should deposit ETH as collateral",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should revert when depositing zero ETH",
+      "fullTitle": "LendingPool depositCollateral Should revert when depositing zero ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 23,
+      "err": {}
+    },
+    {
+      "title": "Should allow borrowing within collateral limit",
+      "fullTitle": "LendingPool borrow Should allow borrowing within collateral limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 27,
+      "err": {}
+    },
+    {
+      "title": "Should allow repaying debt",
+      "fullTitle": "LendingPool repay Should allow repaying debt",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 29,
+      "err": {}
+    },
+    {
+      "title": "Should revert when repaying more than debt",
+      "fullTitle": "LendingPool repay Should revert when repaying more than debt",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should revert when liquidating healthy position",
+      "fullTitle": "LendingPool liquidate Should revert when liquidating healthy position",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\LendingPool\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    }
+  ]
+}

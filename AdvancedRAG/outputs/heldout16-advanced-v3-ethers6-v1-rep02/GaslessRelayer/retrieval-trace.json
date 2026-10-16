@@ -1,0 +1,124 @@
+{
+  "target_functions": [
+    {
+      "target_function": "execute",
+      "corpus_functions": [
+        "f019e7ecb7e7b65993f973b8",
+        "a763f08d5f503822f3ad9e21",
+        "14cf7e8438e21052f460e6b9",
+        "21b9014b3e1a9d6e3cfaec82",
+        "7611c9e13972e6a8afa93693",
+        "947a980ee88a816421c83bd2",
+        "52ac8a0a4e24b9f12421f39b",
+        "8824eb52b07279d25f47c339"
+      ],
+      "candidate_tests": [
+        "129be8d4b1a17070ac623742",
+        "13881daa4ed5312ecc0f8754",
+        "a24686e34a62fc132eda184d",
+        "9fd5a7334d8233c4e70c8782",
+        "ad2fba7ca1f37bab3300bc85",
+        "d5c2ea407f31a09092b8f58a",
+        "1ecefec521c74b826362d8e5"
+      ]
+    },
+    {
+      "target_function": "verify",
+      "corpus_functions": [
+        "4f9658c9fede189d8402ad65",
+        "7611c9e13972e6a8afa93693",
+        "06c38419e5530b7448c32978",
+        "947a980ee88a816421c83bd2",
+        "21b9014b3e1a9d6e3cfaec82",
+        "a763f08d5f503822f3ad9e21",
+        "8824eb52b07279d25f47c339",
+        "accbbc98b3adec1b916e20eb"
+      ],
+      "candidate_tests": [
+        "2071a46046983680d720d91a",
+        "62ee855214e2335e0a53b5d4",
+        "a24686e34a62fc132eda184d"
+      ]
+    }
+  ],
+  "selected": [
+    3080,
+    3082,
+    3081,
+    3083,
+    6737,
+    6988,
+    1527
+  ],
+  "context_chars": 14845,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "GaslessRelayer",
+  "retrieval_seconds": 2.2936808000085875,
+  "hits": [
+    {
+      "chunk_id": 3080,
+      "test_id": "129be8d4b1a17070ac623742",
+      "pair": "forwarder--siddhant-k08",
+      "domain_group": "relayer-meta-transactions",
+      "name": "Should reject invalid signature",
+      "via_function": "f019e7ecb7e7b65993f973b8",
+      "chars": 1558
+    },
+    {
+      "chunk_id": 3082,
+      "test_id": "2071a46046983680d720d91a",
+      "pair": "forwarder--siddhant-k08",
+      "domain_group": "relayer-meta-transactions",
+      "name": "Should verify valid request",
+      "via_function": "4f9658c9fede189d8402ad65",
+      "chars": 1923
+    },
+    {
+      "chunk_id": 3081,
+      "test_id": "13881daa4ed5312ecc0f8754",
+      "pair": "forwarder--siddhant-k08",
+      "domain_group": "relayer-meta-transactions",
+      "name": "Should reject replay attacks",
+      "via_function": "f019e7ecb7e7b65993f973b8",
+      "chars": 2058
+    },
+    {
+      "chunk_id": 3083,
+      "test_id": "62ee855214e2335e0a53b5d4",
+      "pair": "forwarder--siddhant-k08",
+      "domain_group": "relayer-meta-transactions",
+      "name": "Should reject invalid nonce",
+      "via_function": "4f9658c9fede189d8402ad65",
+      "chars": 1929
+    },
+    {
+      "chunk_id": 6737,
+      "test_id": "a24686e34a62fc132eda184d",
+      "pair": "text-storage--azerckid",
+      "domain_group": "relayer-meta-transactions",
+      "name": "should store text via meta-transaction (EIP-2771)",
+      "via_function": "a763f08d5f503822f3ad9e21",
+      "chars": 2837
+    },
+    {
+      "chunk_id": 6988,
+      "test_id": "9fd5a7334d8233c4e70c8782",
+      "pair": "totem-trusted-forwarder--totembound",
+      "domain_group": "relayer-meta-transactions",
+      "name": "Should revert when relaying to non-whitelisted contract",
+      "via_function": "14cf7e8438e21052f460e6b9",
+      "chars": 3374
+    },
+    {
+      "chunk_id": 1527,
+      "test_id": "d5c2ea407f31a09092b8f58a",
+      "pair": "cross-chain-governor--kdsmith18542",
+      "domain_group": "relayer-meta-transactions",
+      "name": "should send a message and emit event",
+      "via_function": "52ac8a0a4e24b9f12421f39b",
+      "chars": 1166
+    }
+  ]
+}

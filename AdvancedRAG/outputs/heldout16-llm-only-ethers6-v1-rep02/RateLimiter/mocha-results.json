@@ -1,0 +1,247 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 15,
+    "passes": 12,
+    "pending": 0,
+    "failures": 3,
+    "start": "2026-09-30T20:54:55.829Z",
+    "end": "2026-09-30T20:54:56.359Z",
+    "duration": 530
+  },
+  "tests": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "RateLimiter Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct parameters",
+      "fullTitle": "RateLimiter Deployment Should set the correct parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert with zero parameters",
+      "fullTitle": "RateLimiter Deployment Should revert with zero parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 25,
+      "err": {}
+    },
+    {
+      "title": "Should initialize new users with full capacity",
+      "fullTitle": "RateLimiter Token Bucket Should initialize new users with full capacity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should refill tokens over time",
+      "fullTitle": "RateLimiter Token Bucket Should refill tokens over time",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should not exceed capacity",
+      "fullTitle": "RateLimiter Token Bucket Should not exceed capacity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should allow deposit when tokens are available",
+      "fullTitle": "RateLimiter Deposit Should allow deposit when tokens are available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should revert when rate limit is exceeded",
+      "fullTitle": "RateLimiter Deposit Should revert when rate limit is exceeded",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:86:7)"
+      }
+    },
+    {
+      "title": "Should consume tokens on deposit",
+      "fullTitle": "RateLimiter Deposit Should consume tokens on deposit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should allow withdraw when tokens are available",
+      "fullTitle": "RateLimiter Withdraw Should allow withdraw when tokens are available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should revert when rate limit is exceeded",
+      "fullTitle": "RateLimiter Withdraw Should revert when rate limit is exceeded",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 11,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:116:7)"
+      }
+    },
+    {
+      "title": "Should revert when insufficient balance",
+      "fullTitle": "RateLimiter Withdraw Should revert when insufficient balance",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should consume tokens on withdraw",
+      "fullTitle": "RateLimiter Withdraw Should consume tokens on withdraw",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 17,
+      "err": {
+        "message": "expected 70 to equal 60.",
+        "stack": "AssertionError: expected 70 to equal 60.\n    at Context.<anonymous> (test\\generated.test.js:133:28)"
+      }
+    },
+    {
+      "title": "Should correctly calculate available tokens",
+      "fullTitle": "RateLimiter Token Consumption Should correctly calculate available tokens",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should handle multiple users independently",
+      "fullTitle": "RateLimiter Token Consumption Should handle multiple users independently",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should revert when rate limit is exceeded",
+      "fullTitle": "RateLimiter Deposit Should revert when rate limit is exceeded",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:86:7)"
+      }
+    },
+    {
+      "title": "Should revert when rate limit is exceeded",
+      "fullTitle": "RateLimiter Withdraw Should revert when rate limit is exceeded",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 11,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:116:7)"
+      }
+    },
+    {
+      "title": "Should consume tokens on withdraw",
+      "fullTitle": "RateLimiter Withdraw Should consume tokens on withdraw",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 17,
+      "err": {
+        "message": "expected 70 to equal 60.",
+        "stack": "AssertionError: expected 70 to equal 60.\n    at Context.<anonymous> (test\\generated.test.js:133:28)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "RateLimiter Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct parameters",
+      "fullTitle": "RateLimiter Deployment Should set the correct parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert with zero parameters",
+      "fullTitle": "RateLimiter Deployment Should revert with zero parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 25,
+      "err": {}
+    },
+    {
+      "title": "Should initialize new users with full capacity",
+      "fullTitle": "RateLimiter Token Bucket Should initialize new users with full capacity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should refill tokens over time",
+      "fullTitle": "RateLimiter Token Bucket Should refill tokens over time",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should not exceed capacity",
+      "fullTitle": "RateLimiter Token Bucket Should not exceed capacity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should allow deposit when tokens are available",
+      "fullTitle": "RateLimiter Deposit Should allow deposit when tokens are available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should consume tokens on deposit",
+      "fullTitle": "RateLimiter Deposit Should consume tokens on deposit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should allow withdraw when tokens are available",
+      "fullTitle": "RateLimiter Withdraw Should allow withdraw when tokens are available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should revert when insufficient balance",
+      "fullTitle": "RateLimiter Withdraw Should revert when insufficient balance",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should correctly calculate available tokens",
+      "fullTitle": "RateLimiter Token Consumption Should correctly calculate available tokens",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should handle multiple users independently",
+      "fullTitle": "RateLimiter Token Consumption Should handle multiple users independently",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\RateLimiter\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    }
+  ]
+}

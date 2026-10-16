@@ -1,0 +1,62 @@
+{
+  "id": "certi-chain-registry--amit01-developer",
+  "domain": "certificate-registry",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "CertiChainRegistry.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Amit01-developer/CertiChain",
+    "commit": "152a3f1a5e55022e0d9e9a4eae90992e62656359",
+    "license": "MIT",
+    "contract_paths": [
+      "blockchain/contracts/CertiChainRegistry.sol"
+    ],
+    "test_paths": [
+      "blockchain/test/CertiChainRegistry.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "blockchain/contracts/CertiChainRegistry.sol": "b2324b3cbeae013767c6217d216041c7c32f5772970fa95af87bc0c79ee8d27b",
+      "blockchain/test/CertiChainRegistry.test.ts": "bda230eeaa42f764636a6ed09384e486e8db35bb1a956f98bcca623bcce532aa"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "CertiChainRegistry.test.js",
+      "upstream_path": "blockchain/test/CertiChainRegistry.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "CertiChainRegistry.test.js",
+      "upstream_path": "blockchain/test/CertiChainRegistry.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "CertiChainRegistry.test.js",
+      "upstream_path": "blockchain/test/CertiChainRegistry.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "CertiChainRegistry"
+      ],
+      "file": "CertiChainRegistry.test.js",
+      "upstream_path": "blockchain/test/CertiChainRegistry.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Certificate issuance/verification/revocation registry; 2026 repo, 16 commits (check authorship). Primary 166 non-blank lines, closure 166 lines/1 files; 17 its, 24 expects; pragma ^0.8.24.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:15.458231+00:00"
+}

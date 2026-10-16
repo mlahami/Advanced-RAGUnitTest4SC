@@ -1,0 +1,367 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 22,
+    "passes": 17,
+    "pending": 0,
+    "failures": 6,
+    "start": "2026-09-30T21:26:28.289Z",
+    "end": "2026-09-30T21:26:29.365Z",
+    "duration": 1076
+  },
+  "tests": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "CrossChainBridge Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct token",
+      "fullTitle": "CrossChainBridge Deployment Should set the correct token",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct required signatures",
+      "fullTitle": "CrossChainBridge Deployment Should set the correct required signatures",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct bridge fee",
+      "fullTitle": "CrossChainBridge Deployment Should set the correct bridge fee",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to add validators",
+      "fullTitle": "CrossChainBridge Validator Management Should allow owner to add validators",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 16,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Already validator'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Already validator'\n    at CrossChainBridge.addValidator (runs/heldout16-rag-v2-ethers6-v1-rep02/CrossChainBridge/contracts/CrossChainBridge.sol:200)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.addValidator (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:58:7)"
+      }
+    },
+    {
+      "title": "Should prevent adding duplicate validators",
+      "fullTitle": "CrossChainBridge Validator Management Should prevent adding duplicate validators",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to remove validators",
+      "fullTitle": "CrossChainBridge Validator Management Should allow owner to remove validators",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should prevent removing non-validators",
+      "fullTitle": "CrossChainBridge Validator Management Should prevent removing non-validators",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from adding validators",
+      "fullTitle": "CrossChainBridge Validator Management Should prevent non-owners from adding validators",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from removing validators",
+      "fullTitle": "CrossChainBridge Validator Management Should prevent non-owners from removing validators",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should update validator count correctly",
+      "fullTitle": "CrossChainBridge Validator Management Should update validator count correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Already validator'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Already validator'\n    at CrossChainBridge.addValidator (runs/heldout16-rag-v2-ethers6-v1-rep02/CrossChainBridge/contracts/CrossChainBridge.sol:200)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.addValidator (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:93:7)"
+      }
+    },
+    {
+      "title": "Should allow owner to set required signatures",
+      "fullTitle": "CrossChainBridge Signature Threshold Should allow owner to set required signatures",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {
+        "message": "Event \"RequiredSignaturesUpdated\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"RequiredSignaturesUpdated\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:100:7)"
+      }
+    },
+    {
+      "title": "Should prevent setting threshold to zero",
+      "fullTitle": "CrossChainBridge Signature Threshold Should prevent setting threshold to zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent setting threshold above validator count",
+      "fullTitle": "CrossChainBridge Signature Threshold Should prevent setting threshold above validator count",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from setting threshold",
+      "fullTitle": "CrossChainBridge Signature Threshold Should prevent non-owners from setting threshold",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should lock tokens and emit Locked event",
+      "fullTitle": "CrossChainBridge Lock Functionality Should lock tokens and emit Locked event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Error in \"Locked\" event: Error in the 1st argument assertion: expected '0x9e1e8f284ef5422c4ccffbb6f8ce0584f9d…' to equal '0x987590bd99ce47b51b1f3fecf61de52814e…'",
+        "stack": "AssertionError: Error in \"Locked\" event: Error in the 1st argument assertion: expected '0x9e1e8f284ef5422c4ccffbb6f8ce0584f9d…' to equal '0x987590bd99ce47b51b1f3fecf61de52814e…'\n    at Context.<anonymous> (test\\generated.test.js:127:7)"
+      }
+    },
+    {
+      "title": "Should prevent locking with insufficient fee",
+      "fullTitle": "CrossChainBridge Lock Functionality Should prevent locking with insufficient fee",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent locking zero amount",
+      "fullTitle": "CrossChainBridge Lock Functionality Should prevent locking zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent locking to zero address",
+      "fullTitle": "CrossChainBridge Lock Functionality Should prevent locking to zero address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to withdraw fees",
+      "fullTitle": "CrossChainBridge Fee Withdrawal Should allow owner to withdraw fees",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from withdrawing fees",
+      "fullTitle": "CrossChainBridge Fee Withdrawal Should prevent non-owners from withdrawing fees",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should handle failed transfers",
+      "fullTitle": "CrossChainBridge Fee Withdrawal Should handle failed transfers",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 13,
+      "err": {
+        "message": "bridge.connect(...).transferOwnership is not a function",
+        "stack": "TypeError: bridge.connect(...).transferOwnership is not a function\n    at Context.<anonymous> (test\\generated.test.js:259:35)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should allow owner to add validators",
+      "fullTitle": "CrossChainBridge Validator Management Should allow owner to add validators",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 16,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Already validator'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Already validator'\n    at CrossChainBridge.addValidator (runs/heldout16-rag-v2-ethers6-v1-rep02/CrossChainBridge/contracts/CrossChainBridge.sol:200)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.addValidator (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:58:7)"
+      }
+    },
+    {
+      "title": "Should update validator count correctly",
+      "fullTitle": "CrossChainBridge Validator Management Should update validator count correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Already validator'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Already validator'\n    at CrossChainBridge.addValidator (runs/heldout16-rag-v2-ethers6-v1-rep02/CrossChainBridge/contracts/CrossChainBridge.sol:200)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.addValidator (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:93:7)"
+      }
+    },
+    {
+      "title": "Should allow owner to set required signatures",
+      "fullTitle": "CrossChainBridge Signature Threshold Should allow owner to set required signatures",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {
+        "message": "Event \"RequiredSignaturesUpdated\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"RequiredSignaturesUpdated\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:100:7)"
+      }
+    },
+    {
+      "title": "Should lock tokens and emit Locked event",
+      "fullTitle": "CrossChainBridge Lock Functionality Should lock tokens and emit Locked event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Error in \"Locked\" event: Error in the 1st argument assertion: expected '0x9e1e8f284ef5422c4ccffbb6f8ce0584f9d…' to equal '0x987590bd99ce47b51b1f3fecf61de52814e…'",
+        "stack": "AssertionError: Error in \"Locked\" event: Error in the 1st argument assertion: expected '0x9e1e8f284ef5422c4ccffbb6f8ce0584f9d…' to equal '0x987590bd99ce47b51b1f3fecf61de52814e…'\n    at Context.<anonymous> (test\\generated.test.js:127:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"Should allow validators to validate requests\"",
+      "fullTitle": "CrossChainBridge Validation and Minting \"before each\" hook for \"Should allow validators to validate requests\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'name')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js:172:59\n    at Array.find (<anonymous>)\n    at Context.<anonymous> (test\\generated.test.js:172:34)"
+      }
+    },
+    {
+      "title": "Should handle failed transfers",
+      "fullTitle": "CrossChainBridge Fee Withdrawal Should handle failed transfers",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 13,
+      "err": {
+        "message": "bridge.connect(...).transferOwnership is not a function",
+        "stack": "TypeError: bridge.connect(...).transferOwnership is not a function\n    at Context.<anonymous> (test\\generated.test.js:259:35)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "CrossChainBridge Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct token",
+      "fullTitle": "CrossChainBridge Deployment Should set the correct token",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct required signatures",
+      "fullTitle": "CrossChainBridge Deployment Should set the correct required signatures",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct bridge fee",
+      "fullTitle": "CrossChainBridge Deployment Should set the correct bridge fee",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "Should prevent adding duplicate validators",
+      "fullTitle": "CrossChainBridge Validator Management Should prevent adding duplicate validators",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to remove validators",
+      "fullTitle": "CrossChainBridge Validator Management Should allow owner to remove validators",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should prevent removing non-validators",
+      "fullTitle": "CrossChainBridge Validator Management Should prevent removing non-validators",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from adding validators",
+      "fullTitle": "CrossChainBridge Validator Management Should prevent non-owners from adding validators",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from removing validators",
+      "fullTitle": "CrossChainBridge Validator Management Should prevent non-owners from removing validators",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent setting threshold to zero",
+      "fullTitle": "CrossChainBridge Signature Threshold Should prevent setting threshold to zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent setting threshold above validator count",
+      "fullTitle": "CrossChainBridge Signature Threshold Should prevent setting threshold above validator count",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from setting threshold",
+      "fullTitle": "CrossChainBridge Signature Threshold Should prevent non-owners from setting threshold",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should prevent locking with insufficient fee",
+      "fullTitle": "CrossChainBridge Lock Functionality Should prevent locking with insufficient fee",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent locking zero amount",
+      "fullTitle": "CrossChainBridge Lock Functionality Should prevent locking zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent locking to zero address",
+      "fullTitle": "CrossChainBridge Lock Functionality Should prevent locking to zero address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to withdraw fees",
+      "fullTitle": "CrossChainBridge Fee Withdrawal Should allow owner to withdraw fees",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from withdrawing fees",
+      "fullTitle": "CrossChainBridge Fee Withdrawal Should prevent non-owners from withdrawing fees",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\CrossChainBridge\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    }
+  ]
+}

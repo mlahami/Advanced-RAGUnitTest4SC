@@ -1,0 +1,117 @@
+{
+  "pair": "weather-shield-insurance--hassanmubiru",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:37:07.968128+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/FlareDataConnector.sol": "f14d62b7c23cc3d3cf187d3ecb593b447f345a98c05381188ee281ba1669954a",
+    "contracts/IFlareDataConnector.sol": "4413d9389c72df5e354d5aa4162d92dd178cb7d3962654a2fe3a914d3074386c",
+    "contracts/IWeatherShieldInsurance.sol": "f98025597dabe876d032e50b3ec111dd0dc3d9f9a44cfa25b733089d3adc3d2e",
+    "contracts/PolicyFactory.sol": "f695cc50c8f132efd4a6ae2bb247d751de763535bcf06d7e1267cf29c8deab18",
+    "contracts/WeatherOracle.sol": "2a301dcfb08444c660fde64fef861f6b952a02cb6663aae67dce07fd405ab810",
+    "contracts/WeatherShieldInsurance.sol": "e32f1ae61ad7268cfa13e72d13d224978491ca16e6a900767341d8881cb18842",
+    "LICENSE": "38ce5ee2e4f1933a12465fc832bc2a63749f6987afd1297c92e6c702f231bf7e",
+    "manifest.json": "031ae1555e3e06295498c56272011328c4fad59a9a02a7fc68f95d101425f48e",
+    "test/WeatherShield.test.js": "fecd87710e9ff34e6526ddd1fca14c2e1ebc2162c292b1c1ff4a3c72bd296501"
+  },
+  "pair_sha256": "7f1d1f5eb2e308ae1c1b1fb3ce14842351f4a4b200ec666df3d5374675fdfd90",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "WeatherOracle.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.222,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "FlareDataConnector.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.212,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "WeatherShieldInsurance.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.204,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.16,
+      "mocha": {
+        "tests": 29,
+        "passes": 29,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 9.57,
+      "mocha": {
+        "tests": 29,
+        "passes": 29,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "WeatherShieldInsurance.sol": {
+          "statements": 71.17,
+          "branches": 43.94,
+          "functions": 70.83,
+          "lines": 71.17
+        },
+        "FlareDataConnector.sol": {
+          "statements": 65.0,
+          "branches": 41.67,
+          "functions": 75.0,
+          "lines": 65.0
+        },
+        "PolicyFactory.sol": {
+          "statements": 78.79,
+          "branches": 23.08,
+          "functions": 60.0,
+          "lines": 78.79
+        },
+        "WeatherOracle.sol": {
+          "statements": 1.89,
+          "branches": 2.0,
+          "functions": 6.25,
+          "lines": 1.89
+        },
+        "IFlareDataConnector.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IWeatherShieldInsurance.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

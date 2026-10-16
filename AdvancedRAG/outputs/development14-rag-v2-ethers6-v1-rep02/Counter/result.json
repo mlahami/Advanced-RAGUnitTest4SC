@@ -1,0 +1,48 @@
+{
+  "contract": "Counter",
+  "status": "test_failures",
+  "prompt_sha256": "af6b8ea56f4ed36afa66ada2412bea19d5a760659ed3c37c1713ee6d7f526855",
+  "generation_seconds": 6.709433299954981,
+  "usage": {
+    "prompt_tokens": 10987,
+    "total_tokens": 11781,
+    "completion_tokens": 794,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 3.965619600028731
+  },
+  "passed_tests": 11,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Counter Increment Should emit no events",
+      "error": "Event \"ValueSet\" doesn't exist in the contract"
+    },
+    {
+      "title": "Counter Decrement Should emit no events",
+      "error": "Event \"ValueSet\" doesn't exist in the contract"
+    },
+    {
+      "title": "Counter Reset Should emit no events",
+      "error": "Event \"ValueSet\" doesn't exist in the contract"
+    },
+    {
+      "title": "Counter Boundary Conditions Should handle maximum uint256 value",
+      "error": "counter.setValue is not a function"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

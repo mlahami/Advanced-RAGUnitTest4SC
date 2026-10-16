@@ -1,0 +1,82 @@
+{
+  "pair": "recurring-scheduler--kravadk",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:36:13.883867+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/RecurringScheduler.sol": "39250625ecafca07d0d7d1d224b1cdd2165081848349335e0fae59dc6e9c81a5",
+    "LICENSE": "524320063b37da4cb8f03516145bf261069fc020ff794f0549ccb8d26d279e75",
+    "manifest.json": "9227e104a53bb786a1710967ee9dfe299f732ee76b8d8a646e948b6c1587b60a",
+    "test/RecurringScheduler.test.js": "2b12059bac5168e9dffaf54481e844a3d342825d3d3e86e87d8fafa51e71a24f"
+  },
+  "pair_sha256": "af0fe6ef25f57eb2f6e3e285bdd4ed87a1c1c4516d874cb4617ce79da8843346",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "RecurringScheduler.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.144,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "RecurringScheduler.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.135,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "RecurringScheduler.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.131,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.25,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.77,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "RecurringScheduler.sol": {
+          "statements": 74.65,
+          "branches": 50.0,
+          "functions": 75.0,
+          "lines": 74.24
+        }
+      }
+    }
+  },
+  "accepted": true
+}

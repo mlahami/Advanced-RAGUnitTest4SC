@@ -1,0 +1,67 @@
+{
+  "id": "rag-v2.MetaCoin",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "MetaCoin",
+  "chunk_ids": [
+    5895,
+    1961,
+    2664,
+    2665,
+    5710,
+    5711,
+    4127,
+    6144
+  ],
+  "context_sha256": "09c51c395c0dee3d214fe38d99f5beca0389e9eab3001d45e0c6e77e5ac62892",
+  "ratings": [
+    {
+      "chunk_id": 5895,
+      "rating": 1,
+      "reason": "Shows generic deployment, event emission check, and state query patterns useful for testing MetaCoin, but does not target its functions or behavior."
+    },
+    {
+      "chunk_id": 1961,
+      "rating": 0,
+      "reason": "Test targets unrelated contract; patterns (custom error revert, address setting) don’t apply to MetaCoin’s functions."
+    },
+    {
+      "chunk_id": 2664,
+      "rating": 1,
+      "reason": "Only shows generic revert expectation; MetaCoin uses return false, not custom revert, so pattern only loosely applicable."
+    },
+    {
+      "chunk_id": 2665,
+      "rating": 1,
+      "reason": "Shows generic deployment, approvals, and balance change checks useful as a pattern, but does not test MetaCoin-specific sendCoin or balance logic."
+    },
+    {
+      "chunk_id": 5710,
+      "rating": 1,
+      "reason": "Shows generic revert expectation pattern, but behavior unrelated to MetaCoin’s functions"
+    },
+    {
+      "chunk_id": 5711,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern useful for testing failures, though behavior unrelated to MetaCoin"
+    },
+    {
+      "chunk_id": 4127,
+      "rating": 1,
+      "reason": "Shows generic deployment, token minting, approvals and balance assertions useful as a pattern, but tests unrelated bridge behavior not present in MetaCoin."
+    },
+    {
+      "chunk_id": 6144,
+      "rating": 1,
+      "reason": "Shows generic event emission assertion pattern, which can be adapted to MetaCoin's Transfer event, but the specific liquidity logic is unrelated."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8971,
+    "completion_tokens": 900,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 60.3,
+  "evaluated_utc": "2026-10-12T08:48:18.184477+00:00"
+}

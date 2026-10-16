@@ -1,0 +1,34 @@
+{
+  "id": "marketplace--ozgurkutlu0",
+  "domain": "nft-marketplace",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Marketplace.sol",
+    "NFTForge.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ozgurkutlu0/nftforge",
+    "commit": "2c8f4cb1498a0c4e96d5dbb2de2fcfd7e839ffe7",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Marketplace.sol",
+      "contracts/NFTForge.sol"
+    ],
+    "test_paths": [
+      "test/Marketplace.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Marketplace.sol": "86044df1ee869e28b8c64e95da1313bf5cc9bb44a00e8ff9d9c61d640781afa7",
+      "contracts/NFTForge.sol": "fe0ffdf2d4bcfac80e6df2b820044546c3446230cd7d27b5a524c463044be428",
+      "test/Marketplace.test.js": "66d975050d7ee327fdfecadc0093a6648ac9500bcd7f0dff62bab95fdfffa863"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (flagged in search report). Small NFT list/buy/cancel marketplace over NFTForge.sol; same repo as NFTForge entry. Primary 60 non-blank lines, closure 83 lines/2 files; 12 its, 19 expects; pragma ^0.8.24.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T12:05:25.592104+00:00"
+}

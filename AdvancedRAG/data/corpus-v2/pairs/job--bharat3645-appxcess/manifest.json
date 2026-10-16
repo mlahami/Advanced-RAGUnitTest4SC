@@ -1,0 +1,39 @@
+{
+  "id": "job--bharat3645-appxcess",
+  "domain": "freelance-escrow",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Job.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/bharat3645/AppXcess-GigX",
+    "commit": "f48dfe3dedd0a759c00305a69509ab9601f70bc1",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Job.sol"
+    ],
+    "test_paths": [
+      "test/Job.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Job.sol": "2e8e1c30114128bd68500a85c48af14a0d8bcbb2f838ef2f2bd73819ccca66d3",
+      "test/Job.js": "e07878db5cde59dbe70738fecd13e2137931b3990b7c0a9dcd803215c02b2e6e"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "Job.js",
+      "upstream_path": "test/Job.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Escrowed job marketplace (post with budget, accept, release, cancel, reclaim expired funds) - separate, larger rewrite of the GigX Job contract. Primary 118 non-blank lines, closure 118 lines/1 files; 22 its, 31 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:07:30.159459+00:00"
+}

@@ -1,0 +1,89 @@
+{
+  "pair": "english-auction--dexauction",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T08:14:29.238523+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/EnglishAuction.sol": "b60e1fd2dd56d78acea812c9af397e0918df99c371b18c8b9d5e0dc5ad0eb5f8",
+    "contracts/SKLERC721.sol": "2283a77f2317d210f01f4e7508e161380c7d569c487c1a28eaa600dc5ce9ae5c",
+    "LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+    "manifest.json": "db5b96dd40a66695f23965c8318b10403e07e8cf86e5e15d4875e89674e6a6f4",
+    "test/EnglishAuctionTest.js": "2c550748352c3804375246b6300a381f51bd9659325ddaf71ecd712ba33d7283"
+  },
+  "pair_sha256": "cdc2e23eb9f73df6e0fa7fad2e77ab818497c8c9125fab3ad8b09b2582b9d4e0",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "EnglishAuction.sol",
+        "reference": "Auction.sol",
+        "structural": 0.374,
+        "signatures": 0.125,
+        "min_functions": 3
+      },
+      {
+        "contract": "EnglishAuction.sol",
+        "reference": "Crowdfunding.sol",
+        "structural": 0.287,
+        "signatures": 0.125,
+        "min_functions": 3
+      },
+      {
+        "contract": "EnglishAuction.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.274,
+        "signatures": 0.077,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.12,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.52,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "EnglishAuction.sol": {
+          "statements": 95.45,
+          "branches": 87.5,
+          "functions": 100.0,
+          "lines": 95.45
+        },
+        "SKLERC721.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

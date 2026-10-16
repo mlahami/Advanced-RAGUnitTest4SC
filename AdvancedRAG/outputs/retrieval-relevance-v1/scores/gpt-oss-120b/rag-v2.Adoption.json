@@ -1,0 +1,79 @@
+{
+  "id": "rag-v2.Adoption",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "Adoption",
+  "chunk_ids": [
+    3308,
+    1528,
+    1562,
+    241,
+    238,
+    7287,
+    7288,
+    2613,
+    2610,
+    4622
+  ],
+  "context_sha256": "a4e8064db511035291dc9fa100cacb5db3021c4125c3f022eb9f34be9f632c2b",
+  "ratings": [
+    {
+      "chunk_id": 3308,
+      "rating": 1,
+      "reason": "Shows generic Hardhat setup, deployment, and expect usage, but tests unrelated DEX behavior; only pattern is reusable."
+    },
+    {
+      "chunk_id": 1528,
+      "rating": 0,
+      "reason": "Test targets unrelated bridge functions; no applicable pattern for adoption logic."
+    },
+    {
+      "chunk_id": 1562,
+      "rating": 1,
+      "reason": "Shows generic fixture deployment and getter/setter assertion pattern, but target contract has different functions; only basic testing structure is reusable."
+    },
+    {
+      "chunk_id": 241,
+      "rating": 1,
+      "reason": "Demonstrates generic deployment and state‑assertion pattern, but tests unrelated revoke logic not present in Adoption contract."
+    },
+    {
+      "chunk_id": 238,
+      "rating": 1,
+      "reason": "Shows generic deployment and state‑assertion pattern but tests unrelated functionality, not directly reusable for Adoption contract."
+    },
+    {
+      "chunk_id": 7287,
+      "rating": 1,
+      "reason": "Shows generic deployment and call pattern, but tests unrelated behavior; only basic structure is reusable."
+    },
+    {
+      "chunk_id": 7288,
+      "rating": 1,
+      "reason": "Shows generic deployment and function call with assertion, but behavior unrelated to Adoption contract"
+    },
+    {
+      "chunk_id": 2613,
+      "rating": 0,
+      "reason": "Test checks unrelated event registration and state, no matching functions or patterns for Adoption contract."
+    },
+    {
+      "chunk_id": 2610,
+      "rating": 1,
+      "reason": "Only demonstrates generic deployment and view-call pattern; does not test adoption logic relevant to target contract."
+    },
+    {
+      "chunk_id": 4622,
+      "rating": 0,
+      "reason": "Test checks operator approval, unrelated to Adoption’s adopt/getAdopters functions; no applicable pattern."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8152,
+    "completion_tokens": 1058,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 29.6,
+  "evaluated_utc": "2026-10-12T08:43:07.666036+00:00"
+}

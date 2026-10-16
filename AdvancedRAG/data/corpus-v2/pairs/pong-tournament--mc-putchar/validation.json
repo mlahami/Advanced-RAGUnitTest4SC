@@ -1,0 +1,82 @@
+{
+  "pair": "pong-tournament--mc-putchar",
+  "validator": "corpus-v2-validate-pair-v3",
+  "validated_utc": "2026-09-29T21:40:26.682085+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/PongTournament.sol": "b6bb54e7e1a45eddb0b1670e1274a0a5189cc8c12b6c8c663d81e2bbf0e0839f",
+    "LICENSE": "436a6d536138f203ac333858cff92a568be62797752b3adb94bcaa0f6ffe7ef6",
+    "manifest.json": "6873718d1a2a751807b3c7153709d868983b53c71ba3216655a9ab4ecd8ded3a",
+    "test/PongTournament.js": "05748325477b278ef31839cff51d76511d9c3dca5394b2bf61830861126a9aa4"
+  },
+  "pair_sha256": "eefae3950ed221e541d22dafba23c6aa728f63d455b6f135689929a33d679f64",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "PongTournament.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.138,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "PongTournament.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.136,
+        "signatures": 0.0,
+        "min_functions": 11
+      },
+      {
+        "contract": "PongTournament.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.111,
+        "signatures": 0.0,
+        "min_functions": 10
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.0,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.31,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "PongTournament.sol": {
+          "statements": 88.57,
+          "branches": 77.78,
+          "functions": 80.0,
+          "lines": 88.57
+        }
+      }
+    }
+  },
+  "accepted": true
+}

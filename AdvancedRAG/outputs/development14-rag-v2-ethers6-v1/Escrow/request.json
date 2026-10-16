@@ -1,0 +1,7 @@
+{
+  "solidityCode": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.24;\n\ncontract Escrow {\n    address payable public immutable seller;\n    address public immutable buyer;\n    address public immutable arbiter;\n    bool public funded;\n    bool public closed;\n\n    constructor(address payable _seller, address _arbiter) {\n        buyer = msg.sender;\n        seller = _seller;\n        arbiter = _arbiter;\n    }\n\n    function fund() external payable {\n        require(msg.sender == buyer, \"only buyer\");\n        require(!funded && msg.value > 0, \"invalid funding\");\n        funded = true;\n    }\n\n    function release() external {\n        require(msg.sender == buyer || msg.sender == arbiter, \"not authorized\");\n        require(funded && !closed, \"not releasable\");\n        closed = true;\n        seller.transfer(address(this).balance);\n    }\n\n    function refund() external {\n        require(msg.sender == seller || msg.sender == arbiter, \"not authorized\");\n        require(funded && !closed, \"not refundable\");\n        closed = true;\n        payable(buyer).transfer(address(this).balance);\n    }\n}\n\n",
+  "context": "Generate a unit test suite for the supplied Solidity contract.",
+  "generalInstructions": "Use Hardhat 2, ethers 6, Mocha and hardhat-chai-matchers. No external helper files.",
+  "requirements": "Cover actual public functions, state changes, events, access restrictions, relevant boundaries and revert conditions. Use fresh deployments. Do not invent behavior.",
+  "exampleTest": ""
+}

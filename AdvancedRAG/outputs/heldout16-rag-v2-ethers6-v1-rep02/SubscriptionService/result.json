@@ -1,0 +1,40 @@
+{
+  "contract": "SubscriptionService",
+  "status": "test_failures",
+  "prompt_sha256": "b1993dc250763ca310c242341cb8724b07a0514f1c57d30ff4a597aad2093d72",
+  "generation_seconds": 14.561124100000598,
+  "usage": {
+    "prompt_tokens": 12084,
+    "total_tokens": 13977,
+    "completion_tokens": 1893,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.844138699932955
+  },
+  "passed_tests": 15,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "SubscriptionService Subscription Management Should allow subscription",
+      "error": "Cannot read properties of undefined (reading '0')"
+    },
+    {
+      "title": "SubscriptionService Charging Should charge subscriber",
+      "error": "Cannot read properties of undefined (reading '0')"
+    }
+  ],
+  "coverage": {
+    "statements": 96.55,
+    "branches": 95.83,
+    "functions": 100.0,
+    "lines": 96.43
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

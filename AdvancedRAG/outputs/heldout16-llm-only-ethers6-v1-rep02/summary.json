@@ -1,0 +1,777 @@
+{
+  "total": 16,
+  "completed": 16,
+  "statuses": {
+    "test_failures": 16
+  },
+  "results": [
+    {
+      "contract": "BatchTransfer",
+      "status": "test_failures",
+      "prompt_sha256": "72785913e555c914f9ba6b7d42f578533cb7f5507a1e8177531620a5bd2ccca4",
+      "generation_seconds": 19.131372199975885,
+      "usage": {
+        "prompt_tokens": 7954,
+        "total_tokens": 9767,
+        "completion_tokens": 1813,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 7.346483099972829
+      },
+      "passed_tests": 10,
+      "failed_tests": 1,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "BatchTransfer ETH Batch Transfers should revert when ETH amount is incorrect for equal batch send",
+          "error": "Cannot mix BigInt and other types, use explicit conversions"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 75.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "BondingCurve",
+      "status": "test_failures",
+      "prompt_sha256": "aaebdaa3466037569e774818a5a8b8f694c3ba790fd47c9700bc72d47ecb549d",
+      "generation_seconds": 14.671280500013381,
+      "usage": {
+        "prompt_tokens": 8833,
+        "total_tokens": 10505,
+        "completion_tokens": 1672,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 7.092955500003882
+      },
+      "passed_tests": 0,
+      "failed_tests": 1,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "BondingCurve \"before each\" hook for \"Should set the right owner\"",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Insufficient ETH'"
+        }
+      ],
+      "coverage": {
+        "statements": 21.21,
+        "branches": 10.71,
+        "functions": 33.33,
+        "lines": 21.88
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "CrossChainBridge",
+      "status": "test_failures",
+      "prompt_sha256": "503633832584c4e357d8061da323fd902588797f870a7fd42393c4631bf2f9ee",
+      "generation_seconds": 14.066283199936152,
+      "usage": {
+        "prompt_tokens": 8140,
+        "total_tokens": 10422,
+        "completion_tokens": 2282,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 8.609425799921155
+      },
+      "passed_tests": 17,
+      "failed_tests": 4,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "CrossChainBridge Validator Management Should allow owner to remove validators",
+          "error": "expected 3 to equal 2."
+        },
+        {
+          "title": "CrossChainBridge Lock Function Should lock tokens and emit Locked event",
+          "error": "Cannot read properties of undefined (reading 'name')"
+        },
+        {
+          "title": "CrossChainBridge Validate Function \"before each\" hook for \"Should allow validators to validate requests\"",
+          "error": "Cannot read properties of undefined (reading 'name')"
+        },
+        {
+          "title": "CrossChainBridge Withdraw Fees Should fail if transfer fails",
+          "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+        }
+      ],
+      "coverage": {
+        "statements": 69.57,
+        "branches": 67.65,
+        "functions": 80.0,
+        "lines": 69.57
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "DAOGovernor",
+      "status": "test_failures",
+      "prompt_sha256": "30d58297e00ca4ab05f4c234477879b9f5515afcea10066b99aa983939feeb67",
+      "generation_seconds": 15.340804599924013,
+      "usage": {
+        "prompt_tokens": 7632,
+        "total_tokens": 10117,
+        "completion_tokens": 2485,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 7.734829299966805
+      },
+      "passed_tests": 3,
+      "failed_tests": 4,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "DAOGovernor Proposal Creation should create a proposal",
+          "error": "time is not defined"
+        },
+        {
+          "title": "DAOGovernor Voting should revert when voting on inactive proposal",
+          "error": "time is not defined"
+        },
+        {
+          "title": "DAOGovernor Proposal Queueing \"before each\" hook for \"should queue a successful proposal\"",
+          "error": "time is not defined"
+        },
+        {
+          "title": "DAOGovernor Proposal Execution \"before each\" hook for \"should execute a queued proposal\"",
+          "error": "time is not defined"
+        }
+      ],
+      "coverage": {
+        "statements": 45.0,
+        "branches": 30.0,
+        "functions": 60.0,
+        "lines": 45.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "DEX",
+      "status": "test_failures",
+      "prompt_sha256": "655833b35b703d7a6f60eb97ef5729ae2bc35ec809fd18fce7e8c9be1e9311f1",
+      "generation_seconds": 16.429692700039595,
+      "usage": {
+        "prompt_tokens": 7834,
+        "total_tokens": 9964,
+        "completion_tokens": 2130,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 9.61811169993598
+      },
+      "passed_tests": 3,
+      "failed_tests": 9,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "DEX addLiquidity Should add initial liquidity",
+          "error": "Error in \"LiquidityAdded\" event: Error in the 2nd argument assertion: expected 100000000000000000000 to equal 10000000000000000000000."
+        },
+        {
+          "title": "DEX addLiquidity Should add subsequent liquidity",
+          "error": "Error in \"LiquidityAdded\" event: Error in the 2nd argument assertion: expected 50000000000000000000 to equal 5000000000000000000000."
+        },
+        {
+          "title": "DEX addLiquidity Should revert when adding insufficient liquidity",
+          "error": "Expected transaction to be reverted with reason 'Insufficient liquidity minted', but it didn't revert"
+        },
+        {
+          "title": "DEX removeLiquidity Should remove liquidity",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Insufficient shares'"
+        },
+        {
+          "title": "DEX swapAforB Should swap tokenA for tokenB",
+          "error": "Error in \"Swapped\" event: Error in the 4th argument assertion: expected 9066108938801491315 to equal 9070270472637589600."
+        },
+        {
+          "title": "DEX swapAforB Should revert when swapping zero amount",
+          "error": "Expected transaction to be reverted"
+        },
+        {
+          "title": "DEX swapBforA Should swap tokenB for tokenA",
+          "error": "Error in \"Swapped\" event: Error in the 4th argument assertion: expected 9066108938801491315 to equal 9070270472637589600."
+        },
+        {
+          "title": "DEX swapBforA Should revert when swapping zero amount",
+          "error": "Expected transaction to be reverted"
+        },
+        {
+          "title": "DEX State consistency Should maintain correct reserves after multiple operations",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Insufficient shares'"
+        }
+      ],
+      "coverage": {
+        "statements": 81.82,
+        "branches": 58.33,
+        "functions": 100.0,
+        "lines": 80.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "GaslessRelayer",
+      "status": "test_failures",
+      "prompt_sha256": "f162bd5ee8bf31383c92add291a5d2ff9e2e2aa00e9a1c9bf8ebd92723ca613a",
+      "generation_seconds": 13.031031299964525,
+      "usage": {
+        "prompt_tokens": 8089,
+        "total_tokens": 9631,
+        "completion_tokens": 1542,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 7.17777519999072
+      },
+      "passed_tests": 1,
+      "failed_tests": 7,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "GaslessRelayer execute should execute a valid meta-transaction",
+          "error": "relayer._hashTypedData is not a function"
+        },
+        {
+          "title": "GaslessRelayer execute should revert if request is expired",
+          "error": "relayer._hashTypedData is not a function"
+        },
+        {
+          "title": "GaslessRelayer execute should revert if nonce is invalid",
+          "error": "relayer._hashTypedData is not a function"
+        },
+        {
+          "title": "GaslessRelayer execute should revert if signature is invalid",
+          "error": "relayer._hashTypedData is not a function"
+        },
+        {
+          "title": "GaslessRelayer execute should handle failed target calls",
+          "error": "relayer._hashTypedData is not a function"
+        },
+        {
+          "title": "GaslessRelayer verify should verify a valid signature",
+          "error": "relayer._hashTypedData is not a function"
+        },
+        {
+          "title": "GaslessRelayer verify should reject an invalid signature",
+          "error": "relayer._hashTypedData is not a function"
+        }
+      ],
+      "coverage": {
+        "statements": 0.0,
+        "branches": 0.0,
+        "functions": 20.0,
+        "lines": 0.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "InsurancePool",
+      "status": "test_failures",
+      "prompt_sha256": "b6e02b91eb857b5dcc364c4b72245ced7647ebd87daa111671b2078f74ce7ced",
+      "generation_seconds": 18.912985800066963,
+      "usage": {
+        "prompt_tokens": 8572,
+        "total_tokens": 11125,
+        "completion_tokens": 2553,
+        "prompt_tokens_details": {
+          "cached_tokens": 8448
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 7.961417100043036
+      },
+      "passed_tests": 17,
+      "failed_tests": 4,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "InsurancePool LP Actions Deposit Should allow ETH deposits",
+          "error": "expected Result(2) [ 1000000000000000000n, 0n ] to deeply equal { deposited: 1000000000000000000n, rewardDebt: 0n }"
+        },
+        {
+          "title": "InsurancePool LP Actions Withdraw Should allow partial withdrawals",
+          "error": "HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined"
+        },
+        {
+          "title": "InsurancePool Policy Actions Buy Policy Should allow buying a policy",
+          "error": "Error in \"PolicyPurchased\" event: Error in the 5th argument assertion: expected 1790805199 to equal 1790805198."
+        },
+        {
+          "title": "InsurancePool Reward Distribution Should correctly distribute rewards to LPs",
+          "error": "expected 9980299999999998353108 to be close to 9999099999999999819487 +/- 10000000000000000"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 88.24,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "LendingPool",
+      "status": "test_failures",
+      "prompt_sha256": "c46dccc98b090c0a604d7e229589d7562039d6ee7d594ce796aa211cea9e5d8d",
+      "generation_seconds": 14.73066649993416,
+      "usage": {
+        "prompt_tokens": 7491,
+        "total_tokens": 9137,
+        "completion_tokens": 1646,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 7.477092099958099
+      },
+      "passed_tests": 4,
+      "failed_tests": 4,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "LendingPool borrow Should allow borrowing within collateral limit",
+          "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+        },
+        {
+          "title": "LendingPool borrow Should revert when borrowing exceeds collateral limit",
+          "error": "Expected transaction to be reverted with reason 'Undercollateralized', but it reverted with reason 'insufficient balance'"
+        },
+        {
+          "title": "LendingPool repay \"before each\" hook for \"Should allow repaying debt\"",
+          "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+        },
+        {
+          "title": "LendingPool liquidate \"before each\" hook for \"Should allow liquidation of undercollateralized position\"",
+          "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+        }
+      ],
+      "coverage": {
+        "statements": 33.33,
+        "branches": 30.0,
+        "functions": 60.0,
+        "lines": 33.33
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "MerkleAirdrop",
+      "status": "test_failures",
+      "prompt_sha256": "0d0804e1c926ca7279dbf1b264c531fe3fa6041172a2aae3be16654c0f13c682",
+      "generation_seconds": 7.473986400058493,
+      "usage": {
+        "prompt_tokens": 7158,
+        "total_tokens": 8250,
+        "completion_tokens": 1092,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 7.799979500006884
+      },
+      "passed_tests": 3,
+      "failed_tests": 6,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "MerkleAirdrop Claim Should allow valid claim",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'"
+        },
+        {
+          "title": "MerkleAirdrop Claim Should revert when already claimed",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'"
+        },
+        {
+          "title": "MerkleAirdrop Claim Should revert when transfer fails",
+          "error": "Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'Invalid proof'"
+        },
+        {
+          "title": "MerkleAirdrop State Should track claimed status",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'"
+        },
+        {
+          "title": "MerkleAirdrop Verification Should verify correct proof",
+          "error": "Cannot read properties of undefined (reading 'staticCall')"
+        },
+        {
+          "title": "MerkleAirdrop Verification Should reject incorrect proof",
+          "error": "Cannot read properties of undefined (reading 'staticCall')"
+        }
+      ],
+      "coverage": {
+        "statements": 77.78,
+        "branches": 37.5,
+        "functions": 100.0,
+        "lines": 77.78
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "NFTMarketplace",
+      "status": "test_failures",
+      "prompt_sha256": "e7598cee4fc52aaee213470caec218aa3a21dac2ee25f705503c943c7bf167d7",
+      "generation_seconds": 10.58770979999099,
+      "usage": {
+        "prompt_tokens": 7525,
+        "total_tokens": 8996,
+        "completion_tokens": 1471,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 8.55860250000842
+      },
+      "passed_tests": 8,
+      "failed_tests": 1,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "NFTMarketplace buy should buy NFT correctly",
+          "error": "expected 10000000000000000000000 to be close to 10000025000000000000000 +/- 10000000000000000"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 77.27,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "NFTStaking",
+      "status": "test_failures",
+      "prompt_sha256": "0df99cb146db0be88c2ef7672ef8649d920215f15574ae444c65c763a6802e12",
+      "generation_seconds": 16.885800699936226,
+      "usage": {
+        "prompt_tokens": 8901,
+        "total_tokens": 10865,
+        "completion_tokens": 1964,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 9.69720779999625
+      },
+      "passed_tests": 15,
+      "failed_tests": 5,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "NFTStaking Staking Should revert if NFT is already staked",
+          "error": "Expected transaction to be reverted with reason 'Already staked', but it reverted with reason 'Not owner'"
+        },
+        {
+          "title": "NFTStaking Rewards Should calculate pending rewards correctly",
+          "error": "expected 10 to equal 10000000000000000000."
+        },
+        {
+          "title": "NFTStaking Rewards Should allow claiming rewards",
+          "error": "expected 11 to equal 10000000000000000000."
+        },
+        {
+          "title": "NFTStaking Rewards Should emit RewardClaimed event",
+          "error": "Error in \"RewardClaimed\" event: Error in the 2nd argument assertion: expected 11 to equal 10000000000000000000."
+        },
+        {
+          "title": "NFTStaking Rewards Should revert if no rewards to claim",
+          "error": "Expected transaction to be reverted with reason 'No rewards', but it didn't revert"
+        }
+      ],
+      "coverage": {
+        "statements": 97.3,
+        "branches": 81.25,
+        "functions": 100.0,
+        "lines": 97.22
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "PriceOracle",
+      "status": "test_failures",
+      "prompt_sha256": "f3d1c227fe66e2d5c73303d66f9dc0982184acbfd5b6fa5fb10432a23f4f551b",
+      "generation_seconds": 11.185540800099261,
+      "usage": {
+        "prompt_tokens": 8850,
+        "total_tokens": 10496,
+        "completion_tokens": 1646,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 5.6638452999759465
+      },
+      "passed_tests": 6,
+      "failed_tests": 2,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "PriceOracle Price Submission Should allow feeders to submit prices",
+          "error": "anyValue is not defined"
+        },
+        {
+          "title": "PriceOracle \"before each\" hook for \"Should prevent non-feeders from submitting prices\"",
+          "error": "Expected event \"PriceUpdated\" to be emitted, but it wasn't"
+        }
+      ],
+      "coverage": {
+        "statements": 21.28,
+        "branches": 34.21,
+        "functions": 54.55,
+        "lines": 22.22
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "RateLimiter",
+      "status": "test_failures",
+      "prompt_sha256": "891e23f3901de6999ffb467b07d53f81001fe28919662a8148a0db01cf1f260d",
+      "generation_seconds": 9.580090599949472,
+      "usage": {
+        "prompt_tokens": 7909,
+        "total_tokens": 9369,
+        "completion_tokens": 1460,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 5.306994199985638
+      },
+      "passed_tests": 12,
+      "failed_tests": 3,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "RateLimiter Deposit Should revert when rate limit is exceeded",
+          "error": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert"
+        },
+        {
+          "title": "RateLimiter Withdraw Should revert when rate limit is exceeded",
+          "error": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert"
+        },
+        {
+          "title": "RateLimiter Withdraw Should consume tokens on withdraw",
+          "error": "expected 70 to equal 60."
+        }
+      ],
+      "coverage": {
+        "statements": 94.74,
+        "branches": 71.43,
+        "functions": 85.71,
+        "lines": 94.44
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "SubscriptionService",
+      "status": "test_failures",
+      "prompt_sha256": "ff7bac8a1ea1a066804673ed363fc6eb501a5ba4b19c88a3854c547bb9f73498",
+      "generation_seconds": 12.678645999985747,
+      "usage": {
+        "prompt_tokens": 8281,
+        "total_tokens": 10064,
+        "completion_tokens": 1783,
+        "prompt_tokens_details": {
+          "cached_tokens": 8192
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 6.84648659999948
+      },
+      "passed_tests": 8,
+      "failed_tests": 5,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "SubscriptionService Subscription Management should subscribe to a plan",
+          "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+        },
+        {
+          "title": "SubscriptionService Subscription Management should cancel subscription",
+          "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+        },
+        {
+          "title": "SubscriptionService Subscription Management should revert when already subscribed",
+          "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+        },
+        {
+          "title": "SubscriptionService Subscription Management should revert when payment fails",
+          "error": "Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'"
+        },
+        {
+          "title": "SubscriptionService Charge Management \"before each\" hook for \"should charge a subscriber\"",
+          "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+        }
+      ],
+      "coverage": {
+        "statements": 37.93,
+        "branches": 54.17,
+        "functions": 70.0,
+        "lines": 39.29
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "TokenVesting",
+      "status": "test_failures",
+      "prompt_sha256": "d828fe970ce848632f75e30c2378585d420f26e7b69130acb7fee05d35aad9e9",
+      "generation_seconds": 12.943902699975297,
+      "usage": {
+        "prompt_tokens": 8336,
+        "total_tokens": 10418,
+        "completion_tokens": 2082,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 19.26475119998213
+      },
+      "passed_tests": 9,
+      "failed_tests": 7,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "TokenVesting revokeGrant Should revoke a grant",
+          "error": "Error in \"GrantRevoked\" event: Error in the 3rd argument assertion: expected 400 to equal 1000."
+        },
+        {
+          "title": "TokenVesting claim Should allow claiming after cliff",
+          "error": "Timestamp 1790805745 is lower than the previous block's timestamp 1790805756"
+        },
+        {
+          "title": "TokenVesting claim Should not allow claiming before cliff",
+          "error": "Timestamp 1790803745 is lower than the previous block's timestamp 1790805761"
+        },
+        {
+          "title": "TokenVesting claim Should allow claiming after vesting ends",
+          "error": "expected 604 to equal 1000."
+        },
+        {
+          "title": "TokenVesting claimable Should return 0 before cliff",
+          "error": "Timestamp 1790803745 is lower than the previous block's timestamp 1790808749"
+        },
+        {
+          "title": "TokenVesting claimable Should return correct amount after cliff",
+          "error": "Timestamp 1790805745 is lower than the previous block's timestamp 1790808754"
+        },
+        {
+          "title": "TokenVesting claimable Should return total amount after vesting ends",
+          "error": "Timestamp 1790808745 is lower than the previous block's timestamp 1790808759"
+        }
+      ],
+      "coverage": {
+        "statements": 80.0,
+        "branches": 77.27,
+        "functions": 87.5,
+        "lines": 82.14
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "YieldVault",
+      "status": "test_failures",
+      "prompt_sha256": "57c857ab9de0e7a142ba48dd15f520794897f6af4600f3049a6cfa259f110019",
+      "generation_seconds": 11.291885699960403,
+      "usage": {
+        "prompt_tokens": 7458,
+        "total_tokens": 8965,
+        "completion_tokens": 1507,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 8.867364099947736
+      },
+      "passed_tests": 14,
+      "failed_tests": 1,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "YieldVault setStrategy Should not allow non-owner to set strategy",
+          "error": "The given contract doesn't have a custom error named 'OwnableUnauthorizedAccount'"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 92.86,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "lending-pool--akasxh",
+  "domain": "lending",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "LendingPool.sol",
+    "FlashLoan.sol",
+    "InterestRateModel.sol",
+    "PolkaToken.sol",
+    "PriceOracle.sol",
+    "IFlashLoanReceiver.sol",
+    "ILendingPool.sol",
+    "FailingFlashLoanReceiver.sol",
+    "MockFlashLoanReceiver.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Akasxh/polkalend",
+    "commit": "63a9bab21dce964eadc6a07539add72f896439ec",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/LendingPool.sol",
+      "contracts/FlashLoan.sol",
+      "contracts/InterestRateModel.sol",
+      "contracts/PolkaToken.sol",
+      "contracts/PriceOracle.sol",
+      "contracts/interfaces/IFlashLoanReceiver.sol",
+      "contracts/interfaces/ILendingPool.sol",
+      "contracts/mocks/FailingFlashLoanReceiver.sol",
+      "contracts/mocks/MockFlashLoanReceiver.sol"
+    ],
+    "test_paths": [
+      "test/LendingPool.test.js",
+      "test/EdgeCases.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/LendingPool.sol": "1d9ff285625ca984f285885f8a420523d5b8894421cc017742a4dd834fab761d",
+      "contracts/FlashLoan.sol": "6410e4d6d1b1853695216ce7e4f1387726cb7afbc0e634ffb319e586ed017bcb",
+      "contracts/InterestRateModel.sol": "484ce837424f8bd2baba294ea5b3834b0caac1ad543c45f6ebe1399833a7e057",
+      "contracts/PolkaToken.sol": "bf1cbc450e2b198bfd6bbce55e6f206988d9964130f2b59607ff4b8e6d8d420e",
+      "contracts/PriceOracle.sol": "830b602063bbda1c27efb1a24ca321cd4001830f5cb5286014a8bf03b9874429",
+      "contracts/interfaces/IFlashLoanReceiver.sol": "889a2615e50bff2705b3fadd3b27898f87b18f8c73b7322664b0d4673d916076",
+      "contracts/interfaces/ILendingPool.sol": "22f26375f6826fed13326fca473b2fe024edd9b10d33771ff191f6e06452d215",
+      "contracts/mocks/FailingFlashLoanReceiver.sol": "3b393b793c48d5ba6702d94e5831d4c8ef8842ae459e2ee6a31fddcf567d164e",
+      "contracts/mocks/MockFlashLoanReceiver.sol": "d8aa3b3d02b501f998b9a130d1894e5c2b812aa297e51c653c5fdec2dddd8c1c",
+      "test/LendingPool.test.js": "de9284545df8ab86cffccc2cd3849952d49421b141284f105aaff7b0201af6f5",
+      "test/EdgeCases.test.js": "5c0f9370f4d1488d2a5c69bba2e9542e424513b5fa9a21ccce61226f11a25d66"
+    }
+  },
+  "transformations": [
+    {
+      "file": "LendingPool.sol",
+      "kind": "import-path",
+      "before": "./interfaces/ILendingPool.sol",
+      "after": "./ILendingPool.sol"
+    },
+    {
+      "file": "FlashLoan.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IFlashLoanReceiver.sol",
+      "after": "./IFlashLoanReceiver.sol"
+    },
+    {
+      "file": "FailingFlashLoanReceiver.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IFlashLoanReceiver.sol",
+      "after": "./IFlashLoanReceiver.sol"
+    },
+    {
+      "file": "MockFlashLoanReceiver.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IFlashLoanReceiver.sol",
+      "after": "./IFlashLoanReceiver.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (few commits, created 2026). | primary 276 lines, closure 591 lines, 9 files; 24 it blocks; history: 5 commits 2026-03-23..2026-03-24",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T10:26:10.761292+00:00"
+}

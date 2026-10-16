@@ -1,0 +1,39 @@
+{
+  "id": "ipfs_management--yagotzirck",
+  "domain": "file-access-registry",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "IPFS_Management.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Yagotzirck/ipfsEth_fileManagement",
+    "commit": "e6b8602f5dc01936feef5de30345b94c062eb4a5",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/IPFS_Management.sol"
+    ],
+    "test_paths": [
+      "test/IPFS_Management.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/IPFS_Management.sol": "1726956b756d946b30c4cbb5ac3ac5241d57136465a69d166c67164c90632941",
+      "test/IPFS_Management.js": "5e0a8af981d1fa39e4605fdd731c21459401d3179d0a527f378624ad4cd73845"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "IPFS_Management.js",
+      "upstream_path": "test/IPFS_Management.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "IPFS file registry with admin/users/authorisation and public files; only 6 its; 2024 university project. Primary 104 non-blank lines, closure 104 lines/1 files; 6 its, 7 expects; pragma ^0.8.0.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:07:45.135176+00:00"
+}

@@ -1,0 +1,144 @@
+{
+  "target_functions": [
+    {
+      "target_function": "adopt",
+      "corpus_functions": [
+        "c1292aec8e535ece6e9f9894",
+        "fc2f3d44dfb2b52a8f01c0a8",
+        "0923f539123f0749d4ac5fcd",
+        "96ab2c84ad31b85c88249a92",
+        "a8a8b94dcf0980cd68772a0a",
+        "0c086c4482d0761209842ca9",
+        "aaf1a781d076c98753062719",
+        "5a7024e2545501dc35be6051"
+      ],
+      "candidate_tests": [
+        "8babf8661cc4c11e0ac866cc",
+        "e0aed636f679466c7c08f79c"
+      ]
+    },
+    {
+      "target_function": "getAdopters",
+      "corpus_functions": [
+        "29715bf1883ac9ef98dd29e9",
+        "8ea961fbccc326cd399edfde",
+        "500d052d2eece7f14eebb672",
+        "271daa6e2ec48891f4bfd1b9",
+        "1196b92731c9716c32d6a66a",
+        "a05919ca3ab1613298659fac",
+        "2031ea15e02a8bf86495cee5",
+        "b57888e14ab8ee027140a15e"
+      ],
+      "candidate_tests": [
+        "cefee2c6a65703037c5703c9",
+        "325f0ef27f7be331a441fb3c",
+        "b3ffdfdaaa47db2406c7d89c",
+        "c352c44e83644aacc70c8abe",
+        "21f28f21137c13c4083d4d05",
+        "c91b2477522503fc4c680ef9",
+        "c0756023d2d0ef27f161f108",
+        "708d0f2ff6e2da86c516413e"
+      ]
+    }
+  ],
+  "selected": [
+    2350,
+    2439,
+    588,
+    6338,
+    1181,
+    1170,
+    4066,
+    255,
+    261
+  ],
+  "context_chars": 14746,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "Adoption",
+  "retrieval_seconds": 1.907336700009182,
+  "hits": [
+    {
+      "chunk_id": 2350,
+      "test_id": "8babf8661cc4c11e0ac866cc",
+      "pair": "english-auction--jinzm10162",
+      "domain_group": "auctions",
+      "name": "fail: EOA账户调用",
+      "via_function": "a8a8b94dcf0980cd68772a0a",
+      "chars": 1951
+    },
+    {
+      "chunk_id": 2439,
+      "test_id": "cefee2c6a65703037c5703c9",
+      "pair": "erc20-payment-splitter--mirepatel",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should return all payees",
+      "via_function": "500d052d2eece7f14eebb672",
+      "chars": 1358
+    },
+    {
+      "chunk_id": 588,
+      "test_id": "e0aed636f679466c7c08f79c",
+      "pair": "areca-auction--nitishpatil18",
+      "domain_group": "auctions",
+      "name": "lets a refunded bidder withdraw",
+      "via_function": "0c086c4482d0761209842ca9",
+      "chars": 1599
+    },
+    {
+      "chunk_id": 6338,
+      "test_id": "325f0ef27f7be331a441fb3c",
+      "pair": "smart-chit--jadav-divyaraj",
+      "domain_group": "auctions",
+      "name": "getMembers returns all members",
+      "via_function": "271daa6e2ec48891f4bfd1b9",
+      "chars": 1047
+    },
+    {
+      "chunk_id": 1181,
+      "test_id": "b3ffdfdaaa47db2406c7d89c",
+      "pair": "bridge-base--unclekaldoteth",
+      "domain_group": "relayer-meta-transactions",
+      "name": "getSigners returns all signers",
+      "via_function": "1196b92731c9716c32d6a66a",
+      "chars": 1346
+    },
+    {
+      "chunk_id": 1170,
+      "test_id": "c352c44e83644aacc70c8abe",
+      "pair": "bridge-base--unclekaldoteth",
+      "domain_group": "relayer-meta-transactions",
+      "name": "addSigner - respects MAX_SIGNERS limit",
+      "via_function": "1196b92731c9716c32d6a66a",
+      "chars": 1357
+    },
+    {
+      "chunk_id": 4066,
+      "test_id": "21f28f21137c13c4083d4d05",
+      "pair": "loan-manager--kris0721",
+      "domain_group": "lending-collateral",
+      "name": "Should return borrower's loans",
+      "via_function": "a05919ca3ab1613298659fac",
+      "chars": 2475
+    },
+    {
+      "chunk_id": 255,
+      "test_id": "c91b2477522503fc4c680ef9",
+      "pair": "agent-registry--m31527",
+      "domain_group": "registries-identity",
+      "name": "sets identity fields correctly including capability fields",
+      "via_function": "2031ea15e02a8bf86495cee5",
+      "chars": 1687
+    },
+    {
+      "chunk_id": 261,
+      "test_id": "c0756023d2d0ef27f161f108",
+      "pair": "agent-registry--m31527",
+      "domain_group": "registries-identity",
+      "name": "increments actionCount and successCount",
+      "via_function": "2031ea15e02a8bf86495cee5",
+      "chars": 1926
+    }
+  ]
+}

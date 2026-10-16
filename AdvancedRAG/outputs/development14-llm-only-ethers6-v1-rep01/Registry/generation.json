@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"Registry\", function () {\n  let registry;\n  let owner;\n  let otherAccount;\n  const key = ethers.keccak256(ethers.toUtf8Bytes(\"testKey\"));\n  const value = \"testValue\";\n\n  beforeEach(async function () {\n    [owner, otherAccount] = await ethers.getSigners();\n    const Registry = await ethers.getContractFactory(\"Registry\");\n    registry = await Registry.deploy();\n    await registry.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should set the right owner\", async function () {\n      expect(await registry.owner()).to.equal(owner.address);\n    });\n  });\n\n  describe(\"set\", function () {\n    it(\"Should set a record and emit RecordSet event\", async function () {\n      await expect(registry.set(key, value))\n        .to.emit(registry, \"RecordSet\")\n        .withArgs(key, value);\n\n      expect(await registry.get(key)).to.equal(value);\n      expect(await registry.exists(key)).to.be.true;\n    });\n\n    it(\"Should revert if not called by owner\", async function () {\n      await expect(registry.connect(otherAccount).set(key, value))\n        .to.be.revertedWith(\"not owner\");\n    });\n  });\n\n  describe(\"get\", function () {\n    it(\"Should return the correct value for an existing key\", async function () {\n      await registry.set(key, value);\n      expect(await registry.get(key)).to.equal(value);\n    });\n\n    it(\"Should revert for a non-existent key\", async function () {\n      await expect(registry.get(ethers.keccak256(ethers.toUtf8Bytes(\"nonexistent\"))))\n        .to.be.revertedWith(\"missing\");\n    });\n  });\n\n  describe(\"remove\", function () {\n    it(\"Should remove a record and emit RecordRemoved event\", async function () {\n      await registry.set(key, value);\n      await expect(registry.remove(key))\n        .to.emit(registry, \"RecordRemoved\")\n        .withArgs(key);\n\n      await expect(registry.get(key)).to.be.revertedWith(\"missing\");\n      expect(await registry.exists(key)).to.be.false;\n    });\n\n    it(\"Should revert if not called by owner\", async function () {\n      await registry.set(key, value);\n      await expect(registry.connect(otherAccount).remove(key))\n        .to.be.revertedWith(\"not owner\");\n    });\n  });\n\n  describe(\"State persistence\", function () {\n    it(\"Should maintain state between transactions\", async function () {\n      await registry.set(key, value);\n      const registry2 = await ethers.getContractAt(\"Registry\", await registry.getAddress());\n      expect(await registry2.get(key)).to.equal(value);\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 4.811121099977754,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 6986,
+      "total_tokens": 7578,
+      "completion_tokens": 592,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "30a12b5652909899978e9072a6b4a2ae5d38ef474552b634088a21c6f930e681"
+}

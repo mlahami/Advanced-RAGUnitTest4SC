@@ -1,0 +1,7 @@
+{
+  "solidityCode": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.24;\n\ncontract Adoption {\n    address[16] public adopters;\n\n    function adopt(uint256 petId) external returns (uint256) {\n        require(petId < 16, \"invalid pet\");\n        adopters[petId] = msg.sender;\n        return petId;\n    }\n\n    function getAdopters() external view returns (address[16] memory) {\n        return adopters;\n    }\n}\n\n",
+  "context": "Generate a unit test suite for the supplied Solidity contract.",
+  "generalInstructions": "Use Hardhat 2, ethers 6, Mocha and hardhat-chai-matchers. No external helper files.",
+  "requirements": "Cover actual public functions, state changes, events, access restrictions, relevant boundaries and revert conditions. Use fresh deployments. Do not invent behavior.",
+  "exampleTest": ""
+}

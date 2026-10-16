@@ -1,0 +1,82 @@
+{
+  "pair": "kipu-bank--mtds-alfa",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:35:04.112258+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/KipuBank.sol": "f43683cb619e98df91103a69e37f372235fe96783e65e0f0e607cced7cba3b4a",
+    "LICENSE": "1718fd37c03d59682aced48d59b08744f87e3c3e82dcff287265a6ba66a60c56",
+    "manifest.json": "2d9276ac52c81725de4d5b03eef8aa205410b96fc8f8e5b278c7b7e209e8e56a",
+    "test/KipuBank.test.js": "33db9f4ff42acda36838cafb98970f53bcf841e7d1a6599e1ad0bc387efc70fc"
+  },
+  "pair_sha256": "e689df2ef1e84b215e3bfc13af4e499da9864ff82ec9fa9f749cf28f5d54ecf4",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "KipuBank.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.203,
+        "signatures": 0.25,
+        "min_functions": 5
+      },
+      {
+        "contract": "KipuBank.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.166,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "KipuBank.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.153,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.01,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.41,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "KipuBank.sol": {
+          "statements": 76.92,
+          "branches": 50.0,
+          "functions": 71.43,
+          "lines": 83.33
+        }
+      }
+    }
+  },
+  "accepted": true
+}

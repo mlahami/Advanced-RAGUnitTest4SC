@@ -1,0 +1,183 @@
+{
+  "target_functions": [
+    {
+      "target_function": "fund",
+      "corpus_functions": [
+        "d25973f6c861306fce4ae35e",
+        "2e7bba314f3b83542cd0d0e1",
+        "3661cbaee71bd9ee42c8c1f1",
+        "c0ad8e9ccd3a89ff80d93af9",
+        "ab08e8952866c51636067777",
+        "5f235a777e0a9080404575fa",
+        "55cf3877450b8deb650d6dd6",
+        "30d0ab5860f45752bc8fdfcc"
+      ],
+      "candidate_tests": [
+        "6ad8629834ae0814fb8ef2de",
+        "bb083047c864c45b0b0e7c63",
+        "bbeb51c1b352a19cbc4f6e07",
+        "cfeec11f1bb8d42ec4292f58",
+        "07c671473c0d69506d72a540"
+      ]
+    },
+    {
+      "target_function": "release",
+      "corpus_functions": [
+        "4f8a4619e610d76ac914ef66",
+        "ced93b6e9d8a8ed0bda8c331",
+        "049c7382530a2a4cbb17084c",
+        "12d0c6ba763ec136a90171e8",
+        "b4d5e2a8f6f079799df30304",
+        "2f3f352ec41c2eee11854aa3",
+        "1a6fcbe509957cdfdb4f5439",
+        "791ceba9892cccadeccf96b8"
+      ],
+      "candidate_tests": [
+        "b628b01d570b083bc223c7a9",
+        "4880bb4a0eea28fe54ab6971",
+        "43af2b914e2d3ddd7cf14526",
+        "0f8c0574a19e31d299ffc12c",
+        "bbbc478931d3e7e3fdd7d569",
+        "ec9a6556f0174d88297fab58",
+        "154e36fee78151476058275f",
+        "eb20cf7ecef0d391f7187965",
+        "9d966496f01c3fbcbb340da3",
+        "7604ba4da587d7f6a2e0dd29",
+        "a1a3846a177548153787eaaa",
+        "13f33593e79fd96208b65747",
+        "84f00a8a3a2665089cdee5f7",
+        "c77f641aed7a4b9f33aa6307",
+        "94fce00f0279440c6dc23ed0"
+      ]
+    },
+    {
+      "target_function": "refund",
+      "corpus_functions": [
+        "aad6c8a7707e06a0a53b7cc2",
+        "63ed4886eaba21cd5f420028",
+        "12d0c6ba763ec136a90171e8",
+        "809c89f16961932f0ff454f4",
+        "ae902f9fa091de810be2bffd",
+        "2da8b93e8dffa16db6f2d9bd",
+        "252a82af76f31ce89d99cb8d",
+        "912249a86dff79a6083c2dda"
+      ],
+      "candidate_tests": [
+        "77d33ff4367e782909c9b066",
+        "69a770d964b09fa45ce9fe82",
+        "ef6be09f6214ecfed5c26061",
+        "2b88e1819f109e18b1ab6f2b",
+        "ec9a6556f0174d88297fab58",
+        "154e36fee78151476058275f",
+        "ac93358d2c7f6c685cc8434f",
+        "bdf06776ddcbd77f448d7f9c",
+        "a3d779d912c49cfb259bf95f",
+        "172405fd684b306cb746194a",
+        "f57399b1149265163bc2cc74",
+        "1186a31a2590b8cf5a3bee49",
+        "986bdf851a2dfa4ea934e4d3",
+        "8c4a085f235249e974f51a22"
+      ]
+    }
+  ],
+  "selected": [
+    2788,
+    5952,
+    5407,
+    2790,
+    5930,
+    5408,
+    974,
+    5679,
+    4322
+  ],
+  "context_chars": 14810,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "Escrow",
+  "retrieval_seconds": 2.561915299971588,
+  "hits": [
+    {
+      "chunk_id": 2788,
+      "test_id": "6ad8629834ae0814fb8ef2de",
+      "pair": "fauna--myriamchah",
+      "domain_group": "crowdfunding",
+      "name": "should revert if no funds deposited",
+      "via_function": "ab08e8952866c51636067777",
+      "chars": 805
+    },
+    {
+      "chunk_id": 5952,
+      "test_id": "b628b01d570b083bc223c7a9",
+      "pair": "sale-vesting--bonabuild",
+      "domain_group": "vesting-timelock",
+      "name": "pays the claimer and nobody else",
+      "via_function": "4f8a4619e610d76ac914ef66",
+      "chars": 2354
+    },
+    {
+      "chunk_id": 5407,
+      "test_id": "77d33ff4367e782909c9b066",
+      "pair": "payment-escrow--center-for-ai-services-computing",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should reject refund before deadline",
+      "via_function": "aad6c8a7707e06a0a53b7cc2",
+      "chars": 1816
+    },
+    {
+      "chunk_id": 2790,
+      "test_id": "bb083047c864c45b0b0e7c63",
+      "pair": "fauna--myriamchah",
+      "domain_group": "crowdfunding",
+      "name": "should emit an event",
+      "via_function": "ab08e8952866c51636067777",
+      "chars": 827
+    },
+    {
+      "chunk_id": 5930,
+      "test_id": "4880bb4a0eea28fe54ab6971",
+      "pair": "sale-vesting--bonabuild",
+      "domain_group": "vesting-timelock",
+      "name": "the funder cannot move tokens held here",
+      "via_function": "4f8a4619e610d76ac914ef66",
+      "chars": 2583
+    },
+    {
+      "chunk_id": 5408,
+      "test_id": "69a770d964b09fa45ce9fe82",
+      "pair": "payment-escrow--center-for-ai-services-computing",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should reject refund from non-payer",
+      "via_function": "aad6c8a7707e06a0a53b7cc2",
+      "chars": 1948
+    },
+    {
+      "chunk_id": 974,
+      "test_id": "bbeb51c1b352a19cbc4f6e07",
+      "pair": "batch-settlement--nickthelegend",
+      "domain_group": "rate-limiting",
+      "name": "lets anyone top up the pot, since funding can only add value",
+      "via_function": "55cf3877450b8deb650d6dd6",
+      "chars": 1389
+    },
+    {
+      "chunk_id": 5679,
+      "test_id": "43af2b914e2d3ddd7cf14526",
+      "pair": "real-estate-transaction--dhruvk0",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should allow funds to be released from escrow, transferring ownership and funds",
+      "via_function": "ced93b6e9d8a8ed0bda8c331",
+      "chars": 2172
+    },
+    {
+      "chunk_id": 4322,
+      "test_id": "ec9a6556f0174d88297fab58",
+      "pair": "marketplace--tejashree-likhar",
+      "domain_group": "nft-marketplace",
+      "name": "rejects purchase with incorrect ETH amount",
+      "via_function": "12d0c6ba763ec136a90171e8",
+      "chars": 916
+    }
+  ]
+}

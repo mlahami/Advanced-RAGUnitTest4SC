@@ -1,0 +1,44 @@
+{
+  "id": "wealth-vault--mosas2000",
+  "domain": "yield-vault",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "WealthVault.sol",
+    "IWealthVault.sol",
+    "MockUSDC.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Mosas2000/W-Yield",
+    "commit": "1590d40fe73b7d55ce9de5ab98b228b867faea25",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/WealthVault.sol",
+      "contracts/interfaces/IWealthVault.sol",
+      "contracts/mocks/MockUSDC.sol"
+    ],
+    "test_paths": [
+      "test/WealthVault.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/WealthVault.sol": "57a41fe1389026b8aa4e8adf231a59aa704977557d8024c23d4ed7eb323f893f",
+      "contracts/interfaces/IWealthVault.sol": "032b0b1219e2d64c7f6135b8c685179a8f1aaff40fa78bafebeb4f8267fe7799",
+      "contracts/mocks/MockUSDC.sol": "26365d135c23f1856d9fe8c4b359498d0f46f13b4e65bc1a54eb3389812db256",
+      "test/WealthVault.test.js": "c2e1bef94ed96cc5a9e6b9819fe4fbc1e19662fef12d6e3d6b82a2c86d70a3ed"
+    }
+  },
+  "transformations": [
+    {
+      "file": "WealthVault.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IWealthVault.sol",
+      "after": "./IWealthVault.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 116 lines, closure 146 lines, 3 files; 18 it blocks; history: 46 commits 2026-01-22..2026-01-26",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:33:08.608357+00:00"
+}

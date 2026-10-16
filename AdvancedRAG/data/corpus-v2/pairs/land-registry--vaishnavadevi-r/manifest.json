@@ -1,0 +1,38 @@
+{
+  "id": "land-registry--vaishnavadevi-r",
+  "domain": "registry",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "LandRegistry.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/VaishnavaDevi-R/Blockchain-Land-Registry-Property-Ownership",
+    "commit": "a9ec58d1835cd51a16e176e32037b05c69c38913",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/LandRegistry.sol"
+    ],
+    "test_paths": [
+      "test/LandRegistry.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/LandRegistry.sol": "050a5498d5df1e2ae8862ba7829a349c31f9fbf4b5aa6027ad42d0de13d17612",
+      "test/LandRegistry.test.js": "c5921baba1273ded75b90eb1cb9fbc8a83d390705b050890e3fe621d734ba170"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "LandRegistry.test.js",
+      "upstream_path": "test/LandRegistry.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "land/property registry with authorities, verifiers, registration, verification, transfer requests; primary 467 lines; 20 it blocks (ESM imports, converted), 20/20 pass, stmt cov 94.74%; licence LICENSE; history: 2 commits 2026-08-22. DOUBTFUL: very short history and several same-named repos by other users (possibly a shared assignment template)",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-30T07:31:42.816709+00:00"
+}

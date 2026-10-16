@@ -1,0 +1,48 @@
+{
+  "contract": "MerkleAirdrop",
+  "status": "test_failures",
+  "prompt_sha256": "43ae6843372fa15b0c4314d24a00fa5b9e6d9fec560c383a19fad51e7fa9af0a",
+  "generation_seconds": 10.046093300101347,
+  "usage": {
+    "prompt_tokens": 10871,
+    "total_tokens": 11933,
+    "completion_tokens": 1062,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.2526354000438005
+  },
+  "passed_tests": 4,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "MerkleAirdrop Claim Should allow valid claim",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'"
+    },
+    {
+      "title": "MerkleAirdrop Claim Should revert when claiming twice",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'"
+    },
+    {
+      "title": "MerkleAirdrop Claim Should revert when token transfer fails",
+      "error": "Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'Invalid proof'"
+    },
+    {
+      "title": "MerkleAirdrop State Should track claimed status",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'"
+    }
+  ],
+  "coverage": {
+    "statements": 77.78,
+    "branches": 37.5,
+    "functions": 100.0,
+    "lines": 77.78
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "mh-token--gzliudan",
+  "domain": "erc20-token",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "MhToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/gzliudan/hardhat-project",
+    "commit": "a711a80ad79e6fea8c3f500a973478866a014cef",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MhToken.sol"
+    ],
+    "test_paths": [
+      "test/MhToken.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MhToken.sol": "fe0caef4e643dd384d58d92f5b6d7abf3336efb7d354c9969705b07a64fe4c14",
+      "test/MhToken.js": "8139e356998b8275ad081f0aa424f50d7d3f29701ba55a6d72bcd884a3047c34"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "MhToken.js",
+      "upstream_path": "test/MhToken.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 83 lines, closure 83 lines, 1 files; 5 it blocks; history: 48 commits 2022-07-27..2026-01-30",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:32:52.382375+00:00"
+}

@@ -1,0 +1,60 @@
+{
+  "contract": "TokenVesting",
+  "status": "test_failures",
+  "prompt_sha256": "497335de94403e0b5fc626de351660d2241be7fd177b38af33b3097f6fa3d473",
+  "generation_seconds": 18.389513900037855,
+  "usage": {
+    "prompt_tokens": 12485,
+    "total_tokens": 15086,
+    "completion_tokens": 2601,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.895155499922112
+  },
+  "passed_tests": 10,
+  "failed_tests": 7,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "TokenVesting Grant Revocation Should revoke a grant and emit GrantRevoked event",
+      "error": "tokenVesting._vestedAmount is not a function"
+    },
+    {
+      "title": "TokenVesting Token Claiming Should allow beneficiary to claim tokens after cliff",
+      "error": "Timestamp 1793398903 is lower than the previous block's timestamp 1793398914"
+    },
+    {
+      "title": "TokenVesting Token Claiming Should not allow claiming before cliff",
+      "error": "Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with reason 'insufficient balance'"
+    },
+    {
+      "title": "TokenVesting Token Claiming Should not allow claiming more than vested amount",
+      "error": "Timestamp 1793398903 is lower than the previous block's timestamp 1793398925"
+    },
+    {
+      "title": "TokenVesting Token Claiming Should allow claiming all tokens after vesting period",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    },
+    {
+      "title": "TokenVesting View Functions Should return correct claimable amount",
+      "error": "expected 1000 to equal 0."
+    },
+    {
+      "title": "TokenVesting Vesting Calculation Should calculate vested amount correctly",
+      "error": "Timestamp 1790804903 is lower than the previous block's timestamp 1822342920"
+    }
+  ],
+  "coverage": {
+    "statements": 80.0,
+    "branches": 81.82,
+    "functions": 87.5,
+    "lines": 82.14
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

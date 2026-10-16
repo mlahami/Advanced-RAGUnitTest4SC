@@ -1,0 +1,73 @@
+{
+  "id": "advanced-v3.BondingCurve",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "BondingCurve",
+  "chunk_ids": [
+    4304,
+    2664,
+    3795,
+    4970,
+    1991,
+    5416,
+    4305,
+    2665,
+    1315
+  ],
+  "context_sha256": "2257e8451ff92a716236f2e5cb01ec9976006eaedfa207f58757c272e8805ca8",
+  "ratings": [
+    {
+      "chunk_id": 4304,
+      "rating": 1,
+      "reason": "Shows pattern of expecting revert when sent ETH is insufficient, similar to BondingCurve.buy’s “Insufficient ETH” check, but otherwise unrelated logic."
+    },
+    {
+      "chunk_id": 2664,
+      "rating": 1,
+      "reason": "Shows zero‑amount revert pattern similar to BondingCurve’s buy/sell checks"
+    },
+    {
+      "chunk_id": 3795,
+      "rating": 1,
+      "reason": "Shows generic deployment, event emission, and value assertion patterns useful for testing BondingCurve, but tests unrelated functionality."
+    },
+    {
+      "chunk_id": 4970,
+      "rating": 2,
+      "reason": "Tests initial totalSupply zero on deployment, which applies to BondingCurve’s totalSupply state; setup and assertion can be reused after renaming contract."
+    },
+    {
+      "chunk_id": 1991,
+      "rating": 1,
+      "reason": "Shows generic price-quote testing pattern useful for BondingCurve’s quoteBuy/quoteSell, but specific contract and function differ"
+    },
+    {
+      "chunk_id": 5416,
+      "rating": 2,
+      "reason": "Tests non-owner rejection of onlyOwner function, directly reusable for collectFees revert check"
+    },
+    {
+      "chunk_id": 4305,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests unrelated behavior and custom error not present in BondingCurve."
+    },
+    {
+      "chunk_id": 2665,
+      "rating": 1,
+      "reason": "Shows generic deployment, token approval, and balance assertion patterns useful for BondingCurve tests, but does not exercise buying/selling logic."
+    },
+    {
+      "chunk_id": 1315,
+      "rating": 1,
+      "reason": "Tests a supply query function not present; only generic state‑reading pattern applies"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 25060,
+    "completion_tokens": 1003,
+    "calls": 9
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 170.9,
+  "evaluated_utc": "2026-10-14T18:15:17.405091+00:00"
+}

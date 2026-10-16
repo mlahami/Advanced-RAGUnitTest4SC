@@ -1,0 +1,31 @@
+{
+  "id": "msmeidentity--aryan-chugh",
+  "domain": "identity-registry",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "MSMEIdentity.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/aryan-chugh/MSME_Blockchain",
+    "commit": "074d7b2703476f0d0343f7e3961c1a253661b947",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MSMEIdentity.sol"
+    ],
+    "test_paths": [
+      "test/MSMEIdentity.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MSMEIdentity.sol": "9e8b4d482f2992fcbdfe9d6fd816868a516c2305cded489e140226d8a4eb797a",
+      "test/MSMEIdentity.test.js": "3be28ec0bed9dfd22945d985872e159d8d18a9da01fc547a92f93d595e569782"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Owner/operator-controlled key-value identity data store for MSMEs (setData/setDataBatch). Primary 88 non-blank lines, closure 88 lines/1 files; 12 its, 16 expects; pragma ^0.8.19.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:56.387739+00:00"
+}

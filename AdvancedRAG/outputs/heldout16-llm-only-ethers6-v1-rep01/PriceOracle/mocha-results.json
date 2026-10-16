@@ -1,0 +1,281 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 17,
+    "passes": 13,
+    "pending": 0,
+    "failures": 4,
+    "start": "2026-09-30T20:48:41.921Z",
+    "end": "2026-09-30T20:48:42.889Z",
+    "duration": 968
+  },
+  "tests": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "PriceOracle Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct configuration",
+      "fullTitle": "PriceOracle Deployment Should set the correct configuration",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to add feeders",
+      "fullTitle": "PriceOracle Feeder Management Should allow owner to add feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should prevent adding existing feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent adding existing feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 24,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to remove feeders",
+      "fullTitle": "PriceOracle Feeder Management Should allow owner to remove feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from managing feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent non-owners from managing feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should allow feeders to submit prices",
+      "fullTitle": "PriceOracle Price Submission Should allow feeders to submit prices",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "Expected event \"PriceUpdated\" to be emitted, but it wasn't",
+        "stack": "AssertionError: Expected event \"PriceUpdated\" to be emitted, but it wasn't\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:69:7)"
+      }
+    },
+    {
+      "title": "Should prevent non-feeders from submitting prices",
+      "fullTitle": "PriceOracle Price Submission Should prevent non-feeders from submitting prices",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should prevent zero price submissions",
+      "fullTitle": "PriceOracle Price Submission Should prevent zero price submissions",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should prevent duplicate submissions from the same feeder",
+      "fullTitle": "PriceOracle Price Submission Should prevent duplicate submissions from the same feeder",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should aggregate prices when enough feeders submit",
+      "fullTitle": "PriceOracle Price Submission Should aggregate prices when enough feeders submit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 161,
+      "err": {
+        "message": "Error in \"PriceUpdated\" event: Error in the 3rd argument assertion: HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined",
+        "stack": "HardhatError: HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined\n    at normalizeToBigInt (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\common\\bigInt.ts:47:13)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\bigNumber.ts:172:39)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at doAsserterAsyncAndAddThen (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:289:22)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:255:20)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at innerAssertArgEqual (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\utils.ts:167:55)\n    at innerAssertArgsArraysEqual (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\utils.ts:86:7)\n    at assertArgsArraysEqual (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\utils.ts:58:5)\n    at tryAssertArgsArraysEqual (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:182:33)"
+      }
+    },
+    {
+      "title": "Should trip circuit breaker for large deviations",
+      "fullTitle": "PriceOracle Price Submission Should trip circuit breaker for large deviations",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 47,
+      "err": {}
+    },
+    {
+      "title": "Should return the latest price",
+      "fullTitle": "PriceOracle Price Reading Should return the latest price",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 21,
+      "err": {
+        "message": "HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined",
+        "stack": "HardhatError: HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined\n    at normalizeToBigInt (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\common\\bigInt.ts:47:13)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\bigNumber.ts:242:39)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at doAsserterAsyncAndAddThen (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:289:22)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:255:20)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js:114:31)"
+      }
+    },
+    {
+      "title": "Should revert for stale prices",
+      "fullTitle": "PriceOracle Price Reading Should revert for stale prices",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 24,
+      "err": {}
+    },
+    {
+      "title": "Should revert when no data exists",
+      "fullTitle": "PriceOracle Price Reading Should revert when no data exists",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should calculate TWAP correctly",
+      "fullTitle": "PriceOracle TWAP Calculation Should calculate TWAP correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 47,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)",
+        "stack": "Error: VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)\n    at PriceOracle.getTWAP (runs/heldout16-llm-only-ethers6-v1-rep01/PriceOracle/contracts/PriceOracle.sol:193)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at staticCallResult (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:337:22)\n    at staticCall (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:303:24)\n    at Proxy.getTWAP (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:351:41)\n    at Context.<anonymous> (test\\generated.test.js:147:20)"
+      }
+    },
+    {
+      "title": "Should revert when no TWAP data exists",
+      "fullTitle": "PriceOracle TWAP Calculation Should revert when no TWAP data exists",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should allow feeders to submit prices",
+      "fullTitle": "PriceOracle Price Submission Should allow feeders to submit prices",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "Expected event \"PriceUpdated\" to be emitted, but it wasn't",
+        "stack": "AssertionError: Expected event \"PriceUpdated\" to be emitted, but it wasn't\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:69:7)"
+      }
+    },
+    {
+      "title": "Should aggregate prices when enough feeders submit",
+      "fullTitle": "PriceOracle Price Submission Should aggregate prices when enough feeders submit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 161,
+      "err": {
+        "message": "Error in \"PriceUpdated\" event: Error in the 3rd argument assertion: HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined",
+        "stack": "HardhatError: HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined\n    at normalizeToBigInt (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\common\\bigInt.ts:47:13)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\bigNumber.ts:172:39)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at doAsserterAsyncAndAddThen (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:289:22)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:255:20)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at innerAssertArgEqual (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\utils.ts:167:55)\n    at innerAssertArgsArraysEqual (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\utils.ts:86:7)\n    at assertArgsArraysEqual (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\utils.ts:58:5)\n    at tryAssertArgsArraysEqual (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:182:33)"
+      }
+    },
+    {
+      "title": "Should return the latest price",
+      "fullTitle": "PriceOracle Price Reading Should return the latest price",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 21,
+      "err": {
+        "message": "HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined",
+        "stack": "HardhatError: HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined\n    at normalizeToBigInt (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\common\\bigInt.ts:47:13)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\bigNumber.ts:242:39)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at doAsserterAsyncAndAddThen (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:289:22)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:255:20)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js:114:31)"
+      }
+    },
+    {
+      "title": "Should calculate TWAP correctly",
+      "fullTitle": "PriceOracle TWAP Calculation Should calculate TWAP correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 47,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)",
+        "stack": "Error: VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)\n    at PriceOracle.getTWAP (runs/heldout16-llm-only-ethers6-v1-rep01/PriceOracle/contracts/PriceOracle.sol:193)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at staticCallResult (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:337:22)\n    at staticCall (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:303:24)\n    at Proxy.getTWAP (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:351:41)\n    at Context.<anonymous> (test\\generated.test.js:147:20)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "PriceOracle Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct configuration",
+      "fullTitle": "PriceOracle Deployment Should set the correct configuration",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to add feeders",
+      "fullTitle": "PriceOracle Feeder Management Should allow owner to add feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should prevent adding existing feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent adding existing feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 24,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to remove feeders",
+      "fullTitle": "PriceOracle Feeder Management Should allow owner to remove feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from managing feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent non-owners from managing feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-feeders from submitting prices",
+      "fullTitle": "PriceOracle Price Submission Should prevent non-feeders from submitting prices",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should prevent zero price submissions",
+      "fullTitle": "PriceOracle Price Submission Should prevent zero price submissions",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should prevent duplicate submissions from the same feeder",
+      "fullTitle": "PriceOracle Price Submission Should prevent duplicate submissions from the same feeder",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should trip circuit breaker for large deviations",
+      "fullTitle": "PriceOracle Price Submission Should trip circuit breaker for large deviations",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 47,
+      "err": {}
+    },
+    {
+      "title": "Should revert for stale prices",
+      "fullTitle": "PriceOracle Price Reading Should revert for stale prices",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 24,
+      "err": {}
+    },
+    {
+      "title": "Should revert when no data exists",
+      "fullTitle": "PriceOracle Price Reading Should revert when no data exists",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should revert when no TWAP data exists",
+      "fullTitle": "PriceOracle TWAP Calculation Should revert when no TWAP data exists",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\PriceOracle\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    }
+  ]
+}

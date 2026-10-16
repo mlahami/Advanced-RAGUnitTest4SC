@@ -1,0 +1,35 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BenchmarkFixtures.sol
+> MerkleAirdrop.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |     23.4 |       10 |    28.57 |    27.14 |                |
+  BenchmarkFixtures.sol |    10.53 |     3.13 |    16.67 |    15.79 |... 140,141,145 |
+  MerkleAirdrop.sol     |    77.78 |     37.5 |      100 |    76.92 |       25,26,27 |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |     23.4 |       10 |    28.57 |    27.14 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+Error in plugin solidity-coverage: ❌ 4 test(s) failed under coverage.
+
+For more info run Hardhat with --show-stack-traces

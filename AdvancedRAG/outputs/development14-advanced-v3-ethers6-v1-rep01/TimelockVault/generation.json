@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"TimelockVault\", function () {\n  let timelockVault;\n  let owner;\n  let otherAccount;\n  const delaySeconds = 3600n; // 1 hour\n  const depositAmount = ethers.parseEther(\"1\");\n\n  beforeEach(async function () {\n    [owner, otherAccount] = await ethers.getSigners();\n\n    const TimelockVault = await ethers.getContractFactory(\"TimelockVault\");\n    timelockVault = await TimelockVault.deploy(delaySeconds, { value: depositAmount });\n    await timelockVault.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should set the right owner\", async function () {\n      expect(await timelockVault.owner()).to.equal(owner.address);\n    });\n\n    it(\"Should set the right unlock time\", async function () {\n      const currentTimestamp = (await ethers.provider.getBlock(\"latest\")).timestamp;\n      expect(await timelockVault.unlockTime()).to.equal(BigInt(currentTimestamp) + delaySeconds);\n    });\n\n    it(\"Should receive and store the funds\", async function () {\n      expect(await ethers.provider.getBalance(await timelockVault.getAddress())).to.equal(depositAmount);\n    });\n  });\n\n  describe(\"Withdrawals\", function () {\n    it(\"Should revert with the right error if called too soon\", async function () {\n      await expect(timelockVault.withdraw()).to.be.revertedWith(\"locked\");\n    });\n\n    it(\"Should revert with the right error if called from another account\", async function () {\n      const currentTimestamp = (await ethers.provider.getBlock(\"latest\")).timestamp;\n      await ethers.provider.send(\"evm_setNextBlockTimestamp\", [Number(currentTimestamp) + Number(delaySeconds) + 1]);\n      await ethers.provider.send(\"evm_mine\", []);\n\n      await expect(timelockVault.connect(otherAccount).withdraw()).to.be.revertedWith(\"not owner\");\n    });\n\n    it(\"Should transfer the funds to the owner if unlocked\", async function () {\n      const currentTimestamp = (await ethers.provider.getBlock(\"latest\")).timestamp;\n      await ethers.provider.send(\"evm_setNextBlockTimestamp\", [Number(currentTimestamp) + Number(delaySeconds) + 1]);\n      await ethers.provider.send(\"evm_mine\", []);\n\n      const initialOwnerBalance = await ethers.provider.getBalance(owner.address);\n      const tx = await timelockVault.withdraw();\n      const receipt = await tx.wait();\n      const gasUsed = receipt.gasUsed * receipt.gasPrice;\n\n      const finalOwnerBalance = await ethers.provider.getBalance(owner.address);\n      expect(finalOwnerBalance).to.equal(initialOwnerBalance + depositAmount - gasUsed);\n    });\n  });\n\n  describe(\"Receive\", function () {\n    it(\"Should accept ETH deposits\", async function () {\n      const additionalAmount = ethers.parseEther(\"0.5\");\n      const tx = await owner.sendTransaction({\n        to: await timelockVault.getAddress(),\n        value: additionalAmount\n      });\n      await tx.wait();\n\n      expect(await ethers.provider.getBalance(await timelockVault.getAddress())).to.equal(depositAmount + additionalAmount);\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 6.423454099916853,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 10614,
+      "total_tokens": 11320,
+      "completion_tokens": 706,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "e4a11853746d335f90f6dc9b5aa0c02cd58153c02291f5d9d7dcf47ca4b8d88b"
+}

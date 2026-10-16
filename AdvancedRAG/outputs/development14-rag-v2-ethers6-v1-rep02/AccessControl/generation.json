@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"AccessControl\", function () {\n  let accessControl;\n  let admin, user1, user2;\n  const EDITOR_ROLE = ethers.keccak256(ethers.toUtf8Bytes(\"EDITOR_ROLE\"));\n\n  beforeEach(async function () {\n    [admin, user1, user2] = await ethers.getSigners();\n\n    const AccessControl = await ethers.getContractFactory(\"AccessControl\");\n    accessControl = await AccessControl.deploy();\n    await accessControl.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should set the correct admin\", async function () {\n      expect(await accessControl.admin()).to.equal(admin.address);\n    });\n  });\n\n  describe(\"Role Management\", function () {\n    it(\"Should grant role to an account\", async function () {\n      await accessControl.connect(admin).grantRole(EDITOR_ROLE, user1.address);\n      expect(await accessControl.hasRole(EDITOR_ROLE, user1.address)).to.be.true;\n    });\n\n    it(\"Should revoke role from an account\", async function () {\n      await accessControl.connect(admin).grantRole(EDITOR_ROLE, user1.address);\n      await accessControl.connect(admin).revokeRole(EDITOR_ROLE, user1.address);\n      expect(await accessControl.hasRole(EDITOR_ROLE, user1.address)).to.be.false;\n    });\n\n    it(\"Should not allow non-admin to grant role\", async function () {\n      await expect(\n        accessControl.connect(user1).grantRole(EDITOR_ROLE, user2.address)\n      ).to.be.revertedWith(\"not admin\");\n    });\n\n    it(\"Should not allow non-admin to revoke role\", async function () {\n      await accessControl.connect(admin).grantRole(EDITOR_ROLE, user1.address);\n      await expect(\n        accessControl.connect(user1).revokeRole(EDITOR_ROLE, user1.address)\n      ).to.be.revertedWith(\"not admin\");\n    });\n\n    it(\"Should return correct role status for an account\", async function () {\n      expect(await accessControl.hasRole(EDITOR_ROLE, user1.address)).to.be.false;\n      await accessControl.connect(admin).grantRole(EDITOR_ROLE, user1.address);\n      expect(await accessControl.hasRole(EDITOR_ROLE, user1.address)).to.be.true;\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 4.959597100038081,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 10589,
+      "total_tokens": 11112,
+      "completion_tokens": 523,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "4ea07ce6222c61b8f096ea53fd77107ec00dc0b86491692377b6e62aac9cf69c"
+}

@@ -1,0 +1,36 @@
+{
+  "contract": "DAOGovernor",
+  "status": "test_failures",
+  "prompt_sha256": "30d58297e00ca4ab05f4c234477879b9f5515afcea10066b99aa983939feeb67",
+  "generation_seconds": 25.973843300016597,
+  "usage": {
+    "prompt_tokens": 7632,
+    "total_tokens": 10492,
+    "completion_tokens": 2860,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 8.224289099918678
+  },
+  "passed_tests": 13,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "DAOGovernor Proposal Execution should execute a queued proposal",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

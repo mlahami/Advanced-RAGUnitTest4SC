@@ -1,0 +1,34 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> EvoPool.sol
+> EvoToken.sol
+> IEvoPool.sol
+
+Compilation:
+============
+
+Compiled 24 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+---------------|----------|----------|----------|----------|----------------|
+File           |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+---------------|----------|----------|----------|----------|----------------|
+ contracts\    |    96.15 |    68.27 |       85 |    95.28 |                |
+  EvoPool.sol  |    97.37 |    69.61 |    88.89 |       96 |... 334,335,427 |
+  EvoToken.sol |       50 |        0 |       50 |       50 |             23 |
+  IEvoPool.sol |      100 |      100 |      100 |      100 |                |
+---------------|----------|----------|----------|----------|----------------|
+All files      |    96.15 |    68.27 |       85 |    95.28 |                |
+---------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

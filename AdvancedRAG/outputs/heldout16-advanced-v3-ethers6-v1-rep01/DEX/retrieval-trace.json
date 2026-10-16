@@ -1,0 +1,187 @@
+{
+  "target_functions": [
+    {
+      "target_function": "addLiquidity",
+      "corpus_functions": [
+        "4187cb1d3bb0c80385d6972a",
+        "0e19258c45fb7780c3e51d4b",
+        "811aa8d388390eeecf22828f",
+        "db8adc3feb3e714c4ba99ae2",
+        "2bf08ee63ff6ac0642464402",
+        "27212a276972c6085d2df7ed",
+        "e63e499ff1a5972b0f9dcc53",
+        "3ad47e1461dafdaa1f82329b"
+      ],
+      "candidate_tests": [
+        "5fc9648df2f65f8742c69492",
+        "238fb0a5b1752747c0d1727f",
+        "db19005d7ad3eab3c3a79801",
+        "33f25707669790ad1318436b",
+        "9a3e8a2ebafcbd0f2e1556ed",
+        "0ae7f8f97cdbdc0259ecbbb3",
+        "2f07624dd29ced76b715a5d6",
+        "6f4d1c63031d3ec890ba1a92",
+        "64743e40475e4e955b36c0a9",
+        "6c59c5276feeb4334258c37e",
+        "09679d84a832ecf5622cdfad",
+        "41a380e4bdb5594e2c848da2"
+      ]
+    },
+    {
+      "target_function": "removeLiquidity",
+      "corpus_functions": [
+        "1866ab8834ca8c25fa341e82",
+        "9898079222e4792a548669ec",
+        "2700f0d9a478c88f01755883",
+        "5c84f8984d05874b5da0fd74",
+        "758d9fa8a8d8c2f0b94d2db3",
+        "0e19258c45fb7780c3e51d4b",
+        "2bf08ee63ff6ac0642464402",
+        "27212a276972c6085d2df7ed"
+      ],
+      "candidate_tests": [
+        "16f8366c673bc1b0fb252c78",
+        "1b8b22a84026e267fca9d6e4",
+        "d1c5cfe0e2b226964060639b",
+        "eb81fda2eee398b715a6bfdb",
+        "981295a8d83fa425692560be",
+        "83e113e05d6114c0ee99293e",
+        "fa296d864ee3c6336ccbbba7",
+        "db19005d7ad3eab3c3a79801",
+        "33f25707669790ad1318436b",
+        "9a3e8a2ebafcbd0f2e1556ed",
+        "0ae7f8f97cdbdc0259ecbbb3",
+        "2f07624dd29ced76b715a5d6",
+        "6f4d1c63031d3ec890ba1a92"
+      ]
+    },
+    {
+      "target_function": "swapAforB",
+      "corpus_functions": [
+        "428e931c4fe9f56ce1b9b3bb",
+        "3ad47e1461dafdaa1f82329b",
+        "45e71eb183928f1dc4c12bbe",
+        "cf5a40ceb0b8ca23944f4e50",
+        "f30ee48d9b460681c1871fe5",
+        "cdea7d2f219fba5148383bf7",
+        "c5cea7139ac3295ab2f6203e",
+        "008f4620a7b21de2b6621b43"
+      ],
+      "candidate_tests": [
+        "e02ab37d91a03ddd5545f428",
+        "21281f60a82693d3c481447e",
+        "09679d84a832ecf5622cdfad",
+        "41a380e4bdb5594e2c848da2",
+        "ba7c877d9f282f1c0749fcb9",
+        "7db010dc1e81c8bb4b38e45f",
+        "1e0119c2ff4c647a6a368813",
+        "8ce11d8d882fd43c9f433141",
+        "10d6c3772226a6bd6cc82da1",
+        "3af3d1cac9dd4153638b93b4",
+        "0f6a95bb9ba01f5ade447a28",
+        "3276cab7f7111403a18c5592",
+        "388fb74114e8aedc190cf475",
+        "af73aeb3f11596bc1570a0cd"
+      ]
+    },
+    {
+      "target_function": "swapBforA",
+      "corpus_functions": [
+        "428e931c4fe9f56ce1b9b3bb",
+        "45e71eb183928f1dc4c12bbe",
+        "3ad47e1461dafdaa1f82329b",
+        "cf5a40ceb0b8ca23944f4e50",
+        "f30ee48d9b460681c1871fe5",
+        "cdea7d2f219fba5148383bf7",
+        "c5cea7139ac3295ab2f6203e",
+        "008f4620a7b21de2b6621b43"
+      ],
+      "candidate_tests": [
+        "e02ab37d91a03ddd5545f428",
+        "21281f60a82693d3c481447e",
+        "ba7c877d9f282f1c0749fcb9",
+        "7db010dc1e81c8bb4b38e45f",
+        "09679d84a832ecf5622cdfad",
+        "41a380e4bdb5594e2c848da2",
+        "1e0119c2ff4c647a6a368813",
+        "8ce11d8d882fd43c9f433141",
+        "10d6c3772226a6bd6cc82da1",
+        "3af3d1cac9dd4153638b93b4",
+        "0f6a95bb9ba01f5ade447a28",
+        "3276cab7f7111403a18c5592",
+        "388fb74114e8aedc190cf475",
+        "af73aeb3f11596bc1570a0cd"
+      ]
+    }
+  ],
+  "selected": [
+    6196,
+    1975,
+    1979,
+    1980,
+    6197,
+    2668
+  ],
+  "context_chars": 14719,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "DEX",
+  "retrieval_seconds": 4.730590200051665,
+  "hits": [
+    {
+      "chunk_id": 6196,
+      "test_id": "5fc9648df2f65f8742c69492",
+      "pair": "simple-swap--monandbri",
+      "domain_group": "amm-dex",
+      "name": "testing addLiquidity()",
+      "via_function": "4187cb1d3bb0c80385d6972a",
+      "chars": 3354
+    },
+    {
+      "chunk_id": 1975,
+      "test_id": "16f8366c673bc1b0fb252c78",
+      "pair": "dex-pool--anmolm-777",
+      "domain_group": "amm-dex",
+      "name": "Should allow removing liquidity and return proportional reserves",
+      "via_function": "1866ab8834ca8c25fa341e82",
+      "chars": 2593
+    },
+    {
+      "chunk_id": 1979,
+      "test_id": "e02ab37d91a03ddd5545f428",
+      "pair": "dex-pool--anmolm-777",
+      "domain_group": "amm-dex",
+      "name": "Should reject swaps with 0 input amount",
+      "via_function": "428e931c4fe9f56ce1b9b3bb",
+      "chars": 1741
+    },
+    {
+      "chunk_id": 1980,
+      "test_id": "21281f60a82693d3c481447e",
+      "pair": "dex-pool--anmolm-777",
+      "domain_group": "amm-dex",
+      "name": "Should reject swaps of unsupported tokens",
+      "via_function": "428e931c4fe9f56ce1b9b3bb",
+      "chars": 1799
+    },
+    {
+      "chunk_id": 6197,
+      "test_id": "238fb0a5b1752747c0d1727f",
+      "pair": "simple-swap--monandbri",
+      "domain_group": "amm-dex",
+      "name": "should emit LiquidityAdded event with correct values",
+      "via_function": "4187cb1d3bb0c80385d6972a",
+      "chars": 3193
+    },
+    {
+      "chunk_id": 2668,
+      "test_id": "1b8b22a84026e267fca9d6e4",
+      "pair": "evo-pool--diveshk007",
+      "domain_group": "amm-dex",
+      "name": "should reject insufficient LP balance",
+      "via_function": "2700f0d9a478c88f01755883",
+      "chars": 2039
+    }
+  ]
+}

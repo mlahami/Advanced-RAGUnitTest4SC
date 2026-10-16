@@ -1,0 +1,31 @@
+{
+  "id": "crowdfunding--giovanniforlenza",
+  "domain": "crowdfunding",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Crowdfunding.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/GiovanniForlenza/crowdfunding-dapp",
+    "commit": "eecf8b3d57ce14c6f6e214dd3bf4dc9b5fa6f4b7",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Crowdfunding.sol"
+    ],
+    "test_paths": [
+      "test/Crowdfunding.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Crowdfunding.sol": "9dbf82bd2a22ad4d4671f54387c3f09964fcb8aadcd77a43bd7c3ba286e41a9a",
+      "test/Crowdfunding.js": "319016842a4cddf0f6a8614616c20300ca5c93fa3101863f5d01ab272f3f43d6"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Single-campaign crowdfunding with goal/deadline, contribute, withdraw by owner, refund (ReentrancyGuard). 94 lines; 6 it blocks, 4 revert assertions (light suite). MIT LICENSE. Recent (2026-09-15).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-29T09:56:46.178292+00:00"
+}

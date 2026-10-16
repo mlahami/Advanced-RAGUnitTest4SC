@@ -1,0 +1,60 @@
+{
+  "id": "donate-crypto-adapter--allexantoniollo",
+  "domain": "charity-donation",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "DonateCryptoAdapter.sol",
+    "DonateCrypto.sol",
+    "DonateCryptoLib.sol",
+    "IDonateCrypto.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/AllexAntoniollo/DonateCrypto",
+    "commit": "536b70b4ab02cdce945e9502dce220fbee2e034d",
+    "license": "MIT",
+    "contract_paths": [
+      "blockchain/contracts/DonateCryptoAdapter.sol",
+      "blockchain/contracts/DonateCrypto.sol",
+      "blockchain/contracts/DonateCryptoLib.sol",
+      "blockchain/contracts/IDonateCrypto.sol"
+    ],
+    "test_paths": [
+      "blockchain/test/DonateCryptoAdapter.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "blockchain/contracts/DonateCryptoAdapter.sol": "d20558a659dc3ff42096e28aae762013f72ea9eed15877242442e324806a42a2",
+      "blockchain/contracts/DonateCrypto.sol": "e913c00c9143312dc8cba81782df7e9004bf1d6a7fd87f3df3ffdf7a044fa87e",
+      "blockchain/contracts/DonateCryptoLib.sol": "63ba0146337d5eb41eaa77413425caefbd9c82a59de483338eff0c6a16d946d4",
+      "blockchain/contracts/IDonateCrypto.sol": "0387f60386c0e80481b89af6defa3dfcc86f79a6daaac6448c66935894fda506",
+      "blockchain/test/DonateCryptoAdapter.test.ts": "397d6f40ca96a138a5c9bca9c03a128983e64856dc2c2a7bed003e6fd5c2f119"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "DonateCryptoAdapter.test.js",
+      "upstream_path": "blockchain/test/DonateCryptoAdapter.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "DonateCryptoAdapter.test.js",
+      "upstream_path": "blockchain/test/DonateCryptoAdapter.test.ts"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "DonateCryptoAdapter.test.js",
+      "upstream_path": "blockchain/test/DonateCryptoAdapter.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Upgradeable-by-adapter pattern (adapter forwarding to implementation) of the donation contract. Primary 39 non-blank lines, closure 130 lines/4 files; 10 its, 10 expects; pragma ^0.8.19.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:59.767201+00:00"
+}

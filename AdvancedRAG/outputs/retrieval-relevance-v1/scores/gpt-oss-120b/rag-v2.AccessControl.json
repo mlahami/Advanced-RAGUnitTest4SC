@@ -1,0 +1,79 @@
+{
+  "id": "rag-v2.AccessControl",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "AccessControl",
+  "chunk_ids": [
+    86,
+    82,
+    5643,
+    5642,
+    168,
+    169,
+    5640,
+    463,
+    461,
+    5641
+  ],
+  "context_sha256": "cbf8d09d1f9360609b752cf0f2cdeb74789d4f2ecf91266844519252ca2c0f4a",
+  "ratings": [
+    {
+      "chunk_id": 86,
+      "rating": 2,
+      "reason": "Tests grant and revoke role with admin, mirroring AccessControl's grantRole/revokeRole flow; pattern directly reusable after renaming."
+    },
+    {
+      "chunk_id": 82,
+      "rating": 2,
+      "reason": "Tests grant/revoke role and check boolean, matching target's role management pattern; function names differ but logic directly reusable after renaming."
+    },
+    {
+      "chunk_id": 5643,
+      "rating": 1,
+      "reason": "Shows role revocation pattern but target contract doesn't revert on non‑existent role, so only generic setup is reusable."
+    },
+    {
+      "chunk_id": 5642,
+      "rating": 1,
+      "reason": "Shows role revocation pattern; target uses admin address not role, so test logic needs adaptation, but revocation flow is relevant."
+    },
+    {
+      "chunk_id": 168,
+      "rating": 1,
+      "reason": "Shows generic admin‑only role change and revert pattern, which can inspire testing AccessControl’s admin restriction and revert messages, but specific behavior differs."
+    },
+    {
+      "chunk_id": 169,
+      "rating": 1,
+      "reason": "Shows generic role‑change revert pattern and admin‑only call, useful for testing access‑control but specific role logic differs"
+    },
+    {
+      "chunk_id": 5640,
+      "rating": 2,
+      "reason": "Tests non‑admin revert on grantRole, matching AccessControl’s admin check; only constants and error name differ, easily adapted."
+    },
+    {
+      "chunk_id": 463,
+      "rating": 1,
+      "reason": "Shows revert testing pattern for role revocation, but target lacks self‑revoke restriction, so only generic pattern applies"
+    },
+    {
+      "chunk_id": 461,
+      "rating": 2,
+      "reason": "Tests grant/revoke role functionality and hasRole check, matching AccessControl behavior; only contract name and role constants differ, making it directly reusable."
+    },
+    {
+      "chunk_id": 5641,
+      "rating": 1,
+      "reason": "Shows role‑granting pattern but target lacks duplicate‑grant revert/custom error, so only generic setup is reusable."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9506,
+    "completion_tokens": 1207,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 19.6,
+  "evaluated_utc": "2026-10-12T08:38:30.415576+00:00"
+}

@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 13,
+    "passes": 13,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-10-01T06:11:20.258Z",
+    "end": "2026-10-01T06:11:20.801Z",
+    "duration": 543
+  },
+  "tests": [
+    {
+      "title": "Should deposit ETH as collateral",
+      "fullTitle": "LendingPool Deposit Collateral Should deposit ETH as collateral",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should revert when depositing zero ETH",
+      "fullTitle": "LendingPool Deposit Collateral Should revert when depositing zero ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should allow borrowing up to collateralization limit",
+      "fullTitle": "LendingPool Borrow Tokens Should allow borrowing up to collateralization limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should revert when borrowing more than collateralization limit",
+      "fullTitle": "LendingPool Borrow Tokens Should revert when borrowing more than collateralization limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should allow multiple borrows up to limit",
+      "fullTitle": "LendingPool Borrow Tokens Should allow multiple borrows up to limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should allow partial repayment",
+      "fullTitle": "LendingPool Repay Debt Should allow partial repayment",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should allow full repayment",
+      "fullTitle": "LendingPool Repay Debt Should allow full repayment",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should revert when repaying more than debt",
+      "fullTitle": "LendingPool Repay Debt Should revert when repaying more than debt",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should liquidate undercollateralized position",
+      "fullTitle": "LendingPool Liquidation Should liquidate undercollateralized position",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should revert liquidation of healthy position",
+      "fullTitle": "LendingPool Liquidation Should revert liquidation of healthy position",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should have correct constants",
+      "fullTitle": "LendingPool State Variables Should have correct constants",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "Should track collateral correctly",
+      "fullTitle": "LendingPool State Variables Should track collateral correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should track debt correctly",
+      "fullTitle": "LendingPool State Variables Should track debt correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "Should deposit ETH as collateral",
+      "fullTitle": "LendingPool Deposit Collateral Should deposit ETH as collateral",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should revert when depositing zero ETH",
+      "fullTitle": "LendingPool Deposit Collateral Should revert when depositing zero ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should allow borrowing up to collateralization limit",
+      "fullTitle": "LendingPool Borrow Tokens Should allow borrowing up to collateralization limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should revert when borrowing more than collateralization limit",
+      "fullTitle": "LendingPool Borrow Tokens Should revert when borrowing more than collateralization limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should allow multiple borrows up to limit",
+      "fullTitle": "LendingPool Borrow Tokens Should allow multiple borrows up to limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should allow partial repayment",
+      "fullTitle": "LendingPool Repay Debt Should allow partial repayment",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should allow full repayment",
+      "fullTitle": "LendingPool Repay Debt Should allow full repayment",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should revert when repaying more than debt",
+      "fullTitle": "LendingPool Repay Debt Should revert when repaying more than debt",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should liquidate undercollateralized position",
+      "fullTitle": "LendingPool Liquidation Should liquidate undercollateralized position",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should revert liquidation of healthy position",
+      "fullTitle": "LendingPool Liquidation Should revert liquidation of healthy position",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should have correct constants",
+      "fullTitle": "LendingPool State Variables Should have correct constants",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "Should track collateral correctly",
+      "fullTitle": "LendingPool State Variables Should track collateral correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should track debt correctly",
+      "fullTitle": "LendingPool State Variables Should track debt correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep01\\LendingPool\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    }
+  ]
+}

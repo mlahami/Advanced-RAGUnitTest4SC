@@ -1,0 +1,52 @@
+{
+  "contract": "Escrow",
+  "status": "test_failures",
+  "prompt_sha256": "da375493f696ba5790ea6a14fc831185c524f2f1d0836322c2f754f055cc9453",
+  "generation_seconds": 11.171047900046688,
+  "usage": {
+    "prompt_tokens": 7022,
+    "total_tokens": 8453,
+    "completion_tokens": 1431,
+    "prompt_tokens_details": {
+      "cached_tokens": 6912
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 3.9973785000038333
+  },
+  "passed_tests": 11,
+  "failed_tests": 5,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Escrow fund should allow the buyer to fund the escrow",
+      "error": "Event \"Funded\" doesn't exist in the contract"
+    },
+    {
+      "title": "Escrow release should allow the buyer to release funds to the seller",
+      "error": "Event \"Released\" doesn't exist in the contract"
+    },
+    {
+      "title": "Escrow release should allow the arbiter to release funds to the seller",
+      "error": "Event \"Released\" doesn't exist in the contract"
+    },
+    {
+      "title": "Escrow refund should allow the seller to refund the buyer",
+      "error": "Event \"Refunded\" doesn't exist in the contract"
+    },
+    {
+      "title": "Escrow refund should allow the arbiter to refund the buyer",
+      "error": "Event \"Refunded\" doesn't exist in the contract"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

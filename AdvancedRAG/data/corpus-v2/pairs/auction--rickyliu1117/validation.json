@@ -1,0 +1,82 @@
+{
+  "pair": "auction--rickyliu1117",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:34:55.243379+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Auction.sol": "d3ff449f38723e39bed4d62ac7781e036158bc5cbdfe05b519fa2ed2e39bb987",
+    "LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+    "manifest.json": "dfd848d75680bab7ebdc5a4827c4d90e0fc72f2f3efaac0da9805e63228c8294",
+    "test/Auction.test.js": "c72e1800c52163d2cd679fbe59f34afdfd3141991d3cfa8859027c183feea169"
+  },
+  "pair_sha256": "a8b8449448a8e87b0a4b456782efc626ad0dd6b6089ecc0b3f8244ec4fc567b0",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Auction.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.136,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "Auction.sol",
+        "reference": "Auction.sol",
+        "structural": 0.124,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "Auction.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.119,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.08,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.66,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Auction.sol": {
+          "statements": 77.42,
+          "branches": 52.17,
+          "functions": 81.82,
+          "lines": 85.71
+        }
+      }
+    }
+  },
+  "accepted": true
+}

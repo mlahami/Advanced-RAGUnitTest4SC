@@ -1,0 +1,462 @@
+{
+  "summary": {
+    "llm-only": {
+      "development14": {
+        "suites": 42,
+        "fully_passing": 10,
+        "fpsr": 23.8,
+        "tpr": 84.3,
+        "statements": 89.29,
+        "branches": 95.45,
+        "coverage_reports": 42,
+        "statuses": {
+          "test_failures": 32,
+          "passed": 10
+        }
+      },
+      "heldout16": {
+        "suites": 48,
+        "fully_passing": 3,
+        "fpsr": 6.2,
+        "tpr": 71.9,
+        "statements": 72.92,
+        "branches": 61.98,
+        "coverage_reports": 48,
+        "statuses": {
+          "passed": 3,
+          "test_failures": 45
+        }
+      },
+      "all30": {
+        "suites": 90,
+        "fully_passing": 13,
+        "fpsr": 14.4,
+        "tpr": 77.1,
+        "statements": 80.56,
+        "branches": 77.6,
+        "coverage_reports": 90,
+        "statuses": {
+          "test_failures": 77,
+          "passed": 13
+        }
+      }
+    },
+    "rag-v2": {
+      "development14": {
+        "suites": 42,
+        "fully_passing": 20,
+        "fpsr": 47.6,
+        "tpr": 84.1,
+        "statements": 75.89,
+        "branches": 81.72,
+        "coverage_reports": 42,
+        "statuses": {
+          "passed": 20,
+          "test_failures": 22
+        }
+      },
+      "heldout16": {
+        "suites": 48,
+        "fully_passing": 4,
+        "fpsr": 8.3,
+        "tpr": 71.3,
+        "statements": 75.18,
+        "branches": 64.42,
+        "coverage_reports": 48,
+        "statuses": {
+          "test_failures": 44,
+          "passed": 4
+        }
+      },
+      "all30": {
+        "suites": 90,
+        "fully_passing": 24,
+        "fpsr": 26.7,
+        "tpr": 76.5,
+        "statements": 75.51,
+        "branches": 72.5,
+        "coverage_reports": 90,
+        "statuses": {
+          "passed": 24,
+          "test_failures": 66
+        }
+      }
+    },
+    "advanced-v2": {
+      "development14": {
+        "suites": 42,
+        "fully_passing": 14,
+        "fpsr": 33.3,
+        "tpr": 82.4,
+        "statements": 73.21,
+        "branches": 79.09,
+        "coverage_reports": 42,
+        "statuses": {
+          "test_failures": 28,
+          "passed": 14
+        }
+      },
+      "heldout16": {
+        "suites": 48,
+        "fully_passing": 2,
+        "fpsr": 4.2,
+        "tpr": 73.5,
+        "statements": 85.22,
+        "branches": 75.17,
+        "coverage_reports": 48,
+        "statuses": {
+          "test_failures": 46,
+          "passed": 2
+        }
+      },
+      "all30": {
+        "suites": 90,
+        "fully_passing": 16,
+        "fpsr": 17.8,
+        "tpr": 76.8,
+        "statements": 79.62,
+        "branches": 77.0,
+        "coverage_reports": 90,
+        "statuses": {
+          "test_failures": 74,
+          "passed": 16
+        }
+      }
+    },
+    "advanced-v3": {
+      "development14": {
+        "suites": 42,
+        "fully_passing": 16,
+        "fpsr": 38.1,
+        "tpr": 78.8,
+        "statements": 76.86,
+        "branches": 82.16,
+        "coverage_reports": 42,
+        "statuses": {
+          "test_failures": 26,
+          "passed": 16
+        }
+      },
+      "heldout16": {
+        "suites": 48,
+        "fully_passing": 4,
+        "fpsr": 8.3,
+        "tpr": 77.2,
+        "statements": 86.49,
+        "branches": 73.86,
+        "coverage_reports": 46,
+        "statuses": {
+          "test_failures": 42,
+          "syntax_error": 2,
+          "passed": 4
+        }
+      },
+      "all30": {
+        "suites": 90,
+        "fully_passing": 20,
+        "fpsr": 22.2,
+        "tpr": 77.9,
+        "statements": 81.89,
+        "branches": 77.82,
+        "coverage_reports": 88,
+        "statuses": {
+          "test_failures": 68,
+          "passed": 20,
+          "syntax_error": 2
+        }
+      }
+    }
+  },
+  "paired_vs_llm_only": {
+    "rag-v2": {
+      "development14": {
+        "pairs": 42,
+        "only_config_passes": 11,
+        "only_llm_only_passes": 1,
+        "mcnemar_exact_p": 0.0063
+      },
+      "heldout16": {
+        "pairs": 48,
+        "only_config_passes": 4,
+        "only_llm_only_passes": 3,
+        "mcnemar_exact_p": 1.0
+      },
+      "all30": {
+        "pairs": 90,
+        "only_config_passes": 15,
+        "only_llm_only_passes": 4,
+        "mcnemar_exact_p": 0.0192
+      }
+    },
+    "advanced-v2": {
+      "development14": {
+        "pairs": 42,
+        "only_config_passes": 8,
+        "only_llm_only_passes": 4,
+        "mcnemar_exact_p": 0.3877
+      },
+      "heldout16": {
+        "pairs": 48,
+        "only_config_passes": 2,
+        "only_llm_only_passes": 3,
+        "mcnemar_exact_p": 1.0
+      },
+      "all30": {
+        "pairs": 90,
+        "only_config_passes": 10,
+        "only_llm_only_passes": 7,
+        "mcnemar_exact_p": 0.6291
+      }
+    },
+    "advanced-v3": {
+      "development14": {
+        "pairs": 42,
+        "only_config_passes": 8,
+        "only_llm_only_passes": 2,
+        "mcnemar_exact_p": 0.1094
+      },
+      "heldout16": {
+        "pairs": 48,
+        "only_config_passes": 4,
+        "only_llm_only_passes": 3,
+        "mcnemar_exact_p": 1.0
+      },
+      "all30": {
+        "pairs": 90,
+        "only_config_passes": 12,
+        "only_llm_only_passes": 5,
+        "mcnemar_exact_p": 0.1435
+      }
+    }
+  },
+  "per_contract": {
+    "AccessControl": {
+      "llm-only": 1,
+      "rag-v2": 3,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "Adoption": {
+      "llm-only": 0,
+      "rag-v2": 3,
+      "advanced-v2": 3,
+      "advanced-v3": 0
+    },
+    "Auction": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "Counter": {
+      "llm-only": 0,
+      "rag-v2": 1,
+      "advanced-v2": 2,
+      "advanced-v3": 3
+    },
+    "Crowdfunding": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "Escrow": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "MetaCoin": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "MultiSigWallet": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "PaymentSplitter": {
+      "llm-only": 0,
+      "rag-v2": 1,
+      "advanced-v2": 0,
+      "advanced-v3": 1
+    },
+    "Registry": {
+      "llm-only": 2,
+      "rag-v2": 3,
+      "advanced-v2": 2,
+      "advanced-v3": 3
+    },
+    "SimpleStorage": {
+      "llm-only": 3,
+      "rag-v2": 3,
+      "advanced-v2": 3,
+      "advanced-v3": 3
+    },
+    "TimelockVault": {
+      "llm-only": 1,
+      "rag-v2": 3,
+      "advanced-v2": 0,
+      "advanced-v3": 1
+    },
+    "Token": {
+      "llm-only": 1,
+      "rag-v2": 2,
+      "advanced-v2": 1,
+      "advanced-v3": 2
+    },
+    "Voting": {
+      "llm-only": 2,
+      "rag-v2": 1,
+      "advanced-v2": 3,
+      "advanced-v3": 3
+    },
+    "BatchTransfer": {
+      "llm-only": 1,
+      "rag-v2": 1,
+      "advanced-v2": 1,
+      "advanced-v3": 0
+    },
+    "BondingCurve": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "CrossChainBridge": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "DAOGovernor": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "DEX": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "GaslessRelayer": {
+      "llm-only": 0,
+      "rag-v2": 3,
+      "advanced-v2": 0,
+      "advanced-v3": 2
+    },
+    "InsurancePool": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "LendingPool": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 1,
+      "advanced-v3": 1
+    },
+    "MerkleAirdrop": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "NFTMarketplace": {
+      "llm-only": 2,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "NFTStaking": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "PriceOracle": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "RateLimiter": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "SubscriptionService": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 1
+    },
+    "TokenVesting": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    },
+    "YieldVault": {
+      "llm-only": 0,
+      "rag-v2": 0,
+      "advanced-v2": 0,
+      "advanced-v3": 0
+    }
+  },
+  "failure_categories": {
+    "llm-only": {
+      "invented event": 38,
+      "revert mismatch": 67,
+      "other": 39,
+      "wrong assertion value": 50,
+      "invented function/API": 43
+    },
+    "rag-v2": {
+      "invented event": 21,
+      "wrong assertion value": 43,
+      "revert mismatch": 130,
+      "invented function/API": 21,
+      "other": 19
+    },
+    "advanced-v2": {
+      "invented event": 29,
+      "revert mismatch": 102,
+      "other": 48,
+      "wrong assertion value": 55,
+      "invented function/API": 15
+    },
+    "advanced-v3": {
+      "invented event": 32,
+      "other": 46,
+      "revert mismatch": 112,
+      "wrong assertion value": 37,
+      "invented function/API": 8
+    }
+  },
+  "completeness": {
+    "llm-only": {
+      "development14": "42/42",
+      "heldout16": "48/48"
+    },
+    "rag-v2": {
+      "development14": "42/42",
+      "heldout16": "48/48"
+    },
+    "advanced-v2": {
+      "development14": "42/42",
+      "heldout16": "48/48"
+    },
+    "advanced-v3": {
+      "development14": "42/42",
+      "heldout16": "48/48"
+    }
+  }
+}

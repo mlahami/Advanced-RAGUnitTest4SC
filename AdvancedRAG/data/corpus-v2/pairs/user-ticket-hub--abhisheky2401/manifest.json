@@ -1,0 +1,40 @@
+{
+  "id": "user-ticket-hub--abhisheky2401",
+  "domain": "ticketing-events",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "UserTicketHub.sol",
+    "EventCore.sol",
+    "EventFactory.sol",
+    "TicketManager.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/abhishekY2401/event-dapp-backend",
+    "commit": "8cae2ab28a6c561828dd4e3cb12eb55df2a0cfeb",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/UserTicketHub.sol",
+      "contracts/EventCore.sol",
+      "contracts/EventFactory.sol",
+      "contracts/TicketManager.sol"
+    ],
+    "test_paths": [
+      "test/UserTicketHub.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/UserTicketHub.sol": "43198f60af98079410d4adfc37d843d6615fb4df5bfd6aaad9304dd7ce19f4cc",
+      "contracts/EventCore.sol": "fb7e5fd59ff964ad78a60404afc7f2d8d6e094b2246c34dabe556f7dc5af3b7c",
+      "contracts/EventFactory.sol": "9448558277a9b5ca2a60efe53c80c75d4c349cbb85d3241dfa15409b3f0ae4e2",
+      "contracts/TicketManager.sol": "504b58882be38484f69f2491efedc08f0baf7b90a34c1d32de37b442bf8430ff",
+      "test/UserTicketHub.test.js": "2e82666694395ee4f131c6ba0397065f85a5dc17d656350e5b3b29462afd22b1"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Per-user ticket hub aggregating tickets across events; same repo. Primary 380 non-blank lines, closure 635 lines/4 files; 28 its, 36 expects; pragma ^0.8.18.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:49.438741+00:00"
+}

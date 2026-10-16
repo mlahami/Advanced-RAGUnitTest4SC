@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"BenchmarkTarget\", function () {\n  let contract;\n  let owner;\n  let otherAccount;\n\n  beforeEach(async function () {\n    [owner, otherAccount] = await ethers.getSigners();\n\n    const BenchmarkTarget = await ethers.getContractFactory(\"BenchmarkTarget\");\n    contract = await BenchmarkTarget.deploy();\n    await contract.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should set the initial value to 0\", async function () {\n      expect(await contract.value()).to.equal(0n);\n    });\n  });\n\n  describe(\"setValue\", function () {\n    it(\"Should update the value and emit ValueSet event\", async function () {\n      const newValue = 42n;\n      await expect(contract.setValue(newValue))\n        .to.emit(contract, \"ValueSet\")\n        .withArgs(newValue);\n\n      expect(await contract.value()).to.equal(newValue);\n    });\n\n    it(\"Should allow setting value with ETH\", async function () {\n      const newValue = 100n;\n      const ethAmount = ethers.parseEther(\"1\");\n\n      await expect(contract.setValue(newValue, { value: ethAmount }))\n        .to.emit(contract, \"ValueSet\")\n        .withArgs(newValue);\n\n      expect(await contract.value()).to.equal(newValue);\n    });\n  });\n\n  describe(\"value\", function () {\n    it(\"Should return the current value\", async function () {\n      const testValue = 123n;\n      await contract.setValue(testValue);\n      expect(await contract.value()).to.equal(testValue);\n    });\n  });\n\n  describe(\"fail\", function () {\n    it(\"Should revert with 'target failure'\", async function () {\n      await expect(contract.fail()).to.be.revertedWith(\"target failure\");\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 4.481098599964753,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 6851,
+      "total_tokens": 7253,
+      "completion_tokens": 402,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "f7bd7b38c8690a30004a889a0dd309613d44a6e88241727ff8d9479f54f8694c"
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-10-01T05:58:16.942Z",
+    "end": "2026-10-01T05:58:17.424Z",
+    "duration": 482
+  },
+  "tests": [
+    {
+      "title": "Should set the right payees and shares",
+      "fullTitle": "PaymentSplitter Deployment Should set the right payees and shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 39,
+      "err": {}
+    },
+    {
+      "title": "Should revert with invalid constructor arguments",
+      "fullTitle": "PaymentSplitter Deployment Should revert with invalid constructor arguments",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 40,
+      "err": {}
+    },
+    {
+      "title": "Should accept ETH transfers",
+      "fullTitle": "PaymentSplitter Receive Should accept ETH transfers",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should distribute ETH according to shares",
+      "fullTitle": "PaymentSplitter Distribute Should distribute ETH according to shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should revert if no funds to distribute",
+      "fullTitle": "PaymentSplitter Distribute Should revert if no funds to distribute",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should handle distribution with zero balance after transfers",
+      "fullTitle": "PaymentSplitter Distribute Should handle distribution with zero balance after transfers",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'no funds', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'no funds', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:121:7)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should handle distribution with zero balance after transfers",
+      "fullTitle": "PaymentSplitter Distribute Should handle distribution with zero balance after transfers",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'no funds', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'no funds', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:121:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right payees and shares",
+      "fullTitle": "PaymentSplitter Deployment Should set the right payees and shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 39,
+      "err": {}
+    },
+    {
+      "title": "Should revert with invalid constructor arguments",
+      "fullTitle": "PaymentSplitter Deployment Should revert with invalid constructor arguments",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 40,
+      "err": {}
+    },
+    {
+      "title": "Should accept ETH transfers",
+      "fullTitle": "PaymentSplitter Receive Should accept ETH transfers",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should distribute ETH according to shares",
+      "fullTitle": "PaymentSplitter Distribute Should distribute ETH according to shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should revert if no funds to distribute",
+      "fullTitle": "PaymentSplitter Distribute Should revert if no funds to distribute",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    }
+  ]
+}

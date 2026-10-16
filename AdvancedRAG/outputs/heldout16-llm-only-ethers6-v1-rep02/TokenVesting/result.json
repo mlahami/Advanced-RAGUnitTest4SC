@@ -1,0 +1,60 @@
+{
+  "contract": "TokenVesting",
+  "status": "test_failures",
+  "prompt_sha256": "d828fe970ce848632f75e30c2378585d420f26e7b69130acb7fee05d35aad9e9",
+  "generation_seconds": 12.943902699975297,
+  "usage": {
+    "prompt_tokens": 8336,
+    "total_tokens": 10418,
+    "completion_tokens": 2082,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 19.26475119998213
+  },
+  "passed_tests": 9,
+  "failed_tests": 7,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "TokenVesting revokeGrant Should revoke a grant",
+      "error": "Error in \"GrantRevoked\" event: Error in the 3rd argument assertion: expected 400 to equal 1000."
+    },
+    {
+      "title": "TokenVesting claim Should allow claiming after cliff",
+      "error": "Timestamp 1790805745 is lower than the previous block's timestamp 1790805756"
+    },
+    {
+      "title": "TokenVesting claim Should not allow claiming before cliff",
+      "error": "Timestamp 1790803745 is lower than the previous block's timestamp 1790805761"
+    },
+    {
+      "title": "TokenVesting claim Should allow claiming after vesting ends",
+      "error": "expected 604 to equal 1000."
+    },
+    {
+      "title": "TokenVesting claimable Should return 0 before cliff",
+      "error": "Timestamp 1790803745 is lower than the previous block's timestamp 1790808749"
+    },
+    {
+      "title": "TokenVesting claimable Should return correct amount after cliff",
+      "error": "Timestamp 1790805745 is lower than the previous block's timestamp 1790808754"
+    },
+    {
+      "title": "TokenVesting claimable Should return total amount after vesting ends",
+      "error": "Timestamp 1790808745 is lower than the previous block's timestamp 1790808759"
+    }
+  ],
+  "coverage": {
+    "statements": 80.0,
+    "branches": 77.27,
+    "functions": 87.5,
+    "lines": 82.14
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

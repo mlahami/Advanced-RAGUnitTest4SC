@@ -1,0 +1,41 @@
+{
+  "id": "gem-auction--rusiruss",
+  "domain": "auction",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "GemAuction.sol",
+    "BidRejector.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/rusiruss/Gem-bid",
+    "commit": "371d1c6f27a1b7eaa415ede975e551f4162a5298",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/GemAuction.sol",
+      "contracts/test/BidRejector.sol"
+    ],
+    "test_paths": [
+      "test/GemAuction.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/GemAuction.sol": "6efee4d988516c82a4ab7e3ac1a5921bb52a2ffb4802221d513a6f97be5e3754",
+      "contracts/test/BidRejector.sol": "ad88494beadf1e0a7debd7c7286a8d906bba8c178bc2c083fcfd3caef833afbe",
+      "test/GemAuction.test.js": "b958bea40ebae3804031ba5c2f34604def6648cc33a58e63b811f6e5f0ed8c4e"
+    }
+  },
+  "transformations": [
+    {
+      "file": "BidRejector.sol",
+      "kind": "import-path",
+      "before": "../GemAuction.sol",
+      "after": "./GemAuction.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (single author, 29 commits in one week Aug 2026, AI-like NatSpec). NFT auction house: each listing mints an ERC721URIStorage+ERC2981 token into escrow, anti-snipe extension, Buy Now, pull-payment refunds, settle/return-to-seller. OZ v5 ERC721URIStorage/ERC2981 (present in 5.0.2). 19 it blocks with loadFixture/time.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T15:51:37.289805+00:00"
+}

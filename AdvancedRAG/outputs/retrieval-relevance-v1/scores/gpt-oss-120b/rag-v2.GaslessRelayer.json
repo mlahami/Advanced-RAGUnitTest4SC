@@ -1,0 +1,55 @@
+{
+  "id": "rag-v2.GaslessRelayer",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "GaslessRelayer",
+  "chunk_ids": [
+    6737,
+    4841,
+    4849,
+    3080,
+    3081,
+    4846
+  ],
+  "context_sha256": "eb4b0936b5f7b0cd67ae2ebe93c3dafcd6e555321b3853fc0e24c8be846e96b2",
+  "ratings": [
+    {
+      "chunk_id": 6737,
+      "rating": 2,
+      "reason": "Tests meta‑transaction flow: builds ForwardRequest, signs EIP‑712, calls execute, checks event and state—directly matches GaslessRelayer behavior."
+    },
+    {
+      "chunk_id": 4841,
+      "rating": 2,
+      "reason": "Tests meta‑tx execution, signature verification, nonce and deadline—same behavior as GaslessRelayer’s execute function."
+    },
+    {
+      "chunk_id": 4849,
+      "rating": 1,
+      "reason": "Shows EIP‑712 request building, signing and meta‑tx execution pattern relevant to GaslessRelayer, but tests different function and revert condition."
+    },
+    {
+      "chunk_id": 3080,
+      "rating": 2,
+      "reason": "Tests invalid signature revert, matching target's verify logic and revert message pattern, usable after renaming contracts and error strings."
+    },
+    {
+      "chunk_id": 3081,
+      "rating": 2,
+      "reason": "Tests replay protection via nonce and signature verification, matching GaslessRelayer's execute and verify logic; setup can be reused with renamed contracts."
+    },
+    {
+      "chunk_id": 4846,
+      "rating": 2,
+      "reason": "Tests meta‑tx execution, signature, nonce, deadline and success event, matching target’s execute flow and event pattern."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 13547,
+    "completion_tokens": 629,
+    "calls": 6
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 76.7,
+  "evaluated_utc": "2026-10-13T07:25:31.040223+00:00"
+}

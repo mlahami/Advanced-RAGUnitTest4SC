@@ -1,0 +1,51 @@
+{
+  "id": "vote--abidoyesimze",
+  "domain": "voting",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "vote.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Abidoyesimze/voteDemo",
+    "commit": "da6d79a736f5a4c02b549c00c54a315f2dedb228",
+    "license": "MIT",
+    "contract_paths": [
+      "smartcontract/contracts/vote.sol"
+    ],
+    "test_paths": [
+      "smartcontract/test/VotingContract.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "smartcontract/contracts/vote.sol": "616a710d0941c197af69f33c0dc207ea695ff53e08f3f6c554e5dc8a889f70ed",
+      "smartcontract/test/VotingContract.ts": "3b31590069514a7e4c251027f3f4fbf74d3bff33b446fd27710a1a541d8d9149"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "VotingContract.js",
+      "upstream_path": "smartcontract/test/VotingContract.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "VotingContract.js",
+      "upstream_path": "smartcontract/test/VotingContract.ts"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "VotingContract.js",
+      "upstream_path": "smartcontract/test/VotingContract.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Contender election (contract VotingContract): owner registers up to 3 contenders by unique code (single or batch), timed voting window start/end, vote by contender code, winner declaration with events. 229 lines, no imports. 44 it blocks with loadFixture/time and anyValue. Hardhat project root smartcontract/. Long history (215 commits, 2 human authors + dependabot).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T15:51:47.259227+00:00"
+}

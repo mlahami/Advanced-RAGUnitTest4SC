@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> ExclusiveClaim.sol
+> MockERC20.sol
+
+Compilation:
+============
+
+Compiled 11 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+---------------------|----------|----------|----------|----------|----------------|
+File                 |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+---------------------|----------|----------|----------|----------|----------------|
+ contracts\          |     97.5 |    85.19 |    88.89 |    97.87 |                |
+  ExclusiveClaim.sol |      100 |    85.19 |      100 |      100 |                |
+  MockERC20.sol      |       50 |      100 |    66.67 |    66.67 |             22 |
+---------------------|----------|----------|----------|----------|----------------|
+All files            |     97.5 |    85.19 |    88.89 |    97.87 |                |
+---------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

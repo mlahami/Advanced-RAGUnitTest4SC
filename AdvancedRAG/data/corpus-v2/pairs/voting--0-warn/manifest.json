@@ -1,0 +1,31 @@
+{
+  "id": "voting--0-warn",
+  "domain": "voting-commit-reveal",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Voting.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/0-warn/BCE-VOTE",
+    "commit": "ef4cb2021102d3f9d1691cffcd9116a4eee9c0ba",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Voting.sol"
+    ],
+    "test_paths": [
+      "test/Voting.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Voting.sol": "c669a085c9e2778342d3e2c625dc3a817988c79031c49a75505f96359ff22503",
+      "test/Voting.test.js": "9df8e876a29ec42816ce81abcb27093e4564099a5cf7ef3cd4aee3250207751c"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (flagged in search report). Election with voter registration, election window and commit-reveal voting (vote then reveal); 6 commits (2026); basename identical to benchmark Voting. Primary 245 non-blank lines, closure 245 lines/1 files; 38 its, 50 expects; pragma ^0.8.19.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T12:06:34.823499+00:00"
+}

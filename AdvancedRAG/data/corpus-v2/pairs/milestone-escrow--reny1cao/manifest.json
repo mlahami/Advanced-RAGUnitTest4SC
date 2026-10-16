@@ -1,0 +1,62 @@
+{
+  "id": "milestone-escrow--reny1cao",
+  "domain": "escrow-milestones",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "MilestoneEscrow.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/reny1cao/kite-milestone-escrow",
+    "commit": "7f5b251b4c2dc5b0dd1aa026c169058b22648c0c",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/MilestoneEscrow.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/MilestoneEscrow.ts"
+    ],
+    "license_file": "LICENCE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/MilestoneEscrow.sol": "af49fb8cc5670303baa5a39d075348e0849706e6e723ee9a1ab804ce933c552f",
+      "packages/hardhat/test/MilestoneEscrow.ts": "c0d67cb0bd18b368e916751a2e6bfe487a0668d290e397ac7a678a9bc933acd0"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "MilestoneEscrow.js",
+      "upstream_path": "packages/hardhat/test/MilestoneEscrow.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 5,
+      "file": "MilestoneEscrow.js",
+      "upstream_path": "packages/hardhat/test/MilestoneEscrow.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "MilestoneEscrow"
+      ],
+      "file": "MilestoneEscrow.js",
+      "upstream_path": "packages/hardhat/test/MilestoneEscrow.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "HardhatEthersSigner"
+      ],
+      "file": "MilestoneEscrow.js",
+      "upstream_path": "packages/hardhat/test/MilestoneEscrow.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Freelance milestone escrow (start/submit/approve/reject/release milestones, PM fee, cancel, emergency reclaim). Primary 464 non-blank lines, closure 464 lines/1 files; 56 its, 117 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:06:21.552666+00:00"
+}

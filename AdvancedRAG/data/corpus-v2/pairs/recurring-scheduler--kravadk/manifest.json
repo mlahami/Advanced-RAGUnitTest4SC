@@ -1,0 +1,62 @@
+{
+  "id": "recurring-scheduler--kravadk",
+  "domain": "subscription",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "RecurringScheduler.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/kravadk/Qantara",
+    "commit": "3e439d620ed7726c06761e44b404d8bab5023770",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/contracts/RecurringScheduler.sol"
+    ],
+    "test_paths": [
+      "contracts/test/RecurringScheduler.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/RecurringScheduler.sol": "39250625ecafca07d0d7d1d224b1cdd2165081848349335e0fae59dc6e9c81a5",
+      "contracts/test/RecurringScheduler.test.ts": "e4e56809a2f7ed5da47a30dc80501b58c084ccf0aede413d098f83a301ee4693"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "RecurringScheduler.test.js",
+      "upstream_path": "contracts/test/RecurringScheduler.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 5,
+      "file": "RecurringScheduler.test.js",
+      "upstream_path": "contracts/test/RecurringScheduler.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "HardhatEthersSigner"
+      ],
+      "file": "RecurringScheduler.test.js",
+      "upstream_path": "contracts/test/RecurringScheduler.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "RecurringScheduler"
+      ],
+      "file": "RecurringScheduler.test.js",
+      "upstream_path": "contracts/test/RecurringScheduler.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 246 lines, closure 246 lines, 1 files; 10 it blocks; history: 26 commits 2026-06-06..2026-06-09",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:28:37.520187+00:00"
+}

@@ -1,0 +1,96 @@
+{
+  "pair": "evo-pool--diveshk007",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:44:40.650029+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/EvoPool.sol": "641f475b3108e728e4a948f8cc304a380f626f598cd8325c468c3cd7c3dd70f9",
+    "contracts/EvoToken.sol": "6eee58b8f240f3b8396aa34beb668c4999c1216dabdc736336d056417184eef9",
+    "contracts/IEvoPool.sol": "b9129772069a987a47149cc26a94aee296fcf8d396132788e89aa9485df3feb3",
+    "LICENSE": "cfc31fd8c1aed85e262d1ecc5a57304f9d0783c802a6a0ea0ac46e4cb653896a",
+    "manifest.json": "58c0f5cad70de67ead04ef758560cfc2bdaa98198fbf551ece625e1de5ef8b07",
+    "test/EvoPool.test.js": "8fd8439ee8e788fa1ccb3f86da01c35984bb60330dfe0ddb90653cfa44078771"
+  },
+  "pair_sha256": "cd37802c4a068930b9bfe74cf90af8e09f30a1750ec24e383833532bf63072b5",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "EvoPool.sol",
+        "reference": "DEX.sol",
+        "structural": 0.204,
+        "signatures": 0.15,
+        "min_functions": 8
+      },
+      {
+        "contract": "EvoPool.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.131,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "IEvoPool.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.126,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.07,
+      "mocha": {
+        "tests": 35,
+        "passes": 35,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 12.83,
+      "mocha": {
+        "tests": 35,
+        "passes": 35,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "EvoPool.sol": {
+          "statements": 97.37,
+          "branches": 69.61,
+          "functions": 88.89,
+          "lines": 98.65
+        },
+        "EvoToken.sol": {
+          "statements": 50.0,
+          "branches": 0.0,
+          "functions": 50.0,
+          "lines": 50.0
+        },
+        "IEvoPool.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

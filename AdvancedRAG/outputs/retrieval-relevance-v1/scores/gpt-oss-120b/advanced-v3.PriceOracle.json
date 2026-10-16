@@ -1,0 +1,73 @@
+{
+  "id": "advanced-v3.PriceOracle",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "PriceOracle",
+  "chunk_ids": [
+    1750,
+    1749,
+    5274,
+    4856,
+    4859,
+    4320,
+    1751,
+    5275,
+    5522
+  ],
+  "context_sha256": "3fe1bdf2e9bca6d8d92fffe0d1cbdd6dfff5ea2d289afca9d53566af938fc27e",
+  "ratings": [
+    {
+      "chunk_id": 1750,
+      "rating": 1,
+      "reason": "Only generic setup and event checking patterns apply; specific batch price update logic does not exist in target contract."
+    },
+    {
+      "chunk_id": 1749,
+      "rating": 1,
+      "reason": "Shows generic deployment, owner setup, and state‑query assertions useful for testing PriceOracle, but specific functions and logic differ."
+    },
+    {
+      "chunk_id": 5274,
+      "rating": 1,
+      "reason": "Shows time‑increase and TWAP assertion pattern, but uses unrelated staking/voting logic; only generic time manipulation and getTWAP call are reusable."
+    },
+    {
+      "chunk_id": 4856,
+      "rating": 1,
+      "reason": "Demonstrates owner‑only revert pattern, which matches PriceOracle’s onlyOwner modifier, but tests unrelated whitelist functionality."
+    },
+    {
+      "chunk_id": 4859,
+      "rating": 1,
+      "reason": "Shows generic revert‑with‑custom‑error pattern, but target contract has no whitelist logic, so only testing pattern is useful."
+    },
+    {
+      "chunk_id": 4320,
+      "rating": 1,
+      "reason": "Shows generic revert testing pattern, but specific behavior (listing validation) unrelated to oracle functions."
+    },
+    {
+      "chunk_id": 1751,
+      "rating": 1,
+      "reason": "Tests stale-price revert pattern, but contract lacks updatePrice/setup, so only generic pattern applies"
+    },
+    {
+      "chunk_id": 5275,
+      "rating": 1,
+      "reason": "Only generic time‑increase and TWAP query pattern applies; specific functions (stake, vote, resetTWAP) do not exist in PriceOracle."
+    },
+    {
+      "chunk_id": 5522,
+      "rating": 1,
+      "reason": "Shows owner‑only addition pattern similar to addFeeder, but tests unrelated functionality"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 25082,
+    "completion_tokens": 951,
+    "calls": 9
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 73.9,
+  "evaluated_utc": "2026-10-15T13:36:46.624739+00:00"
+}

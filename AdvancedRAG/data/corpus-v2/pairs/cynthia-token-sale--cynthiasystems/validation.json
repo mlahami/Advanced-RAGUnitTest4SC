@@ -1,0 +1,90 @@
+{
+  "pair": "cynthia-token-sale--cynthiasystems",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:12:29.454455+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AttackContract.sol": "4b6c0ea0fde52eee77f4c746734ec43a86af0834ae1c6e011699632fb8d74a9e",
+    "contracts/CynthiaToken.sol": "c94d16e167a1c284e55bf822c254187fb2551c47f8d2dd6941c10e8acb928010",
+    "contracts/CynthiaTokenSale.sol": "af49fea6f8fa3bdd512acd1934f0ba9a2969281ad1d13c4df968867ff4d5ac30",
+    "LICENSE": "994d233544a1fcb1d8ac18f6ffb15f101eeb98545c23baeaf52e8b53ad80a9de",
+    "manifest.json": "5ae7a64d17a1e6c0e94e6ae9d922297b63ff50005e5581d43e48af43eea32df9",
+    "test/CynthiaTokenSale.test.js": "8f6acdee69b11aad5ad69a8cc27e2be3fbd50f39fa93123f0e20e2697ec812d4"
+  },
+  "pair_sha256": "c779768768619da28988cc0e3f6044cc702843c20fa188668e20a74063c72fef",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "CynthiaTokenSale.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.129,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "CynthiaTokenSale.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.125,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "CynthiaTokenSale.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.112,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.65,
+      "mocha": {
+        "tests": 22,
+        "passes": 22,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.13,
+      "mocha": {
+        "tests": 22,
+        "passes": 22,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "CynthiaTokenSale.sol": {
+          "statements": 100.0,
+          "branches": 75.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "CynthiaToken.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

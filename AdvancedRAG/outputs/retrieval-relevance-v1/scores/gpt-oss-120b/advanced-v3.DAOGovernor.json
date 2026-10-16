@@ -1,0 +1,79 @@
+{
+  "id": "advanced-v3.DAOGovernor",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "DAOGovernor",
+  "chunk_ids": [
+    1834,
+    1838,
+    4807,
+    4812,
+    1835,
+    1839,
+    4808,
+    4813,
+    4804,
+    1544
+  ],
+  "context_sha256": "45c5a05caf9153f7a38a608add110238cc464a9a19b867fc6b984047402eb57a",
+  "ratings": [
+    {
+      "chunk_id": 1834,
+      "rating": 1,
+      "reason": "Tests revert on insufficient voting power, but target contract's propose has no such check; only generic revert pattern is reusable."
+    },
+    {
+      "chunk_id": 1838,
+      "rating": 1,
+      "reason": "Shows generic voting pattern and VoteCast event assertion, but event args order and setup differ; not directly reusable for target contract."
+    },
+    {
+      "chunk_id": 4807,
+      "rating": 1,
+      "reason": "Shows generic proposal creation and state check pattern, but tests different functionality (approval vs voting/queue)."
+    },
+    {
+      "chunk_id": 4812,
+      "rating": 2,
+      "reason": "Tests execute reverts before timelock expires, matching DAOGovernor's execute delay check"
+    },
+    {
+      "chunk_id": 1835,
+      "rating": 1,
+      "reason": "Tests proposal creation count increment, but target uses proposals array length and different function signatures; pattern useful but not directly reusable."
+    },
+    {
+      "chunk_id": 1839,
+      "rating": 1,
+      "reason": "Shows voting pattern and VoteCast event assertion, but uses different contract, grantVotingPower, and event argument order, so only partially useful."
+    },
+    {
+      "chunk_id": 4808,
+      "rating": 1,
+      "reason": "Shows generic event‑emission testing pattern, but the specific approve logic doesn’t exist in DAOGovernor."
+    },
+    {
+      "chunk_id": 4813,
+      "rating": 2,
+      "reason": "Tests timelock delay before execution, mirroring DAO's queue/execute flow; time increase and event/state checks are directly reusable after renaming."
+    },
+    {
+      "chunk_id": 4804,
+      "rating": 2,
+      "reason": "Tests proposal creation, target address storage and count, matching DAOGovernor propose behavior; can be reused after renaming."
+    },
+    {
+      "chunk_id": 1544,
+      "rating": 2,
+      "reason": "Tests double‑voting revert, matching DAOGovernor’s already‑voted check, so setup and assertions can be reused after renaming."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 15878,
+    "completion_tokens": 1253,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 81.4,
+  "evaluated_utc": "2026-10-14T18:18:28.343767+00:00"
+}

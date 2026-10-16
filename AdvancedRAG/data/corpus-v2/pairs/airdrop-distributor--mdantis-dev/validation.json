@@ -1,0 +1,89 @@
+{
+  "pair": "airdrop-distributor--mdantis-dev",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:11:24.376551+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AirdropDistributor.sol": "c5f783f4a67e64439c3d503e78e0a4fe1da6751572c2182da2287d4581dc8dd3",
+    "contracts/LiminalToken.sol": "a79aa8432cb654332e071ef431f4f7e5a7bcef8d140b91014f41c37b454e6456",
+    "LICENSE": "517f42c9c0d7603d4a6d23aec0c256d8daf5a2318e84298b1002c2bb149d9443",
+    "manifest.json": "eccb7a64b551459f3b092db78ef8c0ef6b3de0ee3b202e51ba7135818ac04d4e",
+    "test/AirdropDistributor.js": "eb207f612880dc477e2f0df506acb1331aabb956ab5c6da1da6860469da55c1f"
+  },
+  "pair_sha256": "3fe266b773ef18bb1f7fccd84dd330dd41bd624c9ea28940ed9e983ce14144f1",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "AirdropDistributor.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.191,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "AirdropDistributor.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.19,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "AirdropDistributor.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.187,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.25,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.54,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "AirdropDistributor.sol": {
+          "statements": 100.0,
+          "branches": 64.29,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "LiminalToken.sol": {
+          "statements": 33.33,
+          "branches": 12.5,
+          "functions": 37.5,
+          "lines": 33.33
+        }
+      }
+    }
+  },
+  "accepted": true
+}

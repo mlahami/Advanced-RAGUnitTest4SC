@@ -1,0 +1,31 @@
+{
+  "id": "multisig-controller--ibetekhtin",
+  "domain": "multisig-wallet",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "MultisigController.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ibetekhtin/bitesha-foundation",
+    "commit": "bb11fc24c4a32fb95c4e41238ec4dec7ac58196e",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/treasury/MultisigController.sol"
+    ],
+    "test_paths": [
+      "contracts/tests/multisig.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/treasury/MultisigController.sol": "4d493de97080ca1bc8792c0eef3f88952b2e3e2f1c837c682ce84e42e221b377",
+      "contracts/tests/multisig.test.js": "69a006901c5842be6088f47f45a40175edb8a1d417c7485447cd6e3c51cf4808"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (flagged in search report). Lightweight M-of-N multisig queueing time-locked calls (propose/approve/execute/cancel); tests under contracts/tests/; 2026 single author. Primary 101 non-blank lines, closure 101 lines/1 files; 27 its, 33 expects; pragma ^0.8.24.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T12:07:59.470500+00:00"
+}

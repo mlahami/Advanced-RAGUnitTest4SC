@@ -1,0 +1,51 @@
+{
+  "id": "lottery--colonelcaptain",
+  "domain": "lottery",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Lottery.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ColonelCaptain/Lottery_Dapp",
+    "commit": "61a6b13e647fc1278bd5b51d499923006dbe5755",
+    "license": "Apache-2.0",
+    "contract_paths": [
+      "contracts/Lottery.sol"
+    ],
+    "test_paths": [
+      "test/lottery.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Lottery.sol": "c69d54a9977b3e4754c86fbe7618e9b04f90048f2443d7b81d6844d42a7eba9f",
+      "test/lottery.ts": "883ebfae9f4a18d96d6b81081b51c97fcf607ea432690c1e8be19620f0d90a1a"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "lottery.js",
+      "upstream_path": "test/lottery.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "lottery.js",
+      "upstream_path": "test/lottery.ts"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "lottery.js",
+      "upstream_path": "test/lottery.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Simple manager-picked lottery with pseudo-random winner (block data, no VRF); Apache-2.0. Primary 35 non-blank lines, closure 35 lines/1 files; 6 its, 6 expects; pragma ^0.8.24.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:18.020618+00:00"
+}

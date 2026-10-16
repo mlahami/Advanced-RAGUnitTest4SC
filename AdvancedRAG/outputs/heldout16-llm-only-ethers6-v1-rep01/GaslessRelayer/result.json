@@ -1,0 +1,60 @@
+{
+  "contract": "GaslessRelayer",
+  "status": "test_failures",
+  "prompt_sha256": "f162bd5ee8bf31383c92add291a5d2ff9e2e2aa00e9a1c9bf8ebd92723ca613a",
+  "generation_seconds": 15.11475970002357,
+  "usage": {
+    "prompt_tokens": 8089,
+    "total_tokens": 9760,
+    "completion_tokens": 1671,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.313560700044036
+  },
+  "passed_tests": 1,
+  "failed_tests": 7,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "GaslessRelayer execute should execute a valid meta-transaction",
+      "error": "relayer._hashTypedData is not a function"
+    },
+    {
+      "title": "GaslessRelayer execute should revert with expired deadline",
+      "error": "relayer._hashTypedData is not a function"
+    },
+    {
+      "title": "GaslessRelayer execute should revert with bad nonce",
+      "error": "relayer._hashTypedData is not a function"
+    },
+    {
+      "title": "GaslessRelayer execute should revert with bad signature",
+      "error": "relayer._hashTypedData is not a function"
+    },
+    {
+      "title": "GaslessRelayer execute should handle failed target calls",
+      "error": "relayer._hashTypedData is not a function"
+    },
+    {
+      "title": "GaslessRelayer verify should verify a valid signature",
+      "error": "relayer._hashTypedData is not a function"
+    },
+    {
+      "title": "GaslessRelayer verify should reject an invalid signature",
+      "error": "relayer._hashTypedData is not a function"
+    }
+  ],
+  "coverage": {
+    "statements": 0.0,
+    "branches": 0.0,
+    "functions": 20.0,
+    "lines": 0.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

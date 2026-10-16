@@ -1,0 +1,61 @@
+{
+  "id": "advanced-v3.MerkleAirdrop",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "MerkleAirdrop",
+  "chunk_ids": [
+    502,
+    499,
+    810,
+    811,
+    480,
+    479,
+    5892
+  ],
+  "context_sha256": "18ff5891254d42004a32e13d33bbbff1119ac6294f4aee18120270c5be62cb0e",
+  "ratings": [
+    {
+      "chunk_id": 502,
+      "rating": 1,
+      "reason": "Shows generic revert‑on‑claim pattern, but target uses different revert messages and proof logic, so only testing style is reusable."
+    },
+    {
+      "chunk_id": 499,
+      "rating": 1,
+      "reason": "Shows generic claim flow: deploy token, transfer, call claim, check balance—useful pattern but specific setClaimable/time lock not applicable."
+    },
+    {
+      "chunk_id": 810,
+      "rating": 1,
+      "reason": "Shows generic revert testing pattern, but behavior and contract differ from MerkleAirdrop claim logic."
+    },
+    {
+      "chunk_id": 811,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern useful for testing claim failures, but specific behavior and setup differ from MerkleAirdrop’s proof validation."
+    },
+    {
+      "chunk_id": 480,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests different function and logic not present in MerkleAirdrop."
+    },
+    {
+      "chunk_id": 479,
+      "rating": 1,
+      "reason": "Shows generic claim flow and balance check pattern, but specific functions and proof logic differ from target contract."
+    },
+    {
+      "chunk_id": 5892,
+      "rating": 1,
+      "reason": "Shows generic claim flow with balance change and time manipulation, but tests unrelated game logic; only pattern partially applicable to MerkleAirdrop claim."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9022,
+    "completion_tokens": 782,
+    "calls": 7
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 63.9,
+  "evaluated_utc": "2026-10-14T18:24:32.732211+00:00"
+}

@@ -1,0 +1,82 @@
+{
+  "pair": "job--bharat3645-appxcess",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:21:38.843110+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Job.sol": "d52d60c09d60536351413f11b19e0963888c188d2497d16d385ee86cc2e8e1f6",
+    "LICENSE": "48f0bf7bc4cbdecc4ce154918a10b390cf93ccbd1deb5bdad01e191ed5f9fb00",
+    "manifest.json": "45e106eac89a15e0a467328822972265d30c84f64d58111fee3c3d2a24dc6e68",
+    "test/Job.js": "bd40adb67d4472ef7fc8c877bfa7c50fa23313221e0c7b5e0082a7698aa24bdd"
+  },
+  "pair_sha256": "c61e11cf3e512fbcf88113c1dd3414ac2d9539a0f2c52fc0cb6d4f0def995b3e",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Job.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.208,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "Job.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.207,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "Job.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.193,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.94,
+      "mocha": {
+        "tests": 22,
+        "passes": 22,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.27,
+      "mocha": {
+        "tests": 22,
+        "passes": 22,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Job.sol": {
+          "statements": 100.0,
+          "branches": 76.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

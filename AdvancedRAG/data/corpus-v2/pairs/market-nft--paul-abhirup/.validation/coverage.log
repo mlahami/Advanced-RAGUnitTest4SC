@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> MarketNFT.sol
+> TicketNFT.sol
+
+Compilation:
+============
+
+Compiled 15 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+----------------|----------|----------|----------|----------|----------------|
+File            |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+----------------|----------|----------|----------|----------|----------------|
+ contracts\     |    89.29 |       50 |    72.73 |     90.7 |                |
+  MarketNFT.sol |    95.83 |    54.55 |      100 |    97.06 |             68 |
+  TicketNFT.sol |       50 |    33.33 |       40 |    66.67 |       33,37,42 |
+----------------|----------|----------|----------|----------|----------------|
+All files       |    89.29 |       50 |    72.73 |     90.7 |                |
+----------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

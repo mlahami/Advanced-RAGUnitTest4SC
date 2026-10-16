@@ -1,0 +1,83 @@
+{
+  "pair": "oracle--darli-protocol",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:15:29.187196+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MockToken.sol": "05120c5d9f0006677b7e1093d9f63feb07674770c777927ced92201defb5d2a5",
+    "contracts/Oracle.sol": "9d4ae1458c773f18051b52096a85dc89f44a31b2201a954baa9870f757e5a953",
+    "LICENSE": "114d816638f1ecc35486c5a48c152acae8e1dcaae9f03b24eb56209d7f5d42e1",
+    "manifest.json": "bb275a97e92fb12bbb759c2703402e752b46333bfde5f2f9e9b7f26ade6ba1e0",
+    "test/Oracle.test.js": "6268d9369f21d1a6eaba62c712663dbe6bf4b272e033c6c05d8c2f0965e5489e"
+  },
+  "pair_sha256": "b86889a2311c693ed1bc8e5190a89ea31a9ffa4d124906fa88b7117ada1357ea",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Oracle.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.249,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "Oracle.sol",
+        "reference": "DEX.sol",
+        "structural": 0.228,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "Oracle.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.201,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.18,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.86,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Oracle.sol": {
+          "statements": 100.0,
+          "branches": 77.27,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

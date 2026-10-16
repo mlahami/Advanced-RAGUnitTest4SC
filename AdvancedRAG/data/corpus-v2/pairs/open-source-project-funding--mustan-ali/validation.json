@@ -1,0 +1,82 @@
+{
+  "pair": "open-source-project-funding--mustan-ali",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T16:01:16.982107+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/OpenSourceProjectFunding.sol": "e008582877413d201236688615c26e206bab3419b57c807a483c92062a8c1066",
+    "LICENSE": "a392c9ac357e5b8ab6ed06c4cb453f6d5357d552cf3c959d1ce1b1a48bfbfab3",
+    "manifest.json": "6493deebc9fcef5be6f268094d06caf8fb4e51927182e97c71dabc65d558e0e1",
+    "test/OpenSourceProjectFunding.test.js": "147877ed96b344bfdb17f7892605aee40af46ae5d7c16c6bd2f54dd0523270f4"
+  },
+  "pair_sha256": "6beb387a6153ad641f289ed771dcd30996b2f0ad6bcb3461992671f82b987ac2",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "OpenSourceProjectFunding.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.202,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "OpenSourceProjectFunding.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.187,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "OpenSourceProjectFunding.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.186,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.13,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.26,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "OpenSourceProjectFunding.sol": {
+          "statements": 94.23,
+          "branches": 61.11,
+          "functions": 54.55,
+          "lines": 94.23
+        }
+      }
+    }
+  },
+  "accepted": true
+}

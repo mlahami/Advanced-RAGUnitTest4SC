@@ -1,0 +1,89 @@
+{
+  "pair": "block-bid--beaulosun",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:20:53.037905+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/BlockBid.sol": "be97deb1d82512fcfca84f83bdd80e3c37a420a12c9e80f51dd9bf3b531afd8f",
+    "contracts/nft721.sol": "0857b2002d8a9bb232c770941adc7403bf7c89482857e77af94604484f7f8867",
+    "LICENSE": "18e3f89391a9f290ae428515195202776fa16c9acdacae67a61fcbb85a5136ee",
+    "manifest.json": "91b11e6f87d5cece9bb73e25e5109bab5b267bb148b6fcfe5e7b3238db52ac60",
+    "test/02-blockbid-test.js": "866f53d8b87eb11eb5e710bba9d6796aefbaca287abf287686ba467d7d0a2ea5"
+  },
+  "pair_sha256": "7224add2a3125ef3e6d2c732f1ef3d91121a5eb80f4a1f647a7ef8ff0e9c0d34",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "BlockBid.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.15,
+        "signatures": 0.0,
+        "min_functions": 11
+      },
+      {
+        "contract": "BlockBid.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.147,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "BlockBid.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.139,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.64,
+      "mocha": {
+        "tests": 29,
+        "passes": 29,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.21,
+      "mocha": {
+        "tests": 29,
+        "passes": 29,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "BlockBid.sol": {
+          "statements": 98.67,
+          "branches": 80.0,
+          "functions": 95.24,
+          "lines": 98.67
+        },
+        "nft721.sol": {
+          "statements": 83.33,
+          "branches": 75.0,
+          "functions": 60.0,
+          "lines": 83.33
+        }
+      }
+    }
+  },
+  "accepted": true
+}

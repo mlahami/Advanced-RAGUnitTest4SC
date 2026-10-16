@@ -1,0 +1,83 @@
+{
+  "pair": "operations--lukasz-glen",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:15:23.093621+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Operations.sol": "33ba5d85a896d7fa588292d72594b190d5818a4c44ab6a685e0738b96c1a38c9",
+    "contracts/OperationsMock.sol": "3d597c751d427e931d244de96550725e638bac4f1991cecfe4386834732ecddc",
+    "LICENSE": "89da42870f6c908118e940f3f99aa8afb666c3d0427bd5178124598ae46ced18",
+    "manifest.json": "03d957e0c6bf738b2dd4ccae52ffb022b98a647921f73b438cfbbd668e0b4644",
+    "test/Operations.test.js": "5bbe6ca2d02cd908dbbc5a3cb85abf44ce26b7e52a9193642bf4ba0ef28b0e5c"
+  },
+  "pair_sha256": "56308ffb15eb442d68336a85a49b504fefc45c48a975c8437a775df21fd2df05",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "OperationsMock.sol",
+        "reference": "MetaCoin.sol",
+        "structural": 0.075,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "OperationsMock.sol",
+        "reference": "Adoption.sol",
+        "structural": 0.068,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "OperationsMock.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.063,
+        "signatures": 0.0,
+        "min_functions": 2
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.52,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.52,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Operations.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

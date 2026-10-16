@@ -1,0 +1,139 @@
+{
+  "pair": "lending-pool--akasxh",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:37:22.210629+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/FailingFlashLoanReceiver.sol": "2784549eb4defbd652258b62c6a0522db9fdd2b3a50f058c9393415180db1b4d",
+    "contracts/FlashLoan.sol": "bbbca68cec4bf94a920977607393905ce66f3c1e5f036ce2e36fdd5bc0df8eda",
+    "contracts/IFlashLoanReceiver.sol": "ea7cd7d4f92e046ae766cb13ce4d6853dbb34e61a2eac03db00bf2418b020ebf",
+    "contracts/ILendingPool.sol": "36a7e26fcdae7e6a6e81a120942f28a5218d8b6e0f8ac44507fade975fd1a334",
+    "contracts/InterestRateModel.sol": "822f204b7ca38bcb1c178a9aeffbcb7538f7b3344fc97ead3247bcad3d19645d",
+    "contracts/LendingPool.sol": "7cdeb06e8c33138b0ecadbaf52dccc0f5bd574d2b87d735db4d7e8edb9181624",
+    "contracts/MockFlashLoanReceiver.sol": "f828997e21f3b4baacc3b251325a4a8212bed308439a70835c13705625f7b34c",
+    "contracts/PolkaToken.sol": "5ab11ffc82e58b396b66b605f7bc2f5ffe4a833530518bd2469d13798959ddb4",
+    "contracts/PriceOracle.sol": "6142660a126aace8825e61fffa6be11f2adbe2d9f724cb5b5b03cd022b1d94f7",
+    "LICENSE": "a151b487aa93ffdb290562648bc267cbac929bcb3b255343d8bde441feeceb21",
+    "manifest.json": "4791141eba3d4259b3edf99b07d9a40bf89ea3024d5fb8a37f6cfb8ce0fcb60d",
+    "test/EdgeCases.test.js": "29e47fc1ed2fe5408c49290bd18c35a8a8cbae5b128aa4eb9ef3f0d35a011e0f",
+    "test/LendingPool.test.js": "e4278dfdeabb36f8c5a4cabb69586b5a3fb5a3e405471ec015e0257df5e4fa99"
+  },
+  "pair_sha256": "ff86d7b548ece1b10ba65c3cc25dbf6c9169db03d6ecefb7a49a18b2debf4b31",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "PriceOracle.sol",
+        "reference": "PaymentSplitter.sol",
+        "structural": 0.21,
+        "signatures": 0.0,
+        "min_functions": 1
+      },
+      {
+        "contract": "LendingPool.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.186,
+        "signatures": 0.0,
+        "min_functions": 11
+      },
+      {
+        "contract": "PriceOracle.sol",
+        "reference": "BatchTransfer.sol",
+        "structural": 0.18,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.6,
+      "mocha": {
+        "tests": 24,
+        "passes": 24,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 9.88,
+      "mocha": {
+        "tests": 24,
+        "passes": 24,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "LendingPool.sol": {
+          "statements": 98.31,
+          "branches": 66.13,
+          "functions": 92.31,
+          "lines": 98.31
+        },
+        "FlashLoan.sol": {
+          "statements": 100.0,
+          "branches": 83.33,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "InterestRateModel.sol": {
+          "statements": 85.71,
+          "branches": 66.67,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "PolkaToken.sol": {
+          "statements": 66.67,
+          "branches": 75.0,
+          "functions": 100.0,
+          "lines": 66.67
+        },
+        "PriceOracle.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IFlashLoanReceiver.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ILendingPool.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "FailingFlashLoanReceiver.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockFlashLoanReceiver.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

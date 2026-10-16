@@ -1,0 +1,35 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BenchmarkFixtures.sol
+> DAOGovernor.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |    18.97 |     9.62 |    26.09 |    23.53 |                |
+  BenchmarkFixtures.sol |     5.26 |     3.13 |    16.67 |    10.53 |... 140,141,145 |
+  DAOGovernor.sol       |       45 |       20 |       60 |       50 |... 86,87,88,89 |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |    18.97 |     9.62 |    26.09 |    23.53 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+Error in plugin solidity-coverage: ❌ 8 test(s) failed under coverage.
+
+For more info run Hardhat with --show-stack-traces

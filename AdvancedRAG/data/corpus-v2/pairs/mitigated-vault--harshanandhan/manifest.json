@@ -1,0 +1,46 @@
+{
+  "id": "mitigated-vault--harshanandhan",
+  "domain": "flash-loan",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "MitigatedVault.sol",
+    "FlashLoanPool.sol",
+    "LabAttacker.sol",
+    "LabOracle.sol",
+    "MockERC20.sol",
+    "VulnerableVault.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Harshanandhan/flash-loan-risk-lab",
+    "commit": "1f24ff345e3799614a11dcecbe7f8da20a74146c",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MitigatedVault.sol",
+      "contracts/FlashLoanPool.sol",
+      "contracts/LabAttacker.sol",
+      "contracts/LabOracle.sol",
+      "contracts/MockERC20.sol",
+      "contracts/VulnerableVault.sol"
+    ],
+    "test_paths": [
+      "test/FlashLoanRiskLab.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MitigatedVault.sol": "c505f685a3d638160a765c3a6a968bed2fec433432147a662de43bece3339507",
+      "contracts/FlashLoanPool.sol": "75dac722018507cfdc804412e1d334915dfac4ed63fe1c643e5e5f8e8bc7566b",
+      "contracts/LabAttacker.sol": "a07a6f0b3b108a5d7da72376a633a00abe5b0de3d9634cf0abe8b8a59fd01813",
+      "contracts/LabOracle.sol": "592793cd816ac33b2813f65489b8e5ddf73eee5ce2e4e3d8cf29cdae8e489c2f",
+      "contracts/MockERC20.sol": "1128a312fa6a3929338de309fbb267040f97166ff45bac6c103a02075b00c7e9",
+      "contracts/VulnerableVault.sol": "d77d9ea83c97751ff7f76581603ed6fc04e6287f76e00ef1d3629be48903d9fc",
+      "test/FlashLoanRiskLab.js": "d003920c896948da8455e590e986e9c3f7864bacde018876a026f520f3f5e0c3"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (all commits on one day, created 2026). | primary 123 lines, closure 394 lines, 6 files; 6 it blocks; history: 14 commits 2026-09-15..2026-09-15",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T10:27:29.744386+00:00"
+}

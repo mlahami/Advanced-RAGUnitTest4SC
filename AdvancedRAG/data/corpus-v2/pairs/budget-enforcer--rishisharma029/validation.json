@@ -1,0 +1,89 @@
+{
+  "pair": "budget-enforcer--rishisharma029",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T16:05:24.644498+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/BudgetEnforcer.sol": "6a13549b8c2f0633a1e9948bbf8943a3ff67c94c5acedd55c5555944f5bdc7de",
+    "contracts/IBudgetEnforcer.sol": "abd7f48c0ef008ebc43a7a46a5297b13ca175eb5d4d51ecd108536808c7d8c3e",
+    "LICENSE": "91a4258cc875b0e2e1d5c7dd2426ded645d822e5e9fd2b4e25fec99a4e9ca300",
+    "manifest.json": "f31547924f7c5aea5cf99e102e0aa3f04f73d4cf0bf37b2ad81ac7497fd454c9",
+    "test/BudgetEnforcer.test.js": "0c31237684f984104f4d535545ac51aba1db74a9f1918dcbe972123d464080aa"
+  },
+  "pair_sha256": "493aff02f240673d3735a8d3f65f400f4ba4bc8410f6469d7cf83e1a4556c076",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "BudgetEnforcer.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.185,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "BudgetEnforcer.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.138,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "BudgetEnforcer.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.136,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.3,
+      "mocha": {
+        "tests": 33,
+        "passes": 33,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.07,
+      "mocha": {
+        "tests": 33,
+        "passes": 33,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "BudgetEnforcer.sol": {
+          "statements": 100.0,
+          "branches": 96.43,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IBudgetEnforcer.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,144 @@
+{
+  "target_functions": [
+    {
+      "target_function": "set",
+      "corpus_functions": [
+        "8bb2dc4df02f939ff9639e1d",
+        "e33306cda20291dfb0b336ac",
+        "195f85d3ce27a3ee67387c60",
+        "e5d887ef18552b7e0c171f0f",
+        "a03a61f0009a00f80d2f6cf3",
+        "843b32b547ed93b1f496024c",
+        "f1b6424ef2a4ae21dd769b2d",
+        "1eabe31f90f500d9bd306c5a"
+      ],
+      "candidate_tests": [
+        "22d6192683633bc27944e40f",
+        "5ce08550625b2c62dd057878",
+        "94312d54466ebc8b245002d1",
+        "34af67fe33b13cd034ee23d0",
+        "646c3c28fed7d6a8ba340dbc",
+        "60b9332bb1b131c5b3a27973",
+        "d6230aaa6ef5f2ca0c1e2e45",
+        "cec162592f3adc4f3f8e5162",
+        "b6d08fdb0af729117aa1f313",
+        "663439b0d9cd86b51011bf3a"
+      ]
+    },
+    {
+      "target_function": "get",
+      "corpus_functions": [
+        "b03393b8fb949d6791cc4468",
+        "e4044431f0625841b97e64ad",
+        "da4d4be80903afd282b6c438",
+        "e5d887ef18552b7e0c171f0f",
+        "64e96402ffc0c525c9024f62",
+        "deaa742e03d327dca24e2898",
+        "f9e4acdf07777a008a8d14bd",
+        "6efba4a862e13d6676eeb6ac"
+      ],
+      "candidate_tests": [
+        "aa7eef185dd77821c0b6cc41",
+        "0aee7bc594d1b57d13f45363",
+        "5ce08550625b2c62dd057878",
+        "34af67fe33b13cd034ee23d0",
+        "3ea9ab3f03bd016d0508449b",
+        "d6230aaa6ef5f2ca0c1e2e45",
+        "cec162592f3adc4f3f8e5162",
+        "16726420221cccf92b947d3e",
+        "5f756b0c65282e5fdf7ec3c5",
+        "537ad8c3ea76a1d0fc99ad26"
+      ]
+    }
+  ],
+  "selected": [
+    4628,
+    3526,
+    4626,
+    3465,
+    4630,
+    4629,
+    4804,
+    3800
+  ],
+  "context_chars": 14399,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "SimpleStorage",
+  "retrieval_seconds": 0.7675793999806046,
+  "hits": [
+    {
+      "chunk_id": 4628,
+      "test_id": "22d6192683633bc27944e40f",
+      "pair": "msmeidentity--aryan-chugh",
+      "domain_group": "registries-identity",
+      "name": "Should not allow unauthorized address to set data",
+      "via_function": "8bb2dc4df02f939ff9639e1d",
+      "chars": 1059
+    },
+    {
+      "chunk_id": 3526,
+      "test_id": "aa7eef185dd77821c0b6cc41",
+      "pair": "hypurr-fi-vault--poppyseeddev",
+      "domain_group": "staking-yield",
+      "name": "Should return correct position details",
+      "via_function": "b03393b8fb949d6791cc4468",
+      "chars": 3720
+    },
+    {
+      "chunk_id": 4626,
+      "test_id": "5ce08550625b2c62dd057878",
+      "pair": "msmeidentity--aryan-chugh",
+      "domain_group": "registries-identity",
+      "name": "Should allow owner to set data",
+      "via_function": "8bb2dc4df02f939ff9639e1d",
+      "chars": 1131
+    },
+    {
+      "chunk_id": 3465,
+      "test_id": "0aee7bc594d1b57d13f45363",
+      "pair": "hypurr-fi-vault--poppyseeddev",
+      "domain_group": "staking-yield",
+      "name": "Should execute leverage loop on deposit",
+      "via_function": "b03393b8fb949d6791cc4468",
+      "chars": 3832
+    },
+    {
+      "chunk_id": 4630,
+      "test_id": "94312d54466ebc8b245002d1",
+      "pair": "msmeidentity--aryan-chugh",
+      "domain_group": "registries-identity",
+      "name": "Should revert batch setting with mismatched lengths",
+      "via_function": "e33306cda20291dfb0b336ac",
+      "chars": 1125
+    },
+    {
+      "chunk_id": 4629,
+      "test_id": "34af67fe33b13cd034ee23d0",
+      "pair": "msmeidentity--aryan-chugh",
+      "domain_group": "registries-identity",
+      "name": "Should allow batch data setting",
+      "via_function": "e4044431f0625841b97e64ad",
+      "chars": 1338
+    },
+    {
+      "chunk_id": 4804,
+      "test_id": "646c3c28fed7d6a8ba340dbc",
+      "pair": "multisig-controller--ibetekhtin",
+      "domain_group": "multisig-treasury",
+      "name": "signer can create a proposal",
+      "via_function": "195f85d3ce27a3ee67387c60",
+      "chars": 1113
+    },
+    {
+      "chunk_id": 3800,
+      "test_id": "3ea9ab3f03bd016d0508449b",
+      "pair": "l1-gas-price-oracle--0xakileet",
+      "domain_group": "price-oracles",
+      "name": "returns packed oracle data",
+      "via_function": "da4d4be80903afd282b6c438",
+      "chars": 1081
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "target_functions": [
+    {
+      "target_function": "transfer",
+      "corpus_functions": [
+        "fc2f3d44dfb2b52a8f01c0a8",
+        "c1292aec8e535ece6e9f9894",
+        "bbc764324cfc11afa4c669cd",
+        "1a5ff9554607e92e91bf25a3",
+        "96ab2c84ad31b85c88249a92",
+        "833200e95e89fe36cb72a6cb",
+        "aaf1a781d076c98753062719",
+        "cb07a501bff48df503a7c1b0"
+      ],
+      "candidate_tests": [
+        "029cb5adf84fafbad65010ad",
+        "2778592ded38550b4991eae3"
+      ]
+    },
+    {
+      "target_function": "approve",
+      "corpus_functions": [
+        "573ce9a7976ec51daa087bd3",
+        "522c3cd413768716f48c902a",
+        "5bb6aa31553c6d10b2aa54c9",
+        "a42d6b0ad20dde9acbfa49a3",
+        "7dc1612ca686481ff421b3e4",
+        "6449225ac434727b191eb3cd",
+        "423c26d51920aae468077a6c",
+        "9ff8ff93842931ce73f29aff"
+      ],
+      "candidate_tests": [
+        "734db51ad3dcbca3e8e164d0",
+        "7cfc8f9eb08fc479ab7a24da",
+        "34dab9edfcdc79c64c3820f8",
+        "490d1d1c276db23b1e9e32ee",
+        "cd36806bce110ac2260fa898",
+        "af6c5b04ca1d8402bfcac901",
+        "125e9c8908fa1ccc46550a3e",
+        "fc1fb2caf1684b5a3dde7a08",
+        "83e92b616048ca9ab9247fd7",
+        "22a4680b9f0d120a40fc1e81",
+        "e91777a07e04db3cfc14060e",
+        "491564f63832a1338cda9b2c"
+      ]
+    },
+    {
+      "target_function": "transferFrom",
+      "corpus_functions": [
+        "c1292aec8e535ece6e9f9894",
+        "1a5ff9554607e92e91bf25a3",
+        "aaf1a781d076c98753062719",
+        "2b4601fe8900149132679fb1",
+        "fc2f3d44dfb2b52a8f01c0a8",
+        "5a7024e2545501dc35be6051",
+        "96ab2c84ad31b85c88249a92",
+        "0923f539123f0749d4ac5fcd"
+      ],
+      "candidate_tests": [
+        "5f6dc01de64fbad5e4f23a69",
+        "02ee2d5b95031b830904f234"
+      ]
+    }
+  ],
+  "selected": [
+    2993,
+    803,
+    2996,
+    2994,
+    793,
+    2997,
+    3059,
+    3063
+  ],
+  "context_chars": 14712,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "Token",
+  "retrieval_seconds": 1.4648248999146745,
+  "hits": [
+    {
+      "chunk_id": 2993,
+      "test_id": "029cb5adf84fafbad65010ad",
+      "pair": "flash-token--btcdanaindiaoff-arch",
+      "domain_group": "lending-collateral",
+      "name": "should transfer tokens",
+      "via_function": "833200e95e89fe36cb72a6cb",
+      "chars": 1205
+    },
+    {
+      "chunk_id": 803,
+      "test_id": "734db51ad3dcbca3e8e164d0",
+      "pair": "baltpayment-vault--jxlabsok",
+      "domain_group": "staking-yield",
+      "name": "should revert if trying to register another payment while active",
+      "via_function": "573ce9a7976ec51daa087bd3",
+      "chars": 3240
+    },
+    {
+      "chunk_id": 2996,
+      "test_id": "5f6dc01de64fbad5e4f23a69",
+      "pair": "flash-token--btcdanaindiaoff-arch",
+      "domain_group": "lending-collateral",
+      "name": "should approve and transferFrom",
+      "via_function": "2b4601fe8900149132679fb1",
+      "chars": 1400
+    },
+    {
+      "chunk_id": 2994,
+      "test_id": "2778592ded38550b4991eae3",
+      "pair": "flash-token--btcdanaindiaoff-arch",
+      "domain_group": "lending-collateral",
+      "name": "should revert transfer to zero address",
+      "via_function": "833200e95e89fe36cb72a6cb",
+      "chars": 1135
+    },
+    {
+      "chunk_id": 793,
+      "test_id": "7cfc8f9eb08fc479ab7a24da",
+      "pair": "baltpayment-vault--jxlabsok",
+      "domain_group": "staking-yield",
+      "name": "should revert if payer subscription is inactive",
+      "via_function": "573ce9a7976ec51daa087bd3",
+      "chars": 2902
+    },
+    {
+      "chunk_id": 2997,
+      "test_id": "02ee2d5b95031b830904f234",
+      "pair": "flash-token--btcdanaindiaoff-arch",
+      "domain_group": "lending-collateral",
+      "name": "should revert transferFrom with insufficient allowance",
+      "via_function": "2b4601fe8900149132679fb1",
+      "chars": 1327
+    },
+    {
+      "chunk_id": 3059,
+      "test_id": "34dab9edfcdc79c64c3820f8",
+      "pair": "flow-pay-stream--ola-893",
+      "domain_group": "subscriptions-streaming",
+      "name": "Should create a stream successfully",
+      "via_function": "522c3cd413768716f48c902a",
+      "chars": 2073
+    },
+    {
+      "chunk_id": 3063,
+      "test_id": "490d1d1c276db23b1e9e32ee",
+      "pair": "flow-pay-stream--ola-893",
+      "domain_group": "subscriptions-streaming",
+      "name": "Should return true for active stream",
+      "via_function": "522c3cd413768716f48c902a",
+      "chars": 1430
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "pair": "voting--axysar",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:17:58.936309+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Voting.sol": "9994ce3613933f1ad14afd8dc2ad356e13bd15b9f87a1896343f9a33a14722f8",
+    "LICENSE": "27d682367f032150f6b957eb4cd7ce42cb2fec288de6fd0a1f6b639aa3e33767",
+    "manifest.json": "24664c06b83ff3856fa8b9a2cb5c0df1c3a2e0b04de6fb8726bdffa6793cba0e",
+    "test/Voting.test.js": "b0389552abba178d27a7bee49b1b3543116a214ddff26520128a0347bae2740f"
+  },
+  "pair_sha256": "01a7d102d3099abc09393a4de8ad759ec45fe5e58b6044375f2dc727639a9c69",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Voting.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.202,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "Voting.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.198,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "Voting.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.184,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.65,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.71,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Voting.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

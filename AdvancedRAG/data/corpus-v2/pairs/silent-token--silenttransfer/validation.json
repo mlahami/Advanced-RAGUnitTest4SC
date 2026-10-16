@@ -1,0 +1,82 @@
+{
+  "pair": "silent-token--silenttransfer",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:36:37.639300+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/SilentToken.sol": "df48e4d80f9b1ebda1d0187b334efe09303a460ca718842b2f12abd15e87264d",
+    "LICENSE": "782e2270ece5618915bf75963e1b8196ba7aa3588627b226acf4c9fa94f09358",
+    "manifest.json": "859986dab937ef456a49a35974015e4500d9e75ad78f2d3b6a5556670dd1930c",
+    "test/SilentToken.test.js": "74d14b615cf217a6bb34cd0c05ad679fa59929006340d9fe940b759ac30c321d"
+  },
+  "pair_sha256": "fe0ab26ccccbd406a446f3dcb6987806351b78c41d133a7a8ac909b4b24bfdf5",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "SilentToken.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.109,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "SilentToken.sol",
+        "reference": "DEX.sol",
+        "structural": 0.1,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "SilentToken.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.086,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.51,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.59,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "SilentToken.sol": {
+          "statements": 73.33,
+          "branches": 50.0,
+          "functions": 80.0,
+          "lines": 73.33
+        }
+      }
+    }
+  },
+  "accepted": true
+}

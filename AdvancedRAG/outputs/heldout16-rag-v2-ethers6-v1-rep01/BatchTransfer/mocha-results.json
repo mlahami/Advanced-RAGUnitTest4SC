@@ -1,0 +1,213 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 13,
+    "passes": 11,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-09-30T21:08:31.294Z",
+    "end": "2026-09-30T21:08:32.167Z",
+    "duration": 873
+  },
+  "tests": [
+    {
+      "title": "Should batch send equal ETH amounts",
+      "fullTitle": "BatchTransfer ETH Batch Functions Should batch send equal ETH amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should revert when ETH amount is incorrect for equal batch send",
+      "fullTitle": "BatchTransfer ETH Batch Functions Should revert when ETH amount is incorrect for equal batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should batch send variable ETH amounts",
+      "fullTitle": "BatchTransfer ETH Batch Functions Should batch send variable ETH amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "Should revert when ETH amount is incorrect for variable batch send",
+      "fullTitle": "BatchTransfer ETH Batch Functions Should revert when ETH amount is incorrect for variable batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should revert when recipients array is empty for ETH batch send",
+      "fullTitle": "BatchTransfer ETH Batch Functions Should revert when recipients array is empty for ETH batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should revert when ETH send fails",
+      "fullTitle": "BatchTransfer ETH Batch Functions Should revert when ETH send fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should batch send equal ERC20 amounts",
+      "fullTitle": "BatchTransfer ERC20 Batch Functions Should batch send equal ERC20 amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 47,
+      "err": {}
+    },
+    {
+      "title": "Should revert when ERC20 transfer fails for equal batch send",
+      "fullTitle": "BatchTransfer ERC20 Batch Functions Should revert when ERC20 transfer fails for equal batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Transfer failed', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Transfer failed', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:143:7)"
+      }
+    },
+    {
+      "title": "Should batch send variable ERC20 amounts",
+      "fullTitle": "BatchTransfer ERC20 Batch Functions Should batch send variable ERC20 amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 33,
+      "err": {}
+    },
+    {
+      "title": "Should revert when ERC20 transfer fails for variable batch send",
+      "fullTitle": "BatchTransfer ERC20 Batch Functions Should revert when ERC20 transfer fails for variable batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 17,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Transfer failed', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Transfer failed', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:182:7)"
+      }
+    },
+    {
+      "title": "Should revert when recipients array is empty for ERC20 batch send",
+      "fullTitle": "BatchTransfer ERC20 Batch Functions Should revert when recipients array is empty for ERC20 batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert when recipients and amounts arrays have different lengths",
+      "fullTitle": "BatchTransfer ERC20 Batch Functions Should revert when recipients and amounts arrays have different lengths",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should revert when ETH is sent directly to the contract",
+      "fullTitle": "BatchTransfer Receive Function Should revert when ETH is sent directly to the contract",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should revert when ERC20 transfer fails for equal batch send",
+      "fullTitle": "BatchTransfer ERC20 Batch Functions Should revert when ERC20 transfer fails for equal batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Transfer failed', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Transfer failed', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:143:7)"
+      }
+    },
+    {
+      "title": "Should revert when ERC20 transfer fails for variable batch send",
+      "fullTitle": "BatchTransfer ERC20 Batch Functions Should revert when ERC20 transfer fails for variable batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 17,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Transfer failed', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Transfer failed', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:182:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should batch send equal ETH amounts",
+      "fullTitle": "BatchTransfer ETH Batch Functions Should batch send equal ETH amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should revert when ETH amount is incorrect for equal batch send",
+      "fullTitle": "BatchTransfer ETH Batch Functions Should revert when ETH amount is incorrect for equal batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should batch send variable ETH amounts",
+      "fullTitle": "BatchTransfer ETH Batch Functions Should batch send variable ETH amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "Should revert when ETH amount is incorrect for variable batch send",
+      "fullTitle": "BatchTransfer ETH Batch Functions Should revert when ETH amount is incorrect for variable batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should revert when recipients array is empty for ETH batch send",
+      "fullTitle": "BatchTransfer ETH Batch Functions Should revert when recipients array is empty for ETH batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should revert when ETH send fails",
+      "fullTitle": "BatchTransfer ETH Batch Functions Should revert when ETH send fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should batch send equal ERC20 amounts",
+      "fullTitle": "BatchTransfer ERC20 Batch Functions Should batch send equal ERC20 amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 47,
+      "err": {}
+    },
+    {
+      "title": "Should batch send variable ERC20 amounts",
+      "fullTitle": "BatchTransfer ERC20 Batch Functions Should batch send variable ERC20 amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 33,
+      "err": {}
+    },
+    {
+      "title": "Should revert when recipients array is empty for ERC20 batch send",
+      "fullTitle": "BatchTransfer ERC20 Batch Functions Should revert when recipients array is empty for ERC20 batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert when recipients and amounts arrays have different lengths",
+      "fullTitle": "BatchTransfer ERC20 Batch Functions Should revert when recipients and amounts arrays have different lengths",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should revert when ETH is sent directly to the contract",
+      "fullTitle": "BatchTransfer Receive Function Should revert when ETH is sent directly to the contract",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\BatchTransfer\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    }
+  ]
+}

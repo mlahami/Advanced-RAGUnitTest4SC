@@ -1,0 +1,32 @@
+{
+  "id": "multi-sig-wallet-factory--donguillotine",
+  "domain": "multisig",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "MultiSigWalletFactory.sol",
+    "Multisig.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/DonGuillotine/multisig-contract",
+    "commit": "8f0788a4c229931fbd3677aed5c1e2c730790263",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MultiSigWalletFactory.sol",
+      "contracts/Multisig.sol"
+    ],
+    "test_paths": [
+      "test/MultiSigWalletFactory.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MultiSigWalletFactory.sol": "4c66c792f57660da81e4cc96d417ffb2bfefa598856587451ca69e51fc417714",
+      "contracts/Multisig.sol": "a6eca7c44379913b265f24d0ee52d06b4c6cfddaba0130c0477ca2ff48b7ce71",
+      "test/MultiSigWalletFactory.js": "3218a3d63f80cdd413a1e8bfa212cfc427857a3ab22eb776926a2ba557e4956e"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "factory of multisig wallets; may be flagged by leakage",
+  "imported_utc": "2026-09-27T21:50:18.901333+00:00"
+}

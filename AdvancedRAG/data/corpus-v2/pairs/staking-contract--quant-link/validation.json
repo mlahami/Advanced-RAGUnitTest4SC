@@ -1,0 +1,83 @@
+{
+  "pair": "staking-contract--quant-link",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:35:47.493753+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MockToken.sol": "c023847169f3a1acb2281d0203ce21d4240f9865107006eae90316cf4bbdffd8",
+    "contracts/StakingContract.sol": "488d5a45882ad295d5c0697fc6b54ed421e8379bc2b8fa1eab5aa816d4f804bb",
+    "LICENSE": "c6e841a7e31a0dcd9187a0c74237a73242a9da3adc68a8c448e7c8691ca1ba2e",
+    "manifest.json": "129788a97bfa5228406cedc1596092f6ae7ae125475aa50cce9f6e7ca1071c80",
+    "test/StakingContract.test.js": "7f288f58e916a637288b3b98c34b91970eeae125db4ec795f5a61fcc9aec5801"
+  },
+  "pair_sha256": "7b74f6199baca3b910e36c282fa2b01ac6f5c9586f95c5c3488c67d0d9aaf2c2",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "StakingContract.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.252,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "StakingContract.sol",
+        "reference": "DEX.sol",
+        "structural": 0.216,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "StakingContract.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.205,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.74,
+      "mocha": {
+        "tests": 11,
+        "passes": 11,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.87,
+      "mocha": {
+        "tests": 11,
+        "passes": 11,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "StakingContract.sol": {
+          "statements": 75.76,
+          "branches": 47.37,
+          "functions": 75.0,
+          "lines": 75.76
+        }
+      }
+    }
+  },
+  "accepted": true
+}

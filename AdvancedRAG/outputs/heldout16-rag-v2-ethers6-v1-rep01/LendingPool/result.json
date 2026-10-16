@@ -1,0 +1,60 @@
+{
+  "contract": "LendingPool",
+  "status": "test_failures",
+  "prompt_sha256": "d304c3784c55056f0ee3bd63ba2d1f5aa7144b2cd191051b5e63470b25cab8ce",
+  "generation_seconds": 12.837190699996427,
+  "usage": {
+    "prompt_tokens": 11592,
+    "total_tokens": 13439,
+    "completion_tokens": 1847,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.623623499996029
+  },
+  "passed_tests": 4,
+  "failed_tests": 7,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "LendingPool Borrow should allow borrowing when collateralized",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Undercollateralized'"
+    },
+    {
+      "title": "LendingPool Borrow should revert when borrowing zero amount",
+      "error": "Expected transaction to be reverted with reason 'Undercollateralized', but it didn't revert"
+    },
+    {
+      "title": "LendingPool Repay should allow repaying debt",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Undercollateralized'"
+    },
+    {
+      "title": "LendingPool Repay should revert when repaying more than debt",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Undercollateralized'"
+    },
+    {
+      "title": "LendingPool Liquidate should allow liquidating undercollateralized positions",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Undercollateralized'"
+    },
+    {
+      "title": "LendingPool Liquidate should revert when liquidating healthy positions",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Undercollateralized'"
+    },
+    {
+      "title": "LendingPool State Variables should correctly track collateral and debt",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Undercollateralized'"
+    }
+  ],
+  "coverage": {
+    "statements": 40.0,
+    "branches": 40.0,
+    "functions": 60.0,
+    "lines": 40.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

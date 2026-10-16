@@ -1,0 +1,158 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 6,
+    "passes": 0,
+    "pending": 0,
+    "failures": 8,
+    "start": "2026-09-30T20:45:55.183Z",
+    "end": "2026-09-30T20:45:55.909Z",
+    "duration": 726
+  },
+  "tests": [
+    {
+      "title": "should create a proposal",
+      "fullTitle": "DAOGovernor Proposal Creation should create a proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 51,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:62:54)"
+      }
+    },
+    {
+      "title": "should allow voting",
+      "fullTitle": "DAOGovernor Voting should allow voting",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:83:7)"
+      }
+    },
+    {
+      "title": "should revert if voting before start time",
+      "fullTitle": "DAOGovernor Voting should revert if voting before start time",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 43,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Not active', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Not active', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:101:7)"
+      }
+    },
+    {
+      "title": "should revert if voting after end time",
+      "fullTitle": "DAOGovernor Voting should revert if voting after end time",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:107:7)"
+      }
+    },
+    {
+      "title": "should revert if voting without tokens",
+      "fullTitle": "DAOGovernor Voting should revert if voting without tokens",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:114:7)"
+      }
+    },
+    {
+      "title": "should revert if voting twice",
+      "fullTitle": "DAOGovernor Voting should revert if voting twice",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:121:7)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "should create a proposal",
+      "fullTitle": "DAOGovernor Proposal Creation should create a proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 51,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:62:54)"
+      }
+    },
+    {
+      "title": "should allow voting",
+      "fullTitle": "DAOGovernor Voting should allow voting",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:83:7)"
+      }
+    },
+    {
+      "title": "should revert if voting before start time",
+      "fullTitle": "DAOGovernor Voting should revert if voting before start time",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 43,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Not active', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Not active', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:101:7)"
+      }
+    },
+    {
+      "title": "should revert if voting after end time",
+      "fullTitle": "DAOGovernor Voting should revert if voting after end time",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:107:7)"
+      }
+    },
+    {
+      "title": "should revert if voting without tokens",
+      "fullTitle": "DAOGovernor Voting should revert if voting without tokens",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:114:7)"
+      }
+    },
+    {
+      "title": "should revert if voting twice",
+      "fullTitle": "DAOGovernor Voting should revert if voting twice",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:121:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"should queue a successful proposal\"",
+      "fullTitle": "DAOGovernor Proposal Queueing \"before each\" hook for \"should queue a successful proposal\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:143:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"should execute a queued proposal after timelock\"",
+      "fullTitle": "DAOGovernor Proposal Execution \"before each\" hook for \"should execute a queued proposal after timelock\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:202:7)"
+      }
+    }
+  ],
+  "passes": []
+}

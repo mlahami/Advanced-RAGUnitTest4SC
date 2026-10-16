@@ -1,0 +1,89 @@
+{
+  "pair": "cognis-wallet-v2--cognis-protocol",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T07:38:02.320724+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/CognisTokenV2.sol": "5184dc9d089f1263aafa820c93d221740011fdc62cbfcfe5d83edf0f3dc0b31f",
+    "contracts/CognisWalletV2.sol": "a12fc6cd29dd422c9927bd3b2e7df5e0a7a139b5290c2f20674ddbb4dfebf7ea",
+    "LICENSE": "2d4548e25b5a4db06e22277c185aea8ae957922e311371271ffe6b9313118dd9",
+    "manifest.json": "ff5efdcef2cd72a9bd89f2443f690ef84ea5b9764a9e3757fc59e227e3e8831f",
+    "test/CognisWalletV2.test.js": "9015ecbac3e64aec9d99806837fb3ff70a96be0128d1474710d2a916a419f895"
+  },
+  "pair_sha256": "770b652b74375cfae3348c31169025ac4fed70c5e150099433bb33b90181bedd",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "CognisWalletV2.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.15,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "CognisWalletV2.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.124,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "CognisWalletV2.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.12,
+        "signatures": 0.0,
+        "min_functions": 11
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.41,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 9.2,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "CognisWalletV2.sol": {
+          "statements": 100.0,
+          "branches": 90.74,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "CognisTokenV2.sol": {
+          "statements": 100.0,
+          "branches": 16.67,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

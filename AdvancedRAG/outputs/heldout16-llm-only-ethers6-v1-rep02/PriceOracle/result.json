@@ -1,0 +1,40 @@
+{
+  "contract": "PriceOracle",
+  "status": "test_failures",
+  "prompt_sha256": "f3d1c227fe66e2d5c73303d66f9dc0982184acbfd5b6fa5fb10432a23f4f551b",
+  "generation_seconds": 11.185540800099261,
+  "usage": {
+    "prompt_tokens": 8850,
+    "total_tokens": 10496,
+    "completion_tokens": 1646,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.6638452999759465
+  },
+  "passed_tests": 6,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "PriceOracle Price Submission Should allow feeders to submit prices",
+      "error": "anyValue is not defined"
+    },
+    {
+      "title": "PriceOracle \"before each\" hook for \"Should prevent non-feeders from submitting prices\"",
+      "error": "Expected event \"PriceUpdated\" to be emitted, but it wasn't"
+    }
+  ],
+  "coverage": {
+    "statements": 21.28,
+    "branches": 34.21,
+    "functions": 54.55,
+    "lines": 22.22
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

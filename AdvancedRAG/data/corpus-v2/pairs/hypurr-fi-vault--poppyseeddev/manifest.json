@@ -1,0 +1,107 @@
+{
+  "id": "hypurr-fi-vault--poppyseeddev",
+  "domain": "yield-vault",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "HypurrFiVault.sol",
+    "IHypurrFiOracle.sol",
+    "IHypurrFiPool.sol",
+    "MockAToken.sol",
+    "MockERC20.sol",
+    "MockHypurrFiOracle.sol",
+    "MockHypurrFiPool.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/poppyseedDev/hypurrfi-hack",
+    "commit": "0b37c12d8f904b71ddffc0249750e8011358ca9c",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/HypurrFiVault.sol",
+      "packages/hardhat/contracts/interfaces/IHypurrFiOracle.sol",
+      "packages/hardhat/contracts/interfaces/IHypurrFiPool.sol",
+      "packages/hardhat/contracts/mocks/MockAToken.sol",
+      "packages/hardhat/contracts/mocks/MockERC20.sol",
+      "packages/hardhat/contracts/mocks/MockHypurrFiOracle.sol",
+      "packages/hardhat/contracts/mocks/MockHypurrFiPool.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/HypurrFiVault.test.ts"
+    ],
+    "license_file": "LICENCE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/HypurrFiVault.sol": "cdab0c986aadf2690c64855abcbfb9d979da463bd87daeb7e08ff31c77fa640c",
+      "packages/hardhat/contracts/interfaces/IHypurrFiOracle.sol": "f581721119ada66a6d2d08a73c499c5548abc59b78800847a8866bb10d1dfad3",
+      "packages/hardhat/contracts/interfaces/IHypurrFiPool.sol": "4cf7b92c5a2be9e407ea062e9627849eef4ab979d9d0fba7bedafbff3491d738",
+      "packages/hardhat/contracts/mocks/MockAToken.sol": "319242f1f5e7c835e451d5085ed0f871c9ba7c7b6923e4a50df5074fd5d3ad20",
+      "packages/hardhat/contracts/mocks/MockERC20.sol": "7b99f4f353fa88606000c73b7ba13cd151e9c79707856dde7c0471483d1a1cd4",
+      "packages/hardhat/contracts/mocks/MockHypurrFiOracle.sol": "b76c168f472976922b584c1cd799e1719afe8305a0cc87a1faf960dfe6d49a2e",
+      "packages/hardhat/contracts/mocks/MockHypurrFiPool.sol": "aba63be8c1eb3658d13da2303d4f9a4d59d7ecfad54fca5819c8d1d1a1ca3b79",
+      "packages/hardhat/test/HypurrFiVault.test.ts": "ab118e0d806e02480d8cd6f19ff4d4d759356316b75397e4157be940a2c8937f"
+    }
+  },
+  "transformations": [
+    {
+      "file": "HypurrFiVault.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IHypurrFiPool.sol",
+      "after": "./IHypurrFiPool.sol"
+    },
+    {
+      "file": "HypurrFiVault.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IHypurrFiOracle.sol",
+      "after": "./IHypurrFiOracle.sol"
+    },
+    {
+      "file": "MockHypurrFiOracle.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IHypurrFiOracle.sol",
+      "after": "./IHypurrFiOracle.sol"
+    },
+    {
+      "file": "MockHypurrFiPool.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IHypurrFiPool.sol",
+      "after": "./IHypurrFiPool.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "HypurrFiVault.test.js",
+      "upstream_path": "packages/hardhat/test/HypurrFiVault.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "HypurrFiVault.test.js",
+      "upstream_path": "packages/hardhat/test/HypurrFiVault.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "HypurrFiVault.test.js",
+      "upstream_path": "packages/hardhat/test/HypurrFiVault.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "HypurrFiVault",
+        "MockERC20",
+        "MockHypurrFiPool",
+        "MockHypurrFiOracle"
+      ],
+      "file": "HypurrFiVault.test.js",
+      "upstream_path": "packages/hardhat/test/HypurrFiVault.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 661 lines, closure 1636 lines, 7 files; 78 it blocks; history: 13 commits 2025-11-15..2025-11-16",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:33:20.446241+00:00"
+}

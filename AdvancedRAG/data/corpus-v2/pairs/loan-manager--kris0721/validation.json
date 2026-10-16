@@ -1,0 +1,96 @@
+{
+  "pair": "loan-manager--kris0721",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:37:38.001610+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/LendingPool.sol": "3e3f66d2f44aaab48433e9969831973998c49abb68f720aba9922b5a9bc2d4d3",
+    "contracts/LoanManager.sol": "115d4174fc9eac483c37f1a905c75712ec51fd0a5ada6cc8ed718b4ee447de35",
+    "contracts/MockERC20.sol": "dbe32ab140b516e4e528718fd96be7cbd08bcf65b15cd0e4b7f8ea3b9818cf85",
+    "LICENSE": "0a514713d5cfc7f601d2c74b5f50958b585b65d287769c743a696abcd3d312d4",
+    "manifest.json": "1441b807013e06cfad39c56a5103fb3ea2a396329035024c2d048cfd74acde35",
+    "test/LoanManager.test.js": "cc9c493934327c8c05e49f21576141ca4b3a13e70e40e6ef663bd21849acb4d3"
+  },
+  "pair_sha256": "67a6d3cb69d8297515502bb6ee566a3142d439edc374615d72fc30d3ee075339",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "LoanManager.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.259,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "LoanManager.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.237,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "LoanManager.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.221,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.66,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.09,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "LoanManager.sol": {
+          "statements": 100.0,
+          "branches": 70.59,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "LendingPool.sol": {
+          "statements": 50.0,
+          "branches": 35.71,
+          "functions": 75.0,
+          "lines": 57.14
+        },
+        "MockERC20.sol": {
+          "statements": 33.33,
+          "branches": 100.0,
+          "functions": 33.33,
+          "lines": 33.33
+        }
+      }
+    }
+  },
+  "accepted": true
+}

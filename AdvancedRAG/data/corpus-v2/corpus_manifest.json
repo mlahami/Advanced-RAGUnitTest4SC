@@ -1,0 +1,4360 @@
+{
+  "corpus": "corpus-v2",
+  "built_utc": "2026-09-30T08:15:59.283683+00:00",
+  "corpus_sha256": "5cabf7d044a083ebddfb2477ea8f13a607464cfa32adc9e64d751935a1f85d4b",
+  "pairs": 225,
+  "by_level": {
+    "complex": 71,
+    "moderate": 110,
+    "simple": 44
+  },
+  "by_domain": {
+    "payments": 8,
+    "identity-registry": 6,
+    "access-control": 4,
+    "supply-chain": 4,
+    "voting": 9,
+    "staking": 11,
+    "subscription": 3,
+    "airdrop": 3,
+    "insurance": 4,
+    "auction": 7,
+    "payment-streaming": 4,
+    "identity-signature-auth": 1,
+    "amm-dex": 9,
+    "yield-vault": 9,
+    "erc20-token": 11,
+    "dutch-auction": 1,
+    "multi-token": 1,
+    "rate-limiting": 6,
+    "commit-reveal": 2,
+    "nft-erc1155": 1,
+    "nft-auction-marketplace": 1,
+    "lottery": 4,
+    "ticketing-events": 7,
+    "bridge": 3,
+    "certificate-registry": 1,
+    "treasury": 4,
+    "lending": 5,
+    "registry": 9,
+    "crowdfunding": 8,
+    "oracle": 7,
+    "fungible-token": 1,
+    "token-sale": 3,
+    "stablecoin": 3,
+    "erc20-dividend": 1,
+    "vesting": 5,
+    "charity-donation": 2,
+    "nft-staking": 1,
+    "revenue-sharing": 1,
+    "escrow": 7,
+    "charity-dao": 1,
+    "meta-transactions": 6,
+    "flash-loan": 2,
+    "on-chain-game": 2,
+    "file-access-registry": 1,
+    "freelance-bounty": 1,
+    "freelance-escrow": 1,
+    "vesting-timelock": 1,
+    "lottery-commit-reveal": 1,
+    "prediction-market": 1,
+    "ticketing-marketplace": 1,
+    "nft-marketplace": 3,
+    "marketplace": 1,
+    "nft": 6,
+    "escrow-milestones": 1,
+    "payment-forwarder": 1,
+    "multisig-wallet": 4,
+    "multisig": 1,
+    "nft-kyc": 1,
+    "ticketing": 1,
+    "storage-library": 1,
+    "price-oracle": 1,
+    "conditional-payments": 1,
+    "freelance-reputation": 1,
+    "soulbound-nft": 1,
+    "soulbound-certificate": 1,
+    "subscriptions": 1,
+    "timelock": 1,
+    "identity-claims": 1,
+    "voting-commit-reveal": 1,
+    "nft-poap": 1
+  },
+  "by_domain_group": {
+    "escrow-conditional-payments": 22,
+    "registries-identity": 18,
+    "access-control": 5,
+    "supply-chain": 4,
+    "voting-governance": 10,
+    "staking-yield": 21,
+    "subscriptions-streaming": 8,
+    "airdrop-merkle": 3,
+    "insurance": 4,
+    "auctions": 8,
+    "amm-dex": 9,
+    "fungible-tokens": 20,
+    "nft-marketplace": 17,
+    "rate-limiting": 6,
+    "games-lotteries": 10,
+    "ticketing-events": 9,
+    "relayer-meta-transactions": 9,
+    "multisig-treasury": 9,
+    "lending-collateral": 7,
+    "crowdfunding": 11,
+    "price-oracles": 8,
+    "vesting-timelock": 7
+  },
+  "domain_groups_sha256": "c38bd5158a3d49c861ff1a9912fca93135d3f459a3ab05d0e9d55cfd51a9e29f",
+  "by_test_language": {
+    "ts": 80,
+    "js": 145
+  },
+  "test_transformed": 102,
+  "entries": [
+    {
+      "id": "aba-pay-v2--investorphem",
+      "domain": "payments",
+      "domain_group": "escrow-conditional-payments",
+      "level": "complex",
+      "md": "aba-pay-v2--investorphem.md",
+      "md_sha256": "10f6fdb72b98d5f3fe7127da01696a83091ef375dc28a699cadee0e95c55c3b1",
+      "pair_sha256": "d531d3433dfda0a80ff2d80e7d664633e1e9a8d444fcf5cf200cd86da8658a6b",
+      "repository": "https://github.com/investorphem/AbaPay",
+      "commit": "a6657e74dd29ed9f479ed740249cb1cea4083e9a",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "academic-credential--abrar-0020",
+      "domain": "identity-registry",
+      "domain_group": "registries-identity",
+      "level": "moderate",
+      "md": "academic-credential--abrar-0020.md",
+      "md_sha256": "e26827ef5a42483da61edf3540e60fc7524746736f50db8bafa3a8573f56c83f",
+      "pair_sha256": "f8bef635de11953350d43936b1deedf01a80aea8fa14b6c0325d0e8309bc92ad",
+      "repository": "https://github.com/abrar-0020/Tokenized-Academic-Credential-Verification-System",
+      "commit": "b6c5707ac6f29de70e83457e7f2ef241ccf5a6ca",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "access-registry--adelmarcio0",
+      "domain": "access-control",
+      "domain_group": "access-control",
+      "level": "simple",
+      "md": "access-registry--adelmarcio0.md",
+      "md_sha256": "c88af61f51f0252684c0c3547a01edae14f40f16f0f56942715213c6c90aa79f",
+      "pair_sha256": "ffcba8947ff84775ec736808f8e9cab8e3e4e91a66b1c091ce7a9e6c06fb94a5",
+      "repository": "https://github.com/adelmarcio0/ChronaLink",
+      "commit": "9d4dd56e2524bf44ff0a6bb58e330137da3ed104",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "actor--captainunknown",
+      "domain": "supply-chain",
+      "domain_group": "supply-chain",
+      "level": "moderate",
+      "md": "actor--captainunknown.md",
+      "md_sha256": "8e1f14a1bd98a71b1bb968c691cf5c7053358280ddf4b074b860b2a7948aa5cd",
+      "pair_sha256": "5e6afc4194fd7c2d58196bc7fe0776f2c29ea6154de9125cd994e357c91be016",
+      "repository": "https://github.com/CaptainUnknown/dnft-supply-chain",
+      "commit": "a8d7bf422e62cbb90e03ec99161f72b235640083",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "administrable--rsksmart",
+      "domain": "access-control",
+      "domain_group": "access-control",
+      "level": "moderate",
+      "md": "administrable--rsksmart.md",
+      "md_sha256": "4c38da0aa5c2ff88b519fba352cbd4fce06b34436c65cb369c0c5347d4995e24",
+      "pair_sha256": "c1bc7f3522452ad7fbfa468678f4e7af00f8cc8429967939e9e7c645a4690102",
+      "repository": "https://github.com/rsksmart/rootstock-scoreboard",
+      "commit": "07c4b2f1dec7955e7002f300edc1254ad19acaa5",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "advanced-voting--shree2160",
+      "domain": "voting",
+      "domain_group": "voting-governance",
+      "level": "complex",
+      "md": "advanced-voting--shree2160.md",
+      "md_sha256": "ee95ed9fa498fdbf3723edfb63fa27e727f267fcc8f60132a4a844c0e3bc8d99",
+      "pair_sha256": "0b450194d9200cd1a788006aea7994a42a6d8d23729cc43c8f5d85f8c527f59b",
+      "repository": "https://github.com/shree2160/Blockchain-Voting-System",
+      "commit": "a98b411bf299d0780c7daf03307771801ffc6410",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "agent-identity-registry--calderbuild",
+      "domain": "identity-registry",
+      "domain_group": "registries-identity",
+      "level": "simple",
+      "md": "agent-identity-registry--calderbuild.md",
+      "md_sha256": "7c74735a157b15b4ae5361e743499e0a423ce24eb75432f530d71689fff4dda2",
+      "pair_sha256": "564543a71ab0cbbaac432ec3d822e79854d57c71e6ee86296cb1042e8b146508",
+      "repository": "https://github.com/calderbuild/SafeReceipt",
+      "commit": "ae78bdae89f72b9ac68370136269774d36bb7b7a",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "agent-registry--m31527",
+      "domain": "identity-registry",
+      "domain_group": "registries-identity",
+      "level": "moderate",
+      "md": "agent-registry--m31527.md",
+      "md_sha256": "a226ca77736094bceedbffc2b0e91284eb45046b944343bce544617b4e90c28c",
+      "pair_sha256": "58f7e8425da7b615ac23ff5163dff153a651b5059b8e89e3879158ce3204e21c",
+      "repository": "https://github.com/m31527/AgentDID",
+      "commit": "879fea04ab67ea30ce052e31c87bae1bda90afe3",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "agent-staking--toryoto",
+      "domain": "staking",
+      "domain_group": "staking-yield",
+      "level": "complex",
+      "md": "agent-staking--toryoto.md",
+      "md_sha256": "7f6c4503c019907e401e2b59906d2cb81770a708b643aec7e61ee98e3c13bfc5",
+      "pair_sha256": "ed75eb635b5535828fd9d0304d8cdaacfd8db2518eb5857d126021eae6d85d25",
+      "repository": "https://github.com/toryoto/UniAgent",
+      "commit": "d3d71c63e055ebdb4b33357ef450432f5055ddf5",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "agent-subscriptions-v2--andrerserrano",
+      "domain": "subscription",
+      "domain_group": "subscriptions-streaming",
+      "level": "complex",
+      "md": "agent-subscriptions-v2--andrerserrano.md",
+      "md_sha256": "4fc344ef663c5e2ed8822111f9dc7a655222cd1328914752a44bb003f2735b02",
+      "pair_sha256": "2ac636a0301c5ec2f6f454981ff62c8726fae05460c2b03d67801c8e83d45ea4",
+      "repository": "https://github.com/andrerserrano/USDC-Hackathon",
+      "commit": "f2dfddef6ec0a37d092baa5b892f3713468cdf22",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "agri-bridge-traceability--mrnobody23-cloude",
+      "domain": "supply-chain",
+      "domain_group": "supply-chain",
+      "level": "moderate",
+      "md": "agri-bridge-traceability--mrnobody23-cloude.md",
+      "md_sha256": "0d324ca7be56b043c07be46527437b9de3c082e71c016144e31b3b1c30ecbfec",
+      "pair_sha256": "fb00a80046bd7010db9b6a10eb8f4e061731b02345f39ad2e5c4ef0ede9578bf",
+      "repository": "https://github.com/MrNobody23-cloude/AgriBridge",
+      "commit": "6103633fc475aac636c9505926f087e1ccb5e766",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "airdrop--ramirohr",
+      "domain": "airdrop",
+      "domain_group": "airdrop-merkle",
+      "level": "simple",
+      "md": "airdrop--ramirohr.md",
+      "md_sha256": "20ca8369fde01f07e1336dd8ee305c5043b1b2e57388a0982baa3f1d821df55d",
+      "pair_sha256": "eea4581728a0d850aaed3ba060b58f36537d00ee9e813102d987bffb798002c4",
+      "repository": "https://github.com/RamiroHR/Airdrop_ERC20_tokens",
+      "commit": "bfd3f1b38d57fc8d43fd82de40a6d386cf0ee485",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "airdrop-distributor--mdantis-dev",
+      "domain": "airdrop",
+      "domain_group": "airdrop-merkle",
+      "level": "moderate",
+      "md": "airdrop-distributor--mdantis-dev.md",
+      "md_sha256": "d6009265ce91266a4e79642b12f1c74f61cfad1f0a14fb98da5f4ab0c6dfbd91",
+      "pair_sha256": "3fe266b773ef18bb1f7fccd84dd330dd41bd624c9ea28940ed9e983ce14144f1",
+      "repository": "https://github.com/mdantis-dev/SOLIDITY-Liminal-Games",
+      "commit": "09a7484ac7f92e054eedc087b2d03431968e435b",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "anca-sure-claims--trippleyay",
+      "domain": "insurance",
+      "domain_group": "insurance",
+      "level": "moderate",
+      "md": "anca-sure-claims--trippleyay.md",
+      "md_sha256": "e76c94fe791348f25343712d370380d1fb9b84625c1ae989d2d657aba8826be7",
+      "pair_sha256": "ccc6422bc2fef34cd0da9ddd724f81f1dd1f4f2a838170e25b06a35a3071225e",
+      "repository": "https://github.com/trippleyay/ancasure",
+      "commit": "8fc4124c29312d7db310ac019c8af7d878014211",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "ancilla-staking--ancilla-arb",
+      "domain": "staking",
+      "domain_group": "staking-yield",
+      "level": "moderate",
+      "md": "ancilla-staking--ancilla-arb.md",
+      "md_sha256": "f26f5700acba1ec86de0cbae84aacee5a66eaca039ac3cf5e222ce1a49210cd7",
+      "pair_sha256": "18aae57dc1431496dfe3add97dea57bf4b4b790d2365c0de23fe9983dbe1025d",
+      "repository": "https://github.com/ANCILLA-ARB/ancilla",
+      "commit": "ae4c4f341939a3f451c27b9271fac7f5f1ae89a9",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "anneal-staking--winsznx",
+      "domain": "staking",
+      "domain_group": "staking-yield",
+      "level": "moderate",
+      "md": "anneal-staking--winsznx.md",
+      "md_sha256": "e49108e62b92d0742daf3e7b5f30f40fdfda510a2571c1171f023bc82085e349",
+      "pair_sha256": "3ec808e611bfc0c1c3a6dd60c195c496a30e7255ec950a8bde8c76c9d8890f53",
+      "repository": "https://github.com/winsznx/tryanneal",
+      "commit": "888b04fee28d084d09b2feee7ad12029c2880282",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "areca-auction--nitishpatil18",
+      "domain": "auction",
+      "domain_group": "auctions",
+      "level": "moderate",
+      "md": "areca-auction--nitishpatil18.md",
+      "md_sha256": "e635eca31d3c3ba302615c998e108f6780b609e8b91ce6a20434e7c0ac3a3865",
+      "pair_sha256": "0db9d0aabb39afef7a3fb840ba16c9041d7cba7aee75fd4b4fafce869ce77e9f",
+      "repository": "https://github.com/nitishpatil18/areca-auction",
+      "commit": "5d3aa553f139a67a4483683a5af74d099218906e",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "esm-to-cjs"
+      ]
+    },
+    {
+      "id": "attention-stream--wildterralabs",
+      "domain": "payment-streaming",
+      "domain_group": "subscriptions-streaming",
+      "level": "complex",
+      "md": "attention-stream--wildterralabs.md",
+      "md_sha256": "92af615c2ba6cd4e79bafdebc8fd4f390884c442c35f12c9bd3b698aad7facfd",
+      "pair_sha256": "bfeb888f157f507bd2e2f59ca1403dc6b0f0806bff4964918ec24be98c2b920c",
+      "repository": "https://github.com/WILDTERRALABS/attention-press",
+      "commit": "321821a38f539c02cdc7aba01ac415523045f818",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "auction--rickyliu1117",
+      "domain": "auction",
+      "domain_group": "auctions",
+      "level": "moderate",
+      "md": "auction--rickyliu1117.md",
+      "md_sha256": "c3def26bcc26a867556912b196f05a1961d25c9d31f6ce269570695f2e7d9e79",
+      "pair_sha256": "a8b8449448a8e87b0a4b456782efc626ad0dd6b6089ecc0b3f8244ec4fc567b0",
+      "repository": "https://github.com/rickyliu1117/auction",
+      "commit": "8a8f846dabf5ec05e15c37f729ff7f92f34e22df",
+      "license": "Apache-2.0",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "authenticator--w3hc",
+      "domain": "identity-signature-auth",
+      "domain_group": "access-control",
+      "level": "simple",
+      "md": "authenticator--w3hc.md",
+      "md_sha256": "3f8d30dd3d1635cc5fa9e69645cf151776a2f42521bef75d8e9932b2c314abef",
+      "pair_sha256": "a0aa6223991eb5f60fb4e69055cee077d2fd237da971ef64d8072e0eee28d402",
+      "repository": "https://github.com/w3hc/authenticator",
+      "commit": "2a1d4c5156296d1ced5287ee0776da62c7aa8691",
+      "license": "GPL-3.0",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "avgxamm--parkeqpapa",
+      "domain": "amm-dex",
+      "domain_group": "amm-dex",
+      "level": "complex",
+      "md": "avgxamm--parkeqpapa.md",
+      "md_sha256": "80f1634883432dc4bfafb65982b70d79075b3925c0f419820ff2c97614d3af6d",
+      "pair_sha256": "4d7f8aede24d1b14f3611bcf6547dc5f2fe567acefe42f9f8043c4ed12da7171",
+      "repository": "https://github.com/parkeqpapa/avgx-backend-v3",
+      "commit": "631ead7d04f01fee1fa6fbeeca13efe0f3ac27ca",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "baltpayment-vault--jxlabsok",
+      "domain": "yield-vault",
+      "domain_group": "staking-yield",
+      "level": "complex",
+      "md": "baltpayment-vault--jxlabsok.md",
+      "md_sha256": "d45b8223d787c72c778a330b2b68522f11e7b72162446b929c711e4d89b328f9",
+      "pair_sha256": "9ffc371a7fb34ab72cd1167b45f9bf7de9342431e4fe7ce45747fd7e8a2ec38a",
+      "repository": "https://github.com/JXLabsOK/BALT_SmartContracts",
+      "commit": "8ba2baf185ac8e0c6df0a1c19df73494d98084b3",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "baltpayments-subscription-registry--jxlabsok",
+      "domain": "subscription",
+      "domain_group": "subscriptions-streaming",
+      "level": "simple",
+      "md": "baltpayments-subscription-registry--jxlabsok.md",
+      "md_sha256": "6d38f7de037f5dfecd7e67de7e31731f7fd9e45433319b9ba0078e8d91338f19",
+      "pair_sha256": "bc58c170b71505347b3e6dc65d0675ddebb1c452f979805695cc6edbcd2b40d1",
+      "repository": "https://github.com/JXLabsOK/BALT_SmartContracts",
+      "commit": "8ba2baf185ac8e0c6df0a1c19df73494d98084b3",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "base-token--salfianf",
+      "domain": "erc20-token",
+      "domain_group": "fungible-tokens",
+      "level": "simple",
+      "md": "base-token--salfianf.md",
+      "md_sha256": "70ce2975413eeb7d76b42c08db34a97e14a7486abc7cdf0c2f132c71ff5e4f96",
+      "pair_sha256": "36c5fe1bccce4da497a8b091cb48dbe7fd79b68cb81cf550ffa552848ed928cf",
+      "repository": "https://github.com/SalfianF/hello-base-contract",
+      "commit": "d42d584de651cf5ea8b6d21853e5e091b90b6223",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "base-token--winsitoruser",
+      "domain": "erc20-token",
+      "domain_group": "fungible-tokens",
+      "level": "simple",
+      "md": "base-token--winsitoruser.md",
+      "md_sha256": "db86844e775b8b6877b2d5fa4a5bfc90b17f7519aad68e8d5d1d4faa19dcbdfa",
+      "pair_sha256": "7dc08ae498caddd05b6229de5d9ee2fea4bf6bf7ddba1d0efbb40435984722a6",
+      "repository": "https://github.com/winsitoruser/lileinstein",
+      "commit": "30d28563f96f295a3ed8fc591440cfe7c4c43433",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "basic-dutch-auction--jicodes",
+      "domain": "dutch-auction",
+      "domain_group": "auctions",
+      "level": "simple",
+      "md": "basic-dutch-auction--jicodes.md",
+      "md_sha256": "58ce5f30370fbb610a200287e153845e31e9e532816b1ec6f01adc2a706bb691",
+      "pair_sha256": "12ef9fff52f2ee05bf11ebd449741bda3907900e20005c671421ddfafe40389c",
+      "repository": "https://github.com/jicodes/dutch-auction-dapp",
+      "commit": "ee33502e3e76a6f73bd460c2173cdc47c225b620",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "batch-minter1155--joraemon-event",
+      "domain": "multi-token",
+      "domain_group": "nft-marketplace",
+      "level": "moderate",
+      "md": "batch-minter1155--joraemon-event.md",
+      "md_sha256": "b39470af97e9fa4163e63f7bfdce834ca45a2b73712e40b4716aaec78085e267",
+      "pair_sha256": "487f5e59927773efd7a4f6f34087ef92be8258a27e400e1231b544749e79ddf3",
+      "repository": "https://github.com/Joraemon-Event/hardhat",
+      "commit": "72395f8fd6a780dfa5669679fdb606323b7c2b85",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "batch-settlement--nickthelegend",
+      "domain": "rate-limiting",
+      "domain_group": "rate-limiting",
+      "level": "moderate",
+      "md": "batch-settlement--nickthelegend.md",
+      "md_sha256": "4db7efe9e1216a86f6088e6b4a47b69af4c49791e9e3875e79701977dd922990",
+      "pair_sha256": "3b6478733539cd391128e165fa0814fc505aa64dde9714a4c75cecdafe46398d",
+      "repository": "https://github.com/nickthelegend/polaris-monad",
+      "commit": "03106bac2527c581de297bedc90cea34c0d47f79",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "bilateral-agreement--sh-sw",
+      "domain": "commit-reveal",
+      "domain_group": "games-lotteries",
+      "level": "moderate",
+      "md": "bilateral-agreement--sh-sw.md",
+      "md_sha256": "72288389665c5bb004fd66b6393c65d63c67fb99e1ed76b3b8fab5f04bd6816b",
+      "pair_sha256": "81676796add427da298d3fdb060c2f01d28c41106e16a9f59b00c51da2820a0e",
+      "repository": "https://github.com/SH-SW/BlockChain-Hackathon",
+      "commit": "08d714a08732d80b1707e7d02238fd21acb6e561",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "bit-brics--ac12644",
+      "domain": "nft-erc1155",
+      "domain_group": "nft-marketplace",
+      "level": "moderate",
+      "md": "bit-brics--ac12644.md",
+      "md_sha256": "442c7cd1eb4f5a460888cd9cdb19594231a09f175103cca7efe89358e8af4ea7",
+      "pair_sha256": "893da24ce9e6e7c0ebddfa547a329ff39ab1371f74c16b44a6fcb5a098dfab5c",
+      "repository": "https://github.com/ac12644/bitbrics-erc1155",
+      "commit": "a914ff7fe87ad31d3a6a55f6550e2faed57983d5",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "block-bid--beaulosun",
+      "domain": "nft-auction-marketplace",
+      "domain_group": "nft-marketplace",
+      "level": "moderate",
+      "md": "block-bid--beaulosun.md",
+      "md_sha256": "0198a0ee43796bf5f124208469489b539f20d412764a2b761c1cd8857920dfd9",
+      "pair_sha256": "7224add2a3125ef3e6d2c732f1ef3d91121a5eb80f4a1f647a7ef8ff0e9c0d34",
+      "repository": "https://github.com/BeauloSun/BlockBid",
+      "commit": "87ad7e1aeaf6fc5962441216e2146844385077c0",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "blockchain-lottery--wgw31king",
+      "domain": "lottery",
+      "domain_group": "games-lotteries",
+      "level": "moderate",
+      "md": "blockchain-lottery--wgw31king.md",
+      "md_sha256": "b8296368b0134586e824af2b86b477b506358493494bdd31c44d2f4aaf5ed315",
+      "pair_sha256": "86027e9a9121e0bb6fbf432634dfb5569ed814b56c8dac61ab0d7df16968bb00",
+      "repository": "https://github.com/wgw31king/blockchain-lottery",
+      "commit": "46e0e20e7d6cd34cc6ef5d7dbdbf92adcfab27a0",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "botpass--agvswira",
+      "domain": "ticketing-events",
+      "domain_group": "ticketing-events",
+      "level": "moderate",
+      "md": "botpass--agvswira.md",
+      "md_sha256": "6bfd513ce6dc77fe7ce50277622e8367ffbacd455249cf25351e74aa5b1dc8f6",
+      "pair_sha256": "0a459e5b93c5502032f5c02896d0e80ec8cf8bedd6bb0d330e6b801077c05acf",
+      "repository": "https://github.com/agvswira/botpass",
+      "commit": "80708431829cb48befabba6f2462c865743a04a8",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "bridge-base--unclekaldoteth",
+      "domain": "bridge",
+      "domain_group": "relayer-meta-transactions",
+      "level": "complex",
+      "md": "bridge-base--unclekaldoteth.md",
+      "md_sha256": "1ab290c2886ac5e1113ab84e788848ae7df326bdd6d6bf4f9d6feb962709cbae",
+      "pair_sha256": "5c568ff1830e7351cfc3b22a8f2eaaad6bb04e6462221f48f2716d32d9d29228",
+      "repository": "https://github.com/unclekaldoteth/stacks-bridge",
+      "commit": "629c8c719f82e5fb7a929f065d28ae5dc97d922d",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "budget-enforcer--rishisharma029",
+      "domain": "rate-limiting",
+      "domain_group": "rate-limiting",
+      "level": "moderate",
+      "md": "budget-enforcer--rishisharma029.md",
+      "md_sha256": "58dba7d447895a846d9f0e701245dac5d920e14aba4a074adf4172e5549c7985",
+      "pair_sha256": "493aff02f240673d3735a8d3f65f400f4ba4bc8410f6469d7cf83e1a4556c076",
+      "repository": "https://github.com/Rishisharma029/w3a-1",
+      "commit": "c69dc51459ddd666b3cc7f8df1bbf76dcd9f27c3",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path",
+        "strip-bom"
+      ]
+    },
+    {
+      "id": "certi-chain-registry--amit01-developer",
+      "domain": "certificate-registry",
+      "domain_group": "registries-identity",
+      "level": "moderate",
+      "md": "certi-chain-registry--amit01-developer.md",
+      "md_sha256": "0d1dd3c552300bdabacc70dd858757f6f70ccad1232b70155e96628a7909dcc8",
+      "pair_sha256": "9e1582ca1d1efbafc7caeb006a9aa4bbadf92e647dcbd4472639366dd48fe737",
+      "repository": "https://github.com/Amit01-developer/CertiChain",
+      "commit": "152a3f1a5e55022e0d9e9a4eae90992e62656359",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "certificate-registry--sahilleth",
+      "domain": "identity-registry",
+      "domain_group": "registries-identity",
+      "level": "moderate",
+      "md": "certificate-registry--sahilleth.md",
+      "md_sha256": "dbf3dc78f527eb26546f4145c99b56424381b9121dfe6103a7197b94a0522801",
+      "pair_sha256": "70f8966d6fcb4a7aa42aac13a8734ea68e8e20692e4f19244fa57bd08fd8cc48",
+      "repository": "https://github.com/sahilleth/BlockCert",
+      "commit": "b1c86e29e08a999de7213a00d868da11e0c83231",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "claim-settlement--onlymekarthik",
+      "domain": "insurance",
+      "domain_group": "insurance",
+      "level": "moderate",
+      "md": "claim-settlement--onlymekarthik.md",
+      "md_sha256": "097750eadbd03412e1ed7425cbcdd594a293a936e05c11c952ae9c8c923e89cf",
+      "pair_sha256": "eab67a54088d079d6fbcf2376b4d93710eb7863a89265f96f364d9231b720931",
+      "repository": "https://github.com/OnlymeKarthik/Dr.Benmax",
+      "commit": "90d32de040da5d1421254e7a46e6d9f40076b37d",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "claim-token--sodofi",
+      "domain": "airdrop",
+      "domain_group": "airdrop-merkle",
+      "level": "simple",
+      "md": "claim-token--sodofi.md",
+      "md_sha256": "4b226f79c543f9766ab65216adee111041414030121ce8db27fdd6d109b32e5c",
+      "pair_sha256": "8f96f393f682c21ee31e2754ddd1cbc6d36d2f2f5cf5d3975521487ac7682d88",
+      "repository": "https://github.com/sodofi/celo-token-claim",
+      "commit": "b14c34d03cfdedbff668b139b6554715e105cd4c",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "cloud-reward-pool--auracloudai",
+      "domain": "staking",
+      "domain_group": "staking-yield",
+      "level": "complex",
+      "md": "cloud-reward-pool--auracloudai.md",
+      "md_sha256": "d27a0c9c77f64de69b72421124b879aa3bede4e7bde1e94268bab40a54ef6fa3",
+      "pair_sha256": "c9d5955aaf9100279d0e02a9d2f1b63eeda71967cf35685e576df77e854a7323",
+      "repository": "https://github.com/AuraCloudAI/contracts",
+      "commit": "3311746b47d358ff6f26f19e3297978b3e9a9032",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "cognis-wallet-v2--cognis-protocol",
+      "domain": "treasury",
+      "domain_group": "multisig-treasury",
+      "level": "moderate",
+      "md": "cognis-wallet-v2--cognis-protocol.md",
+      "md_sha256": "686fb7ea376b94ccbee04542e1f9640948e161d9bff0afc8c3f4ef7fc7cc15cd",
+      "pair_sha256": "770b652b74375cfae3348c31169025ac4fed70c5e150099433bb33b90181bedd",
+      "repository": "https://github.com/cognis-protocol/cognis-contracts",
+      "commit": "b979bc804bbf69d625b69eddb15bf1bd54c50b5a",
+      "license": "Apache-2.0",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "collateral-vault--vandan08",
+      "domain": "lending",
+      "domain_group": "lending-collateral",
+      "level": "complex",
+      "md": "collateral-vault--vandan08.md",
+      "md_sha256": "30b5243401ea7bcb66e0d3296d62c762d44219738c92febede67b0aad0fe8681",
+      "pair_sha256": "c17c08b0838cd02b13488c8ff64ef2aa67bfb6e56741313039911446767d4828",
+      "repository": "https://github.com/vandan08/CredLayer",
+      "commit": "1afa6d305c46635741133355c37824b667a963a2",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "company--christofervikstroem",
+      "domain": "registry",
+      "domain_group": "registries-identity",
+      "level": "moderate",
+      "md": "company--christofervikstroem.md",
+      "md_sha256": "2f20a622f67b92bcefa5a80365303fb95f3c6acab5c9e94d611b917df11ef4fc",
+      "pair_sha256": "f4e1418141389c945d71d1bee3dbac36a2a242ed17d69219d2f55faf6b8eacc1",
+      "repository": "https://github.com/ChristoferVikstroem/FaTS",
+      "commit": "47b8516212b3f462f86b46156dd7297d948855a3",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "cross-chain-governor--kdsmith18542",
+      "domain": "bridge",
+      "domain_group": "relayer-meta-transactions",
+      "level": "complex",
+      "md": "cross-chain-governor--kdsmith18542.md",
+      "md_sha256": "93d121587ba51ef2d89c3c0c34be3376ff7b2cd2ed27c16185f5dcb925e4c2ea",
+      "pair_sha256": "a255ef3d639737702e01fe4f0a2fe4b614dcbd7c1da5ff9b5234b8b041caf3b6",
+      "repository": "https://github.com/kdsmith18542/Resurgence-Protocol",
+      "commit": "acec56d74ea79729807be0bdcb756cae778be3bf",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "crowd-funding--ahmedsemih",
+      "domain": "crowdfunding",
+      "domain_group": "crowdfunding",
+      "level": "moderate",
+      "md": "crowd-funding--ahmedsemih.md",
+      "md_sha256": "879df3134350a0ed76de446fc755f6301f22fc8cc6ce7fb0df913a8dc5809f83",
+      "pair_sha256": "1ed7aed43fc2ad8ccfede9844628e9c4bd91f3e6dfc0024b32511980c4ec7354",
+      "repository": "https://github.com/ahmedsemih/CrowdFunding-dApp",
+      "commit": "f6a5690a60c3c6782982b6d42e5bf125834ed8f5",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "crowdfund_optimized--saatvikmanagari",
+      "domain": "crowdfunding",
+      "domain_group": "crowdfunding",
+      "level": "moderate",
+      "md": "crowdfund_optimized--saatvikmanagari.md",
+      "md_sha256": "49e88aa7acbbad385e73239ecde3cefde9a485b3a70f45567a278e179257cf8a",
+      "pair_sha256": "58aff0f7472e1fbb2ffc1248bcf789808ce168316e93f59c7b036f1c68f65e14",
+      "repository": "https://github.com/SaatvikManagari/cs218-crowdfunding-chainsnatchers_1482",
+      "commit": "9240e951db2750f66f56310ca36315bb0a8b3139",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "crowdfunding--giovanniforlenza",
+      "domain": "crowdfunding",
+      "domain_group": "crowdfunding",
+      "level": "simple",
+      "md": "crowdfunding--giovanniforlenza.md",
+      "md_sha256": "fac3133eb737ef9f98d361da028cb9ee00e36b9e68b42da7ed150df5f8fcc532",
+      "pair_sha256": "424fba5ff52d0c9fdcaf6f985dcb93a7e8ed9b1b64675f65e043aab99d6d292f",
+      "repository": "https://github.com/GiovanniForlenza/crowdfunding-dapp",
+      "commit": "eecf8b3d57ce14c6f6e214dd3bf4dc9b5fa6f4b7",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "crowdfunding--vedangdate",
+      "domain": "crowdfunding",
+      "domain_group": "crowdfunding",
+      "level": "moderate",
+      "md": "crowdfunding--vedangdate.md",
+      "md_sha256": "c4fd60e6acb256464d086fe5b885232115bb4a2f6ccad28084c058b199a3e4aa",
+      "pair_sha256": "e1def4cbb3a704429cfd84bb2e561d6fbc500f768e2fd299131f73603e9181b1",
+      "repository": "https://github.com/vedangdate/chainfund",
+      "commit": "44c0599b9a001ad0dfe8010c526b314113650ea1",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "crowdfunding-campaign--seintian",
+      "domain": "crowdfunding",
+      "domain_group": "crowdfunding",
+      "level": "complex",
+      "md": "crowdfunding-campaign--seintian.md",
+      "md_sha256": "97f6b2032c55d31dbcc25072a340dedd33b6adff2b058eaf67ab54d454504bd4",
+      "pair_sha256": "f4617068d8aa7a0442cc957ebdcd9a17fd5e3c6a7406e07127a12a1e361cc8e5",
+      "repository": "https://github.com/Seintian/unito-blockchain-25-26-crowdfunding-protocol",
+      "commit": "f6c09d330b7a71ce34dc23cb7b85cecf89bc4ec6",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "custom-price-oracle--samsshow",
+      "domain": "oracle",
+      "domain_group": "price-oracles",
+      "level": "complex",
+      "md": "custom-price-oracle--samsshow.md",
+      "md_sha256": "eb7705bca06b2d59d324ba70dfbf9d524236a41402406e4e0568d84f8e511493",
+      "pair_sha256": "d7db013b6272d0d1d038e766e0a9e9c1f5015141f4964f3474de2fe84763c789",
+      "repository": "https://github.com/SamsShow/ShadowNox",
+      "commit": "0b1cdad52958e19eca86c05b13f094afe27ae14c",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "cynthia-token--cynthiasystems",
+      "domain": "fungible-token",
+      "domain_group": "fungible-tokens",
+      "level": "simple",
+      "md": "cynthia-token--cynthiasystems.md",
+      "md_sha256": "c91eb31b6e4524137aef4b3f4a2cb15f5452c60a485a821aa7e6968069cc188c",
+      "pair_sha256": "5983995b35651cb4091f15fcfca6f8797dbdf8dd5d8c2cb34785b563445073b6",
+      "repository": "https://github.com/cynthiasystems/CynthiaToken",
+      "commit": "0f5e7572cea7599da027b909999d78c0c96a9dd7",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "cynthia-token-sale--cynthiasystems",
+      "domain": "token-sale",
+      "domain_group": "fungible-tokens",
+      "level": "moderate",
+      "md": "cynthia-token-sale--cynthiasystems.md",
+      "md_sha256": "996afc764d06fc1ae1cfb60ee579d958f27b7dd1e79b3aadfec44efe7cfe77d6",
+      "pair_sha256": "c779768768619da28988cc0e3f6044cc702843c20fa188668e20a74063c72fef",
+      "repository": "https://github.com/cynthiasystems/CynthiaToken",
+      "commit": "0f5e7572cea7599da027b909999d78c0c96a9dd7",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "daogovernance--mohin-io",
+      "domain": "voting",
+      "domain_group": "voting-governance",
+      "level": "moderate",
+      "md": "daogovernance--mohin-io.md",
+      "md_sha256": "5dc87b0a8c40e8db004445e66ec79c332907a5d9ea7fec57fbea0e60b6fd9245",
+      "pair_sha256": "8f679190999e3a95889c01e7464e40426c81470944ea62da0e8c490e553fb34d",
+      "repository": "https://github.com/mohin-io/Decentralized-Autonomous-Hedge-Fund-AI-DAO",
+      "commit": "8dbc75dbd1ab7b1dc89ac2a7265f624e7b0854a7",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "depeg-guard--kcolbchain",
+      "domain": "stablecoin",
+      "domain_group": "fungible-tokens",
+      "level": "complex",
+      "md": "depeg-guard--kcolbchain.md",
+      "md_sha256": "34999c55591adc09ae54a5edf4ecc1d0ea670c8552cd68cebaf18c8df4b2886a",
+      "pair_sha256": "9f0748db4a13b228d1310f7ffde9608c09303657b102669b37d33525f01d1253",
+      "repository": "https://github.com/kcolbchain/stablecoin-toolkit",
+      "commit": "2753ad360f14935d1485060a3006a4b6cc3129ce",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "dex-pool--anmolm-777",
+      "domain": "amm-dex",
+      "domain_group": "amm-dex",
+      "level": "moderate",
+      "md": "dex-pool--anmolm-777.md",
+      "md_sha256": "1e69f12b711e6616fa2836dde2677c02db2a67872fa791fed4144c74a3ff7015",
+      "pair_sha256": "3ad5d2b3fee2fad99b157798b3985ee9d7285d2cae59e9aa56ccb29a229b4ded",
+      "repository": "https://github.com/AnmolM-777/Mini_DEX",
+      "commit": "acbe85fe31c5481baed0bb88d7370a2db103d750",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "direct-sale--bonabuild",
+      "domain": "token-sale",
+      "domain_group": "fungible-tokens",
+      "level": "complex",
+      "md": "direct-sale--bonabuild.md",
+      "md_sha256": "8947f244c5d9c9a531bbd763ad88ff45524955935e66a2a6da8da81e217a59f1",
+      "pair_sha256": "956666b84169bea0f8798c355c8f75395977d3f474e6cbfd9cbcb10e039681c4",
+      "repository": "https://github.com/bonabuild/bona-contracts",
+      "commit": "9da35f2070c65c837944bb5210bb31cd500f6b45",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "dividend-token--harshanandhan",
+      "domain": "erc20-dividend",
+      "domain_group": "fungible-tokens",
+      "level": "moderate",
+      "md": "dividend-token--harshanandhan.md",
+      "md_sha256": "919824c97e6aac3d7fd62f7f039d900aed51faee7be8928b183b8dd48bdb2067",
+      "pair_sha256": "35344b8b8bf0ca40938127f5cd597ec4485c763808a2b1bd0f7515d8dfc680f5",
+      "repository": "https://github.com/Harshanandhan/dividend-token",
+      "commit": "80add620c4516ddda19f253cad7c22eeb4124dfe",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "docvesting--mikemushunje",
+      "domain": "vesting",
+      "domain_group": "vesting-timelock",
+      "level": "complex",
+      "md": "docvesting--mikemushunje.md",
+      "md_sha256": "ed7d84b05b2b6cdf1d2f3975dc49d97fa26cecc71323d469ee696c64cee0f35c",
+      "pair_sha256": "5da77ea201160455bae7b716e383fbc2e825e0515e6a7212a7ca96b52aa665a5",
+      "repository": "https://github.com/Mikemushunje/doc-vesting",
+      "commit": "da5e3bb4d3d8ddaf9d2ed6bed991cda30a31df0d",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "donate-crypto--allexantoniollo",
+      "domain": "charity-donation",
+      "domain_group": "crowdfunding",
+      "level": "moderate",
+      "md": "donate-crypto--allexantoniollo.md",
+      "md_sha256": "1b0b5d0c1adac651bfc72159c06a96892c203e9a2dd97c17a82168d7d4f9bfc1",
+      "pair_sha256": "c883a5b9caa7b0e6898a95f8965248e08bfcd3c4c0ce5c446e56cb6a922943b2",
+      "repository": "https://github.com/AllexAntoniollo/DonateCrypto",
+      "commit": "536b70b4ab02cdce945e9502dce220fbee2e034d",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "donate-crypto-adapter--allexantoniollo",
+      "domain": "charity-donation",
+      "domain_group": "crowdfunding",
+      "level": "complex",
+      "md": "donate-crypto-adapter--allexantoniollo.md",
+      "md_sha256": "31cd046eb0183da4e3441f4200c0f12f63f23860694e67cf6ded60bb75c46600",
+      "pair_sha256": "49410b3aac10e91bab430dc9d1eefa42c8542cbdf0806c79b94b5dbc30f9b2b2",
+      "repository": "https://github.com/AllexAntoniollo/DonateCrypto",
+      "commit": "536b70b4ab02cdce945e9502dce220fbee2e034d",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "dynamic-staking-pool--ahburgess22",
+      "domain": "nft-staking",
+      "domain_group": "staking-yield",
+      "level": "complex",
+      "md": "dynamic-staking-pool--ahburgess22.md",
+      "md_sha256": "65e681fcded0662c56ebc608d7ed6ab8090d91e3a18573d6c6b3c4784757dd33",
+      "pair_sha256": "cc0644e4cc8f0799b837d4b58f5c7349e3d4c699fc314fc44c0a6fbb36350774",
+      "repository": "https://github.com/ahburgess22/ERC721-Dynamic-Staking-Pool",
+      "commit": "647119f057c442aea38cb5531854113a687c2e92",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "election--tbayan",
+      "domain": "voting",
+      "domain_group": "voting-governance",
+      "level": "moderate",
+      "md": "election--tbayan.md",
+      "md_sha256": "03efdf3c3122a0184d554b36ea971f7fa92e771e108c90d6df854e2840801893",
+      "pair_sha256": "61fd546690fb4303421c1b901f9302ba4374cd159664a8650718045451781b14",
+      "repository": "https://github.com/tbayan/eVoting_paper_code",
+      "commit": "e0a9cbf65c6bc97fb687e78c35e7aded2fbe4cc8",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "test-import-path",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "enerpay-remittance--edgadafi",
+      "domain": "payments",
+      "domain_group": "escrow-conditional-payments",
+      "level": "complex",
+      "md": "enerpay-remittance--edgadafi.md",
+      "md_sha256": "30200cef404d2bf3e0154389105e224906ae6f2daef1994914cdb04422da3a3d",
+      "pair_sha256": "6a7b34235dd0ea7f335f2ba920f329939085463594c380e1158078688f92e9a7",
+      "repository": "https://github.com/Edgadafi/enerpay-celo",
+      "commit": "432d3d21cb68c4f62dbe4cab8dfe8826f9be6552",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "english-auction--dexauction",
+      "domain": "auction",
+      "domain_group": "auctions",
+      "level": "simple",
+      "md": "english-auction--dexauction.md",
+      "md_sha256": "72b3c6672488792f482d9efd147cac13a1cc4573a71b14ba8a7a83443eb892e0",
+      "pair_sha256": "cdc2e23eb9f73df6e0fa7fad2e77ab818497c8c9125fab3ad8b09b2582b9d4e0",
+      "repository": "https://github.com/DexAuction/non-fractionalised-rwa-auction",
+      "commit": "a359009a10713d7ee2fb7209f44f9f4fa584f7c0",
+      "license": "Apache-2.0",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "english-auction--jinzm10162",
+      "domain": "auction",
+      "domain_group": "auctions",
+      "level": "complex",
+      "md": "english-auction--jinzm10162.md",
+      "md_sha256": "9181beefce7ab996f181be6456a24dcaa3d091b533b568002a127fa03225b005",
+      "pair_sha256": "798e51c9b19c1d15618795cc3375abd0679d6093f00edcb7480e43fadcce1f7c",
+      "repository": "https://github.com/jinzm10162/Gavel",
+      "commit": "4e1f9f4ca2dc54c825bc7344dd8c443848ca6ab2",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "entity--val020213",
+      "domain": "identity-registry",
+      "domain_group": "registries-identity",
+      "level": "simple",
+      "md": "entity--val020213.md",
+      "md_sha256": "0b7463f034f40d45e7753f0b8c2d0dfbf271a0949d84d69ead1c160146c14807",
+      "pair_sha256": "5943e2dbaa03afce3568b021812dbf41f8f47536150e9e5a0855f69327e37066",
+      "repository": "https://github.com/Val020213/multisign-role-based",
+      "commit": "7609e7684d2906ce6d6f1f2fbf8f25b90c23d6d9",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "erc20-payment-splitter--mirepatel",
+      "domain": "revenue-sharing",
+      "domain_group": "escrow-conditional-payments",
+      "level": "moderate",
+      "md": "erc20-payment-splitter--mirepatel.md",
+      "md_sha256": "7771ee70fc241d3d97ea8abce1b9c55b54b39ace2651cfa29ecbe231fbcf4789",
+      "pair_sha256": "039dc11cbb9534a421d342daff1b31d43075bf3c122e3fed8128e3bae12415d8",
+      "repository": "https://github.com/mirepatel/erc20-payment-splitter",
+      "commit": "3d93e45d387499f8694519182d06889503ade45b",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "erc20-vesting--dualnova",
+      "domain": "vesting",
+      "domain_group": "vesting-timelock",
+      "level": "moderate",
+      "md": "erc20-vesting--dualnova.md",
+      "md_sha256": "04f45b7ae27308fa4f53d8e63c6f10e4f575c504088af28adad645e25e01936e",
+      "pair_sha256": "e2978677a9f20099dc0782d4c11123bc780bea4ccdc868593adfbdf6b97727a5",
+      "repository": "https://github.com/DualNova/tokenization-templates",
+      "commit": "fd6f5a9e0cea42b6a2f709d035cef5cde9328820",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "ether-staking--donguillotine",
+      "domain": "staking",
+      "domain_group": "staking-yield",
+      "level": "moderate",
+      "md": "ether-staking--donguillotine.md",
+      "md_sha256": "85b47f5b9d6de457414f6855c2cb4305da8b1f400f3a2b1866ec8ffd96e95bb2",
+      "pair_sha256": "22b9f3183f6985167ac8d1a165572c94ff6f9597761464625eece48e7fc9a2ea",
+      "repository": "https://github.com/DonGuillotine/ether-staking-contract",
+      "commit": "915bf81cdf350088c7009449214a6c05c91b9047",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "event-chain-contract--sergio11",
+      "domain": "ticketing-events",
+      "domain_group": "ticketing-events",
+      "level": "moderate",
+      "md": "event-chain-contract--sergio11.md",
+      "md_sha256": "5bebe32edc18257f5aea2ce82046321788ebfa624aa695d958ec0a310a68075f",
+      "pair_sha256": "a01d54ca4dbc9ca05e2a873c235febfc766503744b880035bbc12b077a77f36e",
+      "repository": "https://github.com/sergio11/eventchain_blockchain",
+      "commit": "69ba748ab14665390356ba4bce827eb65b3d14c5",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "event-chain-event-manager-contract--sergio11",
+      "domain": "ticketing-events",
+      "domain_group": "ticketing-events",
+      "level": "moderate",
+      "md": "event-chain-event-manager-contract--sergio11.md",
+      "md_sha256": "bb8d83eddade7af42f62668f55a1bd596f2199f2a15a87e60880c0b267fefe31",
+      "pair_sha256": "7bb290cdf51829c4c8a9d8fc8e56cd3208467106d4229c7e02a482040a1bdb56",
+      "repository": "https://github.com/sergio11/eventchain_blockchain",
+      "commit": "69ba748ab14665390356ba4bce827eb65b3d14c5",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "event-discovery--abhisheky2401",
+      "domain": "ticketing-events",
+      "domain_group": "ticketing-events",
+      "level": "complex",
+      "md": "event-discovery--abhisheky2401.md",
+      "md_sha256": "703fd97469c4e95205cca1d7a0c69594e1f2fd23c926888675da250af0d4cc74",
+      "pair_sha256": "3c5c0e3e8349f9b1e905c33009901257448bffed99ffe3be9f556b5d92541ddb",
+      "repository": "https://github.com/abhishekY2401/event-dapp-backend",
+      "commit": "8cae2ab28a6c561828dd4e3cb12eb55df2a0cfeb",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "event-manager--donguillotine",
+      "domain": "access-control",
+      "domain_group": "access-control",
+      "level": "moderate",
+      "md": "event-manager--donguillotine.md",
+      "md_sha256": "ed1fd82c55c2ace14870a038f9ebc477727e68e81b1a555a5ce476b566e2c068",
+      "pair_sha256": "b9698ce8acf5ab9bc385b76152bd779889e0bd519db3ea1aac8b166bb7fbd783",
+      "repository": "https://github.com/DonGuillotine/nft-gated-event-manager",
+      "commit": "45541a09799a56c9b723b1ee9885e84fd5929f71",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "evidence-registry--shreyas0047",
+      "domain": "registry",
+      "domain_group": "registries-identity",
+      "level": "complex",
+      "md": "evidence-registry--shreyas0047.md",
+      "md_sha256": "8cb01a7727b7884dcdbb36a13b30408949133db3dfdb493989c82f82691784c0",
+      "pair_sha256": "2f81ea0b5ae2a447c21618561d5700f0b752e69c90e4c1bbe81e3e7db04b4f95",
+      "repository": "https://github.com/Shreyas0047/NyxTrace",
+      "commit": "9e2f1c23b9590f620fcc1988d65b4641c4cb6dbb",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "evo-pool--diveshk007",
+      "domain": "amm-dex",
+      "domain_group": "amm-dex",
+      "level": "complex",
+      "md": "evo-pool--diveshk007.md",
+      "md_sha256": "6557a9076775453d8c561d526f5f46ed278dfd44afdf0d7b1f8cfca57c929b2e",
+      "pair_sha256": "cd37802c4a068930b9bfe74cf90af8e09f30a1750ec24e383833532bf63072b5",
+      "repository": "https://github.com/DiveshK007/EvoArena",
+      "commit": "a3e8f1ff61b03fe58915cd0e880b26dbeff744a1",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "exchange-office--fant1k34",
+      "domain": "amm-dex",
+      "domain_group": "amm-dex",
+      "level": "simple",
+      "md": "exchange-office--fant1k34.md",
+      "md_sha256": "cbf44efb901917ec2ad5017bb5eebaebaa17f616f492ac24f0d840487931bb09",
+      "pair_sha256": "e88463d5049e1724599759225a45079fd1e643c2d286a736ece00cce17de9a6c",
+      "repository": "https://github.com/Fant1k34/Smart-contract",
+      "commit": "159b45b4133aa906b913f369218a47a71e8ab5d3",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "exclusive-claim--biosai",
+      "domain": "escrow",
+      "domain_group": "escrow-conditional-payments",
+      "level": "complex",
+      "md": "exclusive-claim--biosai.md",
+      "md_sha256": "036822b7e8416a59d9e841f2170d95118a3521b902d589e491a8803caf1ee231",
+      "pair_sha256": "75b5bdf5c6d37fd2a2e19365a67d668df6f54ac06d3ba94b1cb1f5a3992209f5",
+      "repository": "https://github.com/Biosai/lockd",
+      "commit": "d2b022f15709a1e511911b7e0c9d2753ba06b7d0",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "fauna--myriamchah",
+      "domain": "charity-dao",
+      "domain_group": "crowdfunding",
+      "level": "moderate",
+      "md": "fauna--myriamchah.md",
+      "md_sha256": "27fc3a71909224b568d7b7ddf6477582ab3d603b6bd0a881a803e55ebf82d068",
+      "pair_sha256": "a227a8181b6ade91e6a122561b3fec492e0928ad70ddd3b813588bb16e2afe47",
+      "repository": "https://github.com/myriamchah/fauna",
+      "commit": "1f7c32478f5f3ebfb58417e06fe43d2eec83b2a5",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "fiduciary-duty--laprop",
+      "domain": "meta-transactions",
+      "domain_group": "relayer-meta-transactions",
+      "level": "complex",
+      "md": "fiduciary-duty--laprop.md",
+      "md_sha256": "131916269d421d86d4cf83f5ae9a313f0a90b4579eaf01d4dddc42ee06ac7870",
+      "pair_sha256": "a93171ae2a16043317a4ece427c2474b45d281bc52a1843cdf697583612cb507",
+      "repository": "https://github.com/LaProp/contracts",
+      "commit": "0aaf375151ace3569b42994142cad8de692ad324",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "file-registry--salim-lakhal",
+      "domain": "registry",
+      "domain_group": "registries-identity",
+      "level": "complex",
+      "md": "file-registry--salim-lakhal.md",
+      "md_sha256": "8f7dc6bbf829c2687d240e044d41e6301eb738ed24abc5f0e2f83a1ab010a487",
+      "pair_sha256": "2bf80bccc9e2d04f98c3890e630e0333ba3bafad9457ff10d86157dfe5a090fd",
+      "repository": "https://github.com/salim-lakhal/zkp-decentralized-storage",
+      "commit": "3f137fcbbfdb44fb5d8d79bb2068b14c683920c2",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "fixed-rate-erc4626-vault--crazyyuan",
+      "domain": "yield-vault",
+      "domain_group": "staking-yield",
+      "level": "moderate",
+      "md": "fixed-rate-erc4626-vault--crazyyuan.md",
+      "md_sha256": "a9fb245e4409ab4dcf77e85aee397cfd58524acf6a5d2efbcde2dabe2dfa8b9f",
+      "pair_sha256": "d8b83e6a5946174603ea419d97e149c75c823e986da7f92f575af55bed2614f5",
+      "repository": "https://github.com/crazyyuan/defi-fixed-yield-course",
+      "commit": "55d1d847068f07b2d1f03bfe27bda1b5bf38ea30",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "flash-token--btcdanaindiaoff-arch",
+      "domain": "flash-loan",
+      "domain_group": "lending-collateral",
+      "level": "complex",
+      "md": "flash-token--btcdanaindiaoff-arch.md",
+      "md_sha256": "ec00c7c4a96d560f7c7e2387c6ce6b4a864361dd1ee91ac7b983a4e9aca2abc7",
+      "pair_sha256": "69e7f6d0d2e89bc9b59399e76fb1d99f403d7d472820719c4a54a51574e2cbc1",
+      "repository": "https://github.com/btcdanaindiaoff-arch/flash-token",
+      "commit": "4eeb96a09767d06d4cbc9a85bf86ca212b5a1f25",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "flow-pay-split--edhovx",
+      "domain": "payments",
+      "domain_group": "escrow-conditional-payments",
+      "level": "moderate",
+      "md": "flow-pay-split--edhovx.md",
+      "md_sha256": "58321820c2858038a2a5e60fc3e9ec69b4d81f88d581a3054abc4c2c49d76335",
+      "pair_sha256": "fc9ef8653341228a9c19b40b4c8107fb40e8cd515d3d171582e79d6b6f1446b7",
+      "repository": "https://github.com/edhovx/flowpay",
+      "commit": "349380c86acf15ade2019d7a3aa2d2776547fc04",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "flow-pay-stream--ola-893",
+      "domain": "payment-streaming",
+      "domain_group": "subscriptions-streaming",
+      "level": "moderate",
+      "md": "flow-pay-stream--ola-893.md",
+      "md_sha256": "09cfddcac6ea55f921cb3e5c641fb9dcec01fad0f8defa9fa9f362506dc93519",
+      "pair_sha256": "d51e277cc411e955b7512fbd16e91d25107406546568eb85f5a99d407d352f59",
+      "repository": "https://github.com/ola-893/flowpay",
+      "commit": "de41ae887a5679942fe67796220fabe029d35f2e",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "forwarder--siddhant-k08",
+      "domain": "meta-transactions",
+      "domain_group": "relayer-meta-transactions",
+      "level": "complex",
+      "md": "forwarder--siddhant-k08.md",
+      "md_sha256": "23f91d49fc3d648c5868494afe628a2107677ebce38b60e96901e0a92c3aa048",
+      "pair_sha256": "d655a74f7144a22cd580e31fd9feff834d8657bef90ab1c7ac65a5be8043d9a8",
+      "repository": "https://github.com/siddhant-k08/rsk-meta-tx-relayer",
+      "commit": "9d8c20b2b347d14c3f6b14d02221050cd17be830",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "fund-chain-campaign--sergio11",
+      "domain": "crowdfunding",
+      "domain_group": "crowdfunding",
+      "level": "moderate",
+      "md": "fund-chain-campaign--sergio11.md",
+      "md_sha256": "a3fbb20e74f161e6ae289a554239ed832024344a48bb784235c5824a60b14d33",
+      "pair_sha256": "eae44e05ae988ea6bb873c7a0d92a4002b0c5cf2023812fa761a311d6e269256",
+      "repository": "https://github.com/sergio11/fundchain_blockchain",
+      "commit": "bfe34107858fcd2002205f85f16ce2a21385c192",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "fund-chain-factory--sergio11",
+      "domain": "crowdfunding",
+      "domain_group": "crowdfunding",
+      "level": "complex",
+      "md": "fund-chain-factory--sergio11.md",
+      "md_sha256": "5d441d1000a24571b82a3b1db0856c2de45628449de1dad953329f30d2095d26",
+      "pair_sha256": "13589765acb5efb0da939eda04db69af23e271dd1777ac5935fe4a9f60e16776",
+      "repository": "https://github.com/sergio11/fundchain_blockchain",
+      "commit": "bfe34107858fcd2002205f85f16ce2a21385c192",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "fungible-asset-token--mickap1",
+      "domain": "erc20-token",
+      "domain_group": "fungible-tokens",
+      "level": "complex",
+      "md": "fungible-asset-token--mickap1.md",
+      "md_sha256": "6a466ade9998fe9d0f53e465e7d76679ce9d7a1db424fdfb006f1c10709b836e",
+      "pair_sha256": "3ea09a152ab3213865801ae1b8f90910ab98f55a6f8129399c76845b8ac93a5a",
+      "repository": "https://github.com/Mickap1/G9---Blockchain",
+      "commit": "fc4e0dba2c0113373a01ca8c42f9c8ae3b3a74a3",
+      "license": "GPL-2.0",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "game-treasury--mdantis-dev",
+      "domain": "treasury",
+      "domain_group": "multisig-treasury",
+      "level": "moderate",
+      "md": "game-treasury--mdantis-dev.md",
+      "md_sha256": "954d872d18a25e77f351495cbbddccc614d1bc775df71eafdfd8e03dda6b6576",
+      "pair_sha256": "82d6beb59e28aae73b5f0d6ae10769f97433597d87b9a7dcdf909ab4efc90f6d",
+      "repository": "https://github.com/mdantis-dev/SOLIDITY-Liminal-Games",
+      "commit": "09a7484ac7f92e054eedc087b2d03431968e435b",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "gem-auction--rusiruss",
+      "domain": "auction",
+      "domain_group": "auctions",
+      "level": "moderate",
+      "md": "gem-auction--rusiruss.md",
+      "md_sha256": "1baa992a0ad19aed648771f08aa955ca1843f19da15b4d42648293f342e0d396",
+      "pair_sha256": "47c8c2abc0440682928f0fb422bf10b0246d1175518557ab5f1afd1c39b8bd8f",
+      "repository": "https://github.com/rusiruss/Gem-bid",
+      "commit": "371d1c6f27a1b7eaa415ede975e551f4162a5298",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "griffin-dex--littlefingerrr",
+      "domain": "amm-dex",
+      "domain_group": "amm-dex",
+      "level": "moderate",
+      "md": "griffin-dex--littlefingerrr.md",
+      "md_sha256": "f34f90df188eb9cea29164db0e2235aaef36bbb3292005a39718cf0d96db491e",
+      "pair_sha256": "0c8c1aae2a73c5b5af3b803b96b4f29e89fe9aa728f3169fdd474c9e3fe55746",
+      "repository": "https://github.com/LittleFingerrr/Griffin",
+      "commit": "4ab33af05e2d980b394455bc13166f29235d8151",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "grow-vault--deboraholaboye",
+      "domain": "yield-vault",
+      "domain_group": "staking-yield",
+      "level": "moderate",
+      "md": "grow-vault--deboraholaboye.md",
+      "md_sha256": "6d842f2d08ee0c0b37a6a988ee213b34159c336ad7437af13355c230e65ae150",
+      "pair_sha256": "77c5a5876c5261510b3ccc0a141676e33e83214a6672dd752bc60f875e97093d",
+      "repository": "https://github.com/DeborahOlaboye/grow-vault",
+      "commit": "47b97f83bd00d11beb72f2e1158b42d4185ec502",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "guard-vault--chrsnikhil",
+      "domain": "rate-limiting",
+      "domain_group": "rate-limiting",
+      "level": "moderate",
+      "md": "guard-vault--chrsnikhil.md",
+      "md_sha256": "0507861c63c01123d0ec0622a5d0b1252cfa2fd3a4248db4a9bd179198eed0c6",
+      "pair_sha256": "60dce34f9b09fea2c7083686ab0b740494f1ec61e757bfa8860757509963ef6d",
+      "repository": "https://github.com/chrsnikhil/ithaca",
+      "commit": "3c3be3c98c924597422997964c3155ab655fea33",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "habitat-vote--habitathash",
+      "domain": "voting",
+      "domain_group": "voting-governance",
+      "level": "simple",
+      "md": "habitat-vote--habitathash.md",
+      "md_sha256": "6ab71361fc9efebe1ae171073369603fa07aefaeb2b0596db8c179dcecac6c8e",
+      "pair_sha256": "a35732cb101347c627b12ceb955d87e2fac1d5959f5842ed68d71821799ee3d4",
+      "repository": "https://github.com/HabitatHash/HabitatHash",
+      "commit": "fffe7e5f18a46f4c11ae9f5a823560bfde34e0ea",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "head-soccer--borissv4646",
+      "domain": "on-chain-game",
+      "domain_group": "games-lotteries",
+      "level": "moderate",
+      "md": "head-soccer--borissv4646.md",
+      "md_sha256": "d0d3128234f1a9d5435ce0f33d77b7b2c7eea97a565a6fbf2f4bd5f2133bde19",
+      "pair_sha256": "a66b93b47f4262727a572ef84822a273cb778bb366636c9a9c86a9a927157e6a",
+      "repository": "https://github.com/BorisSV4646/footballGame",
+      "commit": "c64758fe84206da2e705d1229d160a555fe76e6a",
+      "license": "Apache-2.0",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "hypurr-fi-vault--poppyseeddev",
+      "domain": "yield-vault",
+      "domain_group": "staking-yield",
+      "level": "complex",
+      "md": "hypurr-fi-vault--poppyseeddev.md",
+      "md_sha256": "b58f1b80c052aa0729a7529ee2c388671797cabd7b32f24abba1a6e4d9501de2",
+      "pair_sha256": "8e1d4a9832cd50cf6323ae539119a90a201baac287c11fca8d384a03c0f5e835",
+      "repository": "https://github.com/poppyseedDev/hypurrfi-hack",
+      "commit": "0b37c12d8f904b71ddffc0249750e8011358ca9c",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "insurance-policy--pranjalmanhgaye",
+      "domain": "insurance",
+      "domain_group": "insurance",
+      "level": "moderate",
+      "md": "insurance-policy--pranjalmanhgaye.md",
+      "md_sha256": "bcbbf24721a832b0feed029597353a33dc3b935299f6b47278b243ebd750e8ef",
+      "pair_sha256": "ad6ce066cd1e6b98cf8a88217c52c83d76ed152eee25b30f614c361c28bbdaf3",
+      "repository": "https://github.com/PranjalManhgaye/Automate_India",
+      "commit": "a4a4e1e051a878149b54862d10fb38e0e27420cf",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "interest-rate-model--mad-uet",
+      "domain": "lending",
+      "domain_group": "lending-collateral",
+      "level": "simple",
+      "md": "interest-rate-model--mad-uet.md",
+      "md_sha256": "cc3cd1ea61f07addb6d5513bab9e502257c90e00d3dc95d80d9644cbe0bfd859",
+      "pair_sha256": "cd6be6fa2d3936c39916a20ff51daec9056d5e7fa150733a1960b0e383697bd8",
+      "repository": "https://github.com/mad-uet/DeFi-Lending-Borrowing-Demo",
+      "commit": "dbb9a50fb8caf5aa79b4e162ac566e9e6d9b5b90",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "invoice-vault--0xpenwright",
+      "domain": "payments",
+      "domain_group": "escrow-conditional-payments",
+      "level": "moderate",
+      "md": "invoice-vault--0xpenwright.md",
+      "md_sha256": "bac08fae8914fdb9e774ab93e58b278ce65ce9e4dcb8f435154297c63bde9114",
+      "pair_sha256": "7b3957ed6eab5ae0341a0b4d5369f9388d4e9cb9644d13350dd267dfd1450656",
+      "repository": "https://github.com/0xPenwright/crypto-payment-gateway",
+      "commit": "abdd06e538e1ef6faa820a015e6740ff10799c60",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "ipfs_management--yagotzirck",
+      "domain": "file-access-registry",
+      "domain_group": "registries-identity",
+      "level": "moderate",
+      "md": "ipfs_management--yagotzirck.md",
+      "md_sha256": "00983387a8dffbc65fb02e18bf83713068817de3a31f162531642a8a58a205b8",
+      "pair_sha256": "cb1a34104a5ad1dbac4e33839780675ba2f53bc8d99f865bf0f42655680ef3b0",
+      "repository": "https://github.com/Yagotzirck/ipfsEth_fileManagement",
+      "commit": "e6b8602f5dc01936feef5de30345b94c062eb4a5",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "jack-vesting--jacktokenproject",
+      "domain": "vesting",
+      "domain_group": "vesting-timelock",
+      "level": "moderate",
+      "md": "jack-vesting--jacktokenproject.md",
+      "md_sha256": "ae1b1a8b25ad72ac7e941c77763018b27581b02e0aeaeaa221dbddf9afc5d05e",
+      "pair_sha256": "5eced1c78c8ec1b0d8d80b17ff9e15014d1c2c47ac7cd9a63ae3a5c53d8bd8f0",
+      "repository": "https://github.com/JackTokenProject/JackVesting",
+      "commit": "857354b633b663a90d6e3cd39260f05e15c87948",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "job--bharat3645",
+      "domain": "freelance-bounty",
+      "domain_group": "escrow-conditional-payments",
+      "level": "simple",
+      "md": "job--bharat3645.md",
+      "md_sha256": "1a8d8cc8d88fcb8b56b699d22d8737a5122ba2d4351af057e8b1e62eec412968",
+      "pair_sha256": "19bdd34214b7c767c251e1f33fbc2603289752bfab07495dc75c1bb178976c79",
+      "repository": "https://github.com/bharat3645/GigX",
+      "commit": "b801e356ec9d7bb65119a2bc3ceb3b015190ab00",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "job--bharat3645-appxcess",
+      "domain": "freelance-escrow",
+      "domain_group": "escrow-conditional-payments",
+      "level": "moderate",
+      "md": "job--bharat3645-appxcess.md",
+      "md_sha256": "262a354445d2ff836845d6fc046a91c0ed5858cbabe337ae0e83d162938bdbbf",
+      "pair_sha256": "c61e11cf3e512fbcf88113c1dd3414ac2d9539a0f2c52fc0cb6d4f0def995b3e",
+      "repository": "https://github.com/bharat3645/AppXcess-GigX",
+      "commit": "f48dfe3dedd0a759c00305a69509ab9601f70bc1",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "jubilee-yield-stream--jubilee-protocol",
+      "domain": "payment-streaming",
+      "domain_group": "subscriptions-streaming",
+      "level": "complex",
+      "md": "jubilee-yield-stream--jubilee-protocol.md",
+      "md_sha256": "0ce1e0cd32d07ac2a4c19b6bb4d2eb476bd81f951626504ff15dc95f33c00fea",
+      "pair_sha256": "10100d50859934fc9fa13c4ecfdc43f5d4c02a702782e4e0112b790f60ab5cad",
+      "repository": "https://github.com/Jubilee-Protocol/jUSDi",
+      "commit": "3b6e32e6f6fe28d5238c2dd845e979a89a83474e",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "kipu-bank--mtds-alfa",
+      "domain": "treasury",
+      "domain_group": "multisig-treasury",
+      "level": "moderate",
+      "md": "kipu-bank--mtds-alfa.md",
+      "md_sha256": "630c8f177b89001d6724323af87e4d1fbcdf20e17be54d41c8f66b1d44a2ae10",
+      "pair_sha256": "e689df2ef1e84b215e3bfc13af4e499da9864ff82ec9fa9f749cf28f5d54ecf4",
+      "repository": "https://github.com/mtds-alfa/kipu-bank",
+      "commit": "c361b18ddafa513c1135b31e527ef9ab585009e0",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "kusdoracle--frosty720",
+      "domain": "oracle",
+      "domain_group": "price-oracles",
+      "level": "complex",
+      "md": "kusdoracle--frosty720.md",
+      "md_sha256": "25dcfa008875118e78f9e8aa912c681f7f448f3e0dfebd2eb6508b20551f6510",
+      "pair_sha256": "b9c82df389db56c2cc97d866629f3dd29dd239bb816814a2677a375f7920bcbc",
+      "repository": "https://github.com/frosty720/K_Oracles",
+      "commit": "ef83045ad9c52f2bdea56ab86aadb7f84337d27e",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "l1-gas-price-oracle--0xakileet",
+      "domain": "oracle",
+      "domain_group": "price-oracles",
+      "level": "complex",
+      "md": "l1-gas-price-oracle--0xakileet.md",
+      "md_sha256": "5eb69bddd0cd2934df7fc3e26b428eb5a6fc0bf04b6ca04e533f96ef95d24413",
+      "pair_sha256": "ceb9df51425db2e4cc04f73f754fd8b03464e2010431a581adf707744fba4c99",
+      "repository": "https://github.com/0xakileet/L1GasPriceOracle",
+      "commit": "80e69113a0517bd562cc3ee7b45eff517db6649c",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "land-registry--vaishnavadevi-r",
+      "domain": "registry",
+      "domain_group": "registries-identity",
+      "level": "complex",
+      "md": "land-registry--vaishnavadevi-r.md",
+      "md_sha256": "307fb1d4a3a82805408141b977c90e3e5038c1dc6314107428432397d0aff0c9",
+      "pair_sha256": "eab2d1f6769c37e30b09523e0b788b47f2dae1e91e45c1ef336adff0df5d6dc0",
+      "repository": "https://github.com/VaishnavaDevi-R/Blockchain-Land-Registry-Property-Ownership",
+      "commit": "a9ec58d1835cd51a16e176e32037b05c69c38913",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "esm-to-cjs"
+      ]
+    },
+    {
+      "id": "leash-manager--winsznx",
+      "domain": "rate-limiting",
+      "domain_group": "rate-limiting",
+      "level": "moderate",
+      "md": "leash-manager--winsznx.md",
+      "md_sha256": "85180b7faca2fbac6e65dbe1091bd939e9ec6e55e579ab8615bc946ddd4d554a",
+      "pair_sha256": "4e52f5f92fa8b738f2997afda4c8f96f33fbaffc3ab6cf5ca68f383c32794770",
+      "repository": "https://github.com/winsznx/float",
+      "commit": "ae8d6dba8b5f2920b787855cba7b5695c0349bf8",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "lending-pool--akasxh",
+      "domain": "lending",
+      "domain_group": "lending-collateral",
+      "level": "complex",
+      "md": "lending-pool--akasxh.md",
+      "md_sha256": "48ea2986bd73c9f79d4b7458cf5dcc75905b5eee831e49593027540b4406cf87",
+      "pair_sha256": "ff86d7b548ece1b10ba65c3cc25dbf6c9169db03d6ecefb7a49a18b2debf4b31",
+      "repository": "https://github.com/Akasxh/polkalend",
+      "commit": "63a9bab21dce964eadc6a07539add72f896439ec",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "liminal-staking-pool--mdantis-dev",
+      "domain": "staking",
+      "domain_group": "staking-yield",
+      "level": "moderate",
+      "md": "liminal-staking-pool--mdantis-dev.md",
+      "md_sha256": "2dcf2d5a43568ec7ae91cfef6e63f8ba1e88236ac33a939cf9d8d1fa6f2ad3a6",
+      "pair_sha256": "b630c9765779d200212258ad7e6fe1d16165f4f91ed04fcad18fcfdb7e74bdc0",
+      "repository": "https://github.com/mdantis-dev/SOLIDITY-Liminal-Games",
+      "commit": "09a7484ac7f92e054eedc087b2d03431968e435b",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "liquidity--overlayerfi",
+      "domain": "amm-dex",
+      "domain_group": "amm-dex",
+      "level": "complex",
+      "md": "liquidity--overlayerfi.md",
+      "md_sha256": "bcaf18afe100c8121e4e6289e6d0f7e506833008f3644484b84d8e02455252a6",
+      "pair_sha256": "dc9afca6cbd9328a9ecbc2877d7a8ac83e5ce813e88da1c4114f4f3d8ec569ea",
+      "repository": "https://github.com/Overlayerfi/contracts",
+      "commit": "25c11023aa6aa64857df6b945203ca39c732166a",
+      "license": "GPL-3.0",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "loan-manager--kris0721",
+      "domain": "lending",
+      "domain_group": "lending-collateral",
+      "level": "moderate",
+      "md": "loan-manager--kris0721.md",
+      "md_sha256": "f288c58225e894b43b15d9bfe209da41f6afda43251931059cd186032581c2ba",
+      "pair_sha256": "67a6d3cb69d8297515502bb6ee566a3142d439edc374615d72fc30d3ee075339",
+      "repository": "https://github.com/Kris0721/CDL",
+      "commit": "77d15efb60692f5d91ee7b54c7cdf7aeda2d5556",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "loan-registry--quantsingularity",
+      "domain": "lending",
+      "domain_group": "lending-collateral",
+      "level": "moderate",
+      "md": "loan-registry--quantsingularity.md",
+      "md_sha256": "2e27511c14ce0758c8b8685b3f7c0ffbe64f3334b11d0c82074a32ac31c917a4",
+      "pair_sha256": "2c807267d5e9d66255c7718ffc4cc0a58c941d4d3d9550d81b5b28a471dafc0d",
+      "repository": "https://github.com/QuantSingularity/LendSmart",
+      "commit": "48d6d263788b9aebeee5143da86db942f2867369",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "local-erc20-bridge--0xmdrakib",
+      "domain": "bridge",
+      "domain_group": "relayer-meta-transactions",
+      "level": "moderate",
+      "md": "local-erc20-bridge--0xmdrakib.md",
+      "md_sha256": "ca72329f038ba8622c528639e1ac230975bd948bcb37b4ccb66cb08d69d407ec",
+      "pair_sha256": "71db93ead48e6b8b1176f22ca8331ba304bda72ae49be59feb28d5161b69b3a8",
+      "repository": "https://github.com/0xmdrakib/XphereSwap",
+      "commit": "9653e46d61e0bc9263690ec754bfbf4a06ff7f8c",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "lock--akkii4",
+      "domain": "vesting-timelock",
+      "domain_group": "vesting-timelock",
+      "level": "simple",
+      "md": "lock--akkii4.md",
+      "md_sha256": "775da2f0102bb9582ea59d250a20ecd8c745027f66206fc3407ad9d20a3627d3",
+      "pair_sha256": "f72fb0a43e7590cf86df19676cc0565dcb4c1b536d4f29005978abf82dd28c00",
+      "repository": "https://github.com/Akkii4/Solidity_HardhatJS-Boilerplate",
+      "commit": "c2e46f6f9402f68d389f756f54f7a2fe0a4cada4",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "logger--brenkib",
+      "domain": "payments",
+      "domain_group": "escrow-conditional-payments",
+      "level": "simple",
+      "md": "logger--brenkib.md",
+      "md_sha256": "e0042365a60ff8dece98897ae48721fc796a0155be75aeb0deb96144f4796582",
+      "pair_sha256": "74658a0ad35b54e4a62abd235f0a346dc4f3b90c0ee9bcda453d808d74e000c9",
+      "repository": "https://github.com/brenkib/solidity-playground",
+      "commit": "95b096f8d99e114b263b94357d32347ec45d2c6f",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "lottery--colonelcaptain",
+      "domain": "lottery",
+      "domain_group": "games-lotteries",
+      "level": "simple",
+      "md": "lottery--colonelcaptain.md",
+      "md_sha256": "b20c4b2ba263c177182750cbbd93fd4b933c64e4f1e87052d241d72bb97c1783",
+      "pair_sha256": "cb4e0a52fd2229e61d17906de2abc77a87b79d37871b58bb8df37a0aeb35157b",
+      "repository": "https://github.com/ColonelCaptain/Lottery_Dapp",
+      "commit": "61a6b13e647fc1278bd5b51d499923006dbe5755",
+      "license": "Apache-2.0",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "lottery--pengnd",
+      "domain": "lottery",
+      "domain_group": "games-lotteries",
+      "level": "moderate",
+      "md": "lottery--pengnd.md",
+      "md_sha256": "720e22e678d92429479b3256b7f8c2af0d0d767fcbf91760e875b9308f09d28e",
+      "pair_sha256": "9090672293fe4d71336b59e72cafe643091bc2ae5fbb8f730942c83bce5a9976",
+      "repository": "https://github.com/Pengnd/on-chain-lottery",
+      "commit": "fc2375a1c603e3e64ce0df12a7a67c174c8eb33f",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "main--hlibbc",
+      "domain": "lottery-commit-reveal",
+      "domain_group": "games-lotteries",
+      "level": "moderate",
+      "md": "main--hlibbc.md",
+      "md_sha256": "c61110fa7baaa1411e97072c0f10bcb2477171957868b7ca70c8739b4251c15d",
+      "pair_sha256": "c07c9df81e1f82d9fc38b6d4a97675da7baf9ef3cf409b88e0b41187cc6a5a4b",
+      "repository": "https://github.com/hlibbc/solidity-practice",
+      "commit": "9f6fa3709e9815f52e8dbd86b87fbe412836bcfa",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "market-factory--aimondlabs",
+      "domain": "prediction-market",
+      "domain_group": "games-lotteries",
+      "level": "complex",
+      "md": "market-factory--aimondlabs.md",
+      "md_sha256": "208868d1c8cac82420b860b68d6e95160030db57e8cb3cb62b6a321aeb9c4d0b",
+      "pair_sha256": "9bbd5542f84ebedff4989cd960e51200d3a805518cfd0b7f5470db80244ed060",
+      "repository": "https://github.com/AimondLabs/nostra-contracts",
+      "commit": "75a1ed0b75610fae1a857fc78555e22e1e8db53e",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "market-nft--paul-abhirup",
+      "domain": "ticketing-marketplace",
+      "domain_group": "ticketing-events",
+      "level": "moderate",
+      "md": "market-nft--paul-abhirup.md",
+      "md_sha256": "bab9867163259ef75afbec3149aa27b978a17eaaa853077527272cd9361b26da",
+      "pair_sha256": "1370014496f27dfd9947cbcfb9af813a621a4aac7379039b7a1075055ebe43ff",
+      "repository": "https://github.com/paul-abhirup/Event-Ticketing-System",
+      "commit": "9c2072176d09b7bf10080b56b2a91ac35e404381",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "marketplace--ozgurkutlu0",
+      "domain": "nft-marketplace",
+      "domain_group": "nft-marketplace",
+      "level": "moderate",
+      "md": "marketplace--ozgurkutlu0.md",
+      "md_sha256": "0acdc8dffded47fd2e04c41eb58496e22f36e8d122ffe6f44b93ddf8d558a7b5",
+      "pair_sha256": "814bf3c2ec7c80411cedc561dbc0a6362e580bfbeac65874467a74a5ff688d05",
+      "repository": "https://github.com/ozgurkutlu0/nftforge",
+      "commit": "2c8f4cb1498a0c4e96d5dbb2de2fcfd7e839ffe7",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "marketplace--tejashree-likhar",
+      "domain": "marketplace",
+      "domain_group": "nft-marketplace",
+      "level": "moderate",
+      "md": "marketplace--tejashree-likhar.md",
+      "md_sha256": "de6ddfec76c7a9a4a095d1280a81457fdc5aa68a8dbfcecadbb36b588c7c2fa8",
+      "pair_sha256": "eb27c8658a472bdb6638e04e7f99b9b82752617976e4dfe135b5dfa1ba7edcce",
+      "repository": "https://github.com/Tejashree-Likhar/Decentralised-marketplace",
+      "commit": "e8f158588fc062ca86907a9ccb29fa799a1e6cec",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "meta-tales-nft--anubhavick",
+      "domain": "nft",
+      "domain_group": "nft-marketplace",
+      "level": "moderate",
+      "md": "meta-tales-nft--anubhavick.md",
+      "md_sha256": "1aff8e1a9e7c49a1ec3bcc4fb6be2b1184ccb2bf0e94a992dfeca0b076c76f64",
+      "pair_sha256": "028102a3afb5ae58142b0e07f2151a171f5fb9f34923d4ce7c3fa3c3439d1713",
+      "repository": "https://github.com/Anubhavick/Meta-Tales",
+      "commit": "5cc46b8f8cfb10388a624c599aaa8ade8087f8d2",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "mh-token--gzliudan",
+      "domain": "erc20-token",
+      "domain_group": "fungible-tokens",
+      "level": "simple",
+      "md": "mh-token--gzliudan.md",
+      "md_sha256": "7ad1d2d2c2ab57fd7ba75142988177719791bb038215aba027be0789f29a5c3f",
+      "pair_sha256": "034f0584253a130e3678347b318426174e3d684b61ae3e0f0c9b2c5e5f6a851f",
+      "repository": "https://github.com/gzliudan/hardhat-project",
+      "commit": "a711a80ad79e6fea8c3f500a973478866a014cef",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "micro-payment-channel--ypeng1620-beep",
+      "domain": "payments",
+      "domain_group": "escrow-conditional-payments",
+      "level": "moderate",
+      "md": "micro-payment-channel--ypeng1620-beep.md",
+      "md_sha256": "7a2e701db398dcd2524353e870962b576085be8558e44bcecc39a0c4f4ac0a41",
+      "pair_sha256": "3616948e27ccec6ac5f499b35dd6df2091ebe61573494e09d58770252e2570c9",
+      "repository": "https://github.com/ypeng1620-beep/EM-A2A",
+      "commit": "d342ddeec75bc110dae00e880f28c8d1768f7227",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "milestone-escrow--haseeb-1698",
+      "domain": "escrow",
+      "domain_group": "escrow-conditional-payments",
+      "level": "complex",
+      "md": "milestone-escrow--haseeb-1698.md",
+      "md_sha256": "0e02c59953508853e14852c6176bff4aa6a2c5d6db5c45dfc6983bb9b2c103a8",
+      "pair_sha256": "7df5a68cf675341a4b10c7b3b4cad3cb74929f1cf048e88f366e505479d026e4",
+      "repository": "https://github.com/Haseeb-1698/Defi-Freelance-Marketplace",
+      "commit": "2ce6124ca6ea8dea3010a8a3e5a890aed01eeff4",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "milestone-escrow--reny1cao",
+      "domain": "escrow-milestones",
+      "domain_group": "escrow-conditional-payments",
+      "level": "complex",
+      "md": "milestone-escrow--reny1cao.md",
+      "md_sha256": "23fdb8da0a314ba934af0a5287ee87cadd6cdcafbe16eb6869525ca840448e50",
+      "pair_sha256": "0f126e78a2c3610bcab490224bb4b286c31adb0bcaae44423fa1faa583f375fe",
+      "repository": "https://github.com/reny1cao/kite-milestone-escrow",
+      "commit": "7f5b251b4c2dc5b0dd1aa026c169058b22648c0c",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "mitigated-vault--harshanandhan",
+      "domain": "flash-loan",
+      "domain_group": "lending-collateral",
+      "level": "complex",
+      "md": "mitigated-vault--harshanandhan.md",
+      "md_sha256": "247718a09b330a5ea355ef7e10a59a39045d59965acc47c2bd40863dc8c11fdd",
+      "pair_sha256": "5386727464036049d093c9af3a8cc20d78dc06f453e70c05c0663963a37f6561",
+      "repository": "https://github.com/Harshanandhan/flash-loan-risk-lab",
+      "commit": "1f24ff345e3799614a11dcecbe7f8da20a74146c",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "modification-logic--bigceru",
+      "domain": "registry",
+      "domain_group": "registries-identity",
+      "level": "complex",
+      "md": "modification-logic--bigceru.md",
+      "md_sha256": "fcd6efa2f18eecb17bbb946551b04824214788b010447725180b66758398cb59",
+      "pair_sha256": "14ab35ca6a8db1b3ef534facea59faf9bcb6dc360177ebc8a537dcd7aa0a27a7",
+      "repository": "https://github.com/Bigceru/Blockchain-LandRegister",
+      "commit": "3d05345ef101524788f66e9de1af0becf28a69e8",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "mpforwarder--mugglepay",
+      "domain": "payment-forwarder",
+      "domain_group": "escrow-conditional-payments",
+      "level": "simple",
+      "md": "mpforwarder--mugglepay.md",
+      "md_sha256": "b58ae5d17f66ef8a4022e5df0824603923d80f9752533015415e4601c17c3d26",
+      "pair_sha256": "7f883bdcbf0a9f6bc3f69e3346d8fbe751fddf1cb7a4fafa026a653c63a614d3",
+      "repository": "https://github.com/MugglePay/mugglepayment-contract",
+      "commit": "1a5a864bda8acfdeaf2f0c3dda3055eed0bd2c6a",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "msmeidentity--aryan-chugh",
+      "domain": "identity-registry",
+      "domain_group": "registries-identity",
+      "level": "simple",
+      "md": "msmeidentity--aryan-chugh.md",
+      "md_sha256": "e108a2c51720b6e3f8b81284a5aae7c5eadc2d69863505be09a635ecb0fd9f34",
+      "pair_sha256": "83b76dda06a12bd1ee7af88c8ad4e639f8ebd020a867db87fe64ff9d486f18f0",
+      "repository": "https://github.com/aryan-chugh/MSME_Blockchain",
+      "commit": "074d7b2703476f0d0343f7e3961c1a253661b947",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "multi-sig--muhammadkorra",
+      "domain": "multisig-wallet",
+      "domain_group": "multisig-treasury",
+      "level": "moderate",
+      "md": "multi-sig--muhammadkorra.md",
+      "md_sha256": "70bfa6caed348337ed04ccb1bed6f7e92549bd3d2896a508fc984cf198ce4ce6",
+      "pair_sha256": "f3e855675484c59aa19b4e5c15fea7f27ae5c67a37dc779bbc7a49a12b531e01",
+      "repository": "https://github.com/muhammadkorra/multisig-wallet-eth",
+      "commit": "5f6118011febde4a0457480f72071020023d02af",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "multi-sig-vault--dualnova",
+      "domain": "multisig-wallet",
+      "domain_group": "multisig-treasury",
+      "level": "moderate",
+      "md": "multi-sig-vault--dualnova.md",
+      "md_sha256": "1d95741296689638bfb6f476b913e5574c4a15ace42b67a7e02c3b969dd17b88",
+      "pair_sha256": "2cb36ee8c5ac1bd43698e08fdaf2559326d30fdb073089f48bfe5cffd3af5687",
+      "repository": "https://github.com/DualNova/tokenization-templates",
+      "commit": "fd6f5a9e0cea42b6a2f709d035cef5cde9328820",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "multi-sig-wallet--mahdizarrei",
+      "domain": "multisig-wallet",
+      "domain_group": "multisig-treasury",
+      "level": "complex",
+      "md": "multi-sig-wallet--mahdizarrei.md",
+      "md_sha256": "e33528f6021fe7b0b8539007f54b45dea444d984ed6d4cf895b8eba26c540f04",
+      "pair_sha256": "9f502b5a4f08f8fb9dc2e57deeeaa2335459e4c5c901bd2f161ecbd8409b7768",
+      "repository": "https://github.com/mahdiZarrei/MultiSigWallet",
+      "commit": "d2f25e76fe1029efd3d7a6d783d39436bb7f6dde",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "multi-sig-wallet-factory--donguillotine",
+      "domain": "multisig",
+      "domain_group": "multisig-treasury",
+      "level": "moderate",
+      "md": "multi-sig-wallet-factory--donguillotine.md",
+      "md_sha256": "35cd4cc7d798fae5812f7bf2724493ffca345d65cb3b5333e52708021f23a8c1",
+      "pair_sha256": "54dad36ea815980b5930a4a4d81612f6c5726f23887359b61023610db1e221b4",
+      "repository": "https://github.com/DonGuillotine/multisig-contract",
+      "commit": "8f0788a4c229931fbd3677aed5c1e2c730790263",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "multisig-controller--ibetekhtin",
+      "domain": "multisig-wallet",
+      "domain_group": "multisig-treasury",
+      "level": "moderate",
+      "md": "multisig-controller--ibetekhtin.md",
+      "md_sha256": "2e0b8a0de390f26d20d3ac5ccd2978541dcbe6ba17683b51c379f78dd5e9f994",
+      "pair_sha256": "f59fc750bcb6af9633509337f515be67fb6882688838e99f59ea22847dcd10ef",
+      "repository": "https://github.com/ibetekhtin/bitesha-foundation",
+      "commit": "bb11fc24c4a32fb95c4e41238ec4dec7ac58196e",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "my-forwarder--hlibbc",
+      "domain": "meta-transactions",
+      "domain_group": "relayer-meta-transactions",
+      "level": "moderate",
+      "md": "my-forwarder--hlibbc.md",
+      "md_sha256": "614c5743344f205a60fabd84956fba833893fc4b0dd625236d510917ed2a44e7",
+      "pair_sha256": "fa80c1f8fc5fb01a03575df163ad376ede18882726dd8262b5937ce96a4d68e7",
+      "repository": "https://github.com/hlibbc/solidity-practice",
+      "commit": "9f6fa3709e9815f52e8dbd86b87fbe412836bcfa",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "my-nft--nikhil0716",
+      "domain": "nft",
+      "domain_group": "nft-marketplace",
+      "level": "simple",
+      "md": "my-nft--nikhil0716.md",
+      "md_sha256": "5d799dfebabff3818b46cf6db966103414c0557de361d8aa549c09f45b82c729",
+      "pair_sha256": "870ce8620dc4186e0a93a1fc384d89eccb17ae6a8404aa183dc95cbe28bef36b",
+      "repository": "https://github.com/nikhil0716/fullstack-blockchain-dapps",
+      "commit": "071e9da35778d954469a1c240a2988e4fcf0f9ae",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "my-token--profadam",
+      "domain": "erc20-token",
+      "domain_group": "fungible-tokens",
+      "level": "moderate",
+      "md": "my-token--profadam.md",
+      "md_sha256": "5a4df46b42489ce03ad6a621fd06c2e95b4c1530521d22a58a3f31be5d28a676",
+      "pair_sha256": "02cfd420a8e582cee035ea3559cc96e89e2bd495d876b3e0d6bc691df1877610",
+      "repository": "https://github.com/PROFADAM/defi-token",
+      "commit": "40cb9bd9c3c893ae178af63afae0ca1b9289337f",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "my-token--stephen-dev92",
+      "domain": "erc20-token",
+      "domain_group": "fungible-tokens",
+      "level": "simple",
+      "md": "my-token--stephen-dev92.md",
+      "md_sha256": "dd173c1d38747be2da8cdde44ed719f4efdec1c983e562ce3adbc0e4a940b558",
+      "pair_sha256": "09aed4927b730a1eb600cc971d87588f168fd05c5965ab5122ca0c33753f5387",
+      "repository": "https://github.com/stephen-dev92/solidity-fundamentals",
+      "commit": "ee3cdd0b1fc22143bb38e4902ad8267fc6684ddd",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "nftasset-token--mickap1",
+      "domain": "nft-kyc",
+      "domain_group": "nft-marketplace",
+      "level": "complex",
+      "md": "nftasset-token--mickap1.md",
+      "md_sha256": "793ae9bdf69c043828bce794b8a96e4aec93c730239b901356a2b05922f43220",
+      "pair_sha256": "ee9ca59f6310fe161f67bebfda02ed5f1020b6f5767cf839aefc879f21dd70ab",
+      "repository": "https://github.com/Mickap1/G9---Blockchain",
+      "commit": "fc4e0dba2c0113373a01ca8c42f9c8ae3b3a74a3",
+      "license": "LGPL-3.0",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "nftforge--ozgurkutlu0",
+      "domain": "nft",
+      "domain_group": "nft-marketplace",
+      "level": "simple",
+      "md": "nftforge--ozgurkutlu0.md",
+      "md_sha256": "2e84596d7806ea866c1728c0f03909675760f70283cc2a61f71381c92e25c9c1",
+      "pair_sha256": "074403d03f770341e4371fcdbc5fe613709179e096e5e0e7961390a97bda4eb0",
+      "repository": "https://github.com/ozgurkutlu0/nftforge",
+      "commit": "2c8f4cb1498a0c4e96d5dbb2de2fcfd7e839ffe7",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "nfticket--sowadalmughni",
+      "domain": "ticketing",
+      "domain_group": "ticketing-events",
+      "level": "complex",
+      "md": "nfticket--sowadalmughni.md",
+      "md_sha256": "78cacaee70310c376cb67d86830c315ca1bf85b2d99f89f8bd7c9e4ee33c3f16",
+      "pair_sha256": "dd18c48a4d083597d217cbe5df98de3a947b15a9435b2b42be2b60c8c8394057",
+      "repository": "https://github.com/sowadalmughni/nfticket-protocol",
+      "commit": "1ef8a792d6c00d0838c1677ee43bb1a26529d97f",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "nftmarketplace--donguillotine",
+      "domain": "nft-marketplace",
+      "domain_group": "nft-marketplace",
+      "level": "moderate",
+      "md": "nftmarketplace--donguillotine.md",
+      "md_sha256": "863c7ebdd411707b1aba5c9fdcb7b98e90b6c2898ef5f78a988a3e5a098cecd4",
+      "pair_sha256": "6ee959bea4d8ed34b17ae74e3e5dece7aff537e4c5d81d6d470d459a04fd072d",
+      "repository": "https://github.com/DonGuillotine/nft_marketplace_contract",
+      "commit": "59bce47fc2a9a8191e170ee9e9161894a2d631cd",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "nouns-fragment-token--thenobledev",
+      "domain": "nft",
+      "domain_group": "nft-marketplace",
+      "level": "complex",
+      "md": "nouns-fragment-token--thenobledev.md",
+      "md_sha256": "cb74a6f98df12164ea703abe7e07fd2707716a0368982e69dd7af7c36c45f609",
+      "pair_sha256": "61ddb45f024184e3efd0dfc4a2a34c4d94a28970324262f585f841ab558fdf0e",
+      "repository": "https://github.com/TheNobleDev/fractional-nouns",
+      "commit": "2c1acb9608484d286c5005fb187090dd84acac65",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path",
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "nouns-fungible-token--thenobledev",
+      "domain": "erc20-token",
+      "domain_group": "fungible-tokens",
+      "level": "simple",
+      "md": "nouns-fungible-token--thenobledev.md",
+      "md_sha256": "ef23f1cbf9e9fdea5af00843688f9b3687dedb6a90635c7b3931eb8bd4f0f1b0",
+      "pair_sha256": "32df863359411b53a1631e48f6d678fa9b1f5fcc07a367d31261880cae7debca",
+      "repository": "https://github.com/TheNobleDev/fractional-nouns",
+      "commit": "2c1acb9608484d286c5005fb187090dd84acac65",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "oma3-app-metadata--oma3dao",
+      "domain": "registry",
+      "domain_group": "registries-identity",
+      "level": "moderate",
+      "md": "oma3-app-metadata--oma3dao.md",
+      "md_sha256": "fc9f0fdbd9659ddaf121cac15cc4f92feca0ab851a133a7a232b05dad2cab20d",
+      "pair_sha256": "f8056eecab09881fe35bdf0133a25f30f2ddd9208ac8a90bb80259286cfdee60",
+      "repository": "https://github.com/oma3dao/app-registry-evm-solidity",
+      "commit": "6ee78de059563119c2d3fa9a397e8af308f0834e",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "open-source-project-funding--mustan-ali",
+      "domain": "crowdfunding",
+      "domain_group": "crowdfunding",
+      "level": "moderate",
+      "md": "open-source-project-funding--mustan-ali.md",
+      "md_sha256": "344e984db42f98c8afad8f26849239af0d7f49809e78a175c6f7d91202e29c98",
+      "pair_sha256": "6beb387a6153ad641f289ed771dcd30996b2f0ad6bcb3461992671f82b987ac2",
+      "repository": "https://github.com/mustan-ali/OpenSourceProjectFunding",
+      "commit": "bdd2e9e090be782f5c9e17c346581bcec3d234cb",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "operations--lukasz-glen",
+      "domain": "storage-library",
+      "domain_group": "fungible-tokens",
+      "level": "simple",
+      "md": "operations--lukasz-glen.md",
+      "md_sha256": "f077a0666a5c1b2b47629972a8453014c642d5f9673804fc5ee05aa396a4f9dd",
+      "pair_sha256": "56308ffb15eb442d68336a85a49b504fefc45c48a975c8437a775df21fd2df05",
+      "repository": "https://github.com/lukasz-glen/hashless-tokens",
+      "commit": "18a5ae1a65f6ec2b27b4b1349f4b93f8b5905538",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "optimistic-oracle--escottalexander",
+      "domain": "oracle",
+      "domain_group": "price-oracles",
+      "level": "complex",
+      "md": "optimistic-oracle--escottalexander.md",
+      "md_sha256": "69c0c0fed5e5ba9219b3557fd9ed8cb383c23b22ba6f0fe7abf01362f43132aa",
+      "pair_sha256": "6abcd8bb9b45649b58116d6d3359145f77b7edb003060f9a8b18b5cde97ed5df",
+      "repository": "https://github.com/escottalexander/oracle-challenge",
+      "commit": "62acb5c13ec3e777a79a767b0893cf5f9edf81b8",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "oracle--darli-protocol",
+      "domain": "price-oracle",
+      "domain_group": "price-oracles",
+      "level": "moderate",
+      "md": "oracle--darli-protocol.md",
+      "md_sha256": "6c0c8893820c22b9d83cecebc83f8ff309a0fa46a9eb7127a3b84fbe8778699b",
+      "pair_sha256": "b86889a2311c693ed1bc8e5190a89ea31a9ffa4d124906fa88b7117ada1357ea",
+      "repository": "https://github.com/darli-protocol/oracle-v1",
+      "commit": "a735b16c040561e94d8b56db905b51427fdf88ac",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "oracle-manager--aaravg42",
+      "domain": "oracle",
+      "domain_group": "price-oracles",
+      "level": "moderate",
+      "md": "oracle-manager--aaravg42.md",
+      "md_sha256": "2b777f52701ad394823ec1e7e5376cdf845a8ea2039072bbd23bdd5106edcbfd",
+      "pair_sha256": "151497303206e40ecf93254ca81042e16231854e8fd150d69e73153f7804f41d",
+      "repository": "https://github.com/AaravG42/blanc-protocol",
+      "commit": "e4b22af7c73bc86390f90ad479fffc992d7605c8",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "orion-token--girishktas",
+      "domain": "erc20-token",
+      "domain_group": "fungible-tokens",
+      "level": "simple",
+      "md": "orion-token--girishktas.md",
+      "md_sha256": "de499f86774034a18cd7eccf2a51c6cf75db7d5a44554cd6d7a0324cd145f94b",
+      "pair_sha256": "27bf80f78e43ec397a52194e1ee62ec4d0f775528a1dae442def68275b174eec",
+      "repository": "https://github.com/Girishktas/OrionDAO",
+      "commit": "c5bd134c8311981e4372083e368cf16160e3a3ce",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "p2-pescrow--rjaysolamo",
+      "domain": "escrow",
+      "domain_group": "escrow-conditional-payments",
+      "level": "moderate",
+      "md": "p2-pescrow--rjaysolamo.md",
+      "md_sha256": "96431791fc5045142d3a214b86f04b3d745b1342b3701337045b24c7128646a8",
+      "pair_sha256": "bef3223204ecf551a45d8f5fcd2cb08713faa5f973c3f703685a46c33bb2e911",
+      "repository": "https://github.com/rjaysolamo/airchainpay",
+      "commit": "70390b2aa9c00b067f68477c1aea12435032fe2b",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "partial-refund--dhruv-varshney-developer",
+      "domain": "token-sale",
+      "domain_group": "fungible-tokens",
+      "level": "simple",
+      "md": "partial-refund--dhruv-varshney-developer.md",
+      "md_sha256": "ff331ef6c64ec6edc5cce62a2f5e8910e78635619323be44f27afe75f8bd3bf4",
+      "pair_sha256": "c42b1c1bac11cac4a0c634afa363baf357491429c4c7ffbb24fe34483a70582a",
+      "repository": "https://github.com/Dhruv-Varshney-developer/DeeVeeToken",
+      "commit": "c738a5a0974862eacfb38e460ce1ddb6b44b24c0",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "payment-escrow--center-for-ai-services-computing",
+      "domain": "escrow",
+      "domain_group": "escrow-conditional-payments",
+      "level": "moderate",
+      "md": "payment-escrow--center-for-ai-services-computing.md",
+      "md_sha256": "cf12512f5057ae88dadea147d2eeee23457617ea8af8b60b3009eb7ce3463467",
+      "pair_sha256": "5bd61841a2d3d0fe42fd89015b0415a8c2a5f6194eeab5d302b76cd107ff6a14",
+      "repository": "https://github.com/Center-for-AI-Services-Computing/ORACLE",
+      "commit": "537d52f9a6838b9f412e322ae1f2558b80ff920b",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "pledge-vault--winsznx",
+      "domain": "yield-vault",
+      "domain_group": "staking-yield",
+      "level": "moderate",
+      "md": "pledge-vault--winsznx.md",
+      "md_sha256": "06e746e3b9afb1397b9417f6893b86bf0a062826a568a93baefb8a892403464c",
+      "pair_sha256": "7168713d63d7a8128094ff955e2bfde249fc0c012484ae74728c00c1827bd431",
+      "repository": "https://github.com/winsznx/float",
+      "commit": "ae8d6dba8b5f2920b787855cba7b5695c0349bf8",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "poly-mirror-channel--marcellomaugeri",
+      "domain": "conditional-payments",
+      "domain_group": "escrow-conditional-payments",
+      "level": "moderate",
+      "md": "poly-mirror-channel--marcellomaugeri.md",
+      "md_sha256": "ffff8ee8d691c57a6471cc023dd00fac5c3e85fe869879b44d907fefb2b3eac5",
+      "pair_sha256": "d5c8b2ee69fdcdb3c505f8d2fc5366477ed1f0ba4e104a8600370ad8f037b811",
+      "repository": "https://github.com/marcellomaugeri/PolyMirror.AI",
+      "commit": "41dbe2045a1ec69fa7afb33909f70589203b4a7e",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "pong-tournament--mc-putchar",
+      "domain": "on-chain-game",
+      "domain_group": "games-lotteries",
+      "level": "moderate",
+      "md": "pong-tournament--mc-putchar.md",
+      "md_sha256": "53d49937177d29a29ee33beca9b96b410dde9d75631b8ee6317600a5d4856af5",
+      "pair_sha256": "eefae3950ed221e541d22dafba23c6aa728f63d455b6f135689929a33d679f64",
+      "repository": "https://github.com/mc-putchar/ft_transcendence",
+      "commit": "9751f5afae4cfd3daf9771ea3d758d4f9b2d3593",
+      "license": "Unlicense",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "product-passport--ahmed1av",
+      "domain": "supply-chain",
+      "domain_group": "supply-chain",
+      "level": "moderate",
+      "md": "product-passport--ahmed1av.md",
+      "md_sha256": "f61fa1d3e57b34da5a8b0f9958e1444611ad4119be4c4fd427f24032ebb0985a",
+      "pair_sha256": "0ced0b33c0653bc7fabf20877c184265327f5c5e0e8aecbadcf1d31e5781e63c",
+      "repository": "https://github.com/ahmed1av/Bucchain",
+      "commit": "385496dc51c320287e7119bd9d4f88b43920f2ae",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "profile-manager--bigceru",
+      "domain": "registry",
+      "domain_group": "registries-identity",
+      "level": "complex",
+      "md": "profile-manager--bigceru.md",
+      "md_sha256": "e572645460045411cf9dbdf07ef90a77155bd014d02e5e3d57b7433ffea8797e",
+      "pair_sha256": "43343cbc82c759bf5f462304839e72fbc3583b4f5826ba99aadf40530c1b4fab",
+      "repository": "https://github.com/Bigceru/Blockchain-LandRegister",
+      "commit": "3d05345ef101524788f66e9de1af0becf28a69e8",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "rbac--sharfshiplo",
+      "domain": "access-control",
+      "domain_group": "access-control",
+      "level": "complex",
+      "md": "rbac--sharfshiplo.md",
+      "md_sha256": "973aa1bbc9180621c224bb330ca490c8e09cec3aae41ae07d33d3d4285abcc57",
+      "pair_sha256": "6a19c1530abe9ff805e2aaf5f78491c1a6a38cc8d88d361f2adb8b15faddb249",
+      "repository": "https://github.com/SharfShiplo/solidity-advanced-kit",
+      "commit": "aaf5aef121634780d1140d447cff5ca4f4b41d21",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "real-estate-chain-marketplace--sergio11",
+      "domain": "nft-marketplace",
+      "domain_group": "nft-marketplace",
+      "level": "moderate",
+      "md": "real-estate-chain-marketplace--sergio11.md",
+      "md_sha256": "838a2f488a3dd0b2c3a048509a35bd06e131248c74a11bb1d12c27dd6defbb28",
+      "pair_sha256": "7f833a9fcc173088c952ec691268fa94731ee6b0f195267a44c77ea41cadc143",
+      "repository": "https://github.com/sergio11/realestatechain_blockchain",
+      "commit": "765e01cd88ae35c6f205022fb902f30261236fbd",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "real-estate-transaction--dhruvk0",
+      "domain": "escrow",
+      "domain_group": "escrow-conditional-payments",
+      "level": "moderate",
+      "md": "real-estate-transaction--dhruvk0.md",
+      "md_sha256": "d4d56e4c4351aa09853c213980c0434734f51f4f976796b4730b21a102659f29",
+      "pair_sha256": "c5a4f07f973ca7df6b4854180280e40314fcba715119fafa6088398da6fca537",
+      "repository": "https://github.com/DhruvK0/B17-Blockchain-Capstone",
+      "commit": "8d24b57a7a6476f2e4592266b56239b110d27150",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "receipt-registry--calderbuild",
+      "domain": "registry",
+      "domain_group": "registries-identity",
+      "level": "simple",
+      "md": "receipt-registry--calderbuild.md",
+      "md_sha256": "81a2549da6b7f8bb07dd6ce785e5f6f35ab12c070f3e324cf1bc9f303585b190",
+      "pair_sha256": "3cdcb376f7605577a87e6748ffe0393c04b2a5fc8a82cdce12748c35060daf17",
+      "repository": "https://github.com/calderbuild/SafeReceipt",
+      "commit": "ae78bdae89f72b9ac68370136269774d36bb7b7a",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "recurring-scheduler--kravadk",
+      "domain": "subscription",
+      "domain_group": "subscriptions-streaming",
+      "level": "moderate",
+      "md": "recurring-scheduler--kravadk.md",
+      "md_sha256": "c8b7e99c7316d9eaf004485b7f1ec1b21f92afcd342c7d6befde4a5db83fef88",
+      "pair_sha256": "af0fe6ef25f57eb2f6e3e285bdd4ed87a1c1c4516d874cb4617ce79da8843346",
+      "repository": "https://github.com/kravadk/Qantara",
+      "commit": "3e439d620ed7726c06761e44b404d8bab5023770",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "regen-nft--sodofi",
+      "domain": "nft",
+      "domain_group": "nft-marketplace",
+      "level": "moderate",
+      "md": "regen-nft--sodofi.md",
+      "md_sha256": "a5813090032e7347f96d3c3e80e6ad43260fa8af615bce5ec6db0b131e91e5bc",
+      "pair_sha256": "1828087539ba571d530d5e08a63487461d16c7ca835b15eccb495a4d65881478",
+      "repository": "https://github.com/sodofi/celo-nft-mcp",
+      "commit": "4612a7374095cdf50b20787c82f7b7b517db8052",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "reit-token--laprop",
+      "domain": "meta-transactions",
+      "domain_group": "relayer-meta-transactions",
+      "level": "complex",
+      "md": "reit-token--laprop.md",
+      "md_sha256": "dad4fcc5484a01eed48975ebd47fbd0f00edef3fc3ef372f74ab2832a7e8cbf8",
+      "pair_sha256": "648fbfc5adc2a51af83f691e91095c95d039e8689a3a767fddf6dce748c19c05",
+      "repository": "https://github.com/LaProp/contracts",
+      "commit": "0aaf375151ace3569b42994142cad8de692ad324",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "reputation--bharat3645",
+      "domain": "freelance-reputation",
+      "domain_group": "escrow-conditional-payments",
+      "level": "simple",
+      "md": "reputation--bharat3645.md",
+      "md_sha256": "1449076db6028b47aa6eb4157505a9ae19411ca382564d51680e1efcd1aad2c7",
+      "pair_sha256": "9ce9691c69fca486a0dffc6111e7c2d407a35b579cf39572f7a8140ec6095982",
+      "repository": "https://github.com/bharat3645/GigX",
+      "commit": "b801e356ec9d7bb65119a2bc3ceb3b015190ab00",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "resolution-oracle--aimondlabs",
+      "domain": "oracle",
+      "domain_group": "price-oracles",
+      "level": "complex",
+      "md": "resolution-oracle--aimondlabs.md",
+      "md_sha256": "815024de83b08857ce5b0a83a2caeca16b5380c81dcd410ed0721cba3a57781c",
+      "pair_sha256": "db6e51b00295bd4ec8909ad4fc4305435bb72fe1e07ef8f20fcef5c18fa48249",
+      "repository": "https://github.com/AimondLabs/nostra-contracts",
+      "commit": "75a1ed0b75610fae1a857fc78555e22e1e8db53e",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "rng--hlibbc",
+      "domain": "commit-reveal",
+      "domain_group": "games-lotteries",
+      "level": "moderate",
+      "md": "rng--hlibbc.md",
+      "md_sha256": "9b37a62adfd25f919dd376125fb03efebb6ce096fcd289f61638f85a02611db1",
+      "pair_sha256": "a8d8801c189d96836a9d7424d3d2d7f347b0b8a3da75985b7938ec7bb6e573e7",
+      "repository": "https://github.com/hlibbc/solidity-practice",
+      "commit": "9f6fa3709e9815f52e8dbd86b87fbe412836bcfa",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "rolling-pot-game--romankytseniuk",
+      "domain": "lottery",
+      "domain_group": "games-lotteries",
+      "level": "complex",
+      "md": "rolling-pot-game--romankytseniuk.md",
+      "md_sha256": "8ec36c6adbd08e01ed68bc33527e197a4560e0e8988bc0b55c093ce5dd9a9a99",
+      "pair_sha256": "21381ffc7eb1795fabb1d5d235a26881710ff3131933c4399a7e0d4b963f6a20",
+      "repository": "https://github.com/RomanKytseniuk/rolling-pot",
+      "commit": "8f6a0ec201deb3a6b8a5b312bece6c7875549a9c",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "sale-vesting--bonabuild",
+      "domain": "vesting",
+      "domain_group": "vesting-timelock",
+      "level": "complex",
+      "md": "sale-vesting--bonabuild.md",
+      "md_sha256": "f84a44491b6828fcbf93f35ddee548f2180a4cdf46c440e868936baee4eacfe3",
+      "pair_sha256": "85e8f1df58f96517dfe452b4be1167c702555fa0f1ee538aefa7a1df8eb3bb89",
+      "repository": "https://github.com/bonabuild/bona-contracts",
+      "commit": "9da35f2070c65c837944bb5210bb31cd500f6b45",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "sbtchain--sergio11",
+      "domain": "soulbound-nft",
+      "domain_group": "nft-marketplace",
+      "level": "moderate",
+      "md": "sbtchain--sergio11.md",
+      "md_sha256": "eb3e2a8ce92884022f0f1ee103e948eb06d52244587b58426b317305bdc0fbf6",
+      "pair_sha256": "763de2e318e84a7aeaee77670bea479c06bb9b933e57c44a3b5d3b90858dfa3e",
+      "repository": "https://github.com/sergio11/sbtchain_blockchain",
+      "commit": "c54fa5bb11a841e9bf18c6c7051f15d8cf75156f",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "sealed-bid-auction--khaledolemy",
+      "domain": "auction",
+      "domain_group": "auctions",
+      "level": "complex",
+      "md": "sealed-bid-auction--khaledolemy.md",
+      "md_sha256": "369381930f721412298d52d2162d6ff9595ff713a7e136d2b8597de52384e327",
+      "pair_sha256": "7584c18c0762043184613ae45ac587f06afaf408b2d9c8864681dfce95e07bc8",
+      "repository": "https://github.com/KhaledOlemy/sealed-bid-auction",
+      "commit": "57f8bf6bff583282cfefc7db43ebd0d125fdce18",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "secure-vault--abhishekabhang314",
+      "domain": "yield-vault",
+      "domain_group": "staking-yield",
+      "level": "moderate",
+      "md": "secure-vault--abhishekabhang314.md",
+      "md_sha256": "55b7e3abab51fbd01c3046868eb2209860aae3fb6a8c3600ba809c08216f3650",
+      "pair_sha256": "c30d8ad3b2cd99ed305ff6e17c87db14ac5666fd3899a88bd4e01ab5b2f0f20b",
+      "repository": "https://github.com/abhishekabhang314/reentrancy-lab",
+      "commit": "8729113155ff4ee6382ee21a29d303f74dd1f1fd",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "settlement-escrow--willdaly",
+      "domain": "escrow",
+      "domain_group": "escrow-conditional-payments",
+      "level": "complex",
+      "md": "settlement-escrow--willdaly.md",
+      "md_sha256": "0ff88f15b56c28756e7eb4d0e499199e452b6b0bfb68f16d54201eac6fda70c9",
+      "pair_sha256": "60beb49a8dc39d752cfd511cb303ae0c6155209425b959b4b89995eca0d4307d",
+      "repository": "https://github.com/willdaly/agentpay",
+      "commit": "6fa8efac36c616b657328ae5ac614aad8e52e411",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "silent-token--silenttransfer",
+      "domain": "erc20-token",
+      "domain_group": "fungible-tokens",
+      "level": "simple",
+      "md": "silent-token--silenttransfer.md",
+      "md_sha256": "6f8a91dfa97f128ed537a8c5ccbe07910f715bbac202bf5bd7a08abe4fe9c67f",
+      "pair_sha256": "fe0ab26ccccbd406a446f3dcb6987806351b78c41d133a7a8ac909b4b24bfdf5",
+      "repository": "https://github.com/SilentTransfer/silenttransfer",
+      "commit": "ba05f19fa41d85d37b65bd32877a2b9c297d55ab",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "simple-dex--lngdao",
+      "domain": "amm-dex",
+      "domain_group": "amm-dex",
+      "level": "moderate",
+      "md": "simple-dex--lngdao.md",
+      "md_sha256": "7d8b7f02108470d6eb2f6d6a631197325afd1b384f302d40a3d0bfc8beb32aee",
+      "pair_sha256": "afcf8d365f4b49e5a832ee8fabadada24dcc5b96969b8b02d1c9459e23a7cc9e",
+      "repository": "https://github.com/lngdao/agent-hire",
+      "commit": "c9cf6702d064a75a1e58ac5294faf8223836d7c4",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "simple-oracle--escottalexander",
+      "domain": "oracle",
+      "domain_group": "price-oracles",
+      "level": "simple",
+      "md": "simple-oracle--escottalexander.md",
+      "md_sha256": "2b92148883be7b8cc1e1d31ce4e881e9d22d2110a7c833898fceb7793a40573f",
+      "pair_sha256": "f3b67c6549dd2435a93e237d80ce3d88f2745da810ed0eef20945667fa4b9025",
+      "repository": "https://github.com/escottalexander/oracle-challenge",
+      "commit": "62acb5c13ec3e777a79a767b0893cf5f9edf81b8",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "simple-swap--leokgx",
+      "domain": "amm-dex",
+      "domain_group": "amm-dex",
+      "level": "complex",
+      "md": "simple-swap--leokgx.md",
+      "md_sha256": "160236cdc88611aef99f9bf4d88c39786ba7b5dbecdd01ebc6ad55b3d901ed11",
+      "pair_sha256": "7547641edc72c3e1d1cc783206c3b52fd2a26a3fc63e3690d6c3d2faf1adbff1",
+      "repository": "https://github.com/LeoKGX/SimpleSwapFrontend",
+      "commit": "48c66aac2b3583ce9bf45c4ed14a70b372652006",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "simple-swap--monandbri",
+      "domain": "amm-dex",
+      "domain_group": "amm-dex",
+      "level": "complex",
+      "md": "simple-swap--monandbri.md",
+      "md_sha256": "09bdda6e0a695c4664606ba1f2d698206255541a65f49a104db50eccdcf2d1b8",
+      "pair_sha256": "4521eb299a63c938ff0789b838b75307c42a851fbe978e294317cb822d34841f",
+      "repository": "https://github.com/MonAndBri/Modulo4_ETH_Kipu_SimpleSwap",
+      "commit": "cf5cf040daef809a59a3bc57d609abf9a485aa9e",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "simple-token--gitwalter",
+      "domain": "erc20-token",
+      "domain_group": "fungible-tokens",
+      "level": "simple",
+      "md": "simple-token--gitwalter.md",
+      "md_sha256": "ea6c9dbacd0ea3b94f909923772e20b5dc97d8aefd651de57cbc1e5c910ef6c3",
+      "pair_sha256": "6ce0db10c14dd3851761aee4e4a4a16b3a096c186bccc103f011b57713c5c4ac",
+      "repository": "https://github.com/gitwalter/ethereum-workshop",
+      "commit": "dc0a63a3c9ef7389ab254df4fd853479553da8e6",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "single-stable-stake--overlayerfi",
+      "domain": "stablecoin",
+      "domain_group": "fungible-tokens",
+      "level": "complex",
+      "md": "single-stable-stake--overlayerfi.md",
+      "md_sha256": "c152de055007d1c912b48e263dd4db2e6b3c5ae8b12e53c184c5ada65584ddc7",
+      "pair_sha256": "1ceb756305e705ccb4336631da75ccb4f128523a1f89e926be64906d33a3fbb4",
+      "repository": "https://github.com/Overlayerfi/contracts",
+      "commit": "25c11023aa6aa64857df6b945203ca39c732166a",
+      "license": "GPL-3.0",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "smart-chit--jadav-divyaraj",
+      "domain": "auction",
+      "domain_group": "auctions",
+      "level": "moderate",
+      "md": "smart-chit--jadav-divyaraj.md",
+      "md_sha256": "e7508b3c43091750ab78b720b2aba3f64e61eaa5fb5285a5950efd7af2c276de",
+      "pair_sha256": "e289e3290062b3533c0564dff6b53a2f1077ed523080e0fdcc2e03bf7383ceac",
+      "repository": "https://github.com/Jadav-Divyaraj/Chit-fund-Blockchain",
+      "commit": "07d246b198b28c3f089e4b7d9265d1e0c6dbe229",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "soulbound-certificate--asp-31",
+      "domain": "soulbound-certificate",
+      "domain_group": "nft-marketplace",
+      "level": "moderate",
+      "md": "soulbound-certificate--asp-31.md",
+      "md_sha256": "0ac4825f12ab1f3dd283257bf40dac973f537681acc01474ac5511acbb036215",
+      "pair_sha256": "5fced383dfca9bfa22bf8f52381efb5f5d4c396438c635328173411a510ed7ea",
+      "repository": "https://github.com/ASP-31/Soulbound",
+      "commit": "01fcb14fd42fc12408f4da0f8af4f47cbe616111",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "stablecoin--kcolbchain",
+      "domain": "stablecoin",
+      "domain_group": "fungible-tokens",
+      "level": "complex",
+      "md": "stablecoin--kcolbchain.md",
+      "md_sha256": "5dc6de56f42c561b16cfd3531bb5453be35b888c84525401ad47bf3ae4c5734d",
+      "pair_sha256": "e8dda47e2cf28d3511f9a29461b486a53a3cc1d3c06969e2dfb2637e442475d0",
+      "repository": "https://github.com/kcolbchain/stablecoin-toolkit",
+      "commit": "2753ad360f14935d1485060a3006a4b6cc3129ce",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "staker--karacurt",
+      "domain": "staking",
+      "domain_group": "staking-yield",
+      "level": "complex",
+      "md": "staker--karacurt.md",
+      "md_sha256": "26aa80b139f13d4d2baa5aa9bd42bbdb7cddcf76a94440af83c1c181b5f2c241",
+      "pair_sha256": "f0d383bf4f003f89175ea16c2d20d2b48d49789f45f7f1ea410aae67706cea71",
+      "repository": "https://github.com/karacurt/protocol",
+      "commit": "94c6879aa59371a175c343108f7535274825b3e3",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "staking--cecile-hirschauer",
+      "domain": "staking",
+      "domain_group": "staking-yield",
+      "level": "complex",
+      "md": "staking--cecile-hirschauer.md",
+      "md_sha256": "51a1da5964096860c66aed0cda473bb8087ae3b2262f13d2276d4457fbc9ee04",
+      "pair_sha256": "7d8d9795a3f9dbe717f04f6cbdbcee040278d2d2618add93249245f5bff0a6d2",
+      "repository": "https://github.com/Cecile-Hirschauer/EcoGreenFund",
+      "commit": "8f22299e4a8974810a402192db3de592ee3eb368",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "staking-contract--quant-link",
+      "domain": "staking",
+      "domain_group": "staking-yield",
+      "level": "complex",
+      "md": "staking-contract--quant-link.md",
+      "md_sha256": "372efd864d64eca5125e79e204b207a30e4293612ee75b278f2992cc6be79e0b",
+      "pair_sha256": "7b74f6199baca3b910e36c282fa2b01ac6f5c9586f95c5c3488c67d0d9aaf2c2",
+      "repository": "https://github.com/Quant-link/QLK-Staking-Archive-PoC",
+      "commit": "7b3c60bdef1e4186495cea0c02be3a29ea47b086",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "staking-rewards--orien7",
+      "domain": "staking",
+      "domain_group": "staking-yield",
+      "level": "moderate",
+      "md": "staking-rewards--orien7.md",
+      "md_sha256": "d5b92894cd039df3d420f556a864e4b3427f17e16d6aa2bec530d209a649385f",
+      "pair_sha256": "a0a762f9dcaf5e5431f392c4aa7b433f67fcfd2e3d12bf69398a578cf27ede4d",
+      "repository": "https://github.com/orien7/uday-erc20-staking",
+      "commit": "6fecb4fc0252af708d598b6703f8e6dac53e2e9c",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "staking-vault--harshanandhan",
+      "domain": "staking",
+      "domain_group": "staking-yield",
+      "level": "simple",
+      "md": "staking-vault--harshanandhan.md",
+      "md_sha256": "02a8bfa1414ef033e620663c95435274d07c15cf9ac9ccbdf6f0ec422c874c76",
+      "pair_sha256": "7d66918a9cc525db7dfdbc50cc9c927ff4e6adcd001069cf3f3a06a273a90aa6",
+      "repository": "https://github.com/Harshanandhan/erc20-staking-vault",
+      "commit": "9434d9b22792134e4bafd514f246d5752713b2a8",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "stream-split--debsmit16",
+      "domain": "payment-streaming",
+      "domain_group": "subscriptions-streaming",
+      "level": "moderate",
+      "md": "stream-split--debsmit16.md",
+      "md_sha256": "fa7ee1e7b097d799672f22d8972efd25a0abf154311ba327e76a143ea9e7cf84",
+      "pair_sha256": "b5c438e57d9bc0edf6a5ad71beea03c6c4a8d5ba361cbb0d8fe0d1fb0f85fb64",
+      "repository": "https://github.com/Debsmit16/Stream-split",
+      "commit": "c1b4c031f1cef608861c504352b3ac000e165eb5",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "student-portal--donguillotine",
+      "domain": "registry",
+      "domain_group": "registries-identity",
+      "level": "simple",
+      "md": "student-portal--donguillotine.md",
+      "md_sha256": "292dadcc002f5d2deeaba616e03cda361be5950b15c81fc87141e9d6e416fd2f",
+      "pair_sha256": "1c9d1383077ffd785127701c6939d8c5b9117bec3d8ae397d77bc12321d63336",
+      "repository": "https://github.com/DonGuillotine/student-portal-contract",
+      "commit": "fc6aa3a6126b3e201a1c5e6fbb343312356369cb",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "subscription-payment-system--aryasingh22",
+      "domain": "subscriptions",
+      "domain_group": "subscriptions-streaming",
+      "level": "complex",
+      "md": "subscription-payment-system--aryasingh22.md",
+      "md_sha256": "c1b585983ffa4bf92b88f9af90d4ce6d0242e13ecf20fed1c214fca6daaf80ec",
+      "pair_sha256": "ee1afb6de8c5f0838568c68564eb3e6596e32a8742b57b2102c0876c8477cce4",
+      "repository": "https://github.com/AryaSingh22/SubZero-Protocol",
+      "commit": "6899b1607574abfb9222837f79a08ea9868851ce",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "supply-chain--ramius-arch",
+      "domain": "supply-chain",
+      "domain_group": "supply-chain",
+      "level": "simple",
+      "md": "supply-chain--ramius-arch.md",
+      "md_sha256": "d528b09770fedf91fb556ef28dae8afb568e971dbc24097e52833b26967e2fa3",
+      "pair_sha256": "5e96289903955e6c6c0a3a696eb407a9191ba6de4d928883486e8510c1620ec8",
+      "repository": "https://github.com/Ramius-arch/PharmaSupply-Chain",
+      "commit": "08cd9e8e723620a97753326ed7d9fe425688a53e",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "text-storage--azerckid",
+      "domain": "meta-transactions",
+      "domain_group": "relayer-meta-transactions",
+      "level": "moderate",
+      "md": "text-storage--azerckid.md",
+      "md_sha256": "15de11d484f7aed68460bfe7ba60b7ca30f2f75705b70dc3b2ad163127927d50",
+      "pair_sha256": "07be80f9d2d3239ffdd8b20185765a104ef4e527b3f13dfac92e87c83cbfff1d",
+      "repository": "https://github.com/azerckid/2025_metaTxSolidity",
+      "commit": "9d503e713c340d677485e9a42254829c01559dae",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "ticket-manager--abhisheky2401",
+      "domain": "ticketing-events",
+      "domain_group": "ticketing-events",
+      "level": "moderate",
+      "md": "ticket-manager--abhisheky2401.md",
+      "md_sha256": "3bbb61f60085d7ed8ea522d0789aa10b45695b80e5d969416e12ba508b5b24d7",
+      "pair_sha256": "419191187170a573c9045336bf8ce9de4600f1552cec0f2c6bbfd7944c83ee07",
+      "repository": "https://github.com/abhishekY2401/event-dapp-backend",
+      "commit": "8cae2ab28a6c561828dd4e3cb12eb55df2a0cfeb",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "time-flow-vault--ogazboiz",
+      "domain": "timelock",
+      "domain_group": "vesting-timelock",
+      "level": "complex",
+      "md": "time-flow-vault--ogazboiz.md",
+      "md_sha256": "3371c2bb9ee60d37e7ae86ebd32b03da1e0bd5722b4187f5d2950fbcbfda4405",
+      "pair_sha256": "2f3684f335c8582945cb562d5082cd6a3267d8f3a0ff337cdc9c13828686bb74",
+      "repository": "https://github.com/ogazboiz/TimeFlowVault",
+      "commit": "8eb6b760a3e169a42b2259807fc926ed816387a1",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "token-faucet--sreenitapadarthi06",
+      "domain": "rate-limiting",
+      "domain_group": "rate-limiting",
+      "level": "simple",
+      "md": "token-faucet--sreenitapadarthi06.md",
+      "md_sha256": "ef50a7c451631d62abfbfdabafa8b681db7d75d54095f152fb30f1f137510381",
+      "pair_sha256": "449179bc870704d6a5d0fa192653c4952dc0aec1b7321fff29ec471e6e26bdc7",
+      "repository": "https://github.com/SreenitaPadarthi06/ERC-Token",
+      "commit": "fe138ed617e5afcd01e53c672c4763828c244bdc",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "token-vesting--winsitoruser",
+      "domain": "vesting",
+      "domain_group": "vesting-timelock",
+      "level": "moderate",
+      "md": "token-vesting--winsitoruser.md",
+      "md_sha256": "f824a3b5c48b6184b1ff892baa815441afc7126eb22857c15bd2dab156913955",
+      "pair_sha256": "5fa7b830d818dff22ac8f856afae5829f2e8babdfe73632ebc5338ac71d62ee5",
+      "repository": "https://github.com/winsitoruser/lileinstein",
+      "commit": "30d28563f96f295a3ed8fc591440cfe7c4c43433",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "tokenized-stock--iamjarryfeng",
+      "domain": "erc20-token",
+      "domain_group": "fungible-tokens",
+      "level": "simple",
+      "md": "tokenized-stock--iamjarryfeng.md",
+      "md_sha256": "b5c5481f1dfa1bd13c571d998a2bc189bd7d0dfc0d75562940a703badc1c96d7",
+      "pair_sha256": "54f3c6b49e2d4720a82345675c7c0bdff48ce872f997bf4de2d0f6ab328191c4",
+      "repository": "https://github.com/iamjarryfeng/stockx_poc_1.03",
+      "commit": "5ab087866c8640f4514e6c8349d91859d53610a0",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "tollgate--ashnkumar",
+      "domain": "payments",
+      "domain_group": "escrow-conditional-payments",
+      "level": "complex",
+      "md": "tollgate--ashnkumar.md",
+      "md_sha256": "952a01b4d8eb2583822426dcfa7843cee572b3fc1790978c5933516764fd6c8a",
+      "pair_sha256": "f5a1619b3f93fc8c2a36273d47fb32b488ee9a48b3760b760c295d8cddf88439",
+      "repository": "https://github.com/ashnkumar/tollgate",
+      "commit": "2c69a5e59970ff080d96698c5e70635df4eb4ab9",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "totem-trusted-forwarder--totembound",
+      "domain": "meta-transactions",
+      "domain_group": "relayer-meta-transactions",
+      "level": "moderate",
+      "md": "totem-trusted-forwarder--totembound.md",
+      "md_sha256": "b4de45fe48beb7d4de65583b69d722a54eb7de3a97467846d583831689cdc2e2",
+      "pair_sha256": "89d2f46fc8f9a97a3ed2ef5e71430f3b263efa75af5c55eba54e20e7c990d595",
+      "repository": "https://github.com/totembound/totem-contracts",
+      "commit": "a80daaf499dc81cab764ad5398c6a277d5fc67e6",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "treasury--hockeyplaya48",
+      "domain": "treasury",
+      "domain_group": "multisig-treasury",
+      "level": "moderate",
+      "md": "treasury--hockeyplaya48.md",
+      "md_sha256": "6fb288c7e2e1440976e3abcd3d94d9c0142d375ce66a543135f8578cb4e3cd6f",
+      "pair_sha256": "56aab1e0606f8e584143992448a90b0bf1e70c18ee9810f15cfd74a11ae31885",
+      "repository": "https://github.com/HockeyPlaya48/RWAForge",
+      "commit": "d44d18a4662200d40ece8d769d59578c2ca623fb",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "tsvguard--themis-labs",
+      "domain": "rate-limiting",
+      "domain_group": "rate-limiting",
+      "level": "moderate",
+      "md": "tsvguard--themis-labs.md",
+      "md_sha256": "d78d407b0008904670a55d5fceff4d7c7e52ceb9670ab09423e35276d3caf5e1",
+      "pair_sha256": "a573cd326d0a8c6ec830f96e429df72efd83688ab89421ea77c5050ef36aa455",
+      "repository": "https://github.com/themis-labs/tsv-aegis",
+      "commit": "8cdf770f9377d41c075dbe834c5f737e543b7f38",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "user-ticket-hub--abhisheky2401",
+      "domain": "ticketing-events",
+      "domain_group": "ticketing-events",
+      "level": "complex",
+      "md": "user-ticket-hub--abhisheky2401.md",
+      "md_sha256": "7f7e16713bd9ce2b6c450332955004f5f11570757c41fa12f9b3e4eee70c6f40",
+      "pair_sha256": "86613201b90b5a66d7483d584f44e87bb0c5cd4f4a49ed2d7dd3cbc1fb2580b8",
+      "repository": "https://github.com/abhishekY2401/event-dapp-backend",
+      "commit": "8cae2ab28a6c561828dd4e3cb12eb55df2a0cfeb",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "vault--balmha",
+      "domain": "yield-vault",
+      "domain_group": "staking-yield",
+      "level": "simple",
+      "md": "vault--balmha.md",
+      "md_sha256": "577dbccb0eea9b1b231477a5d3945ebfa31481d64754b79833809218316c0c9d",
+      "pair_sha256": "76390f48591e3c8a60ba5772dd37350c45e7a14ca986c2f30c80e9f1f8c8078a",
+      "repository": "https://github.com/balmha/Vaultis",
+      "commit": "d70236256bf929687729d95fa559439038fcae4d",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "vault--orlandol23",
+      "domain": "yield-vault",
+      "domain_group": "staking-yield",
+      "level": "complex",
+      "md": "vault--orlandol23.md",
+      "md_sha256": "f48518245ea56da876d6eec7b3b5bd9f641dbf52fd69d53533a762ae14ee5853",
+      "pair_sha256": "1d7782f715c79515ee7325ba77686bbd3fa1359a7a9c4536e0f53437e584bfb2",
+      "repository": "https://github.com/orlandol23/swiss-defi-optimizer",
+      "commit": "bed5411a57f64473350a2ba9c5efd2ca5bb3b65a",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "veraci-tixnft--owezzy",
+      "domain": "ticketing-events",
+      "domain_group": "ticketing-events",
+      "level": "complex",
+      "md": "veraci-tixnft--owezzy.md",
+      "md_sha256": "1965e04a92dd8db940e85ee160b75189c832181070584f8647436735495cfa51",
+      "pair_sha256": "8fc6e4ed953956286a9d99a9c772c1776dc016a16f3c844d404603da16c5e75f",
+      "repository": "https://github.com/owezzy/nft-ticket",
+      "commit": "e63683f42741259f1f0a27d0d3ba58a281d39399",
+      "license": "Apache-2.0",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "verifier--0xalexbel",
+      "domain": "identity-claims",
+      "domain_group": "registries-identity",
+      "level": "complex",
+      "md": "verifier--0xalexbel.md",
+      "md_sha256": "e736e2def12d6727969b89ddfc421045ddef34cea9db7daa7ef402d0decd14f0",
+      "pair_sha256": "d61349af7be840c9677a4962d6c9463dc8ae199be58dd0c71a327d565f836e68",
+      "repository": "https://github.com/0xalexbel/fhe-erc3643",
+      "commit": "c76fffeb1841130ee28b894d7353e648a6640fd8",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "vote--abidoyesimze",
+      "domain": "voting",
+      "domain_group": "voting-governance",
+      "level": "moderate",
+      "md": "vote--abidoyesimze.md",
+      "md_sha256": "b774ee848ab182b5a2c47b8e29e83931c8b3d757c8b8da0dc8adfce6e2eabc87",
+      "pair_sha256": "3f8a8ab172dd6307430639ac75b5c7270110a82eef2933c852ef38a810f07298",
+      "repository": "https://github.com/Abidoyesimze/voteDemo",
+      "commit": "da6d79a736f5a4c02b549c00c54a315f2dedb228",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "voting--0-warn",
+      "domain": "voting-commit-reveal",
+      "domain_group": "voting-governance",
+      "level": "moderate",
+      "md": "voting--0-warn.md",
+      "md_sha256": "0e8a65e84b6197d115cf776d849078772692f5a1c17c5eb8b584a1da63b72edd",
+      "pair_sha256": "e07521bfa09dab75b6ec477137fd5cd5c22b3fc8471445bf87b977ea4bf52caf",
+      "repository": "https://github.com/0-warn/BCE-VOTE",
+      "commit": "ef4cb2021102d3f9d1691cffcd9116a4eee9c0ba",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "voting--axysar",
+      "domain": "voting",
+      "domain_group": "voting-governance",
+      "level": "simple",
+      "md": "voting--axysar.md",
+      "md_sha256": "3a58cf8c11f26c737ecff68961080c8b33f3b3cc5d1de8a714c167783afd303e",
+      "pair_sha256": "01a7d102d3099abc09393a4de8ad759ec45fe5e58b6044375f2dc727639a9c69",
+      "repository": "https://github.com/axysar/imavote",
+      "commit": "ef33645c63f6c078b253e8c0e240aae7f268d466",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "voting--darshan36911",
+      "domain": "voting",
+      "domain_group": "voting-governance",
+      "level": "moderate",
+      "md": "voting--darshan36911.md",
+      "md_sha256": "a89f21063a56e28564c4344ef5d5ac82d8ecc9b9a6377a891c5fb5015328f64c",
+      "pair_sha256": "c8095d518cb915f0690101e0053c0c1cbe8bb5fdc6dfc2defe5af0e1aef6d8f8",
+      "repository": "https://github.com/Darshan36911/onchain-voting-dapp",
+      "commit": "b1528351ce222ba6d3e2ea33b98fc2957d828ae4",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": []
+    },
+    {
+      "id": "voting--stakljar",
+      "domain": "voting",
+      "domain_group": "voting-governance",
+      "level": "simple",
+      "md": "voting--stakljar.md",
+      "md_sha256": "b8dc9692a2b7028d1d2892d7fb7bc6ddbc190bbeecc33284352bea5120918d3f",
+      "pair_sha256": "772ab43f6cbdd0ef70b3e6cc8dca2fb1c1ca35274a9320efe0a41372239a554e",
+      "repository": "https://github.com/Stakljar/voting-system-dapp",
+      "commit": "022557e4b4d07654d92ca0d661d32a5eaab88dd7",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "test-import-path",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "voting-core--axysar",
+      "domain": "voting",
+      "domain_group": "voting-governance",
+      "level": "moderate",
+      "md": "voting-core--axysar.md",
+      "md_sha256": "67105e866479561dc58e6703190256c74f5907992273bc7d2c568ccba8343d40",
+      "pair_sha256": "75e75e86de0ac2df48287cbf50275e5a07161e2696079a12dbb01d2d080537ca",
+      "repository": "https://github.com/axysar/imavote",
+      "commit": "ef33645c63f6c078b253e8c0e240aae7f268d466",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip"
+      ]
+    },
+    {
+      "id": "wealth-vault--mosas2000",
+      "domain": "yield-vault",
+      "domain_group": "staking-yield",
+      "level": "moderate",
+      "md": "wealth-vault--mosas2000.md",
+      "md_sha256": "44338cc6b39546ef295b21683ec9b89dc9c0aed494ce6af5c60c3b5f306457cb",
+      "pair_sha256": "231d288e3a851a565cdc17a63234013b547f52498d87a1897652d46853916cf8",
+      "repository": "https://github.com/Mosas2000/W-Yield",
+      "commit": "1590d40fe73b7d55ce9de5ab98b228b867faea25",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "weather-shield-insurance--hassanmubiru",
+      "domain": "insurance",
+      "domain_group": "insurance",
+      "level": "complex",
+      "md": "weather-shield-insurance--hassanmubiru.md",
+      "md_sha256": "8f3b7c93b6a18b46ff7c585f0077b2c7b995477f7ec0cae0b97f30207a92407a",
+      "pair_sha256": "7f1d1f5eb2e308ae1c1b1fb3ce14842351f4a4b200ec666df3d5374675fdfd90",
+      "repository": "https://github.com/hassanmubiru/weathershield-defi",
+      "commit": "0133b3ab0d9140e69503899d187e165109ee0d53",
+      "license": "MIT",
+      "test_language": "js",
+      "transformations": [
+        "import-path"
+      ]
+    },
+    {
+      "id": "x402-payment-receiver--confluxarena",
+      "domain": "payments",
+      "domain_group": "escrow-conditional-payments",
+      "level": "moderate",
+      "md": "x402-payment-receiver--confluxarena.md",
+      "md_sha256": "a9c05ab8b8369fb724f3f4fbf4604b7b7f43da3c4953bcc575f77d14112a9aec",
+      "pair_sha256": "bf8dc4c0365a0c188183b5e04be8303b30405f86560cd01db6564d6c903efb63",
+      "repository": "https://github.com/confluxarena/x402-fullstack",
+      "commit": "12896c6f38ba9f45ef1afe28abb7a499f9b48237",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "yacht-squad-tokenization--cerlo",
+      "domain": "nft",
+      "domain_group": "nft-marketplace",
+      "level": "moderate",
+      "md": "yacht-squad-tokenization--cerlo.md",
+      "md_sha256": "e8f0bee276e59032d54639ca1e4b2426aeb72deded12ab858da9176760db6553",
+      "pair_sha256": "7109f53a0e60750523cd29c96fcb55884435ef7125972e2bc05b1437b357b6a5",
+      "repository": "https://github.com/Cerlo/Yacht-Squad-Solidity",
+      "commit": "f7574daef0d70fc6fd67659030b102b998357df1",
+      "license": "GPL-3.0",
+      "test_language": "js",
+      "transformations": [
+        "test-import-path"
+      ]
+    },
+    {
+      "id": "your-contract--gavrilaalexandru",
+      "domain": "nft-poap",
+      "domain_group": "nft-marketplace",
+      "level": "simple",
+      "md": "your-contract--gavrilaalexandru.md",
+      "md_sha256": "d23c8ea783429b71f2c5f88ed0fe7d21826fbdb6712d72d9f2142740d51f9e53",
+      "pair_sha256": "abb65bfd628d8dada6ec5a416594c60e79984d1a88b17f1bfd3b191046878e6a",
+      "repository": "https://github.com/gavrilaalexandru/POAPademy",
+      "commit": "f34f4e17e8702fce8f061d2145f6895a2d5b3ab3",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    },
+    {
+      "id": "your-contract--remesnik-elena",
+      "domain": "escrow",
+      "domain_group": "escrow-conditional-payments",
+      "level": "complex",
+      "md": "your-contract--remesnik-elena.md",
+      "md_sha256": "4b3623814a40a542d74ae0688719d7bfc7abe0a603bce6392f8f0c88f449f449",
+      "pair_sha256": "7cb960f64a789490de9658f8a635bcc8f54a82275c2b55c7644431c4430214e8",
+      "repository": "https://github.com/Remesnik-Elena/escrow",
+      "commit": "488bc3ec4cade63fdb64bab52a1ec4e2833c92b0",
+      "license": "MIT",
+      "test_language": "ts",
+      "transformations": [
+        "esm-to-cjs",
+        "ts-type-strip",
+        "type-only-import-elided"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "pair": "advanced-governance--rsksmart",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "agent-escrow--nelsonjingusc",
+      "reason": "rejected",
+      "errors": [
+        "AgentEscrow.test.js: undeclared require '../typechain-types'"
+      ]
+    },
+    {
+      "pair": "astana-ituniversity_se2328--mara-werils",
+      "reason": "rejected",
+      "errors": [
+        "coverage: AstanaITUniversity_se2328.sol statements 27.66 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "auction--fmansimli",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)"
+      ]
+    },
+    {
+      "pair": "auction--marisatomei",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "auction--rorychhattish",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "auction--sammmmx",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)"
+      ]
+    },
+    {
+      "pair": "auction-engine--brenkib",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)"
+      ]
+    },
+    {
+      "pair": "auction-nft--edumor",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "auction-v2--nasirovpe",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "ballot--burekas",
+      "reason": "rejected",
+      "errors": [
+        "execution: 8 failing test(s)"
+      ]
+    },
+    {
+      "pair": "bank--haritha2498",
+      "reason": "rejected",
+      "errors": [
+        "coverage: Bank.sol statements 53.85 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "battery-passport--carlosdelfino",
+      "reason": "rejected",
+      "errors": [
+        "execution: 3 failing test(s)"
+      ]
+    },
+    {
+      "pair": "bnplloan--mdsaad31",
+      "reason": "rejected",
+      "errors": [
+        "execution: 5 failing test(s)",
+        "coverage: BNPLLoan.sol statements 37.1 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "campaign--hasaan07",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "execution: no passing test",
+        "coverage: Campaign.sol statements 0.0 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "campaign-factory--anjanaed",
+      "reason": "rejected",
+      "errors": [
+        "execution: 96 failing test(s)"
+      ]
+    },
+    {
+      "pair": "cat-bond-token--abailey81",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "charity-donation-main--calebomondi",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "checkers--elien2016",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)"
+      ]
+    },
+    {
+      "pair": "claim-registry--abhinavsingh-a1",
+      "reason": "rejected",
+      "errors": [
+        "coverage: ClaimRegistry.sol statements 35.0 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "consumer-session-key-guard--kkoci",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "coverage-contract--diedelaview",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MPL-2.0' not accepted"
+      ]
+    },
+    {
+      "pair": "create-event--swrjsingh",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "cross-chain-messenger--ciphermavendev",
+      "reason": "rejected",
+      "errors": [
+        "execution: 3 failing test(s)"
+      ]
+    },
+    {
+      "pair": "crowdfunding--atharvchavan10",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "crowdfunding--nafiislam060",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "crowdfunding--vyshnavisvariyar",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "crowdfunding-platform-token--cjmontcablockchain",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "crypto-saving-vault--usetech-nick",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)"
+      ]
+    },
+    {
+      "pair": "cyber-insurance--sleader3221-dot",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "dapp-bnb--daltonic",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "dapp-event-x--daltonic",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "dapp-fund--daltonic",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "dex--anton-kovachev",
+      "reason": "rejected",
+      "errors": [
+        "execution: 4 failing test(s)",
+        "coverage: Dex.sol statements 66.67 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "dexrouter--junaidcd",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "dgscreative-nftcontract--dgsmith7",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "coverage: DGSCreativeNFTContract.sol statements 18.18 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "dutch-auction--jcb82",
+      "reason": "rejected",
+      "errors": [
+        "execution: 8 failing test(s)",
+        "execution: no passing test"
+      ]
+    },
+    {
+      "pair": "dutch-auction--vadympop",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "dylets-loan-contract--stella-achar-oiro",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "english-auction--vadympop",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "final-bid-contract--nikolail",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "execution: no passing test",
+        "coverage: FinalBidContract.sol statements 0.0 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "flash-bank-p2-ploan--rotwang9000",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "freelance-escrow--tashfeen-786",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "gomoku--voyokee",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "governance--alan22333",
+      "reason": "rejected",
+      "errors": [
+        "DAO.test.js: ethers 5 ethers.utils"
+      ]
+    },
+    {
+      "pair": "governer--ananthanir",
+      "reason": "rejected",
+      "errors": [
+        "Dao.test.js: no assertion (expect/assert)"
+      ]
+    },
+    {
+      "pair": "hitbox-game--raulonastool",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "issue-ticket--swrjsingh",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)"
+      ]
+    },
+    {
+      "pair": "lend-smart-loan--quantsingularity",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "lending-pool--kris0721",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)"
+      ]
+    },
+    {
+      "pair": "lending-pool--mad-uet",
+      "reason": "rejected",
+      "errors": [
+        "coverage: LendingPool.sol statements 64.23 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "limgovernor--mdantis-dev",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "execution: no passing test"
+      ]
+    },
+    {
+      "pair": "loan-contract--quantsingularity",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "ludo-game--donguillotine",
+      "reason": "rejected",
+      "errors": [
+        "coverage: LudoGame.sol statements 33.33 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "lvttoken--vaibhavi-0320",
+      "reason": "rejected",
+      "errors": [
+        "coverage: LVTToken.sol statements 47.06 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "marketplace--doctordictator",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "execution: no passing test"
+      ]
+    },
+    {
+      "pair": "meme-vault--wijnaldum-eth",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "execution: no passing test",
+        "coverage: MemeVault.sol statements 0.0 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "milestone-fund--henry2513",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted",
+        "MilestoneFund.js: undeclared require 'node:assert/strict'"
+      ]
+    },
+    {
+      "pair": "mintaro-escrow--hilmikt",
+      "reason": "rejected",
+      "errors": [
+        "coverage: MintaroEscrow.sol statements 12.37 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "mock-oracle--solmate-testing",
+      "reason": "rejected",
+      "errors": [
+        "execution: 16 failing test(s)",
+        "coverage: MockOracle.sol statements 61.54 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "nft-market--iamkartiksehrawat",
+      "reason": "rejected",
+      "errors": [
+        "execution: 16 failing test(s)",
+        "coverage: NftMarket.sol statements 0.0 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "nft-marketplace--geweidong",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "coverage: NftMarketplace.sol statements 37.5 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "permission-erc1271--wrytes",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "execution: no passing test",
+        "coverage: PermissionERC1271.sol statements 0.0 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "play2-earn-x--daltonic",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "player-auction--red0psd3v4rsh007",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "policy-manager--logiccrafterdz",
+      "reason": "rejected",
+      "errors": [
+        "PolicyManager.comprehensive.test.js: undeclared require '@nomicfoundation/hardhat-chai-matchers'",
+        "PolicyManager.test.js: undeclared require '@nomicfoundation/hardhat-chai-matchers'"
+      ]
+    },
+    {
+      "pair": "presale--mickietrill",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "coverage: Presale.sol statements 76.92 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "price-oracle--mad-uet",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)"
+      ]
+    },
+    {
+      "pair": "ranking-voting--leon4113",
+      "reason": "rejected",
+      "errors": [
+        "execution: 4 failing test(s)",
+        "coverage: RankingVoting.sol statements 14.29 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "sealed-bid-auction--xseven0908",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "seed-vesting--zuraverse",
+      "reason": "rejected",
+      "errors": [
+        "execution: 2 failing test(s)"
+      ]
+    },
+    {
+      "pair": "sentinel-vault--ismail-169",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "execution: no passing test",
+        "coverage: SentinelVault.sol statements 0.0 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "simple-lending--samsshow",
+      "reason": "rejected",
+      "errors": [
+        "coverage: SimpleLending.sol statements 68.75 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "simple-token--pinakkapoor",
+      "reason": "rejected",
+      "errors": [
+        "leakage: SimpleToken.sol close to benchmark Token.sol (structural 0.458, signatures 1.0)"
+      ]
+    },
+    {
+      "pair": "space-pirates-tokens--defi-space-pirates",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "staking-oracle--escottalexander",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "tbill-vault--tokpay-finance",
+      "reason": "rejected",
+      "errors": [
+        "coverage: TbillVault.sol statements 50.0 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "team-vesting--zuraverse",
+      "reason": "rejected",
+      "errors": [
+        "execution: 2 failing test(s)"
+      ]
+    },
+    {
+      "pair": "team-vesting-controller--mdantis-dev",
+      "reason": "rejected",
+      "errors": [
+        "coverage: TeamVestingController.sol statements 64.0 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "teams-manager--rsksmart",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "execution: no passing test"
+      ]
+    },
+    {
+      "pair": "ticket-nft--hsw0914-window",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "ticket-nft--paul-abhirup",
+      "reason": "rejected",
+      "errors": [
+        "coverage: TicketNFT.sol statements 50.0 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "token-farm--pericena",
+      "reason": "rejected",
+      "errors": [
+        "execution: 10 failing test(s)"
+      ]
+    },
+    {
+      "pair": "tpixbonding-curve--xjanova",
+      "reason": "rejected",
+      "errors": [
+        "execution: 37 failing test(s)",
+        "coverage: TPIXBondingCurve.sol statements 1.3 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "vektes-vesting--bontidy",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)"
+      ]
+    },
+    {
+      "pair": "vickrey-auction--jcb82",
+      "reason": "rejected",
+      "errors": [
+        "execution: 10 failing test(s)"
+      ]
+    },
+    {
+      "pair": "vickrey-auction--sathviksnayak",
+      "reason": "rejected",
+      "errors": [
+        "manifest: licence 'MIT (SPDX header; no LICENSE file)' not accepted"
+      ]
+    },
+    {
+      "pair": "voting--gabrielfalves",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "execution: no passing test",
+        "coverage: Voting.sol statements 0.0 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "voting--nuthan050",
+      "reason": "rejected",
+      "errors": [
+        "execution: no mocha results (compilation or load failure, see .validation/test.log)",
+        "coverage: target coverage missing"
+      ]
+    },
+    {
+      "pair": "voting-system--profmsaif",
+      "reason": "rejected",
+      "errors": [
+        "votingSystem.js: ethers 5 ethers.utils"
+      ]
+    },
+    {
+      "pair": "wara-vesting--q-yzx0",
+      "reason": "rejected",
+      "errors": [
+        "execution: 1 failing test(s)",
+        "execution: no passing test",
+        "coverage: WaraVesting.sol statements 0.0 % < 80.0 %"
+      ]
+    },
+    {
+      "pair": "forge-token--hockeyplaya48",
+      "reason": "near-duplicate of another corpus pair",
+      "closest": {
+        "contract": "ForgeToken.sol",
+        "reference": "base-token--salfianf/BaseToken.sol",
+        "structural": 0.282,
+        "signatures": 1.0,
+        "min_functions": 4
+      }
+    }
+  ]
+}

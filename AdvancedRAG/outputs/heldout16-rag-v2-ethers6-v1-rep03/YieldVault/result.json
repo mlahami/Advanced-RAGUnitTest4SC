@@ -1,0 +1,36 @@
+{
+  "contract": "YieldVault",
+  "status": "test_failures",
+  "prompt_sha256": "e0e99f30f26ab16d2e7252795dafd3eda9f1ecc33310ba4b794b3ef082af66a6",
+  "generation_seconds": 14.474903099937364,
+  "usage": {
+    "prompt_tokens": 11654,
+    "total_tokens": 13264,
+    "completion_tokens": 1610,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.917145399958827
+  },
+  "passed_tests": 14,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "YieldVault setStrategy Should not allow non-owner to set strategy",
+      "error": "Expected transaction to be reverted with reason 'Ownable: caller is not the owner', but it didn't revert"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 92.86,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

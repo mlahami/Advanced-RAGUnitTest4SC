@@ -1,0 +1,103 @@
+{
+  "pair": "real-estate-chain-marketplace--sergio11",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:15:22.690308+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/IRealEstateChain.sol": "b99fd9a8f55b089c9300333dbad35746bcf4002a9b567d6edc0ed266e70740ba",
+    "contracts/IRealEstateChainMarketplace.sol": "4d64b03f56efbef73c55fb77561d4e4772605784365325a7c99eefa590173022",
+    "contracts/RealEstateChain.sol": "535321ee8fd45a6d99295dcbef7c575bdb05a0db1a81c15d03e160660edb11e2",
+    "contracts/RealEstateChainMarketplace.sol": "7a3dbfa765c253520715edf945822e2130bd59f1ae07c5e0d6661fbf524e8cf9",
+    "LICENSE": "a4792e2b2f47e972a5b70195cb02f680f833251f533ea71d83ae6306899a2cd5",
+    "manifest.json": "7bedd91154315b5c3c870ef873402914a9d668321e2d9c1f0f8882303737f78f",
+    "test/RealEstateChain.test.js": "18814563bad97ee68f6aa03491eff9f465620fbec7e20c0a0940933f2ffa3f75"
+  },
+  "pair_sha256": "7f833a9fcc173088c952ec691268fa94731ee6b0f195267a44c77ea41cadc143",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "RealEstateChainMarketplace.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.154,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "RealEstateChainMarketplace.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.149,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "RealEstateChainMarketplace.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.148,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.64,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.99,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "RealEstateChainMarketplace.sol": {
+          "statements": 95.0,
+          "branches": 50.0,
+          "functions": 85.71,
+          "lines": 95.0
+        },
+        "IRealEstateChain.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IRealEstateChainMarketplace.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "RealEstateChain.sol": {
+          "statements": 37.5,
+          "branches": 16.67,
+          "functions": 40.0,
+          "lines": 37.5
+        }
+      }
+    }
+  },
+  "accepted": true
+}

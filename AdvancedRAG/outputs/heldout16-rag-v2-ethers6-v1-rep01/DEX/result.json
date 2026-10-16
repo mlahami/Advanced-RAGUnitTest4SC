@@ -1,0 +1,80 @@
+{
+  "contract": "DEX",
+  "status": "test_failures",
+  "prompt_sha256": "da485cec0ffbd5aeb84cbdde3ef03f03756825a4d7624b3faa17d9cae4d00ba6",
+  "generation_seconds": 18.205919499974698,
+  "usage": {
+    "prompt_tokens": 12064,
+    "total_tokens": 14681,
+    "completion_tokens": 2617,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 8.13154219998978
+  },
+  "passed_tests": 3,
+  "failed_tests": 12,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "DEX Deployment should initialize reserves to zero",
+      "error": "expected 100000000000000000000000 to equal 0."
+    },
+    {
+      "title": "DEX addLiquidity should add initial liquidity correctly",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    },
+    {
+      "title": "DEX addLiquidity should add subsequent liquidity proportionally",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    },
+    {
+      "title": "DEX addLiquidity should revert when adding zero liquidity",
+      "error": "Expected transaction to be reverted with reason 'Insufficient liquidity minted', but it reverted with reason 'insufficient allowance'"
+    },
+    {
+      "title": "DEX removeLiquidity \"before each\" hook for \"should remove liquidity correctly\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    },
+    {
+      "title": "DEX swapAforB should swap tokenA for tokenB correctly",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "DEX swapAforB should revert when swapping zero amount",
+      "error": "Expected transaction to be reverted"
+    },
+    {
+      "title": "DEX swapAforB should revert when swapping more than available",
+      "error": "Expected transaction to be reverted"
+    },
+    {
+      "title": "DEX swapBforA should swap tokenB for tokenA correctly",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "DEX swapBforA should revert when swapping zero amount",
+      "error": "Expected transaction to be reverted"
+    },
+    {
+      "title": "DEX swapBforA should revert when swapping more than available",
+      "error": "Expected transaction to be reverted"
+    },
+    {
+      "title": "DEX Edge Cases should handle large swap amounts",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    }
+  ],
+  "coverage": {
+    "statements": 77.27,
+    "branches": 50.0,
+    "functions": 85.71,
+    "lines": 75.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

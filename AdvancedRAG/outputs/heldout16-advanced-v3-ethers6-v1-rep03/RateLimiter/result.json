@@ -1,0 +1,48 @@
+{
+  "contract": "RateLimiter",
+  "status": "test_failures",
+  "prompt_sha256": "33e56d6f8cd4cb02c4ce68ed66872becaaa7776f8acdc230b66990db6f4231f6",
+  "generation_seconds": 16.535477500059642,
+  "usage": {
+    "prompt_tokens": 11409,
+    "total_tokens": 13361,
+    "completion_tokens": 1952,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.402518999995664
+  },
+  "passed_tests": 13,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "RateLimiter Deposit Should revert when rate limit is exceeded",
+      "error": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert"
+    },
+    {
+      "title": "RateLimiter Withdraw Should revert when rate limit is exceeded",
+      "error": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert"
+    },
+    {
+      "title": "RateLimiter Bucket Refill Should emit BucketRefilled event when tokens are refilled",
+      "error": "Expected event \"BucketRefilled\" to be emitted, but it wasn't"
+    },
+    {
+      "title": "RateLimiter Edge Cases Should handle multiple users independently",
+      "error": "expected 90 to equal 80."
+    }
+  ],
+  "coverage": {
+    "statements": 94.74,
+    "branches": 71.43,
+    "functions": 85.71,
+    "lines": 94.44
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

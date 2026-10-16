@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> MinimalForwarder.sol
+> TextStorage.sol
+
+Compilation:
+============
+
+Compiled 4 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+-----------------------|----------|----------|----------|----------|----------------|
+File                   |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-----------------------|----------|----------|----------|----------|----------------|
+ contracts\            |    95.45 |       50 |      100 |    95.83 |                |
+  MinimalForwarder.sol |    94.74 |       50 |      100 |    95.24 |            105 |
+  TextStorage.sol      |      100 |      100 |      100 |      100 |                |
+-----------------------|----------|----------|----------|----------|----------------|
+All files              |    95.45 |       50 |      100 |    95.83 |                |
+-----------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

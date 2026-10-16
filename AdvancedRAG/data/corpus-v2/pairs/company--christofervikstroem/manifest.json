@@ -1,0 +1,39 @@
+{
+  "id": "company--christofervikstroem",
+  "domain": "registry",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Company.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ChristoferVikstroem/FaTS",
+    "commit": "47b8516212b3f462f86b46156dd7297d948855a3",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Company.sol"
+    ],
+    "test_paths": [
+      "test/Company.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Company.sol": "883341eb5267b7e35880e10d03aef0dff72ebbb82de709f1cf2164478dd9d559",
+      "test/Company.js": "ce5f8be027e2fc149e214c1f5172a4811e17e2e5646d7391180ab4db649ad3a7"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "Company.js",
+      "upstream_path": "test/Company.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Employer-managed employee/salary registry with verification (salary transparency project); 57 commits, 4 authors. Primary 160 non-blank lines, closure 160 lines/1 files; 25 its, 40 expects; pragma ^0.8.18.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:08.306421+00:00"
+}

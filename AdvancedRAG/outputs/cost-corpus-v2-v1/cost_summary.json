@@ -1,0 +1,230 @@
+{
+  "llm-only": {
+    "method": "LLM-only",
+    "suites": 90,
+    "fully_passing": 13,
+    "prompt_tokens": {
+      "mean": 7568.7,
+      "median": 7335.5,
+      "min": 6851,
+      "max": 8901,
+      "total": 681183
+    },
+    "completion_tokens": {
+      "mean": 1422.388888888889,
+      "median": 1468.5,
+      "min": 371,
+      "max": 2912,
+      "total": 128015
+    },
+    "total_tokens": {
+      "mean": 8991.08888888889,
+      "median": 8882.0,
+      "min": 7222,
+      "max": 11484,
+      "total": 809198
+    },
+    "generation_seconds": {
+      "mean": 12.236905364442565,
+      "median": 12.201666349981679,
+      "min": 3.622294200002216,
+      "max": 27.085237899969798,
+      "total": 1101.3214827998308
+    },
+    "execution_seconds": {
+      "mean": 7.824820411112806,
+      "median": 5.74119630001951,
+      "min": 3.770787300018128,
+      "max": 160.7892224000534,
+      "total": 704.2338370001526
+    },
+    "end_to_end_seconds": {
+      "mean": 20.06172577555537,
+      "median": 18.306385800009593,
+      "min": 7.757629500003532,
+      "max": 178.46332209999673,
+      "total": 1805.5553197999834
+    },
+    "retrieval_seconds": {
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "total": 0.0
+    },
+    "retrieved_tests": {
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "total": 0
+    },
+    "distinct_pairs": {
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "total": 0
+    },
+    "context_chars": {
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "total": 0
+    },
+    "tokens_per_fully_passing_suite": 62246.0
+  },
+  "rag-v2": {
+    "method": "RAGUnitTest4SC",
+    "suites": 90,
+    "fully_passing": 24,
+    "prompt_tokens": {
+      "mean": 11447.266666666666,
+      "median": 11256.5,
+      "min": 9694,
+      "max": 13072,
+      "total": 1030254
+    },
+    "completion_tokens": {
+      "mean": 1556.4333333333334,
+      "median": 1618.0,
+      "min": 381,
+      "max": 3389,
+      "total": 140079
+    },
+    "total_tokens": {
+      "mean": 13003.7,
+      "median": 12903.0,
+      "min": 10075,
+      "max": 15714,
+      "total": 1170333
+    },
+    "generation_seconds": {
+      "mean": 12.3267735144408,
+      "median": 12.13671804999467,
+      "min": 3.3680809000506997,
+      "max": 31.482516799937002,
+      "total": 1109.409616299672
+    },
+    "execution_seconds": {
+      "mean": 4.959972931104454,
+      "median": 4.8895358999143355,
+      "min": 3.965619600028731,
+      "max": 8.13154219998978,
+      "total": 446.3975637994008
+    },
+    "end_to_end_seconds": {
+      "mean": 17.41910519221953,
+      "median": 16.90301206667209,
+      "min": 7.557803700018363,
+      "max": 35.82110769996264,
+      "total": 1567.7194672997575
+    },
+    "retrieval_seconds": {
+      "mean": 0.397076240022822,
+      "median": 0.13855620002141222,
+      "min": 0.043518400052562356,
+      "max": 7.233443300006911,
+      "total": 11.91228720068466
+    },
+    "retrieved_tests": {
+      "mean": 8.2,
+      "median": 8.0,
+      "min": 5,
+      "max": 10,
+      "total": 246
+    },
+    "distinct_pairs": {
+      "mean": 4.166666666666667,
+      "median": 4.0,
+      "min": 1,
+      "max": 8,
+      "total": 125
+    },
+    "context_chars": {
+      "mean": 14392.866666666667,
+      "median": 14735.0,
+      "min": 10459,
+      "max": 15000,
+      "total": 431786
+    },
+    "tokens_per_fully_passing_suite": 48763.875
+  },
+  "advanced-v3": {
+    "method": "Advanced-RAGUnitTest4SC",
+    "suites": 90,
+    "fully_passing": 20,
+    "prompt_tokens": {
+      "mean": 11416.9,
+      "median": 11415.5,
+      "min": 10060,
+      "max": 12962,
+      "total": 1027521
+    },
+    "completion_tokens": {
+      "mean": 1576.7333333333333,
+      "median": 1564.5,
+      "min": 495,
+      "max": 3527,
+      "total": 141906
+    },
+    "total_tokens": {
+      "mean": 12993.633333333333,
+      "median": 12837.0,
+      "min": 10678,
+      "max": 15962,
+      "total": 1169427
+    },
+    "generation_seconds": {
+      "mean": 13.966940682228758,
+      "median": 12.851676899939775,
+      "min": 4.106548700015992,
+      "max": 39.14752789994236,
+      "total": 1257.0246614005882
+    },
+    "execution_seconds": {
+      "mean": 4.850679986665233,
+      "median": 4.635481450008228,
+      "min": 0.0,
+      "max": 27.308093899977393,
+      "total": 436.5611987998709
+    },
+    "end_to_end_seconds": {
+      "mean": 19.87204605667567,
+      "median": 18.68271468335297,
+      "min": 8.992534966673702,
+      "max": 45.572669199978314,
+      "total": 1788.4841451008106
+    },
+    "retrieval_seconds": {
+      "mean": 3.1632761633450475,
+      "median": 2.803994000016246,
+      "min": 0.6916939999209717,
+      "max": 7.355958400061354,
+      "total": 94.89828490035143
+    },
+    "retrieved_tests": {
+      "mean": 8.866666666666667,
+      "median": 9.0,
+      "min": 6,
+      "max": 10,
+      "total": 266
+    },
+    "distinct_pairs": {
+      "mean": 4.633333333333334,
+      "median": 4.5,
+      "min": 2,
+      "max": 7,
+      "total": 139
+    },
+    "context_chars": {
+      "mean": 14318.133333333333,
+      "median": 14704.0,
+      "min": 11661,
+      "max": 14988,
+      "total": 429544
+    },
+    "tokens_per_fully_passing_suite": 58471.35
+  }
+}

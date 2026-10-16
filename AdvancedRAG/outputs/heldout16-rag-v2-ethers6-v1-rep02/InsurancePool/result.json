@@ -1,0 +1,36 @@
+{
+  "contract": "InsurancePool",
+  "status": "test_failures",
+  "prompt_sha256": "671d9f30ca96e0fe398e81b5938c5804988cec1e7fd1879ab4e37ce2c720e84d",
+  "generation_seconds": 22.7508242999902,
+  "usage": {
+    "prompt_tokens": 12325,
+    "total_tokens": 15714,
+    "completion_tokens": 3389,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.6568146999925375
+  },
+  "passed_tests": 17,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "InsurancePool Policy Actions Should revert when buying policy with zero premium",
+      "error": "Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 85.29,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

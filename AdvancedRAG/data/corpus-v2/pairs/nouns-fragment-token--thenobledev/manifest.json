@@ -1,0 +1,117 @@
+{
+  "id": "nouns-fragment-token--thenobledev",
+  "domain": "nft",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "NounsFragmentToken.sol",
+    "IInflator.sol",
+    "INounsArt.sol",
+    "INounsDescriptorArt.sol",
+    "INounsDescriptorMinimal.sol",
+    "INounsFragmentDescriptorMinimal.sol",
+    "INounsSeeder.sol",
+    "INounsToken.sol",
+    "Inflate.sol",
+    "IProxyRegistry.sol",
+    "MockNounsToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/TheNobleDev/fractional-nouns",
+    "commit": "2c1acb9608484d286c5005fb187090dd84acac65",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/NounsFragmentToken.sol",
+      "contracts/external/nouns/interfaces/IInflator.sol",
+      "contracts/external/nouns/interfaces/INounsArt.sol",
+      "contracts/external/nouns/interfaces/INounsDescriptorArt.sol",
+      "contracts/external/nouns/interfaces/INounsDescriptorMinimal.sol",
+      "contracts/external/nouns/interfaces/INounsFragmentDescriptorMinimal.sol",
+      "contracts/external/nouns/interfaces/INounsSeeder.sol",
+      "contracts/external/nouns/interfaces/INounsToken.sol",
+      "contracts/external/nouns/libs/Inflate.sol",
+      "contracts/external/opensea/IProxyRegistry.sol",
+      "contracts/mock/MockNounsToken.sol"
+    ],
+    "test_paths": [
+      "test/NounsFragmentToken.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/NounsFragmentToken.sol": "63efbe3c0af0f894fe7ac7d86180ddbc4faa01fb096396bbb3e79a9cc0d1937c",
+      "contracts/external/nouns/interfaces/IInflator.sol": "e1513776b6a6b05621a35ed3dd0a1b306a7cd82d0569716608cd63940b2b4ffd",
+      "contracts/external/nouns/interfaces/INounsArt.sol": "e7c72a15eba64085e7655b06e9e723498edfde948c90cc2dc016223ea603b288",
+      "contracts/external/nouns/interfaces/INounsDescriptorArt.sol": "ccd44bd3d5c93b9d4fed60d5a129f403b4dde47e22a432c1dcfb289c5ee3c903",
+      "contracts/external/nouns/interfaces/INounsDescriptorMinimal.sol": "3035cab9305c25bc0b59fee22f446b236afad3fde48158c9282340fa80d7d00d",
+      "contracts/external/nouns/interfaces/INounsFragmentDescriptorMinimal.sol": "734a6d762efb90f88caaaf33875a60180e517947b34d26e2aaa27c9f1171b4a2",
+      "contracts/external/nouns/interfaces/INounsSeeder.sol": "b16b497c3e1c4bbd42d0b1aa1e96ae1db3cfb75954eb6e6a277d45111743bc37",
+      "contracts/external/nouns/interfaces/INounsToken.sol": "6eb78d6d666a92169db58c19e1851dd5464855396af28cd7ffd4f3d9d521473d",
+      "contracts/external/nouns/libs/Inflate.sol": "f6c806c607d90f50be782e583b3a7265ba3f0611ccbd51632fac186572195e87",
+      "contracts/external/opensea/IProxyRegistry.sol": "60c2ceb66f514f969b70259ab0b2db75e2558d6b541fd663542ec2ecabaaea53",
+      "contracts/mock/MockNounsToken.sol": "e6ec97a44fb0fe4f4ed3da285ddf5a542a705732578f78da31e86273f7bcf1ac",
+      "test/NounsFragmentToken.js": "f3f8eb4c11a7fa3999e57e310d17f6dfc1a3a302209a1de1c91fab4b3ea6424e"
+    }
+  },
+  "transformations": [
+    {
+      "file": "NounsFragmentToken.sol",
+      "kind": "import-path",
+      "before": "./external/nouns/interfaces/INounsFragmentDescriptorMinimal.sol",
+      "after": "./INounsFragmentDescriptorMinimal.sol"
+    },
+    {
+      "file": "NounsFragmentToken.sol",
+      "kind": "import-path",
+      "before": "./external/nouns/interfaces/INounsDescriptorMinimal.sol",
+      "after": "./INounsDescriptorMinimal.sol"
+    },
+    {
+      "file": "NounsFragmentToken.sol",
+      "kind": "import-path",
+      "before": "./external/nouns/interfaces/INounsToken.sol",
+      "after": "./INounsToken.sol"
+    },
+    {
+      "file": "NounsFragmentToken.sol",
+      "kind": "import-path",
+      "before": "./external/nouns/interfaces/INounsSeeder.sol",
+      "after": "./INounsSeeder.sol"
+    },
+    {
+      "file": "NounsFragmentToken.sol",
+      "kind": "import-path",
+      "before": "./external/opensea/IProxyRegistry.sol",
+      "after": "./IProxyRegistry.sol"
+    },
+    {
+      "file": "IInflator.sol",
+      "kind": "import-path",
+      "before": "../libs/Inflate.sol",
+      "after": "./Inflate.sol"
+    },
+    {
+      "file": "MockNounsToken.sol",
+      "kind": "import-path",
+      "before": "../external/nouns/interfaces/INounsSeeder.sol",
+      "after": "./INounsSeeder.sol"
+    },
+    {
+      "file": "MockNounsToken.sol",
+      "kind": "import-path",
+      "before": "../external/nouns/interfaces/INounsDescriptorMinimal.sol",
+      "after": "./INounsDescriptorMinimal.sol"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "NounsFragmentToken.js",
+      "upstream_path": "test/NounsFragmentToken.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Fractional Nouns fragment ERC721; closure pulls Nouns interfaces/descriptor libraries (large). Primary 174 non-blank lines, closure 1206 lines/11 files; 17 its, 29 expects; pragma >=0.8.0 <0.9.0/^0.8.20/^0.8.6.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:26.401576+00:00"
+}

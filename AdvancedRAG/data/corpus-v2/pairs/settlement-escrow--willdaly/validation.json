@@ -1,0 +1,97 @@
+{
+  "pair": "settlement-escrow--willdaly",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T07:38:18.119393+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AgentPayToken.sol": "566472980bddd8c60867f13095dcd632199f944eba6d09fe02b04f8f8614d60f",
+    "contracts/IPolicyParameters.sol": "62a6bff32fbe1b7b0f7f3ec95571748bffa176f0d9be85cc7365e54360928358",
+    "contracts/ISettlementEscrow.sol": "9a035f15396194baa470772d50a350238a046fb97f5352ff62d54a335ec037a8",
+    "contracts/IWalletAuthorizer.sol": "49c43a954a6437f0c8474c3a950a6b790a2153d5200412a22df10f6e762efad2",
+    "contracts/MockPolicyParameters.sol": "7a434ed4cffb34718208b0fecfa7b9e2e06e7b436fe41cf57a33e1924fe64bfb",
+    "contracts/MockWalletAuthorizer.sol": "07fb96fb3e805d3f9fba82bd5e4b8cf4913f4eac7543c980bc04b2267fa9a012",
+    "contracts/ReentrantAttacker.sol": "501243ae0db267738c8eadcee481f15465d444abc92ca34b34bac3a6c9f78976",
+    "contracts/ReentrantToken.sol": "bdf0edeaa28a4c4a1452aedb2482176bf3a1358da9ea2855736e596d22d6cef1",
+    "contracts/RevertingReceiver.sol": "3eecb0161e75cdefee720f9838a9d7d8a2a278332ef89596ab0fd1d29aaa33fc",
+    "contracts/SettlementEscrow.sol": "fdff1de9d69d706c07fc8daa25db9cb3043f91fe7b3b994bc854ed35f74fd389",
+    "LICENSE": "a4fa636d169c0c0bb591137c8d4b79259521e21d0eed8e8f267c711097f85f5f",
+    "manifest.json": "a24bc62a222c3762ef5e93087a9c06da8e39680a6b22fd5c102338d1f63e5a99",
+    "test/SettlementEscrow.test.js": "7d055a26e9c5f29108287f505a057c2dae440ba806aac8eb2e7f42dfa61fb648"
+  },
+  "pair_sha256": "60beb49a8dc39d752cfd511cb303ae0c6155209425b959b4b89995eca0d4307d",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "SettlementEscrow.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.191,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "SettlementEscrow.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.187,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "SettlementEscrow.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.181,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.38,
+      "mocha": {
+        "tests": 15,
+        "passes": 15,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 11.83,
+      "mocha": {
+        "tests": 15,
+        "passes": 15,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "SettlementEscrow.sol": {
+          "statements": 100.0,
+          "branches": 87.5,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "AgentPayToken.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 50.0,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

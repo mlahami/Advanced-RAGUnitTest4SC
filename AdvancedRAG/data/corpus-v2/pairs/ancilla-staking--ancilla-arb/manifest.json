@@ -1,0 +1,47 @@
+{
+  "id": "ancilla-staking--ancilla-arb",
+  "domain": "staking",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "AncillaStaking.sol",
+    "AncillaToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ANCILLA-ARB/ancilla",
+    "commit": "ae4c4f341939a3f451c27b9271fac7f5f1ae89a9",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/AncillaStaking.sol",
+      "contracts/AncillaToken.sol"
+    ],
+    "test_paths": [
+      "test/AncillaStaking.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/AncillaStaking.sol": "2ae4d04fe794638592d6ee767cef84efb7ac97de5d787c1013ce7c1a007b8e54",
+      "contracts/AncillaToken.sol": "31f2cecd558e03fc678d6216a7435c230fe6abd16a0ef64603bdb7f1952d2b46",
+      "test/AncillaStaking.test.ts": "8648a39b348f4594af7a474caea3d4b9cfd36994dbb822ab20ec2cc8e183f3dd"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "AncillaStaking.test.js",
+      "upstream_path": "test/AncillaStaking.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "AncillaStaking.test.js",
+      "upstream_path": "test/AncillaStaking.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 118 lines, closure 202 lines, 2 files; 12 it blocks; history: 20 commits 2026-08-21..2026-08-22",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:30:56.885104+00:00"
+}

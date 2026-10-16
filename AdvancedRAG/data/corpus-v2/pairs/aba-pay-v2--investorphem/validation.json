@@ -1,0 +1,89 @@
+{
+  "pair": "aba-pay-v2--investorphem",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:55:49.301326+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AbaPayV2.sol": "915d88da303dbf75ce3115ab7cb0742d2dee9ef17d5261e52208e0c43e1d2785",
+    "contracts/Mocks.sol": "8663252cf82908d377f5f36d9080cc1528a82a6656e26d5c09b309b149eb4ea5",
+    "LICENSE": "fc0ac897a1effc726b3cd0136e7d4d7ebd540adbb9ca4c83ef214b2c08066194",
+    "manifest.json": "44e5e37c7ef2a72bda07c2ce1651239609fdb70701a8b421b6f116fcf3ff3be3",
+    "test/AbaPayV2.test.js": "4c545cd98cba9e26656c318bd63deaca0db75a6b3458c089d4fa93603e64169f"
+  },
+  "pair_sha256": "d531d3433dfda0a80ff2d80e7d664633e1e9a8d444fcf5cf200cd86da8658a6b",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "AbaPayV2.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.152,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "AbaPayV2.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.152,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "AbaPayV2.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.145,
+        "signatures": 0.0,
+        "min_functions": 9
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.2,
+      "mocha": {
+        "tests": 21,
+        "passes": 21,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.53,
+      "mocha": {
+        "tests": 21,
+        "passes": 21,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "AbaPayV2.sol": {
+          "statements": 100.0,
+          "branches": 70.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Mocks.sol": {
+          "statements": 86.67,
+          "branches": 66.67,
+          "functions": 90.0,
+          "lines": 86.67
+        }
+      }
+    }
+  },
+  "accepted": true
+}

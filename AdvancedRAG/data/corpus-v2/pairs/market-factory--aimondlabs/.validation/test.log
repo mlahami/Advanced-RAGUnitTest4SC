@@ -1,0 +1,43 @@
+Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+   --> runs/corpus-v2-validation/market-factory--aimondlabs/contracts/ConditionalTokens.sol:214:32:
+    |
+214 |     function payoutDenominator(bytes32 conditionId) external view returns (uint256) {
+    |                                ^^^^^^^^^^^^^^^^^^^
+
+
+Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+   --> runs/corpus-v2-validation/market-factory--aimondlabs/contracts/MarketFactory.sol:279:34:
+    |
+279 |     function getMarketsByCreator(address creator) external view returns (bytes32[] memory) {
+    |                                  ^^^^^^^^^^^^^^^
+
+
+Warning: Function state mutability can be restricted to pure
+   --> runs/corpus-v2-validation/market-factory--aimondlabs/contracts/ConditionalTokens.sol:214:5:
+    |
+214 |     function payoutDenominator(bytes32 conditionId) external view returns (uint256) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Warning: Function state mutability can be restricted to pure
+   --> runs/corpus-v2-validation/market-factory--aimondlabs/contracts/MarketFactory.sol:279:5:
+    |
+279 |     function getMarketsByCreator(address creator) external view returns (bytes32[] memory) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Compiled 21 Solidity files successfully (evm target: paris).
+Token IDs: {
+  tokenId1: 30155016154652958225188634057904159971517282909602606988456473962558316205750n,
+  tokenId2: 11081750547074291069929443360484389404561269288983960617859078652456870906760n,
+  tokenId3: 3630733248445987756327181464892753944960702391715081972456497023354517268891n
+}
+Balances: { token1: 1000000000n, token2: 1000000000n, token3: 1000000000n }
+50bp condition resolved: true
+25bp condition resolved: true
+Token balances before redemption:
+50bp YES: 1000000000n
+25bp NO: 1000000000n
+Balance before: 8000000000
+Balance after: 9000000000
+Expected change: 1000000000

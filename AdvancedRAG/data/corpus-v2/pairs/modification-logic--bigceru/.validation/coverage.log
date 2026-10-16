@@ -1,0 +1,46 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> HistoryTracker.sol
+> IRegistration.sol
+> ModificationLogic.sol
+> ProfileManager.sol
+> PropertyRegistry.sol
+> PropertyStorage.sol
+> Registration.sol
+> TransferLogic.sol
+> ViewGetFunctions.sol
+
+Compilation:
+============
+
+Compiled 20 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |    43.31 |    28.35 |    53.33 |    44.87 |                |
+  HistoryTracker.sol    |      100 |     37.5 |    83.33 |     87.5 |             38 |
+  IRegistration.sol     |      100 |      100 |      100 |      100 |                |
+  ModificationLogic.sol |    96.97 |    70.45 |      100 |       96 |        112,135 |
+  ProfileManager.sol    |    11.11 |       10 |     37.5 |       25 |... 100,114,124 |
+  PropertyRegistry.sol  |      100 |       50 |      100 |    94.44 |             56 |
+  PropertyStorage.sol   |      100 |      100 |      100 |      100 |                |
+  Registration.sol      |      100 |       50 |      100 |      100 |                |
+  TransferLogic.sol     |        0 |        0 |        0 |        0 |... 173,174,177 |
+  ViewGetFunctions.sol  |     8.89 |    10.53 |    18.18 |     12.9 |... 169,178,182 |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |    43.31 |    28.35 |    53.33 |    44.87 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

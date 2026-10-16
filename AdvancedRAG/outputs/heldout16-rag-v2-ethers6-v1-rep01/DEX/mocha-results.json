@@ -1,0 +1,291 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 14,
+    "passes": 3,
+    "pending": 0,
+    "failures": 12,
+    "start": "2026-09-30T21:10:07.288Z",
+    "end": "2026-09-30T21:10:10.384Z",
+    "duration": 3096
+  },
+  "tests": [
+    {
+      "title": "should set the correct token addresses",
+      "fullTitle": "DEX Deployment should set the correct token addresses",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "should initialize reserves to zero",
+      "fullTitle": "DEX Deployment should initialize reserves to zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "expected 100000000000000000000000 to equal 0.",
+        "stack": "AssertionError: expected 100000000000000000000000 to equal 0.\n    at Context.<anonymous> (test\\generated.test.js:50:39)"
+      }
+    },
+    {
+      "title": "should add initial liquidity correctly",
+      "fullTitle": "DEX addLiquidity should add initial liquidity correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 36,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient balance'\n    at BenchmarkERC20._transfer (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/BenchmarkFixtures.sol:142)\n    at BenchmarkERC20.transferFrom (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/BenchmarkFixtures.sol:94)\n    at DEX.addLiquidity (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/DEX.sol:46)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.addLiquidity (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:63:18)"
+      }
+    },
+    {
+      "title": "should add subsequent liquidity proportionally",
+      "fullTitle": "DEX addLiquidity should add subsequent liquidity proportionally",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 22,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient balance'\n    at BenchmarkERC20._transfer (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/BenchmarkFixtures.sol:142)\n    at BenchmarkERC20.transferFrom (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/BenchmarkFixtures.sol:94)\n    at DEX.addLiquidity (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/DEX.sol:46)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.addLiquidity (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:82:7)"
+      }
+    },
+    {
+      "title": "should revert when adding zero liquidity",
+      "fullTitle": "DEX addLiquidity should revert when adding zero liquidity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 17,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Insufficient liquidity minted', but it reverted with reason 'insufficient allowance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Insufficient liquidity minted', but it reverted with reason 'insufficient allowance'\n    at Context.<anonymous> (test\\generated.test.js:96:7)"
+      }
+    },
+    {
+      "title": "should revert when adding liquidity with zero amount",
+      "fullTitle": "DEX addLiquidity should revert when adding liquidity with zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "should swap tokenA for tokenB correctly",
+      "fullTitle": "DEX swapAforB should swap tokenA for tokenB correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 28,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'name')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js:160:59\n    at Array.find (<anonymous>)\n    at Context.<anonymous> (test\\generated.test.js:160:34)"
+      }
+    },
+    {
+      "title": "should revert when swapping zero amount",
+      "fullTitle": "DEX swapAforB should revert when swapping zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 23,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:172:7)"
+      }
+    },
+    {
+      "title": "should revert when swapping more than available",
+      "fullTitle": "DEX swapAforB should revert when swapping more than available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 17,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:179:7)"
+      }
+    },
+    {
+      "title": "should swap tokenB for tokenA correctly",
+      "fullTitle": "DEX swapBforA should swap tokenB for tokenA correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 20,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'name')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js:196:59\n    at Array.find (<anonymous>)\n    at Context.<anonymous> (test\\generated.test.js:196:34)"
+      }
+    },
+    {
+      "title": "should revert when swapping zero amount",
+      "fullTitle": "DEX swapBforA should revert when swapping zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 19,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:208:7)"
+      }
+    },
+    {
+      "title": "should revert when swapping more than available",
+      "fullTitle": "DEX swapBforA should revert when swapping more than available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 25,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:215:7)"
+      }
+    },
+    {
+      "title": "should handle large swap amounts",
+      "fullTitle": "DEX Edge Cases should handle large swap amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'name')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js:228:59\n    at Array.find (<anonymous>)\n    at Context.<anonymous> (test\\generated.test.js:228:34)"
+      }
+    },
+    {
+      "title": "should maintain correct reserve ratios after multiple swaps",
+      "fullTitle": "DEX Edge Cases should maintain correct reserve ratios after multiple swaps",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 39,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "should initialize reserves to zero",
+      "fullTitle": "DEX Deployment should initialize reserves to zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "expected 100000000000000000000000 to equal 0.",
+        "stack": "AssertionError: expected 100000000000000000000000 to equal 0.\n    at Context.<anonymous> (test\\generated.test.js:50:39)"
+      }
+    },
+    {
+      "title": "should add initial liquidity correctly",
+      "fullTitle": "DEX addLiquidity should add initial liquidity correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 36,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient balance'\n    at BenchmarkERC20._transfer (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/BenchmarkFixtures.sol:142)\n    at BenchmarkERC20.transferFrom (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/BenchmarkFixtures.sol:94)\n    at DEX.addLiquidity (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/DEX.sol:46)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.addLiquidity (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:63:18)"
+      }
+    },
+    {
+      "title": "should add subsequent liquidity proportionally",
+      "fullTitle": "DEX addLiquidity should add subsequent liquidity proportionally",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 22,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient balance'\n    at BenchmarkERC20._transfer (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/BenchmarkFixtures.sol:142)\n    at BenchmarkERC20.transferFrom (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/BenchmarkFixtures.sol:94)\n    at DEX.addLiquidity (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/DEX.sol:46)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.addLiquidity (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:82:7)"
+      }
+    },
+    {
+      "title": "should revert when adding zero liquidity",
+      "fullTitle": "DEX addLiquidity should revert when adding zero liquidity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 17,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Insufficient liquidity minted', but it reverted with reason 'insufficient allowance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Insufficient liquidity minted', but it reverted with reason 'insufficient allowance'\n    at Context.<anonymous> (test\\generated.test.js:96:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"should remove liquidity correctly\"",
+      "fullTitle": "DEX removeLiquidity \"before each\" hook for \"should remove liquidity correctly\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 24,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient balance'\n    at BenchmarkERC20._transfer (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/BenchmarkFixtures.sol:142)\n    at BenchmarkERC20.transferFrom (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/BenchmarkFixtures.sol:94)\n    at DEX.addLiquidity (runs/heldout16-rag-v2-ethers6-v1-rep01/DEX/contracts/DEX.sol:46)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.addLiquidity (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:112:7)"
+      }
+    },
+    {
+      "title": "should swap tokenA for tokenB correctly",
+      "fullTitle": "DEX swapAforB should swap tokenA for tokenB correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 28,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'name')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js:160:59\n    at Array.find (<anonymous>)\n    at Context.<anonymous> (test\\generated.test.js:160:34)"
+      }
+    },
+    {
+      "title": "should revert when swapping zero amount",
+      "fullTitle": "DEX swapAforB should revert when swapping zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 23,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:172:7)"
+      }
+    },
+    {
+      "title": "should revert when swapping more than available",
+      "fullTitle": "DEX swapAforB should revert when swapping more than available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 17,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:179:7)"
+      }
+    },
+    {
+      "title": "should swap tokenB for tokenA correctly",
+      "fullTitle": "DEX swapBforA should swap tokenB for tokenA correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 20,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'name')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js:196:59\n    at Array.find (<anonymous>)\n    at Context.<anonymous> (test\\generated.test.js:196:34)"
+      }
+    },
+    {
+      "title": "should revert when swapping zero amount",
+      "fullTitle": "DEX swapBforA should revert when swapping zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 19,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:208:7)"
+      }
+    },
+    {
+      "title": "should revert when swapping more than available",
+      "fullTitle": "DEX swapBforA should revert when swapping more than available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 25,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:215:7)"
+      }
+    },
+    {
+      "title": "should handle large swap amounts",
+      "fullTitle": "DEX Edge Cases should handle large swap amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'name')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js:228:59\n    at Array.find (<anonymous>)\n    at Context.<anonymous> (test\\generated.test.js:228:34)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "should set the correct token addresses",
+      "fullTitle": "DEX Deployment should set the correct token addresses",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "should revert when adding liquidity with zero amount",
+      "fullTitle": "DEX addLiquidity should revert when adding liquidity with zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "should maintain correct reserve ratios after multiple swaps",
+      "fullTitle": "DEX Edge Cases should maintain correct reserve ratios after multiple swaps",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DEX\\test\\generated.test.js",
+      "duration": 39,
+      "err": {}
+    }
+  ]
+}

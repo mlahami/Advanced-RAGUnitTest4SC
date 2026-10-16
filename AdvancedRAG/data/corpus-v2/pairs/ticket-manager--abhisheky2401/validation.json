@@ -1,0 +1,89 @@
+{
+  "pair": "ticket-manager--abhisheky2401",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:17:11.741641+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/EventCore.sol": "3e01ef939b24d04c427a976442c636f1887962122ae3036741e45039c2e472f0",
+    "contracts/TicketManager.sol": "43959b780e9cae317b09513c4b77eb6911008879a204f20a9e07726ef6a1f117",
+    "LICENSE": "143cf4fc17e4717b50416608cb2be2ed4fdd11f546c50e6bde11ce4a8f184393",
+    "manifest.json": "93826c8d336c9b539e4864db8f59f960d97a65fb1a1a49280a20256d630147da",
+    "test/TicketManager.test.js": "aaeb2bff11a96d94142cce237be0f969aff15c6c5c631bac652fe376b95aa242"
+  },
+  "pair_sha256": "419191187170a573c9045336bf8ce9de4600f1552cec0f2c6bbfd7944c83ee07",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "TicketManager.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.192,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "TicketManager.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.174,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "TicketManager.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.16,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.97,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.56,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "TicketManager.sol": {
+          "statements": 100.0,
+          "branches": 72.73,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "EventCore.sol": {
+          "statements": 83.33,
+          "branches": 37.5,
+          "functions": 75.0,
+          "lines": 83.33
+        }
+      }
+    }
+  },
+  "accepted": true
+}

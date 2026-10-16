@@ -1,0 +1,56 @@
+{
+  "contract": "TokenVesting",
+  "status": "test_failures",
+  "prompt_sha256": "d828fe970ce848632f75e30c2378585d420f26e7b69130acb7fee05d35aad9e9",
+  "generation_seconds": 18.196930399979465,
+  "usage": {
+    "prompt_tokens": 8336,
+    "total_tokens": 10456,
+    "completion_tokens": 2120,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 7.4520945000695065
+  },
+  "passed_tests": 10,
+  "failed_tests": 6,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "TokenVesting Grant Revocation Should revoke a grant and emit event",
+      "error": "Error in \"GrantRevoked\" event: Error in the 3rd argument assertion: expected 362 to equal 1000."
+    },
+    {
+      "title": "TokenVesting Token Claiming Should allow claiming after cliff",
+      "error": "Timestamp 1790807708 is lower than the previous block's timestamp 1790807717"
+    },
+    {
+      "title": "TokenVesting Token Claiming Should not allow claiming before cliff",
+      "error": "Timestamp 1790805708 is lower than the previous block's timestamp 1790807721"
+    },
+    {
+      "title": "TokenVesting Token Claiming Should not allow claiming after end",
+      "error": "expected 641 to equal 1000."
+    },
+    {
+      "title": "TokenVesting Token Claiming Should not allow non-beneficiary to claim",
+      "error": "Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)"
+    },
+    {
+      "title": "TokenVesting View Functions Should return correct claimable amount",
+      "error": "Timestamp 1790805708 is lower than the previous block's timestamp 1790811316"
+    }
+  ],
+  "coverage": {
+    "statements": 83.33,
+    "branches": 77.27,
+    "functions": 100.0,
+    "lines": 85.71
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

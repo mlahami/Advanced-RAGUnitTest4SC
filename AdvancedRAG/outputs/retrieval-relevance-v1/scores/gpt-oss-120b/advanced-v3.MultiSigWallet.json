@@ -1,0 +1,79 @@
+{
+  "id": "advanced-v3.MultiSigWallet",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "MultiSigWallet",
+  "chunk_ids": [
+    4673,
+    4739,
+    4674,
+    4718,
+    4741,
+    4675,
+    4719,
+    4743,
+    4747,
+    4723
+  ],
+  "context_sha256": "e53e00445264a267a0a2c6e176edf0e8a5cc22a316a9f40899f57b21521d1e21",
+  "ratings": [
+    {
+      "chunk_id": 4673,
+      "rating": 1,
+      "reason": "Tests non‑owner access control, relevant pattern though error type differs"
+    },
+    {
+      "chunk_id": 4739,
+      "rating": 1,
+      "reason": "Shows onlyOwner revert pattern useful, but uses non‑existent function name; cannot be directly reused."
+    },
+    {
+      "chunk_id": 4674,
+      "rating": 1,
+      "reason": "Tests similar flow (submit, confirm, execute with threshold) but contract lacks events and uses different revert messages, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 4718,
+      "rating": 1,
+      "reason": "Tests onlyOwner revert pattern, which applies, but function signature and parameters differ, so only generic access‑control check is reusable."
+    },
+    {
+      "chunk_id": 4741,
+      "rating": 2,
+      "reason": "Tests double‑confirm revert, matching target’s confirm logic; function names differ but pattern can be renamed and reused."
+    },
+    {
+      "chunk_id": 4675,
+      "rating": 1,
+      "reason": "Tests double execution prevention pattern, but contract uses different revert message and no custom error, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 4719,
+      "rating": 1,
+      "reason": "Only demonstrates generic revert testing; the specific function and parameters do not exist in the target contract."
+    },
+    {
+      "chunk_id": 4743,
+      "rating": 1,
+      "reason": "Tests onlyOwner revert pattern, but function name and signature differ, so not directly reusable"
+    },
+    {
+      "chunk_id": 4747,
+      "rating": 1,
+      "reason": "Shows onlyOwner revert pattern, but function name differs; cannot reuse directly"
+    },
+    {
+      "chunk_id": 4723,
+      "rating": 1,
+      "reason": "Shows generic revert‑check pattern for only‑owner modifier, but tests a non‑existent function, so only a basic pattern applies."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 12269,
+    "completion_tokens": 1043,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 80.9,
+  "evaluated_utc": "2026-10-14T18:06:35.484434+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"TimelockVault\", function () {\n  let timelockVault;\n  let owner;\n  let otherAccount;\n  const delaySeconds = 3600n; // 1 hour\n  const amount = ethers.parseEther(\"1\");\n\n  beforeEach(async function () {\n    [owner, otherAccount] = await ethers.getSigners();\n\n    const TimelockVault = await ethers.getContractFactory(\"TimelockVault\");\n    timelockVault = await TimelockVault.deploy(delaySeconds, { value: amount });\n    await timelockVault.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should set the right owner\", async function () {\n      expect(await timelockVault.owner()).to.equal(owner.address);\n    });\n\n    it(\"Should set the correct unlock time\", async function () {\n      const currentTimestamp = await time.latest();\n      expect(await timelockVault.unlockTime()).to.equal(currentTimestamp + delaySeconds);\n    });\n\n    it(\"Should receive and store the funds\", async function () {\n      expect(await ethers.provider.getBalance(await timelockVault.getAddress())).to.equal(amount);\n    });\n  });\n\n  describe(\"Withdrawals\", function () {\n    describe(\"Validations\", function () {\n      it(\"Should revert with the right error if called too soon\", async function () {\n        await expect(timelockVault.withdraw()).to.be.revertedWith(\"locked\");\n      });\n\n      it(\"Should revert with the right error if called from another account\", async function () {\n        await time.increaseTo(await timelockVault.unlockTime());\n        await expect(timelockVault.connect(otherAccount).withdraw()).to.be.revertedWith(\"not owner\");\n      });\n    });\n\n    describe(\"Events\", function () {\n      it(\"Should emit an event on withdrawals\", async function () {\n        await time.increaseTo(await timelockVault.unlockTime());\n        await expect(timelockVault.withdraw()).to.not.be.reverted;\n      });\n    });\n\n    describe(\"Transfers\", function () {\n      it(\"Should transfer the funds to the owner if no one else is payable\", async function () {\n        await time.increaseTo(await timelockVault.unlockTime());\n        const initialBalance = await ethers.provider.getBalance(owner.address);\n        const tx = await timelockVault.withdraw();\n        const receipt = await tx.wait();\n        const gasUsed = receipt.gasUsed * tx.gasPrice;\n        const finalBalance = await ethers.provider.getBalance(owner.address);\n\n        expect(finalBalance).to.equal(initialBalance + amount - gasUsed);\n      });\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 5.3529178000753745,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 10614,
+      "total_tokens": 11212,
+      "completion_tokens": 598,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "e4a11853746d335f90f6dc9b5aa0c02cd58153c02291f5d9d7dcf47ca4b8d88b"
+}

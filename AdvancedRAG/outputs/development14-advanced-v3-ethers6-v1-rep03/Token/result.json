@@ -1,0 +1,36 @@
+{
+  "contract": "Token",
+  "status": "test_failures",
+  "prompt_sha256": "1cc4374526c11acc811addcade611d6ddf16425be4f7da62b9b0d78a5cf6dad1",
+  "generation_seconds": 9.148653799900785,
+  "usage": {
+    "prompt_tokens": 10968,
+    "total_tokens": 12294,
+    "completion_tokens": 1326,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.867940200027078
+  },
+  "passed_tests": 18,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Token TransferFrom Should fail if transferring to zero address",
+      "error": "Expected transaction to be reverted with reason 'zero address', but it didn't revert"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

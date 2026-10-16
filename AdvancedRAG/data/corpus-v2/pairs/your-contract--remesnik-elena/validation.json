@@ -1,0 +1,82 @@
+{
+  "pair": "your-contract--remesnik-elena",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:16:44.706844+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/YourContract.sol": "09117d7ff59743c3ed1ecbb4a5fee54cebc84c314e58f66324c6d6decc809c14",
+    "LICENSE": "1718fd37c03d59682aced48d59b08744f87e3c3e82dcff287265a6ba66a60c56",
+    "manifest.json": "ad56f44d6043d39fddacf1c5b9447b0633cb968548fce0b7aefed2046a890d2d",
+    "test/YourContract.js": "e96f5c6dadc25fc42cf988735647df63342a2ca339c9c3918e95d5abfabd963a"
+  },
+  "pair_sha256": "7cb960f64a789490de9658f8a635bcc8f54a82275c2b55c7644431c4430214e8",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "YourContract.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.264,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "YourContract.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.207,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "YourContract.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.196,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.02,
+      "mocha": {
+        "tests": 43,
+        "passes": 43,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.29,
+      "mocha": {
+        "tests": 43,
+        "passes": 43,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "YourContract.sol": {
+          "statements": 100.0,
+          "branches": 82.86,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

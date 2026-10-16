@@ -1,0 +1,52 @@
+{
+  "contract": "InsurancePool",
+  "status": "test_failures",
+  "prompt_sha256": "f4f510efc14536f399fb8bec18c6eba9d6912e0a1eb3044f2ccc89b41fc1756d",
+  "generation_seconds": 24.998296200064942,
+  "usage": {
+    "prompt_tokens": 12435,
+    "total_tokens": 15962,
+    "completion_tokens": 3527,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.656675699981861
+  },
+  "passed_tests": 15,
+  "failed_tests": 5,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "InsurancePool Policy Actions Should allow buying a policy and emit PolicyPurchased event",
+      "error": "Error in \"PolicyPurchased\" event: Error in the 5th argument assertion: expected 1790922206 to equal 1790922205."
+    },
+    {
+      "title": "InsurancePool Policy Actions Should revert on zero premium",
+      "error": "Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'"
+    },
+    {
+      "title": "InsurancePool Oracle-triggered Payouts Should revert on non-claimable policy",
+      "error": "Expected transaction to be reverted with reason 'Not claimable', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)"
+    },
+    {
+      "title": "InsurancePool Reward Distribution Should correctly distribute rewards to LPs",
+      "error": "expected 0 to equal 33333333333333333."
+    },
+    {
+      "title": "InsurancePool Reward Distribution Should update rewards when withdrawing",
+      "error": "expected 100000000000000000 to equal 50000000000000000."
+    }
+  ],
+  "coverage": {
+    "statements": 97.3,
+    "branches": 82.35,
+    "functions": 90.0,
+    "lines": 97.3
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

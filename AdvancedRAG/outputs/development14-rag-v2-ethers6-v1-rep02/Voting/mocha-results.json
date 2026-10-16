@@ -1,0 +1,179 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 11,
+    "passes": 10,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-30T21:25:27.932Z",
+    "end": "2026-09-30T21:25:28.371Z",
+    "duration": 439
+  },
+  "tests": [
+    {
+      "title": "Should set the right chairperson",
+      "fullTitle": "Voting Deployment Should set the right chairperson",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should initialize candidates correctly",
+      "fullTitle": "Voting Deployment Should initialize candidates correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 23,
+      "err": {
+        "message": "Transaction reverted without a reason string",
+        "stack": "Error: Transaction reverted without a reason string\n    at Voting.candidates (runs/development14-rag-v2-ethers6-v1-rep02/Voting/contracts/Voting.sol:14)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at staticCallResult (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:337:22)\n    at staticCall (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:303:24)\n    at Proxy.candidates (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:351:41)\n    at Context.<anonymous> (test\\generated.test.js:27:14)"
+      }
+    },
+    {
+      "title": "Should revert if less than 2 candidates",
+      "fullTitle": "Voting Deployment Should revert if less than 2 candidates",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should allow a voter to vote",
+      "fullTitle": "Voting Voting Should allow a voter to vote",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should prevent double voting",
+      "fullTitle": "Voting Voting Should prevent double voting",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should prevent voting for invalid candidate",
+      "fullTitle": "Voting Voting Should prevent voting for invalid candidate",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should update vote counts correctly",
+      "fullTitle": "Voting Voting Should update vote counts correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should return the correct winner",
+      "fullTitle": "Voting Winner Should return the correct winner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should handle a tie correctly",
+      "fullTitle": "Voting Winner Should handle a tie correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should return 0 for no votes",
+      "fullTitle": "Voting Winner Should return 0 for no votes",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should maintain correct state after multiple votes",
+      "fullTitle": "Voting State Should maintain correct state after multiple votes",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should initialize candidates correctly",
+      "fullTitle": "Voting Deployment Should initialize candidates correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 23,
+      "err": {
+        "message": "Transaction reverted without a reason string",
+        "stack": "Error: Transaction reverted without a reason string\n    at Voting.candidates (runs/development14-rag-v2-ethers6-v1-rep02/Voting/contracts/Voting.sol:14)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at staticCallResult (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:337:22)\n    at staticCall (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:303:24)\n    at Proxy.candidates (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:351:41)\n    at Context.<anonymous> (test\\generated.test.js:27:14)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right chairperson",
+      "fullTitle": "Voting Deployment Should set the right chairperson",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should revert if less than 2 candidates",
+      "fullTitle": "Voting Deployment Should revert if less than 2 candidates",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should allow a voter to vote",
+      "fullTitle": "Voting Voting Should allow a voter to vote",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should prevent double voting",
+      "fullTitle": "Voting Voting Should prevent double voting",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should prevent voting for invalid candidate",
+      "fullTitle": "Voting Voting Should prevent voting for invalid candidate",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should update vote counts correctly",
+      "fullTitle": "Voting Voting Should update vote counts correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should return the correct winner",
+      "fullTitle": "Voting Winner Should return the correct winner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should handle a tie correctly",
+      "fullTitle": "Voting Winner Should handle a tie correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should return 0 for no votes",
+      "fullTitle": "Voting Winner Should return 0 for no votes",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should maintain correct state after multiple votes",
+      "fullTitle": "Voting State Should maintain correct state after multiple votes",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Voting\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    }
+  ]
+}

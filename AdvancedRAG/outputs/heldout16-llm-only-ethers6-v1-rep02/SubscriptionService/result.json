@@ -1,0 +1,52 @@
+{
+  "contract": "SubscriptionService",
+  "status": "test_failures",
+  "prompt_sha256": "ff7bac8a1ea1a066804673ed363fc6eb501a5ba4b19c88a3854c547bb9f73498",
+  "generation_seconds": 12.678645999985747,
+  "usage": {
+    "prompt_tokens": 8281,
+    "total_tokens": 10064,
+    "completion_tokens": 1783,
+    "prompt_tokens_details": {
+      "cached_tokens": 8192
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 6.84648659999948
+  },
+  "passed_tests": 8,
+  "failed_tests": 5,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "SubscriptionService Subscription Management should subscribe to a plan",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+    },
+    {
+      "title": "SubscriptionService Subscription Management should cancel subscription",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+    },
+    {
+      "title": "SubscriptionService Subscription Management should revert when already subscribed",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+    },
+    {
+      "title": "SubscriptionService Subscription Management should revert when payment fails",
+      "error": "Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'"
+    },
+    {
+      "title": "SubscriptionService Charge Management \"before each\" hook for \"should charge a subscriber\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+    }
+  ],
+  "coverage": {
+    "statements": 37.93,
+    "branches": 54.17,
+    "functions": 70.0,
+    "lines": 39.29
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

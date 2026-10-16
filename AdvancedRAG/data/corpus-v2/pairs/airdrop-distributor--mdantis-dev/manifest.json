@@ -1,0 +1,32 @@
+{
+  "id": "airdrop-distributor--mdantis-dev",
+  "domain": "airdrop",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "AirdropDistributor.sol",
+    "LiminalToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/mdantis-dev/SOLIDITY-Liminal-Games",
+    "commit": "09a7484ac7f92e054eedc087b2d03431968e435b",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/AirdropDistributor.sol",
+      "contracts/LiminalToken.sol"
+    ],
+    "test_paths": [
+      "test/AirdropDistributor.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/AirdropDistributor.sol": "3408f6a8f057bdd4b1b01479756cdc0b739f6ab6d29eaa15199e95b5f96be211",
+      "contracts/LiminalToken.sol": "4ccb7d99e266bb50c6b38ab3883e75be20d26a7cff6dbe371386508735524b3e",
+      "test/AirdropDistributor.js": "eb207f612880dc477e2f0df506acb1331aabb956ab5c6da1da6860469da55c1f"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "allocation claims with deadlines; 2025 repo, 0 stars",
+  "imported_utc": "2026-09-27T21:50:19.969843+00:00"
+}

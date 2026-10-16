@@ -1,0 +1,235 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 15,
+    "passes": 14,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-27T19:47:54.548Z",
+    "end": "2026-09-27T19:47:55.150Z",
+    "duration": 602
+  },
+  "tests": [
+    {
+      "title": "Should set the correct seller",
+      "fullTitle": "Auction Deployment Should set the correct seller",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct end time",
+      "fullTitle": "Auction Deployment Should set the correct end time",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should initialize with zero highest bid",
+      "fullTitle": "Auction Deployment Should initialize with zero highest bid",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "Should initialize with zero address as highest bidder",
+      "fullTitle": "Auction Deployment Should initialize with zero address as highest bidder",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should initialize as not ended",
+      "fullTitle": "Auction Deployment Should initialize as not ended",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should accept a valid bid",
+      "fullTitle": "Auction Bidding Should accept a valid bid",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 7,
+      "err": {
+        "message": "Event \"BidPlaced\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"BidPlaced\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:45:7)"
+      }
+    },
+    {
+      "title": "Should reject a bid below the current highest bid",
+      "fullTitle": "Auction Bidding Should reject a bid below the current highest bid",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should reject a bid after auction ends",
+      "fullTitle": "Auction Bidding Should reject a bid after auction ends",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should refund the previous highest bidder when a new higher bid is placed",
+      "fullTitle": "Auction Bidding Should refund the previous highest bidder when a new higher bid is placed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should allow a bidder to withdraw their refund",
+      "fullTitle": "Auction Withdrawing Refunds Should allow a bidder to withdraw their refund",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should reject withdrawal if no refund is available",
+      "fullTitle": "Auction Withdrawing Refunds Should reject withdrawal if no refund is available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should allow the seller to finalize the auction after it ends",
+      "fullTitle": "Auction Finalizing the Auction Should allow the seller to finalize the auction after it ends",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should reject finalization before the auction ends",
+      "fullTitle": "Auction Finalizing the Auction Should reject finalization before the auction ends",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should reject finalization if already ended",
+      "fullTitle": "Auction Finalizing the Auction Should reject finalization if already ended",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should transfer the highest bid to the seller when finalizing",
+      "fullTitle": "Auction Finalizing the Auction Should transfer the highest bid to the seller when finalizing",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should accept a valid bid",
+      "fullTitle": "Auction Bidding Should accept a valid bid",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 7,
+      "err": {
+        "message": "Event \"BidPlaced\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"BidPlaced\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:45:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct seller",
+      "fullTitle": "Auction Deployment Should set the correct seller",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct end time",
+      "fullTitle": "Auction Deployment Should set the correct end time",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should initialize with zero highest bid",
+      "fullTitle": "Auction Deployment Should initialize with zero highest bid",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "Should initialize with zero address as highest bidder",
+      "fullTitle": "Auction Deployment Should initialize with zero address as highest bidder",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should initialize as not ended",
+      "fullTitle": "Auction Deployment Should initialize as not ended",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should reject a bid below the current highest bid",
+      "fullTitle": "Auction Bidding Should reject a bid below the current highest bid",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should reject a bid after auction ends",
+      "fullTitle": "Auction Bidding Should reject a bid after auction ends",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should refund the previous highest bidder when a new higher bid is placed",
+      "fullTitle": "Auction Bidding Should refund the previous highest bidder when a new higher bid is placed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should allow a bidder to withdraw their refund",
+      "fullTitle": "Auction Withdrawing Refunds Should allow a bidder to withdraw their refund",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should reject withdrawal if no refund is available",
+      "fullTitle": "Auction Withdrawing Refunds Should reject withdrawal if no refund is available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should allow the seller to finalize the auction after it ends",
+      "fullTitle": "Auction Finalizing the Auction Should allow the seller to finalize the auction after it ends",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should reject finalization before the auction ends",
+      "fullTitle": "Auction Finalizing the Auction Should reject finalization before the auction ends",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should reject finalization if already ended",
+      "fullTitle": "Auction Finalizing the Auction Should reject finalization if already ended",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should transfer the highest bid to the seller when finalizing",
+      "fullTitle": "Auction Finalizing the Auction Should transfer the highest bid to the seller when finalizing",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\Auction\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    }
+  ]
+}

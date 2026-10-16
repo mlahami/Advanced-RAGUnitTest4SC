@@ -1,0 +1,60 @@
+{
+  "contract": "InsurancePool",
+  "status": "test_failures",
+  "prompt_sha256": "b6e02b91eb857b5dcc364c4b72245ced7647ebd87daa111671b2078f74ce7ced",
+  "generation_seconds": 21.646982899983414,
+  "usage": {
+    "prompt_tokens": 8572,
+    "total_tokens": 11484,
+    "completion_tokens": 2912,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.818547300063074
+  },
+  "passed_tests": 14,
+  "failed_tests": 7,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "InsurancePool LP Actions should allow claiming rewards",
+      "error": "Expected event \"Withdrawn\" to be emitted, but it wasn't"
+    },
+    {
+      "title": "InsurancePool Policy Actions should allow buying a policy",
+      "error": "Error in \"PolicyPurchased\" event: Error in the 5th argument assertion: Expected arguments array to have length 1, but it has undefined"
+    },
+    {
+      "title": "InsurancePool Policy Actions should revert on zero premium",
+      "error": "Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'"
+    },
+    {
+      "title": "InsurancePool Oracle Actions should revert on claiming non-claimable policy",
+      "error": "Expected transaction to be reverted with reason 'Not claimable', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)"
+    },
+    {
+      "title": "InsurancePool Oracle Actions should revert on expiring non-active policy",
+      "error": "Expected transaction to be reverted with reason 'Not active', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)"
+    },
+    {
+      "title": "InsurancePool Reward Distribution should correctly distribute rewards to LPs",
+      "error": "expected 0 to be close to 6666666666666666666 +/- 1"
+    },
+    {
+      "title": "InsurancePool Reward Distribution should update rewards on withdraw",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Undercollateralized'"
+    }
+  ],
+  "coverage": {
+    "statements": 97.3,
+    "branches": 79.41,
+    "functions": 90.0,
+    "lines": 97.3
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

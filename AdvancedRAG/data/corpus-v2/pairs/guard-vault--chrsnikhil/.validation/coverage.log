@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> GuardVault.sol
+> MockUSDC.sol
+
+Compilation:
+============
+
+Compiled 16 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+-----------------|----------|----------|----------|----------|----------------|
+File             |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-----------------|----------|----------|----------|----------|----------------|
+ contracts\      |    94.44 |       75 |       90 |    95.83 |                |
+  GuardVault.sol |      100 |       75 |      100 |      100 |                |
+  MockUSDC.sol   |    66.67 |      100 |    66.67 |    66.67 |             13 |
+-----------------|----------|----------|----------|----------|----------------|
+All files        |    94.44 |       75 |       90 |    95.83 |                |
+-----------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

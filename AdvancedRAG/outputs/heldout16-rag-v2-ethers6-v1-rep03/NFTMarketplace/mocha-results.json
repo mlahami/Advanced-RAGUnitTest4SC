@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-09-30T21:46:27.935Z",
+    "end": "2026-09-30T21:46:28.255Z",
+    "duration": 320
+  },
+  "tests": [
+    {
+      "title": "should set royalty correctly",
+      "fullTitle": "NFTMarketplace setRoyalty should set royalty correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 29,
+      "err": {}
+    },
+    {
+      "title": "should revert when setting royalty above 10%",
+      "fullTitle": "NFTMarketplace setRoyalty should revert when setting royalty above 10%",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "should list an NFT correctly",
+      "fullTitle": "NFTMarketplace list should list an NFT correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 11,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Not approved'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Not approved'\n    at NFTMarketplace.list (runs/heldout16-rag-v2-ethers6-v1-rep03/NFTMarketplace/contracts/NFTMarketplace.sol:62)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.list (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:49:7)"
+      }
+    },
+    {
+      "title": "should revert when listing NFT not owned by sender",
+      "fullTitle": "NFTMarketplace list should revert when listing NFT not owned by sender",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "should revert when listing NFT not approved for marketplace",
+      "fullTitle": "NFTMarketplace list should revert when listing NFT not approved for marketplace",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "should list an NFT correctly",
+      "fullTitle": "NFTMarketplace list should list an NFT correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 11,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Not approved'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Not approved'\n    at NFTMarketplace.list (runs/heldout16-rag-v2-ethers6-v1-rep03/NFTMarketplace/contracts/NFTMarketplace.sol:62)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.list (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:49:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"should allow buying a listed NFT\"",
+      "fullTitle": "NFTMarketplace buy \"before each\" hook for \"should allow buying a listed NFT\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Not approved'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Not approved'\n    at NFTMarketplace.list (runs/heldout16-rag-v2-ethers6-v1-rep03/NFTMarketplace/contracts/NFTMarketplace.sol:62)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.list (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:74:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "should set royalty correctly",
+      "fullTitle": "NFTMarketplace setRoyalty should set royalty correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 29,
+      "err": {}
+    },
+    {
+      "title": "should revert when setting royalty above 10%",
+      "fullTitle": "NFTMarketplace setRoyalty should revert when setting royalty above 10%",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "should revert when listing NFT not owned by sender",
+      "fullTitle": "NFTMarketplace list should revert when listing NFT not owned by sender",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "should revert when listing NFT not approved for marketplace",
+      "fullTitle": "NFTMarketplace list should revert when listing NFT not approved for marketplace",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    }
+  ]
+}

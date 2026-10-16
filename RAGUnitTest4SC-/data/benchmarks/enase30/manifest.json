@@ -1,0 +1,464 @@
+{
+  "benchmark_id": "enase30-v1",
+  "created_date": "2026-09-23",
+  "designation": "30-contract benchmark: 14 development contracts plus 16 independently selected held-out contracts",
+  "evaluation_policy": "Use heldout-new16 for the primary independent evaluation. Do not tune prompts, grounding rules, or retrieval on their results. The combined 30 may be reported descriptively but is not wholly independent.",
+  "retrieval_leakage_policy": "Evaluation contracts and their reference tests must not be indexed. Exact normalized source containment was checked against AdvancedRAG/data/corpus-corrected-v2/compatibility.md; no selected new contract was found.",
+  "compiler_validation": "All 30 user candidates compiled individually with solc 0.8.24 before selection; selected audit is recorded in evaluation/candidate_contract_audit.json.",
+  "selection": {
+    "requested_total": 30,
+    "original_development": 14,
+    "new_heldout": 16,
+    "criteria": [
+      "compiles with solc 0.8.24",
+      "not exact content in RAG corpus",
+      "not an exact duplicate of enase14",
+      "avoid same-name and high-overlap variants of existing 14",
+      "increase functional and complexity diversity"
+    ],
+    "excluded_near_duplicates": [
+      "AuctionHouse",
+      "CrowdfundingCampaign",
+      "ERC20Token",
+      "Escrow",
+      "MultiSigWallet",
+      "SplitPayment",
+      "TimeLock",
+      "voting"
+    ],
+    "excluded_redundant_domains": [
+      "OnChainGovernance",
+      "StakingRewards",
+      "NFTCollection",
+      "RoyaltyToken",
+      "WrappedETH",
+      "LotteryPool"
+    ],
+    "note": "Exclusion of redundant-domain candidates is a diversity choice, not evidence that those files are byte-level duplicates."
+  },
+  "files": [
+    {
+      "name": "AccessControl",
+      "path": "contracts/AccessControl.sol",
+      "bytes": 758,
+      "sha256": "a8a077a49a634c327163c625eb9928faa80a442254c22cdf0ed4f68e9386a3d1"
+    },
+    {
+      "name": "Adoption",
+      "path": "contracts/Adoption.sol",
+      "bytes": 392,
+      "sha256": "cd6a15b58df51dbb4c89948604461823d1482449fbabf6099551109a4c7e65c3"
+    },
+    {
+      "name": "Auction",
+      "path": "contracts/Auction.sol",
+      "bytes": 1165,
+      "sha256": "27d77b0875775bf78c091d9bf5e77b54caae2226fd6fb5bf53bf967dbd55f553"
+    },
+    {
+      "name": "BatchTransfer",
+      "path": "contracts/BatchTransfer.sol",
+      "bytes": 4250,
+      "sha256": "5acae3e8d82eb2be5396ccdf19b603442987cb17d1e03df01a121a6b7f371a36"
+    },
+    {
+      "name": "BondingCurve",
+      "path": "contracts/BondingCurve.sol",
+      "bytes": 6624,
+      "sha256": "c333f96fe6c1a40d4a6f7df0f7edd23c4e69a3839f390dbbd785c3f53fde2e0d"
+    },
+    {
+      "name": "Counter",
+      "path": "contracts/Counter.sol",
+      "bytes": 447,
+      "sha256": "56e937c774627c816cc03c94dda23cc8c91836317545a5eb22e341b770b4ee91"
+    },
+    {
+      "name": "CrossChainBridge",
+      "path": "contracts/CrossChainBridge.sol",
+      "bytes": 5317,
+      "sha256": "cea36e2f8a1ae96b57c62a47e94f7102a125fe6b8d4b715dcb81cd29ae4a1d2b"
+    },
+    {
+      "name": "Crowdfunding",
+      "path": "contracts/Crowdfunding.sol",
+      "bytes": 1315,
+      "sha256": "183223dc1e0d633463af0676b32ca41cd366405a28080af7cef0ea4eeee149fe"
+    },
+    {
+      "name": "DAOGovernor",
+      "path": "contracts/DAOGovernor.sol",
+      "bytes": 3386,
+      "sha256": "2a2348861b93736b017f391db5be14e309b20797f8b704bb753c02ab7780de32"
+    },
+    {
+      "name": "DEX",
+      "path": "contracts/DEX.sol",
+      "bytes": 3601,
+      "sha256": "e97c744edfaa54ec0e5534bc9861b77dada1b1f4d1a99be2474ace6055757da2"
+    },
+    {
+      "name": "Escrow",
+      "path": "contracts/Escrow.sol",
+      "bytes": 1081,
+      "sha256": "ba516d891940340797e732d756d63745813a6a06bfdd0072b263df311f1d645c"
+    },
+    {
+      "name": "GaslessRelayer",
+      "path": "contracts/GaslessRelayer.sol",
+      "bytes": 4489,
+      "sha256": "3d4c793c726a3c2c28e097e4e057c4f70c0336bdbb0fcdd20f1537ab99b5f13d"
+    },
+    {
+      "name": "InsurancePool",
+      "path": "contracts/InsurancePool.sol",
+      "bytes": 6487,
+      "sha256": "cf44d9485510a287203c2da95f6146500893777eb594be180381c9eba5f648f3"
+    },
+    {
+      "name": "LendingPool",
+      "path": "contracts/LendingPool.sol",
+      "bytes": 2612,
+      "sha256": "756f514e55388792ba4bb7c366a448b176dec516a790a2de69cfd015a6f05d43"
+    },
+    {
+      "name": "MerkleAirdrop",
+      "path": "contracts/MerkleAirdrop.sol",
+      "bytes": 1452,
+      "sha256": "aaf69093451997ced5a39d703e3635ffd54eb8b45887fa8defd4aa29647034de"
+    },
+    {
+      "name": "MetaCoin",
+      "path": "contracts/MetaCoin.sol",
+      "bytes": 976,
+      "sha256": "399a3658cd837893735cb711050577bc3d1d7ce87d6d18e0db47fd4034eed584"
+    },
+    {
+      "name": "MultiSigWallet",
+      "path": "contracts/MultiSigWallet.sol",
+      "bytes": 1812,
+      "sha256": "a2568460ef516f3aacdb70b9e02ea32f30373343960fa244264c8dc350570ee0"
+    },
+    {
+      "name": "NFTMarketplace",
+      "path": "contracts/NFTMarketplace.sol",
+      "bytes": 2627,
+      "sha256": "be2b4e7d76e22818b51ba1e49a15efad740fe9bec6311e449cd6fb5a154307c2"
+    },
+    {
+      "name": "NFTStaking",
+      "path": "contracts/NFTStaking.sol",
+      "bytes": 6879,
+      "sha256": "68a74af0de8cb8738c59672e72bc232cf884b5fbc5379f438d9a69b78b92c203"
+    },
+    {
+      "name": "PaymentSplitter",
+      "path": "contracts/PaymentSplitter.sol",
+      "bytes": 985,
+      "sha256": "fa56063882bbe88fd8e213d0dc2007b6e3b72de307323c99ada71d8bba5263ce"
+    },
+    {
+      "name": "PriceOracle",
+      "path": "contracts/PriceOracle.sol",
+      "bytes": 7440,
+      "sha256": "51a02774d03982028609d0c3107d9f3d26b9a64f2a11fa3572d36c5311436695"
+    },
+    {
+      "name": "RateLimiter",
+      "path": "contracts/RateLimiter.sol",
+      "bytes": 3974,
+      "sha256": "dbb3223ff17ad77b42d2d3e715fc1afd6a697b1687d27054deb477caafc74763"
+    },
+    {
+      "name": "Registry",
+      "path": "contracts/Registry.sol",
+      "bytes": 922,
+      "sha256": "ef3e9702d28680cfd60c270eddf026159f5fcc99ec974ee2bcbbc61366c97240"
+    },
+    {
+      "name": "SimpleStorage",
+      "path": "contracts/SimpleStorage.sol",
+      "bytes": 283,
+      "sha256": "d91095fa9872bb7c3af5eddf70e887eae09765a6c891bfbddc7d95a3a5a2950f"
+    },
+    {
+      "name": "SubscriptionService",
+      "path": "contracts/SubscriptionService.sol",
+      "bytes": 5613,
+      "sha256": "7cbf6cb887c2f6d09ed809ea32fef30ab3919e049730c4bb193db992be01bca7"
+    },
+    {
+      "name": "TimelockVault",
+      "path": "contracts/TimelockVault.sol",
+      "bytes": 549,
+      "sha256": "436dc2f948fdebd1c45ee7ae0baaba025c3429259abacc676a267e2e85db92ff"
+    },
+    {
+      "name": "Token",
+      "path": "contracts/Token.sol",
+      "bytes": 1667,
+      "sha256": "2773d862bd7ecd8f55e4ed064f70f4466b8cfd3d92cf1ae1693f835a44eba6dc"
+    },
+    {
+      "name": "TokenVesting",
+      "path": "contracts/TokenVesting.sol",
+      "bytes": 5354,
+      "sha256": "2ddc1eadbbdeb748c47361115fc8d9bce1605e99e5d96b7df699ef454a2f7e88"
+    },
+    {
+      "name": "Voting",
+      "path": "contracts/Voting.sol",
+      "bytes": 941,
+      "sha256": "c3d81a67c51944f4d7dc368bdcd07b4d225c2811f63c5e2fc605796e087a947f"
+    },
+    {
+      "name": "YieldVault",
+      "path": "contracts/YieldVault.sol",
+      "bytes": 2693,
+      "sha256": "692725ce93683e785f36db36ecf9306f6058979b743a67d65bcc177bf60a0f19"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "AccessControl",
+      "path": "contracts/AccessControl.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "Adoption",
+      "path": "contracts/Adoption.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "Auction",
+      "path": "contracts/Auction.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "BatchTransfer",
+      "path": "contracts/BatchTransfer.sol",
+      "split": "heldout-new16",
+      "complexity": "moderate",
+      "family": "batch-transfer",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "BondingCurve",
+      "path": "contracts/BondingCurve.sol",
+      "split": "heldout-new16",
+      "complexity": "complex",
+      "family": "tokenomics",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "Counter",
+      "path": "contracts/Counter.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "CrossChainBridge",
+      "path": "contracts/CrossChainBridge.sol",
+      "split": "heldout-new16",
+      "complexity": "complex",
+      "family": "bridge",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "Crowdfunding",
+      "path": "contracts/Crowdfunding.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "DAOGovernor",
+      "path": "contracts/DAOGovernor.sol",
+      "split": "heldout-new16",
+      "complexity": "complex",
+      "family": "governance",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "DEX",
+      "path": "contracts/DEX.sol",
+      "split": "heldout-new16",
+      "complexity": "complex",
+      "family": "defi-exchange",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "Escrow",
+      "path": "contracts/Escrow.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "GaslessRelayer",
+      "path": "contracts/GaslessRelayer.sol",
+      "split": "heldout-new16",
+      "complexity": "complex",
+      "family": "meta-transactions",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "InsurancePool",
+      "path": "contracts/InsurancePool.sol",
+      "split": "heldout-new16",
+      "complexity": "complex",
+      "family": "insurance",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "LendingPool",
+      "path": "contracts/LendingPool.sol",
+      "split": "heldout-new16",
+      "complexity": "complex",
+      "family": "lending",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "MerkleAirdrop",
+      "path": "contracts/MerkleAirdrop.sol",
+      "split": "heldout-new16",
+      "complexity": "moderate",
+      "family": "airdrop",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "MetaCoin",
+      "path": "contracts/MetaCoin.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "MultiSigWallet",
+      "path": "contracts/MultiSigWallet.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "NFTMarketplace",
+      "path": "contracts/NFTMarketplace.sol",
+      "split": "heldout-new16",
+      "complexity": "complex",
+      "family": "nft-marketplace",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "NFTStaking",
+      "path": "contracts/NFTStaking.sol",
+      "split": "heldout-new16",
+      "complexity": "complex",
+      "family": "nft-staking",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "PaymentSplitter",
+      "path": "contracts/PaymentSplitter.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "PriceOracle",
+      "path": "contracts/PriceOracle.sol",
+      "split": "heldout-new16",
+      "complexity": "complex",
+      "family": "oracle",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "RateLimiter",
+      "path": "contracts/RateLimiter.sol",
+      "split": "heldout-new16",
+      "complexity": "complex",
+      "family": "rate-limiting",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "Registry",
+      "path": "contracts/Registry.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "SimpleStorage",
+      "path": "contracts/SimpleStorage.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "SubscriptionService",
+      "path": "contracts/SubscriptionService.sol",
+      "split": "heldout-new16",
+      "complexity": "moderate",
+      "family": "subscription",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "TimelockVault",
+      "path": "contracts/TimelockVault.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "Token",
+      "path": "contracts/Token.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "TokenVesting",
+      "path": "contracts/TokenVesting.sol",
+      "split": "heldout-new16",
+      "complexity": "moderate",
+      "family": "vesting",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    },
+    {
+      "id": "Voting",
+      "path": "contracts/Voting.sol",
+      "split": "development-original14",
+      "complexity": "original",
+      "family": "legacy-enase14",
+      "provenance": "copied from enase14 with newline normalization; Solidity text otherwise unchanged"
+    },
+    {
+      "id": "YieldVault",
+      "path": "contracts/YieldVault.sol",
+      "split": "heldout-new16",
+      "complexity": "complex",
+      "family": "vault",
+      "provenance": "user-supplied Contracts-20260923T104020Z-1-001"
+    }
+  ]
+}
+

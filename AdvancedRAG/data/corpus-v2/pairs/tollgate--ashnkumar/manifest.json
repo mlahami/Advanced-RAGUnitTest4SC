@@ -1,0 +1,47 @@
+{
+  "id": "tollgate--ashnkumar",
+  "domain": "payments",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "Tollgate.sol",
+    "RejectsPayment.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ashnkumar/tollgate",
+    "commit": "2c69a5e59970ff080d96698c5e70635df4eb4ab9",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/contracts/contracts/Tollgate.sol",
+      "packages/contracts/contracts/test/RejectsPayment.sol"
+    ],
+    "test_paths": [
+      "packages/contracts/test/Tollgate.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "packages/contracts/contracts/Tollgate.sol": "ef27ed866f7c32aaae92e8a6398c05c01d6fef493b354878db732c0d15e1c4af",
+      "packages/contracts/contracts/test/RejectsPayment.sol": "86ae1e55bacca05f2b9dcfcc072185c8ea43394cdfad0bd6bf942a1d91700971",
+      "packages/contracts/test/Tollgate.test.ts": "759bf528440eba2970effae0516ccf23d1d3bfdda2e2d264ede80818dd526688"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "Tollgate.test.js",
+      "upstream_path": "packages/contracts/test/Tollgate.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "Tollgate.test.js",
+      "upstream_path": "packages/contracts/test/Tollgate.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Auth-and-capture pay-per-call escrow: providers register rate cards, buyers escrow a max quote bound to a terms hash, settler captures actual usage and refunds the rest, fail/reclaim after a timeout, protocol fee and pull withdrawals; primary 467 lines, no imports; 48 it blocks; type-only imports; LICENSE (MIT); history: 31 commits 2026-07-31..2026-08-18. Compiles 0.8.24 no optimizer (13.8 KB).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:36:16.163398+00:00"
+}

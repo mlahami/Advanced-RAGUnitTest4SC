@@ -1,0 +1,82 @@
+{
+  "pair": "time-flow-vault--ogazboiz",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:55:25.461356+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/TimeFlowVault.sol": "d8a72b706c7a570d22225338067d9aaa8e08b66162c962f55ff6f72a90b12d5b",
+    "LICENSE": "531edf98389ef36351b3e6b167bd73d24af20113bb7cf5184d996f4c08d69483",
+    "manifest.json": "81d89b7818c25d2683bfcbd43ea03c3075c52e2680b929219741183c875cc923",
+    "test/TimeFlowVault.js": "4f959bb71add8e9113b13fac44ce6f42c0c9580c97522ee5611496d810cc6d27"
+  },
+  "pair_sha256": "2f3684f335c8582945cb562d5082cd6a3267d8f3a0ff337cdc9c13828686bb74",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "TimeFlowVault.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.272,
+        "signatures": 0.037,
+        "min_functions": 8
+      },
+      {
+        "contract": "TimeFlowVault.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.215,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "TimeFlowVault.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.199,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.18,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.77,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "TimeFlowVault.sol": {
+          "statements": 95.12,
+          "branches": 55.77,
+          "functions": 86.96,
+          "lines": 97.5
+        }
+      }
+    }
+  },
+  "accepted": true
+}

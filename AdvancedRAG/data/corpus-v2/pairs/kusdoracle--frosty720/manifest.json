@@ -1,0 +1,34 @@
+{
+  "id": "kusdoracle--frosty720",
+  "domain": "oracle",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "KUSDOracle.sol",
+    "KUSDOracleFactory.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/frosty720/K_Oracles",
+    "commit": "ef83045ad9c52f2bdea56ab86aadb7f84337d27e",
+    "license": "MIT",
+    "contract_paths": [
+      "src/contracts/KUSDOracle.sol",
+      "src/contracts/KUSDOracleFactory.sol"
+    ],
+    "test_paths": [
+      "test/KUSDOracle.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "src/contracts/KUSDOracle.sol": "bd5aa55ea95825e95e1448a5f52155661f4b4f5621e6d7122ba5363a4ff44baf",
+      "src/contracts/KUSDOracleFactory.sol": "52e0d7ea37a64214e1050adfd9af8c6680c0e60495d8387b1bdc9fb660b41eb1",
+      "test/KUSDOracle.test.js": "243ff5f52ac40d1ae11fb5457f596a23c3bc30ddce7eae5665d5ae3aadd6f3dd"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 242 lines, closure 419 lines, 2 files; 17 it blocks; history: 5 commits 2025-11-12..2026-01-06",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:29:44.099963+00:00"
+}

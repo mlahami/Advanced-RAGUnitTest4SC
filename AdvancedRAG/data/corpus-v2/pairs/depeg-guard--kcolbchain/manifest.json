@@ -1,0 +1,80 @@
+{
+  "id": "depeg-guard--kcolbchain",
+  "domain": "stablecoin",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "DepegGuard.sol",
+    "ChainlinkPoRAdapter.sol",
+    "ComplianceModule.sol",
+    "Minter.sol",
+    "ReserveManager.sol",
+    "Stablecoin.sol",
+    "BurnToll.sol",
+    "IAggregatorV3.sol",
+    "ChainlinkPoRMock.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/kcolbchain/stablecoin-toolkit",
+    "commit": "2753ad360f14935d1485060a3006a4b6cc3129ce",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/DepegGuard.sol",
+      "contracts/ChainlinkPoRAdapter.sol",
+      "contracts/ComplianceModule.sol",
+      "contracts/Minter.sol",
+      "contracts/ReserveManager.sol",
+      "contracts/Stablecoin.sol",
+      "contracts/extensions/BurnToll.sol",
+      "contracts/interfaces/IAggregatorV3.sol",
+      "contracts/mocks/ChainlinkPoRMock.sol"
+    ],
+    "test_paths": [
+      "test/DepegGuard.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/DepegGuard.sol": "7106ce83acd0f95d8e9bcf33cc181a2ec994595583081f5b5503dc74f971df3e",
+      "contracts/ChainlinkPoRAdapter.sol": "b16ba4d3e07fefe8ac1e316b134be5ce267493f393c67c318154fff0b2de9dea",
+      "contracts/ComplianceModule.sol": "af52388bdff5d7790a7fab9cb13ff946e051e72d179f97c9b755e6396c5ff140",
+      "contracts/Minter.sol": "69f34ce6805a60ed435eb8f24b0d9f51848593f59f145df74961d696b035693d",
+      "contracts/ReserveManager.sol": "f503f054a41850f933870bbe6343844c4e28c7c3925356f0d0e0d94fbc1530d5",
+      "contracts/Stablecoin.sol": "5ccfd9bf18f30b3d8565117e3b016b43f0eefbdd15490eadebfddbec8212af7b",
+      "contracts/extensions/BurnToll.sol": "c93d86bb44b5ff5d450c1d046aef530194ef30cc99aa8bdfd3831b013459882c",
+      "contracts/interfaces/IAggregatorV3.sol": "06817829d301c63c61260eb0416044ba2439fe0b88565a12fbad0e1e01731e8b",
+      "contracts/mocks/ChainlinkPoRMock.sol": "25981c8b8e887c959496d7fa9bacc7d8547c853d70b359e9133a0945d54fa502",
+      "test/DepegGuard.test.js": "609c648fe617814903592a43e4dff0cc6bc39fc848598bea30e878cda03ec50f"
+    }
+  },
+  "transformations": [
+    {
+      "file": "DepegGuard.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IAggregatorV3.sol",
+      "after": "./IAggregatorV3.sol"
+    },
+    {
+      "file": "ChainlinkPoRAdapter.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IAggregatorV3.sol",
+      "after": "./IAggregatorV3.sol"
+    },
+    {
+      "file": "Minter.sol",
+      "kind": "import-path",
+      "before": "./extensions/BurnToll.sol",
+      "after": "./BurnToll.sol"
+    },
+    {
+      "file": "ChainlinkPoRMock.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IAggregatorV3.sol",
+      "after": "./IAggregatorV3.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 393 lines, closure 1316 lines, 9 files; 13 it blocks; history: 39 commits 2026-04-03..2026-06-06",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:25:28.655739+00:00"
+}

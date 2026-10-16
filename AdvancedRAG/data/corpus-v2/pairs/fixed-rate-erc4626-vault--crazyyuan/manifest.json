@@ -1,0 +1,70 @@
+{
+  "id": "fixed-rate-erc4626-vault--crazyyuan",
+  "domain": "yield-vault",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "FixedRateERC4626Vault.sol",
+    "MockERC20.sol",
+    "RewardToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/crazyyuan/defi-fixed-yield-course",
+    "commit": "55d1d847068f07b2d1f03bfe27bda1b5bf38ea30",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/FixedRateERC4626Vault.sol",
+      "contracts/MockERC20.sol",
+      "contracts/RewardToken.sol"
+    ],
+    "test_paths": [
+      "test/vault.spec.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/FixedRateERC4626Vault.sol": "5ca4ca676437818beede62e613c7a56ef7bd3a1689cfd524a82a612cbc576024",
+      "contracts/MockERC20.sol": "0d2c926601f84f4017c159a8fb3578f44377d80e8a5af71e37ebb6f6e616f571",
+      "contracts/RewardToken.sol": "23bf1975cb8b2124c42f5088b06912525b7274e176116e0b2416ec39fbfce4f6",
+      "test/vault.spec.ts": "32e9b2ebdb024c21d380018df29e90084714aaba231c90159b8bd7afc7256316"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "vault.spec.js",
+      "upstream_path": "test/vault.spec.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "vault.spec.js",
+      "upstream_path": "test/vault.spec.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "FixedRateERC4626Vault",
+        "RewardToken",
+        "MockERC20"
+      ],
+      "file": "vault.spec.js",
+      "upstream_path": "test/vault.spec.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "HardhatEthersSigner"
+      ],
+      "file": "vault.spec.js",
+      "upstream_path": "test/vault.spec.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 163 lines, closure 223 lines, 3 files; 5 it blocks; history: 13 commits 2025-08-10..2025-08-11",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:33:05.034190+00:00"
+}

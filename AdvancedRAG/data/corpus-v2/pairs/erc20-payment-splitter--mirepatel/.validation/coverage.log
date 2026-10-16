@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> ERC20PaymentSplitter.sol
+> MockERC20.sol
+
+Compilation:
+============
+
+Compiled 12 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+---------------------------|----------|----------|----------|----------|----------------|
+File                       |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+---------------------------|----------|----------|----------|----------|----------------|
+ contracts\                |    93.94 |    80.77 |    84.62 |    92.68 |                |
+  ERC20PaymentSplitter.sol |    93.75 |    83.33 |    81.82 |     92.5 |     73,135,149 |
+  MockERC20.sol            |      100 |       50 |      100 |      100 |                |
+---------------------------|----------|----------|----------|----------|----------------|
+All files                  |    93.94 |    80.77 |    84.62 |    92.68 |                |
+---------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

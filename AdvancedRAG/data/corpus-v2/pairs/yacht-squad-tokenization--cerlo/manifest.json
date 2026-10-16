@@ -1,0 +1,39 @@
+{
+  "id": "yacht-squad-tokenization--cerlo",
+  "domain": "nft",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "YachtSquadTokenization.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Cerlo/Yacht-Squad-Solidity",
+    "commit": "f7574daef0d70fc6fd67659030b102b998357df1",
+    "license": "GPL-3.0",
+    "contract_paths": [
+      "backend/contracts/YachtSquadTokenization.sol"
+    ],
+    "test_paths": [
+      "backend/test/YachtSquadTokenization.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "backend/contracts/YachtSquadTokenization.sol": "357d54ff99def7c48d0a98bff04b618a4d55cba238e5588c1419f599597dd603",
+      "backend/test/YachtSquadTokenization.test.js": "d502ba3633de952de23138ae020f7c3dae23c5f567edd3da3f52d89522d9d255"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "YachtSquadTokenization.test.js",
+      "upstream_path": "backend/test/YachtSquadTokenization.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "ERC1155 yacht-share tokenisation with ERC2981-style Royalties base, status management and transfer restrictions; GPL-3.0; 155 commits. Primary 249 non-blank lines, closure 249 lines/1 files; 21 its, 37 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:24.347243+00:00"
+}

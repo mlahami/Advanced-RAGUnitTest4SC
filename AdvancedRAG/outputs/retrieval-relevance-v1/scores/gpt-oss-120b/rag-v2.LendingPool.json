@@ -1,0 +1,49 @@
+{
+  "id": "rag-v2.LendingPool",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "LendingPool",
+  "chunk_ids": [
+    3916,
+    3917,
+    1451,
+    3924,
+    3926
+  ],
+  "context_sha256": "7fab1bccfe6d78f06da097fde057e34699fafa0fa0a7f0918916af7e42683a37",
+  "ratings": [
+    {
+      "chunk_id": 3916,
+      "rating": 2,
+      "reason": "Tests liquidation revert for a healthy borrower, matching target's liquidate health check; setup and assertions can be reused after renaming."
+    },
+    {
+      "chunk_id": 3917,
+      "rating": 1,
+      "reason": "Only generic revert‑checking pattern applies; specific functions and logic differ from target contract"
+    },
+    {
+      "chunk_id": 1451,
+      "rating": 1,
+      "reason": "Tests liquidation flow and balance transfer, similar concept but uses ERC20 lock mechanics not present in LendingPool; pattern partially reusable after adaptation."
+    },
+    {
+      "chunk_id": 3924,
+      "rating": 1,
+      "reason": "Only generic under‑collateralized revert pattern matches; setup and calls differ (ERC20 deposits vs ETH), so not directly reusable."
+    },
+    {
+      "chunk_id": 3926,
+      "rating": 0,
+      "reason": "Test uses token approvals and market functions not present; no matching depositCollateral or borrow pattern applicable."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8869,
+    "completion_tokens": 606,
+    "calls": 5
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 54.0,
+  "evaluated_utc": "2026-10-13T07:28:46.727092+00:00"
+}

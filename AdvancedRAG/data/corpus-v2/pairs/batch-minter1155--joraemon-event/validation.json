@@ -1,0 +1,89 @@
+{
+  "pair": "batch-minter1155--joraemon-event",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:11:49.382153+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/base1155.sol": "dab6429321a98c67fef9531919ae342f8613d9d53b82f0305228690dbd77a45b",
+    "contracts/batchMinter1155.sol": "abd242c947f0a9e5fdee608c246fccfb7c79dd085ba96e49dac0481d7d1f83a2",
+    "LICENSE": "7bd85762a61a4935e46305bd80866f4e7c0e7bc9e3ebe1614a34a2258ad15032",
+    "manifest.json": "ac8c392fafe4b64f581e7af6c8572e736fc43c98dbc2f3509d666564159a84e6",
+    "test/batchMinter1155.js": "6bf906507a52f9f1014cad97d658ad4a926d000cb88b48dc203537de08dd051c"
+  },
+  "pair_sha256": "487f5e59927773efd7a4f6f34087ef92be8258a27e400e1231b544749e79ddf3",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "batchMinter1155.sol",
+        "reference": "PaymentSplitter.sol",
+        "structural": 0.123,
+        "signatures": 0.0,
+        "min_functions": 1
+      },
+      {
+        "contract": "batchMinter1155.sol",
+        "reference": "BatchTransfer.sol",
+        "structural": 0.106,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "batchMinter1155.sol",
+        "reference": "MerkleAirdrop.sol",
+        "structural": 0.099,
+        "signatures": 0.0,
+        "min_functions": 2
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.91,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.16,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "batchMinter1155.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "base1155.sol": {
+          "statements": 50.0,
+          "branches": 10.0,
+          "functions": 30.0,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,31 @@
+{
+  "id": "meta-tales-nft--anubhavick",
+  "domain": "nft",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "MetaTalesNFT.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Anubhavick/Meta-Tales",
+    "commit": "5cc46b8f8cfb10388a624c599aaa8ade8087f8d2",
+    "license": "MIT",
+    "contract_paths": [
+      "contract/contracts/MetaTalesNFT.sol"
+    ],
+    "test_paths": [
+      "contract/test/MetaTalesNFT.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contract/contracts/MetaTalesNFT.sol": "abfd5ed82114a41c16029c807c83032975e9ee8841ab8e4c69c72f4d4a1e019b",
+      "contract/test/MetaTalesNFT.test.js": "49b27aaac67e78e8a9a1f8ad7e073c00f3e44b6fc2a32d9abdafe0fab7c8c663"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "ERC721 story NFTs with URI storage, burn and ERC2981 per-token/default royalties; 17 commits over 2 days. Primary 216 non-blank lines, closure 216 lines/1 files; 21 its, 36 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:20.439015+00:00"
+}

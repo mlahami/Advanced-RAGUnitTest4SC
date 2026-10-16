@@ -1,0 +1,82 @@
+{
+  "pair": "claim-token--sodofi",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T16:02:21.402944+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ClaimToken.sol": "9f6f7022acfb488c65a82e18c4d71b920b3219ed13d899b3319270ac4f5ce7c7",
+    "LICENSE": "99c6acbd7a46de42dfdc7e9a963ed9e78f0cb9321f4cb414cd0e5b41ab33e154",
+    "manifest.json": "de88e2d0607fb43ad8e4c8247d76775730edb1d4c781b77d19bbc98bbdc9f919",
+    "test/ClaimToken.test.js": "0b0cdf9ca15836e86e02d847b83f07a1fbc3a0b1f47b8d5436fc8ad021ba9788"
+  },
+  "pair_sha256": "8f96f393f682c21ee31e2754ddd1cbc6d36d2f2f5cf5d3975521487ac7682d88",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "ClaimToken.sol",
+        "reference": "MerkleAirdrop.sol",
+        "structural": 0.165,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "ClaimToken.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.134,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "ClaimToken.sol",
+        "reference": "MetaCoin.sol",
+        "structural": 0.134,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.2,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.28,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "ClaimToken.sol": {
+          "statements": 100.0,
+          "branches": 80.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

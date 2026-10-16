@@ -1,0 +1,577 @@
+{
+  "total": 14,
+  "completed": 14,
+  "statuses": {
+    "test_failures": 9,
+    "passed": 5
+  },
+  "results": [
+    {
+      "contract": "AccessControl",
+      "status": "test_failures",
+      "prompt_sha256": "da3e0b8462457592514b13c77454f57a3e48471659a288f9008f5abc7a41669e",
+      "generation_seconds": 8.20353920001071,
+      "usage": {
+        "prompt_tokens": 11199,
+        "total_tokens": 12046,
+        "completion_tokens": 847,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.507436100044288
+      },
+      "passed_tests": 7,
+      "failed_tests": 3,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "AccessControl Role Management Should allow admin to grant role",
+          "error": "Event \"RoleGranted\" doesn't exist in the contract"
+        },
+        {
+          "title": "AccessControl Role Management Should allow admin to revoke role",
+          "error": "Event \"RoleRevoked\" doesn't exist in the contract"
+        },
+        {
+          "title": "AccessControl Edge Cases Should handle role revocation for non-existent role",
+          "error": "Event \"RoleRevoked\" doesn't exist in the contract"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Adoption",
+      "status": "test_failures",
+      "prompt_sha256": "fe6f6df66090fa390271199f4a44ecfb3a7cdfa480f77ecd1720d7849dd76092",
+      "generation_seconds": 6.853790299966931,
+      "usage": {
+        "prompt_tokens": 10745,
+        "total_tokens": 11502,
+        "completion_tokens": 757,
+        "prompt_tokens_details": {
+          "cached_tokens": 10624
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.552249400061555
+      },
+      "passed_tests": 6,
+      "failed_tests": 1,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "Adoption Adopt Should allow adoption of a pet",
+          "error": "Event \"Adoption\" doesn't exist in the contract"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Auction",
+      "status": "test_failures",
+      "prompt_sha256": "d3b760d4392d757b968abfcd3b04eb4412978543729d94829f716c35bcd6bea3",
+      "generation_seconds": 13.857443800079636,
+      "usage": {
+        "prompt_tokens": 10521,
+        "total_tokens": 11714,
+        "completion_tokens": 1193,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.620075699989684
+      },
+      "passed_tests": 9,
+      "failed_tests": 2,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "Auction Deployment Should set the correct seller and end time",
+          "error": "Cannot mix BigInt and other types, use explicit conversions"
+        },
+        {
+          "title": "Auction Bidding Should accept a valid bid",
+          "error": "Event \"Bid\" doesn't exist in the contract"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Counter",
+      "status": "passed",
+      "prompt_sha256": "281633174a1c30f6d5dc1f004bb8764699c536911028d9fae1c4360108ebccee",
+      "generation_seconds": 6.231120500015095,
+      "usage": {
+        "prompt_tokens": 10609,
+        "total_tokens": 11123,
+        "completion_tokens": 514,
+        "prompt_tokens_details": {
+          "cached_tokens": 10496
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 0,
+        "seconds": 4.291809399961494
+      },
+      "passed_tests": 7,
+      "failed_tests": 0,
+      "pending_tests": 0,
+      "failures": [],
+      "coverage": {
+        "statements": 0.0,
+        "branches": 0.0,
+        "functions": 0.0,
+        "lines": 0.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Crowdfunding",
+      "status": "test_failures",
+      "prompt_sha256": "4bac730a2e022f08d2585127ae4593dad7eea3a585ffeb634ce92f59a5bba04a",
+      "generation_seconds": 19.330744999926537,
+      "usage": {
+        "prompt_tokens": 11111,
+        "total_tokens": 12874,
+        "completion_tokens": 1763,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.729261600063182
+      },
+      "passed_tests": 13,
+      "failed_tests": 2,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "Crowdfunding Contribute Should allow contributions before deadline",
+          "error": "Event \"ContributionReceived\" doesn't exist in the contract"
+        },
+        {
+          "title": "Crowdfunding Refund Should prevent double refunds",
+          "error": "Event \"Refunded\" doesn't exist in the contract"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Escrow",
+      "status": "test_failures",
+      "prompt_sha256": "6f35b3e7a84273bbe7ca2ee5f865ac86ec914c13d1c1b240385d7f7ce0259544",
+      "generation_seconds": 12.20908539998345,
+      "usage": {
+        "prompt_tokens": 10952,
+        "total_tokens": 12539,
+        "completion_tokens": 1587,
+        "prompt_tokens_details": {
+          "cached_tokens": 10880
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.824526199954562
+      },
+      "passed_tests": 2,
+      "failed_tests": 9,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "Escrow Deployment Should set the correct seller, buyer, and arbiter",
+          "error": "expected '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266' to equal '0x70997970C51812dc3A010C7d01b50e0d17dc79C8'."
+        },
+        {
+          "title": "Escrow Funding Should allow buyer to fund the escrow",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        },
+        {
+          "title": "Escrow Funding Should revert if funding with zero value",
+          "error": "Expected transaction to be reverted with reason 'invalid funding', but it reverted with reason 'only buyer'"
+        },
+        {
+          "title": "Escrow Funding Should revert if trying to fund twice",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        },
+        {
+          "title": "Escrow Releasing funds \"before each\" hook for \"Should allow buyer to release funds\"",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        },
+        {
+          "title": "Escrow Refunding \"before each\" hook for \"Should allow seller to refund\"",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        },
+        {
+          "title": "Escrow State changes Should correctly update state when funding",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        },
+        {
+          "title": "Escrow State changes Should correctly update state when releasing",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        },
+        {
+          "title": "Escrow State changes Should correctly update state when refunding",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        }
+      ],
+      "coverage": {
+        "statements": 12.5,
+        "branches": 6.25,
+        "functions": 50.0,
+        "lines": 12.5
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "MetaCoin",
+      "status": "test_failures",
+      "prompt_sha256": "9537f90a4fe54dd0f5bd4c73083eb17f59cab85c096bc097dd443424bd03a726",
+      "generation_seconds": 10.369514200021513,
+      "usage": {
+        "prompt_tokens": 10213,
+        "total_tokens": 11068,
+        "completion_tokens": 855,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.557511100079864
+      },
+      "passed_tests": 9,
+      "failed_tests": 3,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "MetaCoin sendCoin Should fail if sender doesn't have enough coins",
+          "error": "Expected transaction to be reverted"
+        },
+        {
+          "title": "MetaCoin sendCoin Should fail when transferring to zero address",
+          "error": "Expected transaction to be reverted"
+        },
+        {
+          "title": "MetaCoin Edge Cases Should handle maximum uint256 value transfer",
+          "error": "Expected transaction to be reverted"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "MultiSigWallet",
+      "status": "test_failures",
+      "prompt_sha256": "f6a70d211f226480d823467d9991ccd53a8dc7b01d6efb903344f6b64a908372",
+      "generation_seconds": 10.521050499984995,
+      "usage": {
+        "prompt_tokens": 11166,
+        "total_tokens": 12653,
+        "completion_tokens": 1487,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 5.219026900012977
+      },
+      "passed_tests": 14,
+      "failed_tests": 6,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "MultiSigWallet submit should allow owner to submit transaction",
+          "error": "Event \"Submission\" doesn't exist in the contract"
+        },
+        {
+          "title": "MultiSigWallet confirm should allow owner to confirm transaction",
+          "error": "Event \"Confirmation\" doesn't exist in the contract"
+        },
+        {
+          "title": "MultiSigWallet confirm should revert if transaction is already executed",
+          "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+        },
+        {
+          "title": "MultiSigWallet execute should allow owner to execute transaction when threshold is met",
+          "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+        },
+        {
+          "title": "MultiSigWallet execute should revert if transaction is already executed",
+          "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+        },
+        {
+          "title": "MultiSigWallet execute should revert if transfer fails",
+          "error": "Expected transaction to be reverted with reason 'transfer failed', but it reverted with reason 'not enough confirmations'"
+        }
+      ],
+      "coverage": {
+        "statements": 85.71,
+        "branches": 77.27,
+        "functions": 100.0,
+        "lines": 85.71
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "PaymentSplitter",
+      "status": "passed",
+      "prompt_sha256": "d2664c9e942bdb9160543938cd41a84a44316fa58d3ff3d94390ac0c6aeed6d6",
+      "generation_seconds": 15.628889299929142,
+      "usage": {
+        "prompt_tokens": 10938,
+        "total_tokens": 12110,
+        "completion_tokens": 1172,
+        "prompt_tokens_details": {
+          "cached_tokens": 10880
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 0,
+        "seconds": 4.706079899915494
+      },
+      "passed_tests": 6,
+      "failed_tests": 0,
+      "pending_tests": 0,
+      "failures": [],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Registry",
+      "status": "passed",
+      "prompt_sha256": "6a8451c3fd6c010a83d41c7246c4d5f82013a0c06e2a0e2f10a30c194b02e667",
+      "generation_seconds": 7.249662999995053,
+      "usage": {
+        "prompt_tokens": 10060,
+        "total_tokens": 10678,
+        "completion_tokens": 618,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 0,
+        "seconds": 4.596262299921364
+      },
+      "passed_tests": 8,
+      "failed_tests": 0,
+      "pending_tests": 0,
+      "failures": [],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "SimpleStorage",
+      "status": "passed",
+      "prompt_sha256": "530e0584f14b2bc6f31fbc6cdac2baa6f35d7c672e17ca721f1078409df40f21",
+      "generation_seconds": 7.215576800052077,
+      "usage": {
+        "prompt_tokens": 11020,
+        "total_tokens": 11532,
+        "completion_tokens": 512,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 0,
+        "seconds": 4.233531199977733
+      },
+      "passed_tests": 6,
+      "failed_tests": 0,
+      "pending_tests": 0,
+      "failures": [],
+      "coverage": {
+        "statements": 0.0,
+        "branches": 100.0,
+        "functions": 0.0,
+        "lines": 0.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "TimelockVault",
+      "status": "test_failures",
+      "prompt_sha256": "e4a11853746d335f90f6dc9b5aa0c02cd58153c02291f5d9d7dcf47ca4b8d88b",
+      "generation_seconds": 5.3529178000753745,
+      "usage": {
+        "prompt_tokens": 10614,
+        "total_tokens": 11212,
+        "completion_tokens": 598,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.488845599931665
+      },
+      "passed_tests": 3,
+      "failed_tests": 4,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "TimelockVault Deployment Should set the correct unlock time",
+          "error": "time is not defined"
+        },
+        {
+          "title": "TimelockVault Withdrawals Validations Should revert with the right error if called from another account",
+          "error": "time is not defined"
+        },
+        {
+          "title": "TimelockVault Withdrawals Events Should emit an event on withdrawals",
+          "error": "time is not defined"
+        },
+        {
+          "title": "TimelockVault Withdrawals Transfers Should transfer the funds to the owner if no one else is payable",
+          "error": "time is not defined"
+        }
+      ],
+      "coverage": {
+        "statements": 66.67,
+        "branches": 50.0,
+        "functions": 100.0,
+        "lines": 66.67
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Token",
+      "status": "test_failures",
+      "prompt_sha256": "1cc4374526c11acc811addcade611d6ddf16425be4f7da62b9b0d78a5cf6dad1",
+      "generation_seconds": 9.148653799900785,
+      "usage": {
+        "prompt_tokens": 10968,
+        "total_tokens": 12294,
+        "completion_tokens": 1326,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.867940200027078
+      },
+      "passed_tests": 18,
+      "failed_tests": 1,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "Token TransferFrom Should fail if transferring to zero address",
+          "error": "Expected transaction to be reverted with reason 'zero address', but it didn't revert"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Voting",
+      "status": "passed",
+      "prompt_sha256": "0d5ab37bd4c6aba6a0bb2138242184740ab59834521485fe46e2c98df698134e",
+      "generation_seconds": 5.519441299955361,
+      "usage": {
+        "prompt_tokens": 11653,
+        "total_tokens": 12307,
+        "completion_tokens": 654,
+        "prompt_tokens_details": {
+          "cached_tokens": 11648
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 0,
+        "seconds": 4.800532200024463
+      },
+      "passed_tests": 10,
+      "failed_tests": 0,
+      "pending_tests": 0,
+      "failures": [],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    }
+  ]
+}

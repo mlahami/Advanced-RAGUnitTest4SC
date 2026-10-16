@@ -1,0 +1,241 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 15,
+    "passes": 13,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-10-01T05:57:17.047Z",
+    "end": "2026-10-01T05:57:17.392Z",
+    "duration": 345
+  },
+  "tests": [
+    {
+      "title": "Should set the right creator",
+      "fullTitle": "Crowdfunding Deployment Should set the right creator",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct goal and deadline",
+      "fullTitle": "Crowdfunding Deployment Should set the correct goal and deadline",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should allow contributions before deadline",
+      "fullTitle": "Crowdfunding Contributions Should allow contributions before deadline",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"Contribution\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"Contribution\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:35:7)"
+      }
+    },
+    {
+      "title": "Should not allow zero contributions",
+      "fullTitle": "Crowdfunding Contributions Should not allow zero contributions",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should not allow contributions after deadline",
+      "fullTitle": "Crowdfunding Contributions Should not allow contributions after deadline",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should accumulate contributions from multiple contributors",
+      "fullTitle": "Crowdfunding Contributions Should accumulate contributions from multiple contributors",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should allow creator to withdraw after deadline if goal is met",
+      "fullTitle": "Crowdfunding Withdrawals Should allow creator to withdraw after deadline if goal is met",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should not allow withdrawals before deadline",
+      "fullTitle": "Crowdfunding Withdrawals Should not allow withdrawals before deadline",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should not allow withdrawals if goal is not met",
+      "fullTitle": "Crowdfunding Withdrawals Should not allow withdrawals if goal is not met",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should not allow non-creator to withdraw",
+      "fullTitle": "Crowdfunding Withdrawals Should not allow non-creator to withdraw",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should allow contributors to get refund after deadline if goal is not met",
+      "fullTitle": "Crowdfunding Refunds Should allow contributors to get refund after deadline if goal is not met",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should not allow refunds before deadline",
+      "fullTitle": "Crowdfunding Refunds Should not allow refunds before deadline",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should not allow refunds if goal is met",
+      "fullTitle": "Crowdfunding Refunds Should not allow refunds if goal is met",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should not allow refunds for non-contributors",
+      "fullTitle": "Crowdfunding Refunds Should not allow refunds for non-contributors",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should not allow double refunds",
+      "fullTitle": "Crowdfunding Refunds Should not allow double refunds",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "Event \"Refund\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"Refund\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:178:7)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should allow contributions before deadline",
+      "fullTitle": "Crowdfunding Contributions Should allow contributions before deadline",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"Contribution\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"Contribution\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:35:7)"
+      }
+    },
+    {
+      "title": "Should not allow double refunds",
+      "fullTitle": "Crowdfunding Refunds Should not allow double refunds",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "Event \"Refund\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"Refund\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:178:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right creator",
+      "fullTitle": "Crowdfunding Deployment Should set the right creator",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct goal and deadline",
+      "fullTitle": "Crowdfunding Deployment Should set the correct goal and deadline",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should not allow zero contributions",
+      "fullTitle": "Crowdfunding Contributions Should not allow zero contributions",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should not allow contributions after deadline",
+      "fullTitle": "Crowdfunding Contributions Should not allow contributions after deadline",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should accumulate contributions from multiple contributors",
+      "fullTitle": "Crowdfunding Contributions Should accumulate contributions from multiple contributors",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should allow creator to withdraw after deadline if goal is met",
+      "fullTitle": "Crowdfunding Withdrawals Should allow creator to withdraw after deadline if goal is met",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should not allow withdrawals before deadline",
+      "fullTitle": "Crowdfunding Withdrawals Should not allow withdrawals before deadline",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should not allow withdrawals if goal is not met",
+      "fullTitle": "Crowdfunding Withdrawals Should not allow withdrawals if goal is not met",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should not allow non-creator to withdraw",
+      "fullTitle": "Crowdfunding Withdrawals Should not allow non-creator to withdraw",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should allow contributors to get refund after deadline if goal is not met",
+      "fullTitle": "Crowdfunding Refunds Should allow contributors to get refund after deadline if goal is not met",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should not allow refunds before deadline",
+      "fullTitle": "Crowdfunding Refunds Should not allow refunds before deadline",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should not allow refunds if goal is met",
+      "fullTitle": "Crowdfunding Refunds Should not allow refunds if goal is met",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should not allow refunds for non-contributors",
+      "fullTitle": "Crowdfunding Refunds Should not allow refunds for non-contributors",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep01\\Crowdfunding\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    }
+  ]
+}

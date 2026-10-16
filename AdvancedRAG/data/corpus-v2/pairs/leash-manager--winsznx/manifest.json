@@ -1,0 +1,50 @@
+{
+  "id": "leash-manager--winsznx",
+  "domain": "rate-limiting",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "LeashManager.sol",
+    "ReentrantToken.sol",
+    "TestUSDC.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/winsznx/float",
+    "commit": "ae8d6dba8b5f2920b787855cba7b5695c0349bf8",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/contracts/contracts/LeashManager.sol",
+      "packages/contracts/contracts/test/ReentrantToken.sol",
+      "packages/contracts/contracts/test/TestUSDC.sol"
+    ],
+    "test_paths": [
+      "packages/contracts/test/LeashManager.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "packages/contracts/contracts/LeashManager.sol": "9a8e3e6ce771711a74e632c07dcb71c98f359ff7677efc077a1e0ae39799b96f",
+      "packages/contracts/contracts/test/ReentrantToken.sol": "12664f3ee4895f0d6b1eef5af2717fae24b25045a12c6eec8cb4b58964e8a10f",
+      "packages/contracts/contracts/test/TestUSDC.sol": "69bbc42f72ea17ad7b0e0c7c94a54abc7d94a95d69abf77eabe317f00e189134",
+      "packages/contracts/test/LeashManager.test.ts": "7d9dc998c699464e7c1c6a40b3b5a84f9da0acd341fd75605f4697808f93cb47"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "LeashManager.test.js",
+      "upstream_path": "packages/contracts/test/LeashManager.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "LeashManager.test.js",
+      "upstream_path": "packages/contracts/test/LeashManager.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Spending 'leashes': owner grants a beneficiary a capped, expiring pull allowance over an ERC20; spend() enforces remaining limit and expiry, revoke, views; reentrancy test token. 28 its (loadFixture/time). 89 commits, 3 authors (Jul-Aug 2026). Compiles with solc 0.8.24 unoptimized (6 KB).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T15:52:54.706421+00:00"
+}

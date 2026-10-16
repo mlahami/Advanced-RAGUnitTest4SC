@@ -1,0 +1,62 @@
+{
+  "id": "lottery--pengnd",
+  "domain": "lottery",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Lottery.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Pengnd/on-chain-lottery",
+    "commit": "fc2375a1c603e3e64ce0df12a7a67c174c8eb33f",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/Lottery.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/Lottery.ts"
+    ],
+    "license_file": "LICENCE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/Lottery.sol": "5b54da50ba4f39a5f84938c67353e18119c49fb2a1cc45da923ce0c286ce4715",
+      "packages/hardhat/test/Lottery.ts": "ac386d79c8ad32143db28918f19ffd2ab2c9fb89a1c93cf7dfaf070b85745d6d"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "Lottery.js",
+      "upstream_path": "packages/hardhat/test/Lottery.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "Lottery.js",
+      "upstream_path": "packages/hardhat/test/Lottery.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "Lottery"
+      ],
+      "file": "Lottery.js",
+      "upstream_path": "packages/hardhat/test/Lottery.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "HardhatEthersSigner"
+      ],
+      "file": "Lottery.js",
+      "upstream_path": "packages/hardhat/test/Lottery.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Multi-round timed lottery with blockhash/timestamp pseudo-randomness (no VRF); scaffold-eth style packages/hardhat. Primary 180 non-blank lines, closure 180 lines/1 files; 13 its, 25 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:33.325051+00:00"
+}

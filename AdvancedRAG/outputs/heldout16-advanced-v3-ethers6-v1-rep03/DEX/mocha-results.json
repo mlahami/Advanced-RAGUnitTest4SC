@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 8,
+    "passes": 6,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-10-01T06:22:05.033Z",
+    "end": "2026-10-01T06:22:06.388Z",
+    "duration": 1355
+  },
+  "tests": [
+    {
+      "title": "Should add liquidity and emit LiquidityAdded event",
+      "fullTitle": "DEX Contract Liquidity Management Should add liquidity and emit LiquidityAdded event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 108,
+      "err": {}
+    },
+    {
+      "title": "Should remove liquidity and emit LiquidityRemoved event",
+      "fullTitle": "DEX Contract Liquidity Management Should remove liquidity and emit LiquidityRemoved event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 111,
+      "err": {}
+    },
+    {
+      "title": "Should revert when removing more liquidity than available",
+      "fullTitle": "DEX Contract Liquidity Management Should revert when removing more liquidity than available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 118,
+      "err": {}
+    },
+    {
+      "title": "Should swap tokenA for tokenB and emit Swapped event",
+      "fullTitle": "DEX Contract Swap Functionality Should swap tokenA for tokenB and emit Swapped event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 30,
+      "err": {}
+    },
+    {
+      "title": "Should swap tokenB for tokenA and emit Swapped event",
+      "fullTitle": "DEX Contract Swap Functionality Should swap tokenB for tokenA and emit Swapped event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 29,
+      "err": {}
+    },
+    {
+      "title": "Should revert when swapping with zero amount",
+      "fullTitle": "DEX Contract Swap Functionality Should revert when swapping with zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 14,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'ERC20: transfer amount exceeds balance', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'ERC20: transfer amount exceeds balance', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:202:7)"
+      }
+    },
+    {
+      "title": "Should handle initial liquidity addition correctly",
+      "fullTitle": "DEX Contract Edge Cases Should handle initial liquidity addition correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 89,
+      "err": {
+        "message": "expected 141421356237309504880 to equal 141421356237309509632.",
+        "stack": "AssertionError: expected 141421356237309504880 to equal 141421356237309509632.\n    at Context.<anonymous> (test\\generated.test.js:230:42)"
+      }
+    },
+    {
+      "title": "Should revert when adding liquidity with zero amounts",
+      "fullTitle": "DEX Contract Edge Cases Should revert when adding liquidity with zero amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should revert when swapping with zero amount",
+      "fullTitle": "DEX Contract Swap Functionality Should revert when swapping with zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 14,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'ERC20: transfer amount exceeds balance', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'ERC20: transfer amount exceeds balance', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:202:7)"
+      }
+    },
+    {
+      "title": "Should handle initial liquidity addition correctly",
+      "fullTitle": "DEX Contract Edge Cases Should handle initial liquidity addition correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 89,
+      "err": {
+        "message": "expected 141421356237309504880 to equal 141421356237309509632.",
+        "stack": "AssertionError: expected 141421356237309504880 to equal 141421356237309509632.\n    at Context.<anonymous> (test\\generated.test.js:230:42)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should add liquidity and emit LiquidityAdded event",
+      "fullTitle": "DEX Contract Liquidity Management Should add liquidity and emit LiquidityAdded event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 108,
+      "err": {}
+    },
+    {
+      "title": "Should remove liquidity and emit LiquidityRemoved event",
+      "fullTitle": "DEX Contract Liquidity Management Should remove liquidity and emit LiquidityRemoved event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 111,
+      "err": {}
+    },
+    {
+      "title": "Should revert when removing more liquidity than available",
+      "fullTitle": "DEX Contract Liquidity Management Should revert when removing more liquidity than available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 118,
+      "err": {}
+    },
+    {
+      "title": "Should swap tokenA for tokenB and emit Swapped event",
+      "fullTitle": "DEX Contract Swap Functionality Should swap tokenA for tokenB and emit Swapped event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 30,
+      "err": {}
+    },
+    {
+      "title": "Should swap tokenB for tokenA and emit Swapped event",
+      "fullTitle": "DEX Contract Swap Functionality Should swap tokenB for tokenA and emit Swapped event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 29,
+      "err": {}
+    },
+    {
+      "title": "Should revert when adding liquidity with zero amounts",
+      "fullTitle": "DEX Contract Edge Cases Should revert when adding liquidity with zero amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    }
+  ]
+}

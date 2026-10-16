@@ -1,0 +1,89 @@
+{
+  "pair": "fund-chain-campaign--sergio11",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:37:24.074285+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/FundChainCampaign.sol": "922ad3df8bc3e837d9e4c4ddf8a9bcb38c61496b0a7fc4e613908807bf79d798",
+    "contracts/IFundChainCampaign.sol": "54a3fca0cfc9e817f4b4c7bbb0140dda926cbfe86051739c589bf7357862b9f8",
+    "LICENSE": "a4792e2b2f47e972a5b70195cb02f680f833251f533ea71d83ae6306899a2cd5",
+    "manifest.json": "3b044f22e234856479d759154b41264bf58b49c585a6e19facf2c508d6d3210a",
+    "test/FundChainCampaign.test.js": "6fd2189ab721caa27329a92305352f0af71a5044ed2fd3e187f007629ed63246"
+  },
+  "pair_sha256": "eae44e05ae988ea6bb873c7a0d92a4002b0c5cf2023812fa761a311d6e269256",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "FundChainCampaign.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.141,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "FundChainCampaign.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.134,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "FundChainCampaign.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.131,
+        "signatures": 0.0,
+        "min_functions": 10
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.42,
+      "mocha": {
+        "tests": 16,
+        "passes": 16,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.04,
+      "mocha": {
+        "tests": 16,
+        "passes": 16,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "FundChainCampaign.sol": {
+          "statements": 71.05,
+          "branches": 53.03,
+          "functions": 86.67,
+          "lines": 71.05
+        },
+        "IFundChainCampaign.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

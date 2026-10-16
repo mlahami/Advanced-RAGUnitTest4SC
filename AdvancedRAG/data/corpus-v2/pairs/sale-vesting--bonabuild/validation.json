@@ -1,0 +1,96 @@
+{
+  "pair": "sale-vesting--bonabuild",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:48:36.515585+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/BonaToken.sol": "1a34bd7372bb63ea40c7944bceae8c9dde9353c899546337f064217f22076ab7",
+    "contracts/MockGranter.sol": "f7c7dba6a7eb2dd4e811b80397674731c15824fb43aec03b4a1c8298984fbc5d",
+    "contracts/SaleVesting.sol": "645d6a284b1e656ff3954ef4592c6bf4940e6d0063c6da0140e4863d3af93d90",
+    "LICENSE": "cb76036c4aed7b4239290760292ccce54a29d0f2933398cf05f7445921116a08",
+    "manifest.json": "ae57b0c313cda7b66eb77ff7d02295110d59adc0d2c4288675471cc6fb54f25a",
+    "test/SaleVesting.test.js": "8cdf24a0529c5b1386f303a031b1cfb8b37e9452f7ba9bd6aec6bf39aa5f75d0"
+  },
+  "pair_sha256": "85e8f1df58f96517dfe452b4be1167c702555fa0f1ee538aefa7a1df8eb3bb89",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "SaleVesting.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.163,
+        "signatures": 0.056,
+        "min_functions": 8
+      },
+      {
+        "contract": "SaleVesting.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.155,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "SaleVesting.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.151,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.53,
+      "mocha": {
+        "tests": 32,
+        "passes": 32,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.69,
+      "mocha": {
+        "tests": 32,
+        "passes": 32,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "SaleVesting.sol": {
+          "statements": 95.83,
+          "branches": 89.29,
+          "functions": 92.31,
+          "lines": 95.83
+        },
+        "BonaToken.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockGranter.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

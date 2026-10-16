@@ -1,0 +1,73 @@
+{
+  "id": "advanced-v3.TimelockVault",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "TimelockVault",
+  "chunk_ids": [
+    4142,
+    4143,
+    2330,
+    2329,
+    6791,
+    6782,
+    1558,
+    1557,
+    5416
+  ],
+  "context_sha256": "533a4d0fe771447d7ddfcc5cbd71f867612d7d281673784233dce45b85ebd8cf",
+  "ratings": [
+    {
+      "chunk_id": 4142,
+      "rating": 2,
+      "reason": "Tests early withdraw revert, matching TimelockVault’s lock check; only error string differs, easily adapted."
+    },
+    {
+      "chunk_id": 4143,
+      "rating": 2,
+      "reason": "Tests non-owner withdraw revert, matching same access control pattern despite different error string"
+    },
+    {
+      "chunk_id": 2330,
+      "rating": 1,
+      "reason": "Shows generic revert expectation pattern, but tests unrelated withdraw logic; only generic revert check is somewhat reusable."
+    },
+    {
+      "chunk_id": 2329,
+      "rating": 1,
+      "reason": "Shows generic withdraw and balance‑change assertion pattern, but the specific bid‑withdraw logic doesn’t apply to TimelockVault’s owner‑only timed withdrawal."
+    },
+    {
+      "chunk_id": 6791,
+      "rating": 1,
+      "reason": "Shows owner-only withdraw pattern, but tests unrelated fee logic; only generic owner access check is reusable."
+    },
+    {
+      "chunk_id": 6782,
+      "rating": 1,
+      "reason": "Shows time‑increase and post‑time withdrawal pattern, relevant for testing TimelockVault’s unlockTime logic, though the specific stream functions don’t exist."
+    },
+    {
+      "chunk_id": 1558,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests unrelated functionality; only useful as generic revert check template."
+    },
+    {
+      "chunk_id": 1557,
+      "rating": 0,
+      "reason": "Test targets unrelated bridge reserve logic; no similar withdraw timing or owner checks applicable to TimelockVault."
+    },
+    {
+      "chunk_id": 5416,
+      "rating": 1,
+      "reason": "Shows owner‑only revert pattern similar to TimelockVault withdraw, but tests a different function (withdrawFees) not present in target."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8419,
+    "completion_tokens": 922,
+    "calls": 9
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 38.6,
+  "evaluated_utc": "2026-10-14T18:10:02.747670+00:00"
+}

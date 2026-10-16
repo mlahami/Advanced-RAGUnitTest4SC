@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 8,
+    "passes": 7,
+    "pending": 0,
+    "failures": 3,
+    "start": "2026-09-30T21:41:37.244Z",
+    "end": "2026-09-30T21:41:37.731Z",
+    "duration": 487
+  },
+  "tests": [
+    {
+      "title": "Should set the correct owners and required confirmations",
+      "fullTitle": "MultiSigWallet Deployment Should set the correct owners and required confirmations",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 28,
+      "err": {}
+    },
+    {
+      "title": "Should revert if required is zero",
+      "fullTitle": "MultiSigWallet Deployment Should revert if required is zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "Should revert if required exceeds owners count",
+      "fullTitle": "MultiSigWallet Deployment Should revert if required exceeds owners count",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should revert if owner is zero address",
+      "fullTitle": "MultiSigWallet Deployment Should revert if owner is zero address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should revert if duplicate owners",
+      "fullTitle": "MultiSigWallet Deployment Should revert if duplicate owners",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to submit transaction",
+      "fullTitle": "MultiSigWallet submit Should allow owner to submit transaction",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "Event \"TransactionSubmitted\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"TransactionSubmitted\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:56:7)"
+      }
+    },
+    {
+      "title": "Should revert if non-owner tries to submit",
+      "fullTitle": "MultiSigWallet submit Should revert if non-owner tries to submit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should accept ETH deposits",
+      "fullTitle": "MultiSigWallet receive Should accept ETH deposits",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should allow owner to submit transaction",
+      "fullTitle": "MultiSigWallet submit Should allow owner to submit transaction",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "Event \"TransactionSubmitted\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"TransactionSubmitted\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:56:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"Should allow owner to confirm transaction\"",
+      "fullTitle": "MultiSigWallet confirm \"before each\" hook for \"Should allow owner to confirm transaction\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'args')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'args')\n    at Context.<anonymous> (test\\generated.test.js:71:30)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"Should allow owner to execute transaction\"",
+      "fullTitle": "MultiSigWallet execute \"before each\" hook for \"Should allow owner to execute transaction\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 4,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'args')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'args')\n    at Context.<anonymous> (test\\generated.test.js:105:30)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct owners and required confirmations",
+      "fullTitle": "MultiSigWallet Deployment Should set the correct owners and required confirmations",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 28,
+      "err": {}
+    },
+    {
+      "title": "Should revert if required is zero",
+      "fullTitle": "MultiSigWallet Deployment Should revert if required is zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "Should revert if required exceeds owners count",
+      "fullTitle": "MultiSigWallet Deployment Should revert if required exceeds owners count",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should revert if owner is zero address",
+      "fullTitle": "MultiSigWallet Deployment Should revert if owner is zero address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should revert if duplicate owners",
+      "fullTitle": "MultiSigWallet Deployment Should revert if duplicate owners",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should revert if non-owner tries to submit",
+      "fullTitle": "MultiSigWallet submit Should revert if non-owner tries to submit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should accept ETH deposits",
+      "fullTitle": "MultiSigWallet receive Should accept ETH deposits",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    }
+  ]
+}

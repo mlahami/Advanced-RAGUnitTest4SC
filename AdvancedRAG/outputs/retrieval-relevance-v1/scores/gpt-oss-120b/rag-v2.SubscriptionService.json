@@ -1,0 +1,61 @@
+{
+  "id": "rag-v2.SubscriptionService",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "SubscriptionService",
+  "chunk_ids": [
+    401,
+    402,
+    409,
+    392,
+    395,
+    418,
+    5716
+  ],
+  "context_sha256": "115d4697558f5b5212a9536fbb6dfd3b1c3ec2fe9738a787f5e12c40cf236822",
+  "ratings": [
+    {
+      "chunk_id": 401,
+      "rating": 1,
+      "reason": "Shows time‑increase, subscription setup, and charge call pattern useful, but target has no owner‑only charge restriction, so not directly adaptable."
+    },
+    {
+      "chunk_id": 402,
+      "rating": 2,
+      "reason": "Tests charge after time increase and access by non-owner, matching SubscriptionService charge logic; setup can be renamed accordingly."
+    },
+    {
+      "chunk_id": 409,
+      "rating": 2,
+      "reason": "Tests allowance revocation causing charge failure, matching SubscriptionService charge logic"
+    },
+    {
+      "chunk_id": 392,
+      "rating": 2,
+      "reason": "Tests double subscription revert, matching contract’s require for existing subscription; setup and revert check can be reused with renamed contract."
+    },
+    {
+      "chunk_id": 395,
+      "rating": 1,
+      "reason": "Shows pattern of rejecting subscription to invalid ID, similar revert check but different error and contract specifics"
+    },
+    {
+      "chunk_id": 418,
+      "rating": 1,
+      "reason": "Shows time‑increase, ERC20 approval, subscription and charge pattern useful, but target lacks batch chargeAll function, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 5716,
+      "rating": 1,
+      "reason": "Shows generic pattern of expecting revert on time‑based condition, but specific function and error differ from SubscriptionService."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 16558,
+    "completion_tokens": 738,
+    "calls": 7
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 92.9,
+  "evaluated_utc": "2026-10-13T07:39:35.444908+00:00"
+}

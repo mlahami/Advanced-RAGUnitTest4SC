@@ -1,0 +1,79 @@
+{
+  "id": "advanced-v3.AccessControl",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "AccessControl",
+  "chunk_ids": [
+    462,
+    463,
+    460,
+    461,
+    5643,
+    5636,
+    5640,
+    5642,
+    5637,
+    79
+  ],
+  "context_sha256": "7c2d83299c29f88a61701fd5aa451fa99c5ac880829d1bc2b562b1ae3807d850",
+  "ratings": [
+    {
+      "chunk_id": 462,
+      "rating": 2,
+      "reason": "Tests admin restriction on grantRole, matching AccessControl’s admin check; role constants can be renamed, making it directly reusable."
+    },
+    {
+      "chunk_id": 463,
+      "rating": 1,
+      "reason": "Shows revert testing pattern for role revocation, but target lacks self‑revoke restriction, so only generic pattern applies"
+    },
+    {
+      "chunk_id": 460,
+      "rating": 1,
+      "reason": "Shows grantRole/hasRole usage pattern, but target uses admin address not ADMIN_ROLE role, so behavior differs"
+    },
+    {
+      "chunk_id": 461,
+      "rating": 2,
+      "reason": "Tests grant/revoke role functionality and hasRole check, matching AccessControl behavior; only contract name and role constants differ, making it directly reusable."
+    },
+    {
+      "chunk_id": 5643,
+      "rating": 1,
+      "reason": "Shows role revocation pattern but target contract doesn't revert on non‑existent role, so only generic setup is reusable."
+    },
+    {
+      "chunk_id": 5636,
+      "rating": 1,
+      "reason": "Shows role grant and hasRole pattern useful for AccessControl, but target lacks automatic admin role grant, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 5640,
+      "rating": 2,
+      "reason": "Tests non‑admin revert on grantRole, matching AccessControl’s admin check; only constants and error name differ, easily adapted."
+    },
+    {
+      "chunk_id": 5642,
+      "rating": 1,
+      "reason": "Shows role revocation pattern; target uses admin address not role, so test logic needs adaptation, but revocation flow is relevant."
+    },
+    {
+      "chunk_id": 5637,
+      "rating": 1,
+      "reason": "Shows generic grantRole/hasRole pattern useful for AccessControl, but target lacks role hierarchy logic, so not directly adaptable."
+    },
+    {
+      "chunk_id": 79,
+      "rating": 1,
+      "reason": "Shows admin‑setup pattern; target lacks constructor arg and isAdmin, but admin check can be adapted after renaming."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9946,
+    "completion_tokens": 1157,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 36.7,
+  "evaluated_utc": "2026-10-12T08:41:09.469610+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"BenchmarkTarget\", function () {\n  let benchmarkTarget;\n  let owner;\n  let otherAccount;\n\n  beforeEach(async function () {\n    [owner, otherAccount] = await ethers.getSigners();\n\n    const BenchmarkTarget = await ethers.getContractFactory(\"BenchmarkTarget\");\n    benchmarkTarget = await BenchmarkTarget.deploy();\n    await benchmarkTarget.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should set the initial value to 0\", async function () {\n      expect(await benchmarkTarget.value()).to.equal(0n);\n    });\n  });\n\n  describe(\"setValue\", function () {\n    it(\"Should update the value and emit ValueSet event\", async function () {\n      const newValue = 100n;\n\n      await expect(benchmarkTarget.setValue(newValue))\n        .to.emit(benchmarkTarget, \"ValueSet\")\n        .withArgs(newValue);\n\n      expect(await benchmarkTarget.value()).to.equal(newValue);\n    });\n\n    it(\"Should allow setting value to 0\", async function () {\n      const newValue = 0n;\n\n      await expect(benchmarkTarget.setValue(newValue))\n        .to.emit(benchmarkTarget, \"ValueSet\")\n        .withArgs(newValue);\n\n      expect(await benchmarkTarget.value()).to.equal(newValue);\n    });\n\n    it(\"Should allow setting value to maximum uint256\", async function () {\n      const newValue = ethers.MaxUint256;\n\n      await expect(benchmarkTarget.setValue(newValue))\n        .to.emit(benchmarkTarget, \"ValueSet\")\n        .withArgs(newValue);\n\n      expect(await benchmarkTarget.value()).to.equal(newValue);\n    });\n\n    it(\"Should allow setting value with ether\", async function () {\n      const newValue = 200n;\n      const etherAmount = ethers.parseEther(\"1\");\n\n      await expect(benchmarkTarget.setValue(newValue, { value: etherAmount }))\n        .to.emit(benchmarkTarget, \"ValueSet\")\n        .withArgs(newValue);\n\n      expect(await benchmarkTarget.value()).to.equal(newValue);\n    });\n  });\n\n  describe(\"value\", function () {\n    it(\"Should return the current value\", async function () {\n      const testValue = 42n;\n      await benchmarkTarget.setValue(testValue);\n      expect(await benchmarkTarget.value()).to.equal(testValue);\n    });\n  });\n\n  describe(\"fail\", function () {\n    it(\"Should revert with 'target failure'\", async function () {\n      await expect(benchmarkTarget.fail())\n        .to.be.revertedWith(\"target failure\");\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 6.209673000033945,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 10874,
+      "total_tokens": 11432,
+      "completion_tokens": 558,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "a44ce17790b37c50b907808f4c3706e0d458d6a187eb7a37ed10cd64a324b617"
+}

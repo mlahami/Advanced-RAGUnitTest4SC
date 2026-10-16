@@ -1,0 +1,36 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> EventChainContract.sol
+> EventChainEventManagerContract.sol
+> IEventChainContract.sol
+> IEventChainEventManagerContract.sol
+
+Compilation:
+============
+
+Compiled 21 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+--------------------------------------|----------|----------|----------|----------|----------------|
+File                                  |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+--------------------------------------|----------|----------|----------|----------|----------------|
+ contracts\                           |    47.73 |    32.35 |       50 |    51.79 |                |
+  EventChainContract.sol              |    25.81 |        0 |    33.33 |    31.58 |... 149,174,188 |
+  EventChainEventManagerContract.sol  |      100 |    68.75 |    83.33 |    94.44 |             36 |
+  IEventChainContract.sol             |      100 |      100 |      100 |      100 |                |
+  IEventChainEventManagerContract.sol |      100 |      100 |      100 |      100 |                |
+--------------------------------------|----------|----------|----------|----------|----------------|
+All files                             |    47.73 |    32.35 |       50 |    51.79 |                |
+--------------------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

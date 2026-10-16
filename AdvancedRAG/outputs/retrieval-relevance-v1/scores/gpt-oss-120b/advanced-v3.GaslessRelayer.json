@@ -1,0 +1,61 @@
+{
+  "id": "advanced-v3.GaslessRelayer",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "GaslessRelayer",
+  "chunk_ids": [
+    3080,
+    3082,
+    3081,
+    3083,
+    6737,
+    6988,
+    1527
+  ],
+  "context_sha256": "0f603d6794685d5d4b0536cb22a70d52ee2e87460fcd80e1ad430e91574efe82",
+  "ratings": [
+    {
+      "chunk_id": 3080,
+      "rating": 2,
+      "reason": "Tests invalid signature revert, matching target's verify logic and revert message pattern, usable after renaming contracts and error strings."
+    },
+    {
+      "chunk_id": 3082,
+      "rating": 2,
+      "reason": "Tests signature verification of a ForwardRequest, matching the target's verify function; setup and calls can be reused with renamed contracts."
+    },
+    {
+      "chunk_id": 3081,
+      "rating": 2,
+      "reason": "Tests replay protection via nonce and signature verification, matching GaslessRelayer's execute and verify logic; setup can be reused with renamed contracts."
+    },
+    {
+      "chunk_id": 3083,
+      "rating": 2,
+      "reason": "Tests nonce validation and signature verification, matching GaslessRelayer’s verify and nonce checks; can be reused with renamed contracts and fields."
+    },
+    {
+      "chunk_id": 6737,
+      "rating": 2,
+      "reason": "Tests meta‑transaction flow: builds ForwardRequest, signs EIP‑712, calls execute, checks event and state—directly matches GaslessRelayer behavior."
+    },
+    {
+      "chunk_id": 6988,
+      "rating": 1,
+      "reason": "Shows EIP‑712 signing and relay call pattern, but tests whitelist‑specific revert not present in GaslessRelayer."
+    },
+    {
+      "chunk_id": 1527,
+      "rating": 1,
+      "reason": "Shows generic event emission assertion pattern usable for GaslessRelayer’s MetaTxExecuted event, but tests unrelated functionality."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 15001,
+    "completion_tokens": 715,
+    "calls": 7
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 33.9,
+  "evaluated_utc": "2026-10-14T18:20:54.312562+00:00"
+}

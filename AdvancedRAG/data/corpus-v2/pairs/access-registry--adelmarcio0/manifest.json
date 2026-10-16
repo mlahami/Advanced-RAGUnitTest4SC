@@ -1,0 +1,31 @@
+{
+  "id": "access-registry--adelmarcio0",
+  "domain": "access-control",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "AccessRegistry.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/adelmarcio0/ChronaLink",
+    "commit": "9d4dd56e2524bf44ff0a6bb58e330137da3ed104",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/AccessRegistry.sol"
+    ],
+    "test_paths": [
+      "test/AccessRegistry.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/AccessRegistry.sol": "581a41c246e3b82aac581a351c647b15d9a2cbc451852f45caac2f5ce7a2009e",
+      "test/AccessRegistry.test.js": "39b32b622cf53b686ba3e5b2a56e32d8b62c8e3a6a79897b0b75244f9849ac4f"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "OZ AccessControl registry with admin/executor/job-owner roles, grant/revoke wrappers and extended events; primary 89 lines; 12 it blocks; LICENSE (MIT); history: 76 commits 2024-11-02..2025-09-30 by one author at regular monthly dates (history may be synthetic). Compiles with solc 0.8.24 + OZ 5.0.2, no optimizer (3.7 KB).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:35:53.139144+00:00"
+}

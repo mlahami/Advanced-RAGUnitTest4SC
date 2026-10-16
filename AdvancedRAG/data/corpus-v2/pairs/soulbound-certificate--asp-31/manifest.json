@@ -1,0 +1,62 @@
+{
+  "id": "soulbound-certificate--asp-31",
+  "domain": "soulbound-certificate",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "SoulboundCertificate.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ASP-31/Soulbound",
+    "commit": "01fcb14fd42fc12408f4da0f8af4f47cbe616111",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/contracts/SoulboundCertificate.sol"
+    ],
+    "test_paths": [
+      "contracts/test/SoulboundCertificate.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/SoulboundCertificate.sol": "e510f4242f1d0f0d5cbfcd7d9d33779b166fa281856b64186aa1983c71694713",
+      "contracts/test/SoulboundCertificate.test.ts": "6675b08fe1a627f48b03c4b6cfe76b4cbb8deb6aa63954a33b7f4392600176ba"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "SoulboundCertificate.test.js",
+      "upstream_path": "contracts/test/SoulboundCertificate.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "SoulboundCertificate.test.js",
+      "upstream_path": "contracts/test/SoulboundCertificate.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "SoulboundCertificate"
+      ],
+      "file": "SoulboundCertificate.test.js",
+      "upstream_path": "contracts/test/SoulboundCertificate.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "HardhatEthersSigner"
+      ],
+      "file": "SoulboundCertificate.test.js",
+      "upstream_path": "contracts/test/SoulboundCertificate.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "DOUBTFUL human authorship (flagged in search report). Non-transferable certificate NFTs issued/revoked by issuer; 13 commits in one day (2026). Primary 109 non-blank lines, closure 109 lines/1 files; 14 its, 35 expects; pragma ^0.8.24.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T12:06:28.319271+00:00"
+}

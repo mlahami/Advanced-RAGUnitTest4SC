@@ -1,0 +1,89 @@
+{
+  "pair": "enerpay-remittance--edgadafi",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:55:36.527585+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/EnerpayRemittance.sol": "e5155b32da6fe6cd3e17438ff72125a6e7e004a679ff71dd5db53033aac53855",
+    "contracts/MockERC20.sol": "5860267cf58d91bab2b0972687ba2fedbedf06dcf5f3026a258e0636c6c19302",
+    "LICENSE": "f85bd54e6b2cde625da9f88c5d3948140b901f6d1df15f1104db97f14028c082",
+    "manifest.json": "090a0afd6da0d158dee6e05abdc88d5e6b3556c70573fefe6440f78d3777ebf0",
+    "test/EnerpayRemittance.test.js": "c47f6cb9b923dea23770e20c1b0369a74ffac166be90e4894a658ef3578ad7b8"
+  },
+  "pair_sha256": "6a7b34235dd0ea7f335f2ba920f329939085463594c380e1158078688f92e9a7",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "EnerpayRemittance.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.216,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "EnerpayRemittance.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.192,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "EnerpayRemittance.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.181,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.12,
+      "mocha": {
+        "tests": 28,
+        "passes": 28,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.49,
+      "mocha": {
+        "tests": 28,
+        "passes": 28,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "EnerpayRemittance.sol": {
+          "statements": 100.0,
+          "branches": 86.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockERC20.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

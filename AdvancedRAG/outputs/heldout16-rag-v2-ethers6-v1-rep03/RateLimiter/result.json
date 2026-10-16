@@ -1,0 +1,48 @@
+{
+  "contract": "RateLimiter",
+  "status": "test_failures",
+  "prompt_sha256": "ce5d326ffc0e29f7322f1e825c14fd5ae7553bb06a30adee70a0d6f2f35ffae3",
+  "generation_seconds": 19.39355819998309,
+  "usage": {
+    "prompt_tokens": 11996,
+    "total_tokens": 13622,
+    "completion_tokens": 1626,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.963544099940918
+  },
+  "passed_tests": 11,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "RateLimiter Token Bucket Should refill tokens over time",
+      "error": "expected 100 to equal 120."
+    },
+    {
+      "title": "RateLimiter Rate Limiting Should revert when tokens insufficient",
+      "error": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert"
+    },
+    {
+      "title": "RateLimiter Rate Limiting Should revert withdrawal when tokens insufficient",
+      "error": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it reverted with reason 'Insufficient balance'"
+    },
+    {
+      "title": "RateLimiter Edge Cases Should handle zero cost per call (should never revert)",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Zero param'"
+    }
+  ],
+  "coverage": {
+    "statements": 94.74,
+    "branches": 71.43,
+    "functions": 85.71,
+    "lines": 94.44
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "my-nft--nikhil0716",
+  "domain": "nft",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "MyNFT.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/nikhil0716/fullstack-blockchain-dapps",
+    "commit": "071e9da35778d954469a1c240a2988e4fcf0f9ae",
+    "license": "MIT",
+    "contract_paths": [
+      "Blockchain/ERC721/contracts/MyNFT.sol"
+    ],
+    "test_paths": [
+      "Blockchain/ERC721/test/erc721.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "Blockchain/ERC721/contracts/MyNFT.sol": "2632960f3d0648d050228ef586ea728ee2ed6c7f4369332dfe9d0180c71a25a4",
+      "Blockchain/ERC721/test/erc721.test.js": "509e565f89806072f0dff347a8ff9b73de61f2cfc96ea382d07dfe7667bafac1"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Simple ERC721 mint with URI; subproject Blockchain/ERC721. Primary 54 non-blank lines, closure 54 lines/1 files; 6 its, 14 expects; pragma ^0.8.24.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:30.500373+00:00"
+}

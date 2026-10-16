@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"Voting\", function () {\n  let voting;\n  let chairperson;\n  let voter1;\n  let voter2;\n  let candidates;\n\n  beforeEach(async function () {\n    [chairperson, voter1, voter2] = await ethers.getSigners();\n    candidates = [\"Alice\", \"Bob\"];\n    const VotingFactory = await ethers.getContractFactory(\"Voting\");\n    voting = await VotingFactory.deploy(candidates);\n    await voting.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"should set the correct chairperson\", async function () {\n      expect(await voting.chairperson()).to.equal(chairperson.address);\n    });\n\n    it(\"should initialize candidates correctly\", async function () {\n      expect(await voting.candidates(0)).to.equal(\"Alice\");\n      expect(await voting.candidates(1)).to.equal(\"Bob\");\n    });\n\n    it(\"should revert if less than 2 candidates are provided\", async function () {\n      const VotingFactory = await ethers.getContractFactory(\"Voting\");\n      await expect(VotingFactory.deploy([\"Single\"])).to.be.revertedWith(\"need candidates\");\n    });\n  });\n\n  describe(\"Voting\", function () {\n    it(\"should allow a voter to cast a vote\", async function () {\n      await voting.connect(voter1).vote(0);\n      expect(await voting.hasVoted(voter1.address)).to.be.true;\n      expect(await voting.votes(0)).to.equal(1n);\n    });\n\n    it(\"should prevent double voting\", async function () {\n      await voting.connect(voter1).vote(0);\n      await expect(voting.connect(voter1).vote(1)).to.be.revertedWith(\"already voted\");\n    });\n\n    it(\"should reject votes for invalid candidates\", async function () {\n      await expect(voting.connect(voter1).vote(2)).to.be.revertedWith(\"invalid candidate\");\n    });\n\n    it(\"should correctly tally votes from multiple voters\", async function () {\n      await voting.connect(voter1).vote(0);\n      await voting.connect(voter2).vote(0);\n      expect(await voting.votes(0)).to.equal(2n);\n      expect(await voting.votes(1)).to.equal(0n);\n    });\n  });\n\n  describe(\"Winner\", function () {\n    it(\"should return the correct winner\", async function () {\n      await voting.connect(voter1).vote(0);\n      await voting.connect(voter2).vote(0);\n      expect(await voting.winner()).to.equal(0n);\n    });\n\n    it(\"should handle a tie correctly\", async function () {\n      await voting.connect(voter1).vote(0);\n      await voting.connect(voter2).vote(1);\n      const winner = await voting.winner();\n      expect(winner).to.be.oneOf([0n, 1n]);\n    });\n\n    it(\"should return 0 for no votes\", async function () {\n      expect(await voting.winner()).to.equal(0n);\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 7.422826600028202,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 11653,
+      "total_tokens": 12307,
+      "completion_tokens": 654,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "0d5ab37bd4c6aba6a0bb2138242184740ab59834521485fe46e2c98df698134e"
+}

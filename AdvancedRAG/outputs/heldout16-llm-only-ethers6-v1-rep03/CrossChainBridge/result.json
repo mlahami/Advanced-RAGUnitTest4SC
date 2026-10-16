@@ -1,0 +1,48 @@
+{
+  "contract": "CrossChainBridge",
+  "status": "test_failures",
+  "prompt_sha256": "503633832584c4e357d8061da323fd902588797f870a7fd42393c4631bf2f9ee",
+  "generation_seconds": 14.228206300060265,
+  "usage": {
+    "prompt_tokens": 8140,
+    "total_tokens": 10144,
+    "completion_tokens": 2004,
+    "prompt_tokens_details": {
+      "cached_tokens": 8064
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 9.005874800030142
+  },
+  "passed_tests": 22,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "CrossChainBridge Validator Management Should update validator count correctly",
+      "error": "expected 4 to equal 3."
+    },
+    {
+      "title": "CrossChainBridge Lock Function Should lock tokens and emit Locked event",
+      "error": "expected '0xc2fea73e088069fb2bd57bddd6f7f27a31d…' to equal '0x00000000000000000000000070997970c51…'"
+    },
+    {
+      "title": "CrossChainBridge Validate Function Should mint tokens when enough validations",
+      "error": "VM Exception while processing transaction: reverted with reason string 'zero address'"
+    },
+    {
+      "title": "CrossChainBridge Validate Function Should not allow validation of processed requests",
+      "error": "VM Exception while processing transaction: reverted with reason string 'zero address'"
+    }
+  ],
+  "coverage": {
+    "statements": 95.65,
+    "branches": 94.12,
+    "functions": 100.0,
+    "lines": 95.65
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

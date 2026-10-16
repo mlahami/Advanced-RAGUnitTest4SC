@@ -1,0 +1,227 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 14,
+    "passes": 12,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-10-01T06:26:17.966Z",
+    "end": "2026-10-01T06:26:18.806Z",
+    "duration": 840
+  },
+  "tests": [
+    {
+      "title": "Should set the correct asset, name, and symbol",
+      "fullTitle": "YieldVault Deployment Should set the correct asset, name, and symbol",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should initialize with zero total assets and shares",
+      "fullTitle": "YieldVault Deployment Should initialize with zero total assets and shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to set strategy",
+      "fullTitle": "YieldVault Strategy Management Should allow owner to set strategy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "Event \"StrategyUpdated\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"StrategyUpdated\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:51:7)"
+      }
+    },
+    {
+      "title": "Should revert when non-owner tries to set strategy",
+      "fullTitle": "YieldVault Strategy Management Should revert when non-owner tries to set strategy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 1,
+      "err": {
+        "message": "The given contract doesn't have a custom error named 'OwnableUnauthorizedAccount'",
+        "stack": "Error: The given contract doesn't have a custom error named 'OwnableUnauthorizedAccount'\n    at validateInput (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\reverted\\revertedWithCustomError.ts:177:13)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\reverted\\revertedWithCustomError.ts:42:46)\n    at Proxy.methodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at doAsserterAsyncAndAddThen (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:289:22)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:255:20)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at Context.<anonymous> (test\\generated.test.js:61:15)"
+      }
+    },
+    {
+      "title": "Should deposit assets and mint shares",
+      "fullTitle": "YieldVault Deposit Should deposit assets and mint shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 33,
+      "err": {}
+    },
+    {
+      "title": "Should revert when depositing zero assets",
+      "fullTitle": "YieldVault Deposit Should revert when depositing zero assets",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should forward assets to strategy when strategy is set",
+      "fullTitle": "YieldVault Deposit Should forward assets to strategy when strategy is set",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 23,
+      "err": {}
+    },
+    {
+      "title": "Should withdraw assets and burn shares",
+      "fullTitle": "YieldVault Withdraw Should withdraw assets and burn shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 29,
+      "err": {}
+    },
+    {
+      "title": "Should revert when withdrawing more shares than owned",
+      "fullTitle": "YieldVault Withdraw Should revert when withdrawing more shares than owned",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should convert assets to shares correctly",
+      "fullTitle": "YieldVault Conversion Functions Should convert assets to shares correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should convert shares to assets correctly",
+      "fullTitle": "YieldVault Conversion Functions Should convert shares to assets correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should handle zero cases in conversion functions",
+      "fullTitle": "YieldVault Conversion Functions Should handle zero cases in conversion functions",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should allow strategy to report profit",
+      "fullTitle": "YieldVault Profit Reporting Should allow strategy to report profit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should revert when non-strategy tries to report profit",
+      "fullTitle": "YieldVault Profit Reporting Should revert when non-strategy tries to report profit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should allow owner to set strategy",
+      "fullTitle": "YieldVault Strategy Management Should allow owner to set strategy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "Event \"StrategyUpdated\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"StrategyUpdated\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:51:7)"
+      }
+    },
+    {
+      "title": "Should revert when non-owner tries to set strategy",
+      "fullTitle": "YieldVault Strategy Management Should revert when non-owner tries to set strategy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 1,
+      "err": {
+        "message": "The given contract doesn't have a custom error named 'OwnableUnauthorizedAccount'",
+        "stack": "Error: The given contract doesn't have a custom error named 'OwnableUnauthorizedAccount'\n    at validateInput (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\reverted\\revertedWithCustomError.ts:177:13)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\reverted\\revertedWithCustomError.ts:42:46)\n    at Proxy.methodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at doAsserterAsyncAndAddThen (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:289:22)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:255:20)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at Context.<anonymous> (test\\generated.test.js:61:15)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct asset, name, and symbol",
+      "fullTitle": "YieldVault Deployment Should set the correct asset, name, and symbol",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should initialize with zero total assets and shares",
+      "fullTitle": "YieldVault Deployment Should initialize with zero total assets and shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should deposit assets and mint shares",
+      "fullTitle": "YieldVault Deposit Should deposit assets and mint shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 33,
+      "err": {}
+    },
+    {
+      "title": "Should revert when depositing zero assets",
+      "fullTitle": "YieldVault Deposit Should revert when depositing zero assets",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should forward assets to strategy when strategy is set",
+      "fullTitle": "YieldVault Deposit Should forward assets to strategy when strategy is set",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 23,
+      "err": {}
+    },
+    {
+      "title": "Should withdraw assets and burn shares",
+      "fullTitle": "YieldVault Withdraw Should withdraw assets and burn shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 29,
+      "err": {}
+    },
+    {
+      "title": "Should revert when withdrawing more shares than owned",
+      "fullTitle": "YieldVault Withdraw Should revert when withdrawing more shares than owned",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should convert assets to shares correctly",
+      "fullTitle": "YieldVault Conversion Functions Should convert assets to shares correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should convert shares to assets correctly",
+      "fullTitle": "YieldVault Conversion Functions Should convert shares to assets correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should handle zero cases in conversion functions",
+      "fullTitle": "YieldVault Conversion Functions Should handle zero cases in conversion functions",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should allow strategy to report profit",
+      "fullTitle": "YieldVault Profit Reporting Should allow strategy to report profit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should revert when non-strategy tries to report profit",
+      "fullTitle": "YieldVault Profit Reporting Should revert when non-strategy tries to report profit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\YieldVault\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "pair": "hypurr-fi-vault--poppyseeddev",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:53:30.988308+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/HypurrFiVault.sol": "4342b418025a2703c3d00840b9416e0cf5c3f08456b9d5621692e5273d3986e4",
+    "contracts/IHypurrFiOracle.sol": "e4dac84c675a4d86cd045141c61a8635fab424f254e8322f965204842c12700c",
+    "contracts/IHypurrFiPool.sol": "7b837921622f44cdc59246f00f09a53640e34cb41a057e070c5baeb7450f0e49",
+    "contracts/MockAToken.sol": "38f84c6c516f69f3ae42bca22206eb0f99d05814ab54ec07513d34987cebf03c",
+    "contracts/MockERC20.sol": "80de24782846bd5f9c43b43fcbdff1d22936d577f12862628e6ce2eb8096c4f9",
+    "contracts/MockHypurrFiOracle.sol": "0f696453ba9a6ffd2d710368947c6af5dde8f047b28c3b3c1f04ecce422bddf7",
+    "contracts/MockHypurrFiPool.sol": "64551523217bdbd053ce2ff743f6e513b5f7447fde2505c2f9db25d3acc2556c",
+    "LICENSE": "1718fd37c03d59682aced48d59b08744f87e3c3e82dcff287265a6ba66a60c56",
+    "manifest.json": "850214280eb91d84ccfd52abc22f80a74fe2c12fd6e7e4337e71a4807b3da014",
+    "test/HypurrFiVault.test.js": "df8ea69a4d9a1dc1cf3578f8b58dd14016117e46e9c7c2ea8cb686bd2413f8d5"
+  },
+  "pair_sha256": "8e1d4a9832cd50cf6323ae539119a90a201baac287c11fca8d384a03c0f5e835",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MockHypurrFiPool.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.169,
+        "signatures": 0.0,
+        "min_functions": 11
+      },
+      {
+        "contract": "MockHypurrFiPool.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.166,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "MockHypurrFiPool.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.164,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 11.64,
+      "mocha": {
+        "tests": 78,
+        "passes": 78,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 75.93,
+      "mocha": {
+        "tests": 78,
+        "passes": 78,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "HypurrFiVault.sol": {
+          "statements": 85.12,
+          "branches": 64.66,
+          "functions": 96.0,
+          "lines": 86.32
+        },
+        "IHypurrFiOracle.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IHypurrFiPool.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockAToken.sol": {
+          "statements": 57.14,
+          "branches": 50.0,
+          "functions": 50.0,
+          "lines": 57.14
+        },
+        "MockERC20.sol": {
+          "statements": 66.67,
+          "branches": 100.0,
+          "functions": 75.0,
+          "lines": 66.67
+        },
+        "MockHypurrFiOracle.sol": {
+          "statements": 16.67,
+          "branches": 12.5,
+          "functions": 33.33,
+          "lines": 16.67
+        },
+        "MockHypurrFiPool.sol": {
+          "statements": 78.21,
+          "branches": 56.94,
+          "functions": 35.0,
+          "lines": 78.21
+        }
+      }
+    }
+  },
+  "accepted": true
+}

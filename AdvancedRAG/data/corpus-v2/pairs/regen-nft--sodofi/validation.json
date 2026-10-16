@@ -1,0 +1,82 @@
+{
+  "pair": "regen-nft--sodofi",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:14:02.015118+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/RegenNFT.sol": "8c3e5f8530f9a8ed0d427bf345dbedefd6d542d57578fcfdb7d3495904c15f50",
+    "LICENSE": "99c6acbd7a46de42dfdc7e9a963ed9e78f0cb9321f4cb414cd0e5b41ab33e154",
+    "manifest.json": "6e390dc57f87137f3d6aa091593ce13af3ab8c8f7b5a1a013baca296ff8ce638",
+    "test/RegenNFT.test.js": "3699e099ae924b21cea83e45216402260dc109bb3c19a6683384576ab43e9c21"
+  },
+  "pair_sha256": "1828087539ba571d530d5e08a63487461d16c7ca835b15eccb495a4d65881478",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "RegenNFT.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.119,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "RegenNFT.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.104,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "RegenNFT.sol",
+        "reference": "BatchTransfer.sol",
+        "structural": 0.101,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.67,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.14,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "RegenNFT.sol": {
+          "statements": 100.0,
+          "branches": 87.5,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

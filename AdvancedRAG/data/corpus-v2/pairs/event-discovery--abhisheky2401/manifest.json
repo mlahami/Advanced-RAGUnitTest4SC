@@ -1,0 +1,40 @@
+{
+  "id": "event-discovery--abhisheky2401",
+  "domain": "ticketing-events",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "EventDiscovery.sol",
+    "EventCore.sol",
+    "EventFactory.sol",
+    "TicketManager.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/abhishekY2401/event-dapp-backend",
+    "commit": "8cae2ab28a6c561828dd4e3cb12eb55df2a0cfeb",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/EventDiscovery.sol",
+      "contracts/EventCore.sol",
+      "contracts/EventFactory.sol",
+      "contracts/TicketManager.sol"
+    ],
+    "test_paths": [
+      "test/EventDiscovery.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/EventDiscovery.sol": "21dba0878435dfa22cfb9ec2a69bd1096c7aaae528f1cf575c8ef1ea07a9a2b1",
+      "contracts/EventCore.sol": "fb7e5fd59ff964ad78a60404afc7f2d8d6e094b2246c34dabe556f7dc5af3b7c",
+      "contracts/EventFactory.sol": "9448558277a9b5ca2a60efe53c80c75d4c349cbb85d3241dfa15409b3f0ae4e2",
+      "contracts/TicketManager.sol": "504b58882be38484f69f2491efedc08f0baf7b90a34c1d32de37b442bf8430ff",
+      "test/EventDiscovery.test.js": "81971f1a6e1f23a606f6ff8b11097afa0403cec787c08ea7d7661dc834763e55"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Event discovery/search views over EventFactory/EventCore/TicketManager; complex closure. Primary 253 non-blank lines, closure 508 lines/4 files; 14 its, 23 expects; pragma ^0.8.18.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:48.277978+00:00"
+}

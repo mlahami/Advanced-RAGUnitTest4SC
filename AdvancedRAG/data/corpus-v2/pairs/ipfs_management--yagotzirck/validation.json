@@ -1,0 +1,82 @@
+{
+  "pair": "ipfs_management--yagotzirck",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:36:45.858055+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/IPFS_Management.sol": "7386a325d9e80b32dd638ca626b94c639af03a5afc7ad614454d6177d4bea608",
+    "LICENSE": "e79cb3e318a531b5d4e8380ba28e38c5307fb775ab35b9c0e49cfc140393160e",
+    "manifest.json": "92e05f76daccde5e4483284628d353bdb280495bce7ae46d3be62ab3ac138ab2",
+    "test/IPFS_Management.js": "6da92bf1c0dede7ec6a6c485b37eea56c4963382cba27c6d6beb6cc9aa0af39d"
+  },
+  "pair_sha256": "cb1a34104a5ad1dbac4e33839780675ba2f53bc8d99f865bf0f42655680ef3b0",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "IPFS_Management.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.145,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "IPFS_Management.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.119,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "IPFS_Management.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.109,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.97,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.22,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "IPFS_Management.sol": {
+          "statements": 72.73,
+          "branches": 91.67,
+          "functions": 80.0,
+          "lines": 72.73
+        }
+      }
+    }
+  },
+  "accepted": true
+}

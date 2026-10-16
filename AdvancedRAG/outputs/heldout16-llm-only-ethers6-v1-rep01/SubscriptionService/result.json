@@ -1,0 +1,44 @@
+{
+  "contract": "SubscriptionService",
+  "status": "test_failures",
+  "prompt_sha256": "ff7bac8a1ea1a066804673ed363fc6eb501a5ba4b19c88a3854c547bb9f73498",
+  "generation_seconds": 15.559069300070405,
+  "usage": {
+    "prompt_tokens": 8281,
+    "total_tokens": 10124,
+    "completion_tokens": 1843,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 7.691247400012799
+  },
+  "passed_tests": 13,
+  "failed_tests": 3,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "SubscriptionService Subscription Management should subscribe to a plan",
+      "error": "expected undefined to equal 'Subscribed'"
+    },
+    {
+      "title": "SubscriptionService Subscription Management should revert when payment fails",
+      "error": "Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'"
+    },
+    {
+      "title": "SubscriptionService Charging should charge a subscriber",
+      "error": "expected undefined to equal 'Charged'"
+    }
+  ],
+  "coverage": {
+    "statements": 96.55,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 96.43
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

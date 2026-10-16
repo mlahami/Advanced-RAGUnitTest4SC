@@ -1,0 +1,119 @@
+{
+  "id": "verifier--0xalexbel",
+  "domain": "identity-claims",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "Verifier.sol",
+    "ClaimIssuer.sol",
+    "Identity.sol",
+    "IClaimIssuer.sol",
+    "IERC734.sol",
+    "IERC735.sol",
+    "IIdentity.sol",
+    "Storage.sol",
+    "Structs.sol",
+    "Version.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/0xalexbel/fhe-erc3643",
+    "commit": "c76fffeb1841130ee28b894d7353e648a6640fd8",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/identity/verifiers/Verifier.sol",
+      "contracts/identity/ClaimIssuer.sol",
+      "contracts/identity/Identity.sol",
+      "contracts/identity/interfaces/IClaimIssuer.sol",
+      "contracts/identity/interfaces/IERC734.sol",
+      "contracts/identity/interfaces/IERC735.sol",
+      "contracts/identity/interfaces/IIdentity.sol",
+      "contracts/identity/storage/Storage.sol",
+      "contracts/identity/storage/Structs.sol",
+      "contracts/identity/version/Version.sol"
+    ],
+    "test_paths": [
+      "test/identity/verifiers/verifier.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/identity/verifiers/Verifier.sol": "52e595a58f0760567b9b112e3a5ba440d915d734344fd09d48109c2021f48a02",
+      "contracts/identity/ClaimIssuer.sol": "f0ccbc1e96594c88e3bf4eaf126177313310c18ea4a294a626fe0dff83854fd6",
+      "contracts/identity/Identity.sol": "82a471d5c36d697f457ff6d43f09eaf3eafe8410a577be6f4cc44c7aed3b9ab0",
+      "contracts/identity/interfaces/IClaimIssuer.sol": "296ba09e5989060153c49ad131f83a517d722a8ccc721e39b091f96d7c16cd64",
+      "contracts/identity/interfaces/IERC734.sol": "1be5163769971a5deacfb83f1e3ab57f1382120b70fc78c78627f04619fdae92",
+      "contracts/identity/interfaces/IERC735.sol": "985d611f20abad59307a25975b39f0e35decde09ba39c29cd5c67500646a6313",
+      "contracts/identity/interfaces/IIdentity.sol": "c9936eb9825a7ad026ed0420ebdebb4329e65250b8eee1feb6404c3b45466836",
+      "contracts/identity/storage/Storage.sol": "5074a5cada40dc1166141d95b5bf8a216674139317e744ec69b5c4a97bb64d59",
+      "contracts/identity/storage/Structs.sol": "5f855ac2a1e1f7c58e34acbe1c3524e7b3a80d07de91aadf68439aad07e843c0",
+      "contracts/identity/version/Version.sol": "ca0f799f1a8e233f5fff07dd8c68082673d6214ca6aa4d22cd58962f6547ae1b",
+      "test/identity/verifiers/verifier.test.ts": "1379bc7546e02488d0d835a5d9bb66877013879001b343ec36214beb97e9dd17"
+    }
+  },
+  "transformations": [
+    {
+      "file": "Verifier.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IClaimIssuer.sol",
+      "after": "./IClaimIssuer.sol"
+    },
+    {
+      "file": "Verifier.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IIdentity.sol",
+      "after": "./IIdentity.sol"
+    },
+    {
+      "file": "ClaimIssuer.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IClaimIssuer.sol",
+      "after": "./IClaimIssuer.sol"
+    },
+    {
+      "file": "ClaimIssuer.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IIdentity.sol",
+      "after": "./IIdentity.sol"
+    },
+    {
+      "file": "Identity.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IIdentity.sol",
+      "after": "./IIdentity.sol"
+    },
+    {
+      "file": "Identity.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IClaimIssuer.sol",
+      "after": "./IClaimIssuer.sol"
+    },
+    {
+      "file": "Identity.sol",
+      "kind": "import-path",
+      "before": "./version/Version.sol",
+      "after": "./Version.sol"
+    },
+    {
+      "file": "Identity.sol",
+      "kind": "import-path",
+      "before": "./storage/Storage.sol",
+      "after": "./Storage.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "verifier.test.js",
+      "upstream_path": "test/identity/verifiers/verifier.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "verifier.test.js",
+      "upstream_path": "test/identity/verifiers/verifier.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "ERC-3643/ONCHAINID-style claim verifier (claim topics, trusted issuers) with local Identity/ClaimIssuer (ERC734/735) contracts in closure; large closure. Primary 259 non-blank lines, closure 1168 lines/10 files; 27 its, 37 expects; pragma ^0.8.24.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:06:38.390932+00:00"
+}

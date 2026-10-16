@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BenchmarkFixtures.sol
+> NFTMarketplace.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |       60 |     46.3 |    42.86 |    54.88 |                |
+  BenchmarkFixtures.sol |    36.84 |       25 |    33.33 |    35.09 |... 140,141,145 |
+  NFTMarketplace.sol    |      100 |    77.27 |      100 |      100 |                |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |       60 |     46.3 |    42.86 |    54.88 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

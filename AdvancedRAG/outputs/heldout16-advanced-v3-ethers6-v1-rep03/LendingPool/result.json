@@ -1,0 +1,44 @@
+{
+  "contract": "LendingPool",
+  "status": "test_failures",
+  "prompt_sha256": "617be46fec9f211144f3b2a8e99749d52ca9428cc9101adc44d044a15dc41b4f",
+  "generation_seconds": 11.838925900054164,
+  "usage": {
+    "prompt_tokens": 11546,
+    "total_tokens": 13093,
+    "completion_tokens": 1547,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.520887400023639
+  },
+  "passed_tests": 9,
+  "failed_tests": 3,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "LendingPool Borrow Should revert when borrowing over collateral limit",
+      "error": "Expected transaction to be reverted with reason 'Undercollateralized', but it didn't revert"
+    },
+    {
+      "title": "LendingPool Liquidate Should liquidate undercollateralized position",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Position healthy'"
+    },
+    {
+      "title": "LendingPool Liquidate Should emit Liquidated event",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Position healthy'"
+    }
+  ],
+  "coverage": {
+    "statements": 73.33,
+    "branches": 60.0,
+    "functions": 100.0,
+    "lines": 73.33
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

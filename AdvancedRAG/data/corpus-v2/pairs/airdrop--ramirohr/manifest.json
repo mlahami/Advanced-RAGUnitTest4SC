@@ -1,0 +1,34 @@
+{
+  "id": "airdrop--ramirohr",
+  "domain": "airdrop",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Airdrop.sol",
+    "Token.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/RamiroHR/Airdrop_ERC20_tokens",
+    "commit": "bfd3f1b38d57fc8d43fd82de40a6d386cf0ee485",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Airdrop.sol",
+      "contracts/Token.sol"
+    ],
+    "test_paths": [
+      "test/contracts/Airdrop.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Airdrop.sol": "fac24bd51380c7d9abbe0f4e44bdba43c5eb943c2ae0e9543af9f07248bfb4d2",
+      "contracts/Token.sol": "9f423c4dff08d65ee5cb4a4cfd3af69f75a70cf3b7ef60fc57798f99294c629f",
+      "test/contracts/Airdrop.js": "bfc9a5c5dc5f7ad5ac0ea02681b0fb71a26e670c27ab9ce2a39b290869ad5fe0"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Owner-assigned (allowlist-mapping) ERC20 airdrop with claimAll, Ownable+ReentrancyGuard, 48 lines; no Merkle/signature; hardhat.config.cjs; WEAK: grep counts 17 'it(' but most are commented-out placeholders, only ~4 real it blocks; LICENSE file MIT; requires only chai+hardhat.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-29T09:46:10.330981+00:00"
+}

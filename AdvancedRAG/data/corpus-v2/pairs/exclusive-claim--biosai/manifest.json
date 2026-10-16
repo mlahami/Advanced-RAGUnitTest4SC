@@ -1,0 +1,66 @@
+{
+  "id": "exclusive-claim--biosai",
+  "domain": "escrow",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "ExclusiveClaim.sol",
+    "MockERC20.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Biosai/lockd",
+    "commit": "d2b022f15709a1e511911b7e0c9d2753ba06b7d0",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/ExclusiveClaim.sol",
+      "contracts/test/MockERC20.sol"
+    ],
+    "test_paths": [
+      "test/ExclusiveClaim.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/ExclusiveClaim.sol": "edaff96412786b1d3deaa1ff87f85f718e9785c317c10414968b5f8bc006b0b5",
+      "contracts/test/MockERC20.sol": "8e5a7c4d1eb9bbe1d85a02d29a9256d2ca9292f83ba17c0c3571899c97a65245",
+      "test/ExclusiveClaim.test.ts": "c14e8c3dc2369ce77aea41efef7c8cee3288627239a454c24847249ff8b3e21b"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "ExclusiveClaim.test.js",
+      "upstream_path": "test/ExclusiveClaim.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 5,
+      "file": "ExclusiveClaim.test.js",
+      "upstream_path": "test/ExclusiveClaim.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "ExclusiveClaim",
+        "MockERC20"
+      ],
+      "file": "ExclusiveClaim.test.js",
+      "upstream_path": "test/ExclusiveClaim.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "HardhatEthersSigner"
+      ],
+      "file": "ExclusiveClaim.test.js",
+      "upstream_path": "test/ExclusiveClaim.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Deadline escrow: depositor locks ETH or ERC20 for a named claimant, who can claim at any time; after the deadline the depositor can refund; batch deposits and deadline extensions; primary 263 lines; 49 it blocks (time helpers); typechain and HardhatEthersSigner imports are used only as types, so TS elides them; LICENSE (MIT); history: 24 commits 2025-12-21..2026-09-27. Compiles 0.8.24 + OZ 5.0.2 no optimizer (8.7 KB). Its sibling CryptoInheritance.sol was rejected (stack too deep without optimizer).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:36:25.306322+00:00"
+}

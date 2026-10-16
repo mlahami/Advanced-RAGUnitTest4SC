@@ -1,0 +1,42 @@
+{
+  "id": "head-soccer--borissv4646",
+  "domain": "on-chain-game",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "HeadSoccer.sol",
+    "TestToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/BorisSV4646/footballGame",
+    "commit": "c64758fe84206da2e705d1229d160a555fe76e6a",
+    "license": "Apache-2.0",
+    "contract_paths": [
+      "contracts/HeadSoccer.sol",
+      "contracts/TestToken.sol"
+    ],
+    "test_paths": [
+      "test/HeadSoccerTest.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/HeadSoccer.sol": "82731ea46295fed4002271709cd05a5777f96b04e10b0830fbe57c11f12fbbfb",
+      "contracts/TestToken.sol": "25953e2f0d89ed3b465b25bf152397427e9e236a172a17cecb1c9324602b07ef",
+      "test/HeadSoccerTest.js": "fff18813587e028369d2c431d7eeb429cd9cf9e2013320b2e042811ad037de0b"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "HeadSoccerTest.js",
+      "upstream_path": "test/HeadSoccerTest.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Game economy for a HeadSoccer game (contract HeadSoccerRubies: ERC20<->rubies exchange, item purchases, game start/finish by frontend role via AccessControl); TestToken.sol mock; Apache-2.0; 2023. Primary 200 non-blank lines, closure 215 lines/2 files; 8 its, 28 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:30.026630+00:00"
+}

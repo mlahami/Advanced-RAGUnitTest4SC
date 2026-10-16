@@ -1,0 +1,82 @@
+{
+  "pair": "access-registry--adelmarcio0",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T07:36:25.893144+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AccessRegistry.sol": "63662ceb3bb527e95cc47627105827c5aefcb5937e3dc7dd096991eebea9bd01",
+    "LICENSE": "888705f789d00685680da93c946f17dbac08d5d0b0df63de5bca36d3d0adafb2",
+    "manifest.json": "2f43df0f66ab8b2eb87a7dfc01546477b0369ff578e8d9a753c437b0f7183ce2",
+    "test/AccessRegistry.test.js": "bdf98fbc16d8898ab0b8d518f6913e81f72b3dc3b2c0c73f81f6053fc0a09546"
+  },
+  "pair_sha256": "ffcba8947ff84775ec736808f8e9cab8e3e4e91a66b1c091ce7a9e6c06fb94a5",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "AccessRegistry.sol",
+        "reference": "AccessControl.sol",
+        "structural": 0.106,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "AccessRegistry.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.076,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "AccessRegistry.sol",
+        "reference": "GaslessRelayer.sol",
+        "structural": 0.074,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.87,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.59,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "AccessRegistry.sol": {
+          "statements": 100.0,
+          "branches": 62.5,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

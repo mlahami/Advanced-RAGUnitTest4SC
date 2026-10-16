@@ -1,0 +1,34 @@
+{
+  "id": "staking-vault--harshanandhan",
+  "domain": "staking",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "StakingVault.sol",
+    "StakeToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Harshanandhan/erc20-staking-vault",
+    "commit": "9434d9b22792134e4bafd514f246d5752713b2a8",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/StakingVault.sol",
+      "contracts/StakeToken.sol"
+    ],
+    "test_paths": [
+      "test/StakingVault.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/StakingVault.sol": "0fb6ac9b4292ad469323e9701114491f43b3141291c14539aea2dce04d3b1465",
+      "contracts/StakeToken.sol": "77b2372b66da81f3f7b3375550ba9622764a00d826fc2da63b804af33d243584",
+      "test/StakingVault.js": "3c24caaa08f57bba74881aa0fbc1d61410d5ea314e67d846c56b4e8d878f5a02"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "ERC20 staking vault with time-based reward accrual, claim, withdraw; primary 97 lines; 6 it blocks (6/6 pass, stmt cov 95.45%); licence LICENSE; history: 3 commits 2026-08-20..2026-09-09; author also owns SEEN repos (dividend-token, flash-loan-risk-lab)",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:31:55.502273+00:00"
+}

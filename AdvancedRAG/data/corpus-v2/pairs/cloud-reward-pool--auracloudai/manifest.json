@@ -1,0 +1,37 @@
+{
+  "id": "cloud-reward-pool--auracloudai",
+  "domain": "staking",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "CloudRewardPool.sol",
+    "CloudStakeVault.sol",
+    "CloudToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/AuraCloudAI/contracts",
+    "commit": "3311746b47d358ff6f26f19e3297978b3e9a9032",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/CloudRewardPool.sol",
+      "contracts/CloudStakeVault.sol",
+      "contracts/CloudToken.sol"
+    ],
+    "test_paths": [
+      "test/CloudRewardPool.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/CloudRewardPool.sol": "692599e7391c11c5985d48ae30735a93b6bf79d6f3356076e60807959a46e488",
+      "contracts/CloudStakeVault.sol": "57aeb16d5ce4176d2f162910552b963288f73fa755412a5236960bc278bd20ec",
+      "contracts/CloudToken.sol": "22b8522080f28dad3a5b50cb4c78e68132c0ed30ccbc86a57d77f442f81d0bc9",
+      "test/CloudRewardPool.test.js": "56c7be0078198fa486a4659309bcf435c88db95322d200667734ad15e6f0587b"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 151 lines, closure 359 lines, 3 files; 22 it blocks; history: 87 commits 2025-02-14..2025-05-20",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:31:00.242234+00:00"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "grow-vault--deboraholaboye",
+  "domain": "yield-vault",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "GrowVault.sol",
+    "MockERC20.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/DeborahOlaboye/grow-vault",
+    "commit": "47b97f83bd00d11beb72f2e1158b42d4185ec502",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/contracts/GrowVault.sol",
+      "contracts/contracts/MockERC20.sol"
+    ],
+    "test_paths": [
+      "contracts/test/GrowVault.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/GrowVault.sol": "1edd461d8b1d5aad2f29320b5fdc846ddfb31ec03e3d42a33242a2a19aae1330",
+      "contracts/contracts/MockERC20.sol": "6de467868d47ee7079dc36120a6ff6074eda9849e3d8bdf8144164319ac4ddc1",
+      "contracts/test/GrowVault.ts": "8b45d8eddc5b6e6f7e544edcf09dfcd002aae295f1044b7ff2ec2f8607f6df9b"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "GrowVault.js",
+      "upstream_path": "contracts/test/GrowVault.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "GrowVault.js",
+      "upstream_path": "contracts/test/GrowVault.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 177 lines, closure 198 lines, 2 files; 23 it blocks; history: 197 commits 2026-05-01..2026-06-10",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:32:57.031850+00:00"
+}

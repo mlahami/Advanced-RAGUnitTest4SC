@@ -1,0 +1,29 @@
+{
+  "id": "ether-staking--donguillotine",
+  "domain": "staking",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "EtherStaking.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/DonGuillotine/ether-staking-contract",
+    "commit": "915bf81cdf350088c7009449214a6c05c91b9047",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/EtherStaking.sol"
+    ],
+    "test_paths": [
+      "test/EtherStaking.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/EtherStaking.sol": "3e6d37182f8e8042849c7f97a6fa3a7b3ac41f9333aa6b932e7bf20d04a6450b",
+      "test/EtherStaking.js": "e53ce1c79c250eaf9677cdff5131a043d22170ff4fdfe809dcb3e7ef0270f09b"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "time-based rewards; evm_increaseTime; 12 its",
+  "imported_utc": "2026-09-27T21:50:18.874332+00:00"
+}

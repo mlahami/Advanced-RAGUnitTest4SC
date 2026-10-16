@@ -1,0 +1,36 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> IRealEstateChain.sol
+> IRealEstateChainMarketplace.sol
+> RealEstateChain.sol
+> RealEstateChainMarketplace.sol
+
+Compilation:
+============
+
+Compiled 22 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+----------------------------------|----------|----------|----------|----------|----------------|
+File                              |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+----------------------------------|----------|----------|----------|----------|----------------|
+ contracts\                       |    78.57 |    40.91 |    66.67 |    82.35 |                |
+  IRealEstateChain.sol            |      100 |      100 |      100 |      100 |                |
+  IRealEstateChainMarketplace.sol |      100 |      100 |      100 |      100 |                |
+  RealEstateChain.sol             |     37.5 |    16.67 |       40 |       50 | 42,45,48,56,66 |
+  RealEstateChainMarketplace.sol  |       95 |       50 |    85.71 |    95.83 |             82 |
+----------------------------------|----------|----------|----------|----------|----------------|
+All files                         |    78.57 |    40.91 |    66.67 |    82.35 |                |
+----------------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

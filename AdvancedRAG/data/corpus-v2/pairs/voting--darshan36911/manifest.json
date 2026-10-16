@@ -1,0 +1,31 @@
+{
+  "id": "voting--darshan36911",
+  "domain": "voting",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Voting.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Darshan36911/onchain-voting-dapp",
+    "commit": "b1528351ce222ba6d3e2ea33b98fc2957d828ae4",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Voting.sol"
+    ],
+    "test_paths": [
+      "test/Voting.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Voting.sol": "0b51f5267cc96d98568261161c1bd6417b7bae6bb5dc6d3f89a35bc9e06c7074",
+      "test/Voting.test.js": "07ff563c0585decdf395223841e8d7d2d24861cea00777328bdc648d81b869af"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Open proposal voting: anyone creates a proposal with description and duration, one For/Against vote per address until deadline, isActive/getProposal/getAllProposalIds views, owner field. Primary 132 lines; 17 it blocks incl. reverts (empty description, zero duration, double vote, nonexistent proposal, after deadline via time helpers). Local run on frozen HH env: 17/17 pass, 94.1% stmts. Licence file LICENSE (MIT). History: 1 commit 2026-07-19 -> DOUBTFUL. Same domain as benchmark Voting (proposal-based, not candidate-based) - check leakage.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-30T08:13:56.178948+00:00"
+}

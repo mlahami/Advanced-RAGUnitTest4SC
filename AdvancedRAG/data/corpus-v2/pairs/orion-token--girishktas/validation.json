@@ -1,0 +1,82 @@
+{
+  "pair": "orion-token--girishktas",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:50:36.963197+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/OrionToken.sol": "81a117c0f13d0bf66016369dd1faffeb97b40f13a90925a9c9a38d9ba12559c6",
+    "LICENSE": "987d28b33e2a3463f73657fdd968950ebef3c6b5ea77afc8c9daa7eead5c9204",
+    "manifest.json": "fe6fe569e3a4d863a774ffefa6fe59b7186b21f39f2ee055026b3a560901e55f",
+    "test/OrionToken.test.js": "01b181df9a21033d7a14f8aa5a625f022f021de7c6cead9995fa70d9c230bece"
+  },
+  "pair_sha256": "27bf80f78e43ec397a52194e1ee62ec4d0f775528a1dae442def68275b174eec",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "OrionToken.sol",
+        "reference": "BatchTransfer.sol",
+        "structural": 0.153,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "OrionToken.sol",
+        "reference": "PaymentSplitter.sol",
+        "structural": 0.107,
+        "signatures": 0.0,
+        "min_functions": 1
+      },
+      {
+        "contract": "OrionToken.sol",
+        "reference": "MerkleAirdrop.sol",
+        "structural": 0.101,
+        "signatures": 0.0,
+        "min_functions": 2
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.15,
+      "mocha": {
+        "tests": 13,
+        "passes": 13,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.7,
+      "mocha": {
+        "tests": 13,
+        "passes": 13,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "OrionToken.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

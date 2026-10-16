@@ -1,0 +1,34 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BonaToken.sol
+> DirectSale.sol
+> Mocks.sol
+
+Compilation:
+============
+
+Compiled 23 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+-----------------|----------|----------|----------|----------|----------------|
+File             |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-----------------|----------|----------|----------|----------|----------------|
+ contracts\      |    96.15 |    89.29 |    88.89 |    97.06 |                |
+  BonaToken.sol  |      100 |       50 |      100 |      100 |                |
+  DirectSale.sol |      100 |    92.31 |      100 |      100 |                |
+  Mocks.sol      |       50 |      100 |       50 |       50 |             17 |
+-----------------|----------|----------|----------|----------|----------------|
+All files        |    96.15 |    89.29 |    88.89 |    97.06 |                |
+-----------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

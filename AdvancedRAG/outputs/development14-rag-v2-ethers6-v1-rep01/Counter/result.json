@@ -1,0 +1,44 @@
+{
+  "contract": "Counter",
+  "status": "test_failures",
+  "prompt_sha256": "af6b8ea56f4ed36afa66ada2412bea19d5a760659ed3c37c1713ee6d7f526855",
+  "generation_seconds": 4.799286299967207,
+  "usage": {
+    "prompt_tokens": 10987,
+    "total_tokens": 11541,
+    "completion_tokens": 554,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.797289700014517
+  },
+  "passed_tests": 8,
+  "failed_tests": 3,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Counter Increment Should emit no events",
+      "error": "Event \"ValueSet\" doesn't exist in the contract"
+    },
+    {
+      "title": "Counter Decrement Should emit no events",
+      "error": "Event \"ValueSet\" doesn't exist in the contract"
+    },
+    {
+      "title": "Counter Reset Should emit no events",
+      "error": "Event \"ValueSet\" doesn't exist in the contract"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

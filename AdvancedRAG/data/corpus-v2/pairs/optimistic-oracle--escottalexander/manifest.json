@@ -1,0 +1,66 @@
+{
+  "id": "optimistic-oracle--escottalexander",
+  "domain": "oracle",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "OptimisticOracle.sol",
+    "Decider.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/escottalexander/oracle-challenge",
+    "commit": "62acb5c13ec3e777a79a767b0893cf5f9edf81b8",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/02_Optimistic/OptimisticOracle.sol",
+      "packages/hardhat/contracts/02_Optimistic/Decider.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/OptimisticOracle.ts"
+    ],
+    "license_file": "LICENCE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/02_Optimistic/OptimisticOracle.sol": "a696b8c0151dabef55449d4e3183db7bceb8e4526287c49334471da6301c97dd",
+      "packages/hardhat/contracts/02_Optimistic/Decider.sol": "59a37cf9e89ee35b1e819958972c3c89083265b68955dafe6c2f0ca500eec12b",
+      "packages/hardhat/test/OptimisticOracle.ts": "b0d895b39ebbfcf93e3b11931f218c0edcd47f246a34accb0e568de5b5536613"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "OptimisticOracle.js",
+      "upstream_path": "packages/hardhat/test/OptimisticOracle.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "OptimisticOracle.js",
+      "upstream_path": "packages/hardhat/test/OptimisticOracle.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "OptimisticOracle",
+        "Decider"
+      ],
+      "file": "OptimisticOracle.js",
+      "upstream_path": "packages/hardhat/test/OptimisticOracle.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "HardhatEthersSigner"
+      ],
+      "file": "OptimisticOracle.js",
+      "upstream_path": "packages/hardhat/test/OptimisticOracle.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 291 lines, closure 331 lines, 2 files; 34 it blocks; history: 201 commits 2025-03-22..2025-08-23",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:29:02.168737+00:00"
+}

@@ -1,0 +1,89 @@
+{
+  "pair": "p2-pescrow--rjaysolamo",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:11:34.052932+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MockERC20.sol": "e521ca1e428c0d6ca1a42a36fa37cd0c4b55900d1a2622747bafa939dae19c98",
+    "contracts/P2PEscrow.sol": "13bdc3222ff33b8b5dca3ca860ed5b1cc32afaf438691f09c271065c65294d8b",
+    "LICENSE": "e9f83662d950bc51690f97b58c064c9c93918f07d2c28a537bdf96722b22fcc3",
+    "manifest.json": "ee49ad319b747ba9768c580ee7191f1a4b969f0045cb94fb151c7ba8fcb652b7",
+    "test/P2PEscrow.test.js": "08e7be1638ad464b4682e969f35db88b59dd4f1542da91b3c7b90295073a0edc"
+  },
+  "pair_sha256": "bef3223204ecf551a45d8f5fcd2cb08713faa5f973c3f703685a46c33bb2e911",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "P2PEscrow.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.208,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "P2PEscrow.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.203,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "P2PEscrow.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.197,
+        "signatures": 0.0,
+        "min_functions": 11
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.73,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.68,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "P2PEscrow.sol": {
+          "statements": 97.87,
+          "branches": 53.06,
+          "functions": 94.12,
+          "lines": 97.87
+        },
+        "MockERC20.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

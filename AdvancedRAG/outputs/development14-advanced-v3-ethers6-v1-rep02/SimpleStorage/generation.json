@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"BenchmarkTarget\", function () {\n  let contract;\n  let owner;\n  let other;\n\n  beforeEach(async function () {\n    [owner, other] = await ethers.getSigners();\n\n    const Contract = await ethers.getContractFactory(\"BenchmarkTarget\");\n    contract = await Contract.deploy();\n    await contract.waitForDeployment();\n  });\n\n  describe(\"setValue\", function () {\n    it(\"should set the value and emit ValueSet event\", async function () {\n      const newValue = 100n;\n\n      await expect(contract.setValue(newValue))\n        .to.emit(contract, \"ValueSet\")\n        .withArgs(newValue);\n\n      expect(await contract.value()).to.equal(newValue);\n    });\n\n    it(\"should allow setting value with ether\", async function () {\n      const newValue = 200n;\n      const etherAmount = ethers.parseEther(\"1\");\n\n      await expect(contract.setValue(newValue, { value: etherAmount }))\n        .to.emit(contract, \"ValueSet\")\n        .withArgs(newValue);\n\n      expect(await contract.value()).to.equal(newValue);\n    });\n\n    it(\"should allow setting value to zero\", async function () {\n      const newValue = 0n;\n\n      await expect(contract.setValue(newValue))\n        .to.emit(contract, \"ValueSet\")\n        .withArgs(newValue);\n\n      expect(await contract.value()).to.equal(newValue);\n    });\n\n    it(\"should allow setting value to maximum uint256\", async function () {\n      const newValue = ethers.MaxUint256;\n\n      await expect(contract.setValue(newValue))\n        .to.emit(contract, \"ValueSet\")\n        .withArgs(newValue);\n\n      expect(await contract.value()).to.equal(newValue);\n    });\n  });\n\n  describe(\"value\", function () {\n    it(\"should return the current value\", async function () {\n      const initialValue = await contract.value();\n      expect(initialValue).to.equal(0n);\n\n      const newValue = 50n;\n      await contract.setValue(newValue);\n      expect(await contract.value()).to.equal(newValue);\n    });\n  });\n\n  describe(\"fail\", function () {\n    it(\"should revert with target failure message\", async function () {\n      await expect(contract.fail())\n        .to.be.revertedWith(\"target failure\");\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 6.277415000018664,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 11020,
+      "total_tokens": 11532,
+      "completion_tokens": 512,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "530e0584f14b2bc6f31fbc6cdac2baa6f35d7c672e17ca721f1078409df40f21"
+}

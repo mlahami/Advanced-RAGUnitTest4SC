@@ -1,0 +1,255 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 16,
+    "passes": 14,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-10-01T06:14:58.837Z",
+    "end": "2026-10-01T06:14:59.296Z",
+    "duration": 459
+  },
+  "tests": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "BondingCurve Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct immutable parameters",
+      "fullTitle": "BondingCurve Deployment Should set the correct immutable parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert if fee is too high",
+      "fullTitle": "BondingCurve Deployment Should revert if fee is too high",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 21,
+      "err": {}
+    },
+    {
+      "title": "Should mint tokens and emit events",
+      "fullTitle": "BondingCurve Buy Should mint tokens and emit events",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 31,
+      "err": {}
+    },
+    {
+      "title": "Should refund excess ETH",
+      "fullTitle": "BondingCurve Buy Should refund excess ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should revert if zero amount",
+      "fullTitle": "BondingCurve Buy Should revert if zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should revert if insufficient ETH",
+      "fullTitle": "BondingCurve Buy Should revert if insufficient ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should burn tokens and emit events",
+      "fullTitle": "BondingCurve Sell Should burn tokens and emit events",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 31,
+      "err": {}
+    },
+    {
+      "title": "Should revert if zero amount",
+      "fullTitle": "BondingCurve Sell Should revert if zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert if insufficient balance",
+      "fullTitle": "BondingCurve Sell Should revert if insufficient balance",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should calculate spot price correctly",
+      "fullTitle": "BondingCurve Price Calculations Should calculate spot price correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should quote buy correctly",
+      "fullTitle": "BondingCurve Price Calculations Should quote buy correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should quote sell correctly",
+      "fullTitle": "BondingCurve Price Calculations Should quote sell correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 13,
+      "err": {
+        "message": "bondingCurve._integrateCost is not a function",
+        "stack": "TypeError: bondingCurve._integrateCost is not a function\n    at Context.<anonymous> (test\\generated.test.js:144:40)"
+      }
+    },
+    {
+      "title": "Should allow owner to collect fees",
+      "fullTitle": "BondingCurve Owner Functions Should allow owner to collect fees",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 26,
+      "err": {
+        "message": "expected 5000000000000000001 to equal 0.",
+        "stack": "AssertionError: expected 5000000000000000001 to equal 0.\n    at Context.<anonymous> (test\\generated.test.js:170:39)"
+      }
+    },
+    {
+      "title": "Should revert if non-owner tries to collect fees",
+      "fullTitle": "BondingCurve Owner Functions Should revert if non-owner tries to collect fees",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert if no fees to collect",
+      "fullTitle": "BondingCurve Owner Functions Should revert if no fees to collect",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should quote sell correctly",
+      "fullTitle": "BondingCurve Price Calculations Should quote sell correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 13,
+      "err": {
+        "message": "bondingCurve._integrateCost is not a function",
+        "stack": "TypeError: bondingCurve._integrateCost is not a function\n    at Context.<anonymous> (test\\generated.test.js:144:40)"
+      }
+    },
+    {
+      "title": "Should allow owner to collect fees",
+      "fullTitle": "BondingCurve Owner Functions Should allow owner to collect fees",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 26,
+      "err": {
+        "message": "expected 5000000000000000001 to equal 0.",
+        "stack": "AssertionError: expected 5000000000000000001 to equal 0.\n    at Context.<anonymous> (test\\generated.test.js:170:39)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "BondingCurve Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct immutable parameters",
+      "fullTitle": "BondingCurve Deployment Should set the correct immutable parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert if fee is too high",
+      "fullTitle": "BondingCurve Deployment Should revert if fee is too high",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 21,
+      "err": {}
+    },
+    {
+      "title": "Should mint tokens and emit events",
+      "fullTitle": "BondingCurve Buy Should mint tokens and emit events",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 31,
+      "err": {}
+    },
+    {
+      "title": "Should refund excess ETH",
+      "fullTitle": "BondingCurve Buy Should refund excess ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should revert if zero amount",
+      "fullTitle": "BondingCurve Buy Should revert if zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should revert if insufficient ETH",
+      "fullTitle": "BondingCurve Buy Should revert if insufficient ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should burn tokens and emit events",
+      "fullTitle": "BondingCurve Sell Should burn tokens and emit events",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 31,
+      "err": {}
+    },
+    {
+      "title": "Should revert if zero amount",
+      "fullTitle": "BondingCurve Sell Should revert if zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert if insufficient balance",
+      "fullTitle": "BondingCurve Sell Should revert if insufficient balance",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should calculate spot price correctly",
+      "fullTitle": "BondingCurve Price Calculations Should calculate spot price correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should quote buy correctly",
+      "fullTitle": "BondingCurve Price Calculations Should quote buy correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert if non-owner tries to collect fees",
+      "fullTitle": "BondingCurve Owner Functions Should revert if non-owner tries to collect fees",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert if no fees to collect",
+      "fullTitle": "BondingCurve Owner Functions Should revert if no fees to collect",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    }
+  ]
+}

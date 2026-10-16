@@ -1,0 +1,44 @@
+{
+  "contract": "Adoption",
+  "status": "test_failures",
+  "prompt_sha256": "0c10df5983c210ddee595c41f9f8f2f70094b25146a4ab1aeabfbea0a702c4a0",
+  "generation_seconds": 7.797316799988039,
+  "usage": {
+    "prompt_tokens": 6888,
+    "total_tokens": 7692,
+    "completion_tokens": 804,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.991519800038077
+  },
+  "passed_tests": 4,
+  "failed_tests": 3,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Adoption Adopt Should adopt a pet and update adopters array",
+      "error": "Event \"Adoption\" doesn't exist in the contract"
+    },
+    {
+      "title": "Adoption Adopt Should return the adopted pet ID",
+      "error": "HH17: The input value cannot be normalized to a BigInt: Value {\"_type\":\"TransactionResponse\",\"accessList\":null,\"blockNumber\":5,\"blockHash\":\"0x61a2438d83c44a2f3cab9b357caedd17b1ac5fe2d35ca36b5bc5aa2c47948f58\",\"blobVersionedHashes\":null,\"chainId\":\"31337\",\"data\":\"0x8588b2c50000000000000000000000000000000000000000000000000000000000000001\",\"from\":\"0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC\",\"gasLimit\":\"1099511627775\",\"gasPrice\":\"1\",\"hash\":\"0x789e9758e4271ab79bf25cea103c5174ac184febb4437a9a47ebcd1174276456\",\"maxFeePerGas\":null,\"maxPriorityFeePerGas\":null,\"maxFeePerBlobGas\":null,\"nonce\":0,\"signature\":{\"_type\":\"signature\",\"networkV\":\"62710\",\"r\":\"0xb671609772b90051e1e180fe99838c086afcfd790d098921925eb62bcf5fe54b\",\"s\":\"0x18d5d1c36c87d3e01ee14de6911521c9f714995d3d41a71fbf00742913a9d766\",\"v\":28},\"to\":\"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0\",\"type\":0,\"value\":\"0\"} is of type \"object\" but is not an instanceof one of the known big number object types."
+    },
+    {
+      "title": "Adoption Get Adopters Should return the correct adopters array",
+      "error": "expected '0x70997970C51812dc3A010C7d01b50e0d17dc79C8' to equal '0x0000000000000000000000000000000000000000'."
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

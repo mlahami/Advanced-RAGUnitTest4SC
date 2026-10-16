@@ -1,0 +1,34 @@
+{
+  "id": "dex-pool--anmolm-777",
+  "domain": "amm-dex",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "DexPool.sol",
+    "Token.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/AnmolM-777/Mini_DEX",
+    "commit": "acbe85fe31c5481baed0bb88d7370a2db103d750",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/DexPool.sol",
+      "contracts/Token.sol"
+    ],
+    "test_paths": [
+      "test/DexPool.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/DexPool.sol": "21ed52248c0453874358af9cfde4e53a27739bc8c05ef3f6ffcc104f0245c888",
+      "contracts/Token.sol": "0672ed2c419938fb4d57f272ecb2042f1591f8fccc75bd317a8d4e43e57dd741",
+      "test/DexPool.test.js": "3ba0d2bcf0fa42486eef09ccf5da5d09647d4117a42b04203f13e3b8704ab057"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 173 lines, closure 188 lines, 2 files; 10 it blocks; history: 9 commits 2026-05-25..2026-06-23",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:30:13.136320+00:00"
+}

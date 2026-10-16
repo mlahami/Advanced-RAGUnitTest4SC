@@ -1,0 +1,70 @@
+{
+  "id": "agent-staking--toryoto",
+  "domain": "staking",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "AgentStaking.sol",
+    "AgentIdentityRegistry.sol",
+    "StableCoin.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/toryoto/UniAgent",
+    "commit": "d3d71c63e055ebdb4b33357ef450432f5055ddf5",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/contracts/AgentStaking.sol",
+      "contracts/contracts/AgentIdentityRegistry.sol",
+      "contracts/contracts/StableCoin.sol"
+    ],
+    "test_paths": [
+      "contracts/test/AgentStaking.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/AgentStaking.sol": "484023dec3a73544c5702c933aec89149f808dfcc6eda33a7ed44c111eb5bb92",
+      "contracts/contracts/AgentIdentityRegistry.sol": "3e57e8845f718936bcb8e2f3c7d99fe63367f344ba19c5c24be6843339392829",
+      "contracts/contracts/StableCoin.sol": "59b8f5bf676d1d1e350677379849f722a2b74e7c8fa8cc37608a6c68e7aa6519",
+      "contracts/test/AgentStaking.test.ts": "9b349ed1cde42c2bdce18e8c954dde582543ea327f0671eb33a0f06625463b14"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "AgentStaking.test.js",
+      "upstream_path": "contracts/test/AgentStaking.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 5,
+      "file": "AgentStaking.test.js",
+      "upstream_path": "contracts/test/AgentStaking.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "AgentStaking",
+        "AgentIdentityRegistry",
+        "Stablecoin"
+      ],
+      "file": "AgentStaking.test.js",
+      "upstream_path": "contracts/test/AgentStaking.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "AgentStaking.test.js",
+      "upstream_path": "contracts/test/AgentStaking.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 148 lines, closure 538 lines, 3 files; 37 it blocks; history: 188 commits 2025-12-27..2026-07-12",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:31:10.009699+00:00"
+}

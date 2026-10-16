@@ -1,0 +1,70 @@
+{
+  "id": "jubilee-yield-stream--jubilee-protocol",
+  "domain": "payment-streaming",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "JubileeYieldStream.sol",
+    "MockERC20.sol",
+    "MockVault.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Jubilee-Protocol/jUSDi",
+    "commit": "3b6e32e6f6fe28d5238c2dd845e979a89a83474e",
+    "license": "MIT",
+    "contract_paths": [
+      "Agentic Interaction/contracts/JubileeYieldStream.sol",
+      "contracts/mocks/MockERC20.sol",
+      "contracts/mocks/MockVault.sol"
+    ],
+    "test_paths": [
+      "test/JubileeYieldStream.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "Agentic Interaction/contracts/JubileeYieldStream.sol": "73606d2ec4408536f9ca3e03bb163b2109c49561740f2fe0aaaee29fe964d0b3",
+      "contracts/mocks/MockERC20.sol": "6b65f660b2538608187c23ff2258d03d3b07e2540af803df10a8db3405155bbd",
+      "contracts/mocks/MockVault.sol": "8f42b9db8c04dc6905bcc2ef789c78e556391a325a5a07a26330759c67a27a2b",
+      "test/JubileeYieldStream.test.ts": "701553e9686f0094e34ed171d9dcb583f57ede07ae6a3757335d37713f556dbe"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "JubileeYieldStream.test.js",
+      "upstream_path": "test/JubileeYieldStream.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 5,
+      "file": "JubileeYieldStream.test.js",
+      "upstream_path": "test/JubileeYieldStream.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "JubileeYieldStream",
+        "MockVault",
+        "MockERC20"
+      ],
+      "file": "JubileeYieldStream.test.js",
+      "upstream_path": "test/JubileeYieldStream.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "JubileeYieldStream.test.js",
+      "upstream_path": "test/JubileeYieldStream.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 485 lines, closure 543 lines, 3 files; 20 it blocks; history: 60 commits 2026-01-25..2026-03-06",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:28:07.206549+00:00"
+}

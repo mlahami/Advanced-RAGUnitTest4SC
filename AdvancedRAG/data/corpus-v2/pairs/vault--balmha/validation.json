@@ -1,0 +1,82 @@
+{
+  "pair": "vault--balmha",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:55:10.807210+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Vault.sol": "6a05d6fc270012812f2ae06cd47ed905b27a493e2470e26ed25397369dc11342",
+    "LICENSE": "3c72cd8016c618686f7f1350d29cdef0765f5138fd622166c64c7daa7fd92565",
+    "manifest.json": "3206ced3b3443691b68dd093c2c71ae6184342cab6e2289228533c482980f7ff",
+    "test/Vault.test.js": "205a0502f115b22fe17c61271df7c4dcea09f2e7d98412d3409dd4d7ff9a21ba"
+  },
+  "pair_sha256": "76390f48591e3c8a60ba5772dd37350c45e7a14ca986c2f30c80e9f1f8c8078a",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Vault.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.167,
+        "signatures": 0.25,
+        "min_functions": 5
+      },
+      {
+        "contract": "Vault.sol",
+        "reference": "MetaCoin.sol",
+        "structural": 0.157,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "Vault.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.153,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.87,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.52,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Vault.sol": {
+          "statements": 93.75,
+          "branches": 75.0,
+          "functions": 80.0,
+          "lines": 93.75
+        }
+      }
+    }
+  },
+  "accepted": true
+}

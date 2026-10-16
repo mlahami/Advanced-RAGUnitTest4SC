@@ -1,0 +1,44 @@
+{
+  "id": "erc20-vesting--dualnova",
+  "domain": "vesting",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "ERC20Vesting.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/DualNova/tokenization-templates",
+    "commit": "fd6f5a9e0cea42b6a2f709d035cef5cde9328820",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/ERC20Vesting.sol"
+    ],
+    "test_paths": [
+      "test/ERC20Vesting.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/ERC20Vesting.sol": "de3f8c903585c5bd4fb6bad4a6529130cce49b95a5f0eb3f03c93bd33ed4d585",
+      "test/ERC20Vesting.test.ts": "cf63da427a3c2ef1de36b61cc0175e6fa80cd1150348d24ccfd5c518586c3574"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "ERC20Vesting.test.js",
+      "upstream_path": "test/ERC20Vesting.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "ERC20Vesting.test.js",
+      "upstream_path": "test/ERC20Vesting.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "ERC20 token with built-in owner-granted cliff/linear vesting schedules, release and revoke, custom errors; primary 178 lines; 10 it blocks; typechain import is `import type` only; LICENSE (MIT); history: 1 commit 2026-05-27 - DOUBTFUL (single-commit template, may be AI-assisted). Compiles with 0.8.24 + OZ 5.0.2, no optimizer (8.8 KB).",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-30T07:35:59.340629+00:00"
+}

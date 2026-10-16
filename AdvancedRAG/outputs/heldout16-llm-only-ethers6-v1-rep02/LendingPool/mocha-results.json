@@ -1,0 +1,135 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 6,
+    "passes": 4,
+    "pending": 0,
+    "failures": 4,
+    "start": "2026-09-30T20:53:21.584Z",
+    "end": "2026-09-30T20:53:22.272Z",
+    "duration": 688
+  },
+  "tests": [
+    {
+      "title": "Should set the correct loan token",
+      "fullTitle": "LendingPool Deployment Should set the correct loan token",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should have correct constants",
+      "fullTitle": "LendingPool Deployment Should have correct constants",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should deposit ETH as collateral",
+      "fullTitle": "LendingPool depositCollateral Should deposit ETH as collateral",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should revert when depositing zero ETH",
+      "fullTitle": "LendingPool depositCollateral Should revert when depositing zero ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should allow borrowing within collateral limit",
+      "fullTitle": "LendingPool borrow Should allow borrowing within collateral limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient balance'\n    at BenchmarkERC20._transfer (runs/heldout16-llm-only-ethers6-v1-rep02/LendingPool/contracts/BenchmarkFixtures.sol:142)\n    at BenchmarkERC20.transfer (runs/heldout16-llm-only-ethers6-v1-rep02/LendingPool/contracts/BenchmarkFixtures.sol:65)\n    at LendingPool.borrow (runs/heldout16-llm-only-ethers6-v1-rep02/LendingPool/contracts/LendingPool.sol:69)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.borrow (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:66:7)"
+      }
+    },
+    {
+      "title": "Should revert when borrowing exceeds collateral limit",
+      "fullTitle": "LendingPool borrow Should revert when borrowing exceeds collateral limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Undercollateralized', but it reverted with reason 'insufficient balance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Undercollateralized', but it reverted with reason 'insufficient balance'\n    at Context.<anonymous> (test\\generated.test.js:78:7)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should allow borrowing within collateral limit",
+      "fullTitle": "LendingPool borrow Should allow borrowing within collateral limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient balance'\n    at BenchmarkERC20._transfer (runs/heldout16-llm-only-ethers6-v1-rep02/LendingPool/contracts/BenchmarkFixtures.sol:142)\n    at BenchmarkERC20.transfer (runs/heldout16-llm-only-ethers6-v1-rep02/LendingPool/contracts/BenchmarkFixtures.sol:65)\n    at LendingPool.borrow (runs/heldout16-llm-only-ethers6-v1-rep02/LendingPool/contracts/LendingPool.sol:69)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.borrow (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:66:7)"
+      }
+    },
+    {
+      "title": "Should revert when borrowing exceeds collateral limit",
+      "fullTitle": "LendingPool borrow Should revert when borrowing exceeds collateral limit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Undercollateralized', but it reverted with reason 'insufficient balance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Undercollateralized', but it reverted with reason 'insufficient balance'\n    at Context.<anonymous> (test\\generated.test.js:78:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"Should allow repaying debt\"",
+      "fullTitle": "LendingPool repay \"before each\" hook for \"Should allow repaying debt\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 11,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient balance'\n    at BenchmarkERC20._transfer (runs/heldout16-llm-only-ethers6-v1-rep02/LendingPool/contracts/BenchmarkFixtures.sol:142)\n    at BenchmarkERC20.transfer (runs/heldout16-llm-only-ethers6-v1-rep02/LendingPool/contracts/BenchmarkFixtures.sol:65)\n    at LendingPool.borrow (runs/heldout16-llm-only-ethers6-v1-rep02/LendingPool/contracts/LendingPool.sol:69)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.borrow (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:90:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"Should allow liquidation of undercollateralized position\"",
+      "fullTitle": "LendingPool liquidate \"before each\" hook for \"Should allow liquidation of undercollateralized position\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 14,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient balance'\n    at BenchmarkERC20._transfer (runs/heldout16-llm-only-ethers6-v1-rep02/LendingPool/contracts/BenchmarkFixtures.sol:142)\n    at BenchmarkERC20.transfer (runs/heldout16-llm-only-ethers6-v1-rep02/LendingPool/contracts/BenchmarkFixtures.sol:65)\n    at LendingPool.borrow (runs/heldout16-llm-only-ethers6-v1-rep02/LendingPool/contracts/LendingPool.sol:69)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.borrow (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:124:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct loan token",
+      "fullTitle": "LendingPool Deployment Should set the correct loan token",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should have correct constants",
+      "fullTitle": "LendingPool Deployment Should have correct constants",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should deposit ETH as collateral",
+      "fullTitle": "LendingPool depositCollateral Should deposit ETH as collateral",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should revert when depositing zero ETH",
+      "fullTitle": "LendingPool depositCollateral Should revert when depositing zero ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\LendingPool\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    }
+  ]
+}

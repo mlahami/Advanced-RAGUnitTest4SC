@@ -1,0 +1,44 @@
+{
+  "contract": "InsurancePool",
+  "status": "test_failures",
+  "prompt_sha256": "f4f510efc14536f399fb8bec18c6eba9d6912e0a1eb3044f2ccc89b41fc1756d",
+  "generation_seconds": 20.834376799990423,
+  "usage": {
+    "prompt_tokens": 12435,
+    "total_tokens": 15383,
+    "completion_tokens": 2948,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.071969899930991
+  },
+  "passed_tests": 22,
+  "failed_tests": 3,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "InsurancePool LP Actions should allow claiming rewards",
+      "error": "Expected the ether balance of 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 (the 1st address in the list) to change by 0 wei, but it changed by 66666666666666660 wei\nExpected the ether balance of 0xa513E6E4b8f2a923D98304ec87F64353C4D5C853 (the 2nd address in the list) to change by 0 wei, but it changed by -66666666666666660 wei"
+    },
+    {
+      "title": "InsurancePool Policy Actions should emit PolicyPurchased event on policy purchase",
+      "error": "Error in \"PolicyPurchased\" event: Error in the 5th argument assertion: expected 1790838704 to equal 1790838703."
+    },
+    {
+      "title": "InsurancePool Reward Distribution should correctly update rewards for LPs",
+      "error": "expected 0 to be above 0."
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 88.24,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

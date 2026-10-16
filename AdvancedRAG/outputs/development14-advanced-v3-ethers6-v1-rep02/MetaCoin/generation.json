@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"MetaCoin\", function () {\n  let metaCoin;\n  let owner;\n  let user1;\n  let user2;\n\n  beforeEach(async function () {\n    [owner, user1, user2] = await ethers.getSigners();\n    const MetaCoin = await ethers.getContractFactory(\"MetaCoin\");\n    metaCoin = await MetaCoin.deploy();\n    await metaCoin.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should assign initial balance to the deployer\", async function () {\n      expect(await metaCoin.getBalance(owner.address)).to.equal(10000n);\n    });\n\n    it(\"Should have zero balance for other accounts\", async function () {\n      expect(await metaCoin.getBalance(user1.address)).to.equal(0n);\n      expect(await metaCoin.getBalance(user2.address)).to.equal(0n);\n    });\n  });\n\n  describe(\"sendCoin\", function () {\n    it(\"Should transfer coins between accounts\", async function () {\n      const amount = 100n;\n      await expect(metaCoin.sendCoin(user1.address, amount))\n        .to.emit(metaCoin, \"Transfer\")\n        .withArgs(owner.address, user1.address, amount);\n\n      expect(await metaCoin.getBalance(owner.address)).to.equal(9900n);\n      expect(await metaCoin.getBalance(user1.address)).to.equal(amount);\n    });\n\n    it(\"Should fail if sender doesn't have enough coins\", async function () {\n      const amount = 10001n;\n      await expect(metaCoin.sendCoin(user1.address, amount)).to.be.reverted;\n      expect(await metaCoin.getBalance(owner.address)).to.equal(10000n);\n      expect(await metaCoin.getBalance(user1.address)).to.equal(0n);\n    });\n\n    it(\"Should fail when transferring to zero address\", async function () {\n      const amount = 100n;\n      await expect(metaCoin.sendCoin(ethers.ZeroAddress, amount)).to.be.reverted;\n    });\n\n    it(\"Should return false when transfer fails\", async function () {\n      const amount = 10001n;\n      expect(await metaCoin.sendCoin(user1.address, amount)).to.be.false;\n    });\n  });\n\n  describe(\"getBalance\", function () {\n    it(\"Should return correct balance for accounts\", async function () {\n      expect(await metaCoin.getBalance(owner.address)).to.equal(10000n);\n      expect(await metaCoin.getBalance(user1.address)).to.equal(0n);\n    });\n  });\n\n  describe(\"getBalanceInEth\", function () {\n    it(\"Should return balance multiplied by 2\", async function () {\n      expect(await metaCoin.getBalanceInEth(owner.address)).to.equal(20000n);\n      expect(await metaCoin.getBalanceInEth(user1.address)).to.equal(0n);\n    });\n\n    it(\"Should update when balance changes\", async function () {\n      const amount = 100n;\n      await metaCoin.sendCoin(user1.address, amount);\n      expect(await metaCoin.getBalanceInEth(owner.address)).to.equal(19800n);\n      expect(await metaCoin.getBalanceInEth(user1.address)).to.equal(200n);\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 9.100933299981989,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 10213,
+      "total_tokens": 10934,
+      "completion_tokens": 721,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "9537f90a4fe54dd0f5bd4c73083eb17f59cab85c096bc097dd443424bd03a726"
+}

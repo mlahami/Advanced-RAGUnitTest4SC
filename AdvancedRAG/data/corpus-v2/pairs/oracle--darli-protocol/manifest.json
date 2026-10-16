@@ -1,0 +1,31 @@
+{
+  "id": "oracle--darli-protocol",
+  "domain": "price-oracle",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Oracle.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/darli-protocol/oracle-v1",
+    "commit": "a735b16c040561e94d8b56db905b51427fdf88ac",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MockToken.sol",
+      "contracts/Oracle.sol"
+    ],
+    "test_paths": [
+      "test/Oracle.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MockToken.sol": "f7ccc05d7190b87492df1087056b786c1389cc47801522dc753a85c6ae89d0ab",
+      "contracts/Oracle.sol": "bf2a3a98424c933e8f0459cedff869cc3674ec62f562f14d9232da323adc9cc4",
+      "test/Oracle.test.js": "6268d9369f21d1a6eaba62c712663dbe6bf4b272e033c6c05d8c2f0965e5489e"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "reporter-submitted feeds with staking",
+  "imported_utc": "2026-09-27T21:50:19.009851+00:00"
+}

@@ -1,0 +1,34 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> IWealthVault.sol
+> MockUSDC.sol
+> WealthVault.sol
+
+Compilation:
+============
+
+Compiled 13 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+-------------------|----------|----------|----------|----------|----------------|
+File               |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-------------------|----------|----------|----------|----------|----------------|
+ contracts\        |    95.83 |       70 |    90.91 |    96.77 |                |
+  IWealthVault.sol |      100 |      100 |      100 |      100 |                |
+  MockUSDC.sol     |       50 |      100 |    66.67 |       50 |             10 |
+  WealthVault.sol  |      100 |       70 |      100 |      100 |                |
+-------------------|----------|----------|----------|----------|----------------|
+All files          |    95.83 |       70 |    90.91 |    96.77 |                |
+-------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

@@ -1,0 +1,60 @@
+{
+  "contract": "DEX",
+  "status": "test_failures",
+  "prompt_sha256": "655833b35b703d7a6f60eb97ef5729ae2bc35ec809fd18fce7e8c9be1e9311f1",
+  "generation_seconds": 13.394869499956258,
+  "usage": {
+    "prompt_tokens": 7834,
+    "total_tokens": 9858,
+    "completion_tokens": 2024,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 6.444354000035673
+  },
+  "passed_tests": 4,
+  "failed_tests": 7,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "DEX addLiquidity Should add liquidity and mint shares",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "DEX addLiquidity Should revert when adding unequal amounts initially",
+      "error": "Expected transaction to be reverted with reason 'Insufficient liquidity minted', but it didn't revert"
+    },
+    {
+      "title": "DEX removeLiquidity Should remove liquidity and burn shares",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "DEX swapAforB Should swap tokenA for tokenB",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "DEX swapAforB Should revert when swapping zero amount",
+      "error": "Expected transaction to be reverted with reason 'insufficient allowance', but it didn't revert"
+    },
+    {
+      "title": "DEX swapBforA Should swap tokenB for tokenA",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "DEX swapBforA Should revert when swapping zero amount",
+      "error": "Expected transaction to be reverted with reason 'insufficient allowance', but it didn't revert"
+    }
+  ],
+  "coverage": {
+    "statements": 95.45,
+    "branches": 66.67,
+    "functions": 85.71,
+    "lines": 95.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

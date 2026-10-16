@@ -1,0 +1,40 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> FlashLoanPool.sol
+> LabAttacker.sol
+> LabOracle.sol
+> MitigatedVault.sol
+> MockERC20.sol
+> VulnerableVault.sol
+
+Compilation:
+============
+
+Compiled 6 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+----------------------|----------|----------|----------|----------|----------------|
+File                  |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+----------------------|----------|----------|----------|----------|----------------|
+ contracts\           |    86.67 |       50 |    81.25 |    83.87 |                |
+  FlashLoanPool.sol   |      100 |       50 |      100 |      100 |                |
+  LabAttacker.sol     |      100 |    64.29 |      100 |    79.07 |... 81,87,88,89 |
+  LabOracle.sol       |      100 |       50 |      100 |      100 |                |
+  MitigatedVault.sol  |    76.19 |    47.06 |    63.64 |    77.78 |... ,94,120,121 |
+  MockERC20.sol       |    92.86 |       50 |    85.71 |    95.45 |             46 |
+  VulnerableVault.sol |    82.35 |    41.67 |       80 |    86.36 |       56,57,58 |
+----------------------|----------|----------|----------|----------|----------------|
+All files             |    86.67 |       50 |    81.25 |    83.87 |                |
+----------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

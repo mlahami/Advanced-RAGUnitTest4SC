@@ -1,0 +1,57 @@
+{
+  "id": "donate-crypto--allexantoniollo",
+  "domain": "charity-donation",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "DonateCrypto.sol",
+    "DonateCryptoLib.sol",
+    "IDonateCrypto.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/AllexAntoniollo/DonateCrypto",
+    "commit": "536b70b4ab02cdce945e9502dce220fbee2e034d",
+    "license": "MIT",
+    "contract_paths": [
+      "blockchain/contracts/DonateCrypto.sol",
+      "blockchain/contracts/DonateCryptoLib.sol",
+      "blockchain/contracts/IDonateCrypto.sol"
+    ],
+    "test_paths": [
+      "blockchain/test/DonateCrypto.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "blockchain/contracts/DonateCrypto.sol": "e913c00c9143312dc8cba81782df7e9004bf1d6a7fd87f3df3ffdf7a044fa87e",
+      "blockchain/contracts/DonateCryptoLib.sol": "63ba0146337d5eb41eaa77413425caefbd9c82a59de483338eff0c6a16d946d4",
+      "blockchain/contracts/IDonateCrypto.sol": "0387f60386c0e80481b89af6defa3dfcc86f79a6daaac6448c66935894fda506",
+      "blockchain/test/DonateCrypto.test.ts": "2be7183d1803819b9b5240963ea04209a4e0e2763f1b8f36fcafbbee13e43af2"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "DonateCrypto.test.js",
+      "upstream_path": "blockchain/test/DonateCrypto.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "DonateCrypto.test.js",
+      "upstream_path": "blockchain/test/DonateCrypto.test.ts"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "DonateCrypto.test.js",
+      "upstream_path": "blockchain/test/DonateCrypto.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Donation campaigns with fee, library DonateCryptoLib.sol and interface; 2023. Primary 63 non-blank lines, closure 91 lines/3 files; 15 its, 15 expects; pragma ^0.8.19.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:58.296950+00:00"
+}

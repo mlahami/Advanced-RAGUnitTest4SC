@@ -1,0 +1,67 @@
+{
+  "id": "rag-v2.Crowdfunding",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "Crowdfunding",
+  "chunk_ids": [
+    1601,
+    1614,
+    1598,
+    1597,
+    1608,
+    1723,
+    1604,
+    1592
+  ],
+  "context_sha256": "37f1f9b9f565a5c019ed4ac2e95e05305f4177960c344cf2c02b5b509112c1ed",
+  "ratings": [
+    {
+      "chunk_id": 1601,
+      "rating": 1,
+      "reason": "Tests withdraw after deadline when goal met, similar logic to target’s withdraw, but uses different contract structure and parameters, so only pattern is reusable."
+    },
+    {
+      "chunk_id": 1614,
+      "rating": 1,
+      "reason": "Uses time travel and balance change assertions, which are applicable, but the contract’s API differs (no createCampaign/indexed functions)."
+    },
+    {
+      "chunk_id": 1598,
+      "rating": 1,
+      "reason": "Shows pattern for testing deadline‑based revert using time increase, but target lacks campaign creation logic, so only the revert‑after‑deadline idea is reusable."
+    },
+    {
+      "chunk_id": 1597,
+      "rating": 1,
+      "reason": "Shows generic contribution testing pattern with time helpers and loadFixture, but target lacks campaign IDs and events, so only partial reuse possible."
+    },
+    {
+      "chunk_id": 1608,
+      "rating": 1,
+      "reason": "Shows refund after deadline pattern, but checks non‑contributor revert which target doesn’t have"
+    },
+    {
+      "chunk_id": 1723,
+      "rating": 1,
+      "reason": "Only demonstrates generic revert expectation; specific behavior (fee, factory) unrelated to target contract’s functions."
+    },
+    {
+      "chunk_id": 1604,
+      "rating": 2,
+      "reason": "Tests withdraw access control, matching target's creator-only withdraw check; setup can be reused after renaming."
+    },
+    {
+      "chunk_id": 1592,
+      "rating": 1,
+      "reason": "Tests event emission for a createCampaign function, which the target lacks; only generic fixture and time helpers are reusable."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9250,
+    "completion_tokens": 966,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 60.6,
+  "evaluated_utc": "2026-10-12T08:46:20.045417+00:00"
+}

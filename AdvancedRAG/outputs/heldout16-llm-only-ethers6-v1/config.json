@@ -1,0 +1,38 @@
+{
+  "configuration": "llm-only-ethers6-v1",
+  "retrieval": "none",
+  "top_k": 0,
+  "corpus_sha256": "6c689fa85fa95bdb4ba58074be5293e26140fbb44c819bc04ee1a55d59a98d4e",
+  "prompt_policy": "frozen ethers 5 LLM-only prompt; only the four API-convention sentences replaced",
+  "fixture_version": "enase30-fixtures-v2",
+  "fixture_source": "D:\\Recherche\\ExtensionENASE2026\\workspace\\AdvancedRAG\\data\\fixtures\\v2\\BenchmarkFixtures.sol",
+  "fixture_source_sha256": "c00d4bc98b64f6f698c90ee777a2701db934787ee6c9c5be6971ed2b37d22b32",
+  "fixture_catalog_sha256": "49c1295ead1f5922606887dbbc96582a0ab920ec4713d755bb92aa052961bd39",
+  "fixture_retrieval_excluded": true,
+  "benchmark_manifest": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\data\\benchmarks\\enase30\\manifest.json",
+  "benchmark_split": "heldout-new16",
+  "protocol_version": "controlled-fixtures-v2",
+  "corrected_parent_prompt_source": "D:\\Recherche\\ExtensionENASE2026\\workspace\\AdvancedRAG\\outputs\\heldout16-llm-only-fixtures-v1",
+  "retrieval_unchanged": true,
+  "api_convention": "ethers6",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "ethers5_parent_prompt_source": "D:\\Recherche\\ExtensionENASE2026\\workspace\\AdvancedRAG\\outputs\\heldout16-llm-only-fixtures-v2",
+  "convention_replacements": [
+    {
+      "from": "Use Hardhat 2, ethers 5, Mocha and Chai, with hardhat-chai-matchers installed.",
+      "to": "Use Hardhat 2, ethers 6, Mocha and Chai, with hardhat-chai-matchers installed."
+    },
+    {
+      "from": "Use ethers.utils.parseEther, ethers.constants.MaxUint256, and contract.deployed() (ethers 5).",
+      "to": "Use ethers.parseEther, ethers.MaxUint256, await contract.waitForDeployment() and await contract.getAddress() (ethers 6)."
+    },
+    {
+      "from": "For BigNumber values use Chai equality matchers, not JavaScript number arithmetic.",
+      "to": "For uint256 values use BigInt literals (e.g. 10n) and Chai equality matchers, not JavaScript number arithmetic."
+    },
+    {
+      "from": "Use Hardhat 2, ethers 5, Mocha and hardhat-chai-matchers. No external helper files.",
+      "to": "Use Hardhat 2, ethers 6, Mocha and hardhat-chai-matchers. No external helper files."
+    }
+  ]
+}

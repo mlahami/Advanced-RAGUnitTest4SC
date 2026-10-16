@@ -1,0 +1,31 @@
+{
+  "id": "claim-settlement--onlymekarthik",
+  "domain": "insurance",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "ClaimSettlement.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/OnlymeKarthik/Dr.Benmax",
+    "commit": "90d32de040da5d1421254e7a46e6d9f40076b37d",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/contracts/ClaimSettlement.sol"
+    ],
+    "test_paths": [
+      "contracts/test/ClaimSettlement.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/ClaimSettlement.sol": "a5f25069445e6086ce70de7ab46280e684de10bd154949d16833ede653f07237",
+      "contracts/test/ClaimSettlement.test.js": "7100c049496ffc4fe79c6bf2482b3a28aa12cdbdbfe79631884308f6cdd96f10"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (few commits, all commits on one day). | primary 112 lines, closure 112 lines, 1 files; 12 it blocks; history: 5 commits 2025-11-29..2025-11-29",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T10:24:25.188807+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "cognis-wallet-v2--cognis-protocol",
+  "domain": "treasury",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "CognisWalletV2.sol",
+    "CognisTokenV2.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/cognis-protocol/cognis-contracts",
+    "commit": "b979bc804bbf69d625b69eddb15bf1bd54c50b5a",
+    "license": "Apache-2.0",
+    "contract_paths": [
+      "contracts/CognisWalletV2.sol",
+      "contracts/CognisTokenV2.sol"
+    ],
+    "test_paths": [
+      "test/CognisWalletV2.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/CognisWalletV2.sol": "a12fc6cd29dd422c9927bd3b2e7df5e0a7a139b5290c2f20674ddbb4dfebf7ea",
+      "contracts/CognisTokenV2.sol": "5184dc9d089f1263aafa820c93d221740011fdc62cbfcfe5d83edf0f3dc0b31f",
+      "test/CognisWalletV2.test.js": "9015ecbac3e64aec9d99806837fb3ff70a96be0128d1474710d2a916a419f895"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Agent treasury wallet: daily spending limit with 24h roll-over, owner-issued one-shot over-limit approvals with nonce and 1h expiry, revoke, owner withdraw (Ownable2Step); primary 212 lines; 19 it blocks (loadFixture, time); LICENSE (Apache-2.0); history: 2 commits 2026-09-09..2026-09-10 - DOUBTFUL (short history). Compiles 0.8.24 + OZ 5.0.2 no optimizer (6.9 KB).",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-30T07:36:04.543669+00:00"
+}

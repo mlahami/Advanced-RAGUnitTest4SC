@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"TimelockVault\", function () {\n  let vault;\n  let owner;\n  let otherAccount;\n  const delaySeconds = 3600n; // 1 hour\n  const depositAmount = ethers.parseEther(\"1\");\n\n  beforeEach(async function () {\n    [owner, otherAccount] = await ethers.getSigners();\n\n    const TimelockVault = await ethers.getContractFactory(\"TimelockVault\");\n    vault = await TimelockVault.deploy(delaySeconds, { value: depositAmount });\n    await vault.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should set the right owner\", async function () {\n      expect(await vault.owner()).to.equal(owner.address);\n    });\n\n    it(\"Should set the right unlock time\", async function () {\n      const currentBlock = await ethers.provider.getBlock(\"latest\");\n      expect(await vault.unlockTime()).to.equal(currentBlock.timestamp + Number(delaySeconds));\n    });\n\n    it(\"Should receive and store the funds\", async function () {\n      expect(await ethers.provider.getBalance(await vault.getAddress())).to.equal(depositAmount);\n    });\n  });\n\n  describe(\"Withdrawals\", function () {\n    describe(\"Validations\", function () {\n      it(\"Should revert with the right error if called too soon\", async function () {\n        await expect(vault.withdraw()).to.be.revertedWith(\"locked\");\n      });\n\n      it(\"Should revert with the right error if called from another account\", async function () {\n        const currentBlock = await ethers.provider.getBlock(\"latest\");\n        await ethers.provider.send(\"evm_setNextBlockTimestamp\", [currentBlock.timestamp + Number(delaySeconds) + 1]);\n        await ethers.provider.send(\"evm_mine\", []);\n\n        await expect(vault.connect(otherAccount).withdraw()).to.be.revertedWith(\"not owner\");\n      });\n    });\n\n    describe(\"Transfers\", function () {\n      it(\"Should transfer the funds to the owner\", async function () {\n        const currentBlock = await ethers.provider.getBlock(\"latest\");\n        await ethers.provider.send(\"evm_setNextBlockTimestamp\", [currentBlock.timestamp + Number(delaySeconds) + 1]);\n        await ethers.provider.send(\"evm_mine\", []);\n\n        await expect(vault.withdraw())\n          .to.changeEtherBalances(\n            [owner, vault],\n            [depositAmount, -depositAmount]\n          );\n      });\n    });\n  });\n\n  describe(\"Receive\", function () {\n    it(\"Should accept ETH deposits\", async function () {\n      const additionalAmount = ethers.parseEther(\"0.5\");\n      await expect(otherAccount.sendTransaction({\n        to: await vault.getAddress(),\n        value: additionalAmount\n      })).to.changeEtherBalance(vault, additionalAmount);\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 9.678047399967909,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 10815,
+      "total_tokens": 11427,
+      "completion_tokens": 612,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "08a28cde7c98c86f0bf19bf820be7c59076eb38d39df9faeea439b4a75892c56"
+}

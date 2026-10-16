@@ -1,0 +1,48 @@
+{
+  "contract": "PriceOracle",
+  "status": "test_failures",
+  "prompt_sha256": "1b162a977125f15cebc12565d03da1b4c994e07d016cc382eec981b19cafaec5",
+  "generation_seconds": 14.22777200001292,
+  "usage": {
+    "prompt_tokens": 12831,
+    "total_tokens": 14746,
+    "completion_tokens": 1915,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.019927800050937
+  },
+  "passed_tests": 15,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "PriceOracle Price Submission Should aggregate prices when enough feeders submit",
+      "error": "Error in \"PriceUpdated\" event: Error in the 3rd argument assertion: HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined"
+    },
+    {
+      "title": "PriceOracle Price Reading Should return the latest price",
+      "error": "HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined"
+    },
+    {
+      "title": "PriceOracle Price Reading Should calculate TWAP correctly",
+      "error": "VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)"
+    },
+    {
+      "title": "PriceOracle Circuit Breaker Should not trip circuit breaker when price deviation is within limits",
+      "error": "Error in \"PriceUpdated\" event: Error in the 3rd argument assertion: HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined"
+    }
+  ],
+  "coverage": {
+    "statements": 95.74,
+    "branches": 89.47,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

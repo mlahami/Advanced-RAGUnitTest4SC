@@ -1,0 +1,221 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 14,
+    "passes": 13,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-30T20:57:45.715Z",
+    "end": "2026-09-30T20:57:47.678Z",
+    "duration": 1963
+  },
+  "tests": [
+    {
+      "title": "should create a proposal",
+      "fullTitle": "DAOGovernor Proposal Creation should create a proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 93,
+      "err": {}
+    },
+    {
+      "title": "should allow voting on active proposal",
+      "fullTitle": "DAOGovernor Voting should allow voting on active proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 46,
+      "err": {}
+    },
+    {
+      "title": "should revert when voting on inactive proposal",
+      "fullTitle": "DAOGovernor Voting should revert when voting on inactive proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 24,
+      "err": {}
+    },
+    {
+      "title": "should revert when voting twice",
+      "fullTitle": "DAOGovernor Voting should revert when voting twice",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "should revert when voter has no voting power",
+      "fullTitle": "DAOGovernor Voting should revert when voter has no voting power",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "should queue a successful proposal",
+      "fullTitle": "DAOGovernor Proposal Queueing should queue a successful proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 21,
+      "err": {}
+    },
+    {
+      "title": "should revert when queueing an unsuccessful proposal",
+      "fullTitle": "DAOGovernor Proposal Queueing should revert when queueing an unsuccessful proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 42,
+      "err": {}
+    },
+    {
+      "title": "should revert when queueing an already queued proposal",
+      "fullTitle": "DAOGovernor Proposal Queueing should revert when queueing an already queued proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "should revert when queueing an active proposal",
+      "fullTitle": "DAOGovernor Proposal Queueing should revert when queueing an active proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "should execute a queued proposal",
+      "fullTitle": "DAOGovernor Proposal Execution should execute a queued proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'name')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at Context.<anonymous> (test\\generated.test.js:232:39)"
+      }
+    },
+    {
+      "title": "should revert when executing a non-queued proposal",
+      "fullTitle": "DAOGovernor Proposal Execution should revert when executing a non-queued proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "should revert when executing an already executed proposal",
+      "fullTitle": "DAOGovernor Proposal Execution should revert when executing an already executed proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "should revert when executing before timelock expires",
+      "fullTitle": "DAOGovernor Proposal Execution should revert when executing before timelock expires",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 39,
+      "err": {}
+    },
+    {
+      "title": "should revert when execution fails",
+      "fullTitle": "DAOGovernor Proposal Execution should revert when execution fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 51,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "should execute a queued proposal",
+      "fullTitle": "DAOGovernor Proposal Execution should execute a queued proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'name')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at Context.<anonymous> (test\\generated.test.js:232:39)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "should create a proposal",
+      "fullTitle": "DAOGovernor Proposal Creation should create a proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 93,
+      "err": {}
+    },
+    {
+      "title": "should allow voting on active proposal",
+      "fullTitle": "DAOGovernor Voting should allow voting on active proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 46,
+      "err": {}
+    },
+    {
+      "title": "should revert when voting on inactive proposal",
+      "fullTitle": "DAOGovernor Voting should revert when voting on inactive proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 24,
+      "err": {}
+    },
+    {
+      "title": "should revert when voting twice",
+      "fullTitle": "DAOGovernor Voting should revert when voting twice",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "should revert when voter has no voting power",
+      "fullTitle": "DAOGovernor Voting should revert when voter has no voting power",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "should queue a successful proposal",
+      "fullTitle": "DAOGovernor Proposal Queueing should queue a successful proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 21,
+      "err": {}
+    },
+    {
+      "title": "should revert when queueing an unsuccessful proposal",
+      "fullTitle": "DAOGovernor Proposal Queueing should revert when queueing an unsuccessful proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 42,
+      "err": {}
+    },
+    {
+      "title": "should revert when queueing an already queued proposal",
+      "fullTitle": "DAOGovernor Proposal Queueing should revert when queueing an already queued proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "should revert when queueing an active proposal",
+      "fullTitle": "DAOGovernor Proposal Queueing should revert when queueing an active proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "should revert when executing a non-queued proposal",
+      "fullTitle": "DAOGovernor Proposal Execution should revert when executing a non-queued proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "should revert when executing an already executed proposal",
+      "fullTitle": "DAOGovernor Proposal Execution should revert when executing an already executed proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "should revert when executing before timelock expires",
+      "fullTitle": "DAOGovernor Proposal Execution should revert when executing before timelock expires",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 39,
+      "err": {}
+    },
+    {
+      "title": "should revert when execution fails",
+      "fullTitle": "DAOGovernor Proposal Execution should revert when execution fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 51,
+      "err": {}
+    }
+  ]
+}

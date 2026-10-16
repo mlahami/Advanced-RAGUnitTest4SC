@@ -1,0 +1,53 @@
+{
+  "contracts": 30,
+  "metrics": {
+    "relevance": {
+      "means": {
+        "rag-v2": 0.5172089947089947,
+        "advanced-v3": 0.5740343915343915
+      },
+      "better_advanced": 21,
+      "better_rag": 8,
+      "wilcoxon_p": 0.012103989421399518
+    },
+    "precision": {
+      "means": {
+        "rag-v2": 0.8722883597883598,
+        "advanced-v3": 0.9238492063492064
+      },
+      "better_advanced": 13,
+      "better_rag": 6,
+      "wilcoxon_p": 0.09878655435543443
+    },
+    "adaptable": {
+      "means": {
+        "rag-v2": 0.16212962962962962,
+        "advanced-v3": 0.2242195767195767
+      },
+      "better_advanced": 16,
+      "better_rag": 6,
+      "wilcoxon_p": 0.03765198144122059
+    },
+    "ndcg": {
+      "means": {
+        "rag-v2": 0.8993749678736583,
+        "advanced-v3": 0.8712132296845891
+      },
+      "better_advanced": 13,
+      "better_rag": 16,
+      "wilcoxon_p": 0.31448761001229286
+    }
+  },
+  "spearman": {
+    "passes": {
+      "rho": -0.032504713957022924,
+      "p": 0.8052572058733257,
+      "n": 60
+    },
+    "statement_coverage": {
+      "rho": 0.39321150825240286,
+      "p": 0.001883810486757186,
+      "n": 60
+    }
+  }
+}

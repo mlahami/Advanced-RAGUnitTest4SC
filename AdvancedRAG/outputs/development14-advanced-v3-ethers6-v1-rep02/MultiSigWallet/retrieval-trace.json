@@ -1,0 +1,201 @@
+{
+  "target_functions": [
+    {
+      "target_function": "submit",
+      "corpus_functions": [
+        "39d9ad83a6d1f890f03f001b",
+        "c26776a8b17e09d4264d991e",
+        "0dff65b8c43ab8afb9cdadb7",
+        "0a8ad2e283480134063f59ad",
+        "89c3ff535caa006e51732216",
+        "e9af363b01347b75e8e7240b",
+        "45673a7c01025baeaf068c7a",
+        "1b446ff41edbaa0a76235951"
+      ],
+      "candidate_tests": [
+        "75db696cda539337f06e19ad",
+        "da3ece2cf258f6d19d6a09be",
+        "261c18995c66339be9e1391b",
+        "133d91aa3032851ee9540d7a",
+        "62bd09e29cc03513179aab27",
+        "5241e71dfa562ff5fb5a2b29",
+        "5cc6511b984db030e66a78e9",
+        "d838e8c18b4c2c7bf70abac0",
+        "0a56ededb46e0fa9d535e597",
+        "207a6eae0f3c8bf5085e5160",
+        "28090ad32fa1378926ba1545",
+        "d76546b8fd30c3d345952616"
+      ]
+    },
+    {
+      "target_function": "confirm",
+      "corpus_functions": [
+        "924a791962ec520f920418e4",
+        "96cd4af72b3f74c8bbcac560",
+        "41fba0bc5fb03462f02387aa",
+        "f9da0aac6dfdcd030dd25221",
+        "6622864c66653b1521e4d76c",
+        "b765fad61f720b8f8488aab4",
+        "db42ac3184c605b799d16526",
+        "fb538b145d8773643f8100e1"
+      ],
+      "candidate_tests": [
+        "6bb467f3d261fd54786fa5c3",
+        "54735178252cfa34022c3353",
+        "c89ebfd823bfcf75b6e3d4af",
+        "7dc6a89ad67d6767eb087e79",
+        "5a33cdf88450583cb78066de",
+        "4adab0f2b0eb0ef820d2c83b",
+        "f3c770c2d8e6c5d8b66a057a",
+        "5f4cbc760e4aa0cffdfe3ecb",
+        "8202265dd859b0939fc181dd",
+        "e2ddea4a4d1ff31a97625b55",
+        "066712b81132f56e19f45a64",
+        "1594453165df23edf1cc66f9",
+        "683278f01de2da6af0a658b9",
+        "9f083872fd4a343dd5060cee"
+      ]
+    },
+    {
+      "target_function": "execute",
+      "corpus_functions": [
+        "2901b59aa4ae84d097f03f8d",
+        "ff2a3ec95e8c4ae0a7d4d45f",
+        "7c54e5f354205755bc640380",
+        "41fba0bc5fb03462f02387aa",
+        "0dff65b8c43ab8afb9cdadb7",
+        "39d9ad83a6d1f890f03f001b",
+        "545a9ee78e55ce56ba4f6b46",
+        "0a8ad2e283480134063f59ad"
+      ],
+      "candidate_tests": [
+        "da3ece2cf258f6d19d6a09be",
+        "ead0b7a679622ec20f22de02",
+        "157306a0eee135a30c1881a4",
+        "88b2bee49142e7ec062b9087",
+        "6639e971bea7b1b497e052f0",
+        "03a451b3eebcb07e9740724e",
+        "5a33cdf88450583cb78066de",
+        "4adab0f2b0eb0ef820d2c83b",
+        "62bd09e29cc03513179aab27",
+        "5241e71dfa562ff5fb5a2b29",
+        "75db696cda539337f06e19ad",
+        "da3ece2cf258f6d19d6a09be",
+        "c2585489fe07ec7b6409eb71",
+        "6e0c68a307962de6892208f2",
+        "5cc6511b984db030e66a78e9",
+        "d838e8c18b4c2c7bf70abac0"
+      ]
+    }
+  ],
+  "selected": [
+    4673,
+    4739,
+    4674,
+    4718,
+    4741,
+    4675,
+    4719,
+    4743,
+    4747,
+    4723
+  ],
+  "context_chars": 14988,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "MultiSigWallet",
+  "retrieval_seconds": 2.1235319999977946,
+  "hits": [
+    {
+      "chunk_id": 4673,
+      "test_id": "75db696cda539337f06e19ad",
+      "pair": "multi-sig-vault--dualnova",
+      "domain_group": "multisig-treasury",
+      "name": "non-owners cannot submit or confirm",
+      "via_function": "39d9ad83a6d1f890f03f001b",
+      "chars": 882
+    },
+    {
+      "chunk_id": 4739,
+      "test_id": "6bb467f3d261fd54786fa5c3",
+      "pair": "multi-sig-wallet--mahdizarrei",
+      "domain_group": "multisig-treasury",
+      "name": "Should revert with the right error if called from another account",
+      "via_function": "924a791962ec520f920418e4",
+      "chars": 1563
+    },
+    {
+      "chunk_id": 4674,
+      "test_id": "da3ece2cf258f6d19d6a09be",
+      "pair": "multi-sig-vault--dualnova",
+      "domain_group": "multisig-treasury",
+      "name": "executes a transaction once threshold is met",
+      "via_function": "2901b59aa4ae84d097f03f8d",
+      "chars": 1720
+    },
+    {
+      "chunk_id": 4718,
+      "test_id": "261c18995c66339be9e1391b",
+      "pair": "multi-sig-wallet--mahdizarrei",
+      "domain_group": "multisig-treasury",
+      "name": "Should revert with the right error if called from another account",
+      "via_function": "c26776a8b17e09d4264d991e",
+      "chars": 1624
+    },
+    {
+      "chunk_id": 4741,
+      "test_id": "54735178252cfa34022c3353",
+      "pair": "multi-sig-wallet--mahdizarrei",
+      "domain_group": "multisig-treasury",
+      "name": "Should revert with the right error if isConfirmedOwner[txIndex][msg.sender] == true",
+      "via_function": "924a791962ec520f920418e4",
+      "chars": 1719
+    },
+    {
+      "chunk_id": 4675,
+      "test_id": "ead0b7a679622ec20f22de02",
+      "pair": "multi-sig-vault--dualnova",
+      "domain_group": "multisig-treasury",
+      "name": "prevents double execution",
+      "via_function": "2901b59aa4ae84d097f03f8d",
+      "chars": 1133
+    },
+    {
+      "chunk_id": 4719,
+      "test_id": "133d91aa3032851ee9540d7a",
+      "pair": "multi-sig-wallet--mahdizarrei",
+      "domain_group": "multisig-treasury",
+      "name": "Should revert with the right error if currencyType should be greater than 2",
+      "via_function": "c26776a8b17e09d4264d991e",
+      "chars": 1697
+    },
+    {
+      "chunk_id": 4743,
+      "test_id": "c89ebfd823bfcf75b6e3d4af",
+      "pair": "multi-sig-wallet--mahdizarrei",
+      "domain_group": "multisig-treasury",
+      "name": "Should revert with the right error if called from another account",
+      "via_function": "96cd4af72b3f74c8bbcac560",
+      "chars": 1553
+    },
+    {
+      "chunk_id": 4747,
+      "test_id": "157306a0eee135a30c1881a4",
+      "pair": "multi-sig-wallet--mahdizarrei",
+      "domain_group": "multisig-treasury",
+      "name": "Should revert with the right error if called from another account",
+      "via_function": "ff2a3ec95e8c4ae0a7d4d45f",
+      "chars": 1563
+    },
+    {
+      "chunk_id": 4723,
+      "test_id": "5241e71dfa562ff5fb5a2b29",
+      "pair": "multi-sig-wallet--mahdizarrei",
+      "domain_group": "multisig-treasury",
+      "name": "Should revert with the right error if isOwner == true ",
+      "via_function": "0dff65b8c43ab8afb9cdadb7",
+      "chars": 1534
+    }
+  ]
+}

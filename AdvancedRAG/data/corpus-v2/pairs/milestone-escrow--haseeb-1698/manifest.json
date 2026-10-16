@@ -1,0 +1,54 @@
+{
+  "id": "milestone-escrow--haseeb-1698",
+  "domain": "escrow",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "MilestoneEscrow.sol",
+    "MockUSDC.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Haseeb-1698/Defi-Freelance-Marketplace",
+    "commit": "2ce6124ca6ea8dea3010a8a3e5a890aed01eeff4",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/contracts/MilestoneEscrow.sol",
+      "contracts/contracts/MockUSDC.sol"
+    ],
+    "test_paths": [
+      "contracts/test/MilestoneEscrow.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/MilestoneEscrow.sol": "a28df68242694f97036fb8d25d046473a8b785c3786a7174ea5fc1100b4573b1",
+      "contracts/contracts/MockUSDC.sol": "d19940a027a4aeae881ddfbaa06ff84f67aa72429ba0cdc3320b40f94dccf9be",
+      "contracts/test/MilestoneEscrow.test.ts": "e55d888c05e1f6afc1245b063dfa8386fc8ff3592f0cca4f095b6e85ec59420c"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "MilestoneEscrow.test.js",
+      "upstream_path": "contracts/test/MilestoneEscrow.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "MilestoneEscrow.test.js",
+      "upstream_path": "contracts/test/MilestoneEscrow.test.ts"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "MilestoneEscrow.test.js",
+      "upstream_path": "contracts/test/MilestoneEscrow.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Freelance milestone escrow (clone-initializable): fund, submit deliverable, approve milestone, dispute with arbitrator resolution, mutual cancel with refund of unpaid milestones; primary 266 lines; 21 it blocks (loadFixture); `import type` typechain only; LICENSE (MIT); history: 5 commits 2026-05-01..2026-06-09, two authors. Compiles 0.8.24 + OZ 5.0.2 no optimizer (12.8 KB).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:36:11.352267+00:00"
+}

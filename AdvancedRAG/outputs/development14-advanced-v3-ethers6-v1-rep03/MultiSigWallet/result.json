@@ -1,0 +1,56 @@
+{
+  "contract": "MultiSigWallet",
+  "status": "test_failures",
+  "prompt_sha256": "f6a70d211f226480d823467d9991ccd53a8dc7b01d6efb903344f6b64a908372",
+  "generation_seconds": 10.521050499984995,
+  "usage": {
+    "prompt_tokens": 11166,
+    "total_tokens": 12653,
+    "completion_tokens": 1487,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.219026900012977
+  },
+  "passed_tests": 14,
+  "failed_tests": 6,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "MultiSigWallet submit should allow owner to submit transaction",
+      "error": "Event \"Submission\" doesn't exist in the contract"
+    },
+    {
+      "title": "MultiSigWallet confirm should allow owner to confirm transaction",
+      "error": "Event \"Confirmation\" doesn't exist in the contract"
+    },
+    {
+      "title": "MultiSigWallet confirm should revert if transaction is already executed",
+      "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+    },
+    {
+      "title": "MultiSigWallet execute should allow owner to execute transaction when threshold is met",
+      "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+    },
+    {
+      "title": "MultiSigWallet execute should revert if transaction is already executed",
+      "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+    },
+    {
+      "title": "MultiSigWallet execute should revert if transfer fails",
+      "error": "Expected transaction to be reverted with reason 'transfer failed', but it reverted with reason 'not enough confirmations'"
+    }
+  ],
+  "coverage": {
+    "statements": 85.71,
+    "branches": 77.27,
+    "functions": 100.0,
+    "lines": 85.71
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

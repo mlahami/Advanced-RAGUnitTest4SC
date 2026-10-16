@@ -1,0 +1,67 @@
+{
+  "id": "rag-v2.YieldVault",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "YieldVault",
+  "chunk_ids": [
+    4127,
+    7185,
+    3343,
+    2970,
+    3332,
+    7102,
+    7108,
+    7109
+  ],
+  "context_sha256": "68e0348bf14531e39f278aa81b6ed8547c01e18e18aeb4ac4c8ad004d8faf6d2",
+  "ratings": [
+    {
+      "chunk_id": 4127,
+      "rating": 1,
+      "reason": "Shows generic ERC20 mint/approve/transfer pattern and fixture deployment, but tests unrelated bridge behavior, not directly applicable to YieldVault logic."
+    },
+    {
+      "chunk_id": 7185,
+      "rating": 0,
+      "reason": "Test checks deposit cap and mint behavior absent in YieldVault; no applicable pattern."
+    },
+    {
+      "chunk_id": 3343,
+      "rating": 1,
+      "reason": "Test checks owner withdrawing a penalty pool, a feature absent in YieldVault; only generic balance-change pattern applies, not the specific behavior."
+    },
+    {
+      "chunk_id": 2970,
+      "rating": 0,
+      "reason": "Tests reward accrual and redeem logic unrelated to YieldVault’s simple deposit/withdraw and profit reporting; no applicable patterns."
+    },
+    {
+      "chunk_id": 3332,
+      "rating": 1,
+      "reason": "Tests generic withdraw flow, approvals and balance checks, but YieldVault has no penalty logic; pattern somewhat reusable, not directly applicable."
+    },
+    {
+      "chunk_id": 7102,
+      "rating": 1,
+      "reason": "Shows generic withdraw balance reduction and transfer pattern, but uses ether and different functions not present in YieldVault."
+    },
+    {
+      "chunk_id": 7108,
+      "rating": 1,
+      "reason": "Tests generic withdraw behavior and balance zeroing, but uses payable ether and different function names; pattern somewhat reusable but not directly applicable."
+    },
+    {
+      "chunk_id": 7109,
+      "rating": 1,
+      "reason": "Only shows generic revert testing; target lacks withdrawAll and ZeroAmount error, so not directly reusable."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 12137,
+    "completion_tokens": 943,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 80.6,
+  "evaluated_utc": "2026-10-13T07:43:14.827682+00:00"
+}

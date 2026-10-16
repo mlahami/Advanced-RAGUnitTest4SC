@@ -1,0 +1,41 @@
+{
+  "id": "sealed-bid-auction--khaledolemy",
+  "domain": "auction",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "SealedBidAuction.sol",
+    "ReentrancyAttacker.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/KhaledOlemy/sealed-bid-auction",
+    "commit": "57f8bf6bff583282cfefc7db43ebd0d125fdce18",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/SealedBidAuction.sol",
+      "contracts/test/ReentrancyAttacker.sol"
+    ],
+    "test_paths": [
+      "test/SealedBidAuction.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/SealedBidAuction.sol": "9904b22db24e92d6df1e5dc6cb532153da5816de09c5db0cc42576c13c33659c",
+      "contracts/test/ReentrancyAttacker.sol": "61bee88de3238035eb8099147d6b9ac785142de859965cee841842b0f4e8ba70",
+      "test/SealedBidAuction.test.js": "7e4d61073f09e5f237149adcc6d48032770a07200b772912a008c32c84b6f41c"
+    }
+  },
+  "transformations": [
+    {
+      "file": "ReentrancyAttacker.sol",
+      "kind": "import-path",
+      "before": "../SealedBidAuction.sol",
+      "after": "./SealedBidAuction.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (2 commits, July 2026, LICENSE says \"Your Name\", heavily templated comments). Commit-reveal sealed-bid auction: phases, deposit >= value validity, pull-payment ledger, forfeited deposits of non-revealers, reentrancy attacker mock. Commitments built with ethers.solidityPackedKeccak256 (no merkle libs). 32 it blocks, time helpers.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T15:51:31.700268+00:00"
+}

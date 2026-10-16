@@ -1,0 +1,65 @@
+{
+  "id": "treasury--hockeyplaya48",
+  "domain": "treasury",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Treasury.sol",
+    "IRWASwapRouter.sol",
+    "MockERC20.sol",
+    "MockSwapRouter.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/HockeyPlaya48/RWAForge",
+    "commit": "d44d18a4662200d40ece8d769d59578c2ca623fb",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/contracts/Treasury.sol",
+      "contracts/contracts/interfaces/IRWASwapRouter.sol",
+      "contracts/contracts/mocks/MockERC20.sol",
+      "contracts/contracts/mocks/MockSwapRouter.sol"
+    ],
+    "test_paths": [
+      "contracts/test/Treasury.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/Treasury.sol": "963fb57b38ec86536657464f6822e2e40141ceff01a348beffcb5f5e8c2e51ed",
+      "contracts/contracts/interfaces/IRWASwapRouter.sol": "e64c72e86539b841a2ae565f083dcb58d8a7cc3c11cf5457102b032ac64055cb",
+      "contracts/contracts/mocks/MockERC20.sol": "48fa1a383b0472e9c6743e5e3df23abcf16703aa9e97cd2b467e60e9ead35bc9",
+      "contracts/contracts/mocks/MockSwapRouter.sol": "fd4a943b82b7bc3bae15b48832a8d379ff2332242a261ed770e18571bb11e438",
+      "contracts/test/Treasury.test.ts": "ac41aba973f0a1f5384ad772854dcd4073d17857de5a43faa801daccd51c13ce"
+    }
+  },
+  "transformations": [
+    {
+      "file": "Treasury.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IRWASwapRouter.sol",
+      "after": "./IRWASwapRouter.sol"
+    },
+    {
+      "file": "MockSwapRouter.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IRWASwapRouter.sol",
+      "after": "./IRWASwapRouter.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "Treasury.test.js",
+      "upstream_path": "contracts/test/Treasury.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "Treasury.test.js",
+      "upstream_path": "contracts/test/Treasury.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 129 lines, closure 204 lines, 4 files; 7 it blocks; history: 40 commits 2026-07-15..2026-08-10",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:32:03.508338+00:00"
+}

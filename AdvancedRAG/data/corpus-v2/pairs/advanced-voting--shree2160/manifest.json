@@ -1,0 +1,31 @@
+{
+  "id": "advanced-voting--shree2160",
+  "domain": "voting",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "AdvancedVoting.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/shree2160/Blockchain-Voting-System",
+    "commit": "a98b411bf299d0780c7daf03307771801ffc6410",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/AdvancedVoting.sol"
+    ],
+    "test_paths": [
+      "test/AdvancedVoting.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/AdvancedVoting.sol": "d92c7660f389fca88123d523c5978e751cb1d14e4c658296b4b46a8448b94e12",
+      "test/AdvancedVoting.test.js": "0b23da1a80af1a102f4417e4e89cb9579a0380ec9311059f1805509c02140599"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Candidate/voter-registration election with whitelisted anonymous wallets and signature-based gasless votes (castGaslessVote); 2026 student repo, 18 commits. Primary 351 non-blank lines, closure 351 lines/1 files; 19 its, 32 expects; pragma ^0.8.19.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:14.672719+00:00"
+}

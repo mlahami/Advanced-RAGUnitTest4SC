@@ -1,0 +1,31 @@
+{
+  "id": "administrable--rsksmart",
+  "domain": "access-control",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Administrable.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/rsksmart/rootstock-scoreboard",
+    "commit": "07c4b2f1dec7955e7002f300edc1254ad19acaa5",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Administrable.sol"
+    ],
+    "test_paths": [
+      "test/Administrable.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Administrable.sol": "62f2c0c06e4d025c9fe3c3b687a5f92a87be0771f237b776ccc9f5908e186b5e",
+      "test/Administrable.test.js": "e2402f0da598ecd1ef6fd2abf2fefd2f00223961b022ae8f66e6d711a12a1e52"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Admin role management with emergency mode (Rootstock org repo, 119 commits). Primary 195 non-blank lines, closure 195 lines/1 files; 38 its, 87 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:07:03.452526+00:00"
+}

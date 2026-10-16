@@ -1,0 +1,79 @@
+{
+  "id": "rag-v2.Voting",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "Voting",
+  "chunk_ids": [
+    7368,
+    7353,
+    7354,
+    7402,
+    7403,
+    7399,
+    7430,
+    7351,
+    223,
+    7333
+  ],
+  "context_sha256": "647573fe409e6b9ab3b3ce17b8f95b9d4643d2ee5d42e154daec66b982d2f001",
+  "ratings": [
+    {
+      "chunk_id": 7368,
+      "rating": 1,
+      "reason": "Shows pattern of checking hasVoted before and after voting, which applies, but uses unrelated setup functions and string IDs, so only partially useful."
+    },
+    {
+      "chunk_id": 7353,
+      "rating": 1,
+      "reason": "Shows double‑voting revert pattern; same logic but different function signature and revert message, so only generic pattern is reusable."
+    },
+    {
+      "chunk_id": 7354,
+      "rating": 1,
+      "reason": "Only demonstrates generic revert assertion; the specific functions and parameters differ from target contract, so only a basic pattern is reusable."
+    },
+    {
+      "chunk_id": 7402,
+      "rating": 1,
+      "reason": "Shows basic vote call and hasVoted check, which matches target behavior, but uses unrelated setup functions and extra parameters, limiting direct reuse."
+    },
+    {
+      "chunk_id": 7403,
+      "rating": 1,
+      "reason": "Only generic vote call pattern, but target lacks commitments and candidate addition; specific behavior irrelevant"
+    },
+    {
+      "chunk_id": 7399,
+      "rating": 0,
+      "reason": "Test targets unrelated functions (addCandidate/getCandidateByAddress) not present in Voting contract; no applicable pattern for voting logic."
+    },
+    {
+      "chunk_id": 7430,
+      "rating": 0,
+      "reason": "Test targets non‑existent addCandidate/candidateCount functions; no similar behavior in target contract, so pattern not applicable."
+    },
+    {
+      "chunk_id": 7351,
+      "rating": 1,
+      "reason": "Shows generic voting pattern and hasVoted check, but uses different functions/events and registration logic not present in target contract."
+    },
+    {
+      "chunk_id": 223,
+      "rating": 1,
+      "reason": "Shows generic voting call and hasVoted check pattern, but contract specifics (whitelist, override, voterRecords) don’t exist in target."
+    },
+    {
+      "chunk_id": 7333,
+      "rating": 0,
+      "reason": "Test checks unrelated registration functions and events; no matching behavior or useful pattern for voting contract."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 10056,
+    "completion_tokens": 1196,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 65.5,
+  "evaluated_utc": "2026-10-12T08:55:27.511836+00:00"
+}

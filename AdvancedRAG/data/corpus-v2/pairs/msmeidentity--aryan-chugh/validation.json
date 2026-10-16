@@ -1,0 +1,82 @@
+{
+  "pair": "msmeidentity--aryan-chugh",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:17:52.219202+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MSMEIdentity.sol": "d32c21da136e9619955518811d0520afb37f32f06944fc552375ad69b118da51",
+    "LICENSE": "c56d5570b8cdc5bb50e523d4fd57837b62449daf987178eab7939507cfa3a1eb",
+    "manifest.json": "9536ba1fd4180aa3ee80093e9f6c03cf51a70f08f0d9035782244f8ac5beff91",
+    "test/MSMEIdentity.test.js": "ad7281a3ab3999c072ae8ebb7b1eb55627d3ab6fff3242f615beb1af6e2d45bd"
+  },
+  "pair_sha256": "83b76dda06a12bd1ee7af88c8ad4e639f8ebd020a867db87fe64ff9d486f18f0",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MSMEIdentity.sol",
+        "reference": "Registry.sol",
+        "structural": 0.207,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "MSMEIdentity.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.131,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "MSMEIdentity.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.128,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.79,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.86,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MSMEIdentity.sol": {
+          "statements": 100.0,
+          "branches": 77.78,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

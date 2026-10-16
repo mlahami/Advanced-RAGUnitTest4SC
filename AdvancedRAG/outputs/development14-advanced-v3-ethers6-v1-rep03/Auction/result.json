@@ -1,0 +1,40 @@
+{
+  "contract": "Auction",
+  "status": "test_failures",
+  "prompt_sha256": "d3b760d4392d757b968abfcd3b04eb4412978543729d94829f716c35bcd6bea3",
+  "generation_seconds": 13.857443800079636,
+  "usage": {
+    "prompt_tokens": 10521,
+    "total_tokens": 11714,
+    "completion_tokens": 1193,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.620075699989684
+  },
+  "passed_tests": 9,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Auction Deployment Should set the correct seller and end time",
+      "error": "Cannot mix BigInt and other types, use explicit conversions"
+    },
+    {
+      "title": "Auction Bidding Should accept a valid bid",
+      "error": "Event \"Bid\" doesn't exist in the contract"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

@@ -1,0 +1,40 @@
+{
+  "contract": "PaymentSplitter",
+  "status": "test_failures",
+  "prompt_sha256": "91305621c9b1f010672c0acbe3a028a6ca06fee63cb834f73e4fb2eb9445a4f0",
+  "generation_seconds": 12.643678300024476,
+  "usage": {
+    "prompt_tokens": 7055,
+    "total_tokens": 8395,
+    "completion_tokens": 1340,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.333295899967197
+  },
+  "passed_tests": 6,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "PaymentSplitter should distribute funds correctly",
+      "error": "expected 1 to equal 0."
+    },
+    {
+      "title": "PaymentSplitter should handle uneven distribution with remainder",
+      "error": "expected 166666666666666666 to equal 166666666666666667."
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

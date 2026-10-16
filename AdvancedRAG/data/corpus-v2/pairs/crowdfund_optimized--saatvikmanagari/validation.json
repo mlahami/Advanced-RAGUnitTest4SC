@@ -1,0 +1,82 @@
+{
+  "pair": "crowdfund_optimized--saatvikmanagari",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T16:01:49.663603+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/crowdfund_optimized.sol": "10caad3a54797ae848e06e1ce08e6eaa50fde1a9f2828e50d6154497814b50bc",
+    "LICENSE": "6bf9a9f2f8064b80c4845ae223890e0082beb5f60f33bd94ce6dd8da9a7ce86c",
+    "manifest.json": "ae2f171dc0debc2e61c9e9532e25eaa4b30be48de7aae275d911102cf9a42687",
+    "test/CrowdFundOptimized.test.js": "8019fd5145c1f9ece57b3100d2840f28d0c84a783dd12d5873d874272eea9a77"
+  },
+  "pair_sha256": "58aff0f7472e1fbb2ffc1248bcf789808ce168316e93f59c7b036f1c68f65e14",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "crowdfund_optimized.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.196,
+        "signatures": 0.071,
+        "min_functions": 7
+      },
+      {
+        "contract": "crowdfund_optimized.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.155,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "crowdfund_optimized.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.15,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.68,
+      "mocha": {
+        "tests": 18,
+        "passes": 18,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.08,
+      "mocha": {
+        "tests": 18,
+        "passes": 18,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "crowdfund_optimized.sol": {
+          "statements": 97.73,
+          "branches": 76.09,
+          "functions": 88.89,
+          "lines": 97.73
+        }
+      }
+    }
+  },
+  "accepted": true
+}

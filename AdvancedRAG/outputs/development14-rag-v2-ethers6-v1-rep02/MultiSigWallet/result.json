@@ -1,0 +1,56 @@
+{
+  "contract": "MultiSigWallet",
+  "status": "test_failures",
+  "prompt_sha256": "6b88b5f6981dd3eb7dd855229a3ffe415c6ee65720a42309152a044d9487e89d",
+  "generation_seconds": 11.122674099984579,
+  "usage": {
+    "prompt_tokens": 11038,
+    "total_tokens": 12703,
+    "completion_tokens": 1665,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.583036300027743
+  },
+  "passed_tests": 14,
+  "failed_tests": 6,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "MultiSigWallet submit Should allow owner to submit transaction",
+      "error": "Event \"TransactionSubmitted\" doesn't exist in the contract"
+    },
+    {
+      "title": "MultiSigWallet confirm Should allow owner to confirm transaction",
+      "error": "Event \"TransactionConfirmed\" doesn't exist in the contract"
+    },
+    {
+      "title": "MultiSigWallet confirm Should revert if transaction is already executed",
+      "error": "VM Exception while processing transaction: reverted with reason string 'transfer failed'"
+    },
+    {
+      "title": "MultiSigWallet execute Should allow owner to execute transaction with sufficient confirmations",
+      "error": "Event \"TransactionExecuted\" doesn't exist in the contract"
+    },
+    {
+      "title": "MultiSigWallet execute Should revert if transaction is already executed",
+      "error": "VM Exception while processing transaction: reverted with reason string 'transfer failed'"
+    },
+    {
+      "title": "MultiSigWallet execute Should transfer the correct amount to the recipient",
+      "error": "VM Exception while processing transaction: reverted with reason string 'transfer failed'"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 86.36,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

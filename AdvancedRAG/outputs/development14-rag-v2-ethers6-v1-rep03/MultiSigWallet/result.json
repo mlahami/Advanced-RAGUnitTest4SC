@@ -1,0 +1,44 @@
+{
+  "contract": "MultiSigWallet",
+  "status": "test_failures",
+  "prompt_sha256": "6b88b5f6981dd3eb7dd855229a3ffe415c6ee65720a42309152a044d9487e89d",
+  "generation_seconds": 13.982708900002763,
+  "usage": {
+    "prompt_tokens": 11038,
+    "total_tokens": 12589,
+    "completion_tokens": 1551,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.626692399964668
+  },
+  "passed_tests": 7,
+  "failed_tests": 3,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "MultiSigWallet submit Should allow owner to submit transaction",
+      "error": "Event \"TransactionSubmitted\" doesn't exist in the contract"
+    },
+    {
+      "title": "MultiSigWallet confirm \"before each\" hook for \"Should allow owner to confirm transaction\"",
+      "error": "Cannot read properties of undefined (reading 'args')"
+    },
+    {
+      "title": "MultiSigWallet execute \"before each\" hook for \"Should allow owner to execute transaction\"",
+      "error": "Cannot read properties of undefined (reading 'args')"
+    }
+  ],
+  "coverage": {
+    "statements": 50.0,
+    "branches": 36.36,
+    "functions": 60.0,
+    "lines": 50.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

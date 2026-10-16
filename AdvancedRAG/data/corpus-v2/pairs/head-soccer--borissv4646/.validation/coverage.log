@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> HeadSoccer.sol
+> TestToken.sol
+
+Compilation:
+============
+
+Compiled 13 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+-----------------|----------|----------|----------|----------|----------------|
+File             |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-----------------|----------|----------|----------|----------|----------------|
+ contracts\      |    97.22 |       70 |    91.67 |    84.31 |                |
+  HeadSoccer.sol |      100 |       70 |      100 |    85.71 |... 170,173,196 |
+  TestToken.sol  |       50 |      100 |       50 |       50 |             16 |
+-----------------|----------|----------|----------|----------|----------------|
+All files        |    97.22 |       70 |    91.67 |    84.31 |                |
+-----------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

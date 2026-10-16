@@ -1,0 +1,34 @@
+{
+  "id": "poly-mirror-channel--marcellomaugeri",
+  "domain": "conditional-payments",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "PolyMirrorChannel.sol",
+    "VoucherLib.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/marcellomaugeri/PolyMirror.AI",
+    "commit": "41dbe2045a1ec69fa7afb33909f70589203b4a7e",
+    "license": "MIT",
+    "contract_paths": [
+      "mirror/contracts/PolyMirrorChannel.sol",
+      "mirror/contracts/VoucherLib.sol"
+    ],
+    "test_paths": [
+      "mirror/test/PolyMirrorChannel.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "mirror/contracts/PolyMirrorChannel.sol": "c6a4369b52f757bab2b1c10a4d76f18bb60494fc36ce2bfc841178e1e380e427",
+      "mirror/contracts/VoucherLib.sol": "4290e8bf94261748c801aba2c5b6e4b5e7121ef15dff4fa607f63d7736df1b42",
+      "mirror/test/PolyMirrorChannel.test.js": "8649fd63bde14d8b682a7da423c83ad8cac3603e643e92b435a7e348f89cb2df"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Prepaid payment channel redeemed with EIP-712 signed vouchers (nonce replay protection); VoucherLib.sol; only 6 its. Primary 106 non-blank lines, closure 120 lines/2 files; 6 its, 18 expects; pragma ^0.8.23.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:03:34.229640+00:00"
+}

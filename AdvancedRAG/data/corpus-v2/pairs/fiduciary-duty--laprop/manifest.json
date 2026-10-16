@@ -1,0 +1,92 @@
+{
+  "id": "fiduciary-duty--laprop",
+  "domain": "meta-transactions",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "FiduciaryDuty.sol",
+    "IERC3009Partial.sol",
+    "IWhiteList.sol",
+    "MockERC3009.sol",
+    "MockForwarder.sol",
+    "WhiteList.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/LaProp/contracts",
+    "commit": "0aaf375151ace3569b42994142cad8de692ad324",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/fiducia/FiduciaryDuty.sol",
+      "contracts/interfaces/IERC3009Partial.sol",
+      "contracts/interfaces/IWhiteList.sol",
+      "contracts/mocks/MockERC3009.sol",
+      "contracts/mocks/MockForwarder.sol",
+      "contracts/white-listing/WhiteList.sol"
+    ],
+    "test_paths": [
+      "test/FiduciaryDutyTest.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/fiducia/FiduciaryDuty.sol": "9d9a65b40fb76180ecea401acb91c7d06fb987b0e6ffc36dee4ec9de36052912",
+      "contracts/interfaces/IERC3009Partial.sol": "7d79e1a0a35149e4d7956589629bc1589d1d727c9c63cbf6bd9cd948dc4ebf3d",
+      "contracts/interfaces/IWhiteList.sol": "df6715a9ee068dcdfc1f0d06934b1ff2c881cf7942958da4a98b2914e9548ea3",
+      "contracts/mocks/MockERC3009.sol": "0a0bf69dfa3b4b4e4e0748d3e132526a969fb41457be1f30768f482fb2c23f30",
+      "contracts/mocks/MockForwarder.sol": "c6a2288b525d5cf72eee17f83fc0ce2f1d7dd1f33dcf98d010d803ef98be9def",
+      "contracts/white-listing/WhiteList.sol": "9f7063f9999080aac7de5c15169c26ef4ce64580ec5a9629b1530c89a3e9fcf7",
+      "test/FiduciaryDutyTest.ts": "adbc77f87be2a2d36e215d10e527557efaa4d64a47f19614c54149672db15cf8"
+    }
+  },
+  "transformations": [
+    {
+      "file": "FiduciaryDuty.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IWhiteList.sol",
+      "after": "./IWhiteList.sol"
+    },
+    {
+      "file": "FiduciaryDuty.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IERC3009Partial.sol",
+      "after": "./IERC3009Partial.sol"
+    },
+    {
+      "file": "MockERC3009.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IERC3009Partial.sol",
+      "after": "./IERC3009Partial.sol"
+    },
+    {
+      "file": "WhiteList.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IWhiteList.sol",
+      "after": "./IWhiteList.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "FiduciaryDutyTest.js",
+      "upstream_path": "test/FiduciaryDutyTest.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "FiduciaryDutyTest.js",
+      "upstream_path": "test/FiduciaryDutyTest.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "ethers",
+      "names": [
+        "ContractTransactionResponse"
+      ],
+      "file": "FiduciaryDutyTest.js",
+      "upstream_path": "test/FiduciaryDutyTest.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "ERC2771-aware fiduciary payment contract with whitelist and ERC-3009 mock; MockForwarder. Primary 196 non-blank lines, closure 406 lines/6 files; 31 its, 69 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:03:26.933186+00:00"
+}

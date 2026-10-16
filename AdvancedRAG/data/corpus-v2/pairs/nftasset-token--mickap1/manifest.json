@@ -1,0 +1,66 @@
+{
+  "id": "nftasset-token--mickap1",
+  "domain": "nft-kyc",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "NFTAssetToken.sol",
+    "KYCregistry.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Mickap1/G9---Blockchain",
+    "commit": "fc4e0dba2c0113373a01ca8c42f9c8ae3b3a74a3",
+    "license": "LGPL-3.0",
+    "contract_paths": [
+      "contracts/NFTAssetToken.sol",
+      "contracts/KYCregistry.sol"
+    ],
+    "test_paths": [
+      "test/NFTAssetToken.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/NFTAssetToken.sol": "853a2f9c13b55e08a701f1cfa3346c74b7a46d926f6b001799986a880b70c9d6",
+      "contracts/KYCregistry.sol": "d9566d7177ec6f9d980a384f9e56d0d1684f89b759bbc5fb1bfb0c05141a8010",
+      "test/NFTAssetToken.test.ts": "10ca94851f12c642377f70dd86bb31d64bd1a226e2e73fcff463652f9557a1dc"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "NFTAssetToken.test.js",
+      "upstream_path": "test/NFTAssetToken.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "NFTAssetToken.test.js",
+      "upstream_path": "test/NFTAssetToken.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "NFTAssetToken",
+        "KYCRegistry"
+      ],
+      "file": "NFTAssetToken.test.js",
+      "upstream_path": "test/NFTAssetToken.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "NFTAssetToken.test.js",
+      "upstream_path": "test/NFTAssetToken.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "ERC721 real-world-asset NFT gated by a KYCregistry.sol; LGPL-3.0; 38 commits. Primary 337 non-blank lines, closure 659 lines/2 files; 41 its, 90 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:17.112397+00:00"
+}

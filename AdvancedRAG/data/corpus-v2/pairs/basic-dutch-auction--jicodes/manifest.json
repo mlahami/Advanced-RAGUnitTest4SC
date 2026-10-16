@@ -1,0 +1,51 @@
+{
+  "id": "basic-dutch-auction--jicodes",
+  "domain": "dutch-auction",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "BasicDutchAuction.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/jicodes/dutch-auction-dapp",
+    "commit": "ee33502e3e76a6f73bd460c2173cdc47c225b620",
+    "license": "MIT",
+    "contract_paths": [
+      "v1.0/contracts/BasicDutchAuction.sol"
+    ],
+    "test_paths": [
+      "v1.0/test/BasicDutchAuction.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "v1.0/contracts/BasicDutchAuction.sol": "64dc09fea6c7e40d3330db2ff7f1866fdaf7959ad2d5bd4949e6b4bde4ac0f02",
+      "v1.0/test/BasicDutchAuction.ts": "98df0dae1003abda44379a192e9a56efda5d16ca428b6b6825e46fd2f7577fd4"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "BasicDutchAuction.js",
+      "upstream_path": "v1.0/test/BasicDutchAuction.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "BasicDutchAuction.js",
+      "upstream_path": "v1.0/test/BasicDutchAuction.ts"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "BasicDutchAuction.js",
+      "upstream_path": "v1.0/test/BasicDutchAuction.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Basic Dutch auction (linearly decreasing price, bid, finalize); v6.0/v7.0 folders contain the same contract, only v1.0 listed; 2023 course project. Primary 47 non-blank lines, closure 47 lines/1 files; 7 its, 10 expects; pragma ^0.8.9.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:06:56.408939+00:00"
+}

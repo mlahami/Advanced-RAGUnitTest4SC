@@ -1,0 +1,35 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BenchmarkFixtures.sol
+> YieldVault.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |     53.7 |    36.96 |       52 |    55.95 |                |
+  BenchmarkFixtures.sol |    34.21 |     12.5 |    33.33 |    35.09 |... 140,141,145 |
+  YieldVault.sol        |      100 |    92.86 |      100 |      100 |                |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |     53.7 |    36.96 |       52 |    55.95 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+Error in plugin solidity-coverage: ❌ 1 test(s) failed under coverage.
+
+For more info run Hardhat with --show-stack-traces

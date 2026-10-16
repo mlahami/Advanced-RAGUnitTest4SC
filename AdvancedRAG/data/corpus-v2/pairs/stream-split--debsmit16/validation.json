@@ -1,0 +1,82 @@
+{
+  "pair": "stream-split--debsmit16",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:41:10.826553+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/StreamSplit.sol": "68f54225f958b4bb1f797060cc44efe32d47204c09c6c28bfeea863372019f1e",
+    "LICENSE": "fdaba58d1133dc806150b5840d37f90f451e7331b6e9d4954d4ef06a050eb513",
+    "manifest.json": "3bf2a05b44d8caac5837cd0e56c930813de4c24c15686721ce7d1bc5dd71fa24",
+    "test/StreamSplit.test.js": "26af5e22631682e574a5ee2f0e2ad6f01d20ebf77302806b86560b42aa290d6b"
+  },
+  "pair_sha256": "b5c438e57d9bc0edf6a5ad71beea03c6c4a8d5ba361cbb0d8fe0d1fb0f85fb64",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "StreamSplit.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.255,
+        "signatures": 0.062,
+        "min_functions": 8
+      },
+      {
+        "contract": "StreamSplit.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.228,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "StreamSplit.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.227,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.22,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.97,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "StreamSplit.sol": {
+          "statements": 98.08,
+          "branches": 75.0,
+          "functions": 88.89,
+          "lines": 98.08
+        }
+      }
+    }
+  },
+  "accepted": true
+}

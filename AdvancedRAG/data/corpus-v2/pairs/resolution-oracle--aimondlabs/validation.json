@@ -1,0 +1,96 @@
+{
+  "pair": "resolution-oracle--aimondlabs",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:42:53.847355+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ConditionalTokens.sol": "e5df6eeb69767bac7296df4e0baf3cb1750b172fd8cb7a35a157f4cfff5b0674",
+    "contracts/IConditionalTokens.sol": "d61ab74d1d6d998816639b34e2e2a5f579b49ccb1d151eeb0e071b4350156d96",
+    "contracts/ResolutionOracle.sol": "e53ce954f8667171e0f8b6105ce155723510ce8548bb9b538eff808dc55bd51c",
+    "LICENSE": "f0f5dcf5ae8b7751c8344b70190fa7cb51aab3f2f8395e90992f9ec475a83268",
+    "manifest.json": "3c938faec7e6e5101ae89eea05b9aebfa5a2fcfc395fa489f7b7ad630b0e00d8",
+    "test/ResolutionOracle.test.js": "886f0976be808035906d870eebe90f7935254ce7885d7c5697ee0b7d80a714e3"
+  },
+  "pair_sha256": "db6e51b00295bd4ec8909ad4fc4305435bb72fe1e07ef8f20fcef5c18fa48249",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "ConditionalTokens.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.165,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "ResolutionOracle.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.16,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "ConditionalTokens.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.158,
+        "signatures": 0.0,
+        "min_functions": 10
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.15,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.13,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "ResolutionOracle.sol": {
+          "statements": 100.0,
+          "branches": 65.79,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IConditionalTokens.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ConditionalTokens.sol": {
+          "statements": 27.27,
+          "branches": 15.38,
+          "functions": 36.36,
+          "lines": 27.27
+        }
+      }
+    }
+  },
+  "accepted": true
+}

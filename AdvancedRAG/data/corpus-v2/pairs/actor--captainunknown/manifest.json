@@ -1,0 +1,37 @@
+{
+  "id": "actor--captainunknown",
+  "domain": "supply-chain",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Actor.sol",
+    "AccessManager.sol",
+    "Errors.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/CaptainUnknown/dnft-supply-chain",
+    "commit": "a8d7bf422e62cbb90e03ec99161f72b235640083",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Actor.sol",
+      "contracts/AccessManager.sol",
+      "contracts/Errors.sol"
+    ],
+    "test_paths": [
+      "test/Actor.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Actor.sol": "5b0c2df401dc6f4317d3694c442aa3f4f6fe63fd1ae6ec0832b4883f14cb038b",
+      "contracts/AccessManager.sol": "f296faeab7156e6a2fce65bc4781fddf36f25054cb3dbb5cf00cef304ad24481",
+      "contracts/Errors.sol": "8403aca5dfec316484964d2dbccc113954f178f595f7ba2f50f3abf7b121a551",
+      "test/Actor.js": "1f8138765e1d2787956d6954b6afeace74a4edbed6c26b4e9b4fee1a24eea5d1"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "supply-chain actor registry as ERC721 (Enumerable+URIStorage) gated by AccessManager roles; primary 126 lines (AccessManager dep 230); 12 it blocks (12/12 pass, stmt cov 92.31% on Actor); licence LICENSE; history: 10 commits 2024-08-06..2024-09-04. Other contracts of the repo (SupplyChain, BatchManager) import @chainlink and Batch.js fails under ethers 6.17 (constructor arg mismatch), so only Actor is usable",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:31:39.334996+00:00"
+}

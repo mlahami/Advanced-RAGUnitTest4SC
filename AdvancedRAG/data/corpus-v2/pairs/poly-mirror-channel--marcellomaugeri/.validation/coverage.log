@@ -1,0 +1,37 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> PolyMirrorChannel.sol
+> VoucherLib.sol
+
+Compilation:
+============
+
+Compiled 13 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+Step 1 Passed: Balances correct after deposit.
+Step 2 Passed: Voucher signed.
+Step 3 Passed: Balances correct after redemption.
+Step 4 Passed: Replay attack prevented.
+Close Channel Test Passed: Balances are correct after closing.
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |       95 |    72.22 |    85.71 |    95.83 |                |
+  PolyMirrorChannel.sol |       95 |    72.22 |    85.71 |    95.83 |            124 |
+  VoucherLib.sol        |      100 |      100 |      100 |      100 |                |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |       95 |    72.22 |    85.71 |    95.83 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

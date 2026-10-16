@@ -1,0 +1,67 @@
+{
+  "id": "rag-v2.PriceOracle",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "PriceOracle",
+  "chunk_ids": [
+    2683,
+    5275,
+    5274,
+    2682,
+    4536,
+    6125,
+    6126,
+    6128
+  ],
+  "context_sha256": "5a9fad85241217b930872d9445d8a5886085de06bc52ec2b0835beff444dd864",
+  "ratings": [
+    {
+      "chunk_id": 2683,
+      "rating": 1,
+      "reason": "Shows time manipulation and cumulative price increase check, relevant pattern for TWAP behavior, but specific contract calls differ."
+    },
+    {
+      "chunk_id": 5275,
+      "rating": 1,
+      "reason": "Only generic time‑increase and TWAP query pattern applies; specific functions (stake, vote, resetTWAP) do not exist in PriceOracle."
+    },
+    {
+      "chunk_id": 5274,
+      "rating": 1,
+      "reason": "Shows time‑increase and TWAP assertion pattern, but uses unrelated staking/voting logic; only generic time manipulation and getTWAP call are reusable."
+    },
+    {
+      "chunk_id": 2682,
+      "rating": 1,
+      "reason": "Shows generic TWAP accumulator update pattern after state change, useful as a template, but does not match PriceOracle’s feeder aggregation behavior."
+    },
+    {
+      "chunk_id": 4536,
+      "rating": 1,
+      "reason": "Shows circuit‑breaker revert pattern relevant to PriceOracle, but uses unrelated vault functions and oracle setters, so only generic testing pattern applies."
+    },
+    {
+      "chunk_id": 6125,
+      "rating": 1,
+      "reason": "Tests generic initialization state, but PriceOracle has different variables; pattern loosely applicable, not directly useful."
+    },
+    {
+      "chunk_id": 6126,
+      "rating": 1,
+      "reason": "Shows deployment and basic state assertion pattern, but target lacks setPrice function, so only generic setup is reusable."
+    },
+    {
+      "chunk_id": 6128,
+      "rating": 1,
+      "reason": "Shows generic setter/getter test pattern with price and timestamp checks, but target uses feeder submissions and events, not a simple setPrice function."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 22677,
+    "completion_tokens": 915,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 148.7,
+  "evaluated_utc": "2026-10-13T07:36:17.174717+00:00"
+}

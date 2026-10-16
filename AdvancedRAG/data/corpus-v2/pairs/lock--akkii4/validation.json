@@ -1,0 +1,82 @@
+{
+  "pair": "lock--akkii4",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:14:23.870435+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Lock.sol": "9d41c6922e9b72c30ca8e9dfdf43336aea32590888314881b66c7ebd751dd5cf",
+    "LICENSE": "b4612370c5bc3103ee18ae2cc6039a7b197b116d4ed2a3b5aca957734f54d384",
+    "manifest.json": "fdc9e82179a4bfa275c6b55a1fb81ea9bc0a76ca5bd23f488368f9d244884882",
+    "test/Lock.js": "f5faf2926c06070eb7c3d40e6c5bf030a7ccd21bb2ca5e71b979bb480ae011f0"
+  },
+  "pair_sha256": "f72fb0a43e7590cf86df19676cc0565dcb4c1b536d4f29005978abf82dd28c00",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Lock.sol",
+        "reference": "TimelockVault.sol",
+        "structural": 0.255,
+        "signatures": 1.0,
+        "min_functions": 1
+      },
+      {
+        "contract": "Lock.sol",
+        "reference": "Crowdfunding.sol",
+        "structural": 0.238,
+        "signatures": 0.333,
+        "min_functions": 1
+      },
+      {
+        "contract": "Lock.sol",
+        "reference": "Escrow.sol",
+        "structural": 0.171,
+        "signatures": 0.0,
+        "min_functions": 1
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.43,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.37,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Lock.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

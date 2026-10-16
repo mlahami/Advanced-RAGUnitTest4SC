@@ -1,0 +1,75 @@
+{
+  "id": "attention-stream--wildterralabs",
+  "domain": "payment-streaming",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "AttentionStream.sol",
+    "ArticleRegistry.sol",
+    "IArticleRegistry.sol",
+    "MockERC20.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/WILDTERRALABS/attention-press",
+    "commit": "321821a38f539c02cdc7aba01ac415523045f818",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/contracts/contracts/AttentionStream.sol",
+      "packages/contracts/contracts/ArticleRegistry.sol",
+      "packages/contracts/contracts/interfaces/IArticleRegistry.sol",
+      "packages/contracts/contracts/mocks/MockERC20.sol"
+    ],
+    "test_paths": [
+      "packages/contracts/test/attention.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "packages/contracts/contracts/AttentionStream.sol": "2b822b7b828c744fab51a1afe20d05e0ea3b99eaf8feafbc94a6d4273394e355",
+      "packages/contracts/contracts/ArticleRegistry.sol": "e435c49c69213e2d252166486a230f1a1b7c945e58d1b3b354953eb893abaeae",
+      "packages/contracts/contracts/interfaces/IArticleRegistry.sol": "ed9c09d296bb7863de73437ed8a028e84197c203dce49102eb5dcf5ca31f7da8",
+      "packages/contracts/contracts/mocks/MockERC20.sol": "973035a1f182be2abca245202d30bcde6d9fb6aee6a7faff71e8bc1a173c906d",
+      "packages/contracts/test/attention.test.ts": "c39c5f3455b5172667a8b0f57aa7bd97f84afa3518f6889bc0514d305e41a236"
+    }
+  },
+  "transformations": [
+    {
+      "file": "AttentionStream.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IArticleRegistry.sol",
+      "after": "./IArticleRegistry.sol"
+    },
+    {
+      "file": "ArticleRegistry.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IArticleRegistry.sol",
+      "after": "./IArticleRegistry.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "attention.test.js",
+      "upstream_path": "packages/contracts/test/attention.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "attention.test.js",
+      "upstream_path": "packages/contracts/test/attention.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "ethers",
+      "names": [
+        "HDNodeWallet",
+        "Wallet"
+      ],
+      "file": "attention.test.js",
+      "upstream_path": "packages/contracts/test/attention.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 320 lines, closure 430 lines, 4 files; 16 it blocks; history: 56 commits 2026-09-01..2026-09-20",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:28:16.853925+00:00"
+}

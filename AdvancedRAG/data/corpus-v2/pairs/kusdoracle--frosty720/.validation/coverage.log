@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> KUSDOracle.sol
+> KUSDOracleFactory.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |    60.71 |    39.29 |       60 |     61.9 |                |
+  KUSDOracle.sol        |    91.11 |    63.04 |    93.75 |    92.73 |199,200,201,209 |
+  KUSDOracleFactory.sol |    25.64 |    10.53 |    21.43 |       28 |... 170,172,173 |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |    60.71 |    39.29 |       60 |     61.9 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

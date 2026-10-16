@@ -1,0 +1,66 @@
+{
+  "id": "fungible-asset-token--mickap1",
+  "domain": "erc20-token",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "FungibleAssetToken.sol",
+    "KYCregistry.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Mickap1/G9---Blockchain",
+    "commit": "fc4e0dba2c0113373a01ca8c42f9c8ae3b3a74a3",
+    "license": "GPL-2.0",
+    "contract_paths": [
+      "contracts/FungibleAssetToken.sol",
+      "contracts/KYCregistry.sol"
+    ],
+    "test_paths": [
+      "test/FungibleAssetToken.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/FungibleAssetToken.sol": "5cdf41152ed947080bb1138a4388de82b06bcf14d80dc26bbd0efce9aecf2443",
+      "contracts/KYCregistry.sol": "d9566d7177ec6f9d980a384f9e56d0d1684f89b759bbc5fb1bfb0c05141a8010",
+      "test/FungibleAssetToken.test.ts": "b2ceac6f14aed39d8a2d1584e72aa91263ae6af01bf5ba6a8d7c87c6869214ab"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "FungibleAssetToken.test.js",
+      "upstream_path": "test/FungibleAssetToken.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "FungibleAssetToken.test.js",
+      "upstream_path": "test/FungibleAssetToken.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "FungibleAssetToken",
+        "KYCRegistry"
+      ],
+      "file": "FungibleAssetToken.test.js",
+      "upstream_path": "test/FungibleAssetToken.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "FungibleAssetToken.test.js",
+      "upstream_path": "test/FungibleAssetToken.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 287 lines, closure 661 lines, 2 files; 36 it blocks; history: 38 commits 2025-10-10..2025-10-24",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:32:21.981215+00:00"
+}

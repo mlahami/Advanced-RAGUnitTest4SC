@@ -1,0 +1,44 @@
+{
+  "contract": "MetaCoin",
+  "status": "test_failures",
+  "prompt_sha256": "9537f90a4fe54dd0f5bd4c73083eb17f59cab85c096bc097dd443424bd03a726",
+  "generation_seconds": 10.369514200021513,
+  "usage": {
+    "prompt_tokens": 10213,
+    "total_tokens": 11068,
+    "completion_tokens": 855,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.557511100079864
+  },
+  "passed_tests": 9,
+  "failed_tests": 3,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "MetaCoin sendCoin Should fail if sender doesn't have enough coins",
+      "error": "Expected transaction to be reverted"
+    },
+    {
+      "title": "MetaCoin sendCoin Should fail when transferring to zero address",
+      "error": "Expected transaction to be reverted"
+    },
+    {
+      "title": "MetaCoin Edge Cases Should handle maximum uint256 value transfer",
+      "error": "Expected transaction to be reverted"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

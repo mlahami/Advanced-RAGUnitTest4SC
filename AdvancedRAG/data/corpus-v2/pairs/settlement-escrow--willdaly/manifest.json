@@ -1,0 +1,93 @@
+{
+  "id": "settlement-escrow--willdaly",
+  "domain": "escrow",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "SettlementEscrow.sol",
+    "AgentPayToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/willdaly/agentpay",
+    "commit": "6fa8efac36c616b657328ae5ac614aad8e52e411",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/SettlementEscrow.sol",
+      "contracts/interfaces/ISettlementEscrow.sol",
+      "contracts/interfaces/IPolicyParameters.sol",
+      "contracts/interfaces/IWalletAuthorizer.sol",
+      "contracts/AgentPayToken.sol",
+      "contracts/mocks/MockPolicyParameters.sol",
+      "contracts/mocks/MockWalletAuthorizer.sol",
+      "contracts/mocks/RevertingReceiver.sol",
+      "contracts/mocks/ReentrantToken.sol",
+      "contracts/mocks/ReentrantAttacker.sol"
+    ],
+    "test_paths": [
+      "test/SettlementEscrow.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/SettlementEscrow.sol": "e27fc6fb1ff38afc6627c6c17337f83e9893e373d3eb50fcea78a5a02f081688",
+      "contracts/interfaces/ISettlementEscrow.sol": "e56955bafe17b1921f23c446dffd7078ff56bb926165fd98ba69434b1bc864df",
+      "contracts/interfaces/IPolicyParameters.sol": "d722d9557f146b961026302392adbb78db0da7ba96f37635b37febf33916b69a",
+      "contracts/interfaces/IWalletAuthorizer.sol": "314c2230284e99d35178d11d8d471ce9ef8d1ab5bd97c45ff33b9b92a06c8745",
+      "contracts/AgentPayToken.sol": "ebcae184709834b08740e17b4673f435516c4521676d2cf35514ccdb5f2a1421",
+      "contracts/mocks/MockPolicyParameters.sol": "a1605e074a99620b5bc25150cc5b861f849a84240cad23de3e89fa37e844bfbb",
+      "contracts/mocks/MockWalletAuthorizer.sol": "3988ad0dd11ce5f17efa7da37a828d223421273e3f1cb0e53c25e2d2d446bf18",
+      "contracts/mocks/RevertingReceiver.sol": "2d636eeeafb25572fa79218b7a89f2efb48167a7a53d1fc23f330d6beb6ce269",
+      "contracts/mocks/ReentrantToken.sol": "f77d23d91293a61a24da8e358415f9f72bf13c1cb02ecdf7c8ed47e648d42cae",
+      "contracts/mocks/ReentrantAttacker.sol": "915ce3ba1c1746b24391789801a34e99144e769927c86455c08e66b1555d04f2",
+      "test/SettlementEscrow.test.ts": "a0284d6e1d16a745364adaf4dc17700453d4d861d159ebfe8f156cc107139d05"
+    }
+  },
+  "transformations": [
+    {
+      "file": "SettlementEscrow.sol",
+      "kind": "import-path",
+      "before": "./interfaces/ISettlementEscrow.sol",
+      "after": "./ISettlementEscrow.sol"
+    },
+    {
+      "file": "SettlementEscrow.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IPolicyParameters.sol",
+      "after": "./IPolicyParameters.sol"
+    },
+    {
+      "file": "SettlementEscrow.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IWalletAuthorizer.sol",
+      "after": "./IWalletAuthorizer.sol"
+    },
+    {
+      "file": "MockPolicyParameters.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IPolicyParameters.sol",
+      "after": "./IPolicyParameters.sol"
+    },
+    {
+      "file": "MockWalletAuthorizer.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IWalletAuthorizer.sol",
+      "after": "./IWalletAuthorizer.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "SettlementEscrow.test.js",
+      "upstream_path": "test/SettlementEscrow.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "SettlementEscrow.test.js",
+      "upstream_path": "test/SettlementEscrow.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Pull-payment settlement escrow for agent spends: authorized payers credit providers, large payments are time-locked until a policy-defined window elapses, then released; pull withdrawals with reentrancy guard; solvency view; primary 183 lines plus a token and 5 mocks; 14 it blocks incl. reverting receiver and reentrancy attack; LICENSE (MIT); history: 15 commits 2026-07-15..2026-08-14. hardhat.config imports dotenv (only the config, not the test). All 10 files compile with 0.8.24 + OZ 5.0.2 no optimizer.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:36:08.092334+00:00"
+}

@@ -1,0 +1,165 @@
+{
+  "base_trace": null,
+  "pivot_steps": [
+    {
+      "retrieved": "3b21a25d5b57faae0360a847",
+      "type": "function",
+      "delivered": [
+        "4a10acd4e9a61a548b6ec90a",
+        "3cdf6d66aed31e37cd47b75a"
+      ]
+    },
+    {
+      "retrieved": "4f7c57d79f5783479dcee312",
+      "type": "test_case",
+      "delivered": [
+        "4f7c57d79f5783479dcee312"
+      ]
+    },
+    {
+      "retrieved": "f6b3b7bc36a0da173d8555e9",
+      "type": "function",
+      "delivered": [
+        "4c55a74aed6873d7a81b0687",
+        "cd60a7b4cc005a0ede1e88dd"
+      ]
+    },
+    {
+      "retrieved": "0b115827d4485cbfb6242370",
+      "type": "test_case",
+      "delivered": [
+        "0b115827d4485cbfb6242370"
+      ]
+    },
+    {
+      "retrieved": "177d84805ab0e8770172416f",
+      "type": "test_case",
+      "delivered": [
+        "177d84805ab0e8770172416f"
+      ]
+    },
+    {
+      "retrieved": "8f1a75b8acd00b5ed73eae62",
+      "type": "test_case",
+      "delivered": [
+        "8f1a75b8acd00b5ed73eae62"
+      ]
+    },
+    {
+      "retrieved": "754f4aec5d821e058bd14f29",
+      "type": "function",
+      "delivered": [
+        "ea95c2a436b18f8132318eab",
+        "7ce1f8122364a8f7680c26a8"
+      ]
+    }
+  ],
+  "selected": [
+    5075,
+    5077,
+    1075,
+    1070,
+    1071,
+    4346,
+    1077,
+    1074,
+    4304,
+    4305
+  ],
+  "context_chars": 12696,
+  "per_function": 2,
+  "contract": "NFTMarketplace",
+  "retrieval_seconds": 0.1082842000760138,
+  "hits": [
+    {
+      "chunk_id": 5075,
+      "test_id": "4a10acd4e9a61a548b6ec90a",
+      "pair": "nftmarketplace--donguillotine",
+      "domain_group": "nft-marketplace",
+      "name": "Should allow buying a listed NFT",
+      "via_function": "3b21a25d5b57faae0360a847",
+      "chars": 1222
+    },
+    {
+      "chunk_id": 5077,
+      "test_id": "3cdf6d66aed31e37cd47b75a",
+      "pair": "nftmarketplace--donguillotine",
+      "domain_group": "nft-marketplace",
+      "name": "Should require the correct price",
+      "via_function": "3b21a25d5b57faae0360a847",
+      "chars": 1208
+    },
+    {
+      "chunk_id": 1075,
+      "test_id": "4f7c57d79f5783479dcee312",
+      "pair": "block-bid--beaulosun",
+      "domain_group": "nft-marketplace",
+      "name": "Owners cannot buy their own NFT",
+      "via_function": null,
+      "chars": 1218
+    },
+    {
+      "chunk_id": 1070,
+      "test_id": "4c55a74aed6873d7a81b0687",
+      "pair": "block-bid--beaulosun",
+      "domain_group": "nft-marketplace",
+      "name": "Should be reverted if sender is not the owner",
+      "via_function": "f6b3b7bc36a0da173d8555e9",
+      "chars": 1225
+    },
+    {
+      "chunk_id": 1071,
+      "test_id": "cd60a7b4cc005a0ede1e88dd",
+      "pair": "block-bid--beaulosun",
+      "domain_group": "nft-marketplace",
+      "name": "Should be reverted if price is lower than 0",
+      "via_function": "f6b3b7bc36a0da173d8555e9",
+      "chars": 1193
+    },
+    {
+      "chunk_id": 4346,
+      "test_id": "0b115827d4485cbfb6242370",
+      "pair": "meta-tales-nft--anubhavick",
+      "domain_group": "nft-marketplace",
+      "name": "Should mint NFT with custom royalty",
+      "via_function": null,
+      "chars": 1623
+    },
+    {
+      "chunk_id": 1077,
+      "test_id": "177d84805ab0e8770172416f",
+      "pair": "block-bid--beaulosun",
+      "domain_group": "nft-marketplace",
+      "name": "Buyer should be able to buy the NFT",
+      "via_function": null,
+      "chars": 1640
+    },
+    {
+      "chunk_id": 1074,
+      "test_id": "8f1a75b8acd00b5ed73eae62",
+      "pair": "block-bid--beaulosun",
+      "domain_group": "nft-marketplace",
+      "name": "Should not be able to buy the NFT if not for sale",
+      "via_function": null,
+      "chars": 1175
+    },
+    {
+      "chunk_id": 4304,
+      "test_id": "ea95c2a436b18f8132318eab",
+      "pair": "marketplace--ozgurkutlu0",
+      "domain_group": "nft-marketplace",
+      "name": "reverts on wrong price",
+      "via_function": "754f4aec5d821e058bd14f29",
+      "chars": 1203
+    },
+    {
+      "chunk_id": 4305,
+      "test_id": "7ce1f8122364a8f7680c26a8",
+      "pair": "marketplace--ozgurkutlu0",
+      "domain_group": "nft-marketplace",
+      "name": "reverts when not listed",
+      "via_function": "754f4aec5d821e058bd14f29",
+      "chars": 989
+    }
+  ]
+}

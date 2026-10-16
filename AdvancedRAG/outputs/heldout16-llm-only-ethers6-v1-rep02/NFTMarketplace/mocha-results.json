@@ -1,0 +1,151 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 9,
+    "passes": 8,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-30T20:53:56.317Z",
+    "end": "2026-09-30T20:53:57.239Z",
+    "duration": 922
+  },
+  "tests": [
+    {
+      "title": "should set royalty correctly",
+      "fullTitle": "NFTMarketplace setRoyalty should set royalty correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 58,
+      "err": {}
+    },
+    {
+      "title": "should revert if royalty exceeds 10%",
+      "fullTitle": "NFTMarketplace setRoyalty should revert if royalty exceeds 10%",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 30,
+      "err": {}
+    },
+    {
+      "title": "should list NFT correctly",
+      "fullTitle": "NFTMarketplace list should list NFT correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 69,
+      "err": {}
+    },
+    {
+      "title": "should revert if not owner",
+      "fullTitle": "NFTMarketplace list should revert if not owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "should revert if not approved",
+      "fullTitle": "NFTMarketplace list should revert if not approved",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "should buy NFT correctly",
+      "fullTitle": "NFTMarketplace buy should buy NFT correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 55,
+      "err": {
+        "message": "expected 10000000000000000000000 to be close to 10000025000000000000000 +/- 10000000000000000",
+        "stack": "AssertionError: expected 10000000000000000000000 to be close to 10000025000000000000000 +/- 10000000000000000\n    at Context.<anonymous> (test\\generated.test.js:113:49)"
+      }
+    },
+    {
+      "title": "should revert if not listed",
+      "fullTitle": "NFTMarketplace buy should revert if not listed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "should revert if insufficient payment",
+      "fullTitle": "NFTMarketplace buy should revert if insufficient payment",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "should handle excess payment with refund",
+      "fullTitle": "NFTMarketplace buy should handle excess payment with refund",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "should buy NFT correctly",
+      "fullTitle": "NFTMarketplace buy should buy NFT correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 55,
+      "err": {
+        "message": "expected 10000000000000000000000 to be close to 10000025000000000000000 +/- 10000000000000000",
+        "stack": "AssertionError: expected 10000000000000000000000 to be close to 10000025000000000000000 +/- 10000000000000000\n    at Context.<anonymous> (test\\generated.test.js:113:49)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "should set royalty correctly",
+      "fullTitle": "NFTMarketplace setRoyalty should set royalty correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 58,
+      "err": {}
+    },
+    {
+      "title": "should revert if royalty exceeds 10%",
+      "fullTitle": "NFTMarketplace setRoyalty should revert if royalty exceeds 10%",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 30,
+      "err": {}
+    },
+    {
+      "title": "should list NFT correctly",
+      "fullTitle": "NFTMarketplace list should list NFT correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 69,
+      "err": {}
+    },
+    {
+      "title": "should revert if not owner",
+      "fullTitle": "NFTMarketplace list should revert if not owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "should revert if not approved",
+      "fullTitle": "NFTMarketplace list should revert if not approved",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "should revert if not listed",
+      "fullTitle": "NFTMarketplace buy should revert if not listed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "should revert if insufficient payment",
+      "fullTitle": "NFTMarketplace buy should revert if insufficient payment",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "should handle excess payment with refund",
+      "fullTitle": "NFTMarketplace buy should handle excess payment with refund",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    }
+  ]
+}

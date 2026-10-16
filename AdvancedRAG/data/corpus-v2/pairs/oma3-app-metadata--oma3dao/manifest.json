@@ -1,0 +1,53 @@
+{
+  "id": "oma3-app-metadata--oma3dao",
+  "domain": "registry",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "OMA3AppMetadata.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/oma3dao/app-registry-evm-solidity",
+    "commit": "6ee78de059563119c2d3fa9a397e8af308f0834e",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/identity/OMA3AppMetadata.sol"
+    ],
+    "test_paths": [
+      "test/OMA3AppMetadata.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/identity/OMA3AppMetadata.sol": "7d92238c3f8ddc79ae167757b48234f94db8e0fd50c5ab72f51e7537369280e3",
+      "test/OMA3AppMetadata.ts": "715222975c613df8db0332ba5c0c5d6f0a6822bcf5442fe84087256de464c6b5"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "OMA3AppMetadata.js",
+      "upstream_path": "test/OMA3AppMetadata.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "OMA3AppMetadata.js",
+      "upstream_path": "test/OMA3AppMetadata.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-network-helpers",
+      "names": [
+        "time"
+      ],
+      "file": "OMA3AppMetadata.js",
+      "upstream_path": "test/OMA3AppMetadata.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Application metadata registry of the OMA3 DAO app registry; 136 commits. Primary 103 non-blank lines, closure 103 lines/1 files; 11 its, 17 expects; pragma ^0.8.24.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:11.905922+00:00"
+}

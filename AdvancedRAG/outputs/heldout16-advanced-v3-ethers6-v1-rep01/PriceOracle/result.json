@@ -1,0 +1,48 @@
+{
+  "contract": "PriceOracle",
+  "status": "test_failures",
+  "prompt_sha256": "1b162a977125f15cebc12565d03da1b4c994e07d016cc382eec981b19cafaec5",
+  "generation_seconds": 13.497039700043388,
+  "usage": {
+    "prompt_tokens": 12831,
+    "total_tokens": 14514,
+    "completion_tokens": 1683,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.795248900074512
+  },
+  "passed_tests": 13,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "PriceOracle Price Submission Should aggregate prices when required feeders submit",
+      "error": "anyValue is not defined"
+    },
+    {
+      "title": "PriceOracle Price Reading Should return the latest price",
+      "error": "time is not defined"
+    },
+    {
+      "title": "PriceOracle Price Reading Should revert for stale price",
+      "error": "time is not defined"
+    },
+    {
+      "title": "PriceOracle Price Reading Should calculate TWAP correctly",
+      "error": "time is not defined"
+    }
+  ],
+  "coverage": {
+    "statements": 78.72,
+    "branches": 68.42,
+    "functions": 90.91,
+    "lines": 82.22
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

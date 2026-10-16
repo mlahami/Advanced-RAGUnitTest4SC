@@ -1,0 +1,32 @@
+{
+  "id": "event-manager--donguillotine",
+  "domain": "access-control",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "EventManager.sol",
+    "EventNFT.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/DonGuillotine/nft-gated-event-manager",
+    "commit": "45541a09799a56c9b723b1ee9885e84fd5929f71",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/EventManager.sol",
+      "contracts/EventNFT.sol"
+    ],
+    "test_paths": [
+      "test/EventManager.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/EventManager.sol": "f56289b9ca089774caa7e9af3de894d90d140e9964abbb8a97f7e581aa289351",
+      "contracts/EventNFT.sol": "3d367335193866db2a4c855931c635b1898498f377847344e18770f0b68c4eae",
+      "test/EventManager.js": "08153bbca0cabc366976c1a2a5cf827f81c82d19b33e80fed0b358749ef2f372"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "NFT-gated event registration",
+  "imported_utc": "2026-09-27T21:50:18.929340+00:00"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "rag-v2.MerkleAirdrop",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "MerkleAirdrop",
+  "chunk_ids": [
+    5905,
+    7293,
+    7290,
+    7292,
+    1290,
+    1291,
+    7287,
+    7288
+  ],
+  "context_sha256": "ca824f91975496f0cb1a41b2585cc7c4671a648b317e17d565172c8f99a5cb75",
+  "ratings": [
+    {
+      "chunk_id": 5905,
+      "rating": 1,
+      "reason": "Shows reentrancy testing pattern, but target contract’s claim logic differs and test behavior isn’t directly applicable."
+    },
+    {
+      "chunk_id": 7293,
+      "rating": 0,
+      "reason": "Test targets unrelated Verifier logic; no merkle proof, claim, or token transfer patterns applicable to MerkleAirdrop."
+    },
+    {
+      "chunk_id": 7290,
+      "rating": 0,
+      "reason": "Tests unrelated contract behavior; only generic deployment pattern, not applicable to MerkleAirdrop claims."
+    },
+    {
+      "chunk_id": 7292,
+      "rating": 0,
+      "reason": "Test targets a different verifier contract; no Merkle proof, claim, or token transfer logic applies to MerkleAirdrop."
+    },
+    {
+      "chunk_id": 1290,
+      "rating": 1,
+      "reason": "Shows generic revert‑on‑duplicate pattern similar to MerkleAirdrop’s already‑claimed check, but tests unrelated functionality."
+    },
+    {
+      "chunk_id": 1291,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but MerkleAirdrop doesn't validate amount zero, so only testing style is reusable."
+    },
+    {
+      "chunk_id": 7287,
+      "rating": 0,
+      "reason": "Test checks unrelated verify function; no applicable pattern for claim, merkle proof, or events in target contract."
+    },
+    {
+      "chunk_id": 7288,
+      "rating": 0,
+      "reason": "Test checks unrelated Verifier behavior; no Merkle proof, claim, or token transfer patterns applicable."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9600,
+    "completion_tokens": 887,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 69.6,
+  "evaluated_utc": "2026-10-13T07:29:56.287119+00:00"
+}

@@ -1,0 +1,89 @@
+{
+  "pair": "grow-vault--deboraholaboye",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:52:04.115105+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/GrowVault.sol": "19b6fa02d4143c3090fa71a5691b359b6e816598d307ad86ec26104296e6d24d",
+    "contracts/MockERC20.sol": "a16d32b26c3ccac282775b93cb9af2f99eaa3b1369c1efe3ace6aa9aba667376",
+    "LICENSE": "44cd2cd3e2e99096bd0565dc2333ceee44ccd9c1c401f8d1d1d87654700a5bda",
+    "manifest.json": "94576950e15bef50e3e79ac6d7dccf392f5bbb17cc5665f675420bcca832b253",
+    "test/GrowVault.js": "af9c109c84e8ced02599521f153b2a40b620fd89434b2b8dfb5d2e988273505e"
+  },
+  "pair_sha256": "77c5a5876c5261510b3ccc0a141676e33e83214a6672dd752bc60f875e97093d",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "GrowVault.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.252,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "GrowVault.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.213,
+        "signatures": 0.062,
+        "min_functions": 8
+      },
+      {
+        "contract": "GrowVault.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.179,
+        "signatures": 0.0,
+        "min_functions": 9
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.41,
+      "mocha": {
+        "tests": 23,
+        "passes": 23,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.16,
+      "mocha": {
+        "tests": 23,
+        "passes": 23,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "GrowVault.sol": {
+          "statements": 88.37,
+          "branches": 73.08,
+          "functions": 80.0,
+          "lines": 90.48
+        },
+        "MockERC20.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 66.67,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

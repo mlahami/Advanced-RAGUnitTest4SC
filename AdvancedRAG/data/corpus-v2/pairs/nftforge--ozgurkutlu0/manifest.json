@@ -1,0 +1,31 @@
+{
+  "id": "nftforge--ozgurkutlu0",
+  "domain": "nft",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "NFTForge.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ozgurkutlu0/nftforge",
+    "commit": "2c8f4cb1498a0c4e96d5dbb2de2fcfd7e839ffe7",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/NFTForge.sol"
+    ],
+    "test_paths": [
+      "test/NFTForge.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/NFTForge.sol": "fe0ffdf2d4bcfac80e6df2b820044546c3446230cd7d27b5a524c463044be428",
+      "test/NFTForge.test.js": "92236962f0e8b6bf198f8f76c407abf7cb2d2ff0270f2c20de4c7158c1fc8068"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (flagged in search report). Minimal ERC721 mint-with-URI contract; repo of 12 commits made in one day (2026) - possible AI assistance. Primary 23 non-blank lines, closure 23 lines/1 files; 6 its, 12 expects; pragma ^0.8.24.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T12:05:24.286329+00:00"
+}

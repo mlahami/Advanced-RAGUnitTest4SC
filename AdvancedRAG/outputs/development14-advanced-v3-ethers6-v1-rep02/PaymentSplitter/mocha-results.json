@@ -1,0 +1,95 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-10-01T06:01:33.818Z",
+    "end": "2026-10-01T06:01:34.252Z",
+    "duration": 434
+  },
+  "tests": [
+    {
+      "title": "Should set the right payees and shares",
+      "fullTitle": "PaymentSplitter Deployment Should set the right payees and shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 39,
+      "err": {}
+    },
+    {
+      "title": "Should revert with invalid input",
+      "fullTitle": "PaymentSplitter Deployment Should revert with invalid input",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 32,
+      "err": {}
+    },
+    {
+      "title": "Should accept ETH",
+      "fullTitle": "PaymentSplitter Receive Should accept ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should distribute ETH according to shares",
+      "fullTitle": "PaymentSplitter Distribute Should distribute ETH according to shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "ethers.parseEther(...).div is not a function",
+        "stack": "TypeError: ethers.parseEther(...).div is not a function\n    at Context.<anonymous> (test\\generated.test.js:96:32)"
+      }
+    },
+    {
+      "title": "Should revert if no funds to distribute",
+      "fullTitle": "PaymentSplitter Distribute Should revert if no funds to distribute",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should distribute ETH according to shares",
+      "fullTitle": "PaymentSplitter Distribute Should distribute ETH according to shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "ethers.parseEther(...).div is not a function",
+        "stack": "TypeError: ethers.parseEther(...).div is not a function\n    at Context.<anonymous> (test\\generated.test.js:96:32)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right payees and shares",
+      "fullTitle": "PaymentSplitter Deployment Should set the right payees and shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 39,
+      "err": {}
+    },
+    {
+      "title": "Should revert with invalid input",
+      "fullTitle": "PaymentSplitter Deployment Should revert with invalid input",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 32,
+      "err": {}
+    },
+    {
+      "title": "Should accept ETH",
+      "fullTitle": "PaymentSplitter Receive Should accept ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should revert if no funds to distribute",
+      "fullTitle": "PaymentSplitter Distribute Should revert if no funds to distribute",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    }
+  ]
+}

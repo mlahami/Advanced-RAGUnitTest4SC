@@ -1,0 +1,67 @@
+{
+  "id": "rag-v2.BatchTransfer",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "BatchTransfer",
+  "chunk_ids": [
+    967,
+    3190,
+    2433,
+    2434,
+    914,
+    3191,
+    1560,
+    5315
+  ],
+  "context_sha256": "b9f87e6e2b32f619bb8530dfd5dfb621d5c82bf6e43c320955e7a2d8d7918b7a",
+  "ratings": [
+    {
+      "chunk_id": 967,
+      "rating": 2,
+      "reason": "Tests event emission with recipient count and total, matching BatchTransfer’s batch send events; setup and assertions can be adapted directly."
+    },
+    {
+      "chunk_id": 3190,
+      "rating": 1,
+      "reason": "Shows generic batch array handling and balance checks useful for ERC20 batch transfer pattern"
+    },
+    {
+      "chunk_id": 2433,
+      "rating": 1,
+      "reason": "Shows ERC20 approve and transferFrom usage pattern, but tests share‑based distribution not present in BatchTransfer."
+    },
+    {
+      "chunk_id": 2434,
+      "rating": 1,
+      "reason": "Only generic ERC20 approve/transfer pattern; specific functions and events differ, so not directly reusable."
+    },
+    {
+      "chunk_id": 914,
+      "rating": 1,
+      "reason": "Shows generic pattern of batch token transfer to multiple addresses and balance checks, but target uses separate contract and different function signatures."
+    },
+    {
+      "chunk_id": 3191,
+      "rating": 2,
+      "reason": "Tests length‑mismatch revert, matching BatchTransfer’s length checks for ERC20/ETH batches; setup and revert assertion can be reused."
+    },
+    {
+      "chunk_id": 1560,
+      "rating": 1,
+      "reason": "Only demonstrates generic revert expectation; target contract has different functionality, so test behavior isn’t directly reusable."
+    },
+    {
+      "chunk_id": 5315,
+      "rating": 1,
+      "reason": "Shows generic ERC20 batch transfer pattern and balance checks, but function signature differs (no token argument), so only partially reusable."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 15697,
+    "completion_tokens": 1003,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 122.3,
+  "evaluated_utc": "2026-10-12T08:40:32.744547+00:00"
+}

@@ -1,0 +1,89 @@
+{
+  "pair": "griffin-dex--littlefingerrr",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:36:25.066632+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/GriffinDEX.sol": "93b1a265900e7b6cdc2124d2e8c35b48f0eb1f39430fb74c9e516bd85a30ec4b",
+    "contracts/MockERC20.sol": "9bf98146edd6066bc38218243fd69cfd720313131dfaf7ddf9f819472df39c93",
+    "LICENSE": "636eb9a8b6763aae486f2e706eb500c1215b70bd0f4001e510b71178ae8f1a3e",
+    "manifest.json": "c0625c9a98f4f068ec28b0304538f837cb336d35d1ce016070ea88198bbada03",
+    "test/GriffinDEX.test.js": "01e9d3e20603c5a7efa5c7ce8f0fa2c9a91dbe4794f04b3b7dac5d009d602c64"
+  },
+  "pair_sha256": "0c8c1aae2a73c5b5af3b803b96b4f29e89fe9aa728f3169fdd474c9e3fe55746",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "GriffinDEX.sol",
+        "reference": "DEX.sol",
+        "structural": 0.196,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "GriffinDEX.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.173,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "GriffinDEX.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.15,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.7,
+      "mocha": {
+        "tests": 21,
+        "passes": 21,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.7,
+      "mocha": {
+        "tests": 21,
+        "passes": 21,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "GriffinDEX.sol": {
+          "statements": 74.63,
+          "branches": 63.24,
+          "functions": 80.0,
+          "lines": 75.76
+        },
+        "MockERC20.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

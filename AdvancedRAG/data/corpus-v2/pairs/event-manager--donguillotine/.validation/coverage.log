@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> EventManager.sol
+> EventNFT.sol
+
+Compilation:
+============
+
+Compiled 19 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+-------------------|----------|----------|----------|----------|----------------|
+File               |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-------------------|----------|----------|----------|----------|----------------|
+ contracts\        |    88.89 |    72.22 |    77.78 |    92.59 |                |
+  EventManager.sol |      100 |       75 |      100 |      100 |                |
+  EventNFT.sol     |       60 |       50 |       50 |    66.67 |          30,39 |
+-------------------|----------|----------|----------|----------|----------------|
+All files          |    88.89 |    72.22 |    77.78 |    92.59 |                |
+-------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

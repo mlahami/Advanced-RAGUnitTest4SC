@@ -1,0 +1,31 @@
+{
+  "id": "open-source-project-funding--mustan-ali",
+  "domain": "crowdfunding",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "OpenSourceProjectFunding.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/mustan-ali/OpenSourceProjectFunding",
+    "commit": "bdd2e9e090be782f5c9e17c346581bcec3d234cb",
+    "license": "MIT",
+    "contract_paths": [
+      "backend/contracts/OpenSourceProjectFunding.sol"
+    ],
+    "test_paths": [
+      "backend/test/OpenSourceProjectFunding.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "backend/contracts/OpenSourceProjectFunding.sol": "3a60d42456c78fa5276cb44738ba48b2ccb614ec66dcb34cba37484dd17c7538",
+      "backend/test/OpenSourceProjectFunding.test.js": "97603c9d29423fa0fe1d5e4e330d695677817cf1e66f9b73bc2667796fa5942a"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Project crowdfunding with creation fee, percentage contribution fee, goal completion, deadline expiry sweep, and paid early-withdrawal. OZ ReentrancyGuard (utils/, v5). Hardhat project root is backend/. 10 it blocks; fee setters and getProjectCount untested (coverage likely ~80%).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T15:51:25.671670+00:00"
+}

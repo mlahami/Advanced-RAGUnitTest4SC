@@ -1,0 +1,15 @@
+Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+   --> runs/corpus-v2-validation/hypurr-fi-vault--poppyseeddev/contracts/HypurrFiVault.sol:273:25:
+    |
+273 |     function maxDeposit(address receiver) public view override returns (uint256) {
+    |                         ^^^^^^^^^^^^^^^^
+
+
+Warning: Unused local variable.
+   --> runs/corpus-v2-validation/hypurr-fi-vault--poppyseeddev/contracts/HypurrFiVault.sol:404:10:
+    |
+404 |         (uint256 collateral, uint256 debt, uint256 hf) = _getPositionData();
+    |          ^^^^^^^^^^^^^^^^^^
+
+
+Compiled 20 Solidity files successfully (evm target: paris).

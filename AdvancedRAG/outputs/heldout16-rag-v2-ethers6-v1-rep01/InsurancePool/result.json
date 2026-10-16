@@ -1,0 +1,56 @@
+{
+  "contract": "InsurancePool",
+  "status": "test_failures",
+  "prompt_sha256": "671d9f30ca96e0fe398e81b5938c5804988cec1e7fd1879ab4e37ce2c720e84d",
+  "generation_seconds": 26.340743799926713,
+  "usage": {
+    "prompt_tokens": 12325,
+    "total_tokens": 15603,
+    "completion_tokens": 3278,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 6.0011263999622315
+  },
+  "passed_tests": 12,
+  "failed_tests": 6,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "InsurancePool LP Actions Should prevent withdrawal when pool is undercollateralized",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Insufficient pool'"
+    },
+    {
+      "title": "InsurancePool LP Actions Should allow claiming rewards",
+      "error": "expected 0 to be above 0."
+    },
+    {
+      "title": "InsurancePool Policy Actions Should prevent buying policy with zero premium",
+      "error": "Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'"
+    },
+    {
+      "title": "InsurancePool Oracle Actions Should allow owner to trigger claim",
+      "error": "expected 500000000000000000 to equal 600000000000000000."
+    },
+    {
+      "title": "InsurancePool Reward Distribution Should correctly distribute rewards to multiple LPs",
+      "error": "expected 0 to equal 33333333333333333."
+    },
+    {
+      "title": "InsurancePool Reward Distribution Should update rewards when new deposits are made",
+      "error": "expected 0 to be above 0."
+    }
+  ],
+  "coverage": {
+    "statements": 94.59,
+    "branches": 76.47,
+    "functions": 100.0,
+    "lines": 94.59
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

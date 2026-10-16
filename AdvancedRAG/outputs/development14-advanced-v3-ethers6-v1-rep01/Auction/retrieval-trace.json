@@ -1,0 +1,202 @@
+{
+  "target_functions": [
+    {
+      "target_function": "bid",
+      "corpus_functions": [
+        "35e43d1fc39f8dda8951e682",
+        "3e61d7fae3976eb8cd61a7ea",
+        "d67a3ddd7913951788290df4",
+        "cba029738f78839b3589f566",
+        "5f0871f404b73f90472af834",
+        "4d4a4329737a052d6364a9ca",
+        "7eba982defc75bb04e4d450d",
+        "878c642ebcf867c6b45dbd8a"
+      ],
+      "candidate_tests": [
+        "f830d05c9403a4c0e038baf1",
+        "485568a2d54cc67a57e5f899",
+        "8026de9cc96e6f8df17520fe",
+        "1d8829ef9530ff828fdc5299",
+        "7c249e0777030913f00f8259",
+        "18c4b18cb1ede55085b4ead0",
+        "7a945b86aeaf11f16ac9c00e",
+        "bbfc4e22e91ebc8a87bfcb9b",
+        "3a434d1a4a9d2fe49dc3dd9d",
+        "e66aabd87e4f08cafb95d91d",
+        "434191d70a3370ff760fb1bb",
+        "3fb96cb3f26592042ae66da1",
+        "77f44f25c9487b62545e3351",
+        "5b7957eea296f17d24ae038e",
+        "28e0ed32bb3113aa25ca9915"
+      ]
+    },
+    {
+      "target_function": "withdrawRefund",
+      "corpus_functions": [
+        "afbfad0ddeb5ceb991c7598d",
+        "4f78ad235647d82b4f4c073c",
+        "0c086c4482d0761209842ca9",
+        "252a82af76f31ce89d99cb8d",
+        "413f140c76414dba0b662454",
+        "63ed4886eaba21cd5f420028",
+        "af1aa1df79152b1eb3260671",
+        "8c6bca23f1ab32198b838dc6"
+      ],
+      "candidate_tests": [
+        "26bdc277634c957fcc764e39",
+        "d853619715e83ca56d52d096",
+        "08016951e8bab144c4819bb5",
+        "28b059da261b5710f1ed3777",
+        "e0aed636f679466c7c08f79c",
+        "f57399b1149265163bc2cc74",
+        "1186a31a2590b8cf5a3bee49",
+        "e8d04728d32c8c1e9b285758",
+        "b3733dc521a2f23c678be4d9",
+        "ef6be09f6214ecfed5c26061",
+        "2b88e1819f109e18b1ab6f2b",
+        "82853a5773987f33aebd43a6",
+        "44b7a8a27523f7f6c4ba5d57",
+        "ab87bb8057e891b73e4b01d0",
+        "ca59848354c24db771b35982"
+      ]
+    },
+    {
+      "target_function": "finalize",
+      "corpus_functions": [
+        "35e35fb40b16af3821da32ef",
+        "d67a3ddd7913951788290df4",
+        "3e61d7fae3976eb8cd61a7ea",
+        "b3be60ea3be91efc437f2aa2",
+        "e34e9e0ef6ce0adf681e0dfa",
+        "cba029738f78839b3589f566",
+        "7e0938d4bf0e8d374dcd44d2",
+        "40d002a027121665121b2448"
+      ],
+      "candidate_tests": [
+        "6b995ed6333a790d15608b89",
+        "2124d3aa46802927061507ce",
+        "7c249e0777030913f00f8259",
+        "18c4b18cb1ede55085b4ead0",
+        "8026de9cc96e6f8df17520fe",
+        "1d8829ef9530ff828fdc5299",
+        "d8c63215379219fe6f3b5908",
+        "d5fc648a7ed253bc9cc75ce1",
+        "b43f3d64bcb0b4f90ee2b9c4",
+        "9466ef270ed946a005ceb144",
+        "7a945b86aeaf11f16ac9c00e",
+        "2d036994f741c742131bef92",
+        "17d019ac81fedb3da34512a0"
+      ]
+    }
+  ],
+  "selected": [
+    2326,
+    5367,
+    2331,
+    2325,
+    5368,
+    2332,
+    584,
+    6018,
+    662,
+    586
+  ],
+  "context_chars": 12390,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "Auction",
+  "retrieval_seconds": 3.046072700060904,
+  "hits": [
+    {
+      "chunk_id": 2326,
+      "test_id": "f830d05c9403a4c0e038baf1",
+      "pair": "english-auction--dexauction",
+      "domain_group": "auctions",
+      "name": "should not allow a bid if the auction has not started",
+      "via_function": "35e43d1fc39f8dda8951e682",
+      "chars": 1176
+    },
+    {
+      "chunk_id": 5367,
+      "test_id": "26bdc277634c957fcc764e39",
+      "pair": "partial-refund--dhruv-varshney-developer",
+      "domain_group": "fungible-tokens",
+      "name": "Should allow owner to withdraw funds",
+      "via_function": "afbfad0ddeb5ceb991c7598d",
+      "chars": 1288
+    },
+    {
+      "chunk_id": 2331,
+      "test_id": "6b995ed6333a790d15608b89",
+      "pair": "english-auction--dexauction",
+      "domain_group": "auctions",
+      "name": "should end the auction and transfer the RWA to the highest bidder",
+      "via_function": "35e35fb40b16af3821da32ef",
+      "chars": 1605
+    },
+    {
+      "chunk_id": 2325,
+      "test_id": "485568a2d54cc67a57e5f899",
+      "pair": "english-auction--dexauction",
+      "domain_group": "auctions",
+      "name": "should allow a bid",
+      "via_function": "35e43d1fc39f8dda8951e682",
+      "chars": 1325
+    },
+    {
+      "chunk_id": 5368,
+      "test_id": "d853619715e83ca56d52d096",
+      "pair": "partial-refund--dhruv-varshney-developer",
+      "domain_group": "fungible-tokens",
+      "name": "Should not allow non-owner to withdraw funds",
+      "via_function": "afbfad0ddeb5ceb991c7598d",
+      "chars": 1228
+    },
+    {
+      "chunk_id": 2332,
+      "test_id": "2124d3aa46802927061507ce",
+      "pair": "english-auction--dexauction",
+      "domain_group": "auctions",
+      "name": "should not allow end if the auction is not yet ended",
+      "via_function": "35e35fb40b16af3821da32ef",
+      "chars": 1331
+    },
+    {
+      "chunk_id": 584,
+      "test_id": "8026de9cc96e6f8df17520fe",
+      "pair": "areca-auction--nitishpatil18",
+      "domain_group": "auctions",
+      "name": "rejects bids below base price",
+      "via_function": "3e61d7fae3976eb8cd61a7ea",
+      "chars": 1139
+    },
+    {
+      "chunk_id": 6018,
+      "test_id": "08016951e8bab144c4819bb5",
+      "pair": "sealed-bid-auction--khaledolemy",
+      "domain_group": "auctions",
+      "name": "reverts withdraw when there is nothing owed",
+      "via_function": "4f78ad235647d82b4f4c073c",
+      "chars": 1175
+    },
+    {
+      "chunk_id": 662,
+      "test_id": "7c249e0777030913f00f8259",
+      "pair": "auction--rickyliu1117",
+      "domain_group": "auctions",
+      "name": "Should not allow ending auction before end time",
+      "via_function": "d67a3ddd7913951788290df4",
+      "chars": 901
+    },
+    {
+      "chunk_id": 586,
+      "test_id": "1d8829ef9530ff828fdc5299",
+      "pair": "areca-auction--nitishpatil18",
+      "domain_group": "auctions",
+      "name": "rejects a bid not higher than current",
+      "via_function": "3e61d7fae3976eb8cd61a7ea",
+      "chars": 1222
+    }
+  ]
+}

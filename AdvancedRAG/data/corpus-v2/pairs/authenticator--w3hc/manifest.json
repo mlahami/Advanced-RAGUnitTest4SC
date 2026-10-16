@@ -1,0 +1,51 @@
+{
+  "id": "authenticator--w3hc",
+  "domain": "identity-signature-auth",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Authenticator.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/w3hc/authenticator",
+    "commit": "2a1d4c5156296d1ced5287ee0776da62c7aa8691",
+    "license": "GPL-3.0",
+    "contract_paths": [
+      "contracts/Authenticator.sol"
+    ],
+    "test_paths": [
+      "test/Authenticator.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Authenticator.sol": "b754f3115a36c4ae7e18dca30d17c4e1c4856d5f42553ea347b8c614dc0040b6",
+      "test/Authenticator.ts": "9969f28a7d2c180b6b1a9a3b0d5a07c951215d09984554d35a7311b795dfa2e9"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "Authenticator.js",
+      "upstream_path": "test/Authenticator.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "Authenticator.js",
+      "upstream_path": "test/Authenticator.ts"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "Authenticator.js",
+      "upstream_path": "test/Authenticator.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "EIP-712 signature-based authentication registry with nonces; single-commit repo from an established dev (julienbrg); GPL-3.0. Primary 27 non-blank lines, closure 27 lines/1 files; 6 its, 14 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:03:36.894649+00:00"
+}

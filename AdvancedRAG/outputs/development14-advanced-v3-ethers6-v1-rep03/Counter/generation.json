@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"BenchmarkTarget\", function () {\n  let benchmarkTarget;\n  let owner;\n  let other;\n\n  beforeEach(async function () {\n    [owner, other] = await ethers.getSigners();\n\n    const BenchmarkTarget = await ethers.getContractFactory(\"BenchmarkTarget\");\n    benchmarkTarget = await BenchmarkTarget.deploy();\n    await benchmarkTarget.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should set initial value to 0\", async function () {\n      expect(await benchmarkTarget.value()).to.equal(0n);\n    });\n  });\n\n  describe(\"setValue\", function () {\n    it(\"Should update the value and emit ValueSet event\", async function () {\n      const newValue = 100n;\n      const tx = await benchmarkTarget.setValue(newValue);\n      await expect(tx)\n        .to.emit(benchmarkTarget, \"ValueSet\")\n        .withArgs(newValue);\n\n      expect(await benchmarkTarget.value()).to.equal(newValue);\n    });\n\n    it(\"Should allow setting value to 0\", async function () {\n      const newValue = 0n;\n      await benchmarkTarget.setValue(newValue);\n      expect(await benchmarkTarget.value()).to.equal(newValue);\n    });\n\n    it(\"Should allow setting value to maximum uint256\", async function () {\n      const newValue = ethers.MaxUint256;\n      await benchmarkTarget.setValue(newValue);\n      expect(await benchmarkTarget.value()).to.equal(newValue);\n    });\n\n    it(\"Should accept ether when setting value\", async function () {\n      const value = 100n;\n      const tx = await benchmarkTarget.setValue(value, { value: ethers.parseEther(\"1\") });\n      await expect(tx)\n        .to.emit(benchmarkTarget, \"ValueSet\")\n        .withArgs(value);\n\n      expect(await benchmarkTarget.value()).to.equal(value);\n    });\n  });\n\n  describe(\"value\", function () {\n    it(\"Should return the current value\", async function () {\n      const testValue = 42n;\n      await benchmarkTarget.setValue(testValue);\n      expect(await benchmarkTarget.value()).to.equal(testValue);\n    });\n  });\n\n  describe(\"fail\", function () {\n    it(\"Should revert with 'target failure'\", async function () {\n      await expect(benchmarkTarget.fail())\n        .to.be.revertedWith(\"target failure\");\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 6.231120500015095,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 10609,
+      "total_tokens": 11123,
+      "completion_tokens": 514,
+      "prompt_tokens_details": {
+        "cached_tokens": 10496
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "281633174a1c30f6d5dc1f004bb8764699c536911028d9fae1c4360108ebccee"
+}

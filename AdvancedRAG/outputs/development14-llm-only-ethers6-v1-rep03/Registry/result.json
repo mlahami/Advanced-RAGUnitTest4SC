@@ -1,0 +1,36 @@
+{
+  "contract": "Registry",
+  "status": "test_failures",
+  "prompt_sha256": "30a12b5652909899978e9072a6b4a2ae5d38ef474552b634088a21c6f930e681",
+  "generation_seconds": 9.101689299975988,
+  "usage": {
+    "prompt_tokens": 6986,
+    "total_tokens": 7801,
+    "completion_tokens": 815,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.617949999985285
+  },
+  "passed_tests": 9,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Registry remove Should revert for a non-existent key",
+      "error": "Expected transaction to be reverted with reason 'missing', but it didn't revert"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

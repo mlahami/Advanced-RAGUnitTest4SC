@@ -1,0 +1,82 @@
+{
+  "pair": "advanced-voting--shree2160",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:15:40.464295+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AdvancedVoting.sol": "4793641f263276336c0c14c45c2b9c38502d72ac0c62d20d18a9d43bcadccc5a",
+    "LICENSE": "102e374a94c40cd0a514c922b25ddf4f6d8f78907c7afc54d1d89bbb3336dec6",
+    "manifest.json": "1234e92352d1c32554c7b6a3ea32eae572ac99b292d4810fef24a152f356461d",
+    "test/AdvancedVoting.test.js": "0d7d5c7093a7b4941fff8286227fb38655be1efc0e9cb70689f2e5bc926059d8"
+  },
+  "pair_sha256": "0b450194d9200cd1a788006aea7994a42a6d8d23729cc43c8f5d85f8c527f59b",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "AdvancedVoting.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.195,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "AdvancedVoting.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.188,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "AdvancedVoting.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.18,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.47,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.63,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "AdvancedVoting.sol": {
+          "statements": 87.84,
+          "branches": 55.88,
+          "functions": 86.36,
+          "lines": 89.04
+        }
+      }
+    }
+  },
+  "accepted": true
+}

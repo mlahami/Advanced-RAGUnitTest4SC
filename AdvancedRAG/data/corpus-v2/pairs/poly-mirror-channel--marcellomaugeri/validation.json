@@ -1,0 +1,89 @@
+{
+  "pair": "poly-mirror-channel--marcellomaugeri",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:10:35.270841+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/PolyMirrorChannel.sol": "eca288e3200fdc4bc349da9f68e231de9b7c79f5e7491022a3858043f099685b",
+    "contracts/VoucherLib.sol": "90fe412d6f7ae2901d6d0a5b672e054cb5af1b3d42ffc80d1e456ab91e94f2d9",
+    "LICENSE": "6560c7a7831e649416405a02ff9b7546cfd6f7bfb84c21045cbbd09a7ed78ff5",
+    "manifest.json": "8006b09442af3bbba10d35cb93a27c1dcdf891bc1da3853f3c0bf665673bccb1",
+    "test/PolyMirrorChannel.test.js": "95c842c259f5dee43a47cf9b37b37bb8ece8126f2aa8c2ec93cadd0371f76f04"
+  },
+  "pair_sha256": "d5c8b2ee69fdcdb3c505f8d2fc5366477ed1f0ba4e104a8600370ad8f037b811",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "PolyMirrorChannel.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.214,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "PolyMirrorChannel.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.205,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "PolyMirrorChannel.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.196,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.32,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.57,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "PolyMirrorChannel.sol": {
+          "statements": 95.0,
+          "branches": 72.22,
+          "functions": 85.71,
+          "lines": 95.0
+        },
+        "VoucherLib.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

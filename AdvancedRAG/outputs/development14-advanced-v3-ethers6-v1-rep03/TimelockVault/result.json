@@ -1,0 +1,48 @@
+{
+  "contract": "TimelockVault",
+  "status": "test_failures",
+  "prompt_sha256": "e4a11853746d335f90f6dc9b5aa0c02cd58153c02291f5d9d7dcf47ca4b8d88b",
+  "generation_seconds": 5.3529178000753745,
+  "usage": {
+    "prompt_tokens": 10614,
+    "total_tokens": 11212,
+    "completion_tokens": 598,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.488845599931665
+  },
+  "passed_tests": 3,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "TimelockVault Deployment Should set the correct unlock time",
+      "error": "time is not defined"
+    },
+    {
+      "title": "TimelockVault Withdrawals Validations Should revert with the right error if called from another account",
+      "error": "time is not defined"
+    },
+    {
+      "title": "TimelockVault Withdrawals Events Should emit an event on withdrawals",
+      "error": "time is not defined"
+    },
+    {
+      "title": "TimelockVault Withdrawals Transfers Should transfer the funds to the owner if no one else is payable",
+      "error": "time is not defined"
+    }
+  ],
+  "coverage": {
+    "statements": 66.67,
+    "branches": 50.0,
+    "functions": 100.0,
+    "lines": 66.67
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

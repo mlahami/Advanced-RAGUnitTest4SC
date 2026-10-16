@@ -1,0 +1,83 @@
+{
+  "pair": "logger--brenkib",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:14:29.703118+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ILogger.sol": "e9bb3b577a82e12e1834dd458d1d5a03c8df9c07c20ff213a7fa6143e5c17121",
+    "contracts/Logger.sol": "3c0c12d365f56d3eb75c2b223bbba88efc41cd74f0a297d65fb895e3d22a2dcf",
+    "LICENSE": "0f169625e4c31d5345693b31581852801f257e46ce25a361e6302374efab0069",
+    "manifest.json": "0f17d144c6cc98fa0528054d3ec5a9a1cadc5ec370ef5b3c4b1864a8ff4e52ce",
+    "test/Logger.test.js": "1b2485b9d5279b487d03217b9b4ae81d1078da322c504ee0dd50b114727e25cc"
+  },
+  "pair_sha256": "74658a0ad35b54e4a62abd235f0a346dc4f3b90c0ee9bcda453d808d74e000c9",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Logger.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.099,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "Logger.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.095,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "Logger.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.086,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.52,
+      "mocha": {
+        "tests": 1,
+        "passes": 1,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.6,
+      "mocha": {
+        "tests": 1,
+        "passes": 1,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Logger.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

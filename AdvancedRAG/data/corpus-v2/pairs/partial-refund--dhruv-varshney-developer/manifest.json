@@ -1,0 +1,29 @@
+{
+  "id": "partial-refund--dhruv-varshney-developer",
+  "domain": "token-sale",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "PartialRefund.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Dhruv-Varshney-developer/DeeVeeToken",
+    "commit": "c738a5a0974862eacfb38e460ce1ddb6b44b24c0",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/PartialRefund.sol"
+    ],
+    "test_paths": [
+      "test/PartialRefund.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/PartialRefund.sol": "68181b2a9c4731716c38c012ef643efcbf5342b3d8767ac1460c3a4a797050fc",
+      "test/PartialRefund.js": "28b48f8fa657b48c359cc14823032de031fa097669d67d829fde58cdeb24c1c8"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "ERC20 + ERC20Permit partial refund; 18 its",
+  "imported_utc": "2026-09-27T21:50:15.243304+00:00"
+}

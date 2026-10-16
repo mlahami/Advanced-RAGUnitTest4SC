@@ -1,0 +1,44 @@
+{
+  "contract": "RateLimiter",
+  "status": "test_failures",
+  "prompt_sha256": "891e23f3901de6999ffb467b07d53f81001fe28919662a8148a0db01cf1f260d",
+  "generation_seconds": 14.443684299942106,
+  "usage": {
+    "prompt_tokens": 7909,
+    "total_tokens": 9438,
+    "completion_tokens": 1529,
+    "prompt_tokens_details": {
+      "cached_tokens": 7808
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 6.961203500046395
+  },
+  "passed_tests": 11,
+  "failed_tests": 3,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "RateLimiter Deposit Should revert when rate limit is exceeded",
+      "error": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert"
+    },
+    {
+      "title": "RateLimiter Withdraw Should revert when rate limit is exceeded",
+      "error": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert"
+    },
+    {
+      "title": "RateLimiter Rate Limiting Should correctly calculate tokens after time passes",
+      "error": "expected 100 to equal 130."
+    }
+  ],
+  "coverage": {
+    "statements": 94.74,
+    "branches": 71.43,
+    "functions": 85.71,
+    "lines": 94.44
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

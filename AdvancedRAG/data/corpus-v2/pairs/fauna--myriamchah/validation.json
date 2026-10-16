@@ -1,0 +1,82 @@
+{
+  "pair": "fauna--myriamchah",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:21:11.731634+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Fauna.sol": "d45fdcc91eb276fbac6b4dcb1317d79adc0a3bdf1611cee1d936bfaedac6a665",
+    "LICENSE": "d9685a4d6cddded636eb0958cfae97c585a5cd318841251cd47f6b2775b63cc2",
+    "manifest.json": "a54a796fe1d6e6a9ca6e10db70ee1f99f332bce33f33bb6a0aec31b81ee57180",
+    "test/fauna.test.js": "70e3d5544e81eea35d2ef1b4a90be52b28b0726eb3a3cc7ff73d36789f891c5a"
+  },
+  "pair_sha256": "a227a8181b6ade91e6a122561b3fec492e0928ad70ddd3b813588bb16e2afe47",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Fauna.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.165,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "Fauna.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.154,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "Fauna.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.148,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.33,
+      "mocha": {
+        "tests": 44,
+        "passes": 44,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.34,
+      "mocha": {
+        "tests": 44,
+        "passes": 44,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Fauna.sol": {
+          "statements": 100.0,
+          "branches": 94.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

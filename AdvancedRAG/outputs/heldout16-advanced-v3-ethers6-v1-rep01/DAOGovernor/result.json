@@ -1,0 +1,48 @@
+{
+  "contract": "DAOGovernor",
+  "status": "test_failures",
+  "prompt_sha256": "36af8d699c72845d411dc39925af7a69fa9006589fc7f8a0e68afbe430e87a77",
+  "generation_seconds": 25.651642499957234,
+  "usage": {
+    "prompt_tokens": 11548,
+    "total_tokens": 14346,
+    "completion_tokens": 2798,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.377680900041014
+  },
+  "passed_tests": 12,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "DAOGovernor Proposal Creation should create a proposal and emit ProposalCreated event",
+      "error": "time is not defined"
+    },
+    {
+      "title": "DAOGovernor Voting should revert if voting before proposal starts",
+      "error": "Expected transaction to be reverted with reason 'Not active', but it didn't revert"
+    },
+    {
+      "title": "DAOGovernor Voting should revert if voter has no voting power",
+      "error": "Expected transaction to be reverted with reason 'No voting power', but it didn't revert"
+    },
+    {
+      "title": "DAOGovernor Queueing should queue a successful proposal",
+      "error": "Cannot mix BigInt and other types, use explicit conversions"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 95.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "voting-core--axysar",
+  "domain": "voting",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "VotingCore.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/axysar/imavote",
+    "commit": "ef33645c63f6c078b253e8c0e240aae7f268d466",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/VotingCore.sol"
+    ],
+    "test_paths": [
+      "test/VotingCore.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/VotingCore.sol": "df70257e5b28ebb51f1c520aa601b434b9b0b60f211580721248279ddf6bdbb1",
+      "test/VotingCore.test.ts": "c163d535f26451a325feec933051df13756c1c5e3da70b4092c0f29b7b064cf0"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "VotingCore.test.js",
+      "upstream_path": "test/VotingCore.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "VotingCore.test.js",
+      "upstream_path": "test/VotingCore.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Proposal voting engine with voter registration, activation/closing, participation rate and pause; same repo. Primary 108 non-blank lines, closure 108 lines/1 files; 8 its, 13 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:06:01.240039+00:00"
+}

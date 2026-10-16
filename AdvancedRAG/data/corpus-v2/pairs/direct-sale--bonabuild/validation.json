@@ -1,0 +1,96 @@
+{
+  "pair": "direct-sale--bonabuild",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:49:35.684689+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/BonaToken.sol": "1a34bd7372bb63ea40c7944bceae8c9dde9353c899546337f064217f22076ab7",
+    "contracts/DirectSale.sol": "6563ad2b14763d4c43fe6bf8ad6e31a3380296d1eba4f13401cb292eeefa1246",
+    "contracts/Mocks.sol": "a70bc9f9325322ba6c6bc644e382e1cb84ae3a37dcbf33508a3e43a3518c0b83",
+    "LICENSE": "cb76036c4aed7b4239290760292ccce54a29d0f2933398cf05f7445921116a08",
+    "manifest.json": "0340ebebbf642bdc5497b35c200f4cdb07a9e0f69086ae31b9bb12b2cdfefbc7",
+    "test/DirectSale.test.js": "7992c2ba07a66fb62377b020c166aedd14f956904c0685f6d74469601b420ae0"
+  },
+  "pair_sha256": "956666b84169bea0f8798c355c8f75395977d3f474e6cbfd9cbcb10e039681c4",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "DirectSale.sol",
+        "reference": "DEX.sol",
+        "structural": 0.2,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "DirectSale.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.196,
+        "signatures": 0.091,
+        "min_functions": 5
+      },
+      {
+        "contract": "DirectSale.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.186,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.3,
+      "mocha": {
+        "tests": 23,
+        "passes": 23,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.98,
+      "mocha": {
+        "tests": 23,
+        "passes": 23,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "DirectSale.sol": {
+          "statements": 100.0,
+          "branches": 92.31,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "BonaToken.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Mocks.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 50.0,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

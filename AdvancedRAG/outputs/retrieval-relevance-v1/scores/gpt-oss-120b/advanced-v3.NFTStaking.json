@@ -1,0 +1,67 @@
+{
+  "id": "advanced-v3.NFTStaking",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "NFTStaking",
+  "chunk_ids": [
+    2249,
+    2248,
+    4916,
+    3954,
+    4911,
+    6595,
+    2246,
+    2053
+  ],
+  "context_sha256": "84c7e9303db25c82c48118b2a821d02c5833aaf329e6c0e8c9870cd89a600003",
+  "ratings": [
+    {
+      "chunk_id": 2249,
+      "rating": 2,
+      "reason": "Tests double‑staking revert, matching NFTStaking’s require against already‑staked tokens; setup and assertions can be reused."
+    },
+    {
+      "chunk_id": 2248,
+      "rating": 2,
+      "reason": "Tests revert on unstaking non‑owner token, matching NFTStaking’s unstake ownership check, so can be reused with minor renaming."
+    },
+    {
+      "chunk_id": 4916,
+      "rating": 1,
+      "reason": "Shows time‑increase, reward calculation and claim pattern useful for NFTStaking, but tests different token type and functions, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 3954,
+      "rating": 1,
+      "reason": "Shows time increase, pending reward checks and proportional reward logic useful pattern, but tests ERC20 staking not NFT staking behavior."
+    },
+    {
+      "chunk_id": 4911,
+      "rating": 1,
+      "reason": "Only generic staking pattern; target uses NFT staking with different checks, so not directly reusable"
+    },
+    {
+      "chunk_id": 6595,
+      "rating": 1,
+      "reason": "Tests only‑owner access control pattern, applicable but revert message differs from target’s require string."
+    },
+    {
+      "chunk_id": 2246,
+      "rating": 1,
+      "reason": "Shows generic NFT staking pattern and state assertions, but uses different contract API and extra registry, not directly reusable."
+    },
+    {
+      "chunk_id": 2053,
+      "rating": 1,
+      "reason": "Tests generic revert on unstake with no stake, but specific revert message differs; pattern partially applicable."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 22961,
+    "completion_tokens": 937,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 125.9,
+  "evaluated_utc": "2026-10-14T18:28:10.279068+00:00"
+}

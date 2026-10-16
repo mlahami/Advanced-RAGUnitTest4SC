@@ -1,0 +1,31 @@
+{
+  "id": "agri-bridge-traceability--mrnobody23-cloude",
+  "domain": "supply-chain",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "AgriBridgeTraceability.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/MrNobody23-cloude/AgriBridge",
+    "commit": "6103633fc475aac636c9505926f087e1ccb5e766",
+    "license": "MIT",
+    "contract_paths": [
+      "backend/contracts/AgriBridgeTraceability.sol"
+    ],
+    "test_paths": [
+      "backend/test/AgriBridgeTraceability.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "backend/contracts/AgriBridgeTraceability.sol": "5a5f478f7d534244be8f64697f4fdff17772bbc7b259f42ff48aff9f56b58490",
+      "backend/test/AgriBridgeTraceability.test.js": "6c258e2f5f81d71ca58caafc5e770d7caa31b750804241bbcf9e3b0830982221"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Agricultural batch traceability registry with hand-rolled roles and supply-chain events (2026). Primary 211 non-blank lines, closure 211 lines/1 files; 13 its, 20 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:07:56.429430+00:00"
+}

@@ -1,0 +1,55 @@
+{
+  "id": "advanced-v3.LendingPool",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "LendingPool",
+  "chunk_ids": [
+    1441,
+    4537,
+    3925,
+    3916,
+    1442,
+    4535
+  ],
+  "context_sha256": "e18bf3bcbfe3f51149ddf2113536320cd7f0a91bd2f64d5f248b11800ce17e5f",
+  "ratings": [
+    {
+      "chunk_id": 1441,
+      "rating": 1,
+      "reason": "Tests ERC20 collateral deposit pattern; target uses payable ETH deposit, so only generic setup pattern applies, not directly reusable."
+    },
+    {
+      "chunk_id": 4537,
+      "rating": 1,
+      "reason": "Shows generic borrow pattern with collateral deposit and token balance checks, but uses ERC20 collateral and different function signatures, not directly reusable."
+    },
+    {
+      "chunk_id": 3925,
+      "rating": 1,
+      "reason": "Shows generic repayment flow with approve, repay call and balance check, but uses different token mechanics and contract API, not directly reusable."
+    },
+    {
+      "chunk_id": 3916,
+      "rating": 2,
+      "reason": "Tests liquidation revert for a healthy borrower, matching target's liquidate health check; setup and assertions can be reused after renaming."
+    },
+    {
+      "chunk_id": 1442,
+      "rating": 1,
+      "reason": "Tests event emission on collateral deposit, similar to LendingPool’s depositCollateral, but uses ERC20 token logic not ETH, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 4535,
+      "rating": 1,
+      "reason": "Shows deposit collateral, price‑dependent max borrow, and borrowing flow pattern applicable to LendingPool, though specific contract and oracle logic differ."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9931,
+    "completion_tokens": 794,
+    "calls": 6
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 57.4,
+  "evaluated_utc": "2026-10-14T18:23:28.837794+00:00"
+}

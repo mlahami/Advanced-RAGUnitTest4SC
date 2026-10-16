@@ -1,0 +1,67 @@
+{
+  "id": "election--tbayan",
+  "domain": "voting",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Election.sol",
+    "Deployer.sol",
+    "ElectionStructs.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/tbayan/eVoting_paper_code",
+    "commit": "e0a9cbf65c6bc97fb687e78c35e7aded2fbe4cc8",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Election.sol",
+      "contracts/Deployer.sol",
+      "contracts/ElectionStructs.sol"
+    ],
+    "test_paths": [
+      "test/election.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Election.sol": "b5eccfe0bd844199e01c722f8e5a1fb84ab92709d4fd43d0b1ca3a56e3086a37",
+      "contracts/Deployer.sol": "767f3d630b076eaac61fbd271a8283565699940572e5ea9f76d2b4011748e410",
+      "contracts/ElectionStructs.sol": "83b7d75ebc73e89191ef9993180d63b4d79be5b39df1952aa56cf70956013954",
+      "test/election.test.ts": "c4714d5daada3904b4176071af82654624515e50e688ecdb45332001c9e4dfe8"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "election.test.js",
+      "upstream_path": "test/election.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 5,
+      "file": "election.test.js",
+      "upstream_path": "test/election.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "Deployer",
+        "Election"
+      ],
+      "file": "election.test.js",
+      "upstream_path": "test/election.test.ts"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "election.test.js",
+      "upstream_path": "test/election.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Encrypted-ballot (Paillier ciphertext strings) election with re-voting, factory Deployer, creator publishes results then verification data after endtime; custom errors. Academic paper code (MIT, 2022-2026). Test deploys via Deployer.deployElection.staticCall + getContractAt; typechain types only as types. 15 it blocks.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T15:51:20.260068+00:00"
+}

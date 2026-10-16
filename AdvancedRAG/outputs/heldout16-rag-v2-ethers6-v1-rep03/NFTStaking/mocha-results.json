@@ -1,0 +1,293 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 17,
+    "passes": 11,
+    "pending": 0,
+    "failures": 6,
+    "start": "2026-09-30T21:46:49.823Z",
+    "end": "2026-09-30T21:46:51.166Z",
+    "duration": 1343
+  },
+  "tests": [
+    {
+      "title": "Should set the correct owner",
+      "fullTitle": "NFTStaking Deployment Should set the correct owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct reward rate",
+      "fullTitle": "NFTStaking Deployment Should set the correct reward rate",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should allow staking NFTs",
+      "fullTitle": "NFTStaking Staking Should allow staking NFTs",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 42,
+      "err": {}
+    },
+    {
+      "title": "Should emit Staked event",
+      "fullTitle": "NFTStaking Staking Should emit Staked event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should revert if not the owner of the NFT",
+      "fullTitle": "NFTStaking Staking Should revert if not the owner of the NFT",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should revert if NFT is already staked",
+      "fullTitle": "NFTStaking Staking Should revert if NFT is already staked",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Already staked', but it reverted with reason 'Not owner'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Already staked', but it reverted with reason 'Not owner'\n    at Context.<anonymous> (test\\generated.test.js:77:7)"
+      }
+    },
+    {
+      "title": "Should allow unstaking NFTs",
+      "fullTitle": "NFTStaking Unstaking Should allow unstaking NFTs",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 34,
+      "err": {}
+    },
+    {
+      "title": "Should emit Unstaked event",
+      "fullTitle": "NFTStaking Unstaking Should emit Unstaked event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should revert if not the owner of the staked NFT",
+      "fullTitle": "NFTStaking Unstaking Should revert if not the owner of the staked NFT",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should calculate pending rewards correctly",
+      "fullTitle": "NFTStaking Rewards Should calculate pending rewards correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "expected 22 to equal 20000000000000000000.",
+        "stack": "AssertionError: expected 22 to equal 20000000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:123:34)"
+      }
+    },
+    {
+      "title": "Should allow claiming rewards",
+      "fullTitle": "NFTStaking Rewards Should allow claiming rewards",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "expected 24 to equal 20000000000000000000.",
+        "stack": "AssertionError: expected 24 to equal 20000000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:140:26)"
+      }
+    },
+    {
+      "title": "Should emit RewardClaimed event",
+      "fullTitle": "NFTStaking Rewards Should emit RewardClaimed event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 19,
+      "err": {
+        "message": "Error in \"RewardClaimed\" event: Error in the 2nd argument assertion: expected 24 to equal 20000000000000000000.",
+        "stack": "AssertionError: Error in \"RewardClaimed\" event: Error in the 2nd argument assertion: expected 24 to equal 20000000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:152:7)"
+      }
+    },
+    {
+      "title": "Should revert if no rewards to claim",
+      "fullTitle": "NFTStaking Rewards Should revert if no rewards to claim",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'No rewards', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'No rewards', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:158:7)"
+      }
+    },
+    {
+      "title": "Should allow owner to set reward rate",
+      "fullTitle": "NFTStaking Admin Functions Should allow owner to set reward rate",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert if non-owner tries to set reward rate",
+      "fullTitle": "NFTStaking Admin Functions Should revert if non-owner tries to set reward rate",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should handle multiple stake/unstake operations",
+      "fullTitle": "NFTStaking Edge Cases Should handle multiple stake/unstake operations",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 32,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Not owner'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Not owner'\n    at NFTStaking.stake (runs/heldout16-rag-v2-ethers6-v1-rep03/NFTStaking/contracts/NFTStaking.sol:94)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.stake (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:194:7)"
+      }
+    },
+    {
+      "title": "Should handle zero reward rate",
+      "fullTitle": "NFTStaking Edge Cases Should handle zero reward rate",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should revert if NFT is already staked",
+      "fullTitle": "NFTStaking Staking Should revert if NFT is already staked",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Already staked', but it reverted with reason 'Not owner'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Already staked', but it reverted with reason 'Not owner'\n    at Context.<anonymous> (test\\generated.test.js:77:7)"
+      }
+    },
+    {
+      "title": "Should calculate pending rewards correctly",
+      "fullTitle": "NFTStaking Rewards Should calculate pending rewards correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "expected 22 to equal 20000000000000000000.",
+        "stack": "AssertionError: expected 22 to equal 20000000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:123:34)"
+      }
+    },
+    {
+      "title": "Should allow claiming rewards",
+      "fullTitle": "NFTStaking Rewards Should allow claiming rewards",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "expected 24 to equal 20000000000000000000.",
+        "stack": "AssertionError: expected 24 to equal 20000000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:140:26)"
+      }
+    },
+    {
+      "title": "Should emit RewardClaimed event",
+      "fullTitle": "NFTStaking Rewards Should emit RewardClaimed event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 19,
+      "err": {
+        "message": "Error in \"RewardClaimed\" event: Error in the 2nd argument assertion: expected 24 to equal 20000000000000000000.",
+        "stack": "AssertionError: Error in \"RewardClaimed\" event: Error in the 2nd argument assertion: expected 24 to equal 20000000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:152:7)"
+      }
+    },
+    {
+      "title": "Should revert if no rewards to claim",
+      "fullTitle": "NFTStaking Rewards Should revert if no rewards to claim",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'No rewards', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'No rewards', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:158:7)"
+      }
+    },
+    {
+      "title": "Should handle multiple stake/unstake operations",
+      "fullTitle": "NFTStaking Edge Cases Should handle multiple stake/unstake operations",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 32,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Not owner'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Not owner'\n    at NFTStaking.stake (runs/heldout16-rag-v2-ethers6-v1-rep03/NFTStaking/contracts/NFTStaking.sol:94)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.stake (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:194:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct owner",
+      "fullTitle": "NFTStaking Deployment Should set the correct owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct reward rate",
+      "fullTitle": "NFTStaking Deployment Should set the correct reward rate",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should allow staking NFTs",
+      "fullTitle": "NFTStaking Staking Should allow staking NFTs",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 42,
+      "err": {}
+    },
+    {
+      "title": "Should emit Staked event",
+      "fullTitle": "NFTStaking Staking Should emit Staked event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should revert if not the owner of the NFT",
+      "fullTitle": "NFTStaking Staking Should revert if not the owner of the NFT",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should allow unstaking NFTs",
+      "fullTitle": "NFTStaking Unstaking Should allow unstaking NFTs",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 34,
+      "err": {}
+    },
+    {
+      "title": "Should emit Unstaked event",
+      "fullTitle": "NFTStaking Unstaking Should emit Unstaked event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should revert if not the owner of the staked NFT",
+      "fullTitle": "NFTStaking Unstaking Should revert if not the owner of the staked NFT",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to set reward rate",
+      "fullTitle": "NFTStaking Admin Functions Should allow owner to set reward rate",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert if non-owner tries to set reward rate",
+      "fullTitle": "NFTStaking Admin Functions Should revert if non-owner tries to set reward rate",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should handle zero reward rate",
+      "fullTitle": "NFTStaking Edge Cases Should handle zero reward rate",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\NFTStaking\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    }
+  ]
+}

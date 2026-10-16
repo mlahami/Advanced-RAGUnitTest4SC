@@ -1,0 +1,225 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 13,
+    "passes": 9,
+    "pending": 0,
+    "failures": 4,
+    "start": "2026-09-27T19:54:00.666Z",
+    "end": "2026-09-27T19:54:00.891Z",
+    "duration": 225
+  },
+  "tests": [
+    {
+      "title": "Should set the correct admin",
+      "fullTitle": "AccessControl Deployment Should set the correct admin",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should have the correct EDITOR_ROLE constant",
+      "fullTitle": "AccessControl Deployment Should have the correct EDITOR_ROLE constant",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should allow admin to grant role",
+      "fullTitle": "AccessControl Role Management grantRole Should allow admin to grant role",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"RoleGranted\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"RoleGranted\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:32:9)"
+      }
+    },
+    {
+      "title": "Should revert when non-admin tries to grant role",
+      "fullTitle": "AccessControl Role Management grantRole Should revert when non-admin tries to grant role",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should allow granting role to the same account multiple times",
+      "fullTitle": "AccessControl Role Management grantRole Should allow granting role to the same account multiple times",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"RoleGranted\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"RoleGranted\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:46:9)"
+      }
+    },
+    {
+      "title": "Should allow admin to revoke role",
+      "fullTitle": "AccessControl Role Management revokeRole Should allow admin to revoke role",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Event \"RoleRevoked\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"RoleRevoked\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:57:9)"
+      }
+    },
+    {
+      "title": "Should revert when non-admin tries to revoke role",
+      "fullTitle": "AccessControl Role Management revokeRole Should revert when non-admin tries to revoke role",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should allow revoking role from an account that doesn't have it",
+      "fullTitle": "AccessControl Role Management revokeRole Should allow revoking role from an account that doesn't have it",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "Event \"RoleRevoked\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"RoleRevoked\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:71:9)"
+      }
+    },
+    {
+      "title": "Should return true for accounts with the role",
+      "fullTitle": "AccessControl Role Management hasRole Should return true for accounts with the role",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should return false for accounts without the role",
+      "fullTitle": "AccessControl Role Management hasRole Should return false for accounts without the role",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "Should return false for the zero address",
+      "fullTitle": "AccessControl Role Management hasRole Should return false for the zero address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should handle different roles independently",
+      "fullTitle": "AccessControl Role Management with Different Roles Should handle different roles independently",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should allow revoking one role without affecting others",
+      "fullTitle": "AccessControl Role Management with Different Roles Should allow revoking one role without affecting others",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should allow admin to grant role",
+      "fullTitle": "AccessControl Role Management grantRole Should allow admin to grant role",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"RoleGranted\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"RoleGranted\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:32:9)"
+      }
+    },
+    {
+      "title": "Should allow granting role to the same account multiple times",
+      "fullTitle": "AccessControl Role Management grantRole Should allow granting role to the same account multiple times",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"RoleGranted\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"RoleGranted\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:46:9)"
+      }
+    },
+    {
+      "title": "Should allow admin to revoke role",
+      "fullTitle": "AccessControl Role Management revokeRole Should allow admin to revoke role",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Event \"RoleRevoked\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"RoleRevoked\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:57:9)"
+      }
+    },
+    {
+      "title": "Should allow revoking role from an account that doesn't have it",
+      "fullTitle": "AccessControl Role Management revokeRole Should allow revoking role from an account that doesn't have it",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "Event \"RoleRevoked\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"RoleRevoked\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:71:9)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct admin",
+      "fullTitle": "AccessControl Deployment Should set the correct admin",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should have the correct EDITOR_ROLE constant",
+      "fullTitle": "AccessControl Deployment Should have the correct EDITOR_ROLE constant",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should revert when non-admin tries to grant role",
+      "fullTitle": "AccessControl Role Management grantRole Should revert when non-admin tries to grant role",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should revert when non-admin tries to revoke role",
+      "fullTitle": "AccessControl Role Management revokeRole Should revert when non-admin tries to revoke role",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should return true for accounts with the role",
+      "fullTitle": "AccessControl Role Management hasRole Should return true for accounts with the role",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should return false for accounts without the role",
+      "fullTitle": "AccessControl Role Management hasRole Should return false for accounts without the role",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "Should return false for the zero address",
+      "fullTitle": "AccessControl Role Management hasRole Should return false for the zero address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should handle different roles independently",
+      "fullTitle": "AccessControl Role Management with Different Roles Should handle different roles independently",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should allow revoking one role without affecting others",
+      "fullTitle": "AccessControl Role Management with Different Roles Should allow revoking one role without affecting others",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\AccessControl\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "pair": "supply-chain--ramius-arch",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:19:32.975038+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/SupplyChain.sol": "e6a2182ac4ee9278c73f3d38f7df8ab0fbc61805b34011807f201d58e73858f8",
+    "LICENSE": "849b05e56c10d92158f78fdafe3ffa7f4d26f0cbb48fad57fbc80d06b3cee8f5",
+    "manifest.json": "20f8b918667e97622aef59e6c450b2996daf60ac81afbd8393725cff47511d1b",
+    "test/SupplyChain.test.js": "57ab6f2ce113f13964b58bf45e52a1b5c85e7477cb921ce0609621e44a3b1b3b"
+  },
+  "pair_sha256": "5e96289903955e6c6c0a3a696eb407a9191ba6de4d928883486e8510c1620ec8",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "SupplyChain.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.139,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "SupplyChain.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.129,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "SupplyChain.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.115,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.92,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.12,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "SupplyChain.sol": {
+          "statements": 100.0,
+          "branches": 81.82,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

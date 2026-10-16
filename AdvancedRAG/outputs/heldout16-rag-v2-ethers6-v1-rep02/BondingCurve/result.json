@@ -1,0 +1,36 @@
+{
+  "contract": "BondingCurve",
+  "status": "test_failures",
+  "prompt_sha256": "715490ee7f9a6661f1d932eead2da1cdb2923ba2a9021e4068c5f18c16e2dbd0",
+  "generation_seconds": 15.672902899910696,
+  "usage": {
+    "prompt_tokens": 12884,
+    "total_tokens": 14976,
+    "completion_tokens": 2092,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.320998499984853
+  },
+  "passed_tests": 0,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "BondingCurve \"before each\" hook for \"should set the correct parameters\"",
+      "error": "Sender doesn't have enough funds to send tx. The max upfront cost is: 60000000000000000000000001099511627775 and the sender's balance is: 10100000000000000000000."
+    }
+  ],
+  "coverage": {
+    "statements": 15.15,
+    "branches": 3.57,
+    "functions": 33.33,
+    "lines": 15.62
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

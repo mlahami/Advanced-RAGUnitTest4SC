@@ -1,0 +1,40 @@
+{
+  "contract": "BatchTransfer",
+  "status": "test_failures",
+  "prompt_sha256": "ba31ef99f81e18aa3fb9823022909ccec3839f065d5e287793722966e6d9a64e",
+  "generation_seconds": 16.731587000074796,
+  "usage": {
+    "prompt_tokens": 11803,
+    "total_tokens": 13955,
+    "completion_tokens": 2152,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.82890269998461
+  },
+  "passed_tests": 11,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "BatchTransfer ERC20 Batch Transfers Should revert if ERC20 transfer fails",
+      "error": "Expected transaction to be reverted with reason 'Transfer failed', but it reverted without a reason"
+    },
+    {
+      "title": "BatchTransfer Reentrancy Protection Should prevent reentrancy during ETH batch transfer",
+      "error": "HH700: Artifact for contract \"ReentrantContract\" not found. "
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 85.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

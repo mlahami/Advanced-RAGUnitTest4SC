@@ -1,0 +1,31 @@
+{
+  "id": "smart-chit--jadav-divyaraj",
+  "domain": "auction",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "SmartChit.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Jadav-Divyaraj/Chit-fund-Blockchain",
+    "commit": "07d246b198b28c3f089e4b7d9265d1e0c6dbe229",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/SmartChit.sol"
+    ],
+    "test_paths": [
+      "test/SmartChit.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/SmartChit.sol": "402850baaef5db5d37f47e7705bbbde14730ab1b32093ef40af7011ae7bc9bae",
+      "test/SmartChit.test.js": "e229444cff9dcce512d11540bc95c09bea2bd50289a1d44ecefa887db6bf02b5"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Chit fund (rotating savings) with a reverse/discount auction for the monthly pot: up to 5 members join, pay a fixed monthly amount, once all paid a timed auction opens where members bid a discount, endAuction picks the highest-discount bidder who receives pot minus discount and the discount is shared as dividends to other members, then payments reset for next month. Primary 184 lines; 27 it blocks incl. reverts and time travel. Local run on frozen HH env: 27/27 pass, 95.8% stmts. No imports. Licence file LICENSE (MIT). History: 21 commits all 2026-09-20 (single day, hackathon clean-up) -> DOUBTFUL. Domain could alternatively be labelled crowdfunding/payments.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-30T08:14:04.383032+00:00"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "file-registry--salim-lakhal",
+  "domain": "registry",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "FileRegistry.sol",
+    "AccessNFT.sol",
+    "Groth16Verifier.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/salim-lakhal/zkp-decentralized-storage",
+    "commit": "3f137fcbbfdb44fb5d8d79bb2068b14c683920c2",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/FileRegistry.sol",
+      "contracts/AccessNFT.sol",
+      "contracts/Groth16Verifier.sol"
+    ],
+    "test_paths": [
+      "test/contracts/FileRegistry.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/FileRegistry.sol": "56e5b65b56619eb1b00c31162eddbd94c79e0ff2d5527279f187b5c71b18380b",
+      "contracts/AccessNFT.sol": "38a684384bae25311ff7f474571589064510f835888dfa90bdb4ea4e613098ea",
+      "contracts/Groth16Verifier.sol": "7b7d8d9141c1d6f0520a6427acaa7874a0b6a6f2e2352354441b3613a43fa5a0",
+      "test/contracts/FileRegistry.test.js": "b8f2523e6a6e96edb8d14170efd909f74a031ed6a851134f3e25878f4b3fe7a4"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "FileRegistry.test.js",
+      "upstream_path": "test/contracts/FileRegistry.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "File registry with NFT-gated access and Groth16 verifier (generated verifier code in closure); 58 commits, several authors. Primary 123 non-blank lines, closure 320 lines/3 files; 41 its, 57 expects; pragma 0.8.24.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:05.361882+00:00"
+}

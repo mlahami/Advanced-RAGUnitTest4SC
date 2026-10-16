@@ -1,0 +1,67 @@
+{
+  "id": "rag-v2.NFTStaking",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "NFTStaking",
+  "chunk_ids": [
+    4881,
+    1075,
+    5013,
+    5006,
+    2249,
+    4885,
+    4973,
+    2246
+  ],
+  "context_sha256": "9f9b7b746373b142893b2bc3632f9ae02966485f9e793ba76b413f395357d1bf",
+  "ratings": [
+    {
+      "chunk_id": 4881,
+      "rating": 1,
+      "reason": "Shows generic deployment and balance checks, but tests ERC721 minting not present in NFTStaking; only useful as a basic pattern."
+    },
+    {
+      "chunk_id": 1075,
+      "rating": 1,
+      "reason": "Shows revert assertion pattern for disallowed actions, which can be adapted for NFTStaking’s access‑control checks, though the specific buy logic isn’t relevant."
+    },
+    {
+      "chunk_id": 5013,
+      "rating": 0,
+      "reason": "Tests NFT minting auto‑increment, unrelated to staking, rewards or access control; no applicable pattern for NFTStaking."
+    },
+    {
+      "chunk_id": 5006,
+      "rating": 1,
+      "reason": "Shows generic deployment, role setup, minting and balance checks, but none of the staking, reward, or claim logic applies to NFTStaking."
+    },
+    {
+      "chunk_id": 2249,
+      "rating": 2,
+      "reason": "Tests double‑staking revert, matching NFTStaking’s require against already‑staked tokens; setup and assertions can be reused."
+    },
+    {
+      "chunk_id": 4885,
+      "rating": 0,
+      "reason": "Test checks ETH collection and owner withdrawal, unrelated to staking, rewards, or token staking logic; no applicable pattern."
+    },
+    {
+      "chunk_id": 4973,
+      "rating": 1,
+      "reason": "Shows generic deployment and role setup pattern, but tests minting behavior unrelated to staking functions of NFTStaking."
+    },
+    {
+      "chunk_id": 2246,
+      "rating": 1,
+      "reason": "Shows generic NFT staking pattern and state assertions, but uses different contract API and extra registry, not directly reusable."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 23199,
+    "completion_tokens": 893,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 141.4,
+  "evaluated_utc": "2026-10-13T07:33:48.402445+00:00"
+}

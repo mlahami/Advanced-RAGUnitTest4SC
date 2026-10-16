@@ -1,0 +1,96 @@
+{
+  "pair": "local-erc20-bridge--0xmdrakib",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T16:03:46.209327+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/LocalERC20Bridge.sol": "c767d3061787253173ab8e5ce6e812f2b421be9739d2d7a7051d30cab60af61f",
+    "contracts/LocalNativeBridge.sol": "7bc60a7e58bf0d11074f080ab212d96f8edac7275afb0f375692daaf4cdb03d5",
+    "contracts/MintableERC20.sol": "536c649a3474cd12e0b764e14f2e2681d1c017e2bab4d7d0a13bd021b9f9d899",
+    "LICENSE": "e2c34be1b7000b725c0ffb3c0103e73b7d6e1fcc46fa3ba3a25de37fbfb391c7",
+    "manifest.json": "d74ddc362629a06b2768fbbefe53c0e0bf33203b33e582533418a8dbf5ce7ec0",
+    "test/bridge.test.js": "2df069ea09e182734d98caefb96abd084b9f0cc2d28f4640f6b2b32a81ee8001"
+  },
+  "pair_sha256": "71db93ead48e6b8b1176f22ca8331ba304bda72ae49be59feb28d5161b69b3a8",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MintableERC20.sol",
+        "reference": "Token.sol",
+        "structural": 0.267,
+        "signatures": 0.333,
+        "min_functions": 3
+      },
+      {
+        "contract": "LocalNativeBridge.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.257,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "LocalERC20Bridge.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.256,
+        "signatures": 0.056,
+        "min_functions": 9
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.51,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.98,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "LocalERC20Bridge.sol": {
+          "statements": 84.0,
+          "branches": 65.91,
+          "functions": 77.78,
+          "lines": 84.0
+        },
+        "LocalNativeBridge.sol": {
+          "statements": 63.33,
+          "branches": 50.0,
+          "functions": 54.55,
+          "lines": 62.07
+        },
+        "MintableERC20.sol": {
+          "statements": 91.67,
+          "branches": 44.44,
+          "functions": 83.33,
+          "lines": 91.67
+        }
+      }
+    }
+  },
+  "accepted": true
+}

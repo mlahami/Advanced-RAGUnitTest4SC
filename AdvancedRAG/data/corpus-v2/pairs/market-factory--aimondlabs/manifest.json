@@ -1,0 +1,86 @@
+{
+  "id": "market-factory--aimondlabs",
+  "domain": "prediction-market",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "MarketFactory.sol",
+    "ICTFExchange.sol",
+    "IConditionalTokens.sol",
+    "ConditionalTokens.sol",
+    "MockUSDC.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/AimondLabs/nostra-contracts",
+    "commit": "75a1ed0b75610fae1a857fc78555e22e1e8db53e",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/contracts/contracts/core/MarketFactory.sol",
+      "packages/contracts/contracts/interfaces/ICTFExchange.sol",
+      "packages/contracts/contracts/interfaces/IConditionalTokens.sol",
+      "packages/contracts/contracts/mocks/ConditionalTokens.sol",
+      "packages/contracts/contracts/mocks/MockUSDC.sol"
+    ],
+    "test_paths": [
+      "packages/contracts/test/unit/MarketFactory.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "packages/contracts/contracts/core/MarketFactory.sol": "dc9c582aaaeb1d1ebe26d16c3d3929f15e6508cadcb9ad13fe392daefa1e20f1",
+      "packages/contracts/contracts/interfaces/ICTFExchange.sol": "5e6c1e7a067583b8200441f6c397db3b539763129346f1ac84c246823c5ca242",
+      "packages/contracts/contracts/interfaces/IConditionalTokens.sol": "effceeaacba9c5b8a2fe87400448bfc34baf114ded3502e958f5bb2c8495751c",
+      "packages/contracts/contracts/mocks/ConditionalTokens.sol": "bc556d7bdaac9e412ce08a85cc804c3d183aa472157290a54de57b055d69c400",
+      "packages/contracts/contracts/mocks/MockUSDC.sol": "74a6f5fbcbbc952aeec3ba71d893d6cf262ca401c6dd6c82899d7ee7c026e710",
+      "packages/contracts/test/unit/MarketFactory.test.ts": "d816947ad34cbed277db00bb54a4e53898ba1313e14bcdaa3dbe1845a36b52d6"
+    }
+  },
+  "transformations": [
+    {
+      "file": "MarketFactory.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IConditionalTokens.sol",
+      "after": "./IConditionalTokens.sol"
+    },
+    {
+      "file": "MarketFactory.sol",
+      "kind": "import-path",
+      "before": "../interfaces/ICTFExchange.sol",
+      "after": "./ICTFExchange.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "MarketFactory.test.js",
+      "upstream_path": "packages/contracts/test/unit/MarketFactory.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "MarketFactory.test.js",
+      "upstream_path": "packages/contracts/test/unit/MarketFactory.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../../typechain-types",
+      "names": [
+        "MarketFactory"
+      ],
+      "file": "MarketFactory.test.js",
+      "upstream_path": "packages/contracts/test/unit/MarketFactory.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../../typechain-types",
+      "names": [
+        "IConditionalTokens"
+      ],
+      "file": "MarketFactory.test.js",
+      "upstream_path": "packages/contracts/test/unit/MarketFactory.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 289 lines, closure 822 lines, 5 files; 27 it blocks; history: 32 commits 2025-10-12..2026-01-15",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:29:56.126385+00:00"
+}

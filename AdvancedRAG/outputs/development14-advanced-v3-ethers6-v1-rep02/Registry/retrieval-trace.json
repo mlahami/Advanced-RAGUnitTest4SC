@@ -1,0 +1,188 @@
+{
+  "target_functions": [
+    {
+      "target_function": "set",
+      "corpus_functions": [
+        "8bb2dc4df02f939ff9639e1d",
+        "e33306cda20291dfb0b336ac",
+        "a03a61f0009a00f80d2f6cf3",
+        "a9bfb0204b608afaf759634a",
+        "c515800576c0bb4d48f6dd50",
+        "71d4c8ccc32c3ad6e73c06a7",
+        "61d09206984b09d67f3fa35b",
+        "46054dbd24a38121b56f6a1d"
+      ],
+      "candidate_tests": [
+        "22d6192683633bc27944e40f",
+        "5ce08550625b2c62dd057878",
+        "94312d54466ebc8b245002d1",
+        "34af67fe33b13cd034ee23d0",
+        "9bdf39e17c7168a2ac132af4",
+        "6fa57ccf60b2c87c9e4e804a",
+        "e64c1792b32a648b617c5d7e",
+        "e3660ecc15aad71e06d44425",
+        "2797c74234c1cc2f4ae7e1a2",
+        "ee49a47a0e7e01b67587a9ec"
+      ]
+    },
+    {
+      "target_function": "get",
+      "corpus_functions": [
+        "e4044431f0625841b97e64ad",
+        "a1bb44e979878ef6c1f766db",
+        "cd6f71677b4e448ce4e96559",
+        "041caa202bf1ed2570e9cee9",
+        "e30ca339ac40df8ce9a6d2d8",
+        "6d2caf967879c9ee8be5a2e2",
+        "23fa1646b695f18bdb51b3d2",
+        "d6a3d9e4e4f6defb08a4ac97"
+      ],
+      "candidate_tests": [
+        "5ce08550625b2c62dd057878",
+        "34af67fe33b13cd034ee23d0",
+        "44929a0aff17f41928a0a02b",
+        "2c489ae1999b5add2cb8afb1",
+        "5332067b8c2fbe111212cc73",
+        "79b750211e6d083ceebf0324",
+        "f9d39bc00ccf558e4aac14ba",
+        "e3bc3d20e8c18f642dbc0779"
+      ]
+    },
+    {
+      "target_function": "remove",
+      "corpus_functions": [
+        "7b485bac09ef9379a7da510e",
+        "337cfedd566b517de35205ff",
+        "e95795a7d596fec0a41fc865",
+        "e4639a0a70b3d846e34bb544",
+        "7a61089b76d4633100d2f493",
+        "9665ef4450dba69c7b634034",
+        "58322eee94941dd72fbc8d60",
+        "d3e5997dd855362cccfaebb6"
+      ],
+      "candidate_tests": [
+        "c188cf80d1320b4623a3997f",
+        "046aca67b3239661204aed61",
+        "4e29bc11b94ecb5c49113dcb",
+        "f37aa861e6487087adc48b7c",
+        "e0186f0db0711bcd38fc1cda",
+        "0f4ed2e801367fd9b01fe688",
+        "8b635ca6991dbdadd76fdf67",
+        "343139ce4e1bd1dbdaf83aec",
+        "07156ee0116140fdd38ea26e",
+        "d77706ce377426fb2e8c1e08",
+        "d8f0da81b74512725bcf238d"
+      ]
+    }
+  ],
+  "selected": [
+    4628,
+    4626,
+    5554,
+    4630,
+    4629,
+    5555,
+    4320,
+    4078,
+    4859,
+    4319
+  ],
+  "context_chars": 12232,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "Registry",
+  "retrieval_seconds": 2.0699079000623897,
+  "hits": [
+    {
+      "chunk_id": 4628,
+      "test_id": "22d6192683633bc27944e40f",
+      "pair": "msmeidentity--aryan-chugh",
+      "domain_group": "registries-identity",
+      "name": "Should not allow unauthorized address to set data",
+      "via_function": "8bb2dc4df02f939ff9639e1d",
+      "chars": 1059
+    },
+    {
+      "chunk_id": 4626,
+      "test_id": "5ce08550625b2c62dd057878",
+      "pair": "msmeidentity--aryan-chugh",
+      "domain_group": "registries-identity",
+      "name": "Should allow owner to set data",
+      "via_function": "e4044431f0625841b97e64ad",
+      "chars": 1131
+    },
+    {
+      "chunk_id": 5554,
+      "test_id": "c188cf80d1320b4623a3997f",
+      "pair": "product-passport--ahmed1av",
+      "domain_group": "supply-chain",
+      "name": "Should allow owner to remove manufacturer",
+      "via_function": "7b485bac09ef9379a7da510e",
+      "chars": 1298
+    },
+    {
+      "chunk_id": 4630,
+      "test_id": "94312d54466ebc8b245002d1",
+      "pair": "msmeidentity--aryan-chugh",
+      "domain_group": "registries-identity",
+      "name": "Should revert batch setting with mismatched lengths",
+      "via_function": "e33306cda20291dfb0b336ac",
+      "chars": 1125
+    },
+    {
+      "chunk_id": 4629,
+      "test_id": "34af67fe33b13cd034ee23d0",
+      "pair": "msmeidentity--aryan-chugh",
+      "domain_group": "registries-identity",
+      "name": "Should allow batch data setting",
+      "via_function": "e4044431f0625841b97e64ad",
+      "chars": 1338
+    },
+    {
+      "chunk_id": 5555,
+      "test_id": "046aca67b3239661204aed61",
+      "pair": "product-passport--ahmed1av",
+      "domain_group": "supply-chain",
+      "name": "Should not allow non-owner to remove manufacturer",
+      "via_function": "7b485bac09ef9379a7da510e",
+      "chars": 1158
+    },
+    {
+      "chunk_id": 4320,
+      "test_id": "9bdf39e17c7168a2ac132af4",
+      "pair": "marketplace--tejashree-likhar",
+      "domain_group": "nft-marketplace",
+      "name": "rejects listing with zero price or empty title",
+      "via_function": "c515800576c0bb4d48f6dd50",
+      "chars": 888
+    },
+    {
+      "chunk_id": 4078,
+      "test_id": "44929a0aff17f41928a0a02b",
+      "pair": "loan-registry--quantsingularity",
+      "domain_group": "lending-collateral",
+      "name": "Should record a funded loan under the real borrower/lender, not the operator",
+      "via_function": "6d2caf967879c9ee8be5a2e2",
+      "chars": 1738
+    },
+    {
+      "chunk_id": 4859,
+      "test_id": "4e29bc11b94ecb5c49113dcb",
+      "pair": "my-forwarder--hlibbc",
+      "domain_group": "relayer-meta-transactions",
+      "name": "should revert when trying to remove zero address from whitelist",
+      "via_function": "337cfedd566b517de35205ff",
+      "chars": 1325
+    },
+    {
+      "chunk_id": 4319,
+      "test_id": "6fa57ccf60b2c87c9e4e804a",
+      "pair": "marketplace--tejashree-likhar",
+      "domain_group": "nft-marketplace",
+      "name": "lists an item with correct details",
+      "via_function": "c515800576c0bb4d48f6dd50",
+      "chars": 1172
+    }
+  ]
+}

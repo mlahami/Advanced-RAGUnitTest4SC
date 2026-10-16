@@ -1,0 +1,199 @@
+{
+  "target_functions": [
+    {
+      "target_function": "setRoyalty",
+      "corpus_functions": [
+        "b09dd6ddf8eb52b1abdf29f1",
+        "3c863d3307725ccebc9dc33d",
+        "1eabe31f90f500d9bd306c5a",
+        "e93747e7b11a3d0b11c69cb8",
+        "7f8537fb6ac8817a7c86800b",
+        "b39229f35886fbf41817bb0b",
+        "88cd378e92aab2ac0a534d3e",
+        "a152d6a183952e057b8bf720"
+      ],
+      "candidate_tests": [
+        "2a85bceeabd8e5f53f1a2767",
+        "68501c9c9fb19a8b127fc060",
+        "4635431f089537c18e0f652d",
+        "3b3795e2d6fae5b980c18d2c",
+        "0d56f160ea8b66ecd6de55cc",
+        "486aae411ff276d44559e985",
+        "57363e224e7e00c10869116b",
+        "f5ea9fcc447f8da6a0406a63",
+        "9a69ae48519f023bb88c522b",
+        "a2e48a0fcfe2449ab15259fb",
+        "608f6bf88f379063954e2fef"
+      ]
+    },
+    {
+      "target_function": "list",
+      "corpus_functions": [
+        "864fd5a2cad92052fd4f2182",
+        "2feb3602c23f61ec159859da",
+        "d3ab5a1eeb03c3f30aba9753",
+        "f6b3b7bc36a0da173d8555e9",
+        "f461962c9cd4fb7bc737c135",
+        "3b21a25d5b57faae0360a847",
+        "754f4aec5d821e058bd14f29",
+        "59637e6421cceb339006a5e4"
+      ],
+      "candidate_tests": [
+        "e4455e367a029e8f9bd5e465",
+        "63594a05a6ae53a19a4c6d4c",
+        "c7abe7ae7b5270d3b4452c65",
+        "dcbeefd4cf477798f55a9eeb",
+        "8623aa97c09fc4b0b7e09fa7",
+        "c481288f975855010cd03438",
+        "4c55a74aed6873d7a81b0687",
+        "cd60a7b4cc005a0ede1e88dd",
+        "079374cdd9728591638e1565",
+        "8482ecd910d6becdf1a4750c",
+        "4a10acd4e9a61a548b6ec90a",
+        "3cdf6d66aed31e37cd47b75a",
+        "ea95c2a436b18f8132318eab",
+        "7ce1f8122364a8f7680c26a8",
+        "8482ecd910d6becdf1a4750c"
+      ]
+    },
+    {
+      "target_function": "buy",
+      "corpus_functions": [
+        "e0652c0bab479af0888871d5",
+        "754f4aec5d821e058bd14f29",
+        "3b21a25d5b57faae0360a847",
+        "910a627829427c9815c9570a",
+        "59637e6421cceb339006a5e4",
+        "eb16660b8e93abc02ae9d3ff",
+        "9b7dac26c3d246cc80c1ff13",
+        "12d0c6ba763ec136a90171e8"
+      ],
+      "candidate_tests": [
+        "9bfd7d53693c417ab32fed4f",
+        "22c217724f6f6620520add97",
+        "ea95c2a436b18f8132318eab",
+        "7ce1f8122364a8f7680c26a8",
+        "4a10acd4e9a61a548b6ec90a",
+        "3cdf6d66aed31e37cd47b75a",
+        "77f44f25c9487b62545e3351",
+        "8482ecd910d6becdf1a4750c",
+        "8f1a75b8acd00b5ed73eae62",
+        "4f7c57d79f5783479dcee312",
+        "f3abaeac96dc3bc181eb35c0",
+        "2d50478bf5da9334a6b208a1",
+        "ec9a6556f0174d88297fab58",
+        "154e36fee78151476058275f"
+      ]
+    }
+  ],
+  "selected": [
+    4351,
+    4296,
+    4283,
+    4352,
+    4297,
+    4284,
+    4354,
+    5072,
+    4304,
+    4353
+  ],
+  "context_chars": 14688,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "NFTMarketplace",
+  "retrieval_seconds": 3.2012245000805706,
+  "hits": [
+    {
+      "chunk_id": 4351,
+      "test_id": "2a85bceeabd8e5f53f1a2767",
+      "pair": "meta-tales-nft--anubhavick",
+      "domain_group": "nft-marketplace",
+      "name": "Should allow contract owner to set royalty",
+      "via_function": "b09dd6ddf8eb52b1abdf29f1",
+      "chars": 1518
+    },
+    {
+      "chunk_id": 4296,
+      "test_id": "e4455e367a029e8f9bd5e465",
+      "pair": "marketplace--ozgurkutlu0",
+      "domain_group": "nft-marketplace",
+      "name": "reverts when caller is not the owner",
+      "via_function": "864fd5a2cad92052fd4f2182",
+      "chars": 1079
+    },
+    {
+      "chunk_id": 4283,
+      "test_id": "9bfd7d53693c417ab32fed4f",
+      "pair": "market-nft--paul-abhirup",
+      "domain_group": "ticketing-events",
+      "name": "should allow buyer to purchase a listed ticket",
+      "via_function": "e0652c0bab479af0888871d5",
+      "chars": 2182
+    },
+    {
+      "chunk_id": 4352,
+      "test_id": "68501c9c9fb19a8b127fc060",
+      "pair": "meta-tales-nft--anubhavick",
+      "domain_group": "nft-marketplace",
+      "name": "Should reject unauthorized royalty changes",
+      "via_function": "b09dd6ddf8eb52b1abdf29f1",
+      "chars": 1408
+    },
+    {
+      "chunk_id": 4297,
+      "test_id": "63594a05a6ae53a19a4c6d4c",
+      "pair": "marketplace--ozgurkutlu0",
+      "domain_group": "nft-marketplace",
+      "name": "reverts when marketplace is not approved",
+      "via_function": "864fd5a2cad92052fd4f2182",
+      "chars": 1017
+    },
+    {
+      "chunk_id": 4284,
+      "test_id": "22c217724f6f6620520add97",
+      "pair": "market-nft--paul-abhirup",
+      "domain_group": "ticketing-events",
+      "name": "should enforce correct royalty payments on purchase",
+      "via_function": "e0652c0bab479af0888871d5",
+      "chars": 2127
+    },
+    {
+      "chunk_id": 4354,
+      "test_id": "4635431f089537c18e0f652d",
+      "pair": "meta-tales-nft--anubhavick",
+      "domain_group": "nft-marketplace",
+      "name": "Should reject unauthorized default royalty changes",
+      "via_function": "3c863d3307725ccebc9dc33d",
+      "chars": 1444
+    },
+    {
+      "chunk_id": 5072,
+      "test_id": "c7abe7ae7b5270d3b4452c65",
+      "pair": "nftmarketplace--donguillotine",
+      "domain_group": "nft-marketplace",
+      "name": "Should not allow listing by non-owners",
+      "via_function": "2feb3602c23f61ec159859da",
+      "chars": 1148
+    },
+    {
+      "chunk_id": 4304,
+      "test_id": "ea95c2a436b18f8132318eab",
+      "pair": "marketplace--ozgurkutlu0",
+      "domain_group": "nft-marketplace",
+      "name": "reverts on wrong price",
+      "via_function": "754f4aec5d821e058bd14f29",
+      "chars": 1203
+    },
+    {
+      "chunk_id": 4353,
+      "test_id": "3b3795e2d6fae5b980c18d2c",
+      "pair": "meta-tales-nft--anubhavick",
+      "domain_group": "nft-marketplace",
+      "name": "Should update default royalty (owner only)",
+      "via_function": "3c863d3307725ccebc9dc33d",
+      "chars": 1562
+    }
+  ]
+}

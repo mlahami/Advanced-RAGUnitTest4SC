@@ -1,0 +1,53 @@
+{
+  "id": "interest-rate-model--mad-uet",
+  "domain": "lending",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "InterestRateModel.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/mad-uet/DeFi-Lending-Borrowing-Demo",
+    "commit": "dbb9a50fb8caf5aa79b4e162ac566e9e6d9b5b90",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/InterestRateModel.sol"
+    ],
+    "test_paths": [
+      "test/InterestRateModel.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/InterestRateModel.sol": "232ea9041bac7b540e6a8501999c0dea49ea682509b92cfcaed451fa58e91450",
+      "test/InterestRateModel.test.ts": "8355b0c8651580f495efb0a212a1e81bf5000036c897f2b0ed5065295ad35cb8"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "InterestRateModel.test.js",
+      "upstream_path": "test/InterestRateModel.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "InterestRateModel.test.js",
+      "upstream_path": "test/InterestRateModel.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "InterestRateModel"
+      ],
+      "file": "InterestRateModel.test.js",
+      "upstream_path": "test/InterestRateModel.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 78 lines, closure 78 lines, 1 files; 16 it blocks; history: 41 commits 2025-11-19..2025-12-10",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:27:19.863638+00:00"
+}

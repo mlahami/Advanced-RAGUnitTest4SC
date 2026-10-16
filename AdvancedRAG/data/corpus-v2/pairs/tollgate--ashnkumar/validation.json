@@ -1,0 +1,89 @@
+{
+  "pair": "tollgate--ashnkumar",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T07:38:53.561616+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/RejectsPayment.sol": "82f787dd2c371fe6cbed34d900874e0ebacf763d50a689663d7dce1453269929",
+    "contracts/Tollgate.sol": "c7b41ffe2b6297ee3bd745d0f7faff5015f1b7d98e7a51e038a6195011670cd4",
+    "LICENSE": "62ac545fe70f29858421ff5793a84c55b952f6ae2bec1a6297f36a70203071fb",
+    "manifest.json": "082a77ee5a38821fe9cd4fcae94ca0ffcf194e93cccc9f3c2df91f36a62e64ef",
+    "test/Tollgate.test.js": "d69253e6f410cec8e6c8bcd9d0d0f16cf1b9d0ba5327ebcf9f7665de7c8037ac"
+  },
+  "pair_sha256": "f5a1619b3f93fc8c2a36273d47fb32b488ee9a48b3760b760c295d8cddf88439",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Tollgate.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.177,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "Tollgate.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.147,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "Tollgate.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.134,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.66,
+      "mocha": {
+        "tests": 48,
+        "passes": 48,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 11.32,
+      "mocha": {
+        "tests": 48,
+        "passes": 48,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Tollgate.sol": {
+          "statements": 100.0,
+          "branches": 82.86,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "RejectsPayment.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

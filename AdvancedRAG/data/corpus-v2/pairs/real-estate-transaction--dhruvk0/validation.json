@@ -1,0 +1,82 @@
+{
+  "pair": "real-estate-transaction--dhruvk0",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:11:43.533498+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/RealEstateTransaction.sol": "fd7d78e7d362469d69d70e0cdc7084ca593e664a79b778a5f01d4ec54768dd9c",
+    "LICENSE": "44deeefe408d3e506e586daf73bfbcd96eeb28869f2b00f1230d64438a0520df",
+    "manifest.json": "3d54efd7e21f3e945fbaae61920bcd8ac9d985d7fd4ac9a41fcf82832830e76a",
+    "test/RealEstateTransaction.js": "738bffa0dff8e9c740de12a73b2b2aa96e23e35e84a7d0be476cca57b61b8f44"
+  },
+  "pair_sha256": "c5a4f07f973ca7df6b4854180280e40314fcba715119fafa6088398da6fca537",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "RealEstateTransaction.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.17,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "RealEstateTransaction.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.168,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "RealEstateTransaction.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.16,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.86,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.31,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "RealEstateTransaction.sol": {
+          "statements": 96.43,
+          "branches": 50.0,
+          "functions": 87.5,
+          "lines": 96.43
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> FlowPaySplit.sol
+> MockUSDC.sol
+
+Compilation:
+============
+
+Compiled 13 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+-------------------|----------|----------|----------|----------|----------------|
+File               |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-------------------|----------|----------|----------|----------|----------------|
+ contracts\        |    92.45 |    63.33 |    78.95 |     94.2 |                |
+  FlowPaySplit.sol |    94.12 |    63.33 |    81.25 |    95.52 |      85,89,200 |
+  MockUSDC.sol     |       50 |      100 |    66.67 |       50 |             14 |
+-------------------|----------|----------|----------|----------|----------------|
+All files          |    92.45 |    63.33 |    78.95 |     94.2 |                |
+-------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

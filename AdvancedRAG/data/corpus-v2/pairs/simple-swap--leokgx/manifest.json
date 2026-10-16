@@ -1,0 +1,31 @@
+{
+  "id": "simple-swap--leokgx",
+  "domain": "amm-dex",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "SimpleSwap.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/LeoKGX/SimpleSwapFrontend",
+    "commit": "48c66aac2b3583ce9bf45c4ed14a70b372652006",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/SimpleSwap.sol",
+      "contracts/Token.sol"
+    ],
+    "test_paths": [
+      "test/SimpleSwap.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/SimpleSwap.sol": "0d68e91077d1b9f96a9dfa858f3875028921fb9eb8d16d1f718abc31a2959a1a",
+      "contracts/Token.sol": "6ffe061f08c4aa8337cf828e4ee5ea9ead90256d863c12bc4a9136dbbe7b47b0",
+      "test/SimpleSwap.test.js": "1bb0bb16a2d18fea93afcee3df9b3578e1092b9d35dcb5409c19ca4f34e9dc62"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "same course spec, independent implementation",
+  "imported_utc": "2026-09-27T21:50:23.268757+00:00"
+}

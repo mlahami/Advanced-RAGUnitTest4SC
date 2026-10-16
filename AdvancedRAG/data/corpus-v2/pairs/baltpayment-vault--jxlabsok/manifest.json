@@ -1,0 +1,37 @@
+{
+  "id": "baltpayment-vault--jxlabsok",
+  "domain": "yield-vault",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "BALTPaymentVault.sol",
+    "BALTPaymentsSubscriptionRegistry.sol",
+    "MockERC20.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/JXLabsOK/BALT_SmartContracts",
+    "commit": "8ba2baf185ac8e0c6df0a1c19df73494d98084b3",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/BALTPaymentVault.sol",
+      "contracts/BALTPaymentsSubscriptionRegistry.sol",
+      "contracts/mocks/MockERC20.sol"
+    ],
+    "test_paths": [
+      "test/BALTPaymentVault.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/BALTPaymentVault.sol": "8e08d6d32de5a6d5033db4f8ce2561fe613ed6c147f727cb4544409d818f950b",
+      "contracts/BALTPaymentsSubscriptionRegistry.sol": "2b8dadc82eb199df09bb014019eb848ed9350b9b960dc3a9a6d65d03a0f05220",
+      "contracts/mocks/MockERC20.sol": "3ee017b3e7fb20ba68511e1a4370869a35440763f0de9f41722c7e70e2517cab",
+      "test/BALTPaymentVault.test.js": "7b58757a0e7a7e839f7bf064d1eb4abb6cb4197b76509899dcc71088c9adf7cb"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 351 lines, closure 492 lines, 3 files; 58 it blocks; history: 39 commits 2025-06-11..2026-09-27",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:33:09.979787+00:00"
+}

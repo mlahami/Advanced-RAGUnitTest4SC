@@ -1,0 +1,79 @@
+{
+  "id": "rag-v2.Counter",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "Counter",
+  "chunk_ids": [
+    6116,
+    6360,
+    264,
+    6118,
+    5137,
+    2313,
+    5905,
+    1035,
+    7295,
+    7302
+  ],
+  "context_sha256": "97ac5ad417a69feed881c7dc3676a6d2d706eb7fb19e72c3c6e5806b8c28b745",
+  "ratings": [
+    {
+      "chunk_id": 6116,
+      "rating": 1,
+      "reason": "Shows owner‑only revert pattern applicable to Counter.reset, but tests different function behavior"
+    },
+    {
+      "chunk_id": 6360,
+      "rating": 1,
+      "reason": "Shows owner‑only access test pattern, similar to reset’s owner check, but tests different functions; useful as a template for owner restriction."
+    },
+    {
+      "chunk_id": 264,
+      "rating": 1,
+      "reason": "Shows generic fixture deployment, contract interaction, and state assertion pattern usable for Counter, but tests unrelated functionality."
+    },
+    {
+      "chunk_id": 6118,
+      "rating": 1,
+      "reason": "Shows owner‑only revert pattern similar to Counter.reset, but tests different function; only generic access‑control pattern applies."
+    },
+    {
+      "chunk_id": 5137,
+      "rating": 1,
+      "reason": "Demonstrates non‑owner revert pattern, but uses different error mechanism and function, so only a generic access‑control template applies."
+    },
+    {
+      "chunk_id": 2313,
+      "rating": 1,
+      "reason": "Shows owner‑only revert pattern useful for testing Counter.reset access control, but tests different functions and custom error type."
+    },
+    {
+      "chunk_id": 5905,
+      "rating": 0,
+      "reason": "Test targets unrelated game logic and reentrancy; no matching functions or patterns for Counter’s simple increment/decrement/reset behavior."
+    },
+    {
+      "chunk_id": 1035,
+      "rating": 1,
+      "reason": "Shows owner‑only function revert pattern, which can guide testing reset’s access control, but the specific behavior (max supply) is unrelated."
+    },
+    {
+      "chunk_id": 7295,
+      "rating": 1,
+      "reason": "Shows owner‑only revert pattern applicable to Counter.reset"
+    },
+    {
+      "chunk_id": 7302,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests unrelated function; only useful as generic revert test template."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9320,
+    "completion_tokens": 988,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 65.0,
+  "evaluated_utc": "2026-10-12T08:45:19.404191+00:00"
+}

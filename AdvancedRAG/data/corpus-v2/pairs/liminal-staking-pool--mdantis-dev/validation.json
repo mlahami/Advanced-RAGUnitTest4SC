@@ -1,0 +1,89 @@
+{
+  "pair": "liminal-staking-pool--mdantis-dev",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:14:05.037364+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/LiminalStakingPool.sol": "b30b64b2b78106e18202291aed40a0a2a9f66047c9c754226111baeec18cfe25",
+    "contracts/LiminalToken.sol": "a79aa8432cb654332e071ef431f4f7e5a7bcef8d140b91014f41c37b454e6456",
+    "LICENSE": "517f42c9c0d7603d4a6d23aec0c256d8daf5a2318e84298b1002c2bb149d9443",
+    "manifest.json": "35f25fc6a279c4a711b400bae8eda55683ff5d0cc088cab2471512f2a1c3c5fb",
+    "test/LiminalStakingPool.js": "463b5647ff29163be6c5cb0742bdd939f3c59b679c360db362f9b0ae6f379ddc"
+  },
+  "pair_sha256": "b630c9765779d200212258ad7e6fe1d16165f4f91ed04fcad18fcfdb7e74bdc0",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "LiminalStakingPool.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.219,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "LiminalStakingPool.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.195,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "LiminalStakingPool.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.187,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.67,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 13.09,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "LiminalStakingPool.sol": {
+          "statements": 86.79,
+          "branches": 57.14,
+          "functions": 81.82,
+          "lines": 88.24
+        },
+        "LiminalToken.sol": {
+          "statements": 44.44,
+          "branches": 25.0,
+          "functions": 50.0,
+          "lines": 44.44
+        }
+      }
+    }
+  },
+  "accepted": true
+}

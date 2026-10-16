@@ -1,0 +1,36 @@
+{
+  "contract": "SubscriptionService",
+  "status": "test_failures",
+  "prompt_sha256": "b1993dc250763ca310c242341cb8724b07a0514f1c57d30ff4a597aad2093d72",
+  "generation_seconds": 21.951293100020848,
+  "usage": {
+    "prompt_tokens": 12084,
+    "total_tokens": 14395,
+    "completion_tokens": 2311,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.125061099999584
+  },
+  "passed_tests": 15,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "SubscriptionService Subscription Management Should revert when payment fails",
+      "error": "Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'"
+    }
+  ],
+  "coverage": {
+    "statements": 96.55,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 96.43
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "advanced-v3.Token",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "Token",
+  "chunk_ids": [
+    2993,
+    803,
+    2996,
+    2994,
+    793,
+    2997,
+    3059,
+    3063
+  ],
+  "context_sha256": "29872d412ea1d6508e3e7dfdf73b2596f1194749e72e46e3637b2d52c805158f",
+  "ratings": [
+    {
+      "chunk_id": 2993,
+      "rating": 2,
+      "reason": "Tests basic ERC‑20 transfer behavior, matching Token.transfer and balance checks; can be reused with renamed contract and variables."
+    },
+    {
+      "chunk_id": 803,
+      "rating": 1,
+      "reason": "Shows approve‑then‑call pattern and revert assertion, but tests unrelated subscription logic; only generic approve usage is marginally reusable."
+    },
+    {
+      "chunk_id": 2996,
+      "rating": 2,
+      "reason": "Tests approve and transferFrom behavior, matching Token's functions and events; deployment and calls can be reused with renamed contract and parameters."
+    },
+    {
+      "chunk_id": 2994,
+      "rating": 2,
+      "reason": "Tests zero‑address transfer revert, matching Token.transfer’s require; setup and assertion can be reused with renamed contract and variables."
+    },
+    {
+      "chunk_id": 793,
+      "rating": 1,
+      "reason": "Shows generic approve and revert testing pattern, but the specific subscription logic isn’t present in Token contract."
+    },
+    {
+      "chunk_id": 2997,
+      "rating": 1,
+      "reason": "Tests transferFrom allowance revert pattern, but uses custom error and different revert message, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 3059,
+      "rating": 1,
+      "reason": "Shows approve‑then‑call pattern and event assertion, which can be adapted for token approvals and Transfer events, but tests unrelated stream logic."
+    },
+    {
+      "chunk_id": 3063,
+      "rating": 1,
+      "reason": "Shows generic approve usage and deployment pattern, but tests unrelated functionality; only partially applicable to token’s approve/transfer logic."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9984,
+    "completion_tokens": 807,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 69.4,
+  "evaluated_utc": "2026-10-14T18:11:12.119797+00:00"
+}

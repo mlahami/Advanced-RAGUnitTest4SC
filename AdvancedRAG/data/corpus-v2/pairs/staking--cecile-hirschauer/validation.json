@@ -1,0 +1,117 @@
+{
+  "pair": "staking--cecile-hirschauer",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:45:57.747178+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Crowdfunding.sol": "6f5488851c61884ecc8dcd396c35182c0ef497ed535c9ce522c17ec009caaae4",
+    "contracts/ICrowdfunding.sol": "3dbb6d7306a73253c90173651afb4661b5c3417077216a861cfbb37f2977eec0",
+    "contracts/IStaking.sol": "25f2b11f045ff73cd1229d74748200bd48b94f753f981a9079ffb63c4a8b56b1",
+    "contracts/LeafToken.sol": "9495553c1233d263374a6047b11c76389d7457948149abcada864056f32fce89",
+    "contracts/MockDai.sol": "124792ad027fc926e2a9699b1b218264c893ebc29a0614851bf73448b5ab3aa1",
+    "contracts/Staking.sol": "99f4fc36e05b3aab4e05009df76f6acab952af51a2dd5dcd90b26bbbd5b81bee",
+    "LICENSE": "6be7b62c0673ad06b727c14582219ed97642b0308caa6206a17d500d4158dcaf",
+    "manifest.json": "30c4aa826616095a17052c139f64eff2b2d9b467c1e1552751fb0e91740918c6",
+    "test/staking.test.js": "8bd8192abd958512d57d1d7cff446ab20d2f29264b4d6f70da9d79566f5fe2c4"
+  },
+  "pair_sha256": "7d8d9795a3f9dbe717f04f6cbdbcee040278d2d2618add93249245f5bff0a6d2",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Crowdfunding.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.275,
+        "signatures": 0.053,
+        "min_functions": 8
+      },
+      {
+        "contract": "Crowdfunding.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.239,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "Staking.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.214,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 18.15,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.24,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Staking.sol": {
+          "statements": 100.0,
+          "branches": 82.14,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Crowdfunding.sol": {
+          "statements": 30.51,
+          "branches": 14.63,
+          "functions": 33.33,
+          "lines": 30.51
+        },
+        "LeafToken.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ICrowdfunding.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IStaking.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockDai.sol": {
+          "statements": 9.09,
+          "branches": 0.0,
+          "functions": 20.0,
+          "lines": 9.09
+        }
+      }
+    }
+  },
+  "accepted": true
+}

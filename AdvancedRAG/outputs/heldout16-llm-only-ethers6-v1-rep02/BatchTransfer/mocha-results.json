@@ -1,0 +1,179 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 11,
+    "passes": 10,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-30T20:50:36.465Z",
+    "end": "2026-09-30T20:50:37.392Z",
+    "duration": 927
+  },
+  "tests": [
+    {
+      "title": "should batch send equal ETH amounts",
+      "fullTitle": "BatchTransfer ETH Batch Transfers should batch send equal ETH amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 30,
+      "err": {}
+    },
+    {
+      "title": "should revert when ETH amount is incorrect for equal batch send",
+      "fullTitle": "BatchTransfer ETH Batch Transfers should revert when ETH amount is incorrect for equal batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "Cannot mix BigInt and other types, use explicit conversions",
+        "stack": "TypeError: Cannot mix BigInt and other types, use explicit conversions\n    at Context.<anonymous> (test\\generated.test.js:62:69)\n    at processImmediate (node:internal/timers:485:21)"
+      }
+    },
+    {
+      "title": "should revert when no recipients for equal batch send",
+      "fullTitle": "BatchTransfer ETH Batch Transfers should revert when no recipients for equal batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 21,
+      "err": {}
+    },
+    {
+      "title": "should batch send variable ETH amounts",
+      "fullTitle": "BatchTransfer ETH Batch Transfers should batch send variable ETH amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "should revert when ETH amount is incorrect for variable batch send",
+      "fullTitle": "BatchTransfer ETH Batch Transfers should revert when ETH amount is incorrect for variable batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "should revert when recipients and amounts length mismatch",
+      "fullTitle": "BatchTransfer ETH Batch Transfers should revert when recipients and amounts length mismatch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "should batch send equal ERC20 amounts",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers should batch send equal ERC20 amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 51,
+      "err": {}
+    },
+    {
+      "title": "should revert when no recipients for equal ERC20 batch send",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers should revert when no recipients for equal ERC20 batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "should batch send variable ERC20 amounts",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers should batch send variable ERC20 amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 68,
+      "err": {}
+    },
+    {
+      "title": "should revert when recipients and amounts length mismatch for ERC20",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers should revert when recipients and amounts length mismatch for ERC20",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "should revert when sending ETH directly to contract",
+      "fullTitle": "BatchTransfer Reentrancy Protection should revert when sending ETH directly to contract",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "should revert when ETH amount is incorrect for equal batch send",
+      "fullTitle": "BatchTransfer ETH Batch Transfers should revert when ETH amount is incorrect for equal batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "Cannot mix BigInt and other types, use explicit conversions",
+        "stack": "TypeError: Cannot mix BigInt and other types, use explicit conversions\n    at Context.<anonymous> (test\\generated.test.js:62:69)\n    at processImmediate (node:internal/timers:485:21)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "should batch send equal ETH amounts",
+      "fullTitle": "BatchTransfer ETH Batch Transfers should batch send equal ETH amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 30,
+      "err": {}
+    },
+    {
+      "title": "should revert when no recipients for equal batch send",
+      "fullTitle": "BatchTransfer ETH Batch Transfers should revert when no recipients for equal batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 21,
+      "err": {}
+    },
+    {
+      "title": "should batch send variable ETH amounts",
+      "fullTitle": "BatchTransfer ETH Batch Transfers should batch send variable ETH amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "should revert when ETH amount is incorrect for variable batch send",
+      "fullTitle": "BatchTransfer ETH Batch Transfers should revert when ETH amount is incorrect for variable batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "should revert when recipients and amounts length mismatch",
+      "fullTitle": "BatchTransfer ETH Batch Transfers should revert when recipients and amounts length mismatch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "should batch send equal ERC20 amounts",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers should batch send equal ERC20 amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 51,
+      "err": {}
+    },
+    {
+      "title": "should revert when no recipients for equal ERC20 batch send",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers should revert when no recipients for equal ERC20 batch send",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "should batch send variable ERC20 amounts",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers should batch send variable ERC20 amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 68,
+      "err": {}
+    },
+    {
+      "title": "should revert when recipients and amounts length mismatch for ERC20",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers should revert when recipients and amounts length mismatch for ERC20",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "should revert when sending ETH directly to contract",
+      "fullTitle": "BatchTransfer Reentrancy Protection should revert when sending ETH directly to contract",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\BatchTransfer\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    }
+  ]
+}

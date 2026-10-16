@@ -1,0 +1,31 @@
+{
+  "id": "base-token--winsitoruser",
+  "domain": "erc20-token",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "BaseToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/winsitoruser/lileinstein",
+    "commit": "30d28563f96f295a3ed8fc591440cfe7c4c43433",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/BaseToken.sol"
+    ],
+    "test_paths": [
+      "test/BaseToken.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/BaseToken.sol": "2fd226ff324b7aa75ab90025dad3f8af19c0f0753a0317b578b1d1a2cec0f8d6",
+      "test/BaseToken.test.js": "da7b9bf549f05ca745a382a8e6e9cf21f70b302b464edb924995d32145f15f34"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 71 lines, closure 71 lines, 1 files; 15 it blocks; history: 6 commits 2025-11-13..2025-12-15",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:32:31.475298+00:00"
+}

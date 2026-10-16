@@ -1,0 +1,82 @@
+{
+  "pair": "loan-registry--quantsingularity",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:37:14.423381+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/LoanRegistry.sol": "8e89a7526b2a548d0492cc53a9a595a4e43575fc0339c5942d4581b3bf77e3de",
+    "LICENSE": "1fce1a5cc28d161a00c0233ad759289c48d2b4414b8a51a71e466111f40c4980",
+    "manifest.json": "0078e8655e34890533e0ed0a2bb5868c26e4b29a0579c296f9a12fced48b125f",
+    "test/LoanRegistry.test.js": "c7fb86b606c478d82380c3b0a7deb47730ca89f603dd1991ee2d72e095d931e6"
+  },
+  "pair_sha256": "2c807267d5e9d66255c7718ffc4cc0a58c941d4d3d9550d81b5b28a471dafc0d",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "LoanRegistry.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.188,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "LoanRegistry.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.176,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "LoanRegistry.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.156,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.14,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.57,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "LoanRegistry.sol": {
+          "statements": 95.24,
+          "branches": 73.81,
+          "functions": 87.5,
+          "lines": 95.24
+        }
+      }
+    }
+  },
+  "accepted": true
+}

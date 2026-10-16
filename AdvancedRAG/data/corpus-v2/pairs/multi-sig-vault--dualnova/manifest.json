@@ -1,0 +1,44 @@
+{
+  "id": "multi-sig-vault--dualnova",
+  "domain": "multisig-wallet",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "MultiSigVault.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/DualNova/tokenization-templates",
+    "commit": "fd6f5a9e0cea42b6a2f709d035cef5cde9328820",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MultiSigVault.sol"
+    ],
+    "test_paths": [
+      "test/MultiSigVault.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MultiSigVault.sol": "c17d284878bd6f758a0b339fcbd8a0f4d25332ee4c0f40814b8707d0ce6022f6",
+      "test/MultiSigVault.test.ts": "b2600a9de46646200def8313cc4fecb4cd88effc9b0f59113b8c5ee12034c8a4"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "MultiSigVault.test.js",
+      "upstream_path": "test/MultiSigVault.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "MultiSigVault.test.js",
+      "upstream_path": "test/MultiSigVault.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "M-of-N multisig vault: submit/confirm/revoke/execute, owner-set replacement via self-call, custom errors; primary 186 lines; 9 it blocks; `import type` typechain only; LICENSE (MIT); history: 1 commit 2026-05-27 - DOUBTFUL (single-commit template). Not a verbatim copy of the classic MultiSigWallet (uint64 threshold, self-call setOwners). Compiles 0.8.24 + OZ 5.0.2 no optimizer (8.1 KB).",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-30T07:36:00.676589+00:00"
+}

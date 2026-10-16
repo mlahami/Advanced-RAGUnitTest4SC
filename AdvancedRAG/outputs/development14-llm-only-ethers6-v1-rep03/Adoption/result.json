@@ -1,0 +1,36 @@
+{
+  "contract": "Adoption",
+  "status": "test_failures",
+  "prompt_sha256": "0c10df5983c210ddee595c41f9f8f2f70094b25146a4ab1aeabfbea0a702c4a0",
+  "generation_seconds": 6.922337699972559,
+  "usage": {
+    "prompt_tokens": 6888,
+    "total_tokens": 7500,
+    "completion_tokens": 612,
+    "prompt_tokens_details": {
+      "cached_tokens": 6784
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.17463459999999
+  },
+  "passed_tests": 5,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Adoption Adopt Should return the correct petId",
+      "error": "HH17: The input value cannot be normalized to a BigInt: Value {\"_type\":\"TransactionResponse\",\"accessList\":null,\"blockNumber\":5,\"blockHash\":\"0x8796741c829010e35ad226282700a2c56581f40f0bdc2e1a20786f35500c0cd5\",\"blobVersionedHashes\":null,\"chainId\":\"31337\",\"data\":\"0x8588b2c50000000000000000000000000000000000000000000000000000000000000003\",\"from\":\"0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC\",\"gasLimit\":\"1099511627775\",\"gasPrice\":\"1\",\"hash\":\"0xadfc974cf9a0825c6019d7da3791bc61fb93b0f873ba301e80253af8c0762ab7\",\"maxFeePerGas\":null,\"maxPriorityFeePerGas\":null,\"maxFeePerBlobGas\":null,\"nonce\":0,\"signature\":{\"_type\":\"signature\",\"networkV\":\"62710\",\"r\":\"0x7c447c54593984f085554c23eb5a2431feb3bf3a378c86ca38fb60c3e7a0843a\",\"s\":\"0x6e93b5ddc74cd9eaf8fb642993588e4812e2f708ffe7ddbc5190d357a44da85a\",\"v\":28},\"to\":\"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0\",\"type\":0,\"value\":\"0\"} is of type \"object\" but is not an instanceof one of the known big number object types."
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

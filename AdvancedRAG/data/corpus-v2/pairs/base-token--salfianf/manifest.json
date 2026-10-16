@@ -1,0 +1,31 @@
+{
+  "id": "base-token--salfianf",
+  "domain": "erc20-token",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "BaseToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/SalfianF/hello-base-contract",
+    "commit": "d42d584de651cf5ea8b6d21853e5e091b90b6223",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/BaseToken.sol"
+    ],
+    "test_paths": [
+      "test/test_base_token.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/BaseToken.sol": "8813bf47ff4191d9b2480b020fc0db8e0763438f1a47ab9ab033b6d8b929d2ed",
+      "test/test_base_token.js": "6dd0f5e8df11fd4a35932dbc9cc55d4e7b1c200415bf952044f82e8f2cb7da1a"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 70 lines, closure 70 lines, 1 files; 13 it blocks; history: 59 commits 2026-05-20..2026-05-21",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:34:00.774924+00:00"
+}

@@ -1,0 +1,82 @@
+{
+  "pair": "authenticator--w3hc",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:10:43.242366+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Authenticator.sol": "515158258a1e9258306183f2d2e8322a9e88e933216c5c5f2759a7ab25883ed4",
+    "LICENSE": "7e1046f3af8c69b509abbfa5333172451a74de1fb69c5c15a9d78b277150cf7b",
+    "manifest.json": "51ae81954a359786846cf0629f7c1c85f0ebbca87ebd5c71951826b8f077fe18",
+    "test/Authenticator.js": "d9a48d6fb2f2c14ca9e535d1f33fdb8d81f8711afcb90c1dcc49ff72bfcd083a"
+  },
+  "pair_sha256": "a0aa6223991eb5f60fb4e69055cee077d2fd237da971ef64d8072e0eee28d402",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Authenticator.sol",
+        "reference": "AccessControl.sol",
+        "structural": 0.136,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "Authenticator.sol",
+        "reference": "Registry.sol",
+        "structural": 0.13,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "Authenticator.sol",
+        "reference": "MetaCoin.sol",
+        "structural": 0.118,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.06,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.17,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Authenticator.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,31 @@
+{
+  "id": "subscription-payment-system--aryasingh22",
+  "domain": "subscriptions",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "SubscriptionPaymentSystem.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/AryaSingh22/SubZero-Protocol",
+    "commit": "6899b1607574abfb9222837f79a08ea9868851ce",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MockERC20.sol",
+      "contracts/SubscriptionPaymentSystem.sol"
+    ],
+    "test_paths": [
+      "test/SubscriptionPaymentSystem.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MockERC20.sol": "c617dbb83939c68ff5f2dc3c0923e37dc2a9c89bd6ab67a79a41a9bdabb04402",
+      "contracts/SubscriptionPaymentSystem.sol": "0d70806f35a6e1ccc920abf0a9fb9ee7f4b6ef7d244772138e195cb5b8387774",
+      "test/SubscriptionPaymentSystem.test.js": "a3650be24ccc9b36d6269b96bbecb8d16ddd373b334d7d288e95cb95dc2f85bf"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "recurring ERC20 billing; 75 commits; 2025",
+  "imported_utc": "2026-09-27T21:50:23.455306+00:00"
+}

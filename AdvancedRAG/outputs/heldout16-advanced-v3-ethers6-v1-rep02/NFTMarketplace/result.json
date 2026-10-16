@@ -1,0 +1,52 @@
+{
+  "contract": "NFTMarketplace",
+  "status": "test_failures",
+  "prompt_sha256": "48ce1424e59d2385ce6bc0cad2ebca53d91392349cca964d36b4ce1e3ab3cbc3",
+  "generation_seconds": 15.80250780005008,
+  "usage": {
+    "prompt_tokens": 11426,
+    "total_tokens": 13379,
+    "completion_tokens": 1953,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.636744100018404
+  },
+  "passed_tests": 7,
+  "failed_tests": 5,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "NFTMarketplace buy should buy NFT correctly with royalty",
+      "error": "expected 10000974999999999436092 to equal 10000974999999999368808."
+    },
+    {
+      "title": "NFTMarketplace buy should handle excess payment correctly",
+      "error": "expected 9997999999999999828270 to be below 9997999999999999828270."
+    },
+    {
+      "title": "NFTMarketplace buy should revert when royalty transfer fails",
+      "error": "contract runner does not support sending transactions (operation=\"sendTransaction\", code=UNSUPPORTED_OPERATION, version=6.17.0)"
+    },
+    {
+      "title": "NFTMarketplace buy should revert when seller transfer fails",
+      "error": "unsupported addressable value (argument=\"target\", value=null, code=INVALID_ARGUMENT, version=6.17.0)"
+    },
+    {
+      "title": "NFTMarketplace buy should revert when refund fails",
+      "error": "contract runner does not support sending transactions (operation=\"sendTransaction\", code=UNSUPPORTED_OPERATION, version=6.17.0)"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 77.27,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

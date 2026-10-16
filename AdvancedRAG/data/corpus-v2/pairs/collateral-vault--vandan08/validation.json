@@ -1,0 +1,103 @@
+{
+  "pair": "collateral-vault--vandan08",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:38:39.802119+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/CollateralVault.sol": "cc13780418097e2b09a31bf0c446fc14422b2eddb269dd302a9a2a81896dd587",
+    "contracts/CreditRegistry.sol": "d303125166305f7d08946fd2fad4fbb683a4b3db74d71291d9e67e332f8e6e95",
+    "contracts/ICreditRegistry.sol": "2732ef7a39f44aa43cba035448cd51b0d62be07a029b01757b4f709759930b1f",
+    "contracts/MockUSDC.sol": "4a8f193645b63172f80665751170b02e38759cbd6d6486fe85f83d4bd73d85c8",
+    "LICENSE": "623063ee43289f0442fc67320f289b50cae711da10f5267c09b14d5b8080e1be",
+    "manifest.json": "6ab2c9ebdef27e7f356f77081510a6732d74ccfa405dfc556a9da2dde6c43b7e",
+    "test/CollateralVault.test.js": "fd344daa8eab91a017b79bc362b5bbd5d0a32ffc3fc8fe53cba9846de6f4e85d"
+  },
+  "pair_sha256": "c17c08b0838cd02b13488c8ff64ef2aa67bfb6e56741313039911446767d4828",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "CollateralVault.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.296,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "CollateralVault.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.238,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "CollateralVault.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.228,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.49,
+      "mocha": {
+        "tests": 11,
+        "passes": 11,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.64,
+      "mocha": {
+        "tests": 11,
+        "passes": 11,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "CollateralVault.sol": {
+          "statements": 84.85,
+          "branches": 55.17,
+          "functions": 71.43,
+          "lines": 83.33
+        },
+        "CreditRegistry.sol": {
+          "statements": 57.14,
+          "branches": 29.17,
+          "functions": 47.06,
+          "lines": 53.12
+        },
+        "MockUSDC.sol": {
+          "statements": 50.0,
+          "branches": 50.0,
+          "functions": 50.0,
+          "lines": 50.0
+        },
+        "ICreditRegistry.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

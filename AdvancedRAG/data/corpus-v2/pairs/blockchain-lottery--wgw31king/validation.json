@@ -1,0 +1,89 @@
+{
+  "pair": "blockchain-lottery--wgw31king",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T08:14:07.610218+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/BlockchainLottery.sol": "0b39f8b98006fe9ee1da283cb37fdb52e1d4367b8e31984af7cb2f46b1f453d5",
+    "contracts/ReentrantDrawAttacker.sol": "33f3a110c7fa4f038660b28cafb9906a33403ba6e358d817a024f419ae78e2db",
+    "LICENSE": "5ca2920d4f56954100c8f365461aba7b6c6154da49734f7b2703d9275ad49d11",
+    "manifest.json": "d64721eec631f0575e5d15e0dcf7ff226cbf155808d34c8fff960e65566d8a13",
+    "test/BlockchainLottery.test.js": "9930170aa809e4f1c7a6b8791214dd8e94c8687053907098d841106747f7fc10"
+  },
+  "pair_sha256": "86027e9a9121e0bb6fbf432634dfb5569ed814b56c8dac61ab0d7df16968bb00",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "BlockchainLottery.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.13,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "BlockchainLottery.sol",
+        "reference": "BatchTransfer.sol",
+        "structural": 0.122,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "BlockchainLottery.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.117,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.46,
+      "mocha": {
+        "tests": 5,
+        "passes": 5,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.66,
+      "mocha": {
+        "tests": 5,
+        "passes": 5,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "BlockchainLottery.sol": {
+          "statements": 100.0,
+          "branches": 70.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ReentrantDrawAttacker.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

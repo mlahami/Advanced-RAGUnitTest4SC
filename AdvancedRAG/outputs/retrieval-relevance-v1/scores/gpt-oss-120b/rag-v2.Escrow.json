@@ -1,0 +1,61 @@
+{
+  "id": "rag-v2.Escrow",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "Escrow",
+  "chunk_ids": [
+    5679,
+    4425,
+    6077,
+    5415,
+    7757,
+    7758,
+    6075
+  ],
+  "context_sha256": "7ae32af7e121ae199b263d7bed341f02f24df23deb5badbb0f75bc7ef8ba78bf",
+  "ratings": [
+    {
+      "chunk_id": 5679,
+      "rating": 1,
+      "reason": "Shows escrow release flow, balance checks, and role‑based calls which map to release() in target, but uses different functions and state, so only a generic pattern."
+    },
+    {
+      "chunk_id": 4425,
+      "rating": 1,
+      "reason": "Shows role‑based access and balance transfer pattern similar to arbiter actions, but specific functions and multi‑milestone logic don’t exist in target."
+    },
+    {
+      "chunk_id": 6077,
+      "rating": 0,
+      "reason": "Test targets different escrow logic (credit/withdraw) unrelated to fund/release/refund functions; no applicable pattern for target contract."
+    },
+    {
+      "chunk_id": 5415,
+      "rating": 1,
+      "reason": "Only generic revert‑checking pattern applies; specific functions and state differ, so not directly adaptable."
+    },
+    {
+      "chunk_id": 7757,
+      "rating": 1,
+      "reason": "Only shows generic role‑based call pattern; target lacks dispute events, so test not directly reusable but illustrates access‑control testing."
+    },
+    {
+      "chunk_id": 7758,
+      "rating": 1,
+      "reason": "Shows generic access‑control revert pattern useful for testing Escrow’s authorized calls, but specific dispute functions don’t exist in target."
+    },
+    {
+      "chunk_id": 6075,
+      "rating": 1,
+      "reason": "Tests constructor zero‑address revert, which target lacks, but shows generic revert‑checking pattern useful for similar checks."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8339,
+    "completion_tokens": 837,
+    "calls": 7
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 57.8,
+  "evaluated_utc": "2026-10-12T08:47:17.876753+00:00"
+}

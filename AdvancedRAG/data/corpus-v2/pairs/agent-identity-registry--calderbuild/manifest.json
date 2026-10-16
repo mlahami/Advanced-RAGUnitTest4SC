@@ -1,0 +1,53 @@
+{
+  "id": "agent-identity-registry--calderbuild",
+  "domain": "identity-registry",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "AgentIdentityRegistry.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/calderbuild/SafeReceipt",
+    "commit": "ae78bdae89f72b9ac68370136269774d36bb7b7a",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/AgentIdentityRegistry.sol"
+    ],
+    "test_paths": [
+      "test/AgentIdentityRegistry.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/AgentIdentityRegistry.sol": "1f9dea21ecacfaa13cdb2c7cabfb977609cc54fd3cb24817620b786d297c0d52",
+      "test/AgentIdentityRegistry.test.ts": "00f52f224e1430852a732fcc5c6ae24566fe3cf7f388d4e1b24c5f13603e7fa4"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "AgentIdentityRegistry.test.js",
+      "upstream_path": "test/AgentIdentityRegistry.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "AgentIdentityRegistry.test.js",
+      "upstream_path": "test/AgentIdentityRegistry.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "AgentIdentityRegistry"
+      ],
+      "file": "AgentIdentityRegistry.test.js",
+      "upstream_path": "test/AgentIdentityRegistry.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "DOUBTFUL human authorship (flagged in search report). ERC721-based agent identity registry (register/revoke/isActive), ERC-8004 inspired. Primary 39 non-blank lines, closure 39 lines/1 files; 9 its, 16 expects; pragma ^0.8.24.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T12:07:42.023080+00:00"
+}

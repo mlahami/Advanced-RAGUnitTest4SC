@@ -1,0 +1,52 @@
+{
+  "contract": "DAOGovernor",
+  "status": "test_failures",
+  "prompt_sha256": "36af8d699c72845d411dc39925af7a69fa9006589fc7f8a0e68afbe430e87a77",
+  "generation_seconds": 24.038464199984446,
+  "usage": {
+    "prompt_tokens": 11548,
+    "total_tokens": 13998,
+    "completion_tokens": 2450,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.717492999974638
+  },
+  "passed_tests": 3,
+  "failed_tests": 5,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "DAOGovernor Proposal Creation should create a proposal and emit ProposalCreated event",
+      "error": "time is not defined"
+    },
+    {
+      "title": "DAOGovernor Voting should prevent voting before proposal is active",
+      "error": "Do not know how to serialize a BigInt"
+    },
+    {
+      "title": "DAOGovernor Voting should prevent voting after proposal has ended",
+      "error": "Do not know how to serialize a BigInt"
+    },
+    {
+      "title": "DAOGovernor Proposal Queueing \"before each\" hook for \"should queue a successful proposal\"",
+      "error": "Do not know how to serialize a BigInt"
+    },
+    {
+      "title": "DAOGovernor Proposal Execution \"before each\" hook for \"should execute a queued proposal\"",
+      "error": "Do not know how to serialize a BigInt"
+    }
+  ],
+  "coverage": {
+    "statements": 45.0,
+    "branches": 30.0,
+    "functions": 60.0,
+    "lines": 45.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

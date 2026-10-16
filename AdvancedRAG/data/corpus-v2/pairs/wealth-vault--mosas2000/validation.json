@@ -1,0 +1,96 @@
+{
+  "pair": "wealth-vault--mosas2000",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:52:37.304715+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/IWealthVault.sol": "2a513cd1dd57b634f063bc98156e4574c53ebd2935a2c01aeab6c6b1493fa5e5",
+    "contracts/MockUSDC.sol": "6cf6db3e8b55a9f8563c9d0faa2ca62b71324a1e161c653661cbb89264465e2b",
+    "contracts/WealthVault.sol": "e4d6ab72b529dfe061458802340ce991260ceedd7ab4c4a96694b6f0ca4a34ce",
+    "LICENSE": "ecae841e48b5d3a591b2231600ad3f2269bad2948d7224a7f1be280a56d9f31f",
+    "manifest.json": "448369483f3c3aba2d2ca79e6b77eaf2dc782423ca14e71af6611f20b60581e2",
+    "test/WealthVault.test.js": "e962c4ce9b573a4ca8fa0c0291e49063885f223e5b2aec5841c9a40704d2ec86"
+  },
+  "pair_sha256": "231d288e3a851a565cdc17a63234013b547f52498d87a1897652d46853916cf8",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "WealthVault.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.236,
+        "signatures": 0.154,
+        "min_functions": 7
+      },
+      {
+        "contract": "WealthVault.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.15,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "WealthVault.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.149,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.45,
+      "mocha": {
+        "tests": 18,
+        "passes": 18,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.33,
+      "mocha": {
+        "tests": 18,
+        "passes": 18,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "WealthVault.sol": {
+          "statements": 100.0,
+          "branches": 70.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IWealthVault.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockUSDC.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 66.67,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

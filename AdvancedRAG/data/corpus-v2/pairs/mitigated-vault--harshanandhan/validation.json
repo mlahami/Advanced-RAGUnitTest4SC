@@ -1,0 +1,117 @@
+{
+  "pair": "mitigated-vault--harshanandhan",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:35:22.263031+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/FlashLoanPool.sol": "21ecadda73dbc5ead3f3577a5cd14487f43fc2eadacfcbe38f61fd5019d6d5f9",
+    "contracts/LabAttacker.sol": "e5f46d61c2f711f8d19fa5e2decbc4872ed9d4451c9bd9ded2dc796bbe329d92",
+    "contracts/LabOracle.sol": "6f5f727debcd7f892aaf64ef6716d4a8cdff6832ede23c6d563805a314c68b83",
+    "contracts/MitigatedVault.sol": "393f40a834ebfea0756328d388d967fce409bff02e11b3a76a922020313ea383",
+    "contracts/MockERC20.sol": "b2f2a329fea3cc514c6c1f17bcd9615e6b22d2b4b7debd93910835e8d16a6a50",
+    "contracts/VulnerableVault.sol": "e22c405f8edb375b94994a4fc5ad1e18f16a107b3d408b0c33721dd3636024ac",
+    "LICENSE": "d58d66cb4e6b9c22beddfe85716097afaeec7c509ca4061d22c3905912e8de6b",
+    "manifest.json": "a5309871ccc9f579123ed88ddcb3d7d9874b72c63cdb468b5d5cbfb31ebec90b",
+    "test/FlashLoanRiskLab.js": "f25d0e6495a9a8d013663abf172fe3c625c4611e3653b1dad0ce66e8aff55e98"
+  },
+  "pair_sha256": "5386727464036049d093c9af3a8cc20d78dc06f453e70c05c0663963a37f6561",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MockERC20.sol",
+        "reference": "Token.sol",
+        "structural": 0.318,
+        "signatures": 0.5,
+        "min_functions": 3
+      },
+      {
+        "contract": "VulnerableVault.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.261,
+        "signatures": 0.111,
+        "min_functions": 4
+      },
+      {
+        "contract": "VulnerableVault.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.217,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.39,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.08,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MitigatedVault.sol": {
+          "statements": 76.19,
+          "branches": 47.06,
+          "functions": 63.64,
+          "lines": 82.05
+        },
+        "FlashLoanPool.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "LabAttacker.sol": {
+          "statements": 100.0,
+          "branches": 64.29,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "LabOracle.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockERC20.sol": {
+          "statements": 92.86,
+          "branches": 50.0,
+          "functions": 85.71,
+          "lines": 92.86
+        },
+        "VulnerableVault.sol": {
+          "statements": 82.35,
+          "branches": 41.67,
+          "functions": 80.0,
+          "lines": 87.5
+        }
+      }
+    }
+  },
+  "accepted": true
+}

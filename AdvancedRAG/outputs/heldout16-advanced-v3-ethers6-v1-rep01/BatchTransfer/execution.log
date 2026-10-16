@@ -1,0 +1,35 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BatchTransfer.sol
+> BenchmarkFixtures.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |    62.69 |    44.23 |    40.91 |    61.29 |                |
+  BatchTransfer.sol     |      100 |       90 |      100 |      100 |                |
+  BenchmarkFixtures.sol |    34.21 |    15.63 |    27.78 |    36.84 |... 140,141,145 |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |    62.69 |    44.23 |    40.91 |    61.29 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+Error in plugin solidity-coverage: ❌ 1 test(s) failed under coverage.
+
+For more info run Hardhat with --show-stack-traces

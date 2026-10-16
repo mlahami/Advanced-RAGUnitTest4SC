@@ -1,0 +1,89 @@
+{
+  "pair": "event-manager--donguillotine",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:13:23.602526+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/EventManager.sol": "ca83a254bcd16f1c8cc599f6b83791795ea0187c6da2df1486060c73fb4cbe33",
+    "contracts/EventNFT.sol": "d96a247a9dd4745cdc861a526131f116876b8dbe7c06628ed90855a55688b58c",
+    "LICENSE": "8c5c43219d047b47128b85c0138188b44ce72cc68491c1a45714e62a7e6835eb",
+    "manifest.json": "077b443bd7c1545e0bac5884f5944e401952a79057d4144fac276029d33948e1",
+    "test/EventManager.js": "08153bbca0cabc366976c1a2a5cf827f81c82d19b33e80fed0b358749ef2f372"
+  },
+  "pair_sha256": "b9698ce8acf5ab9bc385b76152bd779889e0bd519db3ea1aac8b166bb7fbd783",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "EventManager.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.179,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "EventManager.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.174,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "EventManager.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.172,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.82,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.84,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "EventManager.sol": {
+          "statements": 100.0,
+          "branches": 75.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "EventNFT.sol": {
+          "statements": 60.0,
+          "branches": 50.0,
+          "functions": 50.0,
+          "lines": 60.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

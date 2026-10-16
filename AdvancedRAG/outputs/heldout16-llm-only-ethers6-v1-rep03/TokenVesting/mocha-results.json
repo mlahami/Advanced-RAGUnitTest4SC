@@ -1,0 +1,279 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 16,
+    "passes": 10,
+    "pending": 0,
+    "failures": 6,
+    "start": "2026-09-30T21:01:48.127Z",
+    "end": "2026-09-30T21:01:49.561Z",
+    "duration": 1434
+  },
+  "tests": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "TokenVesting Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should set the right token address",
+      "fullTitle": "TokenVesting Deployment Should set the right token address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should create a grant with correct parameters",
+      "fullTitle": "TokenVesting Grant Creation Should create a grant with correct parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 32,
+      "err": {}
+    },
+    {
+      "title": "Should revert with zero address",
+      "fullTitle": "TokenVesting Grant Creation Should revert with zero address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 25,
+      "err": {}
+    },
+    {
+      "title": "Should revert with zero amount",
+      "fullTitle": "TokenVesting Grant Creation Should revert with zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should revert with zero duration",
+      "fullTitle": "TokenVesting Grant Creation Should revert with zero duration",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should revert when end is before cliff",
+      "fullTitle": "TokenVesting Grant Creation Should revert when end is before cliff",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should only allow owner to create grants",
+      "fullTitle": "TokenVesting Grant Creation Should only allow owner to create grants",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should revoke a grant and emit event",
+      "fullTitle": "TokenVesting Grant Revocation Should revoke a grant and emit event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 31,
+      "err": {
+        "message": "Error in \"GrantRevoked\" event: Error in the 3rd argument assertion: expected 362 to equal 1000.",
+        "stack": "AssertionError: Error in \"GrantRevoked\" event: Error in the 3rd argument assertion: expected 362 to equal 1000.\n    at Context.<anonymous> (test\\generated.test.js:95:7)"
+      }
+    },
+    {
+      "title": "Should only allow owner to revoke grants",
+      "fullTitle": "TokenVesting Grant Revocation Should only allow owner to revoke grants",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should allow claiming after cliff",
+      "fullTitle": "TokenVesting Token Claiming Should allow claiming after cliff",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 1,
+      "err": {
+        "message": "Timestamp 1790807708 is lower than the previous block's timestamp 1790807717",
+        "stack": "ProviderError: Timestamp 1790807708 is lower than the previous block's timestamp 1790807717\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:368:19)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js:116:7)"
+      }
+    },
+    {
+      "title": "Should not allow claiming before cliff",
+      "fullTitle": "TokenVesting Token Claiming Should not allow claiming before cliff",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 1,
+      "err": {
+        "message": "Timestamp 1790805708 is lower than the previous block's timestamp 1790807721",
+        "stack": "ProviderError: Timestamp 1790805708 is lower than the previous block's timestamp 1790807721\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:368:19)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js:131:7)"
+      }
+    },
+    {
+      "title": "Should not allow claiming after end",
+      "fullTitle": "TokenVesting Token Claiming Should not allow claiming after end",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "expected 641 to equal 1000.",
+        "stack": "AssertionError: expected 641 to equal 1000.\n    at Context.<anonymous> (test\\generated.test.js:142:34)"
+      }
+    },
+    {
+      "title": "Should not allow non-beneficiary to claim",
+      "fullTitle": "TokenVesting Token Claiming Should not allow non-beneficiary to claim",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)\n    at Context.<anonymous> (test\\generated.test.js:154:7)"
+      }
+    },
+    {
+      "title": "Should return correct claimable amount",
+      "fullTitle": "TokenVesting View Functions Should return correct claimable amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 1,
+      "err": {
+        "message": "Timestamp 1790805708 is lower than the previous block's timestamp 1790811316",
+        "stack": "ProviderError: Timestamp 1790805708 is lower than the previous block's timestamp 1790811316\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:368:19)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js:166:7)"
+      }
+    },
+    {
+      "title": "Should return correct grant count",
+      "fullTitle": "TokenVesting View Functions Should return correct grant count",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should revoke a grant and emit event",
+      "fullTitle": "TokenVesting Grant Revocation Should revoke a grant and emit event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 31,
+      "err": {
+        "message": "Error in \"GrantRevoked\" event: Error in the 3rd argument assertion: expected 362 to equal 1000.",
+        "stack": "AssertionError: Error in \"GrantRevoked\" event: Error in the 3rd argument assertion: expected 362 to equal 1000.\n    at Context.<anonymous> (test\\generated.test.js:95:7)"
+      }
+    },
+    {
+      "title": "Should allow claiming after cliff",
+      "fullTitle": "TokenVesting Token Claiming Should allow claiming after cliff",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 1,
+      "err": {
+        "message": "Timestamp 1790807708 is lower than the previous block's timestamp 1790807717",
+        "stack": "ProviderError: Timestamp 1790807708 is lower than the previous block's timestamp 1790807717\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:368:19)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js:116:7)"
+      }
+    },
+    {
+      "title": "Should not allow claiming before cliff",
+      "fullTitle": "TokenVesting Token Claiming Should not allow claiming before cliff",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 1,
+      "err": {
+        "message": "Timestamp 1790805708 is lower than the previous block's timestamp 1790807721",
+        "stack": "ProviderError: Timestamp 1790805708 is lower than the previous block's timestamp 1790807721\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:368:19)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js:131:7)"
+      }
+    },
+    {
+      "title": "Should not allow claiming after end",
+      "fullTitle": "TokenVesting Token Claiming Should not allow claiming after end",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "expected 641 to equal 1000.",
+        "stack": "AssertionError: expected 641 to equal 1000.\n    at Context.<anonymous> (test\\generated.test.js:142:34)"
+      }
+    },
+    {
+      "title": "Should not allow non-beneficiary to claim",
+      "fullTitle": "TokenVesting Token Claiming Should not allow non-beneficiary to claim",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)\n    at Context.<anonymous> (test\\generated.test.js:154:7)"
+      }
+    },
+    {
+      "title": "Should return correct claimable amount",
+      "fullTitle": "TokenVesting View Functions Should return correct claimable amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 1,
+      "err": {
+        "message": "Timestamp 1790805708 is lower than the previous block's timestamp 1790811316",
+        "stack": "ProviderError: Timestamp 1790805708 is lower than the previous block's timestamp 1790811316\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:368:19)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js:166:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "TokenVesting Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should set the right token address",
+      "fullTitle": "TokenVesting Deployment Should set the right token address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should create a grant with correct parameters",
+      "fullTitle": "TokenVesting Grant Creation Should create a grant with correct parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 32,
+      "err": {}
+    },
+    {
+      "title": "Should revert with zero address",
+      "fullTitle": "TokenVesting Grant Creation Should revert with zero address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 25,
+      "err": {}
+    },
+    {
+      "title": "Should revert with zero amount",
+      "fullTitle": "TokenVesting Grant Creation Should revert with zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should revert with zero duration",
+      "fullTitle": "TokenVesting Grant Creation Should revert with zero duration",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should revert when end is before cliff",
+      "fullTitle": "TokenVesting Grant Creation Should revert when end is before cliff",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should only allow owner to create grants",
+      "fullTitle": "TokenVesting Grant Creation Should only allow owner to create grants",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should only allow owner to revoke grants",
+      "fullTitle": "TokenVesting Grant Revocation Should only allow owner to revoke grants",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should return correct grant count",
+      "fullTitle": "TokenVesting View Functions Should return correct grant count",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep03\\TokenVesting\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    }
+  ]
+}

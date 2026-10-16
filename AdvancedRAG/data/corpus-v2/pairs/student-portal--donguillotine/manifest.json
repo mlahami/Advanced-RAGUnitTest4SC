@@ -1,0 +1,29 @@
+{
+  "id": "student-portal--donguillotine",
+  "domain": "registry",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "StudentPortal.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/DonGuillotine/student-portal-contract",
+    "commit": "fc6aa3a6126b3e201a1c5e6fbb343312356369cb",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/StudentPortal.sol"
+    ],
+    "test_paths": [
+      "test/StudentPortal.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/StudentPortal.sol": "28523c768756ff3c9fba0597caaf655f9b3f79f00df90654084d595e790a4a19",
+      "test/StudentPortal.js": "1321124f415124d4455ddf1563a0e053ff108f6e6bff5fdc84a588c445c97ee0"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "student records, admin-only CRUD; 20 its",
+  "imported_utc": "2026-09-27T21:50:15.213754+00:00"
+}

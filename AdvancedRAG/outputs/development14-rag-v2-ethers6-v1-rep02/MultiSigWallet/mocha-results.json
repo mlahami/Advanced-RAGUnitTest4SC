@@ -1,0 +1,335 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 20,
+    "passes": 14,
+    "pending": 0,
+    "failures": 6,
+    "start": "2026-09-30T21:24:09.504Z",
+    "end": "2026-09-30T21:24:10.716Z",
+    "duration": 1212
+  },
+  "tests": [
+    {
+      "title": "Should set the correct owners",
+      "fullTitle": "MultiSigWallet Deployment Should set the correct owners",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct required confirmations",
+      "fullTitle": "MultiSigWallet Deployment Should set the correct required confirmations",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should revert if required is zero",
+      "fullTitle": "MultiSigWallet Deployment Should revert if required is zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 24,
+      "err": {}
+    },
+    {
+      "title": "Should revert if required exceeds owners count",
+      "fullTitle": "MultiSigWallet Deployment Should revert if required exceeds owners count",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should revert if owner is zero address",
+      "fullTitle": "MultiSigWallet Deployment Should revert if owner is zero address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should revert if duplicate owners",
+      "fullTitle": "MultiSigWallet Deployment Should revert if duplicate owners",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to submit transaction",
+      "fullTitle": "MultiSigWallet submit Should allow owner to submit transaction",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 87,
+      "err": {
+        "message": "Event \"TransactionSubmitted\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"TransactionSubmitted\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:57:7)"
+      }
+    },
+    {
+      "title": "Should revert if non-owner tries to submit",
+      "fullTitle": "MultiSigWallet submit Should revert if non-owner tries to submit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "Should return correct transaction ID",
+      "fullTitle": "MultiSigWallet submit Should return correct transaction ID",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 213,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to confirm transaction",
+      "fullTitle": "MultiSigWallet confirm Should allow owner to confirm transaction",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"TransactionConfirmed\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"TransactionConfirmed\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:87:7)"
+      }
+    },
+    {
+      "title": "Should revert if non-owner tries to confirm",
+      "fullTitle": "MultiSigWallet confirm Should revert if non-owner tries to confirm",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert if owner confirms twice",
+      "fullTitle": "MultiSigWallet confirm Should revert if owner confirms twice",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should revert if transaction is already executed",
+      "fullTitle": "MultiSigWallet confirm Should revert if transaction is already executed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'transfer failed'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'transfer failed'\n    at MultiSigWallet.execute (runs/development14-rag-v2-ethers6-v1-rep02/MultiSigWallet/contracts/MultiSigWallet.sol:128)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.execute (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:104:7)"
+      }
+    },
+    {
+      "title": "Should allow owner to execute transaction with sufficient confirmations",
+      "fullTitle": "MultiSigWallet execute Should allow owner to execute transaction with sufficient confirmations",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"TransactionExecuted\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"TransactionExecuted\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:123:7)"
+      }
+    },
+    {
+      "title": "Should revert if non-owner tries to execute",
+      "fullTitle": "MultiSigWallet execute Should revert if non-owner tries to execute",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert if transaction is already executed",
+      "fullTitle": "MultiSigWallet execute Should revert if transaction is already executed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'transfer failed'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'transfer failed'\n    at MultiSigWallet.execute (runs/development14-rag-v2-ethers6-v1-rep02/MultiSigWallet/contracts/MultiSigWallet.sol:128)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.execute (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:134:7)"
+      }
+    },
+    {
+      "title": "Should revert if not enough confirmations",
+      "fullTitle": "MultiSigWallet execute Should revert if not enough confirmations",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should transfer the correct amount to the recipient",
+      "fullTitle": "MultiSigWallet execute Should transfer the correct amount to the recipient",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'transfer failed'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'transfer failed'\n    at MultiSigWallet.execute (runs/development14-rag-v2-ethers6-v1-rep02/MultiSigWallet/contracts/MultiSigWallet.sol:128)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.execute (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:145:7)"
+      }
+    },
+    {
+      "title": "Should revert if transfer fails",
+      "fullTitle": "MultiSigWallet execute Should revert if transfer fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 23,
+      "err": {}
+    },
+    {
+      "title": "Should accept ETH deposits",
+      "fullTitle": "MultiSigWallet receive Should accept ETH deposits",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should allow owner to submit transaction",
+      "fullTitle": "MultiSigWallet submit Should allow owner to submit transaction",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 87,
+      "err": {
+        "message": "Event \"TransactionSubmitted\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"TransactionSubmitted\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:57:7)"
+      }
+    },
+    {
+      "title": "Should allow owner to confirm transaction",
+      "fullTitle": "MultiSigWallet confirm Should allow owner to confirm transaction",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"TransactionConfirmed\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"TransactionConfirmed\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:87:7)"
+      }
+    },
+    {
+      "title": "Should revert if transaction is already executed",
+      "fullTitle": "MultiSigWallet confirm Should revert if transaction is already executed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'transfer failed'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'transfer failed'\n    at MultiSigWallet.execute (runs/development14-rag-v2-ethers6-v1-rep02/MultiSigWallet/contracts/MultiSigWallet.sol:128)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.execute (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:104:7)"
+      }
+    },
+    {
+      "title": "Should allow owner to execute transaction with sufficient confirmations",
+      "fullTitle": "MultiSigWallet execute Should allow owner to execute transaction with sufficient confirmations",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"TransactionExecuted\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"TransactionExecuted\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:123:7)"
+      }
+    },
+    {
+      "title": "Should revert if transaction is already executed",
+      "fullTitle": "MultiSigWallet execute Should revert if transaction is already executed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'transfer failed'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'transfer failed'\n    at MultiSigWallet.execute (runs/development14-rag-v2-ethers6-v1-rep02/MultiSigWallet/contracts/MultiSigWallet.sol:128)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.execute (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:134:7)"
+      }
+    },
+    {
+      "title": "Should transfer the correct amount to the recipient",
+      "fullTitle": "MultiSigWallet execute Should transfer the correct amount to the recipient",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'transfer failed'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'transfer failed'\n    at MultiSigWallet.execute (runs/development14-rag-v2-ethers6-v1-rep02/MultiSigWallet/contracts/MultiSigWallet.sol:128)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.execute (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:145:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct owners",
+      "fullTitle": "MultiSigWallet Deployment Should set the correct owners",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct required confirmations",
+      "fullTitle": "MultiSigWallet Deployment Should set the correct required confirmations",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should revert if required is zero",
+      "fullTitle": "MultiSigWallet Deployment Should revert if required is zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 24,
+      "err": {}
+    },
+    {
+      "title": "Should revert if required exceeds owners count",
+      "fullTitle": "MultiSigWallet Deployment Should revert if required exceeds owners count",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should revert if owner is zero address",
+      "fullTitle": "MultiSigWallet Deployment Should revert if owner is zero address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should revert if duplicate owners",
+      "fullTitle": "MultiSigWallet Deployment Should revert if duplicate owners",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should revert if non-owner tries to submit",
+      "fullTitle": "MultiSigWallet submit Should revert if non-owner tries to submit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "Should return correct transaction ID",
+      "fullTitle": "MultiSigWallet submit Should return correct transaction ID",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 213,
+      "err": {}
+    },
+    {
+      "title": "Should revert if non-owner tries to confirm",
+      "fullTitle": "MultiSigWallet confirm Should revert if non-owner tries to confirm",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert if owner confirms twice",
+      "fullTitle": "MultiSigWallet confirm Should revert if owner confirms twice",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should revert if non-owner tries to execute",
+      "fullTitle": "MultiSigWallet execute Should revert if non-owner tries to execute",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert if not enough confirmations",
+      "fullTitle": "MultiSigWallet execute Should revert if not enough confirmations",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert if transfer fails",
+      "fullTitle": "MultiSigWallet execute Should revert if transfer fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 23,
+      "err": {}
+    },
+    {
+      "title": "Should accept ETH deposits",
+      "fullTitle": "MultiSigWallet receive Should accept ETH deposits",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\MultiSigWallet\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    }
+  ]
+}

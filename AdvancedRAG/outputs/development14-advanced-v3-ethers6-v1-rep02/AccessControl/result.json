@@ -1,0 +1,44 @@
+{
+  "contract": "AccessControl",
+  "status": "test_failures",
+  "prompt_sha256": "da3e0b8462457592514b13c77454f57a3e48471659a288f9008f5abc7a41669e",
+  "generation_seconds": 7.0685133000370115,
+  "usage": {
+    "prompt_tokens": 11199,
+    "total_tokens": 12061,
+    "completion_tokens": 862,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.4706176000181586
+  },
+  "passed_tests": 7,
+  "failed_tests": 3,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "AccessControl Role Management Should allow admin to grant roles",
+      "error": "Event \"RoleGranted\" doesn't exist in the contract"
+    },
+    {
+      "title": "AccessControl Role Management Should allow admin to revoke roles",
+      "error": "Event \"RoleRevoked\" doesn't exist in the contract"
+    },
+    {
+      "title": "AccessControl Edge Cases Should handle role revocation for non-existent roles",
+      "error": "Event \"RoleRevoked\" doesn't exist in the contract"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

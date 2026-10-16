@@ -1,0 +1,51 @@
+{
+  "id": "voting--stakljar",
+  "domain": "voting",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Voting.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Stakljar/voting-system-dapp",
+    "commit": "022557e4b4d07654d92ca0d661d32a5eaab88dd7",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Voting.sol"
+    ],
+    "test_paths": [
+      "test/Voting.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Voting.sol": "01c6336011ca3735e0a60b3e898ee3d959458348fa6430969191a1362de93bf8",
+      "test/Voting.ts": "c29eebaf457f7f1955ac98103a2586c8b13521719c5ec78fc7b194470e31e5d0"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "Voting.js",
+      "upstream_path": "test/Voting.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "Voting.js",
+      "upstream_path": "test/Voting.ts"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "Voting.js",
+      "upstream_path": "test/Voting.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Candidate voting with start/end time window, tie detection and restart; basename identical to benchmark Voting - similarity check may flag. Primary 89 non-blank lines, closure 89 lines/1 files; 14 its, 14 expects; pragma ^0.8.0.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:39.970121+00:00"
+}

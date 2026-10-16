@@ -1,0 +1,82 @@
+{
+  "pair": "marketplace--tejashree-likhar",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:14:21.428643+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Marketplace.sol": "5bcf1c60b64160177f47fc765a4d335d99aa511142a5e7cfeb993329c15bc382",
+    "LICENSE": "89c62de53f86ed8ea53214a6bbfa21b0d399b01bf4a874f3271b084a3a5c8047",
+    "manifest.json": "6701494bcde52466067e11f9a41637eeb48d18af50ef61ed11ea34ce00aa0454",
+    "test/Marketplace.test.js": "ec6e779259992cedb83e7c88f8e0a7ef20c9674e2cf5993696e15c6bfae48511"
+  },
+  "pair_sha256": "eb27c8658a472bdb6638e04e7f99b9b82752617976e4dfe135b5dfa1ba7edcce",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Marketplace.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.233,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "Marketplace.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.23,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "Marketplace.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.23,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.1,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.65,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Marketplace.sol": {
+          "statements": 94.29,
+          "branches": 71.43,
+          "functions": 83.33,
+          "lines": 94.29
+        }
+      }
+    }
+  },
+  "accepted": true
+}

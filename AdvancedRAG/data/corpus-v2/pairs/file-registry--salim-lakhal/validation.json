@@ -1,0 +1,96 @@
+{
+  "pair": "file-registry--salim-lakhal",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:12:26.092983+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AccessNFT.sol": "2835bd522de7099d48880e42d9675342bffa9f21ebd568b9f660b22173bfd179",
+    "contracts/FileRegistry.sol": "e5f5c1b35c6b2a0309d82d6534b1f1846506fb6dfc960ed8479c86f2fa83ab0a",
+    "contracts/Groth16Verifier.sol": "90412244de79027ca8737312789a2cf4ae89fecf5facc6307c38e5352d4c8ee6",
+    "LICENSE": "13d6a68e4b0d3c081afe02ab01747a805dde3c86220d808d34ed84968d5307cd",
+    "manifest.json": "e99ae91c5cf8cef30c5df1f9d39f6646f5f8cbf7a24bb68c80675bbb77835b2d",
+    "test/FileRegistry.test.js": "2582d4fbcbbdee3311ab5ee08edcb08624e4979018d5f0e5d212f657d73ca7ce"
+  },
+  "pair_sha256": "2bf80bccc9e2d04f98c3890e630e0333ba3bafad9457ff10d86157dfe5a090fd",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "FileRegistry.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.198,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "FileRegistry.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.154,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "FileRegistry.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.142,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.84,
+      "mocha": {
+        "tests": 41,
+        "passes": 41,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.88,
+      "mocha": {
+        "tests": 41,
+        "passes": 41,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "FileRegistry.sol": {
+          "statements": 88.46,
+          "branches": 81.82,
+          "functions": 100.0,
+          "lines": 88.46
+        },
+        "AccessNFT.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Groth16Verifier.sol": {
+          "statements": 9.52,
+          "branches": 10.0,
+          "functions": 16.67,
+          "lines": 10.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,12 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pragma solidity ^0.8.20;
+
+import "./MintableERC20.sol";
+
+contract TokenLP_A_B is MintableERC20 {
+    constructor(
+        uint256 _initialSupply,
+        string memory _name,
+        string memory _symbol
+    ) MintableERC20(_initialSupply, _name, _symbol) {}
+}

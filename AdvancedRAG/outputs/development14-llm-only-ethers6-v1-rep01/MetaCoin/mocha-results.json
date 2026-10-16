@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 7,
+    "passes": 5,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-09-27T19:48:49.382Z",
+    "end": "2026-09-27T19:48:49.692Z",
+    "duration": 310
+  },
+  "tests": [
+    {
+      "title": "Should set the right owner balance",
+      "fullTitle": "MetaCoin Deployment Should set the right owner balance",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should set other accounts balance to zero",
+      "fullTitle": "MetaCoin Deployment Should set other accounts balance to zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should transfer tokens between accounts",
+      "fullTitle": "MetaCoin sendCoin Should transfer tokens between accounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should fail if sender doesn't have enough tokens",
+      "fullTitle": "MetaCoin sendCoin Should fail if sender doesn't have enough tokens",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:40:7)"
+      }
+    },
+    {
+      "title": "Should return false if sender doesn't have enough tokens",
+      "fullTitle": "MetaCoin sendCoin Should return false if sender doesn't have enough tokens",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 4,
+      "err": {
+        "message": "expected ContractTransactionResponse{ …(21) } to be false",
+        "stack": "AssertionError: expected ContractTransactionResponse{ …(21) } to be false\n    at Context.<anonymous> (test\\generated.test.js:46:27)"
+      }
+    },
+    {
+      "title": "Should return the correct balance",
+      "fullTitle": "MetaCoin getBalance Should return the correct balance",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should return the correct balance converted to ETH",
+      "fullTitle": "MetaCoin getBalanceInEth Should return the correct balance converted to ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should fail if sender doesn't have enough tokens",
+      "fullTitle": "MetaCoin sendCoin Should fail if sender doesn't have enough tokens",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:40:7)"
+      }
+    },
+    {
+      "title": "Should return false if sender doesn't have enough tokens",
+      "fullTitle": "MetaCoin sendCoin Should return false if sender doesn't have enough tokens",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 4,
+      "err": {
+        "message": "expected ContractTransactionResponse{ …(21) } to be false",
+        "stack": "AssertionError: expected ContractTransactionResponse{ …(21) } to be false\n    at Context.<anonymous> (test\\generated.test.js:46:27)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right owner balance",
+      "fullTitle": "MetaCoin Deployment Should set the right owner balance",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should set other accounts balance to zero",
+      "fullTitle": "MetaCoin Deployment Should set other accounts balance to zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should transfer tokens between accounts",
+      "fullTitle": "MetaCoin sendCoin Should transfer tokens between accounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should return the correct balance",
+      "fullTitle": "MetaCoin getBalance Should return the correct balance",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should return the correct balance converted to ETH",
+      "fullTitle": "MetaCoin getBalanceInEth Should return the correct balance converted to ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\MetaCoin\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    }
+  ]
+}

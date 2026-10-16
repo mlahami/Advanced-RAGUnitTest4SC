@@ -1,0 +1,105 @@
+{
+  "id": "reit-token--laprop",
+  "domain": "meta-transactions",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "ReitToken.sol",
+    "EIP3009.sol",
+    "EIP712Domain.sol",
+    "IWhiteList.sol",
+    "ECRecover.sol",
+    "EIP712.sol",
+    "WhiteList.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/LaProp/contracts",
+    "commit": "0aaf375151ace3569b42994142cad8de692ad324",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/reit/ReitToken.sol",
+      "contracts/EIP3009/EIP3009.sol",
+      "contracts/EIP3009/EIP712Domain.sol",
+      "contracts/interfaces/IWhiteList.sol",
+      "contracts/utils/ECRecover.sol",
+      "contracts/utils/EIP712.sol",
+      "contracts/white-listing/WhiteList.sol"
+    ],
+    "test_paths": [
+      "test/ReitTokenTest.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/reit/ReitToken.sol": "8ae1aa5ef33c1df893e37e47e6c76c732e977df39412a4a385954f891edb5843",
+      "contracts/EIP3009/EIP3009.sol": "45bd31453efc2a41c38ec01b46010d5258f159e94f8bbb991dbc5876bdbef2d8",
+      "contracts/EIP3009/EIP712Domain.sol": "b0d639b360a1ef430a3190db226fc1226b11aae8e133cb71dae18a537709d55f",
+      "contracts/interfaces/IWhiteList.sol": "df6715a9ee068dcdfc1f0d06934b1ff2c881cf7942958da4a98b2914e9548ea3",
+      "contracts/utils/ECRecover.sol": "45ac3fa9f52076e7bdbf36944e223ba9b434b073d900f34dd36ccc9658488586",
+      "contracts/utils/EIP712.sol": "87f453cdb69e357f700267f7e76be71b8370971b8696c89d4f3d9641946d96a0",
+      "contracts/white-listing/WhiteList.sol": "9f7063f9999080aac7de5c15169c26ef4ce64580ec5a9629b1530c89a3e9fcf7",
+      "test/ReitTokenTest.ts": "1cada74ea464b5a2660b52cc48e0f8ec9c87fa44f6bdc3c4e08dd3bb493c1783"
+    }
+  },
+  "transformations": [
+    {
+      "file": "ReitToken.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IWhiteList.sol",
+      "after": "./IWhiteList.sol"
+    },
+    {
+      "file": "ReitToken.sol",
+      "kind": "import-path",
+      "before": "../EIP3009/EIP3009.sol",
+      "after": "./EIP3009.sol"
+    },
+    {
+      "file": "EIP3009.sol",
+      "kind": "import-path",
+      "before": "../utils/EIP712.sol",
+      "after": "./EIP712.sol"
+    },
+    {
+      "file": "WhiteList.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IWhiteList.sol",
+      "after": "./IWhiteList.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "ReitTokenTest.js",
+      "upstream_path": "test/ReitTokenTest.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "ReitTokenTest.js",
+      "upstream_path": "test/ReitTokenTest.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "ethers",
+      "names": [
+        "Signer"
+      ],
+      "file": "ReitTokenTest.js",
+      "upstream_path": "test/ReitTokenTest.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "ReitToken",
+        "WhiteList"
+      ],
+      "file": "ReitTokenTest.js",
+      "upstream_path": "test/ReitTokenTest.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Whitelisted REIT token implementing EIP-3009 transferWithAuthorization (gasless signed transfers) with local EIP712/ECRecover libs; token-flavoured, borderline DeFi. Primary 151 non-blank lines, closure 611 lines/7 files; 16 its, 21 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:03:28.158684+00:00"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "weather-shield-insurance--hassanmubiru",
+  "domain": "insurance",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "WeatherShieldInsurance.sol",
+    "FlareDataConnector.sol",
+    "PolicyFactory.sol",
+    "WeatherOracle.sol",
+    "IFlareDataConnector.sol",
+    "IWeatherShieldInsurance.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/hassanmubiru/weathershield-defi",
+    "commit": "0133b3ab0d9140e69503899d187e165109ee0d53",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/WeatherShieldInsurance.sol",
+      "contracts/FlareDataConnector.sol",
+      "contracts/PolicyFactory.sol",
+      "contracts/WeatherOracle.sol",
+      "contracts/interfaces/IFlareDataConnector.sol",
+      "contracts/interfaces/IWeatherShieldInsurance.sol"
+    ],
+    "test_paths": [
+      "test/WeatherShield.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/WeatherShieldInsurance.sol": "738e53e92c2309aadc0551f1778d720ef336c08521474ce84ba71d97e13034dc",
+      "contracts/FlareDataConnector.sol": "68d2761f74226860472beae16eae109273a85d28f6c4237dd5c307b890e6ba17",
+      "contracts/PolicyFactory.sol": "e8d86b27cdaac62bec6b6ec95ff8497b010f32ec158c84b0310e098b3922b8aa",
+      "contracts/WeatherOracle.sol": "252072e55519b3fc899de3b574bf15c9f7a801c849ae6e745d706e962b40e4f7",
+      "contracts/interfaces/IFlareDataConnector.sol": "9875a59cc2b5fedb7fc3f09511555a1f813730cb57f2b149ddeda32dc46128fe",
+      "contracts/interfaces/IWeatherShieldInsurance.sol": "a1aaa15f41eeba3c8e96486b96625c8abcca4b7d291ead2e2cea54f788a03ba8",
+      "test/WeatherShield.test.js": "b50f2bfa8515d942c52132bdb6f75fab63cc8e7b1b50d7b8fa6378c78f2a116f"
+    }
+  },
+  "transformations": [
+    {
+      "file": "WeatherShieldInsurance.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IWeatherShieldInsurance.sol",
+      "after": "./IWeatherShieldInsurance.sol"
+    },
+    {
+      "file": "WeatherShieldInsurance.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IFlareDataConnector.sol",
+      "after": "./IFlareDataConnector.sol"
+    },
+    {
+      "file": "FlareDataConnector.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IFlareDataConnector.sol",
+      "after": "./IFlareDataConnector.sol"
+    },
+    {
+      "file": "PolicyFactory.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IWeatherShieldInsurance.sol",
+      "after": "./IWeatherShieldInsurance.sol"
+    },
+    {
+      "file": "WeatherOracle.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IFlareDataConnector.sol",
+      "after": "./IFlareDataConnector.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "25 commits all on 2025-11-30 (possible burst). | primary 415 lines, closure 1305 lines, 6 files; 29 it blocks; history: 25 commits 2025-11-30..2025-11-30",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:24:16.102717+00:00"
+}

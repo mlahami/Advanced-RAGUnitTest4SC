@@ -1,0 +1,82 @@
+{
+  "pair": "certi-chain-registry--amit01-developer",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:12:50.353967+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/CertiChainRegistry.sol": "1fb906c45c16b49e1f66745c0c7245f0b3afc8b5c38b1b27aea5bbe64d183e47",
+    "LICENSE": "74de30d687d662c9556a36cd80064f0f2c8f76a815d737ec74248b624111fe34",
+    "manifest.json": "8fe725447ee12a2d64b5e647862026e77726cd98f15c9b916d32f393fbb3889a",
+    "test/CertiChainRegistry.test.js": "3bc5abe0a804896049db394c6bcd905c51feff72106dce0955aeda68d5afad52"
+  },
+  "pair_sha256": "9e1582ca1d1efbafc7caeb006a9aa4bbadf92e647dcbd4472639366dd48fe737",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "CertiChainRegistry.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.221,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "CertiChainRegistry.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.176,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "CertiChainRegistry.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.171,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.92,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.33,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "CertiChainRegistry.sol": {
+          "statements": 80.0,
+          "branches": 87.5,
+          "functions": 90.0,
+          "lines": 80.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

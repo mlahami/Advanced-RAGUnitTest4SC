@@ -1,0 +1,110 @@
+{
+  "pair": "market-factory--aimondlabs",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:33:26.251683+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ConditionalTokens.sol": "e5df6eeb69767bac7296df4e0baf3cb1750b172fd8cb7a35a157f4cfff5b0674",
+    "contracts/IConditionalTokens.sol": "d61ab74d1d6d998816639b34e2e2a5f579b49ccb1d151eeb0e071b4350156d96",
+    "contracts/ICTFExchange.sol": "f497b5b84b4471d36d4df092e2fd47f833fc5a17b9d73e1ced65b08dfd5806e0",
+    "contracts/MarketFactory.sol": "98e839f80b5d5425cb64d85ba60ba2f5c00db8d0301174da35fc3da98b538376",
+    "contracts/MockUSDC.sol": "29f8a4677118e029bc1c102cd32a565dead1ffdfb219af1b9c0c972a7297652f",
+    "LICENSE": "f0f5dcf5ae8b7751c8344b70190fa7cb51aab3f2f8395e90992f9ec475a83268",
+    "manifest.json": "e5146406ee525bff10637fab8fbf558ab5110b7dcfbd59a9076cda9a4107ba91",
+    "test/MarketFactory.test.js": "2f2705ac0cdd119767b7e758412c78f95e287b44937e657798d7176397d7cbed"
+  },
+  "pair_sha256": "9bbd5542f84ebedff4989cd960e51200d3a805518cfd0b7f5470db80244ed060",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "ConditionalTokens.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.165,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "ConditionalTokens.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.158,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "ConditionalTokens.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.149,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 38.79,
+      "mocha": {
+        "tests": 27,
+        "passes": 27,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 20.6,
+      "mocha": {
+        "tests": 27,
+        "passes": 27,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MarketFactory.sol": {
+          "statements": 79.31,
+          "branches": 62.5,
+          "functions": 72.73,
+          "lines": 79.31
+        },
+        "ICTFExchange.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IConditionalTokens.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ConditionalTokens.sol": {
+          "statements": 81.82,
+          "branches": 46.15,
+          "functions": 72.73,
+          "lines": 81.82
+        },
+        "MockUSDC.sol": {
+          "statements": 50.0,
+          "branches": 0.0,
+          "functions": 50.0,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

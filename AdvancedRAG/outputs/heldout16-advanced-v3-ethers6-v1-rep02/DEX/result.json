@@ -1,0 +1,36 @@
+{
+  "contract": "DEX",
+  "status": "test_failures",
+  "prompt_sha256": "164a8b94e9f22469960748e63d49e4dd546161ad731b63eb67266dc7ed211fbd",
+  "generation_seconds": 19.29883670003619,
+  "usage": {
+    "prompt_tokens": 11773,
+    "total_tokens": 14378,
+    "completion_tokens": 2605,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.6291527999565005
+  },
+  "passed_tests": 8,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "DEX Swapping should revert when swapping with zero amount",
+      "error": "Expected transaction to be reverted with reason 'ERC20: transfer amount exceeds balance', but it didn't revert"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 83.33,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

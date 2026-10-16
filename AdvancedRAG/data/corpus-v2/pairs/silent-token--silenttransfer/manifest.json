@@ -1,0 +1,31 @@
+{
+  "id": "silent-token--silenttransfer",
+  "domain": "erc20-token",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "SilentToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/SilentTransfer/silenttransfer",
+    "commit": "ba05f19fa41d85d37b65bd32877a2b9c297d55ab",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/src/SilentToken.sol"
+    ],
+    "test_paths": [
+      "contracts/test/SilentToken.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/src/SilentToken.sol": "b19a1a5c37c68da01b17f38b37426554601db17b9d23fec02c2c0be00923ec3c",
+      "contracts/test/SilentToken.test.js": "d360e4912a23146b81a5980f0d51781e9633ff4e5d7041c55f2900197c92ae74"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 65 lines, closure 65 lines, 1 files; 6 it blocks; history: 30 commits 2026-07-09..2026-07-17",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:32:25.533677+00:00"
+}

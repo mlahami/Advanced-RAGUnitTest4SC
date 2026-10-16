@@ -1,0 +1,82 @@
+{
+  "pair": "nfticket--sowadalmughni",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:35:34.298911+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/NFTicket.sol": "ad8792bc3eee2b6cb0ad1cd5628e817157d08a8091190b43a9acb1af137ccd4e",
+    "LICENSE": "1e6e002e384f00c488e0323cf51d9cd27ed672b0e008bfed58fef0c89129b23f",
+    "manifest.json": "a9298387f162e81d72258edf6b3c954868670439e595f31eec0558921208e017",
+    "test/NFTicket.test.js": "c1c2d6060e1fc56f9f7c41e2899ebccb27fe684f925abccfbd3b62d50a30036e"
+  },
+  "pair_sha256": "dd18c48a4d083597d217cbe5df98de3a947b15a9435b2b42be2b60c8c8394057",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "NFTicket.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.165,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "NFTicket.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.164,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "NFTicket.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.131,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.5,
+      "mocha": {
+        "tests": 25,
+        "passes": 25,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.5,
+      "mocha": {
+        "tests": 25,
+        "passes": 25,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "NFTicket.sol": {
+          "statements": 75.86,
+          "branches": 72.58,
+          "functions": 75.0,
+          "lines": 75.86
+        }
+      }
+    }
+  },
+  "accepted": true
+}

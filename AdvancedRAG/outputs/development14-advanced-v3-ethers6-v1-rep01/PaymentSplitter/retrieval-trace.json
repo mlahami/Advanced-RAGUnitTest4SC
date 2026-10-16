@@ -1,0 +1,145 @@
+{
+  "target_functions": [
+    {
+      "target_function": "distribute",
+      "corpus_functions": [
+        "4dc590fded5461b9b5ce0867",
+        "e53858107eda1ff8b285a804",
+        "67c712d958f81acc31f2781f",
+        "0bd2c4892687df3c85538adc",
+        "7ae3a7ecfee5353a96bf29ce",
+        "e9ce94b19fdd4b2af92846ea",
+        "af2fd4b1e6b73bac2b4ec2c9",
+        "7ffcdbf4096d3913c276e3ac"
+      ],
+      "candidate_tests": [
+        "bde093e05fc485fc7e309243",
+        "0a06fe3eba5aaa532dcebec7",
+        "fa8dbc484695971e326741eb",
+        "1f3ee5d50c934ba2b373b3ba",
+        "93603d388622a065484ee659",
+        "c9b413920f46359884a3849a",
+        "599fe3172c2b92bc19e10129",
+        "b5b2e38c1bfe06dccbb91eef",
+        "49507155c3acf5ab541dcce6",
+        "0843dd8b209be52c54346f01",
+        "b910ba6efb3c1dd624e02ba7",
+        "5e5831452f3d1ef572a89432",
+        "cff93eb4ed3955ac4245efa2",
+        "29efe4812526143b8bec57e3",
+        "abbe3d5fd8353392bb3f1636",
+        "dbbe842d55187437790de1b7"
+      ]
+    }
+  ],
+  "selected": [
+    2432,
+    2435,
+    2433,
+    2434,
+    2791,
+    2792,
+    2049,
+    2050,
+    2424,
+    2425
+  ],
+  "context_chars": 14056,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "PaymentSplitter",
+  "retrieval_seconds": 0.9671964000444859,
+  "hits": [
+    {
+      "chunk_id": 2432,
+      "test_id": "bde093e05fc485fc7e309243",
+      "pair": "erc20-payment-splitter--mirepatel",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should distribute tokens according to shares",
+      "via_function": "4dc590fded5461b9b5ce0867",
+      "chars": 2117
+    },
+    {
+      "chunk_id": 2435,
+      "test_id": "0a06fe3eba5aaa532dcebec7",
+      "pair": "erc20-payment-splitter--mirepatel",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should revert distribute if no tokens to distribute",
+      "via_function": "4dc590fded5461b9b5ce0867",
+      "chars": 1684
+    },
+    {
+      "chunk_id": 2433,
+      "test_id": "fa8dbc484695971e326741eb",
+      "pair": "erc20-payment-splitter--mirepatel",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should deposit and distribute in one transaction",
+      "via_function": "e53858107eda1ff8b285a804",
+      "chars": 1996
+    },
+    {
+      "chunk_id": 2434,
+      "test_id": "1f3ee5d50c934ba2b373b3ba",
+      "pair": "erc20-payment-splitter--mirepatel",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should emit PaymentReceived and PaymentReleased events",
+      "via_function": "e53858107eda1ff8b285a804",
+      "chars": 2282
+    },
+    {
+      "chunk_id": 2791,
+      "test_id": "93603d388622a065484ee659",
+      "pair": "fauna--myriamchah",
+      "domain_group": "crowdfunding",
+      "name": "should revert if sender is not the Owner",
+      "via_function": "67c712d958f81acc31f2781f",
+      "chars": 832
+    },
+    {
+      "chunk_id": 2792,
+      "test_id": "c9b413920f46359884a3849a",
+      "pair": "fauna--myriamchah",
+      "domain_group": "crowdfunding",
+      "name": "should revert if votes have not ended",
+      "via_function": "67c712d958f81acc31f2781f",
+      "chars": 733
+    },
+    {
+      "chunk_id": 2049,
+      "test_id": "599fe3172c2b92bc19e10129",
+      "pair": "dividend-token--harshanandhan",
+      "domain_group": "fungible-tokens",
+      "name": "Should allow staking tokens",
+      "via_function": "0bd2c4892687df3c85538adc",
+      "chars": 1066
+    },
+    {
+      "chunk_id": 2050,
+      "test_id": "b5b2e38c1bfe06dccbb91eef",
+      "pair": "dividend-token--harshanandhan",
+      "domain_group": "fungible-tokens",
+      "name": "Should emit Staked event",
+      "via_function": "0bd2c4892687df3c85538adc",
+      "chars": 978
+    },
+    {
+      "chunk_id": 2424,
+      "test_id": "49507155c3acf5ab541dcce6",
+      "pair": "erc20-payment-splitter--mirepatel",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should emit PayeeAdded event",
+      "via_function": "7ae3a7ecfee5353a96bf29ce",
+      "chars": 1142
+    },
+    {
+      "chunk_id": 2425,
+      "test_id": "0843dd8b209be52c54346f01",
+      "pair": "erc20-payment-splitter--mirepatel",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should revert if non-owner tries to add payee",
+      "via_function": "7ae3a7ecfee5353a96bf29ce",
+      "chars": 1226
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "pair": "game-treasury--mdantis-dev",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:13:35.439491+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/GameTreasury.sol": "047cdebbd799f92570a9c487451d84a0055c626ade7e7953aa6225668524e229",
+    "contracts/LiminalToken.sol": "a79aa8432cb654332e071ef431f4f7e5a7bcef8d140b91014f41c37b454e6456",
+    "LICENSE": "517f42c9c0d7603d4a6d23aec0c256d8daf5a2318e84298b1002c2bb149d9443",
+    "manifest.json": "4e8c995e5443dce222993a0ad2c350e91194472be654560a21e67cf6320ca0b6",
+    "test/GameTreasury.js": "effc30a148252ba417696153178c1cc64672b13b6d61a28b33e224e0bccf2d62"
+  },
+  "pair_sha256": "82d6beb59e28aae73b5f0d6ae10769f97433597d87b9a7dcdf909ab4efc90f6d",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "GameTreasury.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.24,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "GameTreasury.sol",
+        "reference": "DEX.sol",
+        "structural": 0.184,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "GameTreasury.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.174,
+        "signatures": 0.0,
+        "min_functions": 9
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.4,
+      "mocha": {
+        "tests": 11,
+        "passes": 11,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.14,
+      "mocha": {
+        "tests": 11,
+        "passes": 11,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "GameTreasury.sol": {
+          "statements": 93.48,
+          "branches": 58.62,
+          "functions": 85.71,
+          "lines": 95.45
+        },
+        "LiminalToken.sol": {
+          "statements": 44.44,
+          "branches": 25.0,
+          "functions": 50.0,
+          "lines": 44.44
+        }
+      }
+    }
+  },
+  "accepted": true
+}

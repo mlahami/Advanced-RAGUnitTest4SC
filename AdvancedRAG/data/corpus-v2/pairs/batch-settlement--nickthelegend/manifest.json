@@ -1,0 +1,34 @@
+{
+  "id": "batch-settlement--nickthelegend",
+  "domain": "rate-limiting",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "BatchSettlement.sol",
+    "MockUSDC.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/nickthelegend/polaris-monad",
+    "commit": "03106bac2527c581de297bedc90cea34c0d47f79",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/contracts/contracts/BatchSettlement.sol",
+      "packages/contracts/contracts/MockUSDC.sol"
+    ],
+    "test_paths": [
+      "packages/contracts/test/BatchSettlement.guards.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "packages/contracts/contracts/BatchSettlement.sol": "e7974ab57671d7211b8f9e16c59edbf606196b2a8f13fab47157bee0d465d69c",
+      "packages/contracts/contracts/MockUSDC.sol": "07673f0d0e1a8008f4ca7fb2996196fbd9a24db3674063f041a4f69c91f10cb1",
+      "packages/contracts/test/BatchSettlement.guards.test.js": "a3bb202b342e14e882665ab7997b1bdb5e21cc2471e5f6076a6c29e847e88898"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 159 lines, closure 195 lines, 2 files; 14 it blocks; history: 568 commits 2026-09-26..2026-09-28",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:25:10.779049+00:00"
+}

@@ -1,0 +1,171 @@
+{
+  "base_trace": null,
+  "pivot_steps": [
+    {
+      "retrieved": "3d567cef90e2a99f778f120f",
+      "type": "test_case",
+      "delivered": [
+        "3d567cef90e2a99f778f120f"
+      ]
+    },
+    {
+      "retrieved": "5fffafff585b4de7fbb02e4a",
+      "type": "function",
+      "delivered": [
+        "a20148eefc9755d80963b5a3",
+        "cf0a9414e4946f90e6aaac00"
+      ]
+    },
+    {
+      "retrieved": "05b4ba64bee9c7699802fec2",
+      "type": "test_case",
+      "delivered": [
+        "05b4ba64bee9c7699802fec2"
+      ]
+    },
+    {
+      "retrieved": "0c9a0f563041c40605916252",
+      "type": "test_case",
+      "delivered": [
+        "0c9a0f563041c40605916252"
+      ]
+    },
+    {
+      "retrieved": "4b66de97c359b7976b94a7dd",
+      "type": "function",
+      "delivered": [
+        "4df7caa467e49b33356e79ac",
+        "75d6e05f28cb185dd30a6e7b"
+      ]
+    },
+    {
+      "retrieved": "9e16a7296209eaaed2353afb",
+      "type": "test_case",
+      "delivered": [
+        "9e16a7296209eaaed2353afb"
+      ]
+    },
+    {
+      "retrieved": "18dbbf625f7f20265b7c7e62",
+      "type": "test_case",
+      "delivered": [
+        "18dbbf625f7f20265b7c7e62"
+      ]
+    },
+    {
+      "retrieved": "59f34c10cd3aa3ee8e80829e",
+      "type": "test_case",
+      "delivered": [
+        "59f34c10cd3aa3ee8e80829e"
+      ]
+    }
+  ],
+  "selected": [
+    7368,
+    1838,
+    1839,
+    1834,
+    7506,
+    7453,
+    7454,
+    7457,
+    1848,
+    1847
+  ],
+  "context_chars": 13403,
+  "per_function": 2,
+  "contract": "DAOGovernor",
+  "retrieval_seconds": 0.24641220003832132,
+  "hits": [
+    {
+      "chunk_id": 7368,
+      "test_id": "3d567cef90e2a99f778f120f",
+      "pair": "vote--abidoyesimze",
+      "domain_group": "voting-governance",
+      "name": "Should check if address has voted",
+      "via_function": null,
+      "chars": 1657
+    },
+    {
+      "chunk_id": 1838,
+      "test_id": "a20148eefc9755d80963b5a3",
+      "pair": "daogovernance--mohin-io",
+      "domain_group": "voting-governance",
+      "name": "Should allow users to vote in favor",
+      "via_function": "5fffafff585b4de7fbb02e4a",
+      "chars": 1530
+    },
+    {
+      "chunk_id": 1839,
+      "test_id": "cf0a9414e4946f90e6aaac00",
+      "pair": "daogovernance--mohin-io",
+      "domain_group": "voting-governance",
+      "name": "Should allow users to vote against",
+      "via_function": "5fffafff585b4de7fbb02e4a",
+      "chars": 1530
+    },
+    {
+      "chunk_id": 1834,
+      "test_id": "05b4ba64bee9c7699802fec2",
+      "pair": "daogovernance--mohin-io",
+      "domain_group": "voting-governance",
+      "name": "Should revert if user has insufficient voting power",
+      "via_function": null,
+      "chars": 1295
+    },
+    {
+      "chunk_id": 7506,
+      "test_id": "0c9a0f563041c40605916252",
+      "pair": "voting-core--axysar",
+      "domain_group": "voting-governance",
+      "name": "should pause and unpause voting",
+      "via_function": null,
+      "chars": 1293
+    },
+    {
+      "chunk_id": 7453,
+      "test_id": "4df7caa467e49b33356e79ac",
+      "pair": "voting--darshan36911",
+      "domain_group": "voting-governance",
+      "name": "emits a Voted event",
+      "via_function": "4b66de97c359b7976b94a7dd",
+      "chars": 887
+    },
+    {
+      "chunk_id": 7454,
+      "test_id": "75d6e05f28cb185dd30a6e7b",
+      "pair": "voting--darshan36911",
+      "domain_group": "voting-governance",
+      "name": "prevents the same address from voting twice",
+      "via_function": "4b66de97c359b7976b94a7dd",
+      "chars": 944
+    },
+    {
+      "chunk_id": 7457,
+      "test_id": "9e16a7296209eaaed2353afb",
+      "pair": "voting--darshan36911",
+      "domain_group": "voting-governance",
+      "name": "rejects votes after the deadline has passed",
+      "via_function": null,
+      "chars": 1065
+    },
+    {
+      "chunk_id": 1848,
+      "test_id": "18dbbf625f7f20265b7c7e62",
+      "pair": "daogovernance--mohin-io",
+      "domain_group": "voting-governance",
+      "name": "Should revert execution before voting period ends",
+      "via_function": null,
+      "chars": 1519
+    },
+    {
+      "chunk_id": 1847,
+      "test_id": "59f34c10cd3aa3ee8e80829e",
+      "pair": "daogovernance--mohin-io",
+      "domain_group": "voting-governance",
+      "name": "Should revert if proposal doesn't have majority support",
+      "via_function": null,
+      "chars": 1683
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "english-auction--dexauction",
+  "domain": "auction",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "EnglishAuction.sol",
+    "SKLERC721.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/DexAuction/non-fractionalised-rwa-auction",
+    "commit": "a359009a10713d7ee2fb7209f44f9f4fa584f7c0",
+    "license": "Apache-2.0",
+    "contract_paths": [
+      "contracts/EnglishAuction.sol",
+      "contracts/SKLERC721.sol"
+    ],
+    "test_paths": [
+      "test/EnglishAuctionTest.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/EnglishAuction.sol": "669b6386cde6ae7edf42ce7d5acba7e819fd6623266a387134462d78f188d5ee",
+      "contracts/SKLERC721.sol": "d702c505a28ecaf47be59fb684c9aba8e14cd669337eb5f00ef939e6b4f3b487",
+      "test/EnglishAuctionTest.js": "0a64bad526556f6bd43f1bc1958dc69809e15e6c760d0b97e117990ea688104d"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "English auction of an ERC-721 real-world-asset token: seller start() escrows the NFT, bid() above highest with pull-withdraw for outbid bidders, end() after deadline transfers NFT/ETH (returns NFT if no bids); SKLERC721 is an OZ5 Ownable mint mock. Primary 99 lines; 12 it blocks incl. reverts. Local run on frozen HH env: 12/12 pass, 95.5% stmts. Licence file LICENSE (Apache-2.0). History: 2 commits 2024-12-03 (org DexAuction). CAVEAT: structure follows the Solidity-by-Example EnglishAuction (start/bid/withdraw/end) - check leakage vs benchmark Auction.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T08:14:02.277858+00:00"
+}

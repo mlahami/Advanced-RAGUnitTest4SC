@@ -1,0 +1,31 @@
+{
+  "id": "erc20-payment-splitter--mirepatel",
+  "domain": "revenue-sharing",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "ERC20PaymentSplitter.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/mirepatel/erc20-payment-splitter",
+    "commit": "3d93e45d387499f8694519182d06889503ade45b",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/ERC20PaymentSplitter.sol",
+      "contracts/MockERC20.sol"
+    ],
+    "test_paths": [
+      "test/ERC20PaymentSplitter.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/ERC20PaymentSplitter.sol": "4084e886bea12312fd593a0f00678b044e02736d407667db26611f915459994d",
+      "contracts/MockERC20.sol": "ba2b5c8daddfa7f6c50d8fd05f9736cdd5a0569d9034454cd28c24a1e14df9ce",
+      "test/ERC20PaymentSplitter.test.js": "15893c2d7f3d84cf6c77d472f862d5fb288c681d37c44b3cab76be23c9211f72"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "close to benchmark PaymentSplitter",
+  "imported_utc": "2026-09-27T21:50:21.922516+00:00"
+}

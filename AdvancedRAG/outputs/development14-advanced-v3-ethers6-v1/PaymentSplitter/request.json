@@ -1,0 +1,7 @@
+{
+  "solidityCode": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.24;\n\ncontract PaymentSplitter {\n    address payable[] public payees;\n    mapping(address => uint256) public shares;\n    uint256 public totalShares;\n\n    constructor(address payable[] memory _payees, uint256[] memory _shares) {\n        require(_payees.length == _shares.length && _payees.length > 0, \"bad input\");\n        for (uint256 i = 0; i < _payees.length; i++) {\n            require(_payees[i] != address(0) && _shares[i] > 0, \"bad payee\");\n            payees.push(_payees[i]);\n            shares[_payees[i]] = _shares[i];\n            totalShares += _shares[i];\n        }\n    }\n\n    receive() external payable {}\n\n    function distribute() external {\n        uint256 balance = address(this).balance;\n        require(balance > 0, \"no funds\");\n        for (uint256 i = 0; i < payees.length; i++) {\n            uint256 amount = balance * shares[payees[i]] / totalShares;\n            payees[i].transfer(amount);\n        }\n    }\n}\n\n",
+  "context": "Generate a unit test suite for the supplied Solidity contract.",
+  "generalInstructions": "Use Hardhat 2, ethers 6, Mocha and hardhat-chai-matchers. No external helper files.",
+  "requirements": "Cover actual public functions, state changes, events, access restrictions, relevant boundaries and revert conditions. Use fresh deployments. Do not invent behavior.",
+  "exampleTest": ""
+}

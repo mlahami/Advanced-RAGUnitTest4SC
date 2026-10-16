@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> FungibleAssetToken.sol
+> KYCregistry.sol
+
+Compilation:
+============
+
+Compiled 14 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+-------------------------|----------|----------|----------|----------|----------------|
+File                     |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-------------------------|----------|----------|----------|----------|----------------|
+ contracts\              |    55.36 |       47 |    62.86 |    53.85 |                |
+  FungibleAssetToken.sol |       96 |    82.61 |      100 |      100 |                |
+  KYCregistry.sol        |    22.58 |    16.67 |       35 |    23.26 |... 366,368,372 |
+-------------------------|----------|----------|----------|----------|----------------|
+All files                |    55.36 |       47 |    62.86 |    53.85 |                |
+-------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

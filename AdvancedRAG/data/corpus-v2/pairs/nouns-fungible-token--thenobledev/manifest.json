@@ -1,0 +1,39 @@
+{
+  "id": "nouns-fungible-token--thenobledev",
+  "domain": "erc20-token",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "NounsFungibleToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/TheNobleDev/fractional-nouns",
+    "commit": "2c1acb9608484d286c5005fb187090dd84acac65",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/NounsFungibleToken.sol"
+    ],
+    "test_paths": [
+      "test/NounsFungibleToken.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/NounsFungibleToken.sol": "f4bf7e3ae7e0efaf40f2584484ac1c3633edb90f0cff655970b03dc4b0a68389",
+      "test/NounsFungibleToken.js": "70b3ed557ed2743266432fcf6dd94acd5e32b6369085be5880b9b27cdb411e53"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "NounsFungibleToken.js",
+      "upstream_path": "test/NounsFungibleToken.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 33 lines, closure 33 lines, 1 files; 7 it blocks; history: 25 commits 2024-05-26..2024-09-19",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:32:38.808563+00:00"
+}

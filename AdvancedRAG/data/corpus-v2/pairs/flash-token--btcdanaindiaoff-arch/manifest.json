@@ -1,0 +1,31 @@
+{
+  "id": "flash-token--btcdanaindiaoff-arch",
+  "domain": "flash-loan",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "FlashToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/btcdanaindiaoff-arch/flash-token",
+    "commit": "4eeb96a09767d06d4cbc9a85bf86ca212b5a1f25",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/FlashToken.sol"
+    ],
+    "test_paths": [
+      "test/FlashToken.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/FlashToken.sol": "abe027218b4bf77d4487b48370b4848498c4576ea39fd49785461bb39e3741ca",
+      "test/FlashToken.test.js": "9caced88aa00e1cf0eacf0333fa92c5fa85a3780897c344e86a08693906de7fb"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 341 lines, closure 341 lines, 1 files; 26 it blocks; history: 6 commits 2026-04-09..2026-04-16",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:27:39.307325+00:00"
+}

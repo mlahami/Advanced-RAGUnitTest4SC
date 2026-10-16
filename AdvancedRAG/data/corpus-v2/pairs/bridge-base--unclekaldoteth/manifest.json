@@ -1,0 +1,34 @@
+{
+  "id": "bridge-base--unclekaldoteth",
+  "domain": "bridge",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "BridgeBase.sol",
+    "MockUSDC.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/unclekaldoteth/stacks-bridge",
+    "commit": "629c8c719f82e5fb7a929f065d28ae5dc97d922d",
+    "license": "MIT",
+    "contract_paths": [
+      "evm/contracts/BridgeBase.sol",
+      "evm/contracts/MockUSDC.sol"
+    ],
+    "test_paths": [
+      "evm/test/BridgeBase.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "evm/contracts/BridgeBase.sol": "dfe97926cb2fdd5c83cc007becc8120cd0d99e5bbb13f869c4e1227c74dba969",
+      "evm/contracts/MockUSDC.sol": "a9f869f7c2c338248bd0d9f2877fe6781948fed4fed9bc876ca5a17238bcf5fe",
+      "evm/test/BridgeBase.test.js": "5955e5e89928d6edda95ad27da451c1e5918912bbe9e2de62be3e2897fd6c616"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "EVM side of a USDC<->Stacks lock/release bridge: lock with pending deposits, multi-signer queued releases with approvals, amount-tiered timelocks, per-tx/hourly/daily rate limits, pause, signer management. 36 its. 80 commits, 3 authors (Dec 2025-Feb 2026).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T15:52:25.939974+00:00"
+}

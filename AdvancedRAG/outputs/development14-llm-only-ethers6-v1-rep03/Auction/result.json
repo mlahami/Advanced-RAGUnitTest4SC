@@ -1,0 +1,36 @@
+{
+  "contract": "Auction",
+  "status": "test_failures",
+  "prompt_sha256": "51274266b485be00ebab4026cb58643f4c78ba4cd3a05896a1204ab25cf73edd",
+  "generation_seconds": 11.36612670001341,
+  "usage": {
+    "prompt_tokens": 7057,
+    "total_tokens": 8210,
+    "completion_tokens": 1153,
+    "prompt_tokens_details": {
+      "cached_tokens": 7040
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 3.9214560000109486
+  },
+  "passed_tests": 10,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Auction Bidding should accept a valid bid",
+      "error": "Event \"Bid\" doesn't exist in the contract"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

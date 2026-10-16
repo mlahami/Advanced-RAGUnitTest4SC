@@ -1,0 +1,53 @@
+{
+  "id": "regen-nft--sodofi",
+  "domain": "nft",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "RegenNFT.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/sodofi/celo-nft-mcp",
+    "commit": "4612a7374095cdf50b20787c82f7b7b517db8052",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/RegenNFT.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/RegenNFT.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/RegenNFT.sol": "bbfedb0ab1f146209e9cd77e9f8bd600282954ffdfcddbe3660ce97731157bff",
+      "packages/hardhat/test/RegenNFT.test.ts": "952c66ed09f28d74d74191c86dbe90d83a4291c8a349300fd65ef659e903d84f"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "RegenNFT.test.js",
+      "upstream_path": "packages/hardhat/test/RegenNFT.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "RegenNFT.test.js",
+      "upstream_path": "packages/hardhat/test/RegenNFT.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "RegenNFT.test.js",
+      "upstream_path": "packages/hardhat/test/RegenNFT.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "ERC721 mint with price/supply and owner withdraw; 2 commits. Primary 117 non-blank lines, closure 117 lines/1 files; 17 its, 26 expects; pragma ^0.8.24.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:39.471955+00:00"
+}

@@ -1,0 +1,46 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> FailingFlashLoanReceiver.sol
+> FlashLoan.sol
+> IFlashLoanReceiver.sol
+> ILendingPool.sol
+> InterestRateModel.sol
+> LendingPool.sol
+> MockFlashLoanReceiver.sol
+> PolkaToken.sol
+> PriceOracle.sol
+
+Compilation:
+============
+
+Compiled 19 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+-------------------------------|----------|----------|----------|----------|----------------|
+File                           |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-------------------------------|----------|----------|----------|----------|----------------|
+ contracts\                    |    95.88 |    65.56 |    96.15 |    98.32 |                |
+  FailingFlashLoanReceiver.sol |      100 |      100 |      100 |      100 |                |
+  FlashLoan.sol                |      100 |    83.33 |      100 |      100 |                |
+  IFlashLoanReceiver.sol       |      100 |      100 |      100 |      100 |                |
+  ILendingPool.sol             |      100 |      100 |      100 |      100 |                |
+  InterestRateModel.sol        |    85.71 |    66.67 |      100 |      100 |                |
+  LendingPool.sol              |    98.31 |    66.13 |    92.31 |    98.68 |            266 |
+  MockFlashLoanReceiver.sol    |      100 |      100 |      100 |      100 |                |
+  PolkaToken.sol               |    66.67 |       75 |      100 |    66.67 |             25 |
+  PriceOracle.sol              |      100 |       50 |      100 |      100 |                |
+-------------------------------|----------|----------|----------|----------|----------------|
+All files                      |    95.88 |    65.56 |    96.15 |    98.32 |                |
+-------------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

@@ -1,0 +1,65 @@
+{
+  "id": "evo-pool--diveshk007",
+  "domain": "amm-dex",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "EvoPool.sol",
+    "EvoToken.sol",
+    "IEvoPool.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/DiveshK007/EvoArena",
+    "commit": "a3e8f1ff61b03fe58915cd0e880b26dbeff744a1",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/EvoPool.sol",
+      "contracts/EvoToken.sol",
+      "contracts/interfaces/IEvoPool.sol"
+    ],
+    "test_paths": [
+      "test/EvoPool.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/EvoPool.sol": "60df668fddf60bd901d2561acbeb49891e07bde4614f507b525341edb1d768c8",
+      "contracts/EvoToken.sol": "97e2967206b137f2b7cc89005c83ea8051f4f896bc4daabeb6c24ec5fe09ebc8",
+      "contracts/interfaces/IEvoPool.sol": "38f1febef61e711ee031ba35c6ace0d15abe037103827fb8deb2f6740e5b5c98",
+      "test/EvoPool.test.ts": "4f0dcecf059e60c54df1763e12af353b7d36dc1789d6c14c601e29f65c47531d"
+    }
+  },
+  "transformations": [
+    {
+      "file": "EvoPool.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IEvoPool.sol",
+      "after": "./IEvoPool.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "EvoPool.test.js",
+      "upstream_path": "test/EvoPool.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "EvoPool.test.js",
+      "upstream_path": "test/EvoPool.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "EvoPool.test.js",
+      "upstream_path": "test/EvoPool.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 430 lines, closure 512 lines, 3 files; 35 it blocks; history: 24 commits 2026-02-27..2026-02-28",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:30:30.328408+00:00"
+}

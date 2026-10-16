@@ -1,0 +1,82 @@
+{
+  "pair": "nftmarketplace--donguillotine",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:15:13.522303+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/NFTMarketplace.sol": "f6d55a94950a1dc16b39108a9081580160df0aa114d05214224d320113dcd11a",
+    "LICENSE": "8c5c43219d047b47128b85c0138188b44ce72cc68491c1a45714e62a7e6835eb",
+    "manifest.json": "50caaece2314e6037c01f65aa103988b940615a4d87b7fa3a797389e574aeffc",
+    "test/NFTMarketplace.js": "1eeafb47fbb54ab28da1dcc8569943d2d0e11d58f022aeab9ba708bd1e250096"
+  },
+  "pair_sha256": "6ee959bea4d8ed34b17ae74e3e5dece7aff537e4c5d81d6d470d459a04fd072d",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "NFTMarketplace.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.166,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "NFTMarketplace.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.16,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "NFTMarketplace.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.154,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.89,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.63,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "NFTMarketplace.sol": {
+          "statements": 91.89,
+          "branches": 83.33,
+          "functions": 77.78,
+          "lines": 91.89
+        }
+      }
+    }
+  },
+  "accepted": true
+}

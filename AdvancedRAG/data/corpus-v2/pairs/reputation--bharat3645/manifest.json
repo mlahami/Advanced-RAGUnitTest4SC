@@ -1,0 +1,39 @@
+{
+  "id": "reputation--bharat3645",
+  "domain": "freelance-reputation",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Reputation.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/bharat3645/GigX",
+    "commit": "b801e356ec9d7bb65119a2bc3ceb3b015190ab00",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Reputation.sol"
+    ],
+    "test_paths": [
+      "test/Reputation.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Reputation.sol": "5dee29e6aa6cda283990b300b4947f6b4956d8aebc86e43d3a02ec337b700417",
+      "test/Reputation.test.js": "dd63374e9fba8a9230a6c86c0af5e7b692d6aad11279a72d71cfb04a40e8bac5"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "Reputation.test.js",
+      "upstream_path": "test/Reputation.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Freelancer rating and project-link registry (33 lines). Primary 33 non-blank lines, closure 33 lines/1 files; 7 its, 10 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:07:26.685446+00:00"
+}

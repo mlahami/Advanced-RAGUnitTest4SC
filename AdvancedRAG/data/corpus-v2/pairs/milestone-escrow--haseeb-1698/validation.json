@@ -1,0 +1,89 @@
+{
+  "pair": "milestone-escrow--haseeb-1698",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T07:38:39.004251+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MilestoneEscrow.sol": "a0026f0802ffe6f50c8fad34097cfcb10b958f99074a21b6a10e5c07c9ed5de5",
+    "contracts/MockUSDC.sol": "edea0c9ad5496a5357b7d9f14220a397d07a193c6649d869ddb32b0a9977e541",
+    "LICENSE": "01efd1a3afa837380c560e6f9445a345fdddce00455c1ba8e992357a7906de3f",
+    "manifest.json": "47e786275cc106e55df3d84ffe2220202bf47d3cabd0e548e036f03c8fe22b5e",
+    "test/MilestoneEscrow.test.js": "a6ef65b9971c91a1f8105ce1201b55deb48bea01b5b4aae77fdb76e8485ce875"
+  },
+  "pair_sha256": "7df5a68cf675341a4b10c7b3b4cad3cb74929f1cf048e88f366e505479d026e4",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MilestoneEscrow.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.161,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "MilestoneEscrow.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.136,
+        "signatures": 0.0,
+        "min_functions": 11
+      },
+      {
+        "contract": "MilestoneEscrow.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.135,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.91,
+      "mocha": {
+        "tests": 21,
+        "passes": 21,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.45,
+      "mocha": {
+        "tests": 21,
+        "passes": 21,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MilestoneEscrow.sol": {
+          "statements": 98.08,
+          "branches": 78.38,
+          "functions": 94.74,
+          "lines": 98.0
+        },
+        "MockUSDC.sol": {
+          "statements": 50.0,
+          "branches": 50.0,
+          "functions": 66.67,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

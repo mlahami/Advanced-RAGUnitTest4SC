@@ -1,0 +1,79 @@
+{
+  "id": "advanced-v3.NFTMarketplace",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "NFTMarketplace",
+  "chunk_ids": [
+    4351,
+    4296,
+    4283,
+    4352,
+    4297,
+    4284,
+    4354,
+    5072,
+    4304,
+    4353
+  ],
+  "context_sha256": "8c3ed42e96a51231aa3f780e4709209933b74e223486b61dbae6fb42adfe6309",
+  "ratings": [
+    {
+      "chunk_id": 4351,
+      "rating": 1,
+      "reason": "Shows royalty‑set event pattern, but target’s function signature and access differ; cannot directly reuse calls."
+    },
+    {
+      "chunk_id": 4296,
+      "rating": 1,
+      "reason": "Shows pattern for testing list revert when caller isn’t owner, but uses different error type and contract name, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 4283,
+      "rating": 2,
+      "reason": "Tests listing, approval, purchase, royalty split and balance changes, matching target’s list/buy/royalty logic; only names differ, core behavior directly reusable."
+    },
+    {
+      "chunk_id": 4352,
+      "rating": 1,
+      "reason": "Tests unauthorized royalty change revert, but target's setRoyalty has no access control, so only generic revert pattern applies."
+    },
+    {
+      "chunk_id": 4297,
+      "rating": 1,
+      "reason": "Tests approval check for listing, similar to target’s require for marketplace approval, but uses custom error and different contract names, so only pattern is reusable."
+    },
+    {
+      "chunk_id": 4284,
+      "rating": 2,
+      "reason": "Tests royalty distribution on purchase with ether balance checks, matching target’s royalty logic; setup can be renamed for NFTMarketplace."
+    },
+    {
+      "chunk_id": 4354,
+      "rating": 0,
+      "reason": "Tests unauthorized royalty change revert, but target lacks access control and uses different royalty function; pattern not applicable."
+    },
+    {
+      "chunk_id": 5072,
+      "rating": 1,
+      "reason": "Shows generic revert‑by‑non‑owner test pattern, which matches our list() revert message, but uses different functions and setup, so only partially reusable."
+    },
+    {
+      "chunk_id": 4304,
+      "rating": 1,
+      "reason": "Tests price‑validation revert pattern, but target uses different revert message and no custom error, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 4353,
+      "rating": 1,
+      "reason": "Shows royalty‑setting pattern, but tests different functions (default royalty) and contract; only generic setup useful for our setRoyalty logic."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 14741,
+    "completion_tokens": 1209,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 91.6,
+  "evaluated_utc": "2026-10-14T18:26:04.385524+00:00"
+}

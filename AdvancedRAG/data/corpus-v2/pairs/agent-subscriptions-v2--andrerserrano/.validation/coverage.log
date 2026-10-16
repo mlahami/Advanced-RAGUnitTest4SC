@@ -1,0 +1,39 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> AgentSubscriptionsV2.sol
+> MockERC20.sol
+
+Compilation:
+============
+
+Compiled 13 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+      createOffering gas: 211500
+      subscribe gas: 230316
+      charge gas: 140658
+      cancelSubscription gas: 27999
+---------------------------|----------|----------|----------|----------|----------------|
+File                       |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+---------------------------|----------|----------|----------|----------|----------------|
+ contracts\                |    80.99 |    66.67 |    89.29 |    82.29 |                |
+  AgentSubscriptionsV2.sol |    81.51 |    66.67 |       92 |    82.56 |... 773,774,778 |
+  MockERC20.sol            |       50 |      100 |    66.67 |    66.67 |             22 |
+---------------------------|----------|----------|----------|----------|----------------|
+All files                  |    80.99 |    66.67 |    89.29 |    82.29 |                |
+---------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+Error in plugin solidity-coverage: ❌ 2 test(s) failed under coverage.
+
+For more info run Hardhat with --show-stack-traces

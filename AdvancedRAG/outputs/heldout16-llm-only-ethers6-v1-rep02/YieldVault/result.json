@@ -1,0 +1,36 @@
+{
+  "contract": "YieldVault",
+  "status": "test_failures",
+  "prompt_sha256": "57c857ab9de0e7a142ba48dd15f520794897f6af4600f3049a6cfa259f110019",
+  "generation_seconds": 11.291885699960403,
+  "usage": {
+    "prompt_tokens": 7458,
+    "total_tokens": 8965,
+    "completion_tokens": 1507,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 8.867364099947736
+  },
+  "passed_tests": 14,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "YieldVault setStrategy Should not allow non-owner to set strategy",
+      "error": "The given contract doesn't have a custom error named 'OwnableUnauthorizedAccount'"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 92.86,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "pong-tournament--mc-putchar",
+  "domain": "on-chain-game",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "PongTournament.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/mc-putchar/ft_transcendence",
+    "commit": "9751f5afae4cfd3daf9771ea3d758d4f9b2d3593",
+    "license": "Unlicense",
+    "contract_paths": [
+      "pong/blockchain/hardhat/contracts/PongTournament.sol"
+    ],
+    "test_paths": [
+      "pong/blockchain/hardhat/test/PongTournament.js"
+    ],
+    "license_file": "UNLICENSE",
+    "upstream_sha256": {
+      "pong/blockchain/hardhat/contracts/PongTournament.sol": "1188e9a9ca22896298bc43eee9d8ad7288e1cbfe8785e9c4c65a637cf5e17cdd",
+      "pong/blockchain/hardhat/test/PongTournament.js": "8ff2d41b29e69ee1809833459fa3d7ad0506e4187eafe2ba5fbce4fe3f1adc3c"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Pong tournament results registry (tournaments, matches, players, scores, winners); Unlicense; 42-school project with 553 commits. Primary 137 non-blank lines, closure 137 lines/1 files; 17 its, 18 expects; pragma ^0.8.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-29T21:40:26.046243+00:00"
+}

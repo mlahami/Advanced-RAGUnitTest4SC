@@ -1,0 +1,34 @@
+{
+  "id": "enerpay-remittance--edgadafi",
+  "domain": "payments",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "EnerpayRemittance.sol",
+    "MockERC20.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Edgadafi/enerpay-celo",
+    "commit": "432d3d21cb68c4f62dbe4cab8dfe8826f9be6552",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/contracts/EnerpayRemittance.sol",
+      "contracts/contracts/MockERC20.sol"
+    ],
+    "test_paths": [
+      "contracts/test/EnerpayRemittance.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/EnerpayRemittance.sol": "a5566131441f5fe3e9f15a97b2e5d89d07f274955c544dcfa741f98ee957041d",
+      "contracts/contracts/MockERC20.sol": "4a70217a2484bc9c7a8498ca25bf0ce5d5585d1238f6d72000d7fe8c0a84494b",
+      "contracts/test/EnerpayRemittance.test.js": "aebdac06f089272d46624b411edd16b2e9ef8ace4d8a5cb92bad26be0cd0cf09"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 316 lines, closure 335 lines, 2 files; 28 it blocks; history: 107 commits 2025-11-18..2026-01-30",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:33:38.972097+00:00"
+}

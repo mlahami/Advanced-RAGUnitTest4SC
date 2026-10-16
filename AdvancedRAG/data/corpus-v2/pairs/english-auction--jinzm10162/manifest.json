@@ -1,0 +1,59 @@
+{
+  "id": "english-auction--jinzm10162",
+  "domain": "auction",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "EnglishAuction.sol",
+    "EnglishAuctionBase.sol",
+    "IEnglishAuction.sol",
+    "CallAuction.sol",
+    "NFT.sol",
+    "Seller.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/jinzm10162/Gavel",
+    "commit": "4e1f9f4ca2dc54c825bc7344dd8c443848ca6ab2",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/EnglishAuction.sol",
+      "contracts/EnglishAuctionBase.sol",
+      "contracts/interface/IEnglishAuction.sol",
+      "contracts/test-helpers/CallAuction.sol",
+      "contracts/test-helpers/NFT.sol",
+      "contracts/test-helpers/Seller.sol"
+    ],
+    "test_paths": [
+      "test/EnglishAuction.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/EnglishAuction.sol": "492b8e2005397438009df5c3c4f8a8d19a18ac1eec1119f43e37263cb917852f",
+      "contracts/EnglishAuctionBase.sol": "9ecd39d1f0e910d371e5172eec2536ca52353bc31a52b591ca3b579a4973cf22",
+      "contracts/interface/IEnglishAuction.sol": "8de8aa5c93764fda459ad0ffa9029b16b7fa09c0563cd49e4e0064838325da76",
+      "contracts/test-helpers/CallAuction.sol": "5f281dbf6b590a705b576764f70b88a46f910e23456c10af5223584eafdb4daf",
+      "contracts/test-helpers/NFT.sol": "5a2e2e96618f9353da70696292e1b6393dc2663183d7357213491f421a9b6a6a",
+      "contracts/test-helpers/Seller.sol": "bfab6329fbb531acf0ba25d45c1a2b64fb9738f9f11a004e574b2108e1d11a5b",
+      "test/EnglishAuction.js": "4923e90b9285e79ebdfcef4c451bec74220da00c18e12dfcf0747d6e98633583"
+    }
+  },
+  "transformations": [
+    {
+      "file": "EnglishAuctionBase.sol",
+      "kind": "import-path",
+      "before": "./interface/IEnglishAuction.sol",
+      "after": "./IEnglishAuction.sol"
+    },
+    {
+      "file": "CallAuction.sol",
+      "kind": "import-path",
+      "before": "../EnglishAuction.sol",
+      "after": "./EnglishAuction.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "English NFT auction started via safeTransferFrom data, settlement/withdraw; helper contracts under contracts/test-helpers; Chinese test names; 2026, 6 commits. Primary 142 non-blank lines, closure 350 lines/6 files; 33 its, 49 expects; pragma ^0.8.24.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:03:39.884377+00:00"
+}

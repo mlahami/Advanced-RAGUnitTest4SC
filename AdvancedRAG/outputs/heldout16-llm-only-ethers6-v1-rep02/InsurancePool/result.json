@@ -1,0 +1,48 @@
+{
+  "contract": "InsurancePool",
+  "status": "test_failures",
+  "prompt_sha256": "b6e02b91eb857b5dcc364c4b72245ced7647ebd87daa111671b2078f74ce7ced",
+  "generation_seconds": 18.912985800066963,
+  "usage": {
+    "prompt_tokens": 8572,
+    "total_tokens": 11125,
+    "completion_tokens": 2553,
+    "prompt_tokens_details": {
+      "cached_tokens": 8448
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 7.961417100043036
+  },
+  "passed_tests": 17,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "InsurancePool LP Actions Deposit Should allow ETH deposits",
+      "error": "expected Result(2) [ 1000000000000000000n, 0n ] to deeply equal { deposited: 1000000000000000000n, rewardDebt: 0n }"
+    },
+    {
+      "title": "InsurancePool LP Actions Withdraw Should allow partial withdrawals",
+      "error": "HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined"
+    },
+    {
+      "title": "InsurancePool Policy Actions Buy Policy Should allow buying a policy",
+      "error": "Error in \"PolicyPurchased\" event: Error in the 5th argument assertion: expected 1790805199 to equal 1790805198."
+    },
+    {
+      "title": "InsurancePool Reward Distribution Should correctly distribute rewards to LPs",
+      "error": "expected 9980299999999998353108 to be close to 9999099999999999819487 +/- 10000000000000000"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 88.24,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

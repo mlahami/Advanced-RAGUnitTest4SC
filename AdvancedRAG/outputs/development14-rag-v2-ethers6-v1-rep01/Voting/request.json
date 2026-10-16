@@ -1,0 +1,7 @@
+{
+  "solidityCode": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.24;\n\ncontract Voting {\n    address public immutable chairperson;\n    string[] public candidates;\n    mapping(address => bool) public hasVoted;\n    mapping(uint256 => uint256) public votes;\n\n    constructor(string[] memory names) {\n        require(names.length >= 2, \"need candidates\");\n        chairperson = msg.sender;\n        candidates = names;\n    }\n\n    function vote(uint256 candidateId) external {\n        require(!hasVoted[msg.sender], \"already voted\");\n        require(candidateId < candidates.length, \"invalid candidate\");\n        hasVoted[msg.sender] = true;\n        votes[candidateId] += 1;\n    }\n\n    function winner() external view returns (uint256 winningId) {\n        uint256 best;\n        for (uint256 i = 0; i < candidates.length; i++) {\n            if (votes[i] > best) {\n                best = votes[i];\n                winningId = i;\n            }\n        }\n    }\n}\n\n",
+  "context": "Generate a unit test suite for the supplied Solidity contract.",
+  "generalInstructions": "Use Hardhat 2, ethers 6, Mocha and hardhat-chai-matchers. No external helper files.",
+  "requirements": "Cover actual public functions, state changes, events, access restrictions, relevant boundaries and revert conditions. Use fresh deployments. Do not invent behavior.",
+  "exampleTest": ""
+}

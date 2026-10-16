@@ -1,0 +1,60 @@
+{
+  "contract": "MultiSigWallet",
+  "status": "test_failures",
+  "prompt_sha256": "f6a70d211f226480d823467d9991ccd53a8dc7b01d6efb903344f6b64a908372",
+  "generation_seconds": 12.193546900060028,
+  "usage": {
+    "prompt_tokens": 11166,
+    "total_tokens": 12636,
+    "completion_tokens": 1470,
+    "prompt_tokens_details": {
+      "cached_tokens": 11136
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.209715300006792
+  },
+  "passed_tests": 12,
+  "failed_tests": 7,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "MultiSigWallet submit should allow owner to submit transaction",
+      "error": "Event \"Submitted\" doesn't exist in the contract"
+    },
+    {
+      "title": "MultiSigWallet submit should return correct transaction ID",
+      "error": "HH17: The input value cannot be normalized to a BigInt: Value {\"_type\":\"TransactionResponse\",\"accessList\":null,\"blockNumber\":16,\"blockHash\":\"0xf709b8c46dc240aee17b38e6ae225ec49258eb372a9eecd6d3d867eae5525f7b\",\"blobVersionedHashes\":null,\"chainId\":\"31337\",\"data\":\"0x203dd66600000000000000000000000015d34aaf54267db7d7c367839aaf71a00a2c6a650000000000000000000000000000000000000000000000000000000000000064\",\"from\":\"0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266\",\"gasLimit\":\"1099511627775\",\"gasPrice\":\"1\",\"hash\":\"0x1dcfa0f9cc7d971da4e7292eadd4adbbcb292f94a0ce497db095f2aca65e9775\",\"maxFeePerGas\":null,\"maxPriorityFeePerGas\":null,\"maxFeePerBlobGas\":null,\"nonce\":14,\"signature\":{\"_type\":\"signature\",\"networkV\":\"62709\",\"r\":\"0x5a3064d5fb23db068f0e6a0c14f0641b3a2709f5348086107d51935bef82ae95\",\"s\":\"0x089e80d2b472cf48f427bc6654cecd78f24f423803c87395acda0a0866059f78\",\"v\":27},\"to\":\"0x0DCd1Bf9A1b36cE34237eEaFef220932846BCD82\",\"type\":0,\"value\":\"0\"} is of type \"object\" but is not an instanceof one of the known big number object types."
+    },
+    {
+      "title": "MultiSigWallet confirm should allow owner to confirm transaction",
+      "error": "Event \"Confirmed\" doesn't exist in the contract"
+    },
+    {
+      "title": "MultiSigWallet confirm should revert if transaction is already executed",
+      "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+    },
+    {
+      "title": "MultiSigWallet execute should allow owner to execute transaction with enough confirmations",
+      "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+    },
+    {
+      "title": "MultiSigWallet execute should revert if transaction is already executed",
+      "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+    },
+    {
+      "title": "MultiSigWallet execute should revert if transfer fails",
+      "error": "Expected transaction to be reverted with reason 'transfer failed', but it reverted with reason 'not enough confirmations'"
+    }
+  ],
+  "coverage": {
+    "statements": 85.71,
+    "branches": 77.27,
+    "functions": 100.0,
+    "lines": 85.71
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

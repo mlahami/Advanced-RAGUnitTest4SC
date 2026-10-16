@@ -1,0 +1,82 @@
+{
+  "pair": "company--christofervikstroem",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:12:35.941985+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Company.sol": "588d9e206f30914c469399df4827b0fa39fc6eda507d138bff898b8e58996667",
+    "LICENSE": "14be9ab1ff3bfd541ca180cd47fc0c7a9929f525c8164c4e307056349337eb1f",
+    "manifest.json": "fc115f418de64ef0ffb1754b866e67eeaef39244ae4bf0f961197440a9f7e3bc",
+    "test/Company.js": "d83683a3739e684954a8a6b28398924ffba011e8f03846b7bbf3d1724985351c"
+  },
+  "pair_sha256": "f4e1418141389c945d71d1bee3dbac36a2a242ed17d69219d2f55faf6b8eacc1",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Company.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.217,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "Company.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.209,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "Company.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.175,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.1,
+      "mocha": {
+        "tests": 25,
+        "passes": 25,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.36,
+      "mocha": {
+        "tests": 25,
+        "passes": 25,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Company.sol": {
+          "statements": 100.0,
+          "branches": 93.33,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

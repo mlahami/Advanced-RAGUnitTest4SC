@@ -1,0 +1,745 @@
+{
+  "total": 16,
+  "completed": 16,
+  "statuses": {
+    "test_failures": 16
+  },
+  "results": [
+    {
+      "contract": "BatchTransfer",
+      "status": "test_failures",
+      "prompt_sha256": "ba31ef99f81e18aa3fb9823022909ccec3839f065d5e287793722966e6d9a64e",
+      "generation_seconds": 21.648461999953724,
+      "usage": {
+        "prompt_tokens": 11803,
+        "total_tokens": 14188,
+        "completion_tokens": 2385,
+        "prompt_tokens_details": {
+          "cached_tokens": 11776
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.582596099935472
+      },
+      "passed_tests": 11,
+      "failed_tests": 2,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "BatchTransfer ERC20 Batch Transfers Should revert if ERC20 transfer fails",
+          "error": "Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'insufficient balance'"
+        },
+        {
+          "title": "BatchTransfer Reentrancy Protection Should prevent reentrancy during ETH batch transfer",
+          "error": "HH700: Artifact for contract \"ReentrantContract\" not found. "
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 85.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "BondingCurve",
+      "status": "test_failures",
+      "prompt_sha256": "4f26e98e6a53bd6b17ab07c952582e6aba3932acb4e51cf04f7f81434a43b995",
+      "generation_seconds": 14.314873000024818,
+      "usage": {
+        "prompt_tokens": 12962,
+        "total_tokens": 14948,
+        "completion_tokens": 1986,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.171450200024992
+      },
+      "passed_tests": 0,
+      "failed_tests": 1,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "BondingCurve \"before each\" hook for \"Should set the right owner\"",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Insufficient ETH'"
+        }
+      ],
+      "coverage": {
+        "statements": 21.21,
+        "branches": 10.71,
+        "functions": 33.33,
+        "lines": 21.88
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "CrossChainBridge",
+      "status": "test_failures",
+      "prompt_sha256": "f885fbfbe1141e17e81b7566b749088e09215d7ea57e4eb1eaa0e55466cf11db",
+      "generation_seconds": 16.908434099983424,
+      "usage": {
+        "prompt_tokens": 11784,
+        "total_tokens": 13825,
+        "completion_tokens": 2041,
+        "prompt_tokens_details": {
+          "cached_tokens": 11776
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 5.119447399978526
+      },
+      "passed_tests": 16,
+      "failed_tests": 4,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "CrossChainBridge Validator Management Should allow owner to remove validators",
+          "error": "expected 3 to equal 2."
+        },
+        {
+          "title": "CrossChainBridge Locking Tokens Should lock tokens and emit Locked event",
+          "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+        },
+        {
+          "title": "CrossChainBridge Validating and Minting \"before each\" hook for \"Should allow validators to validate requests\"",
+          "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+        },
+        {
+          "title": "CrossChainBridge Fee Withdrawal Should allow owner to withdraw fees",
+          "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+        }
+      ],
+      "coverage": {
+        "statements": 52.17,
+        "branches": 61.76,
+        "functions": 70.0,
+        "lines": 52.17
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "DAOGovernor",
+      "status": "test_failures",
+      "prompt_sha256": "36af8d699c72845d411dc39925af7a69fa9006589fc7f8a0e68afbe430e87a77",
+      "generation_seconds": 24.038464199984446,
+      "usage": {
+        "prompt_tokens": 11548,
+        "total_tokens": 13998,
+        "completion_tokens": 2450,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.717492999974638
+      },
+      "passed_tests": 3,
+      "failed_tests": 5,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "DAOGovernor Proposal Creation should create a proposal and emit ProposalCreated event",
+          "error": "time is not defined"
+        },
+        {
+          "title": "DAOGovernor Voting should prevent voting before proposal is active",
+          "error": "Do not know how to serialize a BigInt"
+        },
+        {
+          "title": "DAOGovernor Voting should prevent voting after proposal has ended",
+          "error": "Do not know how to serialize a BigInt"
+        },
+        {
+          "title": "DAOGovernor Proposal Queueing \"before each\" hook for \"should queue a successful proposal\"",
+          "error": "Do not know how to serialize a BigInt"
+        },
+        {
+          "title": "DAOGovernor Proposal Execution \"before each\" hook for \"should execute a queued proposal\"",
+          "error": "Do not know how to serialize a BigInt"
+        }
+      ],
+      "coverage": {
+        "statements": 45.0,
+        "branches": 30.0,
+        "functions": 60.0,
+        "lines": 45.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "DEX",
+      "status": "test_failures",
+      "prompt_sha256": "164a8b94e9f22469960748e63d49e4dd546161ad731b63eb67266dc7ed211fbd",
+      "generation_seconds": 15.981431299936958,
+      "usage": {
+        "prompt_tokens": 11773,
+        "total_tokens": 13952,
+        "completion_tokens": 2179,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 5.290061200037599
+      },
+      "passed_tests": 6,
+      "failed_tests": 2,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "DEX Contract Swap Functionality Should revert when swapping with zero amount",
+          "error": "Expected transaction to be reverted with reason 'ERC20: transfer amount exceeds balance', but it didn't revert"
+        },
+        {
+          "title": "DEX Contract Edge Cases Should handle initial liquidity addition correctly",
+          "error": "expected 141421356237309504880 to equal 141421356237309509632."
+        }
+      ],
+      "coverage": {
+        "statements": 95.45,
+        "branches": 66.67,
+        "functions": 85.71,
+        "lines": 95.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "GaslessRelayer",
+      "status": "test_failures",
+      "prompt_sha256": "4365755192f7144e0c0f5beaa369414d8cee0eeb1ca1f563d732d7602af821b6",
+      "generation_seconds": 26.51279930002056,
+      "usage": {
+        "prompt_tokens": 11859,
+        "total_tokens": 14501,
+        "completion_tokens": 2642,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.407148499973118
+      },
+      "passed_tests": 6,
+      "failed_tests": 1,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "GaslessRelayer execute should execute a valid meta-transaction",
+          "error": "Cannot read properties of undefined (reading 'name')"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 87.5,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "InsurancePool",
+      "status": "test_failures",
+      "prompt_sha256": "f4f510efc14536f399fb8bec18c6eba9d6912e0a1eb3044f2ccc89b41fc1756d",
+      "generation_seconds": 24.998296200064942,
+      "usage": {
+        "prompt_tokens": 12435,
+        "total_tokens": 15962,
+        "completion_tokens": 3527,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.656675699981861
+      },
+      "passed_tests": 15,
+      "failed_tests": 5,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "InsurancePool Policy Actions Should allow buying a policy and emit PolicyPurchased event",
+          "error": "Error in \"PolicyPurchased\" event: Error in the 5th argument assertion: expected 1790922206 to equal 1790922205."
+        },
+        {
+          "title": "InsurancePool Policy Actions Should revert on zero premium",
+          "error": "Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'"
+        },
+        {
+          "title": "InsurancePool Oracle-triggered Payouts Should revert on non-claimable policy",
+          "error": "Expected transaction to be reverted with reason 'Not claimable', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)"
+        },
+        {
+          "title": "InsurancePool Reward Distribution Should correctly distribute rewards to LPs",
+          "error": "expected 0 to equal 33333333333333333."
+        },
+        {
+          "title": "InsurancePool Reward Distribution Should update rewards when withdrawing",
+          "error": "expected 100000000000000000 to equal 50000000000000000."
+        }
+      ],
+      "coverage": {
+        "statements": 97.3,
+        "branches": 82.35,
+        "functions": 90.0,
+        "lines": 97.3
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "LendingPool",
+      "status": "test_failures",
+      "prompt_sha256": "617be46fec9f211144f3b2a8e99749d52ca9428cc9101adc44d044a15dc41b4f",
+      "generation_seconds": 11.838925900054164,
+      "usage": {
+        "prompt_tokens": 11546,
+        "total_tokens": 13093,
+        "completion_tokens": 1547,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.520887400023639
+      },
+      "passed_tests": 9,
+      "failed_tests": 3,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "LendingPool Borrow Should revert when borrowing over collateral limit",
+          "error": "Expected transaction to be reverted with reason 'Undercollateralized', but it didn't revert"
+        },
+        {
+          "title": "LendingPool Liquidate Should liquidate undercollateralized position",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Position healthy'"
+        },
+        {
+          "title": "LendingPool Liquidate Should emit Liquidated event",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Position healthy'"
+        }
+      ],
+      "coverage": {
+        "statements": 73.33,
+        "branches": 60.0,
+        "functions": 100.0,
+        "lines": 73.33
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "MerkleAirdrop",
+      "status": "test_failures",
+      "prompt_sha256": "43ae6843372fa15b0c4314d24a00fa5b9e6d9fec560c383a19fad51e7fa9af0a",
+      "generation_seconds": 10.046093300101347,
+      "usage": {
+        "prompt_tokens": 10871,
+        "total_tokens": 11933,
+        "completion_tokens": 1062,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.2526354000438005
+      },
+      "passed_tests": 4,
+      "failed_tests": 4,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "MerkleAirdrop Claim Should allow valid claim",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'"
+        },
+        {
+          "title": "MerkleAirdrop Claim Should revert when claiming twice",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'"
+        },
+        {
+          "title": "MerkleAirdrop Claim Should revert when token transfer fails",
+          "error": "Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'Invalid proof'"
+        },
+        {
+          "title": "MerkleAirdrop State Should track claimed status",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'"
+        }
+      ],
+      "coverage": {
+        "statements": 77.78,
+        "branches": 37.5,
+        "functions": 100.0,
+        "lines": 77.78
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "NFTMarketplace",
+      "status": "test_failures",
+      "prompt_sha256": "48ce1424e59d2385ce6bc0cad2ebca53d91392349cca964d36b4ce1e3ab3cbc3",
+      "generation_seconds": 21.234348100028,
+      "usage": {
+        "prompt_tokens": 11426,
+        "total_tokens": 13640,
+        "completion_tokens": 2214,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.665847699972801
+      },
+      "passed_tests": 8,
+      "failed_tests": 5,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "NFTMarketplace buy should buy NFT correctly with royalty",
+          "error": "expected 10000974999999999436092 to equal 10000974999999999368808."
+        },
+        {
+          "title": "NFTMarketplace buy should buy NFT correctly without royalty when bps is 0",
+          "error": "expected 10001974999999999283918 to equal 10001974999999999227027."
+        },
+        {
+          "title": "NFTMarketplace buy should revert when royalty transfer fails",
+          "error": "VM Exception while processing transaction: reverted with reason string 'Max 10%'"
+        },
+        {
+          "title": "NFTMarketplace buy should revert when seller transfer fails",
+          "error": "unsupported addressable value (argument=\"target\", value=null, code=INVALID_ARGUMENT, version=6.17.0)"
+        },
+        {
+          "title": "NFTMarketplace buy should revert when refund fails",
+          "error": "contract runner does not support sending transactions (operation=\"sendTransaction\", code=UNSUPPORTED_OPERATION, version=6.17.0)"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 86.36,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "NFTStaking",
+      "status": "test_failures",
+      "prompt_sha256": "4607f70443e7840214198cea2fe36ecafd9e34b8d06da6835134bd5de8d997f7",
+      "generation_seconds": 14.9968781999778,
+      "usage": {
+        "prompt_tokens": 12723,
+        "total_tokens": 14567,
+        "completion_tokens": 1844,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 5.154813900007866
+      },
+      "passed_tests": 8,
+      "failed_tests": 7,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "NFTStaking Staking Should allow staking multiple NFTs",
+          "error": "Cannot read properties of undefined (reading 'length')"
+        },
+        {
+          "title": "NFTStaking Staking Should prevent staking already staked NFTs",
+          "error": "Expected transaction to be reverted with reason 'Already staked', but it reverted with reason 'Not owner'"
+        },
+        {
+          "title": "NFTStaking Unstaking Should allow unstaking multiple NFTs",
+          "error": "Cannot read properties of undefined (reading 'length')"
+        },
+        {
+          "title": "NFTStaking Rewards Should calculate pending rewards correctly",
+          "error": "expected 10 to be close to 10000000000000000000 +/- 100000000000000000"
+        },
+        {
+          "title": "NFTStaking Rewards Should allow claiming rewards",
+          "error": "expected 11 to be close to 10000000000000000000 +/- 100000000000000000"
+        },
+        {
+          "title": "NFTStaking Rewards Should emit RewardClaimed event when claiming rewards",
+          "error": "Error in \"RewardClaimed\" event: Error in the 2nd argument assertion: expected 11 to equal 10."
+        },
+        {
+          "title": "NFTStaking Views Should return correct pending rewards",
+          "error": "expected 10 to be close to 10000000000000000000 +/- 100000000000000000"
+        }
+      ],
+      "coverage": {
+        "statements": 97.3,
+        "branches": 87.5,
+        "functions": 100.0,
+        "lines": 97.22
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "PriceOracle",
+      "status": "test_failures",
+      "prompt_sha256": "1b162a977125f15cebc12565d03da1b4c994e07d016cc382eec981b19cafaec5",
+      "generation_seconds": 14.22777200001292,
+      "usage": {
+        "prompt_tokens": 12831,
+        "total_tokens": 14746,
+        "completion_tokens": 1915,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 5.019927800050937
+      },
+      "passed_tests": 15,
+      "failed_tests": 4,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "PriceOracle Price Submission Should aggregate prices when enough feeders submit",
+          "error": "Error in \"PriceUpdated\" event: Error in the 3rd argument assertion: HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined"
+        },
+        {
+          "title": "PriceOracle Price Reading Should return the latest price",
+          "error": "HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined"
+        },
+        {
+          "title": "PriceOracle Price Reading Should calculate TWAP correctly",
+          "error": "VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)"
+        },
+        {
+          "title": "PriceOracle Circuit Breaker Should not trip circuit breaker when price deviation is within limits",
+          "error": "Error in \"PriceUpdated\" event: Error in the 3rd argument assertion: HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined"
+        }
+      ],
+      "coverage": {
+        "statements": 95.74,
+        "branches": 89.47,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "RateLimiter",
+      "status": "test_failures",
+      "prompt_sha256": "33e56d6f8cd4cb02c4ce68ed66872becaaa7776f8acdc230b66990db6f4231f6",
+      "generation_seconds": 16.535477500059642,
+      "usage": {
+        "prompt_tokens": 11409,
+        "total_tokens": 13361,
+        "completion_tokens": 1952,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.402518999995664
+      },
+      "passed_tests": 13,
+      "failed_tests": 4,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "RateLimiter Deposit Should revert when rate limit is exceeded",
+          "error": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert"
+        },
+        {
+          "title": "RateLimiter Withdraw Should revert when rate limit is exceeded",
+          "error": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert"
+        },
+        {
+          "title": "RateLimiter Bucket Refill Should emit BucketRefilled event when tokens are refilled",
+          "error": "Expected event \"BucketRefilled\" to be emitted, but it wasn't"
+        },
+        {
+          "title": "RateLimiter Edge Cases Should handle multiple users independently",
+          "error": "expected 90 to equal 80."
+        }
+      ],
+      "coverage": {
+        "statements": 94.74,
+        "branches": 71.43,
+        "functions": 85.71,
+        "lines": 94.44
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "SubscriptionService",
+      "status": "test_failures",
+      "prompt_sha256": "ab2b06c77722dcb379408443772f32489daabd3d0b0355a13ea4ecbe659cf5b3",
+      "generation_seconds": 13.040030999924056,
+      "usage": {
+        "prompt_tokens": 11907,
+        "total_tokens": 13686,
+        "completion_tokens": 1779,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.890586399938911
+      },
+      "passed_tests": 13,
+      "failed_tests": 2,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "SubscriptionService Subscription Management Should revert when payment fails",
+          "error": "Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'"
+        },
+        {
+          "title": "SubscriptionService Charge Management Should charge a subscriber",
+          "error": "expected 1791008801 to equal 1791008803."
+        }
+      ],
+      "coverage": {
+        "statements": 96.55,
+        "branches": 91.67,
+        "functions": 100.0,
+        "lines": 96.43
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "TokenVesting",
+      "status": "test_failures",
+      "prompt_sha256": "099ce9694b1afde5d0c386860192ed229e1f07e5f315c2f160c0cc03370570e5",
+      "generation_seconds": 32.66513820004184,
+      "usage": {
+        "prompt_tokens": 12439,
+        "total_tokens": 15506,
+        "completion_tokens": 3067,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.781896000029519
+      },
+      "passed_tests": 10,
+      "failed_tests": 5,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "TokenVesting Token Claiming Should allow beneficiary to claim tokens",
+          "error": "Timestamp 1793427963 is lower than the previous block's timestamp 1806603973"
+        },
+        {
+          "title": "TokenVesting Token Claiming Should revert if nothing to claim",
+          "error": "Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with reason 'insufficient balance'"
+        },
+        {
+          "title": "TokenVesting Token Claiming Should revert if transfer fails",
+          "error": "Timestamp 1793427963 is lower than the previous block's timestamp 1806603984"
+        },
+        {
+          "title": "TokenVesting View Functions Should return correct claimable amount",
+          "error": "expected 500 to equal 0."
+        },
+        {
+          "title": "TokenVesting Vesting Calculations Should calculate vested amount correctly",
+          "error": "expected 500 to equal 0."
+        }
+      ],
+      "coverage": {
+        "statements": 90.0,
+        "branches": 77.27,
+        "functions": 100.0,
+        "lines": 96.43
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "YieldVault",
+      "status": "test_failures",
+      "prompt_sha256": "77db8d05b90abf842e9c6494b683a277d8284ffc07b08214c31edcfa8b8bdabe",
+      "generation_seconds": 11.562175899976864,
+      "usage": {
+        "prompt_tokens": 11422,
+        "total_tokens": 12945,
+        "completion_tokens": 1523,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.8602853999473155
+      },
+      "passed_tests": 12,
+      "failed_tests": 2,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "YieldVault Strategy Management Should allow owner to set strategy",
+          "error": "Event \"StrategyUpdated\" doesn't exist in the contract"
+        },
+        {
+          "title": "YieldVault Strategy Management Should revert when non-owner tries to set strategy",
+          "error": "The given contract doesn't have a custom error named 'OwnableUnauthorizedAccount'"
+        }
+      ],
+      "coverage": {
+        "statements": 93.75,
+        "branches": 85.71,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    }
+  ]
+}

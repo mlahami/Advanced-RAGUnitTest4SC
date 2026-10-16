@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"Counter\", function () {\n  let counter;\n  let owner;\n  let otherAccount;\n\n  beforeEach(async function () {\n    [owner, otherAccount] = await ethers.getSigners();\n\n    const Counter = await ethers.getContractFactory(\"Counter\");\n    counter = await Counter.deploy();\n    await counter.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should set the right owner\", async function () {\n      expect(await counter.owner()).to.equal(owner.address);\n    });\n\n    it(\"Should initialize count to zero\", async function () {\n      expect(await counter.count()).to.equal(0n);\n    });\n  });\n\n  describe(\"Increment\", function () {\n    it(\"Should increment the count\", async function () {\n      await counter.increment();\n      expect(await counter.count()).to.equal(1n);\n    });\n\n    it(\"Should emit no events\", async function () {\n      await expect(counter.increment())\n        .to.not.emit(counter, \"ValueSet\");\n    });\n  });\n\n  describe(\"Decrement\", function () {\n    it(\"Should decrement the count\", async function () {\n      await counter.increment();\n      await counter.decrement();\n      expect(await counter.count()).to.equal(0n);\n    });\n\n    it(\"Should revert when count is zero\", async function () {\n      await expect(counter.decrement())\n        .to.be.revertedWith(\"underflow\");\n    });\n\n    it(\"Should emit no events\", async function () {\n      await counter.increment();\n      await expect(counter.decrement())\n        .to.not.emit(counter, \"ValueSet\");\n    });\n  });\n\n  describe(\"Reset\", function () {\n    it(\"Should reset the count to zero\", async function () {\n      await counter.increment();\n      await counter.reset();\n      expect(await counter.count()).to.equal(0n);\n    });\n\n    it(\"Should revert when called by non-owner\", async function () {\n      await expect(counter.connect(otherAccount).reset())\n        .to.be.revertedWith(\"not owner\");\n    });\n\n    it(\"Should emit no events\", async function () {\n      await counter.increment();\n      await expect(counter.reset())\n        .to.not.emit(counter, \"ValueSet\");\n    });\n  });\n\n  describe(\"State Changes\", function () {\n    it(\"Should maintain correct state after multiple operations\", async function () {\n      await counter.increment();\n      await counter.increment();\n      await counter.decrement();\n      expect(await counter.count()).to.equal(1n);\n\n      await counter.reset();\n      expect(await counter.count()).to.equal(0n);\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 4.799286299967207,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 10987,
+      "total_tokens": 11541,
+      "completion_tokens": 554,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "af6b8ea56f4ed36afa66ada2412bea19d5a760659ed3c37c1713ee6d7f526855"
+}

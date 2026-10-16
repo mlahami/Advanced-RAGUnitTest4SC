@@ -1,0 +1,34 @@
+{
+  "id": "event-chain-contract--sergio11",
+  "domain": "ticketing-events",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "EventChainContract.sol",
+    "IEventChainContract.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/sergio11/eventchain_blockchain",
+    "commit": "69ba748ab14665390356ba4bce827eb65b3d14c5",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/EventChainContract.sol",
+      "contracts/IEventChainContract.sol"
+    ],
+    "test_paths": [
+      "test/EventChainContract.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/EventChainContract.sol": "8d17666cfb391f14981cfc9a1fb241868a00ea3c14e6713979ea90a7c9996e02",
+      "contracts/IEventChainContract.sol": "241bb381ddbdd871ed3bb47291615f270c97dc684b07a1eceabd217895617f81",
+      "test/EventChainContract.js": "13b1da220aec5698e041f9b423dbdf04fcc4bd1d266f39e2e5e01a7171fce506"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "ERC721 event tickets with ownership history, validation, burn; primary 190 lines; 13 it blocks (13/13 pass, stmt cov 96.77%); test uses global ethers (no hardhat require); licence file LICENSE; history: 43 commits 2022-10-30..2025-06-21; author sergio11 already has 3 SEEN repos",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:31:33.882456+00:00"
+}

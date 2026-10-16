@@ -1,0 +1,32 @@
+{
+  "id": "batch-minter1155--joraemon-event",
+  "domain": "multi-token",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "batchMinter1155.sol",
+    "base1155.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Joraemon-Event/hardhat",
+    "commit": "72395f8fd6a780dfa5669679fdb606323b7c2b85",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/base1155.sol",
+      "contracts/batchMinter1155.sol"
+    ],
+    "test_paths": [
+      "test/batchMinter1155.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/base1155.sol": "b48b33147bac1ab16ce15e32293cef861beac7503102e5350a947af1d09439be",
+      "contracts/batchMinter1155.sol": "1fbfc4ed068ed479e5372d6bcaf66d727686adaf0dd36d601b19a293dcce8536",
+      "test/batchMinter1155.js": "6bf906507a52f9f1014cad97d658ad4a926d000cb88b48dc203537de08dd051c"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "ERC1155 batch minting; repo has no hardhat.config; 1 commit",
+  "imported_utc": "2026-09-27T21:50:21.886516+00:00"
+}

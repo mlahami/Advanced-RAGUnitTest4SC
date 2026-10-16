@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> EventCore.sol
+> TicketManager.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+--------------------|----------|----------|----------|----------|----------------|
+File                |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+--------------------|----------|----------|----------|----------|----------------|
+ contracts\         |    96.15 |    63.33 |     87.5 |    95.35 |                |
+  EventCore.sol     |    83.33 |     37.5 |       75 |    89.47 |          58,62 |
+  TicketManager.sol |      100 |    72.73 |      100 |      100 |                |
+--------------------|----------|----------|----------|----------|----------------|
+All files           |    96.15 |    63.33 |     87.5 |    95.35 |                |
+--------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

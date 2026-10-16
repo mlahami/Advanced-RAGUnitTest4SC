@@ -1,0 +1,82 @@
+{
+  "pair": "agent-registry--m31527",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:20:08.623199+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AgentRegistry.sol": "b867ed996c2df50c9adda0a70129044cd31ff0da5229fa8518d417c57db54760",
+    "LICENSE": "3108d9273b50a2e09fe7128baf73c8c0110a8a64633a31fcf2464e4a16c2d95b",
+    "manifest.json": "187e5442c306846cf705b428dbf27656ff8643165588fcf998d4274c8fdfe1a5",
+    "test/AgentRegistry.test.js": "e3066a93e6f8d670c6d34b69dcdbbbae710272089c6ee94e5f2f8d9342006014"
+  },
+  "pair_sha256": "58f7e8425da7b615ac23ff5163dff153a651b5059b8e89e3879158ce3204e21c",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "AgentRegistry.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.184,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "AgentRegistry.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.168,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "AgentRegistry.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.155,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.97,
+      "mocha": {
+        "tests": 24,
+        "passes": 24,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.41,
+      "mocha": {
+        "tests": 24,
+        "passes": 24,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "AgentRegistry.sol": {
+          "statements": 100.0,
+          "branches": 94.74,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

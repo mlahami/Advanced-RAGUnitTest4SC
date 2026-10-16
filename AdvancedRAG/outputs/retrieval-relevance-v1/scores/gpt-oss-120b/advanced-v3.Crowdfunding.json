@@ -1,0 +1,79 @@
+{
+  "id": "advanced-v3.Crowdfunding",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "Crowdfunding",
+  "chunk_ids": [
+    1613,
+    1614,
+    1615,
+    1618,
+    1616,
+    3103,
+    1597,
+    2472,
+    3107,
+    1598
+  ],
+  "context_sha256": "630c0f73b54a187c062072e049afb077ee2fd9bac52248eb61320b1e130cd8d5",
+  "ratings": [
+    {
+      "chunk_id": 1613,
+      "rating": 2,
+      "reason": "Tests contribution handling and state updates similar to target’s contribute function; can be adapted by removing campaign ID and using totalRaised and contributions mapping."
+    },
+    {
+      "chunk_id": 1614,
+      "rating": 1,
+      "reason": "Uses time travel and balance change assertions, which are applicable, but the contract’s API differs (no createCampaign/indexed functions)."
+    },
+    {
+      "chunk_id": 1615,
+      "rating": 1,
+      "reason": "Shows time‑increase and refund pattern relevant to crowdfunding refund, but uses different API (createCampaign, indices) not directly reusable."
+    },
+    {
+      "chunk_id": 1618,
+      "rating": 1,
+      "reason": "Shows time‑increase and revert‑on‑post‑deadline pattern useful for similar deadline checks, but contract API differs, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 1616,
+      "rating": 1,
+      "reason": "Tests creator-only withdraw with time travel, similar access control pattern but uses different setup functions not present in target contract."
+    },
+    {
+      "chunk_id": 3103,
+      "rating": 2,
+      "reason": "Tests refund when goal not met, matching target's refund logic; only function name differs, otherwise setup and assertions are reusable."
+    },
+    {
+      "chunk_id": 1597,
+      "rating": 1,
+      "reason": "Shows generic contribution testing pattern with time helpers and loadFixture, but target lacks campaign IDs and events, so only partial reuse possible."
+    },
+    {
+      "chunk_id": 2472,
+      "rating": 1,
+      "reason": "Shows generic revert testing pattern, but withdraw logic differs; not directly applicable to crowdfunding’s withdraw conditions."
+    },
+    {
+      "chunk_id": 3107,
+      "rating": 2,
+      "reason": "Tests refund when goal not met, matching target's refund logic; only function name differs, otherwise setup and assertions are reusable."
+    },
+    {
+      "chunk_id": 1598,
+      "rating": 1,
+      "reason": "Shows pattern for testing deadline‑based revert using time increase, but target lacks campaign creation logic, so only the revert‑after‑deadline idea is reusable."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 10776,
+    "completion_tokens": 1182,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 48.4,
+  "evaluated_utc": "2026-10-13T07:46:40.007790+00:00"
+}

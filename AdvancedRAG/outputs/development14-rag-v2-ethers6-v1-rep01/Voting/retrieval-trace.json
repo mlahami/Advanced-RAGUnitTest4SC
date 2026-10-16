@@ -1,0 +1,177 @@
+{
+  "base_trace": null,
+  "pivot_steps": [
+    {
+      "retrieved": "3d567cef90e2a99f778f120f",
+      "type": "test_case",
+      "delivered": [
+        "3d567cef90e2a99f778f120f"
+      ]
+    },
+    {
+      "retrieved": "ee309d89f7a15147849e9c19",
+      "type": "function",
+      "delivered": []
+    },
+    {
+      "retrieved": "32b0a01191b9e55b3bc61519",
+      "type": "function",
+      "delivered": [
+        "571a0220f94bc38645b44624",
+        "9519b9ae512578052f7ac9f7"
+      ]
+    },
+    {
+      "retrieved": "5eddf7a1afb75b8f268cf95f",
+      "type": "function",
+      "delivered": [
+        "931758e615de08c88be79e76",
+        "da8090b552f993def4553588"
+      ]
+    },
+    {
+      "retrieved": "823fde51b4e2998ea5ef0f13",
+      "type": "test_case",
+      "delivered": [
+        "823fde51b4e2998ea5ef0f13"
+      ]
+    },
+    {
+      "retrieved": "c11b5f418aa2cb59757f4e2b",
+      "type": "test_case",
+      "delivered": [
+        "c11b5f418aa2cb59757f4e2b"
+      ]
+    },
+    {
+      "retrieved": "0c78fe0302965fb437a13bc2",
+      "type": "test_case",
+      "delivered": [
+        "0c78fe0302965fb437a13bc2"
+      ]
+    },
+    {
+      "retrieved": "9b4e87498c666f3acf495f92",
+      "type": "test_case",
+      "delivered": [
+        "9b4e87498c666f3acf495f92"
+      ]
+    },
+    {
+      "retrieved": "45d209302d369c4512dea109",
+      "type": "function",
+      "delivered": [
+        "2276c0efd98087475cf3c47e",
+        "8521be62d6ff2389cb9c05d9"
+      ]
+    }
+  ],
+  "selected": [
+    7368,
+    7353,
+    7354,
+    7402,
+    7403,
+    7399,
+    7430,
+    7351,
+    223,
+    7333
+  ],
+  "context_chars": 14089,
+  "per_function": 2,
+  "contract": "Voting",
+  "retrieval_seconds": 0.09556359995622188,
+  "hits": [
+    {
+      "chunk_id": 7368,
+      "test_id": "3d567cef90e2a99f778f120f",
+      "pair": "vote--abidoyesimze",
+      "domain_group": "voting-governance",
+      "name": "Should check if address has voted",
+      "via_function": null,
+      "chars": 1657
+    },
+    {
+      "chunk_id": 7353,
+      "test_id": "571a0220f94bc38645b44624",
+      "pair": "vote--abidoyesimze",
+      "domain_group": "voting-governance",
+      "name": "Should prevent double voting",
+      "via_function": "32b0a01191b9e55b3bc61519",
+      "chars": 1718
+    },
+    {
+      "chunk_id": 7354,
+      "test_id": "9519b9ae512578052f7ac9f7",
+      "pair": "vote--abidoyesimze",
+      "domain_group": "voting-governance",
+      "name": "Should prevent voting for invalid code",
+      "via_function": "32b0a01191b9e55b3bc61519",
+      "chars": 1683
+    },
+    {
+      "chunk_id": 7402,
+      "test_id": "931758e615de08c88be79e76",
+      "pair": "voting--0-warn",
+      "domain_group": "voting-governance",
+      "name": "lets a registered voter commit a vote",
+      "via_function": "5eddf7a1afb75b8f268cf95f",
+      "chars": 1192
+    },
+    {
+      "chunk_id": 7403,
+      "test_id": "da8090b552f993def4553588",
+      "pair": "voting--0-warn",
+      "domain_group": "voting-governance",
+      "name": "stores a salted commitment instead of the candidate id",
+      "via_function": "5eddf7a1afb75b8f268cf95f",
+      "chars": 1668
+    },
+    {
+      "chunk_id": 7399,
+      "test_id": "823fde51b4e2998ea5ef0f13",
+      "pair": "voting--0-warn",
+      "domain_group": "voting-governance",
+      "name": "lets the admin look up a candidate by their address",
+      "via_function": null,
+      "chars": 701
+    },
+    {
+      "chunk_id": 7430,
+      "test_id": "c11b5f418aa2cb59757f4e2b",
+      "pair": "voting--axysar",
+      "domain_group": "voting-governance",
+      "name": "should allow admin to add candidates",
+      "via_function": null,
+      "chars": 835
+    },
+    {
+      "chunk_id": 7351,
+      "test_id": "0c78fe0302965fb437a13bc2",
+      "pair": "vote--abidoyesimze",
+      "domain_group": "voting-governance",
+      "name": "Should allow registered voters to vote",
+      "via_function": null,
+      "chars": 1921
+    },
+    {
+      "chunk_id": 223,
+      "test_id": "9b4e87498c666f3acf495f92",
+      "pair": "advanced-voting--shree2160",
+      "domain_group": "voting-governance",
+      "name": "records the correct override state in voterRecords",
+      "via_function": null,
+      "chars": 1181
+    },
+    {
+      "chunk_id": 7333,
+      "test_id": "2276c0efd98087475cf3c47e",
+      "pair": "vote--abidoyesimze",
+      "domain_group": "voting-governance",
+      "name": "Should allow owner to register a contender",
+      "via_function": "45d209302d369c4512dea109",
+      "chars": 1533
+    }
+  ]
+}

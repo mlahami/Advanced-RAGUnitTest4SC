@@ -1,0 +1,125 @@
+{
+  "pair": "crowdfunding-campaign--seintian",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T08:14:44.370509+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/CrowdfundingCampaign.sol": "fd6d4cfbaec355291185db1f3acffaf98be108ec0fa55cfb25671a696ab1a4ef",
+    "contracts/CrowdfundingFactory.sol": "dd338c2bd84059be5ac5ef1fecac6e98c796799a23ed3dcaf87375a9da17f73e",
+    "contracts/ICrowdfundingCampaign.sol": "d135d8bd6e949fbae0079dad4dc98323c219f969703ffe5f39d3c256f6bd5750",
+    "contracts/ICrowdfundingFactory.sol": "15e1b3d9bd9738c814f77b5d25b7fdde658e6a8fce505177af8f17033fd56279",
+    "contracts/MaliciousReentrantToken.sol": "74a424b1a028bef257772cb121e98c292cb7193f642071981824d65e1cebdad2",
+    "contracts/MockERC20.sol": "55aa20eefd1803a6236c688c07e24537b0637fa6e97ef67890a066cb2b7acbd0",
+    "contracts/MockFeeToken.sol": "a76fdcb3fd534a1c8acac8111a513a59dadccde184465f6d8c000e6bab4120e1",
+    "LICENSE": "7320e81f502b1702916b2becd9b19ea90bfd2e04cd356ccd511a0a167b875105",
+    "manifest.json": "bc3a40ffaf5c073b2f30577bbde0885f3196a573c72df78904d3e23ecd58e2eb",
+    "test/CrowdfundingCampaign.test.js": "93715662a2f9b0bf5d9b9047e9eadafeaf7d8724c4ad62e3ae78b1d124794fa8",
+    "test/CrowdfundingFactory.test.js": "0b7b94a12128125f2cdb7047ed72d9f61d7b82ed0434f1baf0d8868ce0884d18"
+  },
+  "pair_sha256": "f4617068d8aa7a0442cc957ebdcd9a17fd5e3c6a7406e07127a12a1e361cc8e5",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "CrowdfundingCampaign.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.175,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "CrowdfundingCampaign.sol",
+        "reference": "DEX.sol",
+        "structural": 0.167,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "ICrowdfundingFactory.sol",
+        "reference": "MetaCoin.sol",
+        "structural": 0.138,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.09,
+      "mocha": {
+        "tests": 52,
+        "passes": 52,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.54,
+      "mocha": {
+        "tests": 52,
+        "passes": 52,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "CrowdfundingCampaign.sol": {
+          "statements": 100.0,
+          "branches": 93.59,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "CrowdfundingFactory.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MaliciousReentrantToken.sol": {
+          "statements": 100.0,
+          "branches": 83.33,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockERC20.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockFeeToken.sol": {
+          "statements": 100.0,
+          "branches": 75.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ICrowdfundingCampaign.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ICrowdfundingFactory.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

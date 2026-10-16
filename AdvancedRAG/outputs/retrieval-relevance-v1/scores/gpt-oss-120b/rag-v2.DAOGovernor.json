@@ -1,0 +1,79 @@
+{
+  "id": "rag-v2.DAOGovernor",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "DAOGovernor",
+  "chunk_ids": [
+    7368,
+    1838,
+    1839,
+    1834,
+    7506,
+    7453,
+    7454,
+    7457,
+    1848,
+    1847
+  ],
+  "context_sha256": "08aca86916fd888a56e57c8fc67a19b606b5ad01c9f6f27bc7e4f2179d7cf4c0",
+  "ratings": [
+    {
+      "chunk_id": 7368,
+      "rating": 2,
+      "reason": "Tests hasVoted before and after a vote, matching DAOGovernor’s hasVoted mapping and castVote flow; setup and assertions can be reused after renaming."
+    },
+    {
+      "chunk_id": 1838,
+      "rating": 1,
+      "reason": "Shows generic voting pattern and VoteCast event assertion, but event args order and setup differ; not directly reusable for target contract."
+    },
+    {
+      "chunk_id": 1839,
+      "rating": 1,
+      "reason": "Shows voting pattern and VoteCast event assertion, but uses different contract, grantVotingPower, and event argument order, so only partially useful."
+    },
+    {
+      "chunk_id": 1834,
+      "rating": 1,
+      "reason": "Tests revert on insufficient voting power, but target contract's propose has no such check; only generic revert pattern is reusable."
+    },
+    {
+      "chunk_id": 7506,
+      "rating": 0,
+      "reason": "Test checks pause/unpause functionality which DAOGovernor lacks; no applicable pattern for its proposal/vote flow."
+    },
+    {
+      "chunk_id": 7453,
+      "rating": 2,
+      "reason": "Shows voting call and event assertion pattern matching target’s castVote and VoteCast event"
+    },
+    {
+      "chunk_id": 7454,
+      "rating": 2,
+      "reason": "Tests double‑vote prevention, matching DAOGovernor’s hasVoted check and same revert message, so can be reused with renamed functions/contract."
+    },
+    {
+      "chunk_id": 7457,
+      "rating": 2,
+      "reason": "Shows time‑increase and expects revert when voting after deadline, directly reusable for DAOGovernor’s castVote deadline check."
+    },
+    {
+      "chunk_id": 1848,
+      "rating": 1,
+      "reason": "Shows revert‑check pattern for premature execution, but target uses different function (execute) and conditions (timelock), so only generic pattern applies."
+    },
+    {
+      "chunk_id": 1847,
+      "rating": 1,
+      "reason": "Shows voting, time increase, and execution revert pattern useful, but functions and revert conditions differ from target contract"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 15570,
+    "completion_tokens": 1474,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 100.5,
+  "evaluated_utc": "2026-10-12T09:01:29.155541+00:00"
+}

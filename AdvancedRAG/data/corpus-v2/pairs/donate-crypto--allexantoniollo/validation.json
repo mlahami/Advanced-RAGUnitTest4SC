@@ -1,0 +1,96 @@
+{
+  "pair": "donate-crypto--allexantoniollo",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:14:51.429378+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/DonateCrypto.sol": "343a5f6e62271b1221b42955b299e6d96efa161cb542747727af3c5f54f209bd",
+    "contracts/DonateCryptoLib.sol": "9106e7477e8021691b94fc05c54249343f033a977bde77c8f6f54ba5d5ef6186",
+    "contracts/IDonateCrypto.sol": "107815edf7661765dc2cdafc0c4fcd8c096b9ec74602452f7afc5a348cb32ecf",
+    "LICENSE": "5b634dd5e7fc99d32c2c4b52c4a0c5da3b4f38434f7f9ce59d73491e0c75b3e5",
+    "manifest.json": "d062606895bcb92f02d3e7b309b465c7e30d812a027d0c5d7ffef49585319f86",
+    "test/DonateCrypto.test.js": "e518bc70a8838915677b34bfd5a6412ba8aac45f3cc4179c0651880ace09274e"
+  },
+  "pair_sha256": "c883a5b9caa7b0e6898a95f8965248e08bfcd3c4c0ce5c446e56cb6a922943b2",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "DonateCrypto.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.13,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "DonateCrypto.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.121,
+        "signatures": 0.067,
+        "min_functions": 8
+      },
+      {
+        "contract": "DonateCrypto.sol",
+        "reference": "Crowdfunding.sol",
+        "structural": 0.118,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.89,
+      "mocha": {
+        "tests": 15,
+        "passes": 15,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.13,
+      "mocha": {
+        "tests": 15,
+        "passes": 15,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "DonateCrypto.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "DonateCryptoLib.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IDonateCrypto.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

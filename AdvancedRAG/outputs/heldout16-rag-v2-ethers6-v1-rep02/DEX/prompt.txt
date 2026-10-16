@@ -1,0 +1,1594 @@
+You are a Solidity QA engineer. Generate one executable JavaScript test file.
+Use Hardhat 2, ethers 6, Mocha and Chai, with hardhat-chai-matchers installed.
+Import const { expect } = require("chai"); and const { ethers } = require("hardhat");
+Use ethers.parseEther, ethers.MaxUint256, await contract.waitForDeployment() and await contract.getAddress() (ethers 6).
+Deploy a fresh instance in beforeEach, passing the actual constructor arguments.
+Test the supplied contract's functions, state changes, events, boundaries and relevant reverts.
+Do not assume get/set functions exist. Do not invent functions, events or error messages.
+Use only the declared benchmark fixtures when an external dependency is required; do not reference other helper files or undeclared mock contracts.
+For uint256 values use BigInt literals (e.g. 10n) and Chai equality matchers, not JavaScript number arithmetic.
+Return only complete JavaScript code, without explanations or Markdown.
+
+USER TASK AND TARGET CONTRACT
+context: Generate a unit test suite for the supplied Solidity contract.
+
+generalInstructions: Use Hardhat 2, ethers 6, Mocha and hardhat-chai-matchers. No external helper files.
+
+requirements: Cover actual public functions, state changes, events, access restrictions, relevant boundaries and revert conditions. Use fresh deployments. Do not invent behavior.
+
+exampleTest: 
+
+solidityCode: // SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+//DEX (AMM) â€” constant-product market maker (Uniswap V2-style swap + liquidity)
+interface IERC20Mintable {
+    function transfer(address to, uint256 amount) external returns (bool);
+    function transferFrom(address from, address to, uint256 amount) external returns (bool);
+}
+
+contract DEX {
+    IERC20Mintable public tokenA;
+    IERC20Mintable public tokenB;
+
+    uint256 public reserveA;
+    uint256 public reserveB;
+    uint256 public totalShares;
+    mapping(address => uint256) public shares;
+
+    event LiquidityAdded(address indexed provider, uint256 sharesIssued);
+    event LiquidityRemoved(address indexed provider, uint256 sharesBurned);
+    event Swapped(address indexed user, address tokenIn, uint256 amountIn, uint256 amountOut);
+
+    constructor(address _tokenA, address _tokenB) {
+        tokenA = IERC20Mintable(_tokenA);
+        tokenB = IERC20Mintable(_tokenB);
+    }
+
+    function addLiquidity(uint256 _amountA, uint256 _amountB) external returns (uint256 sharesMinted) {
+        tokenA.transferFrom(msg.sender, address(this), _amountA);
+        tokenB.transferFrom(msg.sender, address(this), _amountB);
+
+        if (totalShares == 0) {
+            sharesMinted = _sqrt(_amountA * _amountB);
+        } else {
+            sharesMinted = _min(
+                (_amountA * totalShares) / reserveA,
+                (_amountB * totalShares) / reserveB
+            );
+        }
+        require(sharesMinted > 0, "Insufficient liquidity minted");
+        shares[msg.sender] += sharesMinted;
+        totalShares += sharesMinted;
+        reserveA += _amountA;
+        reserveB += _amountB;
+        emit LiquidityAdded(msg.sender, sharesMinted);
+    }
+
+    function removeLiquidity(uint256 _shares) external returns (uint256 amountA, uint256 amountB) {
+        require(shares[msg.sender] >= _shares, "Insufficient shares");
+        amountA = (_shares * reserveA) / totalShares;
+        amountB = (_shares * reserveB) / totalShares;
+        shares[msg.sender] -= _shares;
+        totalShares -= _shares;
+        reserveA -= amountA;
+        reserveB -= amountB;
+        tokenA.transfer(msg.sender, amountA);
+        tokenB.transfer(msg.sender, amountB);
+        emit LiquidityRemoved(msg.sender, _shares);
+    }
+
+    /// @notice Swap tokenA for tokenB (fee = 0.3%)
+    function swapAforB(uint256 _amountIn) external returns (uint256 amountOut) {
+        tokenA.transferFrom(msg.sender, address(this), _amountIn);
+        uint256 amountInWithFee = _amountIn * 997;
+        amountOut = (amountInWithFee * reserveB) / (reserveA * 1000 + amountInWithFee);
+        reserveA += _amountIn;
+        reserveB -= amountOut;
+        tokenB.transfer(msg.sender, amountOut);
+        emit Swapped(msg.sender, address(tokenA), _amountIn, amountOut);
+    }
+
+    function swapBforA(uint256 _amountIn) external returns (uint256 amountOut) {
+        tokenB.transferFrom(msg.sender, address(this), _amountIn);
+        uint256 amountInWithFee = _amountIn * 997;
+        amountOut = (amountInWithFee * reserveA) / (reserveB * 1000 + amountInWithFee);
+        reserveB += _amountIn;
+        reserveA -= amountOut;
+        tokenA.transfer(msg.sender, amountOut);
+        emit Swapped(msg.sender, address(tokenB), _amountIn, amountOut);
+    }
+
+    function _sqrt(uint256 y) internal pure returns (uint256 z) {
+        if (y > 3) { z = y; uint256 x = y / 2 + 1; while (x < z) { z = x; x = (y / x + x) / 2; } }
+        else if (y != 0) { z = 1; }
+    }
+    function _min(uint256 a, uint256 b) internal pure returns (uint256) { return a < b ? a : b; }
+}
+
+BENCHMARK FIXTURES (identical for every experimental configuration):
+The following precompiled auxiliary contracts are available by the exact canonical names below.
+Use them only when the target requires an external dependency. Do not invent aliases, other mocks,
+helper files, functions, or constructor signatures. Deploy and initialize a fresh fixture in beforeEach.
+These fixtures are test infrastructure; they are not retrieved evidence and do not describe target behavior.
+FIXTURE CATALOG:
+{
+  "fixture_version": "enase30-fixtures-v2",
+  "retrieval_policy": "excluded-from-all-retrieval-corpora",
+  "contracts": [
+    {
+      "name": "BenchmarkERC20",
+      "constructor": [
+        "string name",
+        "string symbol"
+      ],
+      "setup": "mint(account, amount), then approve(spender, amount) from that account when required",
+      "capabilities": [
+        "mint",
+        "burnFrom",
+        "transfer",
+        "transferFrom",
+        "approve",
+        "balanceOf",
+        "allowance"
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "name_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "allowance",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "burnFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "decimals",
+          "outputs": [
+            {
+              "internalType": "uint8",
+              "name": "",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transfer",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "name": "BenchmarkVotingToken",
+      "constructor": [
+        "string name",
+        "string symbol"
+      ],
+      "setup": "mint(voter, votingWeight)",
+      "capabilities": [
+        "mint",
+        "balanceOf",
+        "transfer",
+        "transferFrom",
+        "approve"
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "name_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "allowance",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "burnFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "decimals",
+          "outputs": [
+            {
+              "internalType": "uint8",
+              "name": "",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transfer",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "name": "BenchmarkERC721",
+      "constructor": [
+        "string name",
+        "string symbol"
+      ],
+      "setup": "mint(owner, tokenId), then approve(spender, tokenId) from the owner when required",
+      "capabilities": [
+        "mint",
+        "ownerOf",
+        "getApproved",
+        "approve",
+        "setApprovalForAll",
+        "transferFrom",
+        "safeTransferFrom"
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "name_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "approved",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool"
+            }
+          ],
+          "name": "ApprovalForAll",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "approved",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "getApproved",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "isApprovedForAll",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "ownerOf",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "safeTransferFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool"
+            }
+          ],
+          "name": "setApprovalForAll",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "name": "BenchmarkTarget",
+      "constructor": [],
+      "setup": "none",
+      "capabilities": [
+        "setValue",
+        "value",
+        "fail"
+      ],
+      "abi": [
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "ValueSet",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "fail",
+          "outputs": [],
+          "stateMutability": "pure",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "value_",
+              "type": "uint256"
+            }
+          ],
+          "name": "setValue",
+          "outputs": [],
+          "stateMutability": "payable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "value",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ]
+    }
+  ],
+  "compiler": "0.8.24+commit.e11b9ed9.Emscripten.clang"
+}
+FIXTURE SOURCE (authoritative for fixture behavior and revert conditions):
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+/// @notice Frozen auxiliary contracts available to every evaluated configuration.
+/// They are test infrastructure and are never indexed by the retriever.
+contract BenchmarkERC20 {
+    string public name;
+    string public symbol;
+    uint8 public constant decimals = 18;
+    uint256 public totalSupply;
+    mapping(address => uint256) public balanceOf;
+    mapping(address => mapping(address => uint256)) public allowance;
+
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+
+    constructor(string memory name_, string memory symbol_) {
+        name = name_;
+        symbol = symbol_;
+    }
+
+    function mint(address to, uint256 amount) external {
+        require(to != address(0), "zero address");
+        totalSupply += amount;
+        balanceOf[to] += amount;
+        emit Transfer(address(0), to, amount);
+    }
+
+    function approve(address spender, uint256 amount) external returns (bool) {
+        allowance[msg.sender][spender] = amount;
+        emit Approval(msg.sender, spender, amount);
+        return true;
+    }
+
+    function transfer(address to, uint256 amount) external returns (bool) {
+        _transfer(msg.sender, to, amount);
+        return true;
+    }
+
+    function transferFrom(address from, address to, uint256 amount) external returns (bool) {
+        uint256 permitted = allowance[from][msg.sender];
+        if (permitted != type(uint256).max) {
+            require(permitted >= amount, "insufficient allowance");
+            allowance[from][msg.sender] = permitted - amount;
+            emit Approval(from, msg.sender, allowance[from][msg.sender]);
+        }
+        _transfer(from, to, amount);
+        return true;
+    }
+
+    function burnFrom(address from, uint256 amount) external {
+        uint256 permitted = allowance[from][msg.sender];
+        if (msg.sender != from && permitted != type(uint256).max) {
+            require(permitted >= amount, "insufficient allowance");
+            allowance[from][msg.sender] = permitted - amount;
+        }
+        require(balanceOf[from] >= amount, "insufficient balance");
+        balanceOf[from] -= amount;
+        totalSupply -= amount;
+        emit Transfer(from, address(0), amount);
+    }
+
+    function _transfer(address from, address to, uint256 amount) internal {
+        require(to != address(0), "zero address");
+        require(balanceOf[from] >= amount, "insufficient balance");
+        balanceOf[from] -= amount;
+        balanceOf[to] += amount;
+        emit Transfer(from, to, amount);
+    }
+}
+
+contract BenchmarkVotingToken is BenchmarkERC20 {
+    constructor(string memory name_, string memory symbol_) BenchmarkERC20(name_, symbol_) {}
+}
+
+contract BenchmarkERC721 {
+    string public name;
+    string public symbol;
+    mapping(uint256 => address) private _ownerOf;
+    mapping(uint256 => address) private _approved;
+    mapping(address => mapping(address => bool)) public isApprovedForAll;
+
+    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
+    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);
+    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);
+
+    constructor(string memory name_, string memory symbol_) {
+        name = name_;
+        symbol = symbol_;
+    }
+
+    function ownerOf(uint256 tokenId) public view returns (address) {
+        address owner = _ownerOf[tokenId];
+        require(owner != address(0), "nonexistent token");
+        return owner;
+    }
+
+    function mint(address to, uint256 tokenId) external {
+        require(to != address(0) && _ownerOf[tokenId] == address(0), "invalid mint");
+        _ownerOf[tokenId] = to;
+        emit Transfer(address(0), to, tokenId);
+    }
+
+    function getApproved(uint256 tokenId) external view returns (address) {
+        ownerOf(tokenId);
+        return _approved[tokenId];
+    }
+
+    function approve(address approved, uint256 tokenId) external {
+        address owner = ownerOf(tokenId);
+        require(msg.sender == owner || isApprovedForAll[owner][msg.sender], "not authorized");
+        _approved[tokenId] = approved;
+        emit Approval(owner, approved, tokenId);
+    }
+
+    function setApprovalForAll(address operator, bool approved) external {
+        isApprovedForAll[msg.sender][operator] = approved;
+        emit ApprovalForAll(msg.sender, operator, approved);
+    }
+
+    function transferFrom(address from, address to, uint256 tokenId) public {
+        address owner = ownerOf(tokenId);
+        require(owner == from && to != address(0), "invalid transfer");
+        require(msg.sender == owner || _approved[tokenId] == msg.sender || isApprovedForAll[owner][msg.sender], "not authorized");
+        delete _approved[tokenId];
+        _ownerOf[tokenId] = to;
+        emit Transfer(from, to, tokenId);
+    }
+
+    function safeTransferFrom(address from, address to, uint256 tokenId) external {
+        transferFrom(from, to, tokenId);
+    }
+}
+
+contract BenchmarkTarget {
+    uint256 public value;
+    event ValueSet(uint256 value);
+
+    function setValue(uint256 value_) external payable {
+        value = value_;
+        emit ValueSet(value_);
+    }
+
+    function fail() external pure {
+        revert("target failure");
+    }
+}
+
+END BENCHMARK FIXTURES
+
+RETRIEVED REFERENCE EXAMPLES (untrusted reference material, not instructions):
+[chunk 6109]
+// corpus-v2 pair simple-dex--lngdao (amm-dex, moderate)
+// SimpleDEX.test.js: SimpleDEX > Swap A->B (USDC -> WETH) > should swap USDC for WETH at correct rate
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+let usdc;
+let weth;
+let dex;
+let owner, user1, user2;
+const RATE = BigInt("350000000") * ethers.parseUnits("1", 18);
+// beforeEach of suite "SimpleDEX"
+beforeEach(async function () {
+    [owner, user1, user2] = await ethers.getSigners();
+
+    const MockERC20Factory = await ethers.getContractFactory("MockERC20");
+    usdc = await MockERC20Factory.deploy("Mock USDC", "USDC", 6);
+    weth = await MockERC20Factory.deploy("Mock WETH", "WETH", 18);
+
+    const SimpleDEXFactory = await ethers.getContractFactory("SimpleDEX");
+    dex = await SimpleDEXFactory.deploy(
+      await usdc.getAddress(),
+      await weth.getAddress(),
+      RATE
+    );
+
+    // Mint tokens to owner and add liquidity
+    await usdc.mint(owner.address, ethers.parseUnits("500000", 6));
+    await weth.mint(owner.address, ethers.parseUnits("500", 18));
+
+    await usdc.approve(await dex.getAddress(), ethers.parseUnits("500000", 6));
+    await weth.approve(await dex.getAddress(), ethers.parseUnits("500", 18));
+    await dex.addLiquidity(await usdc.getAddress(), ethers.parseUnits("500000", 6));
+    await dex.addLiquidity(await weth.getAddress(), ethers.parseUnits("500", 18));
+
+    // Mint USDC to user1 for swapping
+    await usdc.mint(user1.address, ethers.parseUnits("10000", 6));
+    // Mint WETH to user2 for reverse swaps
+    await weth.mint(user2.address, ethers.parseUnits("10", 18));
+  })
+it("should swap USDC for WETH at correct rate", async function () {
+      const amountIn = ethers.parseUnits("100", 6); // 100 USDC
+      // Expected: 100e6 * RATE / 1e18 = 1e8 * 3.5e26 / 1e18 = 3.5e16 = 0.035 WETH
+      const expectedOut = (amountIn * RATE) / ethers.parseUnits("1", 18);
+
+      await usdc.connect(user1).approve(await dex.getAddress(), amountIn);
+      const tx = await dex.connect(user1).swap(await usdc.getAddress(), amountIn);
+
+      await expect(tx)
+        .to.emit(dex, "Swapped")
+        .withArgs(
+          user1.address,
+          await usdc.getAddress(),
+          await weth.getAddress(),
+          amountIn,
+          expectedOut,
+          (await ethers.provider.getBlock("latest")) .timestamp
+        );
+
+      // Check user1 received WETH
+      expect(await weth.balanceOf(user1.address)).to.equal(expectedOut);
+      // Check user1 USDC decreased
+      expect(await usdc.balanceOf(user1.address)).to.equal(ethers.parseUnits("10000", 6) - amountIn);
+    })
+
+
+[chunk 6110]
+// corpus-v2 pair simple-dex--lngdao (amm-dex, moderate)
+// SimpleDEX.test.js: SimpleDEX > Swap A->B (USDC -> WETH) > should handle large swap amounts
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+let usdc;
+let weth;
+let dex;
+let owner, user1, user2;
+const RATE = BigInt("350000000") * ethers.parseUnits("1", 18);
+// beforeEach of suite "SimpleDEX"
+beforeEach(async function () {
+    [owner, user1, user2] = await ethers.getSigners();
+
+    const MockERC20Factory = await ethers.getContractFactory("MockERC20");
+    usdc = await MockERC20Factory.deploy("Mock USDC", "USDC", 6);
+    weth = await MockERC20Factory.deploy("Mock WETH", "WETH", 18);
+
+    const SimpleDEXFactory = await ethers.getContractFactory("SimpleDEX");
+    dex = await SimpleDEXFactory.deploy(
+      await usdc.getAddress(),
+      await weth.getAddress(),
+      RATE
+    );
+
+    // Mint tokens to owner and add liquidity
+    await usdc.mint(owner.address, ethers.parseUnits("500000", 6));
+    await weth.mint(owner.address, ethers.parseUnits("500", 18));
+
+    await usdc.approve(await dex.getAddress(), ethers.parseUnits("500000", 6));
+    await weth.approve(await dex.getAddress(), ethers.parseUnits("500", 18));
+    await dex.addLiquidity(await usdc.getAddress(), ethers.parseUnits("500000", 6));
+    await dex.addLiquidity(await weth.getAddress(), ethers.parseUnits("500", 18));
+
+    // Mint USDC to user1 for swapping
+    await usdc.mint(user1.address, ethers.parseUnits("10000", 6));
+    // Mint WETH to user2 for reverse swaps
+    await weth.mint(user2.address, ethers.parseUnits("10", 18));
+  })
+it("should handle large swap amounts", async function () {
+      const amountIn = ethers.parseUnits("1000", 6); // 1000 USDC
+      const expectedOut = (amountIn * RATE) / ethers.parseUnits("1", 18);
+
+      await usdc.connect(user1).approve(await dex.getAddress(), amountIn);
+      await dex.connect(user1).swap(await usdc.getAddress(), amountIn);
+
+      expect(await weth.balanceOf(user1.address)).to.equal(expectedOut);
+    })
+
+
+[chunk 6114]
+// corpus-v2 pair simple-dex--lngdao (amm-dex, moderate)
+// SimpleDEX.test.js: SimpleDEX > Error cases > should reject swap exceeding DEX liquidity
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+let usdc;
+let weth;
+let dex;
+let owner, user1, user2;
+const RATE = BigInt("350000000") * ethers.parseUnits("1", 18);
+// beforeEach of suite "SimpleDEX"
+beforeEach(async function () {
+    [owner, user1, user2] = await ethers.getSigners();
+
+    const MockERC20Factory = await ethers.getContractFactory("MockERC20");
+    usdc = await MockERC20Factory.deploy("Mock USDC", "USDC", 6);
+    weth = await MockERC20Factory.deploy("Mock WETH", "WETH", 18);
+
+    const SimpleDEXFactory = await ethers.getContractFactory("SimpleDEX");
+    dex = await SimpleDEXFactory.deploy(
+      await usdc.getAddress(),
+      await weth.getAddress(),
+      RATE
+    );
+
+    // Mint tokens to owner and add liquidity
+    await usdc.mint(owner.address, ethers.parseUnits("500000", 6));
+    await weth.mint(owner.address, ethers.parseUnits("500", 18));
+
+    await usdc.approve(await dex.getAddress(), ethers.parseUnits("500000", 6));
+    await weth.approve(await dex.getAddress(), ethers.parseUnits("500", 18));
+    await dex.addLiquidity(await usdc.getAddress(), ethers.parseUnits("500000", 6));
+    await dex.addLiquidity(await weth.getAddress(), ethers.parseUnits("500", 18));
+
+    // Mint USDC to user1 for swapping
+    await usdc.mint(user1.address, ethers.parseUnits("10000", 6));
+    // Mint WETH to user2 for reverse swaps
+    await weth.mint(user2.address, ethers.parseUnits("10", 18));
+  })
+it("should reject swap exceeding DEX liquidity", async function () {
+      // Mint a huge amount of USDC to user1
+      await usdc.mint(user1.address, ethers.parseUnits("100000000", 6));
+      const hugeAmount = ethers.parseUnits("100000000", 6);
+      await usdc.connect(user1).approve(await dex.getAddress(), hugeAmount);
+
+      await expect(
+        dex.connect(user1).swap(await usdc.getAddress(), hugeAmount)
+      ).to.be.revertedWith("Insufficient DEX liquidity");
+    })
+
+
+[chunk 2664]
+// corpus-v2 pair evo-pool--diveshk007 (amm-dex, complex)
+// EvoPool.test.js: EvoPool > Add Liquidity > should reject zero amounts
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+let pool;
+let tokenA;
+let tokenB;
+let owner;
+let lp;
+let trader;
+let controller;
+const INITIAL_SUPPLY = ethers.parseEther("1000000");
+const INITIAL_FEE_BPS = 30n;
+const INITIAL_BETA = 5000n;
+// beforeEach of suite "EvoPool"
+beforeEach(async function () {
+    [owner, lp, trader, controller] = await ethers.getSigners();
+
+    // Deploy tokens
+    const TokenFactory = await ethers.getContractFactory("EvoToken");
+    tokenA = await TokenFactory.deploy("Token A", "TKA", INITIAL_SUPPLY, owner.address);
+    tokenB = await TokenFactory.deploy("Token B", "TKB", INITIAL_SUPPLY, owner.address);
+
+    // Deploy pool
+    const PoolFactory = await ethers.getContractFactory("EvoPool");
+    pool = await PoolFactory.deploy(
+      await tokenA.getAddress(),
+      await tokenB.getAddress(),
+      INITIAL_FEE_BPS,
+      INITIAL_BETA,
+      owner.address
+    );
+
+    // Set controller
+    await pool.setController(controller.address);
+
+    // Distribute tokens to LP and trader
+    await tokenA.transfer(lp.address, ethers.parseEther("100000"));
+    await tokenB.transfer(lp.address, ethers.parseEther("100000"));
+    await tokenA.transfer(trader.address, ethers.parseEther("10000"));
+    await tokenB.transfer(trader.address, ethers.parseEther("10000"));
+
+    // Approve pool
+    const poolAddr = await pool.getAddress();
+    await tokenA.connect(lp).approve(poolAddr, ethers.MaxUint256);
+    await tokenB.connect(lp).approve(poolAddr, ethers.MaxUint256);
+    await tokenA.connect(trader).approve(poolAddr, ethers.MaxUint256);
+    await tokenB.connect(trader).approve(poolAddr, ethers.MaxUint256);
+  })
+it("should reject zero amounts", async function () {
+      await expect(
+        pool.connect(lp).addLiquidity(0, ethers.parseEther("100"))
+      ).to.be.revertedWithCustomError(pool, "ZeroAmount");
+    })
+
+
+[chunk 2665]
+// corpus-v2 pair evo-pool--diveshk007 (amm-dex, complex)
+// EvoPool.test.js: EvoPool > Add Liquidity > should add subsequent liquidity proportionally
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+let pool;
+let tokenA;
+let tokenB;
+let owner;
+let lp;
+let trader;
+let controller;
+const INITIAL_SUPPLY = ethers.parseEther("1000000");
+const INITIAL_FEE_BPS = 30n;
+const INITIAL_BETA = 5000n;
+// beforeEach of suite "EvoPool"
+beforeEach(async function () {
+    [owner, lp, trader, controller] = await ethers.getSigners();
+
+    // Deploy tokens
+    const TokenFactory = await ethers.getContractFactory("EvoToken");
+    tokenA = await TokenFactory.deploy("Token A", "TKA", INITIAL_SUPPLY, owner.address);
+    tokenB = await TokenFactory.deploy("Token B", "TKB", INITIAL_SUPPLY, owner.address);
+
+    // Deploy pool
+    const PoolFactory = await ethers.getContractFactory("EvoPool");
+    pool = await PoolFactory.deploy(
+      await tokenA.getAddress(),
+      await tokenB.getAddress(),
+      INITIAL_FEE_BPS,
+      INITIAL_BETA,
+      owner.address
+    );
+
+    // Set controller
+    await pool.setController(controller.address);
+
+    // Distribute tokens to LP and trader
+    await tokenA.transfer(lp.address, ethers.parseEther("100000"));
+    await tokenB.transfer(lp.address, ethers.parseEther("100000"));
+    await tokenA.transfer(trader.address, ethers.parseEther("10000"));
+    await tokenB.transfer(trader.address, ethers.parseEther("10000"));
+
+    // Approve pool
+    const poolAddr = await pool.getAddress();
+    await tokenA.connect(lp).approve(poolAddr, ethers.MaxUint256);
+    await tokenB.connect(lp).approve(poolAddr, ethers.MaxUint256);
+    await tokenA.connect(trader).approve(poolAddr, ethers.MaxUint256);
+    await tokenB.connect(trader).approve(poolAddr, ethers.MaxUint256);
+  })
+it("should add subsequent liquidity proportionally", async function () {
+      const amount = ethers.parseEther("1000");
+      await pool.connect(lp).addLiquidity(amount, amount);
+      const lpBefore = await pool.balanceOf(lp.address);
+
+      const add = ethers.parseEther("500");
+      await pool.connect(lp).addLiquidity(add, add);
+      const lpAfter = await pool.balanceOf(lp.address);
+
+      // Should get roughly half the first deposit's LP tokens
+      expect(lpAfter - lpBefore).to.be.closeTo(
+        lpBefore / 2n,
+        ethers.parseEther("1") // tolerance for minimum liquidity lock
+      );
+    })
+
+
+[chunk 2666]
+// corpus-v2 pair evo-pool--diveshk007 (amm-dex, complex)
+// EvoPool.test.js: EvoPool > Add Liquidity > should allow LP token transfer (ERC-20 composability)
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+let pool;
+let tokenA;
+let tokenB;
+let owner;
+let lp;
+let trader;
+let controller;
+const INITIAL_SUPPLY = ethers.parseEther("1000000");
+const INITIAL_FEE_BPS = 30n;
+const INITIAL_BETA = 5000n;
+// beforeEach of suite "EvoPool"
+beforeEach(async function () {
+    [owner, lp, trader, controller] = await ethers.getSigners();
+
+    // Deploy tokens
+    const TokenFactory = await ethers.getContractFactory("EvoToken");
+    tokenA = await TokenFactory.deploy("Token A", "TKA", INITIAL_SUPPLY, owner.address);
+    tokenB = await TokenFactory.deploy("Token B", "TKB", INITIAL_SUPPLY, owner.address);
+
+    // Deploy pool
+    const PoolFactory = await ethers.getContractFactory("EvoPool");
+    pool = await PoolFactory.deploy(
+      await tokenA.getAddress(),
+      await tokenB.getAddress(),
+      INITIAL_FEE_BPS,
+      INITIAL_BETA,
+      owner.address
+    );
+
+    // Set controller
+    await pool.setController(controller.address);
+
+    // Distribute tokens to LP and trader
+    await tokenA.transfer(lp.address, ethers.parseEther("100000"));
+    await tokenB.transfer(lp.address, ethers.parseEther("100000"));
+    await tokenA.transfer(trader.address, ethers.parseEther("10000"));
+    await tokenB.transfer(trader.address, ethers.parseEther("10000"));
+
+    // Approve pool
+    const poolAddr = await pool.getAddress();
+    await tokenA.connect(lp).approve(poolAddr, ethers.MaxUint256);
+    await tokenB.connect(lp).approve(poolAddr, ethers.MaxUint256);
+    await tokenA.connect(trader).approve(poolAddr, ethers.MaxUint256);
+    await tokenB.connect(trader).approve(poolAddr, ethers.MaxUint256);
+  })
+it("should allow LP token transfer (ERC-20 composability)", async function () {
+      const amount = ethers.parseEther("1000");
+      await pool.connect(lp).addLiquidity(amount, amount);
+
+      const lpBalance = await pool.balanceOf(lp.address);
+      expect(lpBalance).to.be.gt(0);
+
+      // Transfer half to trader
+      const half = lpBalance / 2n;
+      await pool.connect(lp).transfer(trader.address, half);
+
+      expect(await pool.balanceOf(trader.address)).to.equal(half);
+      expect(await pool.balanceOf(lp.address)).to.equal(lpBalance - half);
+    })
+
+
+[chunk 5710]
+// corpus-v2 pair recurring-scheduler--kravadk (subscriptions-streaming, moderate)
+// RecurringScheduler.test.js: RecurringScheduler > Lifecycle > rejects interval < 1 hour
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+const { parseEther, ZeroAddress, randomBytes, hexlify } = require("ethers");
+let scheduler;
+let payer;
+let merchant;
+let stranger;
+const newSalt = () => hexlify(randomBytes(32));
+// beforeEach of suite "RecurringScheduler"
+beforeEach(async () => {
+    [payer, merchant, stranger] = await ethers.getSigners();
+    const S = await ethers.getContractFactory('RecurringScheduler');
+    scheduler = await S.deploy(payer.address);
+  })
+it('rejects interval < 1 hour', async () => {
+      const salt = newSalt();
+      await expect(
+        scheduler.connect(payer).createSubscription(merchant.address, ZeroAddress, parseEther('0.1'), 3599, 6, salt, {
+          value: parseEther('0.6'),
+        }),
+      ).to.be.revertedWithCustomError(scheduler, 'IntervalTooShort');
+    })

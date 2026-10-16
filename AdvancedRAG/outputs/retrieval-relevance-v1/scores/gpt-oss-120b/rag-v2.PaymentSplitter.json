@@ -1,0 +1,73 @@
+{
+  "id": "rag-v2.PaymentSplitter",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "PaymentSplitter",
+  "chunk_ids": [
+    2423,
+    2429,
+    2428,
+    2427,
+    3040,
+    2424,
+    2425,
+    3926,
+    2432
+  ],
+  "context_sha256": "1874094e742cab24e0e1597ca5c4c81050a5ac8d3a450398f3b03620b2402def",
+  "ratings": [
+    {
+      "chunk_id": 2423,
+      "rating": 1,
+      "reason": "Shows pattern of verifying shares and totalShares, but target lacks addPayee function; only constructor sets shares, so only generic assertion pattern applies."
+    },
+    {
+      "chunk_id": 2429,
+      "rating": 0,
+      "reason": "Tests resetPayees and addPayee which don’t exist in target; no applicable behavior or pattern for PaymentSplitter."
+    },
+    {
+      "chunk_id": 2428,
+      "rating": 1,
+      "reason": "Tests duplicate payee addition, which target lacks; only generic revert pattern applies"
+    },
+    {
+      "chunk_id": 2427,
+      "rating": 1,
+      "reason": "Tests revert on zero shares, but target lacks addPayee; only generic revert pattern applies, not the behavior."
+    },
+    {
+      "chunk_id": 3040,
+      "rating": 1,
+      "reason": "Tests balance changes after payout, similar to PaymentSplitter distribute, but uses claim logic and events not present in target contract."
+    },
+    {
+      "chunk_id": 2424,
+      "rating": 1,
+      "reason": "Shows generic beforeEach deployment and expect().to.emit pattern, but target lacks addPayee/event logic, so only a basic testing pattern is reusable."
+    },
+    {
+      "chunk_id": 2425,
+      "rating": 0,
+      "reason": "Test checks ownable revert for adding payees, which the PaymentSplitter contract lacks; no similar function or access control to reuse."
+    },
+    {
+      "chunk_id": 3926,
+      "rating": 1,
+      "reason": "Shows generic setup, token deployment, approvals, and expect assertions useful for any contract test, but does not test PaymentSplitter behavior."
+    },
+    {
+      "chunk_id": 2432,
+      "rating": 1,
+      "reason": "Shows distribution based on shares and balance checks, but target lacks addPayee and token logic; only ETH distribution via constructor, so only generic pattern useful."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 10082,
+    "completion_tokens": 1155,
+    "calls": 9
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 69.5,
+  "evaluated_utc": "2026-10-12T08:50:37.466208+00:00"
+}

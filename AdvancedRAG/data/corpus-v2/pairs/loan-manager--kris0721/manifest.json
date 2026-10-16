@@ -1,0 +1,37 @@
+{
+  "id": "loan-manager--kris0721",
+  "domain": "lending",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "LoanManager.sol",
+    "LendingPool.sol",
+    "MockERC20.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Kris0721/CDL",
+    "commit": "77d15efb60692f5d91ee7b54c7cdf7aeda2d5556",
+    "license": "MIT",
+    "contract_paths": [
+      "blockchain/contracts/LoanManager.sol",
+      "blockchain/contracts/LendingPool.sol",
+      "blockchain/contracts/MockERC20.sol"
+    ],
+    "test_paths": [
+      "blockchain/test/LoanManager.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "blockchain/contracts/LoanManager.sol": "a3a81938e9588d61ee8c93a66160ca25b1ec6ba802691e30eec1dbd2631fe444",
+      "blockchain/contracts/LendingPool.sol": "3b2d6f0431b61d93dc65c23dc9443dca37dc0f8d576198805e48b94b5b41e421",
+      "blockchain/contracts/MockERC20.sol": "793aab86d982c0652dc51d68314b91ab8a1b18cae44eb034ac5ccb7da9b25ef6",
+      "blockchain/test/LoanManager.test.js": "3f3447f0408e9c88fc981bf54b1f3438154399a66532b25e24f333ed11906c2d"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 128 lines, closure 257 lines, 3 files; 14 it blocks; history: 12 commits 2025-09-14..2026-06-19",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:26:23.202253+00:00"
+}

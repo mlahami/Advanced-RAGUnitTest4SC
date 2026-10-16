@@ -1,0 +1,1257 @@
+You are a Solidity QA engineer. Generate one executable JavaScript test file.
+Use Hardhat 2, ethers 6, Mocha and Chai, with hardhat-chai-matchers installed.
+Import const { expect } = require("chai"); and const { ethers } = require("hardhat");
+Use ethers.parseEther, ethers.MaxUint256, await contract.waitForDeployment() and await contract.getAddress() (ethers 6).
+Deploy a fresh instance in beforeEach, passing the actual constructor arguments.
+Test the supplied contract's functions, state changes, events, boundaries and relevant reverts.
+Do not assume get/set functions exist. Do not invent functions, events or error messages.
+Use only the declared benchmark fixtures when an external dependency is required; do not reference other helper files or undeclared mock contracts.
+For uint256 values use BigInt literals (e.g. 10n) and Chai equality matchers, not JavaScript number arithmetic.
+Return only complete JavaScript code, without explanations or Markdown.
+
+USER TASK AND TARGET CONTRACT
+context: Generate a unit test suite for the supplied Solidity contract.
+
+generalInstructions: Use Hardhat 2, ethers 6, Mocha and hardhat-chai-matchers. No external helper files.
+
+requirements: Cover actual public functions, state changes, events, access restrictions, relevant boundaries and revert conditions. Use fresh deployments. Do not invent behavior.
+
+exampleTest: 
+
+solidityCode: // SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/**
+ * @title NFTStaking
+ * @notice Stake ERC721 NFTs to earn ERC20 reward tokens per second.
+ *         Rewards are proportional to the number of NFTs staked.
+ * Complexity: Complex
+ */
+interface IERC721Min {
+    function transferFrom(address from, address to, uint256 tokenId) external;
+    function ownerOf(uint256 tokenId) external view returns (address);
+}
+
+interface IRewardToken {
+    function mint(address to, uint256 amount) external;
+}
+
+contract NFTStaking {
+    IERC721Min  public immutable nftContract;
+    IRewardToken public immutable rewardToken;
+
+    uint256 public rewardRate;    // reward tokens per second per NFT (scaled Ã—1e18)
+    address public owner;
+
+    struct StakeInfo {
+        uint256[] tokenIds;
+        uint256   lastUpdateTime;
+        uint256   accruedRewards;
+    }
+
+    mapping(address => StakeInfo)   public stakes;
+    mapping(uint256 => address)     public stakedBy;   // tokenId â†’ staker
+
+    event Staked(address indexed staker, uint256[] tokenIds);
+    event Unstaked(address indexed staker, uint256[] tokenIds);
+    event RewardClaimed(address indexed staker, uint256 amount);
+
+    modifier onlyOwner() { require(msg.sender == owner, "Not owner"); _; }
+
+    constructor(address _nft, address _rewardToken, uint256 _rewardRate) {
+        nftContract  = IERC721Min(_nft);
+        rewardToken  = IRewardToken(_rewardToken);
+        rewardRate   = _rewardRate;
+        owner        = msg.sender;
+    }
+
+    // â”€â”€â”€ Stake â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function stake(uint256[] calldata tokenIds) external {
+        _updateRewards(msg.sender);
+        StakeInfo storage s = stakes[msg.sender];
+
+        for (uint256 i = 0; i < tokenIds.length; i++) {
+            uint256 id = tokenIds[i];
+            require(nftContract.ownerOf(id) == msg.sender, "Not owner");
+            require(stakedBy[id] == address(0), "Already staked");
+            nftContract.transferFrom(msg.sender, address(this), id);
+            stakedBy[id] = msg.sender;
+            s.tokenIds.push(id);
+        }
+
+        emit Staked(msg.sender, tokenIds);
+    }
+
+    // â”€â”€â”€ Unstake â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function unstake(uint256[] calldata tokenIds) external {
+        _updateRewards(msg.sender);
+        StakeInfo storage s = stakes[msg.sender];
+
+        for (uint256 i = 0; i < tokenIds.length; i++) {
+            uint256 id = tokenIds[i];
+            require(stakedBy[id] == msg.sender, "Not your token");
+            stakedBy[id] = address(0);
+            _removeTokenId(s.tokenIds, id);
+            nftContract.transferFrom(address(this), msg.sender, id);
+        }
+
+        emit Unstaked(msg.sender, tokenIds);
+    }
+
+    // â”€â”€â”€ Claim rewards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function claimRewards() external {
+        _updateRewards(msg.sender);
+        uint256 reward = stakes[msg.sender].accruedRewards;
+        require(reward > 0, "No rewards");
+        stakes[msg.sender].accruedRewards = 0;
+        rewardToken.mint(msg.sender, reward);
+        emit RewardClaimed(msg.sender, reward);
+    }
+
+    // â”€â”€â”€ Views â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function pendingRewards(address staker) external view returns (uint256) {
+        StakeInfo storage s = stakes[staker];
+        uint256 elapsed = block.timestamp - s.lastUpdateTime;
+        uint256 accrued = (s.tokenIds.length * elapsed * rewardRate) / 1e18;
+        return s.accruedRewards + accrued;
+    }
+
+    function stakedTokens(address staker) external view returns (uint256[] memory) {
+        return stakes[staker].tokenIds;
+    }
+
+    // â”€â”€â”€ Admin â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function setRewardRate(uint256 rate) external onlyOwner {
+        rewardRate = rate;
+    }
+
+    // â”€â”€â”€ Internal â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function _updateRewards(address staker) internal {
+        StakeInfo storage s = stakes[staker];
+        if (s.lastUpdateTime == 0) { s.lastUpdateTime = block.timestamp; return; }
+        uint256 elapsed = block.timestamp - s.lastUpdateTime;
+        s.accruedRewards   += (s.tokenIds.length * elapsed * rewardRate) / 1e18;
+        s.lastUpdateTime    = block.timestamp;
+    }
+
+    function _removeTokenId(uint256[] storage arr, uint256 id) internal {
+        for (uint256 i = 0; i < arr.length; i++) {
+            if (arr[i] == id) {
+                arr[i] = arr[arr.length - 1];
+                arr.pop();
+                return;
+            }
+        }
+        revert("Token not found");
+    }
+}
+
+BENCHMARK FIXTURES (identical for every experimental configuration):
+The following precompiled auxiliary contracts are available by the exact canonical names below.
+Use them only when the target requires an external dependency. Do not invent aliases, other mocks,
+helper files, functions, or constructor signatures. Deploy and initialize a fresh fixture in beforeEach.
+These fixtures are test infrastructure; they are not retrieved evidence and do not describe target behavior.
+FIXTURE CATALOG:
+{
+  "fixture_version": "enase30-fixtures-v2",
+  "retrieval_policy": "excluded-from-all-retrieval-corpora",
+  "contracts": [
+    {
+      "name": "BenchmarkERC20",
+      "constructor": [
+        "string name",
+        "string symbol"
+      ],
+      "setup": "mint(account, amount), then approve(spender, amount) from that account when required",
+      "capabilities": [
+        "mint",
+        "burnFrom",
+        "transfer",
+        "transferFrom",
+        "approve",
+        "balanceOf",
+        "allowance"
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "name_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "allowance",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "burnFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "decimals",
+          "outputs": [
+            {
+              "internalType": "uint8",
+              "name": "",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transfer",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "name": "BenchmarkVotingToken",
+      "constructor": [
+        "string name",
+        "string symbol"
+      ],
+      "setup": "mint(voter, votingWeight)",
+      "capabilities": [
+        "mint",
+        "balanceOf",
+        "transfer",
+        "transferFrom",
+        "approve"
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "name_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "allowance",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "burnFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "decimals",
+          "outputs": [
+            {
+              "internalType": "uint8",
+              "name": "",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transfer",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "name": "BenchmarkERC721",
+      "constructor": [
+        "string name",
+        "string symbol"
+      ],
+      "setup": "mint(owner, tokenId), then approve(spender, tokenId) from the owner when required",
+      "capabilities": [
+        "mint",
+        "ownerOf",
+        "getApproved",
+        "approve",
+        "setApprovalForAll",
+        "transferFrom",
+        "safeTransferFrom"
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "name_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "approved",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool"
+            }
+          ],
+          "name": "ApprovalForAll",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "approved",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "getApproved",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "isApprovedForAll",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "ownerOf",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "safeTransferFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool"
+            }
+          ],
+          "name": "setApprovalForAll",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "name": "BenchmarkTarget",
+      "constructor": [],
+      "setup": "none",
+      "capabilities": [
+        "setValue",
+        "value",
+        "fail"
+      ],
+      "abi": [
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "ValueSet",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "fail",
+          "outputs": [],
+          "stateMutability": "pure",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "value_",
+              "type": "uint256"
+            }
+          ],
+          "name": "setValue",
+          "outputs": [],
+          "stateMutability": "payable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "value",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ]
+    }
+  ],
+  "compiler": "0.8.24+commit.e11b9ed9.Emscripten.clang"
+}
+FIXTURE SOURCE (authoritative for fixture behavior and revert conditions):
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+/// @notice Frozen auxiliary contracts available to every evaluated configuration.
+/// They are test infrastructure and are never indexed by the retriever.
+contract BenchmarkERC20 {
+    string public name;
+    string public symbol;
+    uint8 public constant decimals = 18;
+    uint256 public totalSupply;
+    mapping(address => uint256) public balanceOf;
+    mapping(address => mapping(address => uint256)) public allowance;
+
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+
+    constructor(string memory name_, string memory symbol_) {
+        name = name_;
+        symbol = symbol_;
+    }
+
+    function mint(address to, uint256 amount) external {
+        require(to != address(0), "zero address");
+        totalSupply += amount;
+        balanceOf[to] += amount;
+        emit Transfer(address(0), to, amount);
+    }
+
+    function approve(address spender, uint256 amount) external returns (bool) {
+        allowance[msg.sender][spender] = amount;
+        emit Approval(msg.sender, spender, amount);
+        return true;
+    }
+
+    function transfer(address to, uint256 amount) external returns (bool) {
+        _transfer(msg.sender, to, amount);
+        return true;
+    }
+
+    function transferFrom(address from, address to, uint256 amount) external returns (bool) {
+        uint256 permitted = allowance[from][msg.sender];
+        if (permitted != type(uint256).max) {
+            require(permitted >= amount, "insufficient allowance");
+            allowance[from][msg.sender] = permitted - amount;
+            emit Approval(from, msg.sender, allowance[from][msg.sender]);
+        }
+        _transfer(from, to, amount);
+        return true;
+    }
+
+    function burnFrom(address from, uint256 amount) external {
+        uint256 permitted = allowance[from][msg.sender];
+        if (msg.sender != from && permitted != type(uint256).max) {
+            require(permitted >= amount, "insufficient allowance");
+            allowance[from][msg.sender] = permitted - amount;
+        }
+        require(balanceOf[from] >= amount, "insufficient balance");
+        balanceOf[from] -= amount;
+        totalSupply -= amount;
+        emit Transfer(from, address(0), amount);
+    }
+
+    function _transfer(address from, address to, uint256 amount) internal {
+        require(to != address(0), "zero address");
+        require(balanceOf[from] >= amount, "insufficient balance");
+        balanceOf[from] -= amount;
+        balanceOf[to] += amount;
+        emit Transfer(from, to, amount);
+    }
+}
+
+contract BenchmarkVotingToken is BenchmarkERC20 {
+    constructor(string memory name_, string memory symbol_) BenchmarkERC20(name_, symbol_) {}
+}
+
+contract BenchmarkERC721 {
+    string public name;
+    string public symbol;
+    mapping(uint256 => address) private _ownerOf;
+    mapping(uint256 => address) private _approved;
+    mapping(address => mapping(address => bool)) public isApprovedForAll;
+
+    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
+    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);
+    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);
+
+    constructor(string memory name_, string memory symbol_) {
+        name = name_;
+        symbol = symbol_;
+    }
+
+    function ownerOf(uint256 tokenId) public view returns (address) {
+        address owner = _ownerOf[tokenId];
+        require(owner != address(0), "nonexistent token");
+        return owner;
+    }
+
+    function mint(address to, uint256 tokenId) external {
+        require(to != address(0) && _ownerOf[tokenId] == address(0), "invalid mint");
+        _ownerOf[tokenId] = to;
+        emit Transfer(address(0), to, tokenId);
+    }
+
+    function getApproved(uint256 tokenId) external view returns (address) {
+        ownerOf(tokenId);
+        return _approved[tokenId];
+    }
+
+    function approve(address approved, uint256 tokenId) external {
+        address owner = ownerOf(tokenId);
+        require(msg.sender == owner || isApprovedForAll[owner][msg.sender], "not authorized");
+        _approved[tokenId] = approved;
+        emit Approval(owner, approved, tokenId);
+    }
+
+    function setApprovalForAll(address operator, bool approved) external {
+        isApprovedForAll[msg.sender][operator] = approved;
+        emit ApprovalForAll(msg.sender, operator, approved);
+    }
+
+    function transferFrom(address from, address to, uint256 tokenId) public {
+        address owner = ownerOf(tokenId);
+        require(owner == from && to != address(0), "invalid transfer");
+        require(msg.sender == owner || _approved[tokenId] == msg.sender || isApprovedForAll[owner][msg.sender], "not authorized");
+        delete _approved[tokenId];
+        _ownerOf[tokenId] = to;
+        emit Transfer(from, to, tokenId);
+    }
+
+    function safeTransferFrom(address from, address to, uint256 tokenId) external {
+        transferFrom(from, to, tokenId);
+    }
+}
+
+contract BenchmarkTarget {
+    uint256 public value;
+    event ValueSet(uint256 value);
+
+    function setValue(uint256 value_) external payable {
+        value = value_;
+        emit ValueSet(value_);
+    }
+
+    function fail() external pure {
+        revert("target failure");
+    }
+}
+
+END BENCHMARK FIXTURES

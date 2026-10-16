@@ -1,0 +1,89 @@
+{
+  "pair": "simple-dex--lngdao",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:45:11.343604+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MockERC20.sol": "ed6a60f701911342eb3fc588d87f3861f3d9f9fe8f11005626716b5f519d1a1b",
+    "contracts/SimpleDEX.sol": "6e07553ac976b7c38c3ee8c8b5c683986698b9c81281dddad649db5afb87f702",
+    "LICENSE": "6e46e4de399b733dccde97c433456a6c26f576efe5ec4202e781f45fa9283710",
+    "manifest.json": "3d761f6513c7cc8bce2106e56138d9d885f2ef2f019ccf0960cb2bb901ef6aed",
+    "test/SimpleDEX.test.js": "d2abe81d38b12a3053879f5479cab56753d890415215e59c27a1c35f20d60821"
+  },
+  "pair_sha256": "afcf8d365f4b49e5a832ee8fabadada24dcc5b96969b8b02d1c9459e23a7cc9e",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "SimpleDEX.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.282,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "SimpleDEX.sol",
+        "reference": "DEX.sol",
+        "structural": 0.214,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "SimpleDEX.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.176,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.43,
+      "mocha": {
+        "tests": 15,
+        "passes": 15,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.83,
+      "mocha": {
+        "tests": 15,
+        "passes": 15,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "SimpleDEX.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockERC20.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 66.67,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

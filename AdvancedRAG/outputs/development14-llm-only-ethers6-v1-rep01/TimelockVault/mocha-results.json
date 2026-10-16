@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-09-27T19:49:56.323Z",
+    "end": "2026-09-27T19:49:56.593Z",
+    "duration": 270
+  },
+  "tests": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "TimelockVault Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should set the right unlock time",
+      "fullTitle": "TimelockVault Deployment Should set the right unlock time",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {
+        "message": "Cannot mix BigInt and other types, use explicit conversions",
+        "stack": "TypeError: Cannot mix BigInt and other types, use explicit conversions\n    at Context.<anonymous> (test\\generated.test.js:29:51)"
+      }
+    },
+    {
+      "title": "Should receive and store the funds",
+      "fullTitle": "TimelockVault Deployment Should receive and store the funds",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should revert with the right error if called too early",
+      "fullTitle": "TimelockVault Withdrawals Validations Should revert with the right error if called too early",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should revert with the right error if called from another account",
+      "fullTitle": "TimelockVault Withdrawals Validations Should revert with the right error if called from another account",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should emit an event on withdrawals",
+      "fullTitle": "TimelockVault Withdrawals Events Should emit an event on withdrawals",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should set the right unlock time",
+      "fullTitle": "TimelockVault Deployment Should set the right unlock time",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {
+        "message": "Cannot mix BigInt and other types, use explicit conversions",
+        "stack": "TypeError: Cannot mix BigInt and other types, use explicit conversions\n    at Context.<anonymous> (test\\generated.test.js:29:51)"
+      }
+    },
+    {
+      "title": "Should emit an event on withdrawals",
+      "fullTitle": "TimelockVault Withdrawals Events Should emit an event on withdrawals",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"Withdrawal\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"Withdrawal\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "TimelockVault Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should receive and store the funds",
+      "fullTitle": "TimelockVault Deployment Should receive and store the funds",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should revert with the right error if called too early",
+      "fullTitle": "TimelockVault Withdrawals Validations Should revert with the right error if called too early",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should revert with the right error if called from another account",
+      "fullTitle": "TimelockVault Withdrawals Validations Should revert with the right error if called from another account",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should emit an event on withdrawals",
+      "fullTitle": "TimelockVault Withdrawals Events Should emit an event on withdrawals",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep01\\TimelockVault\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    }
+  ]
+}

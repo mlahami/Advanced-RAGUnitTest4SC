@@ -1,0 +1,47 @@
+{
+  "id": "aba-pay-v2--investorphem",
+  "domain": "payments",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "AbaPayV2.sol",
+    "Mocks.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/investorphem/AbaPay",
+    "commit": "a6657e74dd29ed9f479ed740249cb1cea4083e9a",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/AbaPayV2.sol",
+      "contracts/test/Mocks.sol"
+    ],
+    "test_paths": [
+      "test/AbaPayV2.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/AbaPayV2.sol": "fc9fcf7084bc208cec74673cf1f769384971a922e5011f99d0b8054c5948f0a5",
+      "contracts/test/Mocks.sol": "69f8fc46f3bd44a2e7dff27bc8ba4055ea1de47e6a6fc7dbfd3e4f3f568b32fe",
+      "test/AbaPayV2.test.ts": "34e121efdf4c7882cebc24e6069af6f98d73292fcca46f13bb752a3880838fa3"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "AbaPayV2.test.js",
+      "upstream_path": "test/AbaPayV2.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "AbaPayV2.test.js",
+      "upstream_path": "test/AbaPayV2.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 286 lines, closure 366 lines, 2 files; 21 it blocks; history: 1719 commits 2026-04-01..2026-09-26",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:33:42.611436+00:00"
+}

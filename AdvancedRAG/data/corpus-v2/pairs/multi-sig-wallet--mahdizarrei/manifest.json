@@ -1,0 +1,48 @@
+{
+  "id": "multi-sig-wallet--mahdizarrei",
+  "domain": "multisig-wallet",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "MultiSigWallet.sol",
+    "ERC1155.sol",
+    "ERC20.sol",
+    "ERC721.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/mahdiZarrei/MultiSigWallet",
+    "commit": "d2f25e76fe1029efd3d7a6d783d39436bb7f6dde",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MultiSigWallet.sol",
+      "contracts/ERC1155.sol",
+      "contracts/ERC20.sol",
+      "contracts/ERC721.sol"
+    ],
+    "test_paths": [
+      "test/MultiSigWallet.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MultiSigWallet.sol": "a341373e00176c89cb8d4b19b0615e0e46b888a089021c61557296044af1be0b",
+      "contracts/ERC1155.sol": "1875d41aa24774b32a26d52ba7ddb3d7155578658e733f725b2d12da251edcee",
+      "contracts/ERC20.sol": "862ef9e20d5fdafd93a71391f01895e5b635ecf0efb7e848f846df17b5fb0d77",
+      "contracts/ERC721.sol": "2af9bc635c2681ae2444935b943ac6f892bb187c864880d68cce2e7e3acdfd35",
+      "test/MultiSigWallet.js": "551286a7c507fb830d0a0de8e6559ae1de50c056bcddb87d327048da325a71db"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "MultiSigWallet.js",
+      "upstream_path": "test/MultiSigWallet.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Multisig handling ETH/ERC20/ERC721/ERC1155 transfers (64 its); repo-local token contracts named ERC20.sol/ERC721.sol/ERC1155.sol are test tokens; same domain as benchmark MultiSigWallet. Primary 407 non-blank lines, closure 473 lines/4 files; 64 its, 64 expects; pragma 0.8.24.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:03:44.046305+00:00"
+}

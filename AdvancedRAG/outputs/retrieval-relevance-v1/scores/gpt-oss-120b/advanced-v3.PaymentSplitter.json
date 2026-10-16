@@ -1,0 +1,79 @@
+{
+  "id": "advanced-v3.PaymentSplitter",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "PaymentSplitter",
+  "chunk_ids": [
+    2432,
+    2435,
+    2433,
+    2434,
+    2791,
+    2792,
+    2049,
+    2050,
+    2424,
+    2425
+  ],
+  "context_sha256": "b879412204d0e84a44a0814a9eb7f5f341afa46a859d75f0bc7f7b4220725f31",
+  "ratings": [
+    {
+      "chunk_id": 2432,
+      "rating": 1,
+      "reason": "Shows distribution based on shares and balance checks, but target lacks addPayee and token logic; only ETH distribution via constructor, so only generic pattern useful."
+    },
+    {
+      "chunk_id": 2435,
+      "rating": 1,
+      "reason": "Tests revert on empty distribution, similar pattern to target’s “no funds” revert, but uses ERC20 logic not present in ETH splitter."
+    },
+    {
+      "chunk_id": 2433,
+      "rating": 1,
+      "reason": "Shows balance checks after distribution, but uses ERC20 logic and addPayee which target lacks; only generic pattern useful"
+    },
+    {
+      "chunk_id": 2434,
+      "rating": 0,
+      "reason": "Test targets ERC20 token distribution, events, and addPayee function absent in ether-only PaymentSplitter; no applicable patterns for constructor setup or distribute logic."
+    },
+    {
+      "chunk_id": 2791,
+      "rating": 1,
+      "reason": "Only tests generic revert behavior; target lacks Ownable, so specific test not applicable, but pattern of expecting revert could be reused."
+    },
+    {
+      "chunk_id": 2792,
+      "rating": 1,
+      "reason": "Only demonstrates generic revert assertion pattern, not relevant to PaymentSplitter’s functions or behavior."
+    },
+    {
+      "chunk_id": 2049,
+      "rating": 1,
+      "reason": "Shows generic fixture deployment and balance assertions pattern, but tests staking behavior unrelated to payment splitting logic."
+    },
+    {
+      "chunk_id": 2050,
+      "rating": 0,
+      "reason": "Test checks staking event emission, unrelated to PaymentSplitter’s distribution logic and has no similar events or functions."
+    },
+    {
+      "chunk_id": 2424,
+      "rating": 1,
+      "reason": "Shows generic beforeEach deployment and expect().to.emit pattern, but target lacks addPayee/event logic, so only a basic testing pattern is reusable."
+    },
+    {
+      "chunk_id": 2425,
+      "rating": 0,
+      "reason": "Test checks ownable revert for adding payees, which the PaymentSplitter contract lacks; no similar function or access control to reuse."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 10519,
+    "completion_tokens": 1197,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 54.6,
+  "evaluated_utc": "2026-10-14T18:07:30.112970+00:00"
+}

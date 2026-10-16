@@ -1,0 +1,27 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-30T21:26:07.555Z",
+    "end": "2026-09-30T21:26:07.642Z",
+    "duration": 87
+  },
+  "tests": [],
+  "pending": [],
+  "failures": [
+    {
+      "title": "\"before each\" hook for \"should set the correct parameters\"",
+      "fullTitle": "BondingCurve \"before each\" hook for \"should set the correct parameters\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js",
+      "duration": 86,
+      "err": {
+        "message": "Sender doesn't have enough funds to send tx. The max upfront cost is: 60000000000000000000000001099511627775 and the sender's balance is: 10100000000000000000000.",
+        "stack": "ProviderError: Sender doesn't have enough funds to send tx. The max upfront cost is: 60000000000000000000000001099511627775 and the sender's balance is: 10100000000000000000000.\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:368:19)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.buy (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep02\\BondingCurve\\test\\generated.test.js:29:5)"
+      }
+    }
+  ],
+  "passes": []
+}

@@ -1,0 +1,7 @@
+{
+  "solidityCode": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.24;\n\ncontract AccessControl {\n    address public immutable admin;\n    mapping(bytes32 => mapping(address => bool)) private roles;\n    bytes32 public constant EDITOR_ROLE = keccak256(\"EDITOR_ROLE\");\n\n    constructor() {\n        admin = msg.sender;\n    }\n\n    function grantRole(bytes32 role, address account) external {\n        require(msg.sender == admin, \"not admin\");\n        roles[role][account] = true;\n    }\n\n    function revokeRole(bytes32 role, address account) external {\n        require(msg.sender == admin, \"not admin\");\n        roles[role][account] = false;\n    }\n\n    function hasRole(bytes32 role, address account) external view returns (bool) {\n        return roles[role][account];\n    }\n}\n\n",
+  "context": "Generate a unit test suite for the supplied Solidity contract.",
+  "generalInstructions": "Use Hardhat 2, ethers 6, Mocha and hardhat-chai-matchers. No external helper files.",
+  "requirements": "Cover actual public functions, state changes, events, access restrictions, relevant boundaries and revert conditions. Use fresh deployments. Do not invent behavior.",
+  "exampleTest": ""
+}

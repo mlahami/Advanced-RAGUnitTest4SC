@@ -1,0 +1,62 @@
+{
+  "id": "stream-split--debsmit16",
+  "domain": "payment-streaming",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "StreamSplit.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Debsmit16/Stream-split",
+    "commit": "c1b4c031f1cef608861c504352b3ac000e165eb5",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/StreamSplit.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/StreamSplit.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/StreamSplit.sol": "fb37e8988c4ba8c63a3a26613d39e5cd1eef1dec9c5d7d6a6c127a214334dc59",
+      "packages/hardhat/test/StreamSplit.test.ts": "e0b134fe9c094c048eceeed62d17e2539958fa5813cc02d6cd031e439b57db7c"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "StreamSplit.test.js",
+      "upstream_path": "packages/hardhat/test/StreamSplit.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "StreamSplit.test.js",
+      "upstream_path": "packages/hardhat/test/StreamSplit.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "StreamSplit"
+      ],
+      "file": "StreamSplit.test.js",
+      "upstream_path": "packages/hardhat/test/StreamSplit.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "StreamSplit.test.js",
+      "upstream_path": "packages/hardhat/test/StreamSplit.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 261 lines, closure 261 lines, 1 files; 19 it blocks; history: 13 commits 2025-10-25..2025-10-26",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:27:58.804282+00:00"
+}

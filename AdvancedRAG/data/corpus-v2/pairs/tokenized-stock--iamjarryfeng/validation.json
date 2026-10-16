@@ -1,0 +1,82 @@
+{
+  "pair": "tokenized-stock--iamjarryfeng",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:51:09.256990+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/TokenizedStock.sol": "9ca6cb8ac1a80d128e58a5e88ff00549e2e968e95050756e54f9338558bbaf30",
+    "LICENSE": "ae912eca5ff027d5983f445a547f6e0a3f1ede7b57e191d2bb096679d24298f3",
+    "manifest.json": "9ea806bb3e23301ac6a3a181137271ad529e70cf49b61bfc87b988de1bc5ab97",
+    "test/TokenizedStock.test.js": "ac4021d10e2468b69cd0105e6f633db178a7a7b3dd49a301b923e9555353de50"
+  },
+  "pair_sha256": "54f3c6b49e2d4720a82345675c7c0bdff48ce872f997bf4de2d0f6ab328191c4",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "TokenizedStock.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.139,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "TokenizedStock.sol",
+        "reference": "Token.sol",
+        "structural": 0.122,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "TokenizedStock.sol",
+        "reference": "MerkleAirdrop.sol",
+        "structural": 0.117,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.28,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.62,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "TokenizedStock.sol": {
+          "statements": 100.0,
+          "branches": 80.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,121 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 6,
+    "passes": 3,
+    "pending": 0,
+    "failures": 3,
+    "start": "2026-09-27T19:50:57.902Z",
+    "end": "2026-09-27T19:50:58.291Z",
+    "duration": 389
+  },
+  "tests": [
+    {
+      "title": "Should set the correct initial state",
+      "fullTitle": "Adoption Deployment Should set the correct initial state",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js",
+      "duration": 80,
+      "err": {}
+    },
+    {
+      "title": "Should adopt a pet and update the adopters array",
+      "fullTitle": "Adoption Adopt Should adopt a pet and update the adopters array",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"Adoption\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"Adoption\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:31:7)"
+      }
+    },
+    {
+      "title": "Should return the correct petId",
+      "fullTitle": "Adoption Adopt Should return the correct petId",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "HH17: The input value cannot be normalized to a BigInt: Value {\"_type\":\"TransactionResponse\",\"accessList\":null,\"blockNumber\":5,\"blockHash\":\"0x118c666423e7689cacdd1872c2f6874abb618d25afab24d3809a16b44f547b02\",\"blobVersionedHashes\":null,\"chainId\":\"31337\",\"data\":\"0x8588b2c50000000000000000000000000000000000000000000000000000000000000005\",\"from\":\"0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC\",\"gasLimit\":\"1099511627775\",\"gasPrice\":\"1\",\"hash\":\"0xb24ea84ad4645c9ea2bdeafbf41bb552eef6192a3ff92211286de8bb867a549e\",\"maxFeePerGas\":null,\"maxPriorityFeePerGas\":null,\"maxFeePerBlobGas\":null,\"nonce\":0,\"signature\":{\"_type\":\"signature\",\"networkV\":\"62709\",\"r\":\"0xeda4b97e152810f73323e18427279a58dcc23405d7a95ebcca3e05ad55e70442\",\"s\":\"0x622a3512a54dd5658340f77eb8cb676d2cba121bd2af69b1db81c95a31fd5b8b\",\"v\":27},\"to\":\"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0\",\"type\":0,\"value\":\"0\"} is of type \"object\" but is not an instanceof one of the known big number object types.",
+        "stack": "HardhatError: HH17: The input value cannot be normalized to a BigInt: Value {\"_type\":\"TransactionResponse\",\"accessList\":null,\"blockNumber\":5,\"blockHash\":\"0x118c666423e7689cacdd1872c2f6874abb618d25afab24d3809a16b44f547b02\",\"blobVersionedHashes\":null,\"chainId\":\"31337\",\"data\":\"0x8588b2c50000000000000000000000000000000000000000000000000000000000000005\",\"from\":\"0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC\",\"gasLimit\":\"1099511627775\",\"gasPrice\":\"1\",\"hash\":\"0xb24ea84ad4645c9ea2bdeafbf41bb552eef6192a3ff92211286de8bb867a549e\",\"maxFeePerGas\":null,\"maxPriorityFeePerGas\":null,\"maxFeePerBlobGas\":null,\"nonce\":0,\"signature\":{\"_type\":\"signature\",\"networkV\":\"62709\",\"r\":\"0xeda4b97e152810f73323e18427279a58dcc23405d7a95ebcca3e05ad55e70442\",\"s\":\"0x622a3512a54dd5658340f77eb8cb676d2cba121bd2af69b1db81c95a31fd5b8b\",\"v\":27},\"to\":\"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0\",\"type\":0,\"value\":\"0\"} is of type \"object\" but is not an instanceof one of the known big number object types.\n    at normalizeToBigInt (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\common\\bigInt.ts:24:15)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\bigNumber.ts:171:41)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at doAsserterAsyncAndAddThen (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:289:22)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:255:20)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js:42:25)"
+      }
+    },
+    {
+      "title": "Should revert when trying to adopt an invalid pet",
+      "fullTitle": "Adoption Adopt Should revert when trying to adopt an invalid pet",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should revert when trying to adopt an already adopted pet",
+      "fullTitle": "Adoption Adopt Should revert when trying to adopt an already adopted pet",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'invalid pet', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'invalid pet', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:54:7)"
+      }
+    },
+    {
+      "title": "Should return the correct adopters array",
+      "fullTitle": "Adoption GetAdopters Should return the correct adopters array",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js",
+      "duration": 71,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should adopt a pet and update the adopters array",
+      "fullTitle": "Adoption Adopt Should adopt a pet and update the adopters array",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Event \"Adoption\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"Adoption\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:31:7)"
+      }
+    },
+    {
+      "title": "Should return the correct petId",
+      "fullTitle": "Adoption Adopt Should return the correct petId",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "HH17: The input value cannot be normalized to a BigInt: Value {\"_type\":\"TransactionResponse\",\"accessList\":null,\"blockNumber\":5,\"blockHash\":\"0x118c666423e7689cacdd1872c2f6874abb618d25afab24d3809a16b44f547b02\",\"blobVersionedHashes\":null,\"chainId\":\"31337\",\"data\":\"0x8588b2c50000000000000000000000000000000000000000000000000000000000000005\",\"from\":\"0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC\",\"gasLimit\":\"1099511627775\",\"gasPrice\":\"1\",\"hash\":\"0xb24ea84ad4645c9ea2bdeafbf41bb552eef6192a3ff92211286de8bb867a549e\",\"maxFeePerGas\":null,\"maxPriorityFeePerGas\":null,\"maxFeePerBlobGas\":null,\"nonce\":0,\"signature\":{\"_type\":\"signature\",\"networkV\":\"62709\",\"r\":\"0xeda4b97e152810f73323e18427279a58dcc23405d7a95ebcca3e05ad55e70442\",\"s\":\"0x622a3512a54dd5658340f77eb8cb676d2cba121bd2af69b1db81c95a31fd5b8b\",\"v\":27},\"to\":\"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0\",\"type\":0,\"value\":\"0\"} is of type \"object\" but is not an instanceof one of the known big number object types.",
+        "stack": "HardhatError: HH17: The input value cannot be normalized to a BigInt: Value {\"_type\":\"TransactionResponse\",\"accessList\":null,\"blockNumber\":5,\"blockHash\":\"0x118c666423e7689cacdd1872c2f6874abb618d25afab24d3809a16b44f547b02\",\"blobVersionedHashes\":null,\"chainId\":\"31337\",\"data\":\"0x8588b2c50000000000000000000000000000000000000000000000000000000000000005\",\"from\":\"0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC\",\"gasLimit\":\"1099511627775\",\"gasPrice\":\"1\",\"hash\":\"0xb24ea84ad4645c9ea2bdeafbf41bb552eef6192a3ff92211286de8bb867a549e\",\"maxFeePerGas\":null,\"maxPriorityFeePerGas\":null,\"maxFeePerBlobGas\":null,\"nonce\":0,\"signature\":{\"_type\":\"signature\",\"networkV\":\"62709\",\"r\":\"0xeda4b97e152810f73323e18427279a58dcc23405d7a95ebcca3e05ad55e70442\",\"s\":\"0x622a3512a54dd5658340f77eb8cb676d2cba121bd2af69b1db81c95a31fd5b8b\",\"v\":27},\"to\":\"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0\",\"type\":0,\"value\":\"0\"} is of type \"object\" but is not an instanceof one of the known big number object types.\n    at normalizeToBigInt (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\common\\bigInt.ts:24:15)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\bigNumber.ts:171:41)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at doAsserterAsyncAndAddThen (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:289:22)\n    at Proxy.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai-as-promised\\lib\\chai-as-promised.js:255:20)\n    at Proxy.overwritingMethodWrapper (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\chai\\lib\\chai\\utils\\overwriteMethod.js:78:33)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js:42:25)"
+      }
+    },
+    {
+      "title": "Should revert when trying to adopt an already adopted pet",
+      "fullTitle": "Adoption Adopt Should revert when trying to adopt an already adopted pet",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'invalid pet', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'invalid pet', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:54:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct initial state",
+      "fullTitle": "Adoption Deployment Should set the correct initial state",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js",
+      "duration": 80,
+      "err": {}
+    },
+    {
+      "title": "Should revert when trying to adopt an invalid pet",
+      "fullTitle": "Adoption Adopt Should revert when trying to adopt an invalid pet",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should return the correct adopters array",
+      "fullTitle": "Adoption GetAdopters Should return the correct adopters array",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\Adoption\\test\\generated.test.js",
+      "duration": 71,
+      "err": {}
+    }
+  ]
+}

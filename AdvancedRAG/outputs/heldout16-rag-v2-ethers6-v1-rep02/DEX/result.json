@@ -1,0 +1,80 @@
+{
+  "contract": "DEX",
+  "status": "test_failures",
+  "prompt_sha256": "da485cec0ffbd5aeb84cbdde3ef03f03756825a4d7624b3faa17d9cae4d00ba6",
+  "generation_seconds": 16.8643885999918,
+  "usage": {
+    "prompt_tokens": 12064,
+    "total_tokens": 14582,
+    "completion_tokens": 2518,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.920746400021017
+  },
+  "passed_tests": 4,
+  "failed_tests": 12,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "DEX addLiquidity should add initial liquidity correctly",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "DEX addLiquidity should add subsequent liquidity proportionally",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "DEX removeLiquidity should remove liquidity correctly",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Insufficient shares'"
+    },
+    {
+      "title": "DEX removeLiquidity should revert when removing zero shares",
+      "error": "Expected transaction to be reverted with reason 'Insufficient shares', but it didn't revert"
+    },
+    {
+      "title": "DEX swapAforB should swap tokenA for tokenB correctly",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "DEX swapAforB should revert when swapping zero amount",
+      "error": "Expected transaction to be reverted with reason 'ERC20: transfer amount exceeds balance', but it didn't revert"
+    },
+    {
+      "title": "DEX swapAforB should revert when swapping exceeds reserves",
+      "error": "Expected transaction to be reverted with reason 'ERC20: transfer amount exceeds balance', but it reverted with reason 'insufficient balance'"
+    },
+    {
+      "title": "DEX swapBforA should swap tokenB for tokenA correctly",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "DEX swapBforA should revert when swapping zero amount",
+      "error": "Expected transaction to be reverted with reason 'ERC20: transfer amount exceeds balance', but it didn't revert"
+    },
+    {
+      "title": "DEX swapBforA should revert when swapping exceeds reserves",
+      "error": "Expected transaction to be reverted with reason 'ERC20: transfer amount exceeds balance', but it reverted with reason 'insufficient balance'"
+    },
+    {
+      "title": "DEX Edge Cases should handle very small swaps",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "DEX Edge Cases should handle very large swaps",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 83.33,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

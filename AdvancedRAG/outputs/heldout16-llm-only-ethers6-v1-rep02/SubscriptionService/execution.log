@@ -1,0 +1,35 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BenchmarkFixtures.sol
+> SubscriptionService.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+--------------------------|----------|----------|----------|----------|----------------|
+File                      |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+--------------------------|----------|----------|----------|----------|----------------|
+ contracts\               |    26.87 |    28.57 |    39.29 |    28.26 |                |
+  BenchmarkFixtures.sol   |    18.42 |     9.38 |    22.22 |    21.05 |... 140,141,145 |
+  SubscriptionService.sol |    37.93 |    54.17 |       70 |       40 |... 118,119,121 |
+--------------------------|----------|----------|----------|----------|----------------|
+All files                 |    26.87 |    28.57 |    39.29 |    28.26 |                |
+--------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+Error in plugin solidity-coverage: ❌ 5 test(s) failed under coverage.
+
+For more info run Hardhat with --show-stack-traces

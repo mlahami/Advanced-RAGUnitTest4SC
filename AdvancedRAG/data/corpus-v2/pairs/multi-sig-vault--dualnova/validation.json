@@ -1,0 +1,82 @@
+{
+  "pair": "multi-sig-vault--dualnova",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T07:37:49.528892+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MultiSigVault.sol": "bca9c9e88a66c590416ea404e05957408ef9e1f3721a6786c2d7dd04c85e539a",
+    "LICENSE": "964437b5be9d2d03fe13c70e2b310bf90f386e88aff02a3c0e0bddb9b6b3fb6f",
+    "manifest.json": "9d6306d66e34ef89fcc6addf00bd08a66c9673ddf1e7590edcbe43c5a7f52f30",
+    "test/MultiSigVault.test.js": "0c6af8b13d825d305397f1febc915973d746b75df257bae98753ee376c3a488e"
+  },
+  "pair_sha256": "2cb36ee8c5ac1bd43698e08fdaf2559326d30fdb073089f48bfe5cffd3af5687",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MultiSigVault.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.14,
+        "signatures": 0.071,
+        "min_functions": 5
+      },
+      {
+        "contract": "MultiSigVault.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.14,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "MultiSigVault.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.138,
+        "signatures": 0.0,
+        "min_functions": 9
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.13,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.26,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MultiSigVault.sol": {
+          "statements": 91.18,
+          "branches": 62.5,
+          "functions": 85.71,
+          "lines": 91.18
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,241 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 15,
+    "passes": 13,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-10-01T06:25:23.757Z",
+    "end": "2026-10-01T06:25:24.542Z",
+    "duration": 785
+  },
+  "tests": [
+    {
+      "title": "Should create a new plan",
+      "fullTitle": "SubscriptionService Plan Management Should create a new plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should deactivate a plan",
+      "fullTitle": "SubscriptionService Plan Management Should deactivate a plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should revert when creating invalid plan",
+      "fullTitle": "SubscriptionService Plan Management Should revert when creating invalid plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should revert when non-owner tries to create plan",
+      "fullTitle": "SubscriptionService Plan Management Should revert when non-owner tries to create plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should subscribe to a plan",
+      "fullTitle": "SubscriptionService Subscription Management Should subscribe to a plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "Should cancel subscription",
+      "fullTitle": "SubscriptionService Subscription Management Should cancel subscription",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should revert when subscribing to invalid plan",
+      "fullTitle": "SubscriptionService Subscription Management Should revert when subscribing to invalid plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert when already subscribed",
+      "fullTitle": "SubscriptionService Subscription Management Should revert when already subscribed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should revert when payment fails",
+      "fullTitle": "SubscriptionService Subscription Management Should revert when payment fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'\n    at Context.<anonymous> (test\\generated.test.js:129:7)"
+      }
+    },
+    {
+      "title": "Should charge a subscriber",
+      "fullTitle": "SubscriptionService Charge Management Should charge a subscriber",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 19,
+      "err": {
+        "message": "expected 1791008801 to equal 1791008803.",
+        "stack": "AssertionError: expected 1791008801 to equal 1791008803.\n    at Context.<anonymous> (test\\generated.test.js:158:39)"
+      }
+    },
+    {
+      "title": "Should cancel subscription when charge fails",
+      "fullTitle": "SubscriptionService Charge Management Should cancel subscription when charge fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should revert when not due yet",
+      "fullTitle": "SubscriptionService Charge Management Should revert when not due yet",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert when not subscribed",
+      "fullTitle": "SubscriptionService Charge Management Should revert when not subscribed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should return correct subscription status",
+      "fullTitle": "SubscriptionService View Functions Should return correct subscription status",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should return correct plan count",
+      "fullTitle": "SubscriptionService View Functions Should return correct plan count",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 1,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should revert when payment fails",
+      "fullTitle": "SubscriptionService Subscription Management Should revert when payment fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'\n    at Context.<anonymous> (test\\generated.test.js:129:7)"
+      }
+    },
+    {
+      "title": "Should charge a subscriber",
+      "fullTitle": "SubscriptionService Charge Management Should charge a subscriber",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 19,
+      "err": {
+        "message": "expected 1791008801 to equal 1791008803.",
+        "stack": "AssertionError: expected 1791008801 to equal 1791008803.\n    at Context.<anonymous> (test\\generated.test.js:158:39)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should create a new plan",
+      "fullTitle": "SubscriptionService Plan Management Should create a new plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should deactivate a plan",
+      "fullTitle": "SubscriptionService Plan Management Should deactivate a plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should revert when creating invalid plan",
+      "fullTitle": "SubscriptionService Plan Management Should revert when creating invalid plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should revert when non-owner tries to create plan",
+      "fullTitle": "SubscriptionService Plan Management Should revert when non-owner tries to create plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should subscribe to a plan",
+      "fullTitle": "SubscriptionService Subscription Management Should subscribe to a plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "Should cancel subscription",
+      "fullTitle": "SubscriptionService Subscription Management Should cancel subscription",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should revert when subscribing to invalid plan",
+      "fullTitle": "SubscriptionService Subscription Management Should revert when subscribing to invalid plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert when already subscribed",
+      "fullTitle": "SubscriptionService Subscription Management Should revert when already subscribed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should cancel subscription when charge fails",
+      "fullTitle": "SubscriptionService Charge Management Should cancel subscription when charge fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should revert when not due yet",
+      "fullTitle": "SubscriptionService Charge Management Should revert when not due yet",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert when not subscribed",
+      "fullTitle": "SubscriptionService Charge Management Should revert when not subscribed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should return correct subscription status",
+      "fullTitle": "SubscriptionService View Functions Should return correct subscription status",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should return correct plan count",
+      "fullTitle": "SubscriptionService View Functions Should return correct plan count",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\SubscriptionService\\test\\generated.test.js",
+      "duration": 1,
+      "err": {}
+    }
+  ]
+}

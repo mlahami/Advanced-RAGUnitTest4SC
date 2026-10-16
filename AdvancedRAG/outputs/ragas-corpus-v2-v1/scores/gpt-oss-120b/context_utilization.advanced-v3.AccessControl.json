@@ -1,0 +1,75 @@
+{
+  "id": "advanced-v3.AccessControl",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "AccessControl",
+  "chunk_ids": [
+    462,
+    463,
+    460,
+    461,
+    5643,
+    5636,
+    5640,
+    5642,
+    5637,
+    79
+  ],
+  "source_prompt_sha256": "af6cd4c4f952f3b85fc89bd481e75798cd53f639c54256a18d5fb1e7f4be1ad6",
+  "context_sha256": "7c2d83299c29f88a61701fd5aa451fa99c5ac880829d1bc2b562b1ae3807d850",
+  "response_sha256": "53dd47f54a5ae9e831639849d81c3a069748f9feb95d3efde2658b12ee063605",
+  "response_run": "rep01",
+  "metric": "context_utilization",
+  "score": 0.0,
+  "judgments": [
+    {
+      "reason": "The provided context describes tests for a completely different contract (AgriBridgeTraceability) and does not contain any information relevant to the AccessControl contract or the generated test suite, so it was not useful for producing the answer.",
+      "verdict": 0
+    },
+    {
+      "reason": "The provided context describes tests for a different contract (AgriBridgeTraceability) and unrelated role names, which do not help generate the correct unit tests for the AccessControl contract. Therefore the context was not useful for the answer.",
+      "verdict": 0
+    },
+    {
+      "reason": "The provided context describes tests for a completely different contract (AgriBridgeTraceability) and unrelated roles, which do not help in generating the unit test suite for the AccessControl contract. Therefore the context was not useful for the given answer.",
+      "verdict": 0
+    },
+    {
+      "reason": "The provided context describes tests for a different contract (AgriBridgeTraceability) and unrelated role constants, which do not inform the generation of the AccessControl test suite presented in the answer. Hence the context was not useful.",
+      "verdict": 0
+    },
+    {
+      "reason": "The provided context describes tests for a different contract (RBAC) with different role constants and behavior, which does not directly inform the generation of the unit test suite for the AccessControl contract. Therefore it was not useful for producing the given answer.",
+      "verdict": 0
+    },
+    {
+      "reason": "The provided context describes tests for a different contract (RBAC) with different role constants and behavior, and does not contain information relevant to the AccessControl contract or the generated test suite, so it was not useful for producing the answer.",
+      "verdict": 0
+    },
+    {
+      "reason": "The provided context describes tests for a different contract (RBAC) with different roles and behavior, and does not contain information specific to the AccessControl contract or its EDITOR_ROLE, so it was not useful for generating the given answer.",
+      "verdict": 0
+    },
+    {
+      "reason": "The provided context describes tests for a different contract (RBAC) with different role constants and events, which do not match the AccessControl contract being asked about. It does not supply relevant information needed to generate the correct test suite for AccessControl.",
+      "verdict": 0
+    },
+    {
+      "reason": "The provided context describes a different contract (RBAC with role hierarchy) and unrelated test code, which does not help generate the correct unit tests for the AccessControl contract; thus it was not useful.",
+      "verdict": 0
+    },
+    {
+      "reason": "The provided context contains a test for a different contract (AccessRegistry) and does not include information relevant to the AccessControl contract or the generated test suite, so it was not useful.",
+      "verdict": 0
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 27184,
+    "completion_tokens": 1105,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "code_sha256": "6b5000ccfedd973043ca0659afe3394bb36812581bb7351e7f69fced43f47ae6",
+  "seconds": 202.6,
+  "evaluated_utc": "2026-10-01T20:36:36.601595+00:00"
+}

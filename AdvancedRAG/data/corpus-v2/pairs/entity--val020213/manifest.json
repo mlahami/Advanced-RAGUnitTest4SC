@@ -1,0 +1,53 @@
+{
+  "id": "entity--val020213",
+  "domain": "identity-registry",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Entity.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Val020213/multisign-role-based",
+    "commit": "7609e7684d2906ce6d6f1f2fbf8f25b90c23d6d9",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/Entity.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/Entity.test.ts"
+    ],
+    "license_file": "LICENCE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/Entity.sol": "a5e9005bdfd83dcb1547a0db8ad477c066f51a18954f7cef7dffa0bb4554989f",
+      "packages/hardhat/test/Entity.test.ts": "621c5fbf4671d7c27ed81520494c0e9f67743667d575e6c38b7fb3715535b1b2"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "Entity.test.js",
+      "upstream_path": "packages/hardhat/test/Entity.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "Entity.test.js",
+      "upstream_path": "packages/hardhat/test/Entity.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "Entity"
+      ],
+      "file": "Entity.test.js",
+      "upstream_path": "packages/hardhat/test/Entity.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Entity registry of member identities (name/role) restricted to authorised caller; 51 commits. Primary 81 non-blank lines, closure 81 lines/1 files; 15 its, 25 expects; pragma >=0.8.0 <0.9.0.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:43.856217+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"Voting\", function () {\n  let Voting;\n  let voting;\n  let owner;\n  let voter1;\n  let voter2;\n  let candidates;\n\n  beforeEach(async function () {\n    [owner, voter1, voter2] = await ethers.getSigners();\n    candidates = [\"Candidate1\", \"Candidate2\", \"Candidate3\"];\n    Voting = await ethers.getContractFactory(\"Voting\");\n    voting = await Voting.deploy(candidates);\n    await voting.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should set the right chairperson\", async function () {\n      expect(await voting.chairperson()).to.equal(owner.address);\n    });\n\n    it(\"Should set the correct candidates\", async function () {\n      expect(await voting.candidates(0)).to.equal(\"Candidate1\");\n      expect(await voting.candidates(1)).to.equal(\"Candidate2\");\n      expect(await voting.candidates(2)).to.equal(\"Candidate3\");\n    });\n\n    it(\"Should revert if less than 2 candidates\", async function () {\n      await expect(Voting.deploy([\"SingleCandidate\"])).to.be.revertedWith(\"need candidates\");\n    });\n  });\n\n  describe(\"Voting\", function () {\n    it(\"Should allow a voter to vote\", async function () {\n      await voting.connect(voter1).vote(0);\n      expect(await voting.hasVoted(voter1.address)).to.be.true;\n      expect(await voting.votes(0)).to.equal(1n);\n    });\n\n    it(\"Should not allow a voter to vote twice\", async function () {\n      await voting.connect(voter1).vote(0);\n      await expect(voting.connect(voter1).vote(1)).to.be.revertedWith(\"already voted\");\n    });\n\n    it(\"Should not allow voting for invalid candidate\", async function () {\n      await expect(voting.connect(voter1).vote(3)).to.be.revertedWith(\"invalid candidate\");\n    });\n\n    it(\"Should correctly count votes\", async function () {\n      await voting.connect(voter1).vote(0);\n      await voting.connect(voter2).vote(1);\n      expect(await voting.votes(0)).to.equal(1n);\n      expect(await voting.votes(1)).to.equal(1n);\n      expect(await voting.votes(2)).to.equal(0n);\n    });\n  });\n\n  describe(\"Winner\", function () {\n    it(\"Should return the correct winner\", async function () {\n      await voting.connect(voter1).vote(0);\n      await voting.connect(voter2).vote(0);\n      expect(await voting.winner()).to.equal(0n);\n    });\n\n    it(\"Should handle a tie\", async function () {\n      await voting.connect(voter1).vote(0);\n      await voting.connect(voter2).vote(1);\n      // The first candidate with the highest votes should be returned\n      expect(await voting.winner()).to.equal(0n);\n    });\n\n    it(\"Should return 0 for no votes\", async function () {\n      expect(await voting.winner()).to.equal(0n);\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 5.349828700069338,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 10638,
+      "total_tokens": 11312,
+      "completion_tokens": 674,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "e65af21e55d7e5d476ee474c190a0ef8d93e91c2b9a6f5f41e9fa6342376f9b5"
+}

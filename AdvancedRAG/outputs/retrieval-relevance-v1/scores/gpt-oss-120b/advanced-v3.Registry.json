@@ -1,0 +1,79 @@
+{
+  "id": "advanced-v3.Registry",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "Registry",
+  "chunk_ids": [
+    4628,
+    4626,
+    5554,
+    4630,
+    4629,
+    5555,
+    4320,
+    4078,
+    4859,
+    4319
+  ],
+  "context_sha256": "b6fcedff1fa73bc3098e065c0486bed887f7d38b744caea0d2a78de465b16342",
+  "ratings": [
+    {
+      "chunk_id": 4628,
+      "rating": 2,
+      "reason": "Shows access‑control revert test for non‑owner, matching Registry’s owner‑only set function; can be adapted by renaming and adjusting revert message."
+    },
+    {
+      "chunk_id": 4626,
+      "rating": 2,
+      "reason": "Tests owner-only set, event emission, and retrieval—matches Registry's set/get behavior and events, just rename functions and types."
+    },
+    {
+      "chunk_id": 5554,
+      "rating": 2,
+      "reason": "Tests owner-only removal, event emission, and state change, matching Registry's remove behavior"
+    },
+    {
+      "chunk_id": 4630,
+      "rating": 1,
+      "reason": "Shows generic revert testing pattern, but Registry lacks batch setting function, so only pattern is marginally useful."
+    },
+    {
+      "chunk_id": 4629,
+      "rating": 1,
+      "reason": "Shows fixture setup, key hashing, and get assertions pattern, but target lacks batch set function, so only generic pattern is useful."
+    },
+    {
+      "chunk_id": 5555,
+      "rating": 2,
+      "reason": "Demonstrates owner‑only revert check for removal, directly reusable for Registry’s remove function"
+    },
+    {
+      "chunk_id": 4320,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern useful for testing owner-restricted functions, but specific behavior unrelated to Registry"
+    },
+    {
+      "chunk_id": 4078,
+      "rating": 1,
+      "reason": "Shows generic setup, deployment, and access‑control pattern useful for Registry, but tests unrelated loan logic, so only partially applicable."
+    },
+    {
+      "chunk_id": 4859,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests unrelated whitelist functionality; only useful for checking reverts, not directly applicable to Registry behavior."
+    },
+    {
+      "chunk_id": 4319,
+      "rating": 1,
+      "reason": "Shows generic event emission and state verification pattern, but tests unrelated functionality; only loosely applicable for Registry’s RecordSet event testing."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9371,
+    "completion_tokens": 1066,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 57.7,
+  "evaluated_utc": "2026-10-14T18:08:27.867839+00:00"
+}

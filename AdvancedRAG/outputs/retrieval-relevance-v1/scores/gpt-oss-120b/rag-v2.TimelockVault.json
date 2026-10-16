@@ -1,0 +1,73 @@
+{
+  "id": "rag-v2.TimelockVault",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "TimelockVault",
+  "chunk_ids": [
+    4142,
+    4143,
+    1162,
+    4146,
+    6791,
+    4144,
+    1179,
+    5417,
+    4141
+  ],
+  "context_sha256": "9123f88f86e68f6951a41f61f3feb97ed3397ae1eba7c593e3208bb68379fffd",
+  "ratings": [
+    {
+      "chunk_id": 4142,
+      "rating": 2,
+      "reason": "Tests early withdraw revert, matching TimelockVault’s lock check; only error string differs, easily adapted."
+    },
+    {
+      "chunk_id": 4143,
+      "rating": 2,
+      "reason": "Tests non-owner withdraw revert, matching same access control pattern despite different error string"
+    },
+    {
+      "chunk_id": 1162,
+      "rating": 2,
+      "reason": "Tests timelock enforcement with time increase and revert then success, matching vault's unlockTime check, so directly reusable after renaming."
+    },
+    {
+      "chunk_id": 4146,
+      "rating": 2,
+      "reason": "Tests time-locked withdraw and balance transfer, matching TimelockVault behavior; setup and assertions can be reused after renaming."
+    },
+    {
+      "chunk_id": 6791,
+      "rating": 1,
+      "reason": "Shows owner-only withdraw pattern, but tests unrelated fee logic; only generic owner access check is reusable."
+    },
+    {
+      "chunk_id": 4144,
+      "rating": 2,
+      "reason": "Tests time unlock and owner withdraw, matching TimelockVault behavior; can reuse time increase and non‑revert check after renaming."
+    },
+    {
+      "chunk_id": 1179,
+      "rating": 1,
+      "reason": "Shows timelock delay, time increase, and revert check pattern useful for TimelockVault, but tests different contract behavior"
+    },
+    {
+      "chunk_id": 5417,
+      "rating": 1,
+      "reason": "Shows time‑manipulation and revert checking pattern useful for TimelockVault’s unlockTime logic, but tests unrelated reentrancy behavior."
+    },
+    {
+      "chunk_id": 4141,
+      "rating": 0,
+      "reason": "Test checks constructor revert for invalid unlock time, which TimelockVault does not validate; pattern not applicable"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8731,
+    "completion_tokens": 998,
+    "calls": 9
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 57.7,
+  "evaluated_utc": "2026-10-12T08:53:27.545660+00:00"
+}

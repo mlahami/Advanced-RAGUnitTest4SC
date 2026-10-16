@@ -1,0 +1,82 @@
+{
+  "pair": "multisig-controller--ibetekhtin",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:22:52.773851+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MultisigController.sol": "e5bfc860b65cc315c17a11533bf039d58120f4326caf801a9b266a4bad17d003",
+    "LICENSE": "feddbd3902008defde8b64cb26db8f6d612111621a9e0926645b64054495d829",
+    "manifest.json": "a4418f1485625194b5f1ae2866ee6ae7506c28f005d6c7155d8d49cea9cb5553",
+    "test/multisig.test.js": "1eb4e6199e38676a60e43a6686c5009e43564b1a7cca9f15ae32ac3bbffb672d"
+  },
+  "pair_sha256": "f59fc750bcb6af9633509337f515be67fb6882688838e99f59ea22847dcd10ef",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MultisigController.sol",
+        "reference": "MultiSigWallet.sol",
+        "structural": 0.303,
+        "signatures": 0.167,
+        "min_functions": 3
+      },
+      {
+        "contract": "MultisigController.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.216,
+        "signatures": 0.125,
+        "min_functions": 4
+      },
+      {
+        "contract": "MultisigController.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.216,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.23,
+      "mocha": {
+        "tests": 27,
+        "passes": 27,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.81,
+      "mocha": {
+        "tests": 27,
+        "passes": 27,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MultisigController.sol": {
+          "statements": 100.0,
+          "branches": 95.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

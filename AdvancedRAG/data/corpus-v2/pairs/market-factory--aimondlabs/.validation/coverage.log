@@ -1,0 +1,52 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> ConditionalTokens.sol
+> IConditionalTokens.sol
+> ICTFExchange.sol
+> MarketFactory.sol
+> MockUSDC.sol
+
+Compilation:
+============
+
+Compiled 21 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+Token IDs: {
+  tokenId1: 12933759560272160096940406433885741624807590239701769384964058230548138267627n,
+  tokenId2: 106739373943845519656061766642163148533517027068920439348232967946382955047263n,
+  tokenId3: 23663807823794160100821513440367538563504435864168742335788605652939924247879n
+}
+Balances: { token1: 1000000000n, token2: 1000000000n, token3: 1000000000n }
+50bp condition resolved: true
+25bp condition resolved: true
+Token balances before redemption:
+50bp YES: 1000000000n
+25bp NO: 1000000000n
+Balance before: 8000000000
+Balance after: 9000000000
+Expected change: 1000000000
+-------------------------|----------|----------|----------|----------|----------------|
+File                     |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-------------------------|----------|----------|----------|----------|----------------|
+ contracts\              |    79.22 |    53.33 |    69.23 |    83.33 |                |
+  ConditionalTokens.sol  |    81.82 |    46.15 |    72.73 |    84.91 |... 125,215,222 |
+  ICTFExchange.sol       |      100 |      100 |      100 |      100 |                |
+  IConditionalTokens.sol |      100 |      100 |      100 |      100 |                |
+  MarketFactory.sol      |    79.31 |     62.5 |    72.73 |    84.31 |... 250,282,287 |
+  MockUSDC.sol           |       50 |        0 |       50 |       50 |          21,28 |
+-------------------------|----------|----------|----------|----------|----------------|
+All files                |    79.22 |    53.33 |    69.23 |    83.33 |                |
+-------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

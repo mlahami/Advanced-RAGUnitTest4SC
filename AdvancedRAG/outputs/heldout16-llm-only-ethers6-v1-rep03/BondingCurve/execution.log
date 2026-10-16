@@ -1,0 +1,35 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BenchmarkFixtures.sol
+> BondingCurve.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |     9.86 |        5 |    11.11 |    11.46 |                |
+  BenchmarkFixtures.sol |        0 |        0 |        0 |        0 |... 140,141,145 |
+  BondingCurve.sol      |    21.21 |    10.71 |    33.33 |    28.21 |... 112,113,114 |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |     9.86 |        5 |    11.11 |    11.46 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+Error in plugin solidity-coverage: ❌ 1 test(s) failed under coverage.
+
+For more info run Hardhat with --show-stack-traces

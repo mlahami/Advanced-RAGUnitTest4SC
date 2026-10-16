@@ -1,0 +1,67 @@
+{
+  "id": "rag-v2.CrossChainBridge",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "CrossChainBridge",
+  "chunk_ids": [
+    1162,
+    1179,
+    4126,
+    1167,
+    1178,
+    1177,
+    1163,
+    1159
+  ],
+  "context_sha256": "0cbd6fd79c90b554ca48518481a4c1e7e2666f66893d4e49a0525f161a950fa9",
+  "ratings": [
+    {
+      "chunk_id": 1162,
+      "rating": 1,
+      "reason": "Only generic revert and event checks; specific functions like timelock, queueRelease do not exist in CrossChainBridge."
+    },
+    {
+      "chunk_id": 1179,
+      "rating": 0,
+      "reason": "Test checks timelock and queueRelease logic unrelated to CrossChainBridge functions."
+    },
+    {
+      "chunk_id": 4126,
+      "rating": 1,
+      "reason": "Shows replay‑protection pattern and event assertion similar to processed flag, but uses different functions and token logic, not directly reusable."
+    },
+    {
+      "chunk_id": 1167,
+      "rating": 0,
+      "reason": "Test checks pause/release logic unrelated to CrossChainBridge; no similar function or pattern in target contract."
+    },
+    {
+      "chunk_id": 1178,
+      "rating": 1,
+      "reason": "Shows generic revert testing and mock token setup, but the specific approveRelease behavior doesn’t exist in CrossChainBridge."
+    },
+    {
+      "chunk_id": 1177,
+      "rating": 1,
+      "reason": "Shows deployment with token address and validator list, and revert assertion pattern, but tests unrelated functions; only generic patterns apply."
+    },
+    {
+      "chunk_id": 1163,
+      "rating": 1,
+      "reason": "Shows generic revert‑check pattern, but target contract has different functions and error handling; no direct behavior match."
+    },
+    {
+      "chunk_id": 1159,
+      "rating": 1,
+      "reason": "Shows generic access‑control revert test pattern (requires specific role), which applies to validator‑only functions, but specific queueRelease behavior isn’t present in target."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 17279,
+    "completion_tokens": 871,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 112.6,
+  "evaluated_utc": "2026-10-12T08:59:48.690180+00:00"
+}

@@ -1,0 +1,89 @@
+{
+  "pair": "exclusive-claim--biosai",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T07:39:24.149572+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ExclusiveClaim.sol": "968e5e986755cd2970f38b2cbb9325c8078462fc90a66ee6f5922f047bcaf49c",
+    "contracts/MockERC20.sol": "884737d8336937adb4543e31b675c56b78c02d5532c6aee4b3186e05d5a36aee",
+    "LICENSE": "992bf2f7aee741eccd1bd958e43d86af1c9be7a401a006a8aeccaeb7086301cb",
+    "manifest.json": "9bc7e8cba4384d0272a2d74cbe2d5dda06a88c2bc4d71361af406a702e5fc873",
+    "test/ExclusiveClaim.test.js": "32f478c0e83135d62c354ed41db44c604f48e69897de718401edf311049db475"
+  },
+  "pair_sha256": "75b5bdf5c6d37fd2a2e19365a67d668df6f54ac06d3ba94b1cb1f5a3992209f5",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "ExclusiveClaim.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.175,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "ExclusiveClaim.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.175,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "ExclusiveClaim.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.163,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.03,
+      "mocha": {
+        "tests": 49,
+        "passes": 49,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 11.46,
+      "mocha": {
+        "tests": 49,
+        "passes": 49,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "ExclusiveClaim.sol": {
+          "statements": 100.0,
+          "branches": 85.19,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockERC20.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 66.67,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

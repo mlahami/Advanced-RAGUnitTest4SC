@@ -1,0 +1,48 @@
+{
+  "contract": "SubscriptionService",
+  "status": "test_failures",
+  "prompt_sha256": "ff7bac8a1ea1a066804673ed363fc6eb501a5ba4b19c88a3854c547bb9f73498",
+  "generation_seconds": 14.8784500999609,
+  "usage": {
+    "prompt_tokens": 8281,
+    "total_tokens": 10178,
+    "completion_tokens": 1897,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 7.595276499981992
+  },
+  "passed_tests": 11,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "SubscriptionService Subscription Management Should subscribe to a plan",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "SubscriptionService Subscription Management Should revert when payment fails",
+      "error": "Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient balance'"
+    },
+    {
+      "title": "SubscriptionService Charge Management Should charge a subscriber",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "SubscriptionService Charge Management Should cancel subscription when charge fails",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    }
+  ],
+  "coverage": {
+    "statements": 86.21,
+    "branches": 83.33,
+    "functions": 100.0,
+    "lines": 89.29
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

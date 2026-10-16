@@ -1,0 +1,89 @@
+{
+  "pair": "fungible-asset-token--mickap1",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:50:44.930491+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/FungibleAssetToken.sol": "8a0184faee8559d840bbbdf3c799fa164af3bfc95b923fa21aa6b88a6f8884a2",
+    "contracts/KYCregistry.sol": "18a24bed158b875a475804454799c39c70be419f4fc30a8444b27ec8961f6ffd",
+    "LICENSE": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b",
+    "manifest.json": "2fefe96140553125f7907d696a88bdb3557de3b751f1e2aac5c5e2d9c6071085",
+    "test/FungibleAssetToken.test.js": "e06834917ca3d00cd10334237cf6bf81c5eac58dda16b343ec5dd1d2fabc2d86"
+  },
+  "pair_sha256": "3ea09a152ab3213865801ae1b8f90910ab98f55a6f8129399c76845b8ac93a5a",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "KYCregistry.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.157,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "KYCregistry.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.141,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "KYCregistry.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.137,
+        "signatures": 0.0,
+        "min_functions": 11
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.95,
+      "mocha": {
+        "tests": 36,
+        "passes": 36,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 10.17,
+      "mocha": {
+        "tests": 36,
+        "passes": 36,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "FungibleAssetToken.sol": {
+          "statements": 96.0,
+          "branches": 82.61,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "KYCregistry.sol": {
+          "statements": 22.58,
+          "branches": 16.67,
+          "functions": 35.0,
+          "lines": 22.58
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,47 @@
+{
+  "id": "pledge-vault--winsznx",
+  "domain": "yield-vault",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "PledgeVault.sol",
+    "TestUSDC.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/winsznx/float",
+    "commit": "ae8d6dba8b5f2920b787855cba7b5695c0349bf8",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/contracts/contracts/PledgeVault.sol",
+      "packages/contracts/contracts/test/TestUSDC.sol"
+    ],
+    "test_paths": [
+      "packages/contracts/test/PledgeVault.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "packages/contracts/contracts/PledgeVault.sol": "64a88d453f6031613cfad0a0a1a7af86bc9a4c7294725eeec0bc4437a9c85938",
+      "packages/contracts/contracts/test/TestUSDC.sol": "69bbc42f72ea17ad7b0e0c7c94a54abc7d94a95d69abf77eabe317f00e189134",
+      "packages/contracts/test/PledgeVault.test.ts": "ba8ddc93f52b76ff02d44632631efcfa1dc110690211addeb9ef8ef654ac97d8"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "PledgeVault.test.js",
+      "upstream_path": "packages/contracts/test/PledgeVault.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "PledgeVault.test.js",
+      "upstream_path": "packages/contracts/test/PledgeVault.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 164 lines, closure 182 lines, 2 files; 24 it blocks; history: 89 commits 2026-07-10..2026-08-18",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:33:16.961881+00:00"
+}

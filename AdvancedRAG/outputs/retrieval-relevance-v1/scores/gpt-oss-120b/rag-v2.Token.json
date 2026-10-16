@@ -1,0 +1,55 @@
+{
+  "id": "rag-v2.Token",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "Token",
+  "chunk_ids": [
+    3390,
+    3389,
+    6215,
+    2664,
+    2665,
+    5145
+  ],
+  "context_sha256": "40173ee9aa71112facac47f9caa40c6bf7727829373bb8906f202037997a5405",
+  "ratings": [
+    {
+      "chunk_id": 3390,
+      "rating": 1,
+      "reason": "Shows approve usage, balance change assertions, and event checking which are relevant patterns for ERC20-like token, but tests unrelated functions, so only partially useful."
+    },
+    {
+      "chunk_id": 3389,
+      "rating": 1,
+      "reason": "Shows approve usage, balance change assertions, and event/revert checks applicable to ERC20-like functions, but tests unrelated specific functions, so only generic patterns are useful."
+    },
+    {
+      "chunk_id": 6215,
+      "rating": 1,
+      "reason": "Shows generic approve, balance checks, event parsing patterns useful for token tests, but tests unrelated liquidity behavior; not directly adaptable."
+    },
+    {
+      "chunk_id": 2664,
+      "rating": 1,
+      "reason": "Shows generic revert‑expectation pattern, useful for testing Token’s require reverts, but tests unrelated functionality."
+    },
+    {
+      "chunk_id": 2665,
+      "rating": 1,
+      "reason": "Shows generic ERC20 approval and transfer setup pattern, but tests pool-specific addLiquidity behavior not present in Token contract."
+    },
+    {
+      "chunk_id": 5145,
+      "rating": 1,
+      "reason": "Tests a burn function not present; only generic balance check pattern, which is loosely applicable but not directly useful."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8338,
+    "completion_tokens": 725,
+    "calls": 6
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 54.4,
+  "evaluated_utc": "2026-10-12T08:54:21.998123+00:00"
+}

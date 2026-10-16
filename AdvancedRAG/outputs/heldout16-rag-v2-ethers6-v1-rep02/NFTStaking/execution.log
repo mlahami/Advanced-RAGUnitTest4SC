@@ -1,0 +1,35 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BenchmarkFixtures.sol
+> NFTStaking.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |    69.33 |    47.92 |    64.29 |     69.9 |                |
+  BenchmarkFixtures.sol |    42.11 |    31.25 |    44.44 |    47.37 |... 140,141,145 |
+  NFTStaking.sol        |     97.3 |    81.25 |      100 |    97.83 |            131 |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |    69.33 |    47.92 |    64.29 |     69.9 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+Error in plugin solidity-coverage: ❌ 6 test(s) failed under coverage.
+
+For more info run Hardhat with --show-stack-traces

@@ -1,0 +1,89 @@
+{
+  "pair": "kusdoracle--frosty720",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:43:34.872796+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/KUSDOracle.sol": "fee7a2e004cbe28ae567319b7bf46e6a5921457738e4fca3862eb2e254d877c2",
+    "contracts/KUSDOracleFactory.sol": "dfccdc58d560f67acccc7bd1c32634c5aa53c3859476307bbbf120b32016b767",
+    "LICENSE": "04fc6b7e93e0ae3e2a6767d04245f38cd1ca3b08362187ac19d0c35a72974135",
+    "manifest.json": "14df6167636d98fab778979278d675e911f664af4f7c17c25b8459651f71cd4a",
+    "test/KUSDOracle.test.js": "6c9644ad9d247b9e9d63a245944814c290049dcdb197c0d37f587b40f467d03b"
+  },
+  "pair_sha256": "b9c82df389db56c2cc97d866629f3dd29dd239bb816814a2677a375f7920bcbc",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "KUSDOracle.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.205,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "KUSDOracle.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.166,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "KUSDOracle.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.162,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.82,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.88,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "KUSDOracle.sol": {
+          "statements": 91.11,
+          "branches": 63.04,
+          "functions": 93.75,
+          "lines": 93.18
+        },
+        "KUSDOracleFactory.sol": {
+          "statements": 25.64,
+          "branches": 10.53,
+          "functions": 21.43,
+          "lines": 25.64
+        }
+      }
+    }
+  },
+  "accepted": true
+}

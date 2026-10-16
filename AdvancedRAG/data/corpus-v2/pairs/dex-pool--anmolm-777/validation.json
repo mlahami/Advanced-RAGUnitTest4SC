@@ -1,0 +1,89 @@
+{
+  "pair": "dex-pool--anmolm-777",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:44:16.506158+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/DexPool.sol": "0e22408d1731cff4a5940b47dc593b23b5d30cea5074399480257b33e3601e50",
+    "contracts/Token.sol": "83629def4dc5cbce7e062ebfb926d2a114c9ef45c2b91ae6790af77f0697f50e",
+    "LICENSE": "0494cfa87c2310d8acb6be1223b80df729aa5999bdf2943f9812432139b0e159",
+    "manifest.json": "c164429b7428941edddbffbcbbcfb5ed195815b4b7402c1b4d9b81cadcd5ee39",
+    "test/DexPool.test.js": "16774c16feadc61acce73eb7b10bd812afd47c08c37d29b5743876bcc6bc8284"
+  },
+  "pair_sha256": "3ad5d2b3fee2fad99b157798b3985ee9d7285d2cae59e9aa56ccb29a229b4ded",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "DexPool.sol",
+        "reference": "DEX.sol",
+        "structural": 0.347,
+        "signatures": 0.167,
+        "min_functions": 6
+      },
+      {
+        "contract": "DexPool.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.225,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "DexPool.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.164,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.79,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.54,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "DexPool.sol": {
+          "statements": 97.92,
+          "branches": 63.79,
+          "functions": 100.0,
+          "lines": 97.92
+        },
+        "Token.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 50.0,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

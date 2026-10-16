@@ -1,0 +1,117 @@
+{
+  "pair": "english-auction--jinzm10162",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:10:50.558928+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/CallAuction.sol": "b7117efcaedf4e77d5721dfdee91ec4b62ab69e0c10d593b46bb458d356b7031",
+    "contracts/EnglishAuction.sol": "7cadd05d6da9c5a2ebd1982118363e1855c2c069213480a96f654493723ab199",
+    "contracts/EnglishAuctionBase.sol": "78bf26d61614d661f17a894cbbca76b16be8a409028edc82bc093dcb15940e8f",
+    "contracts/IEnglishAuction.sol": "b9cef2a809fd7bd23c0db7359da993e882388ffbaa5ff582ac7bfcd11ee11a0c",
+    "contracts/NFT.sol": "17efd1e4a868186c1097b69c55b242aecf78262cd62aff2cdfcf5b77aff86681",
+    "contracts/Seller.sol": "b9661bd9bc99a96833897a97eb6a8d489af78702ae1ac240b6066ccec79720df",
+    "LICENSE": "e19d78e3e2685f4059fd2ddac4b9e7bbe504197c176de92332625de535a9c0cf",
+    "manifest.json": "ea1159f59a0ee5fe1d279dbcca1a0e69c4a99d6084e2696e020d69ec7cf77f0a",
+    "test/EnglishAuction.js": "831d5ea2543715a4fb90b17a7e97cc14e5f0dc1f0a28a056ee323bdb693fe6fa"
+  },
+  "pair_sha256": "798e51c9b19c1d15618795cc3375abd0679d6093f00edcb7480e43fadcce1f7c",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "EnglishAuction.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.115,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "EnglishAuction.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.113,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "EnglishAuction.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.112,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.72,
+      "mocha": {
+        "tests": 35,
+        "passes": 35,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.5,
+      "mocha": {
+        "tests": 35,
+        "passes": 35,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "EnglishAuction.sol": {
+          "statements": 100.0,
+          "branches": 96.3,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "EnglishAuctionBase.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IEnglishAuction.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "CallAuction.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "NFT.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Seller.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

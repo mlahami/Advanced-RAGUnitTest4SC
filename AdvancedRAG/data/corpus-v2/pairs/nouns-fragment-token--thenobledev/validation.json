@@ -1,0 +1,152 @@
+{
+  "pair": "nouns-fragment-token--thenobledev",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:13:33.276881+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/IInflator.sol": "c258e04e7a089bc746cdda2c9be2a674e30449778ce2fdadcfa46383a618729c",
+    "contracts/Inflate.sol": "de857c4f24299a13394765dbc915a8e35473d1afcfe086997398f96958591234",
+    "contracts/INounsArt.sol": "747e9c87e6f6922cec09c3407d3d609f252601ec6e6bbf9f91ee403399378f80",
+    "contracts/INounsDescriptorArt.sol": "7aac17e468f39b63c4d78e86ca9433181972c6847bba92bcf0f52ff0e99c2397",
+    "contracts/INounsDescriptorMinimal.sol": "349cefe301b9354b7f93400bd4cd9e4b362f1b84200532b543b8008bedb7a381",
+    "contracts/INounsFragmentDescriptorMinimal.sol": "de296d232df9f0b35dd9839a0fc8a4ebf1dd0194737a4779bc203d9fc4f36206",
+    "contracts/INounsSeeder.sol": "85475d37d8284073e0b58d8bc4b8b8ede9e1ce55b08c149c492712bd25336c21",
+    "contracts/INounsToken.sol": "181993dfd6bfceeea3a963f40a79000edbb1ab258addf824aaba42598e6aea7b",
+    "contracts/IProxyRegistry.sol": "d12222a771cbf4429e71047197e812025ba1985550b8b16b945e31daa1687735",
+    "contracts/MockNounsToken.sol": "cc20ef66f1c465478145e19e1a8f50beab7e6c5b4a53dc5dad53d4409f66f6b2",
+    "contracts/NounsFragmentToken.sol": "a411062e03433defb0ca3ac2ad46bd23083fcb5cd180ed165de4efb4414adefd",
+    "LICENSE": "1809e1af24377a8b446b892a3e7f5d25971a5f332fa3d1293ad8443ecfc82f39",
+    "manifest.json": "1fe0327377b53f409ad03fe2d4dcd0ddabbd29faff91902d9ff16186192cacbf",
+    "test/NounsFragmentToken.js": "45beb645ac6ae7f74dc783abde836f53f211c7283fed944d4626e30db6ce3cff"
+  },
+  "pair_sha256": "61ddb45f024184e3efd0dfc4a2a34c4d94a28970324262f585f841ab558fdf0e",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "NounsFragmentToken.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.144,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "INounsDescriptorMinimal.sol",
+        "reference": "SimpleStorage.sol",
+        "structural": 0.132,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "NounsFragmentToken.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.118,
+        "signatures": 0.0,
+        "min_functions": 10
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.17,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.19,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "NounsFragmentToken.sol": {
+          "statements": 87.5,
+          "branches": 75.0,
+          "functions": 91.67,
+          "lines": 87.5
+        },
+        "IInflator.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "INounsArt.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "INounsDescriptorArt.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "INounsDescriptorMinimal.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "INounsFragmentDescriptorMinimal.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "INounsSeeder.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "INounsToken.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Inflate.sol": {
+          "statements": 0.0,
+          "branches": 0.0,
+          "functions": 0.0,
+          "lines": 0.0
+        },
+        "IProxyRegistry.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockNounsToken.sol": {
+          "statements": 30.77,
+          "branches": 100.0,
+          "functions": 38.46,
+          "lines": 30.77
+        }
+      }
+    }
+  },
+  "accepted": true
+}

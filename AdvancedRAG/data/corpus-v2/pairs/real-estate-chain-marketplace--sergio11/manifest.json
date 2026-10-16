@@ -1,0 +1,40 @@
+{
+  "id": "real-estate-chain-marketplace--sergio11",
+  "domain": "nft-marketplace",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "RealEstateChainMarketplace.sol",
+    "IRealEstateChain.sol",
+    "IRealEstateChainMarketplace.sol",
+    "RealEstateChain.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/sergio11/realestatechain_blockchain",
+    "commit": "765e01cd88ae35c6f205022fb902f30261236fbd",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/RealEstateChainMarketplace.sol",
+      "contracts/IRealEstateChain.sol",
+      "contracts/IRealEstateChainMarketplace.sol",
+      "contracts/RealEstateChain.sol"
+    ],
+    "test_paths": [
+      "test/RealEstateChain.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/RealEstateChainMarketplace.sol": "91b0f4113769d57c9e9cb96260f192212633e846b5e748007273cc42ec17c0d3",
+      "contracts/IRealEstateChain.sol": "ab95bffb6e930297e9ac4a583b3144e7717994396febe7b949eacd7720ca15fc",
+      "contracts/IRealEstateChainMarketplace.sol": "54c7644cd1c8236c3dcedc423cec1d332213cffe957d502fb5f68ecde3b94984",
+      "contracts/RealEstateChain.sol": "6fba7bc00666359a0cc18238fac0631dc2aeabcbe5d061c0f12d408bc4f4468e",
+      "test/RealEstateChain.test.js": "02fa98616904f3f8ed84808421b3117b7f2baee7c3d776ce7bd290bdf799fd81"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Real-estate NFT marketplace; only 6 its. Primary 74 non-blank lines, closure 205 lines/4 files; 6 its, 14 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:07.245271+00:00"
+}

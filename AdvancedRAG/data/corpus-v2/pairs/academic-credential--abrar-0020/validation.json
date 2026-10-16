@@ -1,0 +1,82 @@
+{
+  "pair": "academic-credential--abrar-0020",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T07:34:51.143723+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AcademicCredential.sol": "bd5e07bd43b523a3e750a4f17c0f1071fbbfd25c77f0ff1e97f72fdd484ec0b5",
+    "LICENSE": "ee6f50cd4a6076dbdde323876f51159b5dafdc8ffe8bcf45e2757652b9ec468d",
+    "manifest.json": "57fc8a22e7755eb5cf227246085b38f3a9f1bbe8af448c15cbe93fa08df63078",
+    "test/AcademicCredential.test.js": "9f180f10c179e7e454431e211034d39336cee391b6be8097532650b70ecf27e7"
+  },
+  "pair_sha256": "f8bef635de11953350d43936b1deedf01a80aea8fa14b6c0325d0e8309bc92ad",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "AcademicCredential.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.14,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "AcademicCredential.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.129,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "AcademicCredential.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.119,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.17,
+      "mocha": {
+        "tests": 18,
+        "passes": 18,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 10.0,
+      "mocha": {
+        "tests": 18,
+        "passes": 18,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "AcademicCredential.sol": {
+          "statements": 83.33,
+          "branches": 73.08,
+          "functions": 72.73,
+          "lines": 83.33
+        }
+      }
+    }
+  },
+  "accepted": true
+}

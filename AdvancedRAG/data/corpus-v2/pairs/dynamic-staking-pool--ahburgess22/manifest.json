@@ -1,0 +1,69 @@
+{
+  "id": "dynamic-staking-pool--ahburgess22",
+  "domain": "nft-staking",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "DynamicStakingPool.sol",
+    "MasterRegistry.sol",
+    "NFTCreator.sol",
+    "RewardToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ahburgess22/ERC721-Dynamic-Staking-Pool",
+    "commit": "647119f057c442aea38cb5531854113a687c2e92",
+    "license": "MIT",
+    "contract_paths": [
+      "Contracts/DynamicStakingPool.sol",
+      "Contracts/MasterRegistry.sol",
+      "Contracts/NFTCreator.sol",
+      "Contracts/RewardToken.sol",
+      "Helpers/CompDefinitions.sol",
+      "Helpers/RegistryHelpers.sol",
+      "Helpers/StakingHelpers.sol"
+    ],
+    "test_paths": [
+      "test/DynamicStakingPool.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "Contracts/DynamicStakingPool.sol": "1cbdf00160d57163da736426ecb593ec542877cdb695ec37c3701664092afc52",
+      "Contracts/MasterRegistry.sol": "7627f2a490c69cd61f973164c35e1d844261e69824c3738419dc062eda0ff0a2",
+      "Contracts/NFTCreator.sol": "75cc4d06d35c1fcca8cbad916b9ef71bd7511f28100601cd3116ae7ec1865323",
+      "Contracts/RewardToken.sol": "67c41e001fd13ccd9641fbfbe1c5b06d960642d33ecfaab0dceed9feaaf494b4",
+      "Helpers/CompDefinitions.sol": "c3ca9d6f22d5ab509e543f5500ffc54bc97f7ce230764517d1d69334a88b6c5f",
+      "Helpers/RegistryHelpers.sol": "de7f306f82f304293a2f430c60de7a5edb19fe6a0606725020fe4ecee78056b9",
+      "Helpers/StakingHelpers.sol": "c725d6423fb55e92f18f77456decf13735724bb2a2ae9c3743f82fbc8f4e9abd",
+      "test/DynamicStakingPool.js": "55f28d42c1d4e68d20614b0cc9c3adcfefa6de215c64d05b4285329d95f42b13"
+    }
+  },
+  "transformations": [
+    {
+      "file": "DynamicStakingPool.sol",
+      "kind": "import-path",
+      "before": "../Helpers/StakingHelpers.sol",
+      "after": "./StakingHelpers.sol"
+    },
+    {
+      "file": "DynamicStakingPool.sol",
+      "kind": "import-path",
+      "before": "../Helpers/CompDefinitions.sol",
+      "after": "./CompDefinitions.sol"
+    },
+    {
+      "file": "MasterRegistry.sol",
+      "kind": "import-path",
+      "before": "../Helpers/RegistryHelpers.sol",
+      "after": "./RegistryHelpers.sol"
+    },
+    {
+      "file": "NFTCreator.sol",
+      "kind": "import-path",
+      "before": "../Helpers/CompDefinitions.sol",
+      "after": "./CompDefinitions.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "dynamic rewards + registry; Helpers libraries",
+  "imported_utc": "2026-09-27T21:50:22.108683+00:00"
+}

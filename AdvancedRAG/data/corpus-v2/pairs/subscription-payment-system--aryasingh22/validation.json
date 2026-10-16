@@ -1,0 +1,83 @@
+{
+  "pair": "subscription-payment-system--aryasingh22",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:16:32.435660+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MockERC20.sol": "9ca8e4113386462e093557b95f8fd6c36f5f0770bdc5da946dd15cb181d7639c",
+    "contracts/SubscriptionPaymentSystem.sol": "ebdaf25894841c11e4676f9692e4bcbfb2076649a0fb1185efabb348ce9c1a5f",
+    "LICENSE": "e2ddc0eb10a3daafb98982b1f338e9c13fc6a8c91baa1c138710c780c2ddc357",
+    "manifest.json": "c49f35977aa90b1666d32f73381fa1ec77ea437926e22e2d8f0447700be8d370",
+    "test/SubscriptionPaymentSystem.test.js": "a3650be24ccc9b36d6269b96bbecb8d16ddd373b334d7d288e95cb95dc2f85bf"
+  },
+  "pair_sha256": "ee1afb6de8c5f0838568c68564eb3e6596e32a8742b57b2102c0876c8477cce4",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MockERC20.sol",
+        "reference": "Token.sol",
+        "structural": 0.389,
+        "signatures": 0.429,
+        "min_functions": 3
+      },
+      {
+        "contract": "MockERC20.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.269,
+        "signatures": 0.154,
+        "min_functions": 7
+      },
+      {
+        "contract": "SubscriptionPaymentSystem.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.208,
+        "signatures": 0.056,
+        "min_functions": 10
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.67,
+      "mocha": {
+        "tests": 16,
+        "passes": 16,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.43,
+      "mocha": {
+        "tests": 16,
+        "passes": 16,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "SubscriptionPaymentSystem.sol": {
+          "statements": 80.77,
+          "branches": 53.92,
+          "functions": 67.86,
+          "lines": 80.77
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,145 @@
+{
+  "pair": "avgxamm--parkeqpapa",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:45:20.738991+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AVGXAMM.sol": "2374be29053a234449a24bb765c663ffc9dc22d7cfb6a1d0c8fa245a0490ad18",
+    "contracts/AVGXToken.sol": "81d4af3066767c14e8ffa2ae3a2b0510b5847dedb95ad0d58ef2536423938f9e",
+    "contracts/AVGXVault.sol": "6c867823f3986d27a618e206c0bd95ba80d9bf129e223ec90a4e32b083600e17",
+    "contracts/FixedPointMath.sol": "6a76925df07dd55f18ff93e97e59ef756cfd49864388108eeffd2d90ede82fca",
+    "contracts/IAVGXAMM.sol": "f71ac61ebac33833e4c1cc35fb3395476ea0499dd0e3a1717772e93854a8e913",
+    "contracts/IAVGXCalculator.sol": "d70fde0e6dfd151acfd769957c2764c588020e0a45454a7d9a0b6d680ac5ba4c",
+    "contracts/IAVGXToken.sol": "26bbd8ed564b6c92e5274a7ebb00552216de5ecb73261eca812dca925ec65fd9",
+    "contracts/MockCalculator.sol": "f6bddb22a89e40d92cb4b4eabf7ed87c85aa66ab0e6a2437c30245e31946039a",
+    "contracts/MockERC20.sol": "e3431e8c364e5240cb1b02b75951ce2b3788b2d8dbfdc381370f2b577104d2dd",
+    "contracts/Roles.sol": "01099fff5881883f469cc43a6c1ba3c3f318e7b2b98423ca0e6b4b36ac50e895",
+    "LICENSE": "15556d4bf92a4bdb192d75f6360b5dd704f49dd98f9b0b7e82520fc6eb0fc110",
+    "manifest.json": "d0226ab6fb5226b453836f980c92a323a072ae04e45fdcd36899bede0899a823",
+    "test/AVGXAMM.test.js": "72e63e8017a92c174a5743754ede32db42eb08264409f46a7fea17fa4b01d8dc"
+  },
+  "pair_sha256": "4d7f8aede24d1b14f3611bcf6547dc5f2fe567acefe42f9f8043c4ed12da7171",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "AVGXVault.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.185,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "AVGXVault.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.177,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "MockCalculator.sol",
+        "reference": "SimpleStorage.sol",
+        "structural": 0.176,
+        "signatures": 0.0,
+        "min_functions": 2
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.41,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 10.97,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "AVGXAMM.sol": {
+          "statements": 100.0,
+          "branches": 70.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "AVGXToken.sol": {
+          "statements": 50.0,
+          "branches": 21.43,
+          "functions": 35.71,
+          "lines": 50.0
+        },
+        "AVGXVault.sol": {
+          "statements": 100.0,
+          "branches": 64.29,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IAVGXAMM.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IAVGXCalculator.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IAVGXToken.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "FixedPointMath.sol": {
+          "statements": 13.64,
+          "branches": 16.67,
+          "functions": 40.0,
+          "lines": 15.0
+        },
+        "Roles.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockCalculator.sol": {
+          "statements": 14.29,
+          "branches": 100.0,
+          "functions": 16.67,
+          "lines": 14.29
+        },
+        "MockERC20.sol": {
+          "statements": 66.67,
+          "branches": 100.0,
+          "functions": 66.67,
+          "lines": 66.67
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "budget-enforcer--rishisharma029",
+  "domain": "rate-limiting",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "BudgetEnforcer.sol",
+    "IBudgetEnforcer.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Rishisharma029/w3a-1",
+    "commit": "c69dc51459ddd666b3cc7f8df1bbf76dcd9f27c3",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/BudgetEnforcer.sol",
+      "contracts/interfaces/IBudgetEnforcer.sol"
+    ],
+    "test_paths": [
+      "test/contract/BudgetEnforcer.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/BudgetEnforcer.sol": "31c1073e7bb4e19134263a3b278c59172608ea0131f125b46495a11aa0ff5ae4",
+      "contracts/interfaces/IBudgetEnforcer.sol": "d35614f9cdf30d3285ba77d8501921b91d50e6ab61ee0eb463ac5b0c8f7e01b6",
+      "test/contract/BudgetEnforcer.test.js": "6be6f8904aacf594596761347e55ce985df9ccaaf0ef872e55a72f7647eff43b"
+    }
+  },
+  "transformations": [
+    {
+      "file": "BudgetEnforcer.sol",
+      "kind": "strip-bom",
+      "upstream_path": "contracts/BudgetEnforcer.sol"
+    },
+    {
+      "file": "BudgetEnforcer.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IBudgetEnforcer.sol",
+      "after": "./IBudgetEnforcer.sol"
+    },
+    {
+      "file": "IBudgetEnforcer.sol",
+      "kind": "strip-bom",
+      "upstream_path": "contracts/interfaces/IBudgetEnforcer.sol"
+    },
+    {
+      "file": "BudgetEnforcer.test.js",
+      "kind": "strip-bom",
+      "upstream_path": "test/contract/BudgetEnforcer.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Spending-cap enforcer for an AI agent: owner-set max budget, agent authorizes per-request spends (unique request ids) that cannot exceed remaining budget, providers verify authorizations. 38 its. Total cap rather than per-period window. 39 commits, one author (Sep 2026). Other phase3 tests in repo use Date.now and were excluded. NOTE: BudgetEnforcer.sol and IBudgetEnforcer.sol start with a UTF-8 BOM, which standalone solc 0.8.24 rejects; compiles cleanly (3.9 KB runtime) once the BOM is stripped.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T16:05:22.958554+00:00"
+}

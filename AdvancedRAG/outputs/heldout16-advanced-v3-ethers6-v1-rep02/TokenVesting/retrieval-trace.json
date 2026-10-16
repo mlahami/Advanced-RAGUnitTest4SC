@@ -1,0 +1,213 @@
+{
+  "target_functions": [
+    {
+      "target_function": "createGrant",
+      "corpus_functions": [
+        "6e3c990a1f6d711c77032b41",
+        "630c3ad4e6a010f9670334e2",
+        "97aa15aa756ea88c321b265a",
+        "acce69e5f7494e3baeda1a61",
+        "f58a7ccfccd88f3df3ac6f24",
+        "4c4e963ed7d17d6a71596b1a",
+        "0ea98d3ae6f22e9a14512049",
+        "3f002afe33faec60ad9f0211"
+      ],
+      "candidate_tests": [
+        "f8bba2a2db918165d489470d",
+        "71e22e287c4a1b27430c67cc",
+        "b6a4214091fc0189e294737a",
+        "baeb77d04cdf03c8407e05d3",
+        "dee3d79609676ac7035432bf",
+        "7516cfcd4f290efea6dad80e",
+        "1b9950021c96c58e3b6158e2",
+        "b35d78ab1963d8c22510efaf",
+        "bc92e9e8ae79701c5d3e03ea",
+        "4612f5cce722e1317c04dd08",
+        "cba3cc285cad612bacb960fc"
+      ]
+    },
+    {
+      "target_function": "revokeGrant",
+      "corpus_functions": [
+        "62dad13c2e8e9e52c3dbad91",
+        "4c4e963ed7d17d6a71596b1a",
+        "97aa15aa756ea88c321b265a",
+        "8f5456e5970d8c88af5a329c",
+        "f58a7ccfccd88f3df3ac6f24",
+        "7aef477aa18b2eabe3d95c9b",
+        "70941f68c3a35ad33131d2da",
+        "d33b19501b58f783af5cfeb1"
+      ],
+      "candidate_tests": [
+        "7a750703506997e8ed1b30ad",
+        "9d966496f01c3fbcbb340da3",
+        "1b9950021c96c58e3b6158e2",
+        "21d8670ad1db647c39087292",
+        "c7606dd658d7cce4470e40c4",
+        "893c4afb9d34f28f7a7ddd0a",
+        "05e4df31aaf7174320a76a32"
+      ]
+    },
+    {
+      "target_function": "claim",
+      "corpus_functions": [
+        "34d71e1057691e1d98367700",
+        "96f58dde5acacd658b946e12",
+        "53d37945a5a898e5d8f391e5",
+        "380c2e8c1200f70f1d57947a",
+        "c361a08f5936d3544c37a1f1",
+        "723264147fb689a4a0daac1f",
+        "27230ddba0b6a2ddea52aa6b",
+        "19f10d3d19262d83b64441c2"
+      ],
+      "candidate_tests": [
+        "05eb7e80965241d81adcc109",
+        "7bccd286873c29c9230cb258",
+        "584613a79f682a095fbc865b",
+        "a29f6ff68a36cc0210e555c2",
+        "01fd595a9fc475b6805033c6",
+        "42bd85d40218cc439324502b",
+        "d229759991482c975c4ebe6a",
+        "9a8ebcd6d4baf0e1f769f6e0",
+        "4b6dfb6ce7274c872d805f76",
+        "ee027803c81355c6bf79a238",
+        "fdb8878d5289e17f44f25e08",
+        "32d194ef8f096d1b334d0a9e",
+        "3c9491dd81c404d0e67037bb"
+      ]
+    },
+    {
+      "target_function": "claimable",
+      "corpus_functions": [
+        "f58a7ccfccd88f3df3ac6f24",
+        "4c4e963ed7d17d6a71596b1a",
+        "70941f68c3a35ad33131d2da",
+        "d10dc1a6a1b4b74e068a751a",
+        "468b2eee574deac7669735cd",
+        "65dd42a43fdffb93aafc3aed",
+        "0fd6c27c4c6fa6b954196865",
+        "7aef477aa18b2eabe3d95c9b"
+      ],
+      "candidate_tests": [
+        "1b9950021c96c58e3b6158e2",
+        "658d8497e02dc49a39646a35",
+        "ae641c7ef044845346265d16",
+        "b2f9762bb26157cf3c1378e2",
+        "61a702e1d000fe6e3c98c94d",
+        "1b9950021c96c58e3b6158e2",
+        "0c2121e39271a467afa023fd",
+        "5321e176c050a39ce53f8285"
+      ]
+    },
+    {
+      "target_function": "grantCount",
+      "corpus_functions": [
+        "d10dc1a6a1b4b74e068a751a",
+        "f58a7ccfccd88f3df3ac6f24",
+        "b5f3a70f2e54874cc435884b",
+        "735b442d868fd2c469ea879f",
+        "d4efa4ccb6925c8aa7567747",
+        "1dd0cded9aa920493c5fde21",
+        "88e09d89468517ba32378af2",
+        "a0413f84ebd55ced5a7c1f1e"
+      ],
+      "candidate_tests": [
+        "658d8497e02dc49a39646a35",
+        "ae641c7ef044845346265d16",
+        "9f297e82c24038256904d831",
+        "70176eb2b06c1a335192eb51",
+        "708d0f2ff6e2da86c516413e"
+      ]
+    }
+  ],
+  "selected": [
+    6866,
+    2454,
+    502,
+    5949,
+    5955,
+    6867,
+    2453,
+    499
+  ],
+  "context_chars": 14816,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "TokenVesting",
+  "retrieval_seconds": 4.1110266000032425,
+  "hits": [
+    {
+      "chunk_id": 6866,
+      "test_id": "f8bba2a2db918165d489470d",
+      "pair": "token-vesting--winsitoruser",
+      "domain_group": "vesting-timelock",
+      "name": "Should create a vesting schedule",
+      "via_function": "6e3c990a1f6d711c77032b41",
+      "chars": 1794
+    },
+    {
+      "chunk_id": 2454,
+      "test_id": "7a750703506997e8ed1b30ad",
+      "pair": "erc20-vesting--dualnova",
+      "domain_group": "vesting-timelock",
+      "name": "cannot revoke twice",
+      "via_function": "62dad13c2e8e9e52c3dbad91",
+      "chars": 1303
+    },
+    {
+      "chunk_id": 502,
+      "test_id": "05eb7e80965241d81adcc109",
+      "pair": "airdrop-distributor--mdantis-dev",
+      "domain_group": "airdrop-merkle",
+      "name": "should revert on claim when nothing is claimable",
+      "via_function": "34d71e1057691e1d98367700",
+      "chars": 1477
+    },
+    {
+      "chunk_id": 5949,
+      "test_id": "1b9950021c96c58e3b6158e2",
+      "pair": "sale-vesting--bonabuild",
+      "domain_group": "vesting-timelock",
+      "name": "a grant is exactly zero vested at its own start",
+      "via_function": "4c4e963ed7d17d6a71596b1a",
+      "chars": 2664
+    },
+    {
+      "chunk_id": 5955,
+      "test_id": "658d8497e02dc49a39646a35",
+      "pair": "sale-vesting--bonabuild",
+      "domain_group": "vesting-timelock",
+      "name": "caps the grants one address can hold, so release() always fits in a block",
+      "via_function": "d10dc1a6a1b4b74e068a751a",
+      "chars": 2515
+    },
+    {
+      "chunk_id": 6867,
+      "test_id": "71e22e287c4a1b27430c67cc",
+      "pair": "token-vesting--winsitoruser",
+      "domain_group": "vesting-timelock",
+      "name": "Should fail if beneficiary is zero address",
+      "via_function": "6e3c990a1f6d711c77032b41",
+      "chars": 1554
+    },
+    {
+      "chunk_id": 2453,
+      "test_id": "9d966496f01c3fbcbb340da3",
+      "pair": "erc20-vesting--dualnova",
+      "domain_group": "vesting-timelock",
+      "name": "revoke returns the unvested portion to the owner",
+      "via_function": "62dad13c2e8e9e52c3dbad91",
+      "chars": 1774
+    },
+    {
+      "chunk_id": 499,
+      "test_id": "7bccd286873c29c9230cb258",
+      "pair": "airdrop-distributor--mdantis-dev",
+      "domain_group": "airdrop-merkle",
+      "name": "should allow claim and reset claimable balance",
+      "via_function": "34d71e1057691e1d98367700",
+      "chars": 1735
+    }
+  ]
+}

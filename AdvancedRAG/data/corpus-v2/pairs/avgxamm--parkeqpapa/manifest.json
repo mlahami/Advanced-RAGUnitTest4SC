@@ -1,0 +1,144 @@
+{
+  "id": "avgxamm--parkeqpapa",
+  "domain": "amm-dex",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "AVGXAMM.sol",
+    "AVGXToken.sol",
+    "AVGXVault.sol",
+    "IAVGXAMM.sol",
+    "IAVGXCalculator.sol",
+    "IAVGXToken.sol",
+    "FixedPointMath.sol",
+    "Roles.sol",
+    "MockCalculator.sol",
+    "MockERC20.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/parkeqpapa/avgx-backend-v3",
+    "commit": "631ead7d04f01fee1fa6fbeeca13efe0f3ac27ca",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/src/AVGXAMM.sol",
+      "contracts/src/AVGXToken.sol",
+      "contracts/src/AVGXVault.sol",
+      "contracts/src/interfaces/IAVGXAMM.sol",
+      "contracts/src/interfaces/IAVGXCalculator.sol",
+      "contracts/src/interfaces/IAVGXToken.sol",
+      "contracts/src/libraries/FixedPointMath.sol",
+      "contracts/src/libraries/Roles.sol",
+      "contracts/src/mocks/MockCalculator.sol",
+      "contracts/src/mocks/MockERC20.sol"
+    ],
+    "test_paths": [
+      "contracts/test/AVGXAMM.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/src/AVGXAMM.sol": "312e1e3cca31cd8dec80ff56dd532c97593204c6d95046f25be46d125b464a59",
+      "contracts/src/AVGXToken.sol": "97bd1436764b84943acc1d9f2b7458fe25fb97b72aeae43bce22e84e6df5b08d",
+      "contracts/src/AVGXVault.sol": "e77ce13f198ab4a88e814a4ddaa0040d7bb988bd3fb4f61106a85892b57090d2",
+      "contracts/src/interfaces/IAVGXAMM.sol": "023b87d2c0dc949d8c4f924601f6a3f0dd41fe0a9bdac2b0277e9f22964fbb02",
+      "contracts/src/interfaces/IAVGXCalculator.sol": "18bc1c55fee2d15cc081a155c88b07bd3acd39e24386f4c852dd6d1987a0fd25",
+      "contracts/src/interfaces/IAVGXToken.sol": "1040e5dbfe073e473c7c60d3f17d33c64298a420d43edf74e2234eede7db2a95",
+      "contracts/src/libraries/FixedPointMath.sol": "778de631152e12a6a7cbe9830f920f6d742aa77e071f0b6990f3f5e78b661d7a",
+      "contracts/src/libraries/Roles.sol": "6ee6d9096575a174afbf2f5c7d8499b0ada84cbb0dc4e93b6b4200728a492bc9",
+      "contracts/src/mocks/MockCalculator.sol": "20c5d872bcdbe0afb81a3ad94d02dffda8ab514dd6dbf4607f752a984954e38f",
+      "contracts/src/mocks/MockERC20.sol": "6c0200f411fbb4f8b3b91e6d4b0bff86f465f92a39a45f3fccafac1109478393",
+      "contracts/test/AVGXAMM.test.ts": "821fe75e099f193c7064925b5f90f80691ae8d3e9aec1c4a9fbda3de0557944d"
+    }
+  },
+  "transformations": [
+    {
+      "file": "AVGXAMM.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IAVGXAMM.sol",
+      "after": "./IAVGXAMM.sol"
+    },
+    {
+      "file": "AVGXAMM.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IAVGXToken.sol",
+      "after": "./IAVGXToken.sol"
+    },
+    {
+      "file": "AVGXAMM.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IAVGXCalculator.sol",
+      "after": "./IAVGXCalculator.sol"
+    },
+    {
+      "file": "AVGXAMM.sol",
+      "kind": "import-path",
+      "before": "./libraries/Roles.sol",
+      "after": "./Roles.sol"
+    },
+    {
+      "file": "AVGXAMM.sol",
+      "kind": "import-path",
+      "before": "./libraries/FixedPointMath.sol",
+      "after": "./FixedPointMath.sol"
+    },
+    {
+      "file": "AVGXToken.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IAVGXToken.sol",
+      "after": "./IAVGXToken.sol"
+    },
+    {
+      "file": "AVGXToken.sol",
+      "kind": "import-path",
+      "before": "./libraries/Roles.sol",
+      "after": "./Roles.sol"
+    },
+    {
+      "file": "AVGXVault.sol",
+      "kind": "import-path",
+      "before": "./libraries/Roles.sol",
+      "after": "./Roles.sol"
+    },
+    {
+      "file": "MockCalculator.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IAVGXCalculator.sol",
+      "after": "./IAVGXCalculator.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "AVGXAMM.test.js",
+      "upstream_path": "contracts/test/AVGXAMM.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 5,
+      "file": "AVGXAMM.test.js",
+      "upstream_path": "contracts/test/AVGXAMM.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "HardhatEthersSigner"
+      ],
+      "file": "AVGXAMM.test.js",
+      "upstream_path": "contracts/test/AVGXAMM.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "ethers",
+      "names": [
+        "Contract",
+        "ContractFactory"
+      ],
+      "file": "AVGXAMM.test.js",
+      "upstream_path": "contracts/test/AVGXAMM.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 229 lines, closure 927 lines, 10 files; 19 it blocks; history: 14 commits 2025-09-21..2025-11-10",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:30:40.467442+00:00"
+}

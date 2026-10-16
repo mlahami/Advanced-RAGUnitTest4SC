@@ -1,0 +1,227 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 10,
+    "passes": 2,
+    "pending": 0,
+    "failures": 10,
+    "start": "2026-09-30T21:23:42.724Z",
+    "end": "2026-09-30T21:23:43.251Z",
+    "duration": 527
+  },
+  "tests": [
+    {
+      "title": "Should set the correct immutable addresses",
+      "fullTitle": "Escrow Deployment Should set the correct immutable addresses",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "expected '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266' to equal '0x70997970C51812dc3A010C7d01b50e0d17dc79C8'.",
+        "stack": "AssertionError: expected '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266' to equal '0x70997970C51812dc3A010C7d01b50e0d17dc79C8'.\n    at Context.<anonymous> (test\\generated.test.js:19:39)"
+      }
+    },
+    {
+      "title": "Should initialize with funded and closed as false",
+      "fullTitle": "Escrow Deployment Should initialize with funded and closed as false",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should allow buyer to fund the escrow",
+      "fullTitle": "Escrow Funding Should allow buyer to fund the escrow",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 16,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:32:7)"
+      }
+    },
+    {
+      "title": "Should revert if not called by buyer",
+      "fullTitle": "Escrow Funding Should revert if not called by buyer",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should revert if already funded",
+      "fullTitle": "Escrow Funding Should revert if already funded",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:46:7)"
+      }
+    },
+    {
+      "title": "Should revert if funding amount is zero",
+      "fullTitle": "Escrow Funding Should revert if funding amount is zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'invalid funding', but it reverted with reason 'only buyer'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'invalid funding', but it reverted with reason 'only buyer'\n    at Context.<anonymous> (test\\generated.test.js:52:7)"
+      }
+    },
+    {
+      "title": "Should not allow funding after release",
+      "fullTitle": "Escrow State changes Should not allow funding after release",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 2,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:151:7)"
+      }
+    },
+    {
+      "title": "Should not allow funding after refund",
+      "fullTitle": "Escrow State changes Should not allow funding after refund",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 2,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:158:7)"
+      }
+    },
+    {
+      "title": "Should not allow release after refund",
+      "fullTitle": "Escrow State changes Should not allow release after refund",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:165:7)"
+      }
+    },
+    {
+      "title": "Should not allow refund after release",
+      "fullTitle": "Escrow State changes Should not allow refund after release",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 2,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:172:7)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should set the correct immutable addresses",
+      "fullTitle": "Escrow Deployment Should set the correct immutable addresses",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "expected '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266' to equal '0x70997970C51812dc3A010C7d01b50e0d17dc79C8'.",
+        "stack": "AssertionError: expected '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266' to equal '0x70997970C51812dc3A010C7d01b50e0d17dc79C8'.\n    at Context.<anonymous> (test\\generated.test.js:19:39)"
+      }
+    },
+    {
+      "title": "Should allow buyer to fund the escrow",
+      "fullTitle": "Escrow Funding Should allow buyer to fund the escrow",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 16,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:32:7)"
+      }
+    },
+    {
+      "title": "Should revert if already funded",
+      "fullTitle": "Escrow Funding Should revert if already funded",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:46:7)"
+      }
+    },
+    {
+      "title": "Should revert if funding amount is zero",
+      "fullTitle": "Escrow Funding Should revert if funding amount is zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'invalid funding', but it reverted with reason 'only buyer'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'invalid funding', but it reverted with reason 'only buyer'\n    at Context.<anonymous> (test\\generated.test.js:52:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"Should allow buyer to release funds\"",
+      "fullTitle": "Escrow Releasing funds \"before each\" hook for \"Should allow buyer to release funds\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 2,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:59:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"Should allow seller to refund\"",
+      "fullTitle": "Escrow Refunding \"before each\" hook for \"Should allow seller to refund\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 2,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:105:7)"
+      }
+    },
+    {
+      "title": "Should not allow funding after release",
+      "fullTitle": "Escrow State changes Should not allow funding after release",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 2,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:151:7)"
+      }
+    },
+    {
+      "title": "Should not allow funding after refund",
+      "fullTitle": "Escrow State changes Should not allow funding after refund",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 2,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:158:7)"
+      }
+    },
+    {
+      "title": "Should not allow release after refund",
+      "fullTitle": "Escrow State changes Should not allow release after refund",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:165:7)"
+      }
+    },
+    {
+      "title": "Should not allow refund after release",
+      "fullTitle": "Escrow State changes Should not allow refund after release",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 2,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'only buyer'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'only buyer'\n    at Escrow.fund (runs/development14-rag-v2-ethers6-v1-rep02/Escrow/contracts/Escrow.sol:34)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.fund (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:172:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should initialize with funded and closed as false",
+      "fullTitle": "Escrow Deployment Should initialize with funded and closed as false",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert if not called by buyer",
+      "fullTitle": "Escrow Funding Should revert if not called by buyer",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep02\\Escrow\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    }
+  ]
+}

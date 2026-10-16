@@ -1,0 +1,89 @@
+{
+  "pair": "totem-trusted-forwarder--totembound",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:09:53.328845+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MockTarget.sol": "dbc27b090eebde22abdf9f55eca4a9fb9e436f9d2ec2fd77163589ab5ce7ea74",
+    "contracts/TotemTrustedForwarder.sol": "f80f4773dd0528d95b09365e0507585aa045fb3223b8d1d29af276be8e5bc9db",
+    "LICENSE": "49e1326f86c74ac57c8d6c643c3c327fcecc6c3cad7a7483909adefbb4b6d4f0",
+    "manifest.json": "37ec964d022d16509cea8a3009ed5e571df9468eb1ae16570c77870153d24d87",
+    "test/TotemTrustedForwarder.test.js": "4cc1d6885a3001a44d7518694512258671dd76f30a2d47d77601ebc26fbd465b"
+  },
+  "pair_sha256": "89d2f46fc8f9a97a3ed2ef5e71430f3b263efa75af5c55eba54e20e7c990d595",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "TotemTrustedForwarder.sol",
+        "reference": "GaslessRelayer.sol",
+        "structural": 0.21,
+        "signatures": 0.067,
+        "min_functions": 4
+      },
+      {
+        "contract": "TotemTrustedForwarder.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.102,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "TotemTrustedForwarder.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.102,
+        "signatures": 0.0,
+        "min_functions": 11
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.79,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.74,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "TotemTrustedForwarder.sol": {
+          "statements": 94.44,
+          "branches": 80.0,
+          "functions": 92.31,
+          "lines": 97.14
+        },
+        "MockTarget.sol": {
+          "statements": 71.43,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 71.43
+        }
+      }
+    }
+  },
+  "accepted": true
+}

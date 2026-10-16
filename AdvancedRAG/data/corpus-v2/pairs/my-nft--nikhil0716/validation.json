@@ -1,0 +1,82 @@
+{
+  "pair": "my-nft--nikhil0716",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:13:45.000517+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MyNFT.sol": "36484da959cc6430649287f317cc60f96755c2a7d2a4d0ad5ed9afb2d56340aa",
+    "LICENSE": "0fe18d5e02be1221e6cc275a813003a84118c942fe072f2ca2ede6d664f73dda",
+    "manifest.json": "7bcfc3ace3a0aca93609521550c608c2fd5ed0dd92f8e9c00e5c011cf6989931",
+    "test/erc721.test.js": "aff3a2c02e49819ff8fc0535eff49e1391760482b1591534fad2092eac3842ba"
+  },
+  "pair_sha256": "870ce8620dc4186e0a93a1fc384d89eccb17ae6a8404aa183dc95cbe28bef36b",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MyNFT.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.19,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "MyNFT.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.155,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "MyNFT.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.155,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.38,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.44,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MyNFT.sol": {
+          "statements": 100.0,
+          "branches": 64.29,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

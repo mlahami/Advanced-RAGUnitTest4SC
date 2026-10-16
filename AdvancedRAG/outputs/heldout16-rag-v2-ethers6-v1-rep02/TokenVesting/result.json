@@ -1,0 +1,60 @@
+{
+  "contract": "TokenVesting",
+  "status": "test_failures",
+  "prompt_sha256": "497335de94403e0b5fc626de351660d2241be7fd177b38af33b3097f6fa3d473",
+  "generation_seconds": 21.846151700010523,
+  "usage": {
+    "prompt_tokens": 12485,
+    "total_tokens": 15027,
+    "completion_tokens": 2542,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.970890299999155
+  },
+  "passed_tests": 11,
+  "failed_tests": 7,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "TokenVesting claim Should allow claiming after cliff",
+      "error": "Timestamp 1793397851 is lower than the previous block's timestamp 1793397863"
+    },
+    {
+      "title": "TokenVesting claim Should not allow claiming before cliff",
+      "error": "Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with reason 'insufficient balance'"
+    },
+    {
+      "title": "TokenVesting claim Should allow claiming full amount after vesting period",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    },
+    {
+      "title": "TokenVesting claim Should revert if nothing to claim",
+      "error": "Timestamp 1793397851 is lower than the previous block's timestamp 1822341857"
+    },
+    {
+      "title": "TokenVesting claimable Should return 0 before cliff",
+      "error": "expected 1000 to equal 0."
+    },
+    {
+      "title": "TokenVesting claimable Should return correct amount after cliff but before end",
+      "error": "Timestamp 1793397851 is lower than the previous block's timestamp 1822341867"
+    },
+    {
+      "title": "TokenVesting claimable Should return total amount after vesting period",
+      "error": "Timestamp 1822341851 is lower than the previous block's timestamp 1822341872"
+    }
+  ],
+  "coverage": {
+    "statements": 93.33,
+    "branches": 86.36,
+    "functions": 100.0,
+    "lines": 96.43
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

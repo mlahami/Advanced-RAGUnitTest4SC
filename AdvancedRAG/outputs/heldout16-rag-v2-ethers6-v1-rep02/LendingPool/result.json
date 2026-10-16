@@ -1,0 +1,56 @@
+{
+  "contract": "LendingPool",
+  "status": "test_failures",
+  "prompt_sha256": "d304c3784c55056f0ee3bd63ba2d1f5aa7144b2cd191051b5e63470b25cab8ce",
+  "generation_seconds": 11.648892599972896,
+  "usage": {
+    "prompt_tokens": 11592,
+    "total_tokens": 13426,
+    "completion_tokens": 1834,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.482430099975318
+  },
+  "passed_tests": 4,
+  "failed_tests": 6,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "LendingPool Borrowing should allow borrowing up to collateral factor",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    },
+    {
+      "title": "LendingPool Borrowing should revert when borrowing more than collateral allows",
+      "error": "Expected transaction to be reverted with reason 'Undercollateralized', but it reverted with reason 'insufficient balance'"
+    },
+    {
+      "title": "LendingPool Borrowing should revert when borrowing zero",
+      "error": "Expected transaction to be reverted with reason 'Undercollateralized', but it didn't revert"
+    },
+    {
+      "title": "LendingPool Repayment \"before each\" hook for \"should allow partial repayment\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    },
+    {
+      "title": "LendingPool Liquidation \"before each\" hook for \"should allow liquidation when position is undercollateralized\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    },
+    {
+      "title": "LendingPool State Variables should correctly track debt",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    }
+  ],
+  "coverage": {
+    "statements": 40.0,
+    "branches": 30.0,
+    "functions": 60.0,
+    "lines": 40.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

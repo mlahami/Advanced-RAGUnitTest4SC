@@ -1,0 +1,40 @@
+{
+  "contract": "NFTMarketplace",
+  "status": "test_failures",
+  "prompt_sha256": "9a8ea4bbfee39d156f965ff6f61c41f415045ff3c89f9385f5aa213d6c153ac8",
+  "generation_seconds": 10.798638900043443,
+  "usage": {
+    "prompt_tokens": 11268,
+    "total_tokens": 12862,
+    "completion_tokens": 1594,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.259358200011775
+  },
+  "passed_tests": 7,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "NFTMarketplace buy should allow buying a listed NFT",
+      "error": "expected 10000999999999999065547 to equal 10000974999999999065547."
+    },
+    {
+      "title": "NFTMarketplace buy should refund excess payment",
+      "error": "expected 9997999999999999780893 to be close to 9998499999999999780893 +/- 10000000000000000"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 77.27,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

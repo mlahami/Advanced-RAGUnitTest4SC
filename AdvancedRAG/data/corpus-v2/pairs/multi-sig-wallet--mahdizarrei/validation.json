@@ -1,0 +1,103 @@
+{
+  "pair": "multi-sig-wallet--mahdizarrei",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:11:03.988445+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ERC1155.sol": "b10cc5f7166f2e98189210572ab4d03a65ca6c8dd7d5533048243695490163ec",
+    "contracts/ERC20.sol": "32584c8276c2b54a924b3f43e12d1fb6dd25e0bd48a88e9f8ba38e82b91d5427",
+    "contracts/ERC721.sol": "aad785b723523bf706934e6a937380d512ecb1e8c0d1879c8b9c7f992ece9061",
+    "contracts/MultiSigWallet.sol": "cfea188a7014a7054e6a0634f87c1137c40da36c46c2b778e9bcb2971ca0cfec",
+    "LICENSE": "2fd1c27e9c5aa21a782c76da1ee919f70fa803712480d17b9a04e5e11027c558",
+    "manifest.json": "00bbdb862997ae6b6a4f871fa555cc2444e0bac18e4a49acce6b5be091f65138",
+    "test/MultiSigWallet.js": "364142a23fdbf6fda0b6bd49aa4f6224f02b0f0f9a61177aacd7cb6d4343a21e"
+  },
+  "pair_sha256": "9f502b5a4f08f8fb9dc2e57deeeaa2335459e4c5c901bd2f161ecbd8409b7768",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MultiSigWallet.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.234,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "MultiSigWallet.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.217,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "MultiSigWallet.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.192,
+        "signatures": 0.0,
+        "min_functions": 10
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.28,
+      "mocha": {
+        "tests": 64,
+        "passes": 64,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.37,
+      "mocha": {
+        "tests": 64,
+        "passes": 64,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MultiSigWallet.sol": {
+          "statements": 92.11,
+          "branches": 91.67,
+          "functions": 88.0,
+          "lines": 92.11
+        },
+        "ERC1155.sol": {
+          "statements": 33.33,
+          "branches": 16.67,
+          "functions": 50.0,
+          "lines": 33.33
+        },
+        "ERC20.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ERC721.sol": {
+          "statements": 60.0,
+          "branches": 50.0,
+          "functions": 50.0,
+          "lines": 60.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

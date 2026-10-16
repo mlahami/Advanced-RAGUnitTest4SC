@@ -1,0 +1,47 @@
+{
+  "id": "stablecoin--kcolbchain",
+  "domain": "stablecoin",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "Stablecoin.sol",
+    "ChainlinkPoRAdapter.sol",
+    "ReserveManager.sol",
+    "IAggregatorV3.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/kcolbchain/stablecoin-toolkit",
+    "commit": "2753ad360f14935d1485060a3006a4b6cc3129ce",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Stablecoin.sol",
+      "contracts/ChainlinkPoRAdapter.sol",
+      "contracts/ReserveManager.sol",
+      "contracts/interfaces/IAggregatorV3.sol"
+    ],
+    "test_paths": [
+      "test/Stablecoin.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Stablecoin.sol": "5ccfd9bf18f30b3d8565117e3b016b43f0eefbdd15490eadebfddbec8212af7b",
+      "contracts/ChainlinkPoRAdapter.sol": "b16ba4d3e07fefe8ac1e316b134be5ce267493f393c67c318154fff0b2de9dea",
+      "contracts/ReserveManager.sol": "f503f054a41850f933870bbe6343844c4e28c7c3925356f0d0e0d94fbc1530d5",
+      "contracts/interfaces/IAggregatorV3.sol": "06817829d301c63c61260eb0416044ba2439fe0b88565a12fbad0e1e01731e8b",
+      "test/Stablecoin.test.js": "fc7609469e13f916053f00cfdd180657aa3315133b259d0c09f6959a3dea0693"
+    }
+  },
+  "transformations": [
+    {
+      "file": "ChainlinkPoRAdapter.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IAggregatorV3.sol",
+      "after": "./IAggregatorV3.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 78 lines, closure 356 lines, 4 files; 10 it blocks; history: 39 commits 2026-04-03..2026-06-06",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:25:33.123416+00:00"
+}

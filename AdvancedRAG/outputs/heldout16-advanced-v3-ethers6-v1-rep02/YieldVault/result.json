@@ -1,0 +1,40 @@
+{
+  "contract": "YieldVault",
+  "status": "test_failures",
+  "prompt_sha256": "77db8d05b90abf842e9c6494b683a277d8284ffc07b08214c31edcfa8b8bdabe",
+  "generation_seconds": 11.843025400070474,
+  "usage": {
+    "prompt_tokens": 11422,
+    "total_tokens": 12873,
+    "completion_tokens": 1451,
+    "prompt_tokens_details": {
+      "cached_tokens": 11392
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.81402499997057
+  },
+  "passed_tests": 13,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "YieldVault Strategy Management Should allow owner to set strategy",
+      "error": "Event \"StrategyUpdated\" doesn't exist in the contract"
+    },
+    {
+      "title": "YieldVault Strategy Management Should revert when non-owner tries to set strategy",
+      "error": "The given contract doesn't have a custom error named 'OwnableUnauthorizedAccount'"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 92.86,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

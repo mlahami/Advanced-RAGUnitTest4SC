@@ -1,0 +1,89 @@
+{
+  "pair": "multi-sig--muhammadkorra",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:11:16.810743+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MultiSig.sol": "1738d33a20a32413ffb2df629407e16abb886836d6e2dacdd942a2047ccc9dde",
+    "contracts/Test.sol": "6ca6597b73a249c69d08176bf1f9d9a70284e546d0109e65a9194c012739263d",
+    "LICENSE": "c97a494cf59a55a7ff3f27482e4f683c936726edb2cc868bfd2e21106427445c",
+    "manifest.json": "38514be6a9dae80de0a25d507be0152b0073d368435c9f761e40faaaae701b99",
+    "test/MultiSig.js": "5d1afe0c89290d0e816b554410645aa15caa71813d5854d6fb3b0f584e12dc61"
+  },
+  "pair_sha256": "f3e855675484c59aa19b4e5c15fea7f27ae5c67a37dc779bbc7a49a12b531e01",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MultiSig.sol",
+        "reference": "MultiSigWallet.sol",
+        "structural": 0.277,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "MultiSig.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.238,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "MultiSig.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.237,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.0,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.08,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MultiSig.sol": {
+          "statements": 91.67,
+          "branches": 76.92,
+          "functions": 71.43,
+          "lines": 91.67
+        },
+        "Test.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 66.67,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

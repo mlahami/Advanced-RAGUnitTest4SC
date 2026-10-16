@@ -1,0 +1,119 @@
+{
+  "id": "single-stable-stake--overlayerfi",
+  "domain": "stablecoin",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "SingleStableStake.sol",
+    "Liquidity.sol",
+    "ILiquidityDefs.sol",
+    "IRewardAsset.sol",
+    "MintableERC20.sol",
+    "TokenLP_A_B.sol",
+    "MintableTokenBase.sol",
+    "OverlayerReferral.sol",
+    "IOverlayerReferral.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Overlayerfi/contracts",
+    "commit": "25c11023aa6aa64857df6b945203ca39c732166a",
+    "license": "GPL-3.0",
+    "contract_paths": [
+      "contracts/liquidity/SingleStableStake.sol",
+      "contracts/liquidity/Liquidity.sol",
+      "contracts/liquidity/interfaces/ILiquidityDefs.sol",
+      "contracts/liquidity/interfaces/IRewardAsset.sol",
+      "contracts/mock_ERC20/MintableERC20.sol",
+      "contracts/mock_ERC20/mocks/TokenLP_A_B.sol",
+      "contracts/overlayer/MintableTokenBase.sol",
+      "contracts/overlayer/OverlayerReferral.sol",
+      "contracts/overlayer/interfaces/IOverlayerReferral.sol"
+    ],
+    "test_paths": [
+      "test/SingleStableStake.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/liquidity/SingleStableStake.sol": "e486389435d60cee5f8b720f5122c9a2c337dc2e9390fd66e6b94aa2103beb30",
+      "contracts/liquidity/Liquidity.sol": "cddd618f9ce687b8f55736c62153e8a57ade1fe8aaf66107a20056fb91d36058",
+      "contracts/liquidity/interfaces/ILiquidityDefs.sol": "3bf1ada509510ea223cbd619046c7e05990fbdc970805ebf045a466764386b55",
+      "contracts/liquidity/interfaces/IRewardAsset.sol": "27472519a0da9ca5b9e86144f4ddd3a8889eb346a78b8452cac6c68955b45aa5",
+      "contracts/mock_ERC20/MintableERC20.sol": "9e4c6d1873eb4b757b6c83651954eb16aa2b93c7f8b2363a9f3391cfdea1e99e",
+      "contracts/mock_ERC20/mocks/TokenLP_A_B.sol": "72c109c4f9c407f6e5226de3af142604a01b33b68bd0af66c15b80c37a8371b3",
+      "contracts/overlayer/MintableTokenBase.sol": "3fd39d436c8014b498ae16b8d39695d602f786b723f3574d91369c05f20a4310",
+      "contracts/overlayer/OverlayerReferral.sol": "f1f5a55e0441969df2f34806210471d0da9b944bc333aa2884426c2d92c8efdc",
+      "contracts/overlayer/interfaces/IOverlayerReferral.sol": "b41fab20bac6883d8e13ed522e2b24e9acc65723362008581ea5f263e53ed484",
+      "test/SingleStableStake.ts": "c9ac296228f99de144023ded427c81c08f1dd461e4d56e065234ac6529b5818e"
+    }
+  },
+  "transformations": [
+    {
+      "file": "SingleStableStake.sol",
+      "kind": "import-path",
+      "before": "./interfaces/ILiquidityDefs.sol",
+      "after": "./ILiquidityDefs.sol"
+    },
+    {
+      "file": "Liquidity.sol",
+      "kind": "import-path",
+      "before": "./interfaces/ILiquidityDefs.sol",
+      "after": "./ILiquidityDefs.sol"
+    },
+    {
+      "file": "Liquidity.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IRewardAsset.sol",
+      "after": "./IRewardAsset.sol"
+    },
+    {
+      "file": "ILiquidityDefs.sol",
+      "kind": "import-path",
+      "before": "../../overlayer/interfaces/IOverlayerReferral.sol",
+      "after": "./IOverlayerReferral.sol"
+    },
+    {
+      "file": "TokenLP_A_B.sol",
+      "kind": "import-path",
+      "before": "../MintableERC20.sol",
+      "after": "./MintableERC20.sol"
+    },
+    {
+      "file": "OverlayerReferral.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IOverlayerReferral.sol",
+      "after": "./IOverlayerReferral.sol"
+    },
+    {
+      "file": "OverlayerReferral.sol",
+      "kind": "import-path",
+      "before": "../liquidity/interfaces/ILiquidityDefs.sol",
+      "after": "./ILiquidityDefs.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "SingleStableStake.js",
+      "upstream_path": "test/SingleStableStake.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "SingleStableStake.js",
+      "upstream_path": "test/SingleStableStake.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "chai",
+      "names": [
+        "assert"
+      ],
+      "file": "SingleStableStake.js",
+      "upstream_path": "test/SingleStableStake.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 166 lines, closure 1367 lines, 9 files; 15 it blocks; history: 395 commits 2024-04-14..2026-06-09",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:25:43.331843+00:00"
+}

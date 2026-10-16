@@ -1,0 +1,56 @@
+{
+  "contract": "Escrow",
+  "status": "test_failures",
+  "prompt_sha256": "4d6df7d1d14e471949f87924d44a0665b6aa26e95a0b58a7e6891427e10c08e8",
+  "generation_seconds": 10.46284110005945,
+  "usage": {
+    "prompt_tokens": 10869,
+    "total_tokens": 12354,
+    "completion_tokens": 1485,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.899440600071102
+  },
+  "passed_tests": 2,
+  "failed_tests": 6,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Escrow Deployment Should set the correct seller, buyer, and arbiter",
+      "error": "expected '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266' to equal '0x70997970C51812dc3A010C7d01b50e0d17dc79C8'."
+    },
+    {
+      "title": "Escrow Funding Should allow buyer to fund the escrow",
+      "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+    },
+    {
+      "title": "Escrow Funding Should revert if already funded",
+      "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+    },
+    {
+      "title": "Escrow Funding Should revert if funding amount is zero",
+      "error": "Expected transaction to be reverted with reason 'invalid funding', but it reverted with reason 'only buyer'"
+    },
+    {
+      "title": "Escrow Releasing funds \"before each\" hook for \"Should allow buyer to release funds to seller\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+    },
+    {
+      "title": "Escrow Refunding \"before each\" hook for \"Should allow seller to refund buyer\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+    }
+  ],
+  "coverage": {
+    "statements": 12.5,
+    "branches": 6.25,
+    "functions": 50.0,
+    "lines": 12.5
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

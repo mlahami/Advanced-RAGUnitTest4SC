@@ -1,0 +1,82 @@
+{
+  "pair": "claim-settlement--onlymekarthik",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:35:17.278594+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ClaimSettlement.sol": "36bbd44959d9b9508dcdb39677bfa13511f9062894f3e8f5fc49b0b0d9d93338",
+    "LICENSE": "167b2f42f7ebb584f6098f1328afa107fb3d0a4eec78a023c363e1fb4066a397",
+    "manifest.json": "b0ad5d8f5f9f9af016f12664b9c516a65199e951a52c5dfa56d35413165cea9b",
+    "test/ClaimSettlement.test.js": "efd1a1a614443ab41226ea0fb5e18b880befca0fbceb1cad4dab8eb709c7d77b"
+  },
+  "pair_sha256": "eab67a54088d079d6fbcf2376b4d93710eb7863a89265f96f364d9231b720931",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "ClaimSettlement.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.163,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "ClaimSettlement.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.143,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "ClaimSettlement.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.142,
+        "signatures": 0.133,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.2,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.7,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "ClaimSettlement.sol": {
+          "statements": 80.0,
+          "branches": 58.33,
+          "functions": 66.67,
+          "lines": 80.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

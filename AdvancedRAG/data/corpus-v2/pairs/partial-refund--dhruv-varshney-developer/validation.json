@@ -1,0 +1,82 @@
+{
+  "pair": "partial-refund--dhruv-varshney-developer",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:15:37.293569+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/PartialRefund.sol": "090a05f3ef2c667e6adea5a0164159fed6428e4d247beb83059c085eba4fc062",
+    "LICENSE": "0a2e3e9e08e92bfd2500e7c6e677fbc0996b77a636262f1cc37e289dc860a41d",
+    "manifest.json": "12cd7eed8ff050755ff6a9a38a1c3b7db97e1c71eb508b4dc27493e993c4950f",
+    "test/PartialRefund.js": "28b48f8fa657b48c359cc14823032de031fa097669d67d829fde58cdeb24c1c8"
+  },
+  "pair_sha256": "c42b1c1bac11cac4a0c634afa363baf357491429c4c7ffbb24fe34483a70582a",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "PartialRefund.sol",
+        "reference": "Crowdfunding.sol",
+        "structural": 0.098,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "PartialRefund.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.097,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "PartialRefund.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.097,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.8,
+      "mocha": {
+        "tests": 18,
+        "passes": 18,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.23,
+      "mocha": {
+        "tests": 18,
+        "passes": 18,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "PartialRefund.sol": {
+          "statements": 100.0,
+          "branches": 88.89,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

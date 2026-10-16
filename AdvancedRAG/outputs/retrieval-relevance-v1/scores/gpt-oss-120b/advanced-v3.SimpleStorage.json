@@ -1,0 +1,67 @@
+{
+  "id": "advanced-v3.SimpleStorage",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "SimpleStorage",
+  "chunk_ids": [
+    4628,
+    3526,
+    4626,
+    3465,
+    4630,
+    4629,
+    4804,
+    3800
+  ],
+  "context_sha256": "945f95db610827929e21bb74cb9eec0108f58a9411a4a3732bba693549d3e4c4",
+  "ratings": [
+    {
+      "chunk_id": 4628,
+      "rating": 0,
+      "reason": "Test checks authorization revert, which SimpleStorage lacks; no similar behavior or pattern applies"
+    },
+    {
+      "chunk_id": 3526,
+      "rating": 1,
+      "reason": "Shows generic view‑function call and numeric assertions pattern, but target SimpleStorage lacks such complex state; only set/get simple value, so only a generic pattern applies."
+    },
+    {
+      "chunk_id": 4626,
+      "rating": 1,
+      "reason": "Shows generic set/get pattern but uses different functions, events, and parameters; only loosely applicable to SimpleStorage’s set/get behavior."
+    },
+    {
+      "chunk_id": 3465,
+      "rating": 0,
+      "reason": "Test targets a vault with deposits, leverage, and oracle; none of its behavior or patterns apply to SimpleStorage’s set/get functions."
+    },
+    {
+      "chunk_id": 4630,
+      "rating": 1,
+      "reason": "Only shows generic revert pattern; target lacks batch setting, so not directly adaptable"
+    },
+    {
+      "chunk_id": 4629,
+      "rating": 1,
+      "reason": "Only generic deployment and fixture usage applies; specific batch data setting behavior does not exist in SimpleStorage."
+    },
+    {
+      "chunk_id": 4804,
+      "rating": 1,
+      "reason": "Only generic deployment and call pattern applies; specific propose behavior is unrelated to SimpleStorage’s set/get functions."
+    },
+    {
+      "chunk_id": 3800,
+      "rating": 1,
+      "reason": "Shows generic deployment and function call pattern, but tests unrelated behavior; only useful as a basic fixture example."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 7959,
+    "completion_tokens": 848,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 55.3,
+  "evaluated_utc": "2026-10-14T18:09:23.204462+00:00"
+}

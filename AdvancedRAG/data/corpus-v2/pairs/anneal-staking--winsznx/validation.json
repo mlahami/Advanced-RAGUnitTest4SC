@@ -1,0 +1,89 @@
+{
+  "pair": "anneal-staking--winsznx",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:47:48.962898+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AnnealStaking.sol": "e0a48d549a4d0cdee647f3457c49dc681a7c6168859f08cdead2e88a08bbae4a",
+    "contracts/MockERC20.sol": "2dcf98bffab90c24bb1bca985057d393f17981698c3e56143685dd8a9e14ba1f",
+    "LICENSE": "785957ef3d6f1582ba11f17e0fedeb89cfaea0a0ded0c1ef22c67921e48af85e",
+    "manifest.json": "388d5550e074d9cdc7b0fb320cf2e0018a20749f15b836f61d8343fee26d89e8",
+    "test/AnnealStaking.test.js": "1e9e9c17c0d16ccc7d54e407df527f0574610fba052f9e4f99db45875dd00553"
+  },
+  "pair_sha256": "3ec808e611bfc0c1c3a6dd60c195c496a30e7255ec950a8bde8c76c9d8890f53",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "AnnealStaking.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.202,
+        "signatures": 0.059,
+        "min_functions": 8
+      },
+      {
+        "contract": "AnnealStaking.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.178,
+        "signatures": 0.105,
+        "min_functions": 10
+      },
+      {
+        "contract": "AnnealStaking.sol",
+        "reference": "DEX.sol",
+        "structural": 0.172,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.99,
+      "mocha": {
+        "tests": 11,
+        "passes": 11,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.6,
+      "mocha": {
+        "tests": 11,
+        "passes": 11,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "AnnealStaking.sol": {
+          "statements": 93.88,
+          "branches": 76.67,
+          "functions": 90.91,
+          "lines": 93.75
+        },
+        "MockERC20.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

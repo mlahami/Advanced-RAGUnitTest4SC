@@ -1,0 +1,44 @@
+{
+  "id": "anca-sure-claims--trippleyay",
+  "domain": "insurance",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "AncaSureClaims.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/trippleyay/ancasure",
+    "commit": "8fc4124c29312d7db310ac019c8af7d878014211",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/claims/contracts/AncaSureClaims.sol"
+    ],
+    "test_paths": [
+      "contracts/claims/test/anca-sure-claims.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/claims/contracts/AncaSureClaims.sol": "89b143c001629a7406efd03022bee86adec2bf5f90738d8eeb79d3670022b2c2",
+      "contracts/claims/test/anca-sure-claims.test.ts": "3729fec7e370b98dfad51ddec0668f6d6d3f935804d2f9b3d9b59234a6f1aa09"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "anca-sure-claims.test.js",
+      "upstream_path": "contracts/claims/test/anca-sure-claims.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "anca-sure-claims.test.js",
+      "upstream_path": "contracts/claims/test/anca-sure-claims.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 199 lines, closure 199 lines, 1 files; 8 it blocks; history: 42 commits 2026-08-27..2026-09-14",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:24:35.753891+00:00"
+}

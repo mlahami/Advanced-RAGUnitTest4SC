@@ -1,0 +1,103 @@
+{
+  "pair": "stablecoin--kcolbchain",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:36:33.924685+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ChainlinkPoRAdapter.sol": "45535f041157d73351977e4420d9909a1cf86e8095320f9b51a131e613088e95",
+    "contracts/IAggregatorV3.sol": "079784afbbd69d41c7b3e6acff5d4f8d4eaa2901c13f024c35cd7f8a14c0e6bf",
+    "contracts/ReserveManager.sol": "7f0180ec0ec1a40d171142d8fa08103710c6e6cabd14d19c09ca50ec8ed6f18d",
+    "contracts/Stablecoin.sol": "ae90f9e9ddf49026a10bf1568a18a7fe0e0782e73b213d1a94b4ad081c0143db",
+    "LICENSE": "5aa670d6e29075b73a0d23d450cd1ffabd97de7155a95d38fe48c33b66aa7bce",
+    "manifest.json": "4d3b523afb65204c7dcfb51d4731e133f5f5ec0871639ff9abfbd8bf1aa67bcd",
+    "test/Stablecoin.test.js": "a84f5f4a8b1c2356511203f103fe127a4a8510834763e4965fe008f8c38a119f"
+  },
+  "pair_sha256": "e8dda47e2cf28d3511f9a29461b486a53a3cc1d3c06969e2dfb2637e442475d0",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "ReserveManager.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.155,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "ReserveManager.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.138,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "ReserveManager.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.134,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.5,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.2,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Stablecoin.sol": {
+          "statements": 100.0,
+          "branches": 68.75,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ChainlinkPoRAdapter.sol": {
+          "statements": 0.0,
+          "branches": 0.0,
+          "functions": 0.0,
+          "lines": 0.0
+        },
+        "ReserveManager.sol": {
+          "statements": 36.36,
+          "branches": 20.59,
+          "functions": 50.0,
+          "lines": 37.5
+        },
+        "IAggregatorV3.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,253 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 15,
+    "passes": 11,
+    "pending": 0,
+    "failures": 4,
+    "start": "2026-09-30T21:47:33.039Z",
+    "end": "2026-09-30T21:47:33.581Z",
+    "duration": 542
+  },
+  "tests": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "RateLimiter Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct parameters",
+      "fullTitle": "RateLimiter Deployment Should set the correct parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert with zero parameters",
+      "fullTitle": "RateLimiter Deployment Should revert with zero parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "Should initialize new users with full capacity",
+      "fullTitle": "RateLimiter Token Bucket Should initialize new users with full capacity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should refill tokens over time",
+      "fullTitle": "RateLimiter Token Bucket Should refill tokens over time",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "expected 100 to equal 120.",
+        "stack": "AssertionError: expected 100 to equal 120.\n    at Context.<anonymous> (test\\generated.test.js:55:67)"
+      }
+    },
+    {
+      "title": "Should cap tokens at capacity",
+      "fullTitle": "RateLimiter Token Bucket Should cap tokens at capacity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should allow deposits when tokens available",
+      "fullTitle": "RateLimiter Rate Limiting Should allow deposits when tokens available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should revert when tokens insufficient",
+      "fullTitle": "RateLimiter Rate Limiting Should revert when tokens insufficient",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:86:7)"
+      }
+    },
+    {
+      "title": "Should allow withdrawals when tokens available",
+      "fullTitle": "RateLimiter Rate Limiting Should allow withdrawals when tokens available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should revert withdrawal when tokens insufficient",
+      "fullTitle": "RateLimiter Rate Limiting Should revert withdrawal when tokens insufficient",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it reverted with reason 'Insufficient balance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Rate limit exceeded', but it reverted with reason 'Insufficient balance'\n    at Context.<anonymous> (test\\generated.test.js:102:7)"
+      }
+    },
+    {
+      "title": "Should revert withdrawal when balance insufficient",
+      "fullTitle": "RateLimiter Rate Limiting Should revert withdrawal when balance insufficient",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should maintain separate buckets for different users",
+      "fullTitle": "RateLimiter Independent Buckets Should maintain separate buckets for different users",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should allow multiple users to use the contract",
+      "fullTitle": "RateLimiter Independent Buckets Should allow multiple users to use the contract",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should handle zero cost per call (should never revert)",
+      "fullTitle": "RateLimiter Edge Cases Should handle zero cost per call (should never revert)",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Zero param'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Zero param'\n    at RateLimiter.constructor (runs/heldout16-rag-v2-ethers6-v1-rep03/RateLimiter/contracts/RateLimiter.sol:48)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at ContractFactory.deploy (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\factory.ts:111:24)\n    at Context.<anonymous> (test\\generated.test.js:141:31)"
+      }
+    },
+    {
+      "title": "Should handle max uint256 values",
+      "fullTitle": "RateLimiter Edge Cases Should handle max uint256 values",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should refill tokens over time",
+      "fullTitle": "RateLimiter Token Bucket Should refill tokens over time",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "expected 100 to equal 120.",
+        "stack": "AssertionError: expected 100 to equal 120.\n    at Context.<anonymous> (test\\generated.test.js:55:67)"
+      }
+    },
+    {
+      "title": "Should revert when tokens insufficient",
+      "fullTitle": "RateLimiter Rate Limiting Should revert when tokens insufficient",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:86:7)"
+      }
+    },
+    {
+      "title": "Should revert withdrawal when tokens insufficient",
+      "fullTitle": "RateLimiter Rate Limiting Should revert withdrawal when tokens insufficient",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it reverted with reason 'Insufficient balance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Rate limit exceeded', but it reverted with reason 'Insufficient balance'\n    at Context.<anonymous> (test\\generated.test.js:102:7)"
+      }
+    },
+    {
+      "title": "Should handle zero cost per call (should never revert)",
+      "fullTitle": "RateLimiter Edge Cases Should handle zero cost per call (should never revert)",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Zero param'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Zero param'\n    at RateLimiter.constructor (runs/heldout16-rag-v2-ethers6-v1-rep03/RateLimiter/contracts/RateLimiter.sol:48)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at ContractFactory.deploy (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\factory.ts:111:24)\n    at Context.<anonymous> (test\\generated.test.js:141:31)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "RateLimiter Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct parameters",
+      "fullTitle": "RateLimiter Deployment Should set the correct parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert with zero parameters",
+      "fullTitle": "RateLimiter Deployment Should revert with zero parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "Should initialize new users with full capacity",
+      "fullTitle": "RateLimiter Token Bucket Should initialize new users with full capacity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should cap tokens at capacity",
+      "fullTitle": "RateLimiter Token Bucket Should cap tokens at capacity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should allow deposits when tokens available",
+      "fullTitle": "RateLimiter Rate Limiting Should allow deposits when tokens available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should allow withdrawals when tokens available",
+      "fullTitle": "RateLimiter Rate Limiting Should allow withdrawals when tokens available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should revert withdrawal when balance insufficient",
+      "fullTitle": "RateLimiter Rate Limiting Should revert withdrawal when balance insufficient",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should maintain separate buckets for different users",
+      "fullTitle": "RateLimiter Independent Buckets Should maintain separate buckets for different users",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should allow multiple users to use the contract",
+      "fullTitle": "RateLimiter Independent Buckets Should allow multiple users to use the contract",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should handle max uint256 values",
+      "fullTitle": "RateLimiter Edge Cases Should handle max uint256 values",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\RateLimiter\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    }
+  ]
+}

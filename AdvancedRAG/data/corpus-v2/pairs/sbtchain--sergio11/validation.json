@@ -1,0 +1,89 @@
+{
+  "pair": "sbtchain--sergio11",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:15:31.480844+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ISBTChain.sol": "9009c8c195c53fa3637b03543341282872baf9c4f40bb9eb3e71abedb3b45f24",
+    "contracts/SBTChain.sol": "35aa756a23359a18a538b467c7e2ecc1c697b4f3ef88a1100234930f92663f4e",
+    "LICENSE": "a4792e2b2f47e972a5b70195cb02f680f833251f533ea71d83ae6306899a2cd5",
+    "manifest.json": "10a385d94d1daa05771275f467332ee250d3c1b8247aa71f239c6e65bf8c875a",
+    "test/SBTChain.test.js": "f554d2d83c4fb12761dc4f7bf4ed2bc07bc6e55b1bee335748042baa4d3cd5a0"
+  },
+  "pair_sha256": "763de2e318e84a7aeaee77670bea479c06bb9b933e57c44a3b5d3b90858dfa3e",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "SBTChain.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.141,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "SBTChain.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.121,
+        "signatures": 0.053,
+        "min_functions": 10
+      },
+      {
+        "contract": "SBTChain.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.113,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.72,
+      "mocha": {
+        "tests": 13,
+        "passes": 13,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.17,
+      "mocha": {
+        "tests": 13,
+        "passes": 13,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "SBTChain.sol": {
+          "statements": 85.71,
+          "branches": 80.77,
+          "functions": 91.67,
+          "lines": 85.71
+        },
+        "ISBTChain.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

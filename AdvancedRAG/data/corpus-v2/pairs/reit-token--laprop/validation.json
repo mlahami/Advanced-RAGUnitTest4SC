@@ -1,0 +1,124 @@
+{
+  "pair": "reit-token--laprop",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:10:17.045529+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ECRecover.sol": "8f2b8e86a658eb370c337b0a80eca1774593ae9498f1ebc1d14f3a8abeb6416a",
+    "contracts/EIP3009.sol": "af67d46d44cabc710cb3a22d059c3736e7249384a84e7e990936a84fb2ddef37",
+    "contracts/EIP712.sol": "1e59ca76d61a2ea2023234d0f9bdb6ef62ebacb7c999c241c219ff89fc59a7ca",
+    "contracts/EIP712Domain.sol": "a5a6bea640633a76abbd52253f76cfba139841f26bd2bdaf7283a2555b0b1564",
+    "contracts/IWhiteList.sol": "9c1bc931a8713d5bd77caec29f5842d08e20f42c16acecd8b97a27bf44712f6f",
+    "contracts/ReitToken.sol": "d816d091a86a821884d3383226b8f9baec46dcb9d60b462705ad23e52ba6ed5d",
+    "contracts/WhiteList.sol": "6eeb04ccfedb8c70140defe85058b17cdf23675fa31ebb110fbdd1739d47050f",
+    "LICENSE": "cad780003a52e3c7a0099fae43b885a3f38035a3595ca03707fa5c5bcdf03c87",
+    "manifest.json": "c8cc1f84a94e8b70744753cfbdade15093ed58e0f366188132bc6e6536009e70",
+    "test/ReitTokenTest.js": "977939b9629feed4143283f0728a1551d4bf4a64346fc874e46f086d830167b4"
+  },
+  "pair_sha256": "648fbfc5adc2a51af83f691e91095c95d039e8689a3a767fddf6dce748c19c05",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "EIP712Domain.sol",
+        "reference": "SimpleStorage.sol",
+        "structural": 0.136,
+        "signatures": 0.0,
+        "min_functions": 0
+      },
+      {
+        "contract": "IWhiteList.sol",
+        "reference": "SimpleStorage.sol",
+        "structural": 0.125,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "EIP712.sol",
+        "reference": "GaslessRelayer.sol",
+        "structural": 0.122,
+        "signatures": 0.0,
+        "min_functions": 2
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.2,
+      "mocha": {
+        "tests": 16,
+        "passes": 16,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.45,
+      "mocha": {
+        "tests": 16,
+        "passes": 16,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "ReitToken.sol": {
+          "statements": 86.96,
+          "branches": 71.88,
+          "functions": 80.0,
+          "lines": 86.96
+        },
+        "EIP3009.sol": {
+          "statements": 47.62,
+          "branches": 42.86,
+          "functions": 57.14,
+          "lines": 47.62
+        },
+        "EIP712Domain.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IWhiteList.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ECRecover.sol": {
+          "statements": 71.43,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 71.43
+        },
+        "EIP712.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "WhiteList.sol": {
+          "statements": 59.09,
+          "branches": 27.78,
+          "functions": 57.14,
+          "lines": 59.09
+        }
+      }
+    }
+  },
+  "accepted": true
+}

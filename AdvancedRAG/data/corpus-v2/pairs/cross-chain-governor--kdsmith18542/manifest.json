@@ -1,0 +1,46 @@
+{
+  "id": "cross-chain-governor--kdsmith18542",
+  "domain": "bridge",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "CrossChainGovernor.sol",
+    "ICrossChainBridge.sol",
+    "MockCrossChainBridge.sol",
+    "ResurgeBridgeToken.sol",
+    "LayerZeroBridge.sol",
+    "ERC20Mock.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/kdsmith18542/Resurgence-Protocol",
+    "commit": "acec56d74ea79729807be0bdcb756cae778be3bf",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/crosschain/CrossChainGovernor.sol",
+      "contracts/crosschain/ICrossChainBridge.sol",
+      "contracts/crosschain/MockCrossChainBridge.sol",
+      "contracts/crosschain/ResurgeBridgeToken.sol",
+      "contracts/crosschain/LayerZeroBridge.sol",
+      "contracts/ERC20Mock.sol"
+    ],
+    "test_paths": [
+      "test/crosschain/CrossChain.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/crosschain/CrossChainGovernor.sol": "583eb99496b7c9282eb2bca2a59868a904b4b36044f75be1b2270588d0fffcec",
+      "contracts/crosschain/ICrossChainBridge.sol": "598660d48dedb482c156fa078d1bd31216e99418c4583172617c4653a995e326",
+      "contracts/crosschain/MockCrossChainBridge.sol": "bc21f998e5be84e5730053da03a902507d7f43bbb44c3ea444df41888674fcde",
+      "contracts/crosschain/ResurgeBridgeToken.sol": "2b9055ed6d2e53a5219036fce3dc9c97aa5c627e3365804f7e9f803f0e5c3f1e",
+      "contracts/crosschain/LayerZeroBridge.sol": "531f7bd321f2c8d8d184825683b4cc1cd1e7d6f0f55815f977ed0619c447abfe",
+      "contracts/ERC20Mock.sol": "d453db563f86f1d6c85e713ffd49c70d2b59f1586208dea04605a05f55a036e8",
+      "test/crosschain/CrossChain.test.js": "fec774eaa91e56941b5a0715e4dcea412ce589c42cef29d8dcf1b88324f19372"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Hub/spoke cross-chain governance over an abstract message bridge (trusted remotes, message ids, duplicate-delivery protection) plus lock/release bridge token with reserve; LayerZeroBridge.sol is a repo-local adapter with no LayerZero package import. 42 its across 4 contracts. 34 commits, 3 authors (2025-2026).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T15:52:32.834278+00:00"
+}

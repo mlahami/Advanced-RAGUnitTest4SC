@@ -1,0 +1,89 @@
+{
+  "pair": "ancilla-staking--ancilla-arb",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:46:48.803159+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AncillaStaking.sol": "2ae4d04fe794638592d6ee767cef84efb7ac97de5d787c1013ce7c1a007b8e54",
+    "contracts/AncillaToken.sol": "31f2cecd558e03fc678d6216a7435c230fe6abd16a0ef64603bdb7f1952d2b46",
+    "LICENSE": "ecc4bf0c8565b51d7ceef8a77756621e06d13b5c4eeeb9e76aff2d1f27d7ce85",
+    "manifest.json": "d000a11341b84d2b24b589a3cc60a781cbd624e38229a0e7f6163b378ddcceab",
+    "test/AncillaStaking.test.js": "5e36083be159d6c01581a7297dc8277ffa28662f5b8db8c0f64ee101d91f628b"
+  },
+  "pair_sha256": "18aae57dc1431496dfe3add97dea57bf4b4b790d2365c0de23fe9983dbe1025d",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "AncillaStaking.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.239,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "AncillaStaking.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.195,
+        "signatures": 0.077,
+        "min_functions": 6
+      },
+      {
+        "contract": "AncillaStaking.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.19,
+        "signatures": 0.1,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.49,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.75,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "AncillaStaking.sol": {
+          "statements": 94.74,
+          "branches": 66.67,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "AncillaToken.sol": {
+          "statements": 60.0,
+          "branches": 50.0,
+          "functions": 66.67,
+          "lines": 60.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

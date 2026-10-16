@@ -1,0 +1,82 @@
+{
+  "pair": "veraci-tixnft--owezzy",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T07:31:56.092084+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/VeraciTIXNFT.sol": "eb49985f6716525db7f916aa5ad54556812fed893f46d29b0419afb1186a3161",
+    "LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+    "manifest.json": "fbf8a147dbded28af2c7fabcd660cc9fda3380b16ad76d72bc7694e7fd384a10",
+    "test/VeraciTIXNFT.test.js": "134614f069edb186e3d21599aec2ff0624eecdcc3a803f054567822f7b8218f8"
+  },
+  "pair_sha256": "8fc6e4ed953956286a9d99a9c772c1776dc016a16f3c844d404603da16c5e75f",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "VeraciTIXNFT.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.211,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "VeraciTIXNFT.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.195,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "VeraciTIXNFT.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.192,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 47.82,
+      "mocha": {
+        "tests": 37,
+        "passes": 37,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 31.09,
+      "mocha": {
+        "tests": 37,
+        "passes": 37,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "VeraciTIXNFT.sol": {
+          "statements": 96.97,
+          "branches": 83.33,
+          "functions": 87.5,
+          "lines": 96.97
+        }
+      }
+    }
+  },
+  "accepted": true
+}

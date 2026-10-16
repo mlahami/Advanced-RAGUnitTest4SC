@@ -1,0 +1,40 @@
+{
+  "contract": "CrossChainBridge",
+  "status": "test_failures",
+  "prompt_sha256": "503633832584c4e357d8061da323fd902588797f870a7fd42393c4631bf2f9ee",
+  "generation_seconds": 15.520685199997388,
+  "usage": {
+    "prompt_tokens": 8140,
+    "total_tokens": 10231,
+    "completion_tokens": 2091,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 8.949544099974446
+  },
+  "passed_tests": 22,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "CrossChainBridge Lock Function Should lock tokens and emit Locked event",
+      "error": "Cannot read properties of undefined (reading '0')"
+    },
+    {
+      "title": "CrossChainBridge Validate Function \"before each\" hook for \"Should allow validators to validate requests\"",
+      "error": "Cannot read properties of undefined (reading '0')"
+    }
+  ],
+  "coverage": {
+    "statements": 69.57,
+    "branches": 67.65,
+    "functions": 80.0,
+    "lines": 69.57
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

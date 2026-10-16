@@ -1,0 +1,53 @@
+{
+  "id": "your-contract--gavrilaalexandru",
+  "domain": "nft-poap",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "YourContract.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/gavrilaalexandru/POAPademy",
+    "commit": "f34f4e17e8702fce8f061d2145f6895a2d5b3ab3",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/YourContract.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/YourContract.ts"
+    ],
+    "license_file": "LICENCE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/YourContract.sol": "3208e3b092556d034153ebde0c78d2f654fa2dfe3601af7f90b3dceada35fe99",
+      "packages/hardhat/test/YourContract.ts": "47779873b21448a0c82a972139adcc891a94a82252f1f212eddb6931cbfce659"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "YourContract.js",
+      "upstream_path": "packages/hardhat/test/YourContract.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "YourContract.js",
+      "upstream_path": "packages/hardhat/test/YourContract.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "YourContract"
+      ],
+      "file": "YourContract.js",
+      "upstream_path": "packages/hardhat/test/YourContract.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Minimal POAP-style ERC721 attendance badge mint (scaffold-eth YourContract). Primary 29 non-blank lines, closure 29 lines/1 files; 6 its, 11 expects; pragma ^0.8.0.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:06:52.797119+00:00"
+}

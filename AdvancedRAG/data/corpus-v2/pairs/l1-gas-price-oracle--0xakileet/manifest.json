@@ -1,0 +1,31 @@
+{
+  "id": "l1-gas-price-oracle--0xakileet",
+  "domain": "oracle",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "L1GasPriceOracle.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/0xakileet/L1GasPriceOracle",
+    "commit": "80e69113a0517bd562cc3ee7b45eff517db6649c",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/L1GasPriceOracle.sol"
+    ],
+    "test_paths": [
+      "test/L1GasPriceOracle.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/L1GasPriceOracle.sol": "5c20034a74e34120aaac2b72ba512978e498014e4c7fbf8a1c53587c39fe7409",
+      "test/L1GasPriceOracle.test.js": "e5c046ae8d0f98bd6791f3733956eb6f3ad1d0f10ded1bb87ff40344e9de42a2"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "L2 fee oracle fed by a sequencer: L1 base/blob fee updates, batched updates, scalar and compression settings, blob pricing toggle, staleness check, fee breakdown, emergency scalar, ownership and sequencer rotation; primary 473 lines (~170 comment lines), no imports; 14 it blocks that call every external function; LICENSE (MIT); history: 1 commit 2026-04-22 - DOUBTFUL (single commit). Compiles 0.8.24 no optimizer (6.6 KB).",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-30T07:36:22.220349+00:00"
+}

@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> StakingRewards.sol
+> UDAYToken.sol
+
+Compilation:
+============
+
+Compiled 14 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+---------------------|----------|----------|----------|----------|----------------|
+File                 |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+---------------------|----------|----------|----------|----------|----------------|
+ contracts\          |    91.67 |    57.14 |    84.62 |    91.55 |                |
+  StakingRewards.sol |     90.7 |    57.89 |    81.82 |    90.91 |... 183,187,188 |
+  UDAYToken.sol      |      100 |       50 |      100 |      100 |                |
+---------------------|----------|----------|----------|----------|----------------|
+All files            |    91.67 |    57.14 |    84.62 |    91.55 |                |
+---------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

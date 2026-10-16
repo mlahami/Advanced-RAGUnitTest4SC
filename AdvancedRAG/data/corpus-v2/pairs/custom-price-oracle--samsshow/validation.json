@@ -1,0 +1,82 @@
+{
+  "pair": "custom-price-oracle--samsshow",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:43:25.479415+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/CustomPriceOracle.sol": "2b365d2436588a1135c6a88fc39b3625eabd2fc2dea48d3d86af77cfd22a924f",
+    "LICENSE": "53b42745d30e9ddfc96e640ab5bc1ce81861b9aeacca502f49c1219684581f96",
+    "manifest.json": "c9c941b108e14208b4a77f109a0976a4538eed1161109a80917544c2d752cc26",
+    "test/CustomPriceOracle.test.js": "760dda4fea4dfe3bf57cf80eeb630caf6c0ce0fa856ae907efeeeed8216d895c"
+  },
+  "pair_sha256": "d7db013b6272d0d1d038e766e0a9e9c1f5015141f4964f3474de2fe84763c789",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "CustomPriceOracle.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.199,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "CustomPriceOracle.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.164,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "CustomPriceOracle.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.136,
+        "signatures": 0.0,
+        "min_functions": 11
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.73,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.53,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "CustomPriceOracle.sol": {
+          "statements": 85.71,
+          "branches": 55.88,
+          "functions": 87.5,
+          "lines": 87.27
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,247 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 15,
+    "passes": 12,
+    "pending": 0,
+    "failures": 3,
+    "start": "2026-09-30T21:09:42.451Z",
+    "end": "2026-09-30T21:09:43.818Z",
+    "duration": 1367
+  },
+  "tests": [
+    {
+      "title": "Should create a proposal",
+      "fullTitle": "DAOGovernor Proposal Creation Should create a proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 58,
+      "err": {
+        "message": "expected 1790802584 to equal 6.",
+        "stack": "AssertionError: expected 1790802584 to equal 6.\n    at Context.<anonymous> (test\\generated.test.js:61:37)"
+      }
+    },
+    {
+      "title": "Should allow voting for a proposal",
+      "fullTitle": "DAOGovernor Voting Should allow voting for a proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 27,
+      "err": {}
+    },
+    {
+      "title": "Should allow voting against a proposal",
+      "fullTitle": "DAOGovernor Voting Should allow voting against a proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 36,
+      "err": {}
+    },
+    {
+      "title": "Should prevent double voting",
+      "fullTitle": "DAOGovernor Voting Should prevent double voting",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should prevent voting before proposal is active",
+      "fullTitle": "DAOGovernor Voting Should prevent voting before proposal is active",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 13,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Not active', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Not active', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:129:7)"
+      }
+    },
+    {
+      "title": "Should prevent voting after proposal has ended",
+      "fullTitle": "DAOGovernor Voting Should prevent voting after proposal has ended",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should prevent voting with zero voting power",
+      "fullTitle": "DAOGovernor Voting Should prevent voting with zero voting power",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should queue a successful proposal",
+      "fullTitle": "DAOGovernor Proposal Execution Should queue a successful proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should prevent queuing before voting period ends",
+      "fullTitle": "DAOGovernor Proposal Execution Should prevent queuing before voting period ends",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should prevent queuing a defeated proposal",
+      "fullTitle": "DAOGovernor Proposal Execution Should prevent queuing a defeated proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "Should execute a queued proposal after timelock delay",
+      "fullTitle": "DAOGovernor Proposal Execution Should execute a queued proposal after timelock delay",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'name')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at Context.<anonymous> (test\\generated.test.js:253:39)"
+      }
+    },
+    {
+      "title": "Should prevent executing before timelock delay expires",
+      "fullTitle": "DAOGovernor Proposal Execution Should prevent executing before timelock delay expires",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should prevent executing a non-queued proposal",
+      "fullTitle": "DAOGovernor Proposal Execution Should prevent executing a non-queued proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 25,
+      "err": {}
+    },
+    {
+      "title": "Should prevent executing a proposal twice",
+      "fullTitle": "DAOGovernor Proposal Execution Should prevent executing a proposal twice",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should revert if proposal execution fails",
+      "fullTitle": "DAOGovernor Proposal Execution Should revert if proposal execution fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 31,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should create a proposal",
+      "fullTitle": "DAOGovernor Proposal Creation Should create a proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 58,
+      "err": {
+        "message": "expected 1790802584 to equal 6.",
+        "stack": "AssertionError: expected 1790802584 to equal 6.\n    at Context.<anonymous> (test\\generated.test.js:61:37)"
+      }
+    },
+    {
+      "title": "Should prevent voting before proposal is active",
+      "fullTitle": "DAOGovernor Voting Should prevent voting before proposal is active",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 13,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Not active', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Not active', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:129:7)"
+      }
+    },
+    {
+      "title": "Should execute a queued proposal after timelock delay",
+      "fullTitle": "DAOGovernor Proposal Execution Should execute a queued proposal after timelock delay",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Cannot read properties of undefined (reading 'name')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at Context.<anonymous> (test\\generated.test.js:253:39)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should allow voting for a proposal",
+      "fullTitle": "DAOGovernor Voting Should allow voting for a proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 27,
+      "err": {}
+    },
+    {
+      "title": "Should allow voting against a proposal",
+      "fullTitle": "DAOGovernor Voting Should allow voting against a proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 36,
+      "err": {}
+    },
+    {
+      "title": "Should prevent double voting",
+      "fullTitle": "DAOGovernor Voting Should prevent double voting",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should prevent voting after proposal has ended",
+      "fullTitle": "DAOGovernor Voting Should prevent voting after proposal has ended",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should prevent voting with zero voting power",
+      "fullTitle": "DAOGovernor Voting Should prevent voting with zero voting power",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should queue a successful proposal",
+      "fullTitle": "DAOGovernor Proposal Execution Should queue a successful proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should prevent queuing before voting period ends",
+      "fullTitle": "DAOGovernor Proposal Execution Should prevent queuing before voting period ends",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should prevent queuing a defeated proposal",
+      "fullTitle": "DAOGovernor Proposal Execution Should prevent queuing a defeated proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "Should prevent executing before timelock delay expires",
+      "fullTitle": "DAOGovernor Proposal Execution Should prevent executing before timelock delay expires",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should prevent executing a non-queued proposal",
+      "fullTitle": "DAOGovernor Proposal Execution Should prevent executing a non-queued proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 25,
+      "err": {}
+    },
+    {
+      "title": "Should prevent executing a proposal twice",
+      "fullTitle": "DAOGovernor Proposal Execution Should prevent executing a proposal twice",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should revert if proposal execution fails",
+      "fullTitle": "DAOGovernor Proposal Execution Should revert if proposal execution fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\DAOGovernor\\test\\generated.test.js",
+      "duration": 31,
+      "err": {}
+    }
+  ]
+}

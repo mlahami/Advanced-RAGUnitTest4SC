@@ -1,0 +1,40 @@
+{
+  "contract": "Crowdfunding",
+  "status": "test_failures",
+  "prompt_sha256": "4bac730a2e022f08d2585127ae4593dad7eea3a585ffeb634ce92f59a5bba04a",
+  "generation_seconds": 20.322919900063425,
+  "usage": {
+    "prompt_tokens": 11111,
+    "total_tokens": 12822,
+    "completion_tokens": 1711,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.699219699949026
+  },
+  "passed_tests": 12,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Crowdfunding Contributions Should allow contributions before deadline",
+      "error": "Event \"ContributionReceived\" doesn't exist in the contract"
+    },
+    {
+      "title": "Crowdfunding Refunds Should prevent double refunds",
+      "error": "Event \"Refunded\" doesn't exist in the contract"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

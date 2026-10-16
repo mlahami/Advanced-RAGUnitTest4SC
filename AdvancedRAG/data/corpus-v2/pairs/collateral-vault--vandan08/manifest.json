@@ -1,0 +1,53 @@
+{
+  "id": "collateral-vault--vandan08",
+  "domain": "lending",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "CollateralVault.sol",
+    "CreditRegistry.sol",
+    "MockUSDC.sol",
+    "ICreditRegistry.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/vandan08/CredLayer",
+    "commit": "1afa6d305c46635741133355c37824b667a963a2",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/contracts/CollateralVault.sol",
+      "contracts/contracts/CreditRegistry.sol",
+      "contracts/contracts/MockUSDC.sol",
+      "contracts/contracts/interfaces/ICreditRegistry.sol"
+    ],
+    "test_paths": [
+      "contracts/test/CollateralVault.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/CollateralVault.sol": "d9eb89f8aaf5e74ee04365805822465db6d1f22a1a2746e5a8e5d594760e1d1a",
+      "contracts/contracts/CreditRegistry.sol": "009feb0e27aa2c5a02c9d14bd90a9acefec7e2917c0d05f5d11c3d6c7d24bf06",
+      "contracts/contracts/MockUSDC.sol": "ae92fb645a4de7ce84e256139e1177ebfb6ebf334de673c466b92ae0bca0845b",
+      "contracts/contracts/interfaces/ICreditRegistry.sol": "c382fb818f4f796383b009d5660dcc60e5426219addad07354e3f7ccb093ca5e",
+      "contracts/test/CollateralVault.test.js": "0eae9b10d126918c45d3a4af720fc25b61e69bd97f52af70546ebea91e9dc0ed"
+    }
+  },
+  "transformations": [
+    {
+      "file": "CollateralVault.sol",
+      "kind": "import-path",
+      "before": "./interfaces/ICreditRegistry.sol",
+      "after": "./ICreditRegistry.sol"
+    },
+    {
+      "file": "CreditRegistry.sol",
+      "kind": "import-path",
+      "before": "./interfaces/ICreditRegistry.sol",
+      "after": "./ICreditRegistry.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 237 lines, closure 552 lines, 4 files; 11 it blocks; history: 44 commits 2026-02-28..2026-08-20",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:27:03.292463+00:00"
+}

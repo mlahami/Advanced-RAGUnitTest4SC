@@ -1,0 +1,182 @@
+{
+  "target_functions": [
+    {
+      "target_function": "depositCollateral",
+      "corpus_functions": [
+        "62d6763446136e5fe07327e5",
+        "fa40608794e9381c4e0ac122",
+        "7ade351c45b83a87cf9d5f8b",
+        "ec9ae32e1b15fc90c5b7998e",
+        "f038c281a5a28aced7400fb5",
+        "6f20163f1d9d16dcdbae390d",
+        "8444859006e21ce8c06725b8",
+        "bf097429a33cf7f94d94c336"
+      ],
+      "candidate_tests": [
+        "6f9509dba3376428ac035930",
+        "a37e68548255f2f8ddb7d27c",
+        "125e9c8908fa1ccc46550a3e",
+        "fc1fb2caf1684b5a3dde7a08",
+        "125e9c8908fa1ccc46550a3e",
+        "fc1fb2caf1684b5a3dde7a08",
+        "54b33b1260413087a64db371",
+        "a97c56fe5d55fddbdf32c7df",
+        "daa4a3cb66f55306a1a9c1c7",
+        "8deda748fc462ee5315e9d62",
+        "3683bfc1315418b876b5bb43",
+        "c08401dff58fe0ce31ed8f58",
+        "69a6b022a00ca4664e5754bd",
+        "85bc6e6f457858b61c87a818"
+      ]
+    },
+    {
+      "target_function": "borrow",
+      "corpus_functions": [
+        "ca7156b8b8c0796f3ad8d64a",
+        "96af7cd33cfb2b21e8603625",
+        "b16cbfe44dc2cad26f50cbf9",
+        "37546fb5c210663307fb77bf",
+        "948fab660ab6862d7a475845",
+        "db0146370ec7f5e7d4dd8f8f",
+        "62d6763446136e5fe07327e5",
+        "db36e4c5f5936a2dd5368302"
+      ],
+      "candidate_tests": [
+        "125e9c8908fa1ccc46550a3e",
+        "fc1fb2caf1684b5a3dde7a08",
+        "e5e85e4471a6fc32f89e09e9",
+        "366a17368ce268943cd4dbe4",
+        "cfb40653c0672637c7ad6e51",
+        "8d3490258573e8fda23a62b8",
+        "125e9c8908fa1ccc46550a3e",
+        "fc1fb2caf1684b5a3dde7a08",
+        "3dbf46fee1232d4b8015c09a",
+        "601cce16817d084ba093bdb2",
+        "6f9509dba3376428ac035930",
+        "a37e68548255f2f8ddb7d27c",
+        "587e395e6a65f0ca57a9b0d1",
+        "f2184e84274493c42b217a6a"
+      ]
+    },
+    {
+      "target_function": "repay",
+      "corpus_functions": [
+        "7dff07c326b913e5fce54cc2",
+        "264a5a031a5337e60abb96b7",
+        "05f16f23cc00652675f1a543",
+        "db0146370ec7f5e7d4dd8f8f",
+        "8137def2f001d01abc56f26d",
+        "4e67bb749db55758f5b419db",
+        "7ade351c45b83a87cf9d5f8b",
+        "fa40608794e9381c4e0ac122"
+      ],
+      "candidate_tests": [
+        "178ca2a36cd6fea76eaf2a71",
+        "3dbf46fee1232d4b8015c09a",
+        "601cce16817d084ba093bdb2",
+        "e6f6a1123bba8222f914681f",
+        "3244bec7c657831e519d6b28",
+        "125e9c8908fa1ccc46550a3e",
+        "fc1fb2caf1684b5a3dde7a08",
+        "125e9c8908fa1ccc46550a3e",
+        "fc1fb2caf1684b5a3dde7a08"
+      ]
+    },
+    {
+      "target_function": "liquidate",
+      "corpus_functions": [
+        "b16cbfe44dc2cad26f50cbf9",
+        "948fab660ab6862d7a475845",
+        "ca7156b8b8c0796f3ad8d64a",
+        "5b155c8fe6af98a17e150ecb",
+        "37546fb5c210663307fb77bf",
+        "b5db37416c6c2b609f62f542",
+        "d76ff319fa3f65a1ce0c889d",
+        "409a5fd43f3905e4aeb1a331"
+      ],
+      "candidate_tests": [
+        "e5e85e4471a6fc32f89e09e9",
+        "366a17368ce268943cd4dbe4",
+        "125e9c8908fa1ccc46550a3e",
+        "fc1fb2caf1684b5a3dde7a08",
+        "125e9c8908fa1ccc46550a3e",
+        "fc1fb2caf1684b5a3dde7a08",
+        "21f99676f2b3d319f6f19448",
+        "cfb40653c0672637c7ad6e51",
+        "8d3490258573e8fda23a62b8",
+        "9ccf70df50986259b829a2bc",
+        "52065f5e438e01eb2c5e79e1"
+      ]
+    }
+  ],
+  "selected": [
+    1441,
+    4537,
+    3925,
+    3916,
+    1442,
+    4535
+  ],
+  "context_chars": 14632,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "LendingPool",
+  "retrieval_seconds": 3.8414380000904202,
+  "hits": [
+    {
+      "chunk_id": 1441,
+      "test_id": "6f9509dba3376428ac035930",
+      "pair": "collateral-vault--vandan08",
+      "domain_group": "lending-collateral",
+      "name": "Should deposit collateral",
+      "via_function": "62d6763446136e5fe07327e5",
+      "chars": 1979
+    },
+    {
+      "chunk_id": 4537,
+      "test_id": "125e9c8908fa1ccc46550a3e",
+      "pair": "mitigated-vault--harshanandhan",
+      "domain_group": "lending-collateral",
+      "name": "MitigatedVault: honest borrow at TWAP still works",
+      "via_function": "ca7156b8b8c0796f3ad8d64a",
+      "chars": 2071
+    },
+    {
+      "chunk_id": 3925,
+      "test_id": "178ca2a36cd6fea76eaf2a71",
+      "pair": "lending-pool--akasxh",
+      "domain_group": "lending-collateral",
+      "name": "5. should allow repayment",
+      "via_function": "264a5a031a5337e60abb96b7",
+      "chars": 2939
+    },
+    {
+      "chunk_id": 3916,
+      "test_id": "e5e85e4471a6fc32f89e09e9",
+      "pair": "lending-pool--akasxh",
+      "domain_group": "lending-collateral",
+      "name": "20. should revert liquidation of a healthy borrower",
+      "via_function": "b16cbfe44dc2cad26f50cbf9",
+      "chars": 3242
+    },
+    {
+      "chunk_id": 1442,
+      "test_id": "a37e68548255f2f8ddb7d27c",
+      "pair": "collateral-vault--vandan08",
+      "domain_group": "lending-collateral",
+      "name": "Should emit CollateralDeposited event",
+      "via_function": "62d6763446136e5fe07327e5",
+      "chars": 2031
+    },
+    {
+      "chunk_id": 4535,
+      "test_id": "fc1fb2caf1684b5a3dde7a08",
+      "pair": "mitigated-vault--harshanandhan",
+      "domain_group": "lending-collateral",
+      "name": "VulnerableVault: spot spike enables oversized borrow (lab drain)",
+      "via_function": "ca7156b8b8c0796f3ad8d64a",
+      "chars": 2370
+    }
+  ]
+}

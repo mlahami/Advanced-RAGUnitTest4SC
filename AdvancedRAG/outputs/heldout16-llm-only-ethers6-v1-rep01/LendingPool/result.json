@@ -1,0 +1,36 @@
+{
+  "contract": "LendingPool",
+  "status": "test_failures",
+  "prompt_sha256": "c46dccc98b090c0a604d7e229589d7562039d6ee7d594ce796aa211cea9e5d8d",
+  "generation_seconds": 13.465980399982072,
+  "usage": {
+    "prompt_tokens": 7491,
+    "total_tokens": 9202,
+    "completion_tokens": 1711,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 7.481246700044721
+  },
+  "passed_tests": 12,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "LendingPool liquidate Should revert if liquidation transfer fails",
+      "error": "contract runner does not support sending transactions (operation=\"sendTransaction\", code=UNSUPPORTED_OPERATION, version=6.17.0)"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 90.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

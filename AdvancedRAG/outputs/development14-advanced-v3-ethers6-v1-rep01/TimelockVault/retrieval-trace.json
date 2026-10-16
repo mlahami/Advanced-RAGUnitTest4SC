@@ -1,0 +1,129 @@
+{
+  "target_functions": [
+    {
+      "target_function": "withdraw",
+      "corpus_functions": [
+        "5dbe6ac23ebf254af0960c68",
+        "8c6bca23f1ab32198b838dc6",
+        "cc94f481b4429a7767e28d10",
+        "063586414aed28ee93833be6",
+        "5dd1cf3a2df80f9fa286ecd3",
+        "0f726bb93b9a301a8364eb1a",
+        "c37ba33dc85f216499235cc7",
+        "2633945a250025af7c23c4ba"
+      ],
+      "candidate_tests": [
+        "a21f707ce122a82cce3e232a",
+        "8c5e2104ed695d527c3f1eb8",
+        "ab87bb8057e891b73e4b01d0",
+        "ca59848354c24db771b35982",
+        "121f088caf09d4d198c46f01",
+        "326e4cd1b5def8b0c15404ec",
+        "27470ad61412a524714371b7",
+        "86086bf63fcefbe0f04e2e27",
+        "9c977839c628712a88a43658",
+        "449876ca76477a1297b9eb70"
+      ]
+    }
+  ],
+  "selected": [
+    4142,
+    4143,
+    2330,
+    2329,
+    6791,
+    6782,
+    1558,
+    1557,
+    5416
+  ],
+  "context_chars": 13682,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "TimelockVault",
+  "retrieval_seconds": 0.6916939999209717,
+  "hits": [
+    {
+      "chunk_id": 4142,
+      "test_id": "a21f707ce122a82cce3e232a",
+      "pair": "lock--akkii4",
+      "domain_group": "vesting-timelock",
+      "name": "Should revert with the right error if called too soon",
+      "via_function": "5dbe6ac23ebf254af0960c68",
+      "chars": 1236
+    },
+    {
+      "chunk_id": 4143,
+      "test_id": "8c5e2104ed695d527c3f1eb8",
+      "pair": "lock--akkii4",
+      "domain_group": "vesting-timelock",
+      "name": "Should revert with the right error if called from another account",
+      "via_function": "5dbe6ac23ebf254af0960c68",
+      "chars": 1501
+    },
+    {
+      "chunk_id": 2330,
+      "test_id": "ab87bb8057e891b73e4b01d0",
+      "pair": "english-auction--dexauction",
+      "domain_group": "auctions",
+      "name": "should not allow withdraw if no bid was made",
+      "via_function": "8c6bca23f1ab32198b838dc6",
+      "chars": 1252
+    },
+    {
+      "chunk_id": 2329,
+      "test_id": "ca59848354c24db771b35982",
+      "pair": "english-auction--dexauction",
+      "domain_group": "auctions",
+      "name": "should allow withdraw of previous bids",
+      "via_function": "8c6bca23f1ab32198b838dc6",
+      "chars": 1757
+    },
+    {
+      "chunk_id": 6791,
+      "test_id": "121f088caf09d4d198c46f01",
+      "pair": "time-flow-vault--ogazboiz",
+      "domain_group": "vesting-timelock",
+      "name": "Should allow owner to withdraw excess fees",
+      "via_function": "cc94f481b4429a7767e28d10",
+      "chars": 1480
+    },
+    {
+      "chunk_id": 6782,
+      "test_id": "326e4cd1b5def8b0c15404ec",
+      "pair": "time-flow-vault--ogazboiz",
+      "domain_group": "vesting-timelock",
+      "name": "Should allow recipient to withdraw from stream",
+      "via_function": "063586414aed28ee93833be6",
+      "chars": 1490
+    },
+    {
+      "chunk_id": 1558,
+      "test_id": "27470ad61412a524714371b7",
+      "pair": "cross-chain-governor--kdsmith18542",
+      "domain_group": "relayer-meta-transactions",
+      "name": "should revert withdrawal exceeding reserve",
+      "via_function": "0f726bb93b9a301a8364eb1a",
+      "chars": 1611
+    },
+    {
+      "chunk_id": 1557,
+      "test_id": "86086bf63fcefbe0f04e2e27",
+      "pair": "cross-chain-governor--kdsmith18542",
+      "domain_group": "relayer-meta-transactions",
+      "name": "should allow bridge manager to withdraw reserve",
+      "via_function": "0f726bb93b9a301a8364eb1a",
+      "chars": 1759
+    },
+    {
+      "chunk_id": 5416,
+      "test_id": "9c977839c628712a88a43658",
+      "pair": "payment-escrow--center-for-ai-services-computing",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should reject withdrawFees from non-owner",
+      "via_function": "c37ba33dc85f216499235cc7",
+      "chars": 1596
+    }
+  ]
+}

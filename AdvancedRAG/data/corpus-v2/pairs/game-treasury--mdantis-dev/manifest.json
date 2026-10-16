@@ -1,0 +1,32 @@
+{
+  "id": "game-treasury--mdantis-dev",
+  "domain": "treasury",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "GameTreasury.sol",
+    "LiminalToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/mdantis-dev/SOLIDITY-Liminal-Games",
+    "commit": "09a7484ac7f92e054eedc087b2d03431968e435b",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/GameTreasury.sol",
+      "contracts/LiminalToken.sol"
+    ],
+    "test_paths": [
+      "test/GameTreasury.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/GameTreasury.sol": "40aba8365b73dddc3ade3a549dc1f0f5aaee47abd443432bc1b90ed02bfb8009",
+      "contracts/LiminalToken.sol": "4ccb7d99e266bb50c6b38ab3883e75be20d26a7cff6dbe371386508735524b3e",
+      "test/GameTreasury.js": "effc30a148252ba417696153178c1cc64672b13b6d61a28b33e224e0bccf2d62"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "role-based spending; 2025 repo, 0 stars; AI-assistance risk",
+  "imported_utc": "2026-09-27T21:50:21.823707+00:00"
+}

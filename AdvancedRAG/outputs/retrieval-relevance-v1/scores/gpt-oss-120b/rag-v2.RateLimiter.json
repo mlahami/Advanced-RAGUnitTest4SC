@@ -1,0 +1,61 @@
+{
+  "id": "rag-v2.RateLimiter",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "RateLimiter",
+  "chunk_ids": [
+    6835,
+    3237,
+    6834,
+    6853,
+    6837,
+    6841,
+    891
+  ],
+  "context_sha256": "f50e8099e5b059ad9a2708dd5f1286f20922991f091b89d4c07629a517e18b1c",
+  "ratings": [
+    {
+      "chunk_id": 6835,
+      "rating": 1,
+      "reason": "Shows loadFixture, time manipulation, and revert assertion patterns useful for testing rate‑limit behavior, though the specific lifetime‑limit logic differs."
+    },
+    {
+      "chunk_id": 3237,
+      "rating": 1,
+      "reason": "Shows time manipulation pattern useful for testing token refill over time, but tests unrelated vesting behavior; only generic time‑increase usage applies."
+    },
+    {
+      "chunk_id": 6834,
+      "rating": 1,
+      "reason": "Shows time‑increase loop to test rate‑limit behavior, which matches bucket refill logic, but specific functions differ."
+    },
+    {
+      "chunk_id": 6853,
+      "rating": 2,
+      "reason": "Tests per‑user independent limits, matching RateLimiter’s bucket logic, can be adapted for token consumption checks."
+    },
+    {
+      "chunk_id": 6837,
+      "rating": 2,
+      "reason": "Tests rate‑limit exhaustion and token availability, matching RateLimiter’s bucket logic and availableTokens view; can be adapted with renaming."
+    },
+    {
+      "chunk_id": 6841,
+      "rating": 1,
+      "reason": "Shows time‑increase and rate‑limit pattern useful for testing token bucket behavior, but specific claim logic differs from RateLimiter’s functions."
+    },
+    {
+      "chunk_id": 891,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but target has no minting or supply logic, so only the revert check pattern is marginally useful."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 14230,
+    "completion_tokens": 736,
+    "calls": 7
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 105.3,
+  "evaluated_utc": "2026-10-13T07:38:02.531579+00:00"
+}

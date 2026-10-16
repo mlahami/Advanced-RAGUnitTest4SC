@@ -1,0 +1,82 @@
+{
+  "pair": "nftforge--ozgurkutlu0",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:16:04.755350+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/NFTForge.sol": "39625f1985589dae3dfe246943728dea39b288071ef72d00cd2922acd09f0769",
+    "LICENSE": "3deb026fb0d735a5e83cd83a646744a81a412d51187c82e37d31e2dc6fc6e4eb",
+    "manifest.json": "309c36de8ceb8b083911899501d6bd58024442ac7c273059022bd6f31bd1fbd5",
+    "test/NFTForge.test.js": "ad91d6fbe730e98a825330514498e7ba0b6670c090f30b0ae60122d950421357"
+  },
+  "pair_sha256": "074403d03f770341e4371fcdbc5fe613709179e096e5e0e7961390a97bda4eb0",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "NFTForge.sol",
+        "reference": "SimpleStorage.sol",
+        "structural": 0.152,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "NFTForge.sol",
+        "reference": "MetaCoin.sol",
+        "structural": 0.102,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "NFTForge.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.102,
+        "signatures": 0.0,
+        "min_functions": 2
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.35,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.31,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "NFTForge.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

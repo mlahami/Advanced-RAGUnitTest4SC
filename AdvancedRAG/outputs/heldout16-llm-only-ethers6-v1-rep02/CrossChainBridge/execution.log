@@ -1,0 +1,35 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BenchmarkFixtures.sol
+> CrossChainBridge.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |    40.98 |    42.42 |    42.86 |    45.05 |                |
+  BenchmarkFixtures.sol |    23.68 |    15.63 |    22.22 |    28.07 |... 140,141,145 |
+  CrossChainBridge.sol  |    69.57 |    67.65 |       80 |    73.53 |... 88,89,90,91 |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |    40.98 |    42.42 |    42.86 |    45.05 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+Error in plugin solidity-coverage: ❌ 4 test(s) failed under coverage.
+
+For more info run Hardhat with --show-stack-traces

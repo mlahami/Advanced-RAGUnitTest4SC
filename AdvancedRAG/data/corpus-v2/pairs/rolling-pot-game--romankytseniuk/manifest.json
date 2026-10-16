@@ -1,0 +1,137 @@
+{
+  "id": "rolling-pot-game--romankytseniuk",
+  "domain": "lottery",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "RollingPotGame.sol",
+    "RollingPotFactory.sol",
+    "MockRandomnessProvider.sol",
+    "ZeroRequestIdRandomnessProvider.sol",
+    "SelfDestructSender.sol",
+    "ReentrantClaimer.sol",
+    "IRollingPotRandomnessConsumer.sol",
+    "IRollingPotRandomnessProvider.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/RomanKytseniuk/rolling-pot",
+    "commit": "8f6a0ec201deb3a6b8a5b312bece6c7875549a9c",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/core/RollingPotGame.sol",
+      "contracts/factory/RollingPotFactory.sol",
+      "contracts/randomness/IRollingPotRandomnessConsumer.sol",
+      "contracts/randomness/IRollingPotRandomnessProvider.sol",
+      "contracts/randomness/MockRandomnessProvider.sol",
+      "contracts/mocks/ZeroRequestIdRandomnessProvider.sol",
+      "contracts/mocks/SelfDestructSender.sol",
+      "contracts/mocks/ReentrantClaimer.sol"
+    ],
+    "test_paths": [
+      "test/unit/RollingPotGame.test.ts",
+      "test/unit/RollingPotFactory.test.ts",
+      "test/integration/GameFlow.test.ts",
+      "test/integration/MultiGame.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/core/RollingPotGame.sol": "6c96f28c0c21c82ed80e6fa5496a7e7128ed7a9b89ea8fd4ae0b7ed41e25d68b",
+      "contracts/factory/RollingPotFactory.sol": "a7a4f20cb77766aba7e8c719025e13142cb5943a78308266bafb4472042a42b1",
+      "contracts/randomness/IRollingPotRandomnessConsumer.sol": "36a1819047cf156f0f31620629711ced2181d0fe5ef6e9e6966bd1cfedd5290a",
+      "contracts/randomness/IRollingPotRandomnessProvider.sol": "896137c282b94fe260c75d2fc484fe2094e226a5e70c89ea72e6e295dd39c066",
+      "contracts/randomness/MockRandomnessProvider.sol": "25098a1eebf4320ae9acd2415679cbfe06cf9ff97ec49573122a98cd7312ef71",
+      "contracts/mocks/ZeroRequestIdRandomnessProvider.sol": "7855e00fe847eeb644248d50f33435b1dbf2e8d4e0dc59a98b770d8faedfa4db",
+      "contracts/mocks/SelfDestructSender.sol": "7b31117b68473ea0913edc19e41020b5f9f72d6dca3fa8e68044769be57622c8",
+      "contracts/mocks/ReentrantClaimer.sol": "f67325230d95766e1bacd3def28e0e5fcd53ca6cbd155131a4b06645db9aaadb",
+      "test/unit/RollingPotGame.test.ts": "fd05908d6145a1b0eb8afc18ec6602c3a713b980565b2c3825df361b836b3aac",
+      "test/unit/RollingPotFactory.test.ts": "0c48f44952cfe358ed7418d27a89fac81f0681057caefb5864670624de0b3e29",
+      "test/integration/GameFlow.test.ts": "e5d71ad3efa1840d6e1549f6774d3ec508599f11987c7a085aa073b7ab79288c",
+      "test/integration/MultiGame.test.ts": "b51d347336697d237f69821a9a6ca2fea4f980fbffbace1017a240b15fbf8c4b"
+    }
+  },
+  "transformations": [
+    {
+      "file": "RollingPotGame.sol",
+      "kind": "import-path",
+      "before": "../randomness/IRollingPotRandomnessConsumer.sol",
+      "after": "./IRollingPotRandomnessConsumer.sol"
+    },
+    {
+      "file": "RollingPotGame.sol",
+      "kind": "import-path",
+      "before": "../randomness/IRollingPotRandomnessProvider.sol",
+      "after": "./IRollingPotRandomnessProvider.sol"
+    },
+    {
+      "file": "RollingPotFactory.sol",
+      "kind": "import-path",
+      "before": "../core/RollingPotGame.sol",
+      "after": "./RollingPotGame.sol"
+    },
+    {
+      "file": "ZeroRequestIdRandomnessProvider.sol",
+      "kind": "import-path",
+      "before": "../randomness/IRollingPotRandomnessProvider.sol",
+      "after": "./IRollingPotRandomnessProvider.sol"
+    },
+    {
+      "file": "ReentrantClaimer.sol",
+      "kind": "import-path",
+      "before": "../core/RollingPotGame.sol",
+      "after": "./RollingPotGame.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "RollingPotGame.test.js",
+      "upstream_path": "test/unit/RollingPotGame.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "RollingPotGame.test.js",
+      "upstream_path": "test/unit/RollingPotGame.test.ts"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "RollingPotFactory.test.js",
+      "upstream_path": "test/unit/RollingPotFactory.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "RollingPotFactory.test.js",
+      "upstream_path": "test/unit/RollingPotFactory.test.ts"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "GameFlow.test.js",
+      "upstream_path": "test/integration/GameFlow.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "GameFlow.test.js",
+      "upstream_path": "test/integration/GameFlow.test.ts"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "MultiGame.test.js",
+      "upstream_path": "test/integration/MultiGame.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "MultiGame.test.js",
+      "upstream_path": "test/integration/MultiGame.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Rolling jackpot lottery: rounds with capped joins at rising entry price, round close requests randomness from a pluggable provider, probabilistic resolution splits pot among round participants (fee guardrail, remainder wei distribution) or rolls pot forward; randomness retry after timeout, stale fulfilment ignored, pull-claim with nonReentrant; clone factory (OZ Clones). Chainlink VRF adapter and ERC20 variant deliberately excluded (Chainlink imports). Primary 399 lines; 17 it blocks across 4 files (12 unit on primary). Local run on frozen HH env: 17/17 pass, 95.9% stmts on primary, 100% on factory. Tests use network.provider.send evm_increaseTime (HH2-compatible), typechain imports are type-only. Licence file LICENSE (MIT). History: 5 commits all 2026-09-24 (bulk upload) -> DOUBTFUL.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-30T08:13:59.852686+00:00"
+}

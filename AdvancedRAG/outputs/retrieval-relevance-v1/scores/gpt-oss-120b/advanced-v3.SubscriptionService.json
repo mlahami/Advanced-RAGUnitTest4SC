@@ -1,0 +1,61 @@
+{
+  "id": "advanced-v3.SubscriptionService",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "SubscriptionService",
+  "chunk_ids": [
+    604,
+    4993,
+    418,
+    6695,
+    419,
+    879,
+    838
+  ],
+  "context_sha256": "d95e5e917e00617309b16614dc8c82e1396c599cb2882e8c45ca787dbb7bfa35",
+  "ratings": [
+    {
+      "chunk_id": 604,
+      "rating": 1,
+      "reason": "Shows generic event emission testing pattern, which can be reused for SubscriptionService events, but specific behavior (auction creation) is unrelated."
+    },
+    {
+      "chunk_id": 4993,
+      "rating": 1,
+      "reason": "Shows admin-only deactivation with event check, similar to onlyOwner plan deactivation pattern"
+    },
+    {
+      "chunk_id": 418,
+      "rating": 1,
+      "reason": "Shows time‑increase, ERC20 approval, subscription and charge pattern useful, but target lacks batch chargeAll function, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 6695,
+      "rating": 1,
+      "reason": "Tests cancellation flow and event emission, similar pattern to SubscriptionService.cancel, but uses different function names and contract structure."
+    },
+    {
+      "chunk_id": 419,
+      "rating": 1,
+      "reason": "Shows allowance revocation, time travel, and charge failure handling pattern useful for SubscriptionService, but tests a batch function not present."
+    },
+    {
+      "chunk_id": 879,
+      "rating": 2,
+      "reason": "Tests isActive returns false for zero address, matching SubscriptionService’s isActive view; can be reused directly after renaming contract and variable."
+    },
+    {
+      "chunk_id": 838,
+      "rating": 0,
+      "reason": "Test targets unrelated vault logic; no matching functions or patterns for subscription service."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 16374,
+    "completion_tokens": 684,
+    "calls": 7
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 105.7,
+  "evaluated_utc": "2026-10-15T13:40:42.121431+00:00"
+}

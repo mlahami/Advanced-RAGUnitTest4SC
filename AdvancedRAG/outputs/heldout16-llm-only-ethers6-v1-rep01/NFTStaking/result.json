@@ -1,0 +1,56 @@
+{
+  "contract": "NFTStaking",
+  "status": "test_failures",
+  "prompt_sha256": "0df99cb146db0be88c2ef7672ef8649d920215f15574ae444c65c763a6802e12",
+  "generation_seconds": 15.361372800078243,
+  "usage": {
+    "prompt_tokens": 8901,
+    "total_tokens": 10712,
+    "completion_tokens": 1811,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 8.778225400019437
+  },
+  "passed_tests": 12,
+  "failed_tests": 6,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "NFTStaking Staking Should revert if NFT is already staked",
+      "error": "Expected transaction to be reverted with reason 'Already staked', but it reverted with reason 'Not owner'"
+    },
+    {
+      "title": "NFTStaking Rewards Should calculate pending rewards correctly",
+      "error": "expected 10 to equal 10000000000000000000."
+    },
+    {
+      "title": "NFTStaking Rewards Should allow claiming rewards",
+      "error": "expected 11 to equal 10000000000000000000."
+    },
+    {
+      "title": "NFTStaking Rewards Should emit RewardClaimed event",
+      "error": "Error in \"RewardClaimed\" event: Error in the 2nd argument assertion: expected 11 to equal 10000000000000000000."
+    },
+    {
+      "title": "NFTStaking Rewards Should revert if no rewards to claim",
+      "error": "Expected transaction to be reverted with reason 'No rewards', but it didn't revert"
+    },
+    {
+      "title": "NFTStaking Edge Cases Should handle multiple stakers correctly",
+      "error": "expected 11 to equal 10000000000000000000."
+    }
+  ],
+  "coverage": {
+    "statements": 97.3,
+    "branches": 81.25,
+    "functions": 100.0,
+    "lines": 97.22
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

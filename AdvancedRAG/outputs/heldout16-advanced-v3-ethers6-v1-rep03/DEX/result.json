@@ -1,0 +1,40 @@
+{
+  "contract": "DEX",
+  "status": "test_failures",
+  "prompt_sha256": "164a8b94e9f22469960748e63d49e4dd546161ad731b63eb67266dc7ed211fbd",
+  "generation_seconds": 15.981431299936958,
+  "usage": {
+    "prompt_tokens": 11773,
+    "total_tokens": 13952,
+    "completion_tokens": 2179,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.290061200037599
+  },
+  "passed_tests": 6,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "DEX Contract Swap Functionality Should revert when swapping with zero amount",
+      "error": "Expected transaction to be reverted with reason 'ERC20: transfer amount exceeds balance', but it didn't revert"
+    },
+    {
+      "title": "DEX Contract Edge Cases Should handle initial liquidity addition correctly",
+      "error": "expected 141421356237309504880 to equal 141421356237309509632."
+    }
+  ],
+  "coverage": {
+    "statements": 95.45,
+    "branches": 66.67,
+    "functions": 85.71,
+    "lines": 95.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

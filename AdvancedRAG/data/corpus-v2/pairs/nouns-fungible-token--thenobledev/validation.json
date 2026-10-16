@@ -1,0 +1,82 @@
+{
+  "pair": "nouns-fungible-token--thenobledev",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:51:26.875115+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/NounsFungibleToken.sol": "3cd575ff33fa3e81cf45b893b628a1c6f9b3cf39ac7ddf5de6c3bdf83cd0e1ad",
+    "LICENSE": "1809e1af24377a8b446b892a3e7f5d25971a5f332fa3d1293ad8443ecfc82f39",
+    "manifest.json": "7a8c0fcaef7a43b64636c6c6459ae180331402123db368cfaf69dcbc7697eb92",
+    "test/NounsFungibleToken.js": "b705b1b87ad559a4d5955c97407f115e11e1d8ccccebf7dc240fd725623dd620"
+  },
+  "pair_sha256": "32df863359411b53a1631e48f6d678fa9b1f5fcc07a367d31261880cae7debca",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "NounsFungibleToken.sol",
+        "reference": "MetaCoin.sol",
+        "structural": 0.06,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "NounsFungibleToken.sol",
+        "reference": "BatchTransfer.sol",
+        "structural": 0.051,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "NounsFungibleToken.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.05,
+        "signatures": 0.0,
+        "min_functions": 2
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.88,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.86,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "NounsFungibleToken.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "modification-logic--bigceru",
+  "domain": "registry",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "ModificationLogic.sol",
+    "HistoryTracker.sol",
+    "IRegistration.sol",
+    "ProfileManager.sol",
+    "PropertyRegistry.sol",
+    "PropertyStorage.sol",
+    "Registration.sol",
+    "TransferLogic.sol",
+    "ViewGetFunctions.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Bigceru/Blockchain-LandRegister",
+    "commit": "3d05345ef101524788f66e9de1af0becf28a69e8",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/ModificationLogic.sol",
+      "contracts/HistoryTracker.sol",
+      "contracts/IRegistration.sol",
+      "contracts/ProfileManager.sol",
+      "contracts/PropertyRegistry.sol",
+      "contracts/PropertyStorage.sol",
+      "contracts/Registration.sol",
+      "contracts/TransferLogic.sol",
+      "contracts/ViewGetFunctions.sol"
+    ],
+    "test_paths": [
+      "test/ModificationLogic.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/ModificationLogic.sol": "a13fe094a70a779b26c2cff2d47bb6ce02bb411e72332a3849aabc4f690fe80d",
+      "contracts/HistoryTracker.sol": "93a58e27c0878e809135cab2803760c367c51c2f323d744b05175d70454f32b6",
+      "contracts/IRegistration.sol": "edb2184be228bcc27477a534b739bb709884f586356007f2e51d23bd8c7f50fa",
+      "contracts/ProfileManager.sol": "d0d455e35911ded6d0a3e1dc58abc4a578afbb9ef6deac9b0ba84788eb97687a",
+      "contracts/PropertyRegistry.sol": "0305a4c9e18c7b4aca9ec91438a971b30644a6a529a8a9f0d54ea387fb677435",
+      "contracts/PropertyStorage.sol": "d0ace8e8ceb5317b72eec56083235291ea83a46fc87eb58341a434517d016df3",
+      "contracts/Registration.sol": "369e3b5278c2b611b61448a2c73fd11369c61a611725fb547d39116beb075424",
+      "contracts/TransferLogic.sol": "68676b9e72bdcbf63d423cbb36e6a27070b7d763f2a10e7ab1447cd60e0c3ce9",
+      "contracts/ViewGetFunctions.sol": "18848b947d58f42ab2e606b546da4ea31380f9bd14d7706db56a81ac3d29d58c",
+      "test/ModificationLogic.js": "32a59c7e21a5cd1a422cf0ad25cb5dc8dcff52670ffbd9c06c9ec88e1f2f520c"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Same land-registry repo; ModificationLogic layer (property modifications/transfers). Primary 165 non-blank lines, closure 872 lines/9 files; 11 its, 14 expects; pragma ^0.8.0.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:02.132031+00:00"
+}

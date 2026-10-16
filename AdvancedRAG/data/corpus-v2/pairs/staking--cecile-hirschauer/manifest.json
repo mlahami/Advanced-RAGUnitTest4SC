@@ -1,0 +1,59 @@
+{
+  "id": "staking--cecile-hirschauer",
+  "domain": "staking",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "Staking.sol",
+    "Crowdfunding.sol",
+    "LeafToken.sol",
+    "ICrowdfunding.sol",
+    "IStaking.sol",
+    "MockDai.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Cecile-Hirschauer/EcoGreenFund",
+    "commit": "8f22299e4a8974810a402192db3de592ee3eb368",
+    "license": "MIT",
+    "contract_paths": [
+      "backend/contracts/Staking.sol",
+      "backend/contracts/Crowdfunding.sol",
+      "backend/contracts/LeafToken.sol",
+      "backend/contracts/interfaces/ICrowdfunding.sol",
+      "backend/contracts/interfaces/IStaking.sol",
+      "backend/contracts/mocks/MockDai.sol"
+    ],
+    "test_paths": [
+      "backend/test/unit/staking.test.js"
+    ],
+    "license_file": "LICENCE",
+    "upstream_sha256": {
+      "backend/contracts/Staking.sol": "e291fe5f7d193405f12037dbfde7a357845dd0346e69988132e1650bb4780cc8",
+      "backend/contracts/Crowdfunding.sol": "6d44316643744321243f69835fe796fde359793b8249c2047d6be4d0f34ebd92",
+      "backend/contracts/LeafToken.sol": "682229ce3bc466bf4c71908931a6ece70ae4731f82bb3ab99b0154e8c6f7704e",
+      "backend/contracts/interfaces/ICrowdfunding.sol": "310a16cbd6bbdc55cea4f930dc6dc715e1b7c500da3a825d05737e57d0679ab6",
+      "backend/contracts/interfaces/IStaking.sol": "7a55fa6bc7cb171874e2c5147fd92c967ae90d3d9c2b75930894c804976f3afd",
+      "backend/contracts/mocks/MockDai.sol": "a7908415998f141da8ea1b63b6c954b3289ea5f86a4a548997f0eab575e09c14",
+      "backend/test/unit/staking.test.js": "f9df8575bad32a4d1f5a8cb59fb81f8d23cc96a56dd08d99f15e9bc3d6486f1c"
+    }
+  },
+  "transformations": [
+    {
+      "file": "Staking.sol",
+      "kind": "import-path",
+      "before": "./interfaces/ICrowdfunding.sol",
+      "after": "./ICrowdfunding.sol"
+    },
+    {
+      "file": "Staking.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IStaking.sol",
+      "after": "./IStaking.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 122 lines, closure 480 lines, 6 files; 12 it blocks; history: 37 commits 2024-02-12..2024-04-10",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:30:45.097237+00:00"
+}

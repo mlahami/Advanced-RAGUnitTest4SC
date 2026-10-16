@@ -1,0 +1,89 @@
+{
+  "pair": "my-forwarder--hlibbc",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:08:00.671466+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MetaTxReceiver.sol": "1c8d6698f1e05fb1f66959bbbdf92af010aa4f42d287268413e46b0dbacf942b",
+    "contracts/MyForwarder.sol": "8d7b074a2d19b607e3a32a75fa5ba63ceb26a25b3f098f11501d9cd2d265a49c",
+    "LICENSE": "88fe98ae6431a97a42009bc8e7d47b23e0a7391de18f19cbcd1c4e2170fe7164",
+    "manifest.json": "12686963a14628878c5f21ad69d4800a4303acf5297e14259fd3a5987c7f96e0",
+    "test/MyForwarder.test.js": "0274c2daf61e88ce3f65f97e90d105821deeff20a33429f91fc021fefc38a6ce"
+  },
+  "pair_sha256": "fa80c1f8fc5fb01a03575df163ad376ede18882726dd8262b5937ce96a4d68e7",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MyForwarder.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.103,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "MyForwarder.sol",
+        "reference": "GaslessRelayer.sol",
+        "structural": 0.101,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "MyForwarder.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.1,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 50.01,
+      "mocha": {
+        "tests": 34,
+        "passes": 34,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 25.87,
+      "mocha": {
+        "tests": 34,
+        "passes": 34,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MyForwarder.sol": {
+          "statements": 100.0,
+          "branches": 84.21,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MetaTxReceiver.sol": {
+          "statements": 65.0,
+          "branches": 62.5,
+          "functions": 75.0,
+          "lines": 65.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

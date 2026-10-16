@@ -1,0 +1,243 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 13,
+    "passes": 6,
+    "pending": 0,
+    "failures": 7,
+    "start": "2026-09-30T21:44:44.158Z",
+    "end": "2026-09-30T21:44:46.140Z",
+    "duration": 1982
+  },
+  "tests": [
+    {
+      "title": "Should set the correct token addresses",
+      "fullTitle": "DEX Deployment Should set the correct token addresses",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should initialize reserves to zero",
+      "fullTitle": "DEX Deployment Should initialize reserves to zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should add initial liquidity correctly",
+      "fullTitle": "DEX addLiquidity Should add initial liquidity correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 86,
+      "err": {
+        "message": "Error in \"LiquidityAdded\" event: Error in the 2nd argument assertion: expected 100000000000000000000 to equal 10000000000000000000000000000000000000000.",
+        "stack": "AssertionError: Error in \"LiquidityAdded\" event: Error in the 2nd argument assertion: expected 100000000000000000000 to equal 10000000000000000000000000000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:66:7)"
+      }
+    },
+    {
+      "title": "Should add subsequent liquidity proportionally",
+      "fullTitle": "DEX addLiquidity Should add subsequent liquidity proportionally",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 104,
+      "err": {
+        "message": "expected 150000000000000000000 to equal 10000000000000000000050000000000000000000.",
+        "stack": "AssertionError: expected 150000000000000000000 to equal 10000000000000000000050000000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:91:42)"
+      }
+    },
+    {
+      "title": "Should revert when adding zero liquidity",
+      "fullTitle": "DEX addLiquidity Should revert when adding zero liquidity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 66,
+      "err": {}
+    },
+    {
+      "title": "Should remove liquidity correctly",
+      "fullTitle": "DEX removeLiquidity Should remove liquidity correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 31,
+      "err": {
+        "message": "expected 1000000000000000000000 to equal 1100000000000000000000.",
+        "stack": "AssertionError: expected 1000000000000000000000 to equal 1100000000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:123:56)"
+      }
+    },
+    {
+      "title": "Should revert when removing more shares than owned",
+      "fullTitle": "DEX removeLiquidity Should revert when removing more shares than owned",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should swap tokenA for tokenB correctly",
+      "fullTitle": "DEX swapAforB Should swap tokenA for tokenB correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 32,
+      "err": {}
+    },
+    {
+      "title": "Should revert when swapping zero amount",
+      "fullTitle": "DEX swapAforB Should revert when swapping zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 15,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:160:7)"
+      }
+    },
+    {
+      "title": "Should revert when swapping more than available",
+      "fullTitle": "DEX swapAforB Should revert when swapping more than available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 15,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:165:7)"
+      }
+    },
+    {
+      "title": "Should swap tokenB for tokenA correctly",
+      "fullTitle": "DEX swapBforA Should swap tokenB for tokenA correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 57,
+      "err": {}
+    },
+    {
+      "title": "Should revert when swapping zero amount",
+      "fullTitle": "DEX swapBforA Should revert when swapping zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 14,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:196:7)"
+      }
+    },
+    {
+      "title": "Should revert when swapping more than available",
+      "fullTitle": "DEX swapBforA Should revert when swapping more than available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 13,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:201:7)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should add initial liquidity correctly",
+      "fullTitle": "DEX addLiquidity Should add initial liquidity correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 86,
+      "err": {
+        "message": "Error in \"LiquidityAdded\" event: Error in the 2nd argument assertion: expected 100000000000000000000 to equal 10000000000000000000000000000000000000000.",
+        "stack": "AssertionError: Error in \"LiquidityAdded\" event: Error in the 2nd argument assertion: expected 100000000000000000000 to equal 10000000000000000000000000000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:66:7)"
+      }
+    },
+    {
+      "title": "Should add subsequent liquidity proportionally",
+      "fullTitle": "DEX addLiquidity Should add subsequent liquidity proportionally",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 104,
+      "err": {
+        "message": "expected 150000000000000000000 to equal 10000000000000000000050000000000000000000.",
+        "stack": "AssertionError: expected 150000000000000000000 to equal 10000000000000000000050000000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:91:42)"
+      }
+    },
+    {
+      "title": "Should remove liquidity correctly",
+      "fullTitle": "DEX removeLiquidity Should remove liquidity correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 31,
+      "err": {
+        "message": "expected 1000000000000000000000 to equal 1100000000000000000000.",
+        "stack": "AssertionError: expected 1000000000000000000000 to equal 1100000000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:123:56)"
+      }
+    },
+    {
+      "title": "Should revert when swapping zero amount",
+      "fullTitle": "DEX swapAforB Should revert when swapping zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 15,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:160:7)"
+      }
+    },
+    {
+      "title": "Should revert when swapping more than available",
+      "fullTitle": "DEX swapAforB Should revert when swapping more than available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 15,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:165:7)"
+      }
+    },
+    {
+      "title": "Should revert when swapping zero amount",
+      "fullTitle": "DEX swapBforA Should revert when swapping zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 14,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:196:7)"
+      }
+    },
+    {
+      "title": "Should revert when swapping more than available",
+      "fullTitle": "DEX swapBforA Should revert when swapping more than available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 13,
+      "err": {
+        "message": "Expected transaction to be reverted",
+        "stack": "AssertionError: Expected transaction to be reverted\n    at Context.<anonymous> (test\\generated.test.js:201:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct token addresses",
+      "fullTitle": "DEX Deployment Should set the correct token addresses",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should initialize reserves to zero",
+      "fullTitle": "DEX Deployment Should initialize reserves to zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should revert when adding zero liquidity",
+      "fullTitle": "DEX addLiquidity Should revert when adding zero liquidity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 66,
+      "err": {}
+    },
+    {
+      "title": "Should revert when removing more shares than owned",
+      "fullTitle": "DEX removeLiquidity Should revert when removing more shares than owned",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should swap tokenA for tokenB correctly",
+      "fullTitle": "DEX swapAforB Should swap tokenA for tokenB correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 32,
+      "err": {}
+    },
+    {
+      "title": "Should swap tokenB for tokenA correctly",
+      "fullTitle": "DEX swapBforA Should swap tokenB for tokenA correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DEX\\test\\generated.test.js",
+      "duration": 57,
+      "err": {}
+    }
+  ]
+}

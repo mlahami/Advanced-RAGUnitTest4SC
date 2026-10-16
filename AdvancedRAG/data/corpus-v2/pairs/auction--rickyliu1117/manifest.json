@@ -1,0 +1,31 @@
+{
+  "id": "auction--rickyliu1117",
+  "domain": "auction",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Auction.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/rickyliu1117/auction",
+    "commit": "8a8f846dabf5ec05e15c37f729ff7f92f34e22df",
+    "license": "Apache-2.0",
+    "contract_paths": [
+      "contracts/Auction.sol"
+    ],
+    "test_paths": [
+      "test/Auction.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Auction.sol": "a6869db3cfe72684228903be061c302ac4267944b028eacd8dd3d28def62dc32",
+      "test/Auction.test.js": "38e27dec6748e6d9400520be8a6aac650a382a278593615e468d64df9b7e362c"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Auction with bids/withdraw/end; basename identical to benchmark Auction - similarity check may flag; Apache-2.0. Primary 122 non-blank lines, closure 122 lines/1 files; 14 its, 21 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:06:25.052366+00:00"
+}

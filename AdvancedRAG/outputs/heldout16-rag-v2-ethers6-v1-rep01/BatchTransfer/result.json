@@ -1,0 +1,40 @@
+{
+  "contract": "BatchTransfer",
+  "status": "test_failures",
+  "prompt_sha256": "1cc91c94b41f478b50f54b2c453ff8ca7d8057866a840531fdb5fb044b53aac3",
+  "generation_seconds": 13.06379249994643,
+  "usage": {
+    "prompt_tokens": 11935,
+    "total_tokens": 13822,
+    "completion_tokens": 1887,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.941903500002809
+  },
+  "passed_tests": 11,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "BatchTransfer ERC20 Batch Functions Should revert when ERC20 transfer fails for equal batch send",
+      "error": "Expected transaction to be reverted with reason 'Transfer failed', but it didn't revert"
+    },
+    {
+      "title": "BatchTransfer ERC20 Batch Functions Should revert when ERC20 transfer fails for variable batch send",
+      "error": "Expected transaction to be reverted with reason 'Transfer failed', but it didn't revert"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 80.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

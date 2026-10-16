@@ -1,0 +1,48 @@
+{
+  "contract": "BondingCurve",
+  "status": "test_failures",
+  "prompt_sha256": "715490ee7f9a6661f1d932eead2da1cdb2923ba2a9021e4068c5f18c16e2dbd0",
+  "generation_seconds": 15.325468800030649,
+  "usage": {
+    "prompt_tokens": 12884,
+    "total_tokens": 15015,
+    "completion_tokens": 2131,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.78770370001439
+  },
+  "passed_tests": 9,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "BondingCurve Buy should refund excess ETH",
+      "error": "expected 10199999999999999835924 to equal 10200999999999999835924."
+    },
+    {
+      "title": "BondingCurve Sell \"before each\" hook for \"should allow selling tokens\"",
+      "error": "bondingCurve.connect(...).transfer is not a function"
+    },
+    {
+      "title": "BondingCurve Price Calculations should quote sell correctly",
+      "error": "expected 0 to equal 99000000000000004950."
+    },
+    {
+      "title": "BondingCurve Owner Functions should allow owner to collect fees",
+      "error": "bondingCurve.connect(...).transfer is not a function"
+    }
+  ],
+  "coverage": {
+    "statements": 60.61,
+    "branches": 57.14,
+    "functions": 88.89,
+    "lines": 59.38
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

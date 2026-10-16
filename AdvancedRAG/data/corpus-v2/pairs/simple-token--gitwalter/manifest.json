@@ -1,0 +1,31 @@
+{
+  "id": "simple-token--gitwalter",
+  "domain": "erc20-token",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "SimpleToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/gitwalter/ethereum-workshop",
+    "commit": "dc0a63a3c9ef7389ab254df4fd853479553da8e6",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/SimpleToken.sol"
+    ],
+    "test_paths": [
+      "test/SimpleToken.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/SimpleToken.sol": "7ead6683365ace1578d71d3d0062b2cc7232f4d8242f676095ccd5fcd90e6825",
+      "test/SimpleToken.test.js": "ac02b8250dd40134f61ceb07cf9baf2bd552195641456a3291800aa2ac19d464"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (few commits, all commits on one day, created 2026). | primary 41 lines, closure 41 lines, 1 files; 8 it blocks; history: 3 commits 2026-02-03..2026-02-03",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T10:32:48.251215+00:00"
+}

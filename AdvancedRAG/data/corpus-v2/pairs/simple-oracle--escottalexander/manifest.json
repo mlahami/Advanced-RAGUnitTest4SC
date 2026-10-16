@@ -1,0 +1,44 @@
+{
+  "id": "simple-oracle--escottalexander",
+  "domain": "oracle",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "SimpleOracle.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/escottalexander/oracle-challenge",
+    "commit": "62acb5c13ec3e777a79a767b0893cf5f9edf81b8",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/00_Whitelist/SimpleOracle.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/SimpleOracle.ts"
+    ],
+    "license_file": "LICENCE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/00_Whitelist/SimpleOracle.sol": "82328ff3369f4dc588e767ff0b17630e8b8a3f526ffff5d3f5a3de296cbc4a2e",
+      "packages/hardhat/test/SimpleOracle.ts": "65e6add390593c3d89cc28d5306d74536613638767b1eb9d8523a246077fd2c6"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "SimpleOracle.js",
+      "upstream_path": "packages/hardhat/test/SimpleOracle.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "SimpleOracle.js",
+      "upstream_path": "packages/hardhat/test/SimpleOracle.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 27 lines, closure 27 lines, 1 files; 5 it blocks; history: 201 commits 2025-03-22..2025-08-23",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:29:11.223581+00:00"
+}

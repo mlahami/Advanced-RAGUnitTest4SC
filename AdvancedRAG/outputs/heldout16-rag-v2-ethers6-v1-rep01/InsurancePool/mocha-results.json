@@ -1,0 +1,307 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 18,
+    "passes": 12,
+    "pending": 0,
+    "failures": 6,
+    "start": "2026-09-30T21:11:04.812Z",
+    "end": "2026-09-30T21:11:05.732Z",
+    "duration": 920
+  },
+  "tests": [
+    {
+      "title": "Should allow ETH deposit",
+      "fullTitle": "InsurancePool LP Actions Should allow ETH deposit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 50,
+      "err": {}
+    },
+    {
+      "title": "Should allow ETH withdrawal",
+      "fullTitle": "InsurancePool LP Actions Should allow ETH withdrawal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 35,
+      "err": {}
+    },
+    {
+      "title": "Should prevent withdrawal when pool is undercollateralized",
+      "fullTitle": "InsurancePool LP Actions Should prevent withdrawal when pool is undercollateralized",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Insufficient pool'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Insufficient pool'\n    at InsurancePool.buyPolicy (runs/heldout16-rag-v2-ethers6-v1-rep01/InsurancePool/contracts/InsurancePool.sol:166)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.buyPolicy (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:70:7)"
+      }
+    },
+    {
+      "title": "Should allow claiming rewards",
+      "fullTitle": "InsurancePool LP Actions Should allow claiming rewards",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 14,
+      "err": {
+        "message": "expected 0 to be above 0.",
+        "stack": "AssertionError: expected 0 to be above 0.\n    at Context.<anonymous> (test\\generated.test.js:89:36)"
+      }
+    },
+    {
+      "title": "Should prevent claiming zero rewards",
+      "fullTitle": "InsurancePool LP Actions Should prevent claiming zero rewards",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should allow buying a policy",
+      "fullTitle": "InsurancePool Policy Actions Should allow buying a policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 29,
+      "err": {}
+    },
+    {
+      "title": "Should prevent buying policy with zero coverage",
+      "fullTitle": "InsurancePool Policy Actions Should prevent buying policy with zero coverage",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should prevent buying policy with insufficient pool liquidity",
+      "fullTitle": "InsurancePool Policy Actions Should prevent buying policy with insufficient pool liquidity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should prevent buying policy with zero premium",
+      "fullTitle": "InsurancePool Policy Actions Should prevent buying policy with zero premium",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'\n    at Context.<anonymous> (test\\generated.test.js:152:7)"
+      }
+    },
+    {
+      "title": "Should allow owner to trigger claim",
+      "fullTitle": "InsurancePool Oracle Actions Should allow owner to trigger claim",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 159,
+      "err": {
+        "message": "expected 500000000000000000 to equal 600000000000000000.",
+        "stack": "AssertionError: expected 500000000000000000 to equal 600000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:178:55)"
+      }
+    },
+    {
+      "title": "Should prevent non-owner from triggering claim",
+      "fullTitle": "InsurancePool Oracle Actions Should prevent non-owner from triggering claim",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent claiming inactive or already claimed policy",
+      "fullTitle": "InsurancePool Oracle Actions Should prevent claiming inactive or already claimed policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should prevent claiming expired policy",
+      "fullTitle": "InsurancePool Oracle Actions Should prevent claiming expired policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "Should allow expiring a policy",
+      "fullTitle": "InsurancePool Oracle Actions Should allow expiring a policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 21,
+      "err": {}
+    },
+    {
+      "title": "Should prevent expiring active or already claimed policy",
+      "fullTitle": "InsurancePool Oracle Actions Should prevent expiring active or already claimed policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "Should prevent expiring non-expired policy",
+      "fullTitle": "InsurancePool Oracle Actions Should prevent expiring non-expired policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should correctly distribute rewards to multiple LPs",
+      "fullTitle": "InsurancePool Reward Distribution Should correctly distribute rewards to multiple LPs",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 19,
+      "err": {
+        "message": "expected 0 to equal 33333333333333333.",
+        "stack": "AssertionError: expected 0 to equal 33333333333333333.\n    at Context.<anonymous> (test\\generated.test.js:311:34)"
+      }
+    },
+    {
+      "title": "Should update rewards when new deposits are made",
+      "fullTitle": "InsurancePool Reward Distribution Should update rewards when new deposits are made",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "expected 0 to be above 0.",
+        "stack": "AssertionError: expected 0 to be above 0.\n    at Context.<anonymous> (test\\generated.test.js:335:37)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should prevent withdrawal when pool is undercollateralized",
+      "fullTitle": "InsurancePool LP Actions Should prevent withdrawal when pool is undercollateralized",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Insufficient pool'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Insufficient pool'\n    at InsurancePool.buyPolicy (runs/heldout16-rag-v2-ethers6-v1-rep01/InsurancePool/contracts/InsurancePool.sol:166)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.buyPolicy (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:70:7)"
+      }
+    },
+    {
+      "title": "Should allow claiming rewards",
+      "fullTitle": "InsurancePool LP Actions Should allow claiming rewards",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 14,
+      "err": {
+        "message": "expected 0 to be above 0.",
+        "stack": "AssertionError: expected 0 to be above 0.\n    at Context.<anonymous> (test\\generated.test.js:89:36)"
+      }
+    },
+    {
+      "title": "Should prevent buying policy with zero premium",
+      "fullTitle": "InsurancePool Policy Actions Should prevent buying policy with zero premium",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'\n    at Context.<anonymous> (test\\generated.test.js:152:7)"
+      }
+    },
+    {
+      "title": "Should allow owner to trigger claim",
+      "fullTitle": "InsurancePool Oracle Actions Should allow owner to trigger claim",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 159,
+      "err": {
+        "message": "expected 500000000000000000 to equal 600000000000000000.",
+        "stack": "AssertionError: expected 500000000000000000 to equal 600000000000000000.\n    at Context.<anonymous> (test\\generated.test.js:178:55)"
+      }
+    },
+    {
+      "title": "Should correctly distribute rewards to multiple LPs",
+      "fullTitle": "InsurancePool Reward Distribution Should correctly distribute rewards to multiple LPs",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 19,
+      "err": {
+        "message": "expected 0 to equal 33333333333333333.",
+        "stack": "AssertionError: expected 0 to equal 33333333333333333.\n    at Context.<anonymous> (test\\generated.test.js:311:34)"
+      }
+    },
+    {
+      "title": "Should update rewards when new deposits are made",
+      "fullTitle": "InsurancePool Reward Distribution Should update rewards when new deposits are made",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "expected 0 to be above 0.",
+        "stack": "AssertionError: expected 0 to be above 0.\n    at Context.<anonymous> (test\\generated.test.js:335:37)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should allow ETH deposit",
+      "fullTitle": "InsurancePool LP Actions Should allow ETH deposit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 50,
+      "err": {}
+    },
+    {
+      "title": "Should allow ETH withdrawal",
+      "fullTitle": "InsurancePool LP Actions Should allow ETH withdrawal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 35,
+      "err": {}
+    },
+    {
+      "title": "Should prevent claiming zero rewards",
+      "fullTitle": "InsurancePool LP Actions Should prevent claiming zero rewards",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should allow buying a policy",
+      "fullTitle": "InsurancePool Policy Actions Should allow buying a policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 29,
+      "err": {}
+    },
+    {
+      "title": "Should prevent buying policy with zero coverage",
+      "fullTitle": "InsurancePool Policy Actions Should prevent buying policy with zero coverage",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should prevent buying policy with insufficient pool liquidity",
+      "fullTitle": "InsurancePool Policy Actions Should prevent buying policy with insufficient pool liquidity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owner from triggering claim",
+      "fullTitle": "InsurancePool Oracle Actions Should prevent non-owner from triggering claim",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent claiming inactive or already claimed policy",
+      "fullTitle": "InsurancePool Oracle Actions Should prevent claiming inactive or already claimed policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should prevent claiming expired policy",
+      "fullTitle": "InsurancePool Oracle Actions Should prevent claiming expired policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "Should allow expiring a policy",
+      "fullTitle": "InsurancePool Oracle Actions Should allow expiring a policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 21,
+      "err": {}
+    },
+    {
+      "title": "Should prevent expiring active or already claimed policy",
+      "fullTitle": "InsurancePool Oracle Actions Should prevent expiring active or already claimed policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "Should prevent expiring non-expired policy",
+      "fullTitle": "InsurancePool Oracle Actions Should prevent expiring non-expired policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\InsurancePool\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    }
+  ]
+}

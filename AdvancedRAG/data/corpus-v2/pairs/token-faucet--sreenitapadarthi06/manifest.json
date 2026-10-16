@@ -1,0 +1,42 @@
+{
+  "id": "token-faucet--sreenitapadarthi06",
+  "domain": "rate-limiting",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "TokenFaucet.sol",
+    "Token.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/SreenitaPadarthi06/ERC-Token",
+    "commit": "fe138ed617e5afcd01e53c672c4763828c244bdc",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/TokenFaucet.sol",
+      "contracts/Token.sol"
+    ],
+    "test_paths": [
+      "test/TokenFaucet.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/TokenFaucet.sol": "40ad76d0a52d3a42d1bdc0db500418b4b01a9f4994d23303058925ee955931c2",
+      "contracts/Token.sol": "48fbdece26d71f8f4f76adbfa1a13877034f4936c13cda0fac4e006cb46955a1",
+      "test/TokenFaucet.test.js": "732ca5bf17e3901310c18561e38f18d08a87fd10872e587d549e54c12e469f0c"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "TokenFaucet.test.js",
+      "upstream_path": "test/TokenFaucet.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (single-commit repo, May 2026, assignment-style). Faucet with 24h per-address cooldown, fixed claim amount, lifetime claim cap, pause; mints capped AquaToken (Token.sol). 45 its incl. time travel.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T15:53:00.339919+00:00"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "marketplace--tejashree-likhar",
+  "domain": "marketplace",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Marketplace.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Tejashree-Likhar/Decentralised-marketplace",
+    "commit": "e8f158588fc062ca86907a9ccb29fa799a1e6cec",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Marketplace.sol"
+    ],
+    "test_paths": [
+      "test/Marketplace.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Marketplace.sol": "1421a40865ad5e026fd7931cc187f3a83ccafc9af2e46eaf1ba794757c90b216",
+      "test/Marketplace.test.js": "d440aad3229a37cd78f708bff398f1b005c036ea276a465bf55bedb7b19f834b"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Generic item marketplace (list/purchase/ratings). Primary 175 non-blank lines, closure 175 lines/1 files; 12 its, 38 expects; pragma ^0.8.24.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:46.182502+00:00"
+}

@@ -1,0 +1,82 @@
+{
+  "pair": "reputation--bharat3645",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:21:32.762036+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Reputation.sol": "95f5d69bc5002c023dfef0710805f37663b909423138b9c2fd84a2446bfb2bc8",
+    "LICENSE": "2b6656bf4b3242fbfc0d36988bb67acc25b89d3ab18f972cca99fbeee76e031d",
+    "manifest.json": "97f3ca383fd6a50213860c818bf312055ced0b450531ad7cb42ff81576e6db54",
+    "test/Reputation.test.js": "52e455238ce1130928da182addcbbd9fe47c4a5146933ccf9df0d015e81803f5"
+  },
+  "pair_sha256": "9ce9691c69fca486a0dffc6111e7c2d407a35b579cf39572f7a8140ec6095982",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Reputation.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.143,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "Reputation.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.113,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "Reputation.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.106,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.55,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.46,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Reputation.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

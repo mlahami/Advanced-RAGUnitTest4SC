@@ -1,0 +1,31 @@
+{
+  "id": "academic-credential--abrar-0020",
+  "domain": "identity-registry",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "AcademicCredential.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/abrar-0020/Tokenized-Academic-Credential-Verification-System",
+    "commit": "b6c5707ac6f29de70e83457e7f2ef241ccf5a6ca",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/AcademicCredential.sol"
+    ],
+    "test_paths": [
+      "test/AcademicCredential.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/AcademicCredential.sol": "64ef565efa7d48f63e0dcf647b5beeefae8f64a033c10e7549df2dabe8d12fb3",
+      "test/AcademicCredential.test.js": "a6c9e9bfb7abede87613574d54488368ff22032b91b4027c5989821684c07e96"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "soulbound (non-transferable) ERC721 academic credentials issued by institutions via AccessControl, revocation, verification; primary 223 lines; 18 it blocks (18/18 pass, stmt cov 83.33%); licence LICENSE; history: 121 commits 2026-02-14..2026-09-26",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:31:48.867920+00:00"
+}

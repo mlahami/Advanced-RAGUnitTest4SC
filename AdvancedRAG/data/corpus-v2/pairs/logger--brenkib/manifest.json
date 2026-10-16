@@ -1,0 +1,31 @@
+{
+  "id": "logger--brenkib",
+  "domain": "payments",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Logger.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/brenkib/solidity-playground",
+    "commit": "95b096f8d99e114b263b94357d32347ec45d2c6f",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Lessons/ILogger.sol",
+      "contracts/Lessons/Logger.sol"
+    ],
+    "test_paths": [
+      "test/Logger.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Lessons/ILogger.sol": "d1e26ccfb4920ca9ffb3d0ef8b31d7f6a2f48735b0bbefc5d04304e13b8dc56e",
+      "contracts/Lessons/Logger.sol": "4ee7dd1adc74f2848c8c27bfcfcae8edc4f1ec00b9cf0bbabf4711a0e9cbdc16",
+      "test/Logger.test.js": "1b2485b9d5279b487d03217b9b4ae81d1078da322c504ee0dd50b114727e25cc"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "payment logging via interface; 1 it",
+  "imported_utc": "2026-09-27T21:50:13.053267+00:00"
+}

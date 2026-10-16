@@ -1,0 +1,33 @@
+{
+  "id": "simple-swap--monandbri",
+  "domain": "amm-dex",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "SimpleSwap.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/MonAndBri/Modulo4_ETH_Kipu_SimpleSwap",
+    "commit": "cf5cf040daef809a59a3bc57d609abf9a485aa9e",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/SimpleSwap.sol",
+      "contracts/TokenA.sol",
+      "contracts/TokenB.sol"
+    ],
+    "test_paths": [
+      "test/SimpleSwapTest.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/SimpleSwap.sol": "19c66e85c4c37c0a202afeb2d90af3a1572da512bf0cf9747e50a7afc05eda27",
+      "contracts/TokenA.sol": "aa40a2362794f7c315d8edf26487b42bd29b9825898a85cb9a62eda5b4aef648",
+      "contracts/TokenB.sol": "830e5f8e6f86edd0fc92491b3b1c0be671f9eb9d5b76ffabe68e8d4d36ef3a7f",
+      "test/SimpleSwapTest.js": "14dc2823067bba2210d9f9e97b0ea7d6e321a7e681ddf302b649cfc528dfae62"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "ETH Kipu course assignment 2025",
+  "imported_utc": "2026-09-27T21:50:23.222245+00:00"
+}

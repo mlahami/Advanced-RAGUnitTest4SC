@@ -1,0 +1,44 @@
+{
+  "id": "kipu-bank--mtds-alfa",
+  "domain": "treasury",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "KipuBank.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/mtds-alfa/kipu-bank",
+    "commit": "c361b18ddafa513c1135b31e527ef9ab585009e0",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/KipuBank.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/KipuBank.test.ts"
+    ],
+    "license_file": "LICENCE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/KipuBank.sol": "679a3c39c68cf258578e93cdc0cede5b988310cb9eae07f566fc058882648528",
+      "packages/hardhat/test/KipuBank.test.ts": "3fc5e16c2e9de51d97848cc7337c1b4aa35cc69de9c101cccb0e003b547beca4"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "KipuBank.test.js",
+      "upstream_path": "packages/hardhat/test/KipuBank.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "KipuBank.test.js",
+      "upstream_path": "packages/hardhat/test/KipuBank.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 130 lines, closure 130 lines, 1 files; 8 it blocks; history: 7 commits 2025-11-21..2025-11-22",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:31:57.912877+00:00"
+}

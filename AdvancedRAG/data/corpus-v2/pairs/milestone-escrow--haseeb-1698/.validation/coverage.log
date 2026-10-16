@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> MilestoneEscrow.sol
+> MockUSDC.sol
+
+Compilation:
+============
+
+Compiled 12 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+----------------------|----------|----------|----------|----------|----------------|
+File                  |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+----------------------|----------|----------|----------|----------|----------------|
+ contracts\           |     96.3 |    77.63 |    90.91 |     96.1 |                |
+  MilestoneEscrow.sol |    98.08 |    78.38 |    94.74 |    97.33 |        140,225 |
+  MockUSDC.sol        |       50 |       50 |    66.67 |       50 |             13 |
+----------------------|----------|----------|----------|----------|----------------|
+All files             |     96.3 |    77.63 |    90.91 |     96.1 |                |
+----------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

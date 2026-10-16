@@ -1,0 +1,103 @@
+{
+  "pair": "vault--orlandol23",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T07:35:08.434713+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/IStrategy.sol": "2ceb2e9c1c41fa401160e7d45bf6492a27bf4b0c577e517d039b3bc048c218be",
+    "contracts/MockUSDC.sol": "5ffb698e5a9a41b9c66179eff8889ed39aed2b7b13d7cd97bdb110f7b4b279b4",
+    "contracts/ReenteringStrategy.sol": "1afbebf2f7861647ce5e6a22227279b667b3e617ea09f278fe1318fab870cdfd",
+    "contracts/Vault.sol": "56a8da68134d4eab27b6e8c7dc5793ad8c6efe5703e2a1bf9764f8aa52cbf24c",
+    "LICENSE": "e223cf82438f8ac21f8dd6bf9f80d9abf0f51aca6d3cbb60291d03c152552554",
+    "manifest.json": "e3c867ba6d450171220abd5148abd9b04f47446c164f803ad86e537f93626343",
+    "test/Vault.test.js": "fb6039d5bd885c58595538eeba548fd5b3cbf2d8a86169c77375a874146d9b54"
+  },
+  "pair_sha256": "1d7782f715c79515ee7325ba77686bbd3fa1359a7a9c4536e0f53437e584bfb2",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Vault.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.149,
+        "signatures": 0.1,
+        "min_functions": 8
+      },
+      {
+        "contract": "ReenteringStrategy.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.115,
+        "signatures": 0.1,
+        "min_functions": 3
+      },
+      {
+        "contract": "IStrategy.sol",
+        "reference": "Adoption.sol",
+        "structural": 0.115,
+        "signatures": 0.0,
+        "min_functions": 1
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.6,
+      "mocha": {
+        "tests": 61,
+        "passes": 61,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 11.63,
+      "mocha": {
+        "tests": 61,
+        "passes": 61,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Vault.sol": {
+          "statements": 94.83,
+          "branches": 77.38,
+          "functions": 100.0,
+          "lines": 96.3
+        },
+        "IStrategy.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockUSDC.sol": {
+          "statements": 75.0,
+          "branches": 100.0,
+          "functions": 75.0,
+          "lines": 75.0
+        },
+        "ReenteringStrategy.sol": {
+          "statements": 100.0,
+          "branches": 66.67,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

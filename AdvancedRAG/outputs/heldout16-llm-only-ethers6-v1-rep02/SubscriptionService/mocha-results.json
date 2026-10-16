@@ -1,0 +1,221 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 12,
+    "passes": 8,
+    "pending": 0,
+    "failures": 5,
+    "start": "2026-09-30T20:55:15.201Z",
+    "end": "2026-09-30T20:55:16.038Z",
+    "duration": 837
+  },
+  "tests": [
+    {
+      "title": "should create a new plan",
+      "fullTitle": "SubscriptionService Plan Management should create a new plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "should deactivate a plan",
+      "fullTitle": "SubscriptionService Plan Management should deactivate a plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "should revert when creating invalid plan",
+      "fullTitle": "SubscriptionService Plan Management should revert when creating invalid plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 23,
+      "err": {}
+    },
+    {
+      "title": "should revert when non-owner tries to create plan",
+      "fullTitle": "SubscriptionService Plan Management should revert when non-owner tries to create plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "should revert when non-owner tries to deactivate plan",
+      "fullTitle": "SubscriptionService Plan Management should revert when non-owner tries to deactivate plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "should subscribe to a plan",
+      "fullTitle": "SubscriptionService Subscription Management should subscribe to a plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 7,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient allowance'\n    at BenchmarkERC20.transferFrom (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/BenchmarkFixtures.sol:83)\n    at SubscriptionService.subscribe (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/SubscriptionService.sol:137)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.subscribe (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:82:18)"
+      }
+    },
+    {
+      "title": "should cancel subscription",
+      "fullTitle": "SubscriptionService Subscription Management should cancel subscription",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 7,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient allowance'\n    at BenchmarkERC20.transferFrom (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/BenchmarkFixtures.sol:83)\n    at SubscriptionService.subscribe (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/SubscriptionService.sol:137)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.subscribe (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:98:7)"
+      }
+    },
+    {
+      "title": "should revert when subscribing to invalid plan",
+      "fullTitle": "SubscriptionService Subscription Management should revert when subscribing to invalid plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "should revert when subscribing to inactive plan",
+      "fullTitle": "SubscriptionService Subscription Management should revert when subscribing to inactive plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "should revert when already subscribed",
+      "fullTitle": "SubscriptionService Subscription Management should revert when already subscribed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient allowance'\n    at BenchmarkERC20.transferFrom (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/BenchmarkFixtures.sol:83)\n    at SubscriptionService.subscribe (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/SubscriptionService.sol:137)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.subscribe (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:119:7)"
+      }
+    },
+    {
+      "title": "should revert when payment fails",
+      "fullTitle": "SubscriptionService Subscription Management should revert when payment fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 12,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'\n    at Context.<anonymous> (test\\generated.test.js:127:7)"
+      }
+    },
+    {
+      "title": "should revert when canceling without subscription",
+      "fullTitle": "SubscriptionService Subscription Management should revert when canceling without subscription",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "should subscribe to a plan",
+      "fullTitle": "SubscriptionService Subscription Management should subscribe to a plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 7,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient allowance'\n    at BenchmarkERC20.transferFrom (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/BenchmarkFixtures.sol:83)\n    at SubscriptionService.subscribe (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/SubscriptionService.sol:137)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.subscribe (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:82:18)"
+      }
+    },
+    {
+      "title": "should cancel subscription",
+      "fullTitle": "SubscriptionService Subscription Management should cancel subscription",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 7,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient allowance'\n    at BenchmarkERC20.transferFrom (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/BenchmarkFixtures.sol:83)\n    at SubscriptionService.subscribe (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/SubscriptionService.sol:137)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.subscribe (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:98:7)"
+      }
+    },
+    {
+      "title": "should revert when already subscribed",
+      "fullTitle": "SubscriptionService Subscription Management should revert when already subscribed",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient allowance'\n    at BenchmarkERC20.transferFrom (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/BenchmarkFixtures.sol:83)\n    at SubscriptionService.subscribe (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/SubscriptionService.sol:137)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.subscribe (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:119:7)"
+      }
+    },
+    {
+      "title": "should revert when payment fails",
+      "fullTitle": "SubscriptionService Subscription Management should revert when payment fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 12,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'\n    at Context.<anonymous> (test\\generated.test.js:127:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"should charge a subscriber\"",
+      "fullTitle": "SubscriptionService Charge Management \"before each\" hook for \"should charge a subscriber\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 12,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient allowance'\n    at BenchmarkERC20.transferFrom (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/BenchmarkFixtures.sol:83)\n    at SubscriptionService.subscribe (runs/heldout16-llm-only-ethers6-v1-rep02/SubscriptionService/contracts/SubscriptionService.sol:137)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.subscribe (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:140:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "should create a new plan",
+      "fullTitle": "SubscriptionService Plan Management should create a new plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "should deactivate a plan",
+      "fullTitle": "SubscriptionService Plan Management should deactivate a plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "should revert when creating invalid plan",
+      "fullTitle": "SubscriptionService Plan Management should revert when creating invalid plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 23,
+      "err": {}
+    },
+    {
+      "title": "should revert when non-owner tries to create plan",
+      "fullTitle": "SubscriptionService Plan Management should revert when non-owner tries to create plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "should revert when non-owner tries to deactivate plan",
+      "fullTitle": "SubscriptionService Plan Management should revert when non-owner tries to deactivate plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "should revert when subscribing to invalid plan",
+      "fullTitle": "SubscriptionService Subscription Management should revert when subscribing to invalid plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "should revert when subscribing to inactive plan",
+      "fullTitle": "SubscriptionService Subscription Management should revert when subscribing to inactive plan",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "should revert when canceling without subscription",
+      "fullTitle": "SubscriptionService Subscription Management should revert when canceling without subscription",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\SubscriptionService\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    }
+  ]
+}

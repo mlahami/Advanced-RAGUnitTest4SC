@@ -1,0 +1,40 @@
+{
+  "contract": "SubscriptionService",
+  "status": "test_failures",
+  "prompt_sha256": "ab2b06c77722dcb379408443772f32489daabd3d0b0355a13ea4ecbe659cf5b3",
+  "generation_seconds": 17.027585900039412,
+  "usage": {
+    "prompt_tokens": 11907,
+    "total_tokens": 13788,
+    "completion_tokens": 1881,
+    "prompt_tokens_details": {
+      "cached_tokens": 11904
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.884279899997637
+  },
+  "passed_tests": 14,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "SubscriptionService Subscription Management Should revert when payment fails",
+      "error": "Expected transaction to be reverted with reason 'Payment failed', but it reverted with reason 'insufficient allowance'"
+    },
+    {
+      "title": "SubscriptionService Charge Management Should charge a subscriber",
+      "error": "expected 1791008445 to equal 1791008447."
+    }
+  ],
+  "coverage": {
+    "statements": 96.55,
+    "branches": 91.67,
+    "functions": 100.0,
+    "lines": 96.43
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

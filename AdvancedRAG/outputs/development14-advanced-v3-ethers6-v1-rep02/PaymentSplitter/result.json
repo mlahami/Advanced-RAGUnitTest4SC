@@ -1,0 +1,36 @@
+{
+  "contract": "PaymentSplitter",
+  "status": "test_failures",
+  "prompt_sha256": "d2664c9e942bdb9160543938cd41a84a44316fa58d3ff3d94390ac0c6aeed6d6",
+  "generation_seconds": 10.699397000018507,
+  "usage": {
+    "prompt_tokens": 10938,
+    "total_tokens": 11923,
+    "completion_tokens": 985,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.505068899947219
+  },
+  "passed_tests": 4,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "PaymentSplitter Distribute Should distribute ETH according to shares",
+      "error": "ethers.parseEther(...).div is not a function"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

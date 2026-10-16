@@ -1,0 +1,67 @@
+{
+  "id": "rag-v2.BondingCurve",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "BondingCurve",
+  "chunk_ids": [
+    5301,
+    5294,
+    5296,
+    1992,
+    4127,
+    2669,
+    2670,
+    3551
+  ],
+  "context_sha256": "e66a41ef7be7c2503809d2185ab7d0a88bfef327f7b8c3f629014893e884d3e4",
+  "ratings": [
+    {
+      "chunk_id": 5301,
+      "rating": 1,
+      "reason": "Shows owner‑only action test pattern, but BondingCurve has different functions; no direct behavior matches."
+    },
+    {
+      "chunk_id": 5294,
+      "rating": 1,
+      "reason": "Shows generic deployment and state‑checking pattern, but tests unrelated oracle behavior; only marginally reusable for BondingCurve setup and boolean assertions."
+    },
+    {
+      "chunk_id": 5296,
+      "rating": 1,
+      "reason": "Shows generic deployment, setup, event emission and state check patterns useful for BondingCurve tests, but specific oracle behavior isn’t present."
+    },
+    {
+      "chunk_id": 1992,
+      "rating": 0,
+      "reason": "Tests constructor validation for unrelated parameters; BondingCurve constructor only checks fee bounds, no zero address or price checks, so pattern not applicable."
+    },
+    {
+      "chunk_id": 4127,
+      "rating": 1,
+      "reason": "Shows generic deployment, minting, approve, and balance assertions pattern useful for any token contract, but does not test BondingCurve-specific buy/sell logic."
+    },
+    {
+      "chunk_id": 2669,
+      "rating": 1,
+      "reason": "Shows generic setup, token deployment, approvals, balance assertions and fee range checks useful for BondingCurve tests, but does not target its buy/sell logic."
+    },
+    {
+      "chunk_id": 2670,
+      "rating": 1,
+      "reason": "Shows generic deployment, token transfer, approval setup useful for initializing contracts, but tests swap behavior unrelated to BondingCurve functions."
+    },
+    {
+      "chunk_id": 3551,
+      "rating": 1,
+      "reason": "Shows generic deployment and view-call pattern, but tests unrelated borrow-rate logic; only reusable setup pattern applies."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 22655,
+    "completion_tokens": 867,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 148.6,
+  "evaluated_utc": "2026-10-12T08:57:56.068239+00:00"
+}

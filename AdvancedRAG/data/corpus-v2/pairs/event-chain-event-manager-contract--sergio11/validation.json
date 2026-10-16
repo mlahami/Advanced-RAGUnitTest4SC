@@ -1,0 +1,103 @@
+{
+  "pair": "event-chain-event-manager-contract--sergio11",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T07:33:41.532291+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/EventChainContract.sol": "eb77a7aa812700ecce024fdf4353db712e344a5d3dbe3ab1a0ff6803a04d6d83",
+    "contracts/EventChainEventManagerContract.sol": "e195ed54a3b5ec487b73880ea182ffe00a040bcacc3c965ce2ed1bf044b0b68c",
+    "contracts/IEventChainContract.sol": "1417698ae2b926530c5151d3cdc7a8efe1a5db1da74193e57d7bc509698ff775",
+    "contracts/IEventChainEventManagerContract.sol": "e591a66c85d01b369351bf3208658f76ec5d791726dbcdcee0f1269dc3f5ded3",
+    "LICENSE": "1564eb013703c95dc3da571c8a9b3f5e8418e50c2e25c2ea7ffe04bbb8c9e9aa",
+    "manifest.json": "509d42daa1b3fcf7012c506d5793905dc21a1f52fc4e6e2bb88a6d58181f1d7f",
+    "test/EventChainEventManagerContract.js": "1ac0f819d41b377964070abf1643c0dd9f9d2ddd85bf8f86027057f7cd7e7c2b"
+  },
+  "pair_sha256": "7bb290cdf51829c4c8a9d8fc8e56cd3208467106d4229c7e02a482040a1bdb56",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "EventChainContract.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.135,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "EventChainEventManagerContract.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.129,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "EventChainEventManagerContract.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.124,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.97,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 10.14,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "EventChainEventManagerContract.sol": {
+          "statements": 100.0,
+          "branches": 68.75,
+          "functions": 83.33,
+          "lines": 100.0
+        },
+        "EventChainContract.sol": {
+          "statements": 25.81,
+          "branches": 0.0,
+          "functions": 33.33,
+          "lines": 25.81
+        },
+        "IEventChainContract.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IEventChainEventManagerContract.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,31 @@
+{
+  "id": "crowdfunding--vedangdate",
+  "domain": "crowdfunding",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Crowdfunding.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/vedangdate/chainfund",
+    "commit": "44c0599b9a001ad0dfe8010c526b314113650ea1",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Crowdfunding.sol"
+    ],
+    "test_paths": [
+      "test/Crowdfunding.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Crowdfunding.sol": "4009347be14536c7c64124579ba3e7677a245798eff442ae43982d95768485eb",
+      "test/Crowdfunding.test.js": "a77dd3a242138fd5f083abf6063e67af94d633c82d839e93f1bd7efbcdecfacc"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Multi-campaign crowdfunding with goal/deadline, contribute, claim on success, refund on failure. 164 lines, no imports; 17 it blocks, 13 revert assertions; uses time helpers + anyValue. MIT LICENSE. 2026-06.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-29T09:56:36.793565+00:00"
+}

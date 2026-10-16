@@ -1,0 +1,96 @@
+{
+  "pair": "rbac--sharfshiplo",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:15:56.031666+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Constants.sol": "25315f654a851b5dc39c79a74c6f772d7b8c155b5afad94ba86b70e08d89df36",
+    "contracts/Errors.sol": "077665f935d7a3d3eb34c92d77b09607e68e41c4c34eb90adb9779cb4244e948",
+    "contracts/RBAC.sol": "58296fd2cfc980c5ee79123b571c9a3ca60df74384305913a8121160c8ee4342",
+    "LICENSE": "27c03048fe1b60744e99d9306d5936b490be67915ae47e77d85d83a2f1013b8d",
+    "manifest.json": "b3178b4d9788421c343217bbc98b36c93538ef3fdb0f7dcda350afa1d51c9493",
+    "test/rbac.test.js": "d7a756520b16d93390a9625d473e3eb67007788670ededadc7a815b15276d1a9"
+  },
+  "pair_sha256": "6a19c1530abe9ff805e2aaf5f78491c1a6a38cc8d88d361f2adb8b15faddb249",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "RBAC.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.098,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "RBAC.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.088,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "RBAC.sol",
+        "reference": "MerkleAirdrop.sol",
+        "structural": 0.082,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.53,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.05,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "RBAC.sol": {
+          "statements": 100.0,
+          "branches": 87.5,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Constants.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Errors.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

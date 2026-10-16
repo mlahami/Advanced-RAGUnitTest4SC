@@ -1,0 +1,42 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> CrowdfundingCampaign.sol
+> CrowdfundingFactory.sol
+> ICrowdfundingCampaign.sol
+> ICrowdfundingFactory.sol
+> MaliciousReentrantToken.sol
+> MockERC20.sol
+> MockFeeToken.sol
+
+Compilation:
+============
+
+Compiled 16 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------------|----------|----------|----------|----------|----------------|
+File                          |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------------|----------|----------|----------|----------|----------------|
+ contracts\                   |      100 |    93.86 |      100 |      100 |                |
+  CrowdfundingCampaign.sol    |      100 |    93.59 |      100 |      100 |                |
+  CrowdfundingFactory.sol     |      100 |      100 |      100 |      100 |                |
+  ICrowdfundingCampaign.sol   |      100 |      100 |      100 |      100 |                |
+  ICrowdfundingFactory.sol    |      100 |      100 |      100 |      100 |                |
+  MaliciousReentrantToken.sol |      100 |    83.33 |      100 |      100 |                |
+  MockERC20.sol               |      100 |      100 |      100 |      100 |                |
+  MockFeeToken.sol            |      100 |       75 |      100 |      100 |                |
+------------------------------|----------|----------|----------|----------|----------------|
+All files                     |      100 |    93.86 |      100 |      100 |                |
+------------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

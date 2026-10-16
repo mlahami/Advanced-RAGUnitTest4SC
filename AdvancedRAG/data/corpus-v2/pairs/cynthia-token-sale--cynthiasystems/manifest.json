@@ -1,0 +1,34 @@
+{
+  "id": "cynthia-token-sale--cynthiasystems",
+  "domain": "token-sale",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "CynthiaTokenSale.sol",
+    "CynthiaToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/cynthiasystems/CynthiaToken",
+    "commit": "0f5e7572cea7599da027b909999d78c0c96a9dd7",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/AttackContract.sol",
+      "contracts/CynthiaToken.sol",
+      "contracts/CynthiaTokenSale.sol"
+    ],
+    "test_paths": [
+      "test/CynthiaTokenSale.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/AttackContract.sol": "50528b2f3ffab029894ad2b94dd51a947c5576d6226f5b64a51df6aaf431c97f",
+      "contracts/CynthiaToken.sol": "902f44fde1b273826b877417522cc20b17497c2d8a1561058b579ed21cab7dcf",
+      "contracts/CynthiaTokenSale.sol": "a9818e0aadf6af391e0a780dfb899ef5f950507418a983fa853cf88d5779cbdc",
+      "test/CynthiaTokenSale.test.js": "8f6acdee69b11aad5ad69a8cc27e2be3fbd50f39fa93123f0e20e2697ec812d4"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "ICO incl. reentrancy attack mock; 22 its",
+  "imported_utc": "2026-09-27T21:50:18.850219+00:00"
+}

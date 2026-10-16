@@ -1,0 +1,29 @@
+{
+  "id": "crowd-funding--ahmedsemih",
+  "domain": "crowdfunding",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "CrowdFunding.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ahmedsemih/CrowdFunding-dApp",
+    "commit": "f6a5690a60c3c6782982b6d42e5bf125834ed8f5",
+    "license": "MIT",
+    "contract_paths": [
+      "smart-contract/contracts/CrowdFunding.sol"
+    ],
+    "test_paths": [
+      "smart-contract/test/crowdFunding.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "smart-contract/contracts/CrowdFunding.sol": "f4c003e0bdb3287b407be79fa0a1a89bce1afbdb56ac05f47da9f00b27692153",
+      "smart-contract/test/crowdFunding.js": "d1337e39dcb259f1ba3a482b0aa75bd7445c83ea406312079b4267b717e84375"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "test uses Date.now() for deadlines",
+  "imported_utc": "2026-09-27T21:50:17.441548+00:00"
+}

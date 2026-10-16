@@ -1,0 +1,48 @@
+{
+  "contract": "LendingPool",
+  "status": "test_failures",
+  "prompt_sha256": "c46dccc98b090c0a604d7e229589d7562039d6ee7d594ce796aa211cea9e5d8d",
+  "generation_seconds": 14.73066649993416,
+  "usage": {
+    "prompt_tokens": 7491,
+    "total_tokens": 9137,
+    "completion_tokens": 1646,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 7.477092099958099
+  },
+  "passed_tests": 4,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "LendingPool borrow Should allow borrowing within collateral limit",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    },
+    {
+      "title": "LendingPool borrow Should revert when borrowing exceeds collateral limit",
+      "error": "Expected transaction to be reverted with reason 'Undercollateralized', but it reverted with reason 'insufficient balance'"
+    },
+    {
+      "title": "LendingPool repay \"before each\" hook for \"Should allow repaying debt\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    },
+    {
+      "title": "LendingPool liquidate \"before each\" hook for \"Should allow liquidation of undercollateralized position\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    }
+  ],
+  "coverage": {
+    "statements": 33.33,
+    "branches": 30.0,
+    "functions": 60.0,
+    "lines": 33.33
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

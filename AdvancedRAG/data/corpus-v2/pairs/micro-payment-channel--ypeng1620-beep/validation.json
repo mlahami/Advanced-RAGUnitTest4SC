@@ -1,0 +1,82 @@
+{
+  "pair": "micro-payment-channel--ypeng1620-beep",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:56:26.911412+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MicroPaymentChannel.sol": "8b3520a3c6d48e55d3cd61c44db397b9fe44b02c5ae690ae23f2189417607a81",
+    "LICENSE": "476882b2573c9f8770a84d62ef1daeb6aa41d7bb0cb841c9e7b979e511cb4964",
+    "manifest.json": "f1e8bdcd898c96771a72f0d57ea5f0201b3a343020b87e4e9de0466c7843ff67",
+    "test/MicroPaymentChannel.test.js": "08d151f104d53815131c62e395510932f0f745d2bf1f49c7de7e045b9bc546c5"
+  },
+  "pair_sha256": "3616948e27ccec6ac5f499b35dd6df2091ebe61573494e09d58770252e2570c9",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MicroPaymentChannel.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.187,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "MicroPaymentChannel.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.186,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "MicroPaymentChannel.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.178,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.68,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.28,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MicroPaymentChannel.sol": {
+          "statements": 100.0,
+          "branches": 70.59,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

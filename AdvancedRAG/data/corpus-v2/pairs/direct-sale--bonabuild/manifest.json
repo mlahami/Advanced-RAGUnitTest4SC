@@ -1,0 +1,37 @@
+{
+  "id": "direct-sale--bonabuild",
+  "domain": "token-sale",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "DirectSale.sol",
+    "BonaToken.sol",
+    "Mocks.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/bonabuild/bona-contracts",
+    "commit": "9da35f2070c65c837944bb5210bb31cd500f6b45",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/DirectSale.sol",
+      "contracts/BonaToken.sol",
+      "contracts/test/Mocks.sol"
+    ],
+    "test_paths": [
+      "test/DirectSale.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/DirectSale.sol": "dcce6d0b072de822dcbf2ff9cc6a15a537df0950c17981b03d2620120548f247",
+      "contracts/BonaToken.sol": "14955bbab60f3028eb698e225c2cbbe292eae07b549aa5278eeff7e462fb69c2",
+      "contracts/test/Mocks.sol": "874441c6e60a3f3e2027b47d3ed1f8932861854ceed9f91a1a9ff55a50a2f4fe",
+      "test/DirectSale.test.js": "bdcdc2fbaebacb0d43f2d42f5c3615f956a9f4285ab5f695f6c9c5b6c9a650ca"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 262 lines, closure 351 lines, 3 files; 23 it blocks; history: 10 commits 2026-08-30..2026-09-14",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:31:46.033885+00:00"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "text-storage--azerckid",
+  "domain": "meta-transactions",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "TextStorage.sol",
+    "MinimalForwarder.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/azerckid/2025_metaTxSolidity",
+    "commit": "9d503e713c340d677485e9a42254829c01559dae",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/TextStorage.sol",
+      "contracts/MinimalForwarder.sol"
+    ],
+    "test_paths": [
+      "test/TextStorageTest.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/TextStorage.sol": "e9af323bf7a73f759adf06b352c836bf4e3a2d611434dd56222d3785c6ef923e",
+      "contracts/MinimalForwarder.sol": "adfa13fd5c8ddb2a54e69685351674f07076ded71545c644427cc9b3c65b4369",
+      "test/TextStorageTest.ts": "517653dd9846364fbadc920d09e251c36adbb7403215f3c109c2feca11ef2ae0"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "TextStorageTest.js",
+      "upstream_path": "test/TextStorageTest.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "TextStorageTest.js",
+      "upstream_path": "test/TextStorageTest.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "ethers",
+      "names": [
+        "Wallet"
+      ],
+      "file": "TextStorageTest.js",
+      "upstream_path": "test/TextStorageTest.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "ERC2771Context (OZ5) recipient with repo-local MinimalForwarder.sol (hand-written, not OZ); 2 commits; primary contract tiny (19 lines) - coverage easy. Primary 14 non-blank lines, closure 122 lines/2 files; 6 its, 9 expects; pragma ^0.8.0.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:03:20.489501+00:00"
+}

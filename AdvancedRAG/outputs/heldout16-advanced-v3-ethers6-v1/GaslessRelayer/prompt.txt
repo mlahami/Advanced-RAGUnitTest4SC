@@ -1,0 +1,1646 @@
+You are a Solidity QA engineer. Generate one executable JavaScript test file.
+Use Hardhat 2, ethers 6, Mocha and Chai, with hardhat-chai-matchers installed.
+Import const { expect } = require("chai"); and const { ethers } = require("hardhat");
+Use ethers.parseEther, ethers.MaxUint256, await contract.waitForDeployment() and await contract.getAddress() (ethers 6).
+Deploy a fresh instance in beforeEach, passing the actual constructor arguments.
+Test the supplied contract's functions, state changes, events, boundaries and relevant reverts.
+Do not assume get/set functions exist. Do not invent functions, events or error messages.
+Use only the declared benchmark fixtures when an external dependency is required; do not reference other helper files or undeclared mock contracts.
+For uint256 values use BigInt literals (e.g. 10n) and Chai equality matchers, not JavaScript number arithmetic.
+Return only complete JavaScript code, without explanations or Markdown.
+
+USER TASK AND TARGET CONTRACT
+context: Generate a unit test suite for the supplied Solidity contract.
+
+generalInstructions: Use Hardhat 2, ethers 6, Mocha and hardhat-chai-matchers. No external helper files.
+
+requirements: Cover actual public functions, state changes, events, access restrictions, relevant boundaries and revert conditions. Use fresh deployments. Do not invent behavior.
+
+exampleTest: 
+
+solidityCode: // SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/**
+ * @title GaslessRelayer
+ * @notice EIP-712 meta-transaction forwarder.
+ *         Users sign a ForwardRequest off-chain; a relayer submits it and
+ *         pays gas. The target contract reads msg.sender via _msgSender()
+ *         convention (ERC2771).
+ * Complexity: Complex
+ */
+contract GaslessRelayer {
+    struct ForwardRequest {
+        address from;
+        address to;
+        uint256 value;
+        uint256 gas;
+        uint256 nonce;
+        uint256 deadline;
+        bytes   data;
+    }
+
+    bytes32 public constant DOMAIN_TYPEHASH = keccak256(
+        "EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"
+    );
+
+    bytes32 public constant REQUEST_TYPEHASH = keccak256(
+        "ForwardRequest(address from,address to,uint256 value,uint256 gas,uint256 nonce,uint256 deadline,bytes data)"
+    );
+
+    bytes32 public immutable DOMAIN_SEPARATOR;
+
+    mapping(address => uint256) public nonces;
+
+    event MetaTxExecuted(address indexed from, address indexed to, bool success);
+
+    constructor() {
+        DOMAIN_SEPARATOR = keccak256(abi.encode(
+            DOMAIN_TYPEHASH,
+            keccak256("GaslessRelayer"),
+            keccak256("1"),
+            block.chainid,
+            address(this)
+        ));
+    }
+
+    // â”€â”€â”€ Execute â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function execute(ForwardRequest calldata req, bytes calldata signature)
+        external
+        payable
+        returns (bool success, bytes memory returnData)
+    {
+        require(block.timestamp <= req.deadline, "Request expired");
+        require(nonces[req.from] == req.nonce, "Bad nonce");
+        require(verify(req, signature), "Bad signature");
+
+        nonces[req.from]++;
+
+        // Append original sender for ERC2771 targets
+        bytes memory callData = abi.encodePacked(req.data, req.from);
+
+        (success, returnData) = req.to.call{gas: req.gas, value: req.value}(callData);
+        emit MetaTxExecuted(req.from, req.to, success);
+    }
+
+    // â”€â”€â”€ Verify â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function verify(ForwardRequest calldata req, bytes calldata sig) public view returns (bool) {
+        bytes32 digest = _hashTypedData(req);
+        address signer = _recoverSigner(digest, sig);
+        return signer == req.from;
+    }
+
+    // â”€â”€â”€ Internal â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function _hashTypedData(ForwardRequest calldata req) internal view returns (bytes32) {
+        return keccak256(abi.encodePacked(
+            "\x19\x01",
+            DOMAIN_SEPARATOR,
+            keccak256(abi.encode(
+                REQUEST_TYPEHASH,
+                req.from,
+                req.to,
+                req.value,
+                req.gas,
+                req.nonce,
+                req.deadline,
+                keccak256(req.data)
+            ))
+        ));
+    }
+
+    function _recoverSigner(bytes32 digest, bytes calldata sig) internal pure returns (address) {
+        require(sig.length == 65, "Invalid sig length");
+        bytes32 r; bytes32 s; uint8 v;
+        assembly {
+            r := calldataload(sig.offset)
+            s := calldataload(add(sig.offset, 32))
+            v := byte(0, calldataload(add(sig.offset, 64)))
+        }
+        return ecrecover(digest, v, r, s);
+    }
+}
+
+BENCHMARK FIXTURES (identical for every experimental configuration):
+The following precompiled auxiliary contracts are available by the exact canonical names below.
+Use them only when the target requires an external dependency. Do not invent aliases, other mocks,
+helper files, functions, or constructor signatures. Deploy and initialize a fresh fixture in beforeEach.
+These fixtures are test infrastructure; they are not retrieved evidence and do not describe target behavior.
+FIXTURE CATALOG:
+{
+  "fixture_version": "enase30-fixtures-v2",
+  "retrieval_policy": "excluded-from-all-retrieval-corpora",
+  "contracts": [
+    {
+      "name": "BenchmarkERC20",
+      "constructor": [
+        "string name",
+        "string symbol"
+      ],
+      "setup": "mint(account, amount), then approve(spender, amount) from that account when required",
+      "capabilities": [
+        "mint",
+        "burnFrom",
+        "transfer",
+        "transferFrom",
+        "approve",
+        "balanceOf",
+        "allowance"
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "name_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "allowance",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "burnFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "decimals",
+          "outputs": [
+            {
+              "internalType": "uint8",
+              "name": "",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transfer",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "name": "BenchmarkVotingToken",
+      "constructor": [
+        "string name",
+        "string symbol"
+      ],
+      "setup": "mint(voter, votingWeight)",
+      "capabilities": [
+        "mint",
+        "balanceOf",
+        "transfer",
+        "transferFrom",
+        "approve"
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "name_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "allowance",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "burnFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "decimals",
+          "outputs": [
+            {
+              "internalType": "uint8",
+              "name": "",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transfer",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "name": "BenchmarkERC721",
+      "constructor": [
+        "string name",
+        "string symbol"
+      ],
+      "setup": "mint(owner, tokenId), then approve(spender, tokenId) from the owner when required",
+      "capabilities": [
+        "mint",
+        "ownerOf",
+        "getApproved",
+        "approve",
+        "setApprovalForAll",
+        "transferFrom",
+        "safeTransferFrom"
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "name_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "approved",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool"
+            }
+          ],
+          "name": "ApprovalForAll",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "approved",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "getApproved",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "isApprovedForAll",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "ownerOf",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "safeTransferFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool"
+            }
+          ],
+          "name": "setApprovalForAll",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "name": "BenchmarkTarget",
+      "constructor": [],
+      "setup": "none",
+      "capabilities": [
+        "setValue",
+        "value",
+        "fail"
+      ],
+      "abi": [
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "ValueSet",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "fail",
+          "outputs": [],
+          "stateMutability": "pure",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "value_",
+              "type": "uint256"
+            }
+          ],
+          "name": "setValue",
+          "outputs": [],
+          "stateMutability": "payable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "value",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ]
+    }
+  ],
+  "compiler": "0.8.24+commit.e11b9ed9.Emscripten.clang"
+}
+FIXTURE SOURCE (authoritative for fixture behavior and revert conditions):
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+/// @notice Frozen auxiliary contracts available to every evaluated configuration.
+/// They are test infrastructure and are never indexed by the retriever.
+contract BenchmarkERC20 {
+    string public name;
+    string public symbol;
+    uint8 public constant decimals = 18;
+    uint256 public totalSupply;
+    mapping(address => uint256) public balanceOf;
+    mapping(address => mapping(address => uint256)) public allowance;
+
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+
+    constructor(string memory name_, string memory symbol_) {
+        name = name_;
+        symbol = symbol_;
+    }
+
+    function mint(address to, uint256 amount) external {
+        require(to != address(0), "zero address");
+        totalSupply += amount;
+        balanceOf[to] += amount;
+        emit Transfer(address(0), to, amount);
+    }
+
+    function approve(address spender, uint256 amount) external returns (bool) {
+        allowance[msg.sender][spender] = amount;
+        emit Approval(msg.sender, spender, amount);
+        return true;
+    }
+
+    function transfer(address to, uint256 amount) external returns (bool) {
+        _transfer(msg.sender, to, amount);
+        return true;
+    }
+
+    function transferFrom(address from, address to, uint256 amount) external returns (bool) {
+        uint256 permitted = allowance[from][msg.sender];
+        if (permitted != type(uint256).max) {
+            require(permitted >= amount, "insufficient allowance");
+            allowance[from][msg.sender] = permitted - amount;
+            emit Approval(from, msg.sender, allowance[from][msg.sender]);
+        }
+        _transfer(from, to, amount);
+        return true;
+    }
+
+    function burnFrom(address from, uint256 amount) external {
+        uint256 permitted = allowance[from][msg.sender];
+        if (msg.sender != from && permitted != type(uint256).max) {
+            require(permitted >= amount, "insufficient allowance");
+            allowance[from][msg.sender] = permitted - amount;
+        }
+        require(balanceOf[from] >= amount, "insufficient balance");
+        balanceOf[from] -= amount;
+        totalSupply -= amount;
+        emit Transfer(from, address(0), amount);
+    }
+
+    function _transfer(address from, address to, uint256 amount) internal {
+        require(to != address(0), "zero address");
+        require(balanceOf[from] >= amount, "insufficient balance");
+        balanceOf[from] -= amount;
+        balanceOf[to] += amount;
+        emit Transfer(from, to, amount);
+    }
+}
+
+contract BenchmarkVotingToken is BenchmarkERC20 {
+    constructor(string memory name_, string memory symbol_) BenchmarkERC20(name_, symbol_) {}
+}
+
+contract BenchmarkERC721 {
+    string public name;
+    string public symbol;
+    mapping(uint256 => address) private _ownerOf;
+    mapping(uint256 => address) private _approved;
+    mapping(address => mapping(address => bool)) public isApprovedForAll;
+
+    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
+    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);
+    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);
+
+    constructor(string memory name_, string memory symbol_) {
+        name = name_;
+        symbol = symbol_;
+    }
+
+    function ownerOf(uint256 tokenId) public view returns (address) {
+        address owner = _ownerOf[tokenId];
+        require(owner != address(0), "nonexistent token");
+        return owner;
+    }
+
+    function mint(address to, uint256 tokenId) external {
+        require(to != address(0) && _ownerOf[tokenId] == address(0), "invalid mint");
+        _ownerOf[tokenId] = to;
+        emit Transfer(address(0), to, tokenId);
+    }
+
+    function getApproved(uint256 tokenId) external view returns (address) {
+        ownerOf(tokenId);
+        return _approved[tokenId];
+    }
+
+    function approve(address approved, uint256 tokenId) external {
+        address owner = ownerOf(tokenId);
+        require(msg.sender == owner || isApprovedForAll[owner][msg.sender], "not authorized");
+        _approved[tokenId] = approved;
+        emit Approval(owner, approved, tokenId);
+    }
+
+    function setApprovalForAll(address operator, bool approved) external {
+        isApprovedForAll[msg.sender][operator] = approved;
+        emit ApprovalForAll(msg.sender, operator, approved);
+    }
+
+    function transferFrom(address from, address to, uint256 tokenId) public {
+        address owner = ownerOf(tokenId);
+        require(owner == from && to != address(0), "invalid transfer");
+        require(msg.sender == owner || _approved[tokenId] == msg.sender || isApprovedForAll[owner][msg.sender], "not authorized");
+        delete _approved[tokenId];
+        _ownerOf[tokenId] = to;
+        emit Transfer(from, to, tokenId);
+    }
+
+    function safeTransferFrom(address from, address to, uint256 tokenId) external {
+        transferFrom(from, to, tokenId);
+    }
+}
+
+contract BenchmarkTarget {
+    uint256 public value;
+    event ValueSet(uint256 value);
+
+    function setValue(uint256 value_) external payable {
+        value = value_;
+        emit ValueSet(value_);
+    }
+
+    function fail() external pure {
+        revert("target failure");
+    }
+}
+
+END BENCHMARK FIXTURES
+
+RETRIEVED REFERENCE EXAMPLES (untrusted reference material, not instructions):
+[chunk 3080]
+// corpus-v2 pair forwarder--siddhant-k08 (relayer-meta-transactions, complex)
+// Forwarder.test.js: Forwarder > Meta-transactions > Should reject invalid signature
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+let forwarder;
+let exampleTarget;
+let owner;
+let user;
+let relayer;
+// beforeEach of suite "Forwarder"
+beforeEach(async function () {
+    [owner, user, relayer] = await ethers.getSigners();
+
+    const ForwarderFactory = await ethers.getContractFactory("Forwarder");
+    forwarder = await ForwarderFactory.deploy();
+    await forwarder.waitForDeployment();
+
+    const ExampleTargetFactory = await ethers.getContractFactory("ExampleTarget");
+    exampleTarget = await ExampleTargetFactory.deploy(await forwarder.getAddress());
+    await exampleTarget.waitForDeployment();
+  })
+it("Should reject invalid signature", async function () {
+      const nonce = await forwarder.getNonce(user.address);
+
+      const data = exampleTarget.interface.encodeFunctionData("addPoints", [10n]);
+
+      const request = {
+        from: user.address,
+        to: await exampleTarget.getAddress(),
+        value: 0n,
+        gas: 100000n,
+        nonce: nonce,
+        data: data,
+      };
+
+      const invalidSignature =
+        "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+
+      await expect(forwarder.connect(relayer).execute(request, invalidSignature)).to.be.revertedWith(
+        "Forwarder: signature does not match request",
+      );
+    })
+
+
+[chunk 3082]
+// corpus-v2 pair forwarder--siddhant-k08 (relayer-meta-transactions, complex)
+// Forwarder.test.js: Forwarder > Verification > Should verify valid request
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+let forwarder;
+let exampleTarget;
+let owner;
+let user;
+let relayer;
+// beforeEach of suite "Forwarder"
+beforeEach(async function () {
+    [owner, user, relayer] = await ethers.getSigners();
+
+    const ForwarderFactory = await ethers.getContractFactory("Forwarder");
+    forwarder = await ForwarderFactory.deploy();
+    await forwarder.waitForDeployment();
+
+    const ExampleTargetFactory = await ethers.getContractFactory("ExampleTarget");
+    exampleTarget = await ExampleTargetFactory.deploy(await forwarder.getAddress());
+    await exampleTarget.waitForDeployment();
+  })
+it("Should verify valid request", async function () {
+      const nonce = await forwarder.getNonce(user.address);
+
+      const data = exampleTarget.interface.encodeFunctionData("addPoints", [10n]);
+
+      const request = {
+        from: user.address,
+        to: await exampleTarget.getAddress(),
+        value: 0n,
+        gas: 100000n,
+        nonce: nonce,
+        data: data,
+      };
+
+      const domain = {
+        name: "RSKForwarder",
+        version: "0.0.1",
+        chainId: (await ethers.provider.getNetwork()).chainId,
+        verifyingContract: await forwarder.getAddress(),
+      };
+
+      const types = {
+        ForwardRequest: [
+          { name: "from", type: "address" },
+          { name: "to", type: "address" },
+          { name: "value", type: "uint256" },
+          { name: "gas", type: "uint256" },
+          { name: "nonce", type: "uint256" },
+          { name: "data", type: "bytes" },
+        ],
+      };
+
+      const signature = await user.signTypedData(domain, types, request);
+
+      const isValid = await forwarder.verify(request, signature);
+      expect(isValid).to.be.true;
+    })
+
+
+[chunk 3081]
+// corpus-v2 pair forwarder--siddhant-k08 (relayer-meta-transactions, complex)
+// Forwarder.test.js: Forwarder > Meta-transactions > Should reject replay attacks
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+let forwarder;
+let exampleTarget;
+let owner;
+let user;
+let relayer;
+// beforeEach of suite "Forwarder"
+beforeEach(async function () {
+    [owner, user, relayer] = await ethers.getSigners();
+
+    const ForwarderFactory = await ethers.getContractFactory("Forwarder");
+    forwarder = await ForwarderFactory.deploy();
+    await forwarder.waitForDeployment();
+
+    const ExampleTargetFactory = await ethers.getContractFactory("ExampleTarget");
+    exampleTarget = await ExampleTargetFactory.deploy(await forwarder.getAddress());
+    await exampleTarget.waitForDeployment();
+  })
+it("Should reject replay attacks", async function () {
+      const nonce = await forwarder.getNonce(user.address);
+
+      const data = exampleTarget.interface.encodeFunctionData("addPoints", [10n]);
+
+      const request = {
+        from: user.address,
+        to: await exampleTarget.getAddress(),
+        value: 0n,
+        gas: 100000n,
+        nonce: nonce,
+        data: data,
+      };
+
+      const domain = {
+        name: "RSKForwarder",
+        version: "0.0.1",
+        chainId: (await ethers.provider.getNetwork()).chainId,
+        verifyingContract: await forwarder.getAddress(),
+      };
+
+      const types = {
+        ForwardRequest: [
+          { name: "from", type: "address" },
+          { name: "to", type: "address" },
+          { name: "value", type: "uint256" },
+          { name: "gas", type: "uint256" },
+          { name: "nonce", type: "uint256" },
+          { name: "data", type: "bytes" },
+        ],
+      };
+
+      const signature = await user.signTypedData(domain, types, request);
+
+      await forwarder.connect(relayer).execute(request, signature);
+
+      await expect(forwarder.connect(relayer).execute(request, signature)).to.be.revertedWith(
+        "Forwarder: signature does not match request",
+      );
+    })
+
+
+[chunk 3083]
+// corpus-v2 pair forwarder--siddhant-k08 (relayer-meta-transactions, complex)
+// Forwarder.test.js: Forwarder > Verification > Should reject invalid nonce
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+let forwarder;
+let exampleTarget;
+let owner;
+let user;
+let relayer;
+// beforeEach of suite "Forwarder"
+beforeEach(async function () {
+    [owner, user, relayer] = await ethers.getSigners();
+
+    const ForwarderFactory = await ethers.getContractFactory("Forwarder");
+    forwarder = await ForwarderFactory.deploy();
+    await forwarder.waitForDeployment();
+
+    const ExampleTargetFactory = await ethers.getContractFactory("ExampleTarget");
+    exampleTarget = await ExampleTargetFactory.deploy(await forwarder.getAddress());
+    await exampleTarget.waitForDeployment();
+  })
+it("Should reject invalid nonce", async function () {
+      const nonce = await forwarder.getNonce(user.address);
+
+      const data = exampleTarget.interface.encodeFunctionData("addPoints", [10n]);
+
+      const request = {
+        from: user.address,
+        to: await exampleTarget.getAddress(),
+        value: 0n,
+        gas: 100000n,
+        nonce: nonce + 1n,
+        data: data,
+      };
+
+      const domain = {
+        name: "RSKForwarder",
+        version: "0.0.1",
+        chainId: (await ethers.provider.getNetwork()).chainId,
+        verifyingContract: await forwarder.getAddress(),
+      };
+
+      const types = {
+        ForwardRequest: [
+          { name: "from", type: "address" },
+          { name: "to", type: "address" },
+          { name: "value", type: "uint256" },
+          { name: "gas", type: "uint256" },
+          { name: "nonce", type: "uint256" },
+          { name: "data", type: "bytes" },
+        ],
+      };
+
+      const signature = await user.signTypedData(domain, types, request);
+
+      const isValid = await forwarder.verify(request, signature);
+      expect(isValid).to.be.false;
+    })
+
+
+[chunk 6737]
+// corpus-v2 pair text-storage--azerckid (relayer-meta-transactions, moderate)
+// TextStorageTest.js: TextStorage > should store text via meta-transaction (EIP-2771)
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+let textStorage;
+let forwarder;
+let owner;
+let user;
+// beforeEach of suite "TextStorage"
+beforeEach(async function () {
+        [owner, user] = await ethers.getSigners();
+
+        // MinimalForwarder 배포
+        const Forwarder = await ethers.getContractFactory("MinimalForwarder");
+        forwarder = await Forwarder.deploy();
+        await forwarder.waitForDeployment();
+
+        // TextStorage 배포 (forwarder.target 전달)
+        const TextStorage = await ethers.getContractFactory("TextStorage");
+        textStorage = await TextStorage.deploy(forwarder.target);
+        await textStorage.waitForDeployment();
+    })
+it("should store text via meta-transaction (EIP-2771)", async function () {
+        // 1. ForwardRequest 준비
+        const from = user.address;
+        const to = textStorage.target;
+        const value = 0n;
+        const gas = 1_000_000n;
+        const nonce = (await forwarder.getNonce(from));
+        const data = textStorage.interface.encodeFunctionData("storeText", ["metaTx!"]);
+
+        const req = {
+            from,
+            to,
+            value: value.toString(),
+            gas: gas.toString(),
+            nonce: nonce.toString(),
+            data,
+        };
+
+        // 2. EIP-712 도메인 및 타입
+        const domain = {
+            name: "MinimalForwarder",
+            version: "0.0.1",
+            chainId: Number((await ethers.provider.getNetwork()).chainId),
+            verifyingContract: forwarder.target,
+        };
+        const types = {
+            ForwardRequest: [
+                { name: "from", type: "address" },
+                { name: "to", type: "address" },
+                { name: "value", type: "uint256" },
+                { name: "gas", type: "uint256" },
+                { name: "nonce", type: "uint256" },
+                { name: "data", type: "bytes" },
+            ],
+        };
+
+        // 3. user가 EIP-712 서명
+        const signature = await user.signTypedData(domain, types, req);
+
+        // [디버그] 서명 복구: JS에서 recoverAddress로 검증
+        const { TypedDataEncoder, recoverAddress } = ethers;
+        const digest = TypedDataEncoder.hash(domain, types, req);
+        const recovered = recoverAddress(digest, signature);
+        expect(recovered).to.equal(from); // 복구된 주소가 user와 일치해야 함
+
+        // 4. relayer가 execute 호출
+        await expect(
+            forwarder.connect(owner).execute(req, signature, { gasLimit: Number(gas) })
+        ).to.emit(textStorage, "TextStored").withArgs(from, "metaTx!");
+
+        // 5. 저장된 값 확인
+        const stored = await textStorage.texts(from, 0);
+        expect(stored).to.equal("metaTx!");
+    })
+
+
+[chunk 6988]
+// corpus-v2 pair totem-trusted-forwarder--totembound (relayer-meta-transactions, moderate)
+// TotemTrustedForwarder.test.js: TotemTrustedForwarder > Meta-transaction Relay > Should revert when relaying to non-whitelisted contract
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+let TotemTrustedForwarder;
+let forwarder;
+let MockTarget;
+let mockTarget;
+let owner, user1, user2;
+let maxGasPrice = ethers.parseUnits("50", "gwei");
+let mockFunctionData;
+let mockRequest;
+let domain;
+// beforeEach of suite "TotemTrustedForwarder"
+beforeEach(async function () {
+        // Get signers
+        [owner, user1, user2] = await ethers.getSigners();
+
+        // Deploy TotemTrustedForwarder
+        TotemTrustedForwarder = await ethers.getContractFactory("TotemTrustedForwarder");
+        forwarder = await TotemTrustedForwarder.connect(owner).deploy(maxGasPrice);
+
+        // Deploy a mock target contract for testing
+        MockTarget = await ethers.getContractFactory("MockTarget");
+        mockTarget = await MockTarget.connect(owner).deploy();
+
+        // Whitelist the target contract in the forwarder
+        await forwarder.connect(owner).setContractStatus(await mockTarget.getAddress(), true);
+    })
+// beforeEach of suite "Meta-transaction Relay"
+beforeEach(async function () {
+            // Get the contract domain
+            const name = "TotemTrustedForwarder";
+            const version = "1";
+            const chainId = (await ethers.provider.getNetwork()).chainId;
+            const verifyingContract = await forwarder.getAddress();
+
+            domain = {
+                name,
+                version,
+                chainId,
+                verifyingContract
+            };
+
+            // Create mock function call data for target contract
+            mockFunctionData = mockTarget.interface.encodeFunctionData("executeFunction", ["Hello World"]);
+
+            // Create a request to be signed and forwarded
+            mockRequest = {
+                from: user1.address,
+                to: await mockTarget.getAddress(),
+                value: 0,
+                gas: 1000000,
+                nonce: await forwarder.getNonce(user1.address),
+                data: mockFunctionData
+            };
+        })
+it("Should revert when relaying to non-whitelisted contract", async function () {
+            // Deploy a new contract that isn't whitelisted
+            const newMockTarget = await MockTarget.connect(owner).deploy();
+
+            // Update request with non-whitelisted contract
+            const invalidRequest = { ...mockRequest, to: await newMockTarget.getAddress() };
+
+            // Create signature
+            const types = {
+                ForwardRequest: [
+                    { name: "from", type: "address" },
+                    { name: "to", type: "address" },
+                    { name: "value", type: "uint256" },
+                    { name: "gas", type: "uint256" },
+                    { name: "nonce", type: "uint256" },
+                    { name: "data", type: "bytes" }
+                ]
+            };
+
+            const signature = await user1.signTypedData(domain, types, invalidRequest);
+
+            // Try to relay
+            await expect(forwarder.connect(user2).relay(invalidRequest, signature))
+                .to.be.revertedWithCustomError(forwarder, "UnauthorizedContract");
+        })
+
+
+[chunk 1527]
+// corpus-v2 pair cross-chain-governor--kdsmith18542 (relayer-meta-transactions, complex)
+// CrossChain.test.js: CrossChainBridge > MockCrossChainBridge > should send a message and emit event
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+const { loadFixture } = require("@nomicfoundation/hardhat-network-helpers");
+const CHAIN_ID_POLYGON = 137;
+const CHAIN_ID_ARBITRUM = 42161;
+async function deployBridgeFixture() {
+    const [owner, user1, user2] = await ethers.getSigners();
+    const MockBridge = await ethers.getContractFactory("MockCrossChainBridge");
+    const bridge = await MockBridge.deploy(CHAIN_ID_POLYGON);
+    return { bridge, owner, user1, user2 };
+  }
+it("should send a message and emit event", async function () {
+      const { bridge } = await loadFixture(deployBridgeFixture);
+      const payload = ethers.toUtf8Bytes("hello cross-chain");
+      await expect(bridge.sendMessage(CHAIN_ID_ARBITRUM, payload, ethers.ZeroAddress))
+        .to.emit(bridge, "MessageSent")
+        .withArgs(CHAIN_ID_ARBITRUM, ethers.keccak256(ethers.solidityPacked(["uint256", "uint256", "bytes"], [31337n, 0n, payload])), payload);
+    })

@@ -1,0 +1,117 @@
+{
+  "version": "corpus-v2-units-v1",
+  "corpus_sha256": "5cabf7d044a083ebddfb2477ea8f13a607464cfa32adc9e64d751935a1f85d4b",
+  "pairs": 225,
+  "files": 758,
+  "parse_status": {
+    "ast": 758
+  },
+  "chunk_count": 8531,
+  "indexed_chunks": 7773,
+  "artifact_types": {
+    "source_artifact": 758,
+    "function": 3513,
+    "test_case": 4260
+  },
+  "test_cases_linked": 3826,
+  "test_cases_linked_to_primary": 3716,
+  "primary_functions": 2298,
+  "primary_functions_tested": 1501,
+  "test_types": {
+    "positive": 2402,
+    "event": 632,
+    "revert": 1858,
+    "boundary": 1206,
+    "access": 207,
+    "time": 472,
+    "balance": 35
+  },
+  "function_roles": {
+    "reverts": 1571,
+    "state_changing": 2189,
+    "payment": 537,
+    "emits_events": 1185,
+    "access_control": 905,
+    "temporal": 515,
+    "view": 1086
+  },
+  "delivered_chars": {
+    "test_case": {
+      "min": 314,
+      "median": 1611,
+      "p90": 2817,
+      "max": 9867
+    },
+    "function": {
+      "min": 146,
+      "median": 370,
+      "p90": 1011,
+      "max": 5964
+    }
+  }
+}
+Token indices sequence length is longer than the specified maximum sequence length for this model (331 > 256). Running this sequence through the model will result in indexing errors
+dense entries 7773, embedding truncated 815
+Token indices sequence length is longer than the specified maximum sequence length for this model (331 > 256). Running this sequence through the model will result in indexing errors
+{
+  "dense_full": {
+    "domain_match": "80/116",
+    "test_case_share": "58/136",
+    "mean_distinct_pairs": 5.4
+  },
+  "dense_target_code": {
+    "domain_match": "63/120",
+    "test_case_share": "1/140",
+    "mean_distinct_pairs": 6.6
+  },
+  "hybrid_full": {
+    "domain_match": "80/119",
+    "test_case_share": "41/137",
+    "mean_distinct_pairs": 5.4
+  },
+  "hybrid_target_code": {
+    "domain_match": "74/120",
+    "test_case_share": "8/140",
+    "mean_distinct_pairs": 6.1
+  },
+  "hybrid_full_reranked": {
+    "domain_match": "62/105",
+    "test_case_share": "116/125",
+    "mean_distinct_pairs": 5.1
+  },
+  "hybrid_target_code_reranked": {
+    "domain_match": "70/114",
+    "test_case_share": "103/134",
+    "mean_distinct_pairs": 6.3
+  },
+  "dense_full+pivot": {
+    "domain_match": "80/103",
+    "test_case_share": "122/122",
+    "mean_distinct_pairs": 4.6
+  },
+  "dense_target_code+pivot": {
+    "domain_match": "64/112",
+    "test_case_share": "132/132",
+    "mean_distinct_pairs": 4.5
+  },
+  "hybrid_full+pivot": {
+    "domain_match": "81/108",
+    "test_case_share": "127/127",
+    "mean_distinct_pairs": 4.2
+  },
+  "hybrid_target_code+pivot": {
+    "domain_match": "85/111",
+    "test_case_share": "127/127",
+    "mean_distinct_pairs": 3.8
+  },
+  "hybrid_full_reranked+pivot": {
+    "domain_match": "46/99",
+    "test_case_share": "118/118",
+    "mean_distinct_pairs": 5.4
+  },
+  "hybrid_target_code_reranked+pivot": {
+    "domain_match": "53/106",
+    "test_case_share": "125/125",
+    "mean_distinct_pairs": 5.9
+  }
+}

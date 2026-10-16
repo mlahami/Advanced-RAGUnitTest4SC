@@ -1,0 +1,98 @@
+{
+  "pair": "agent-subscriptions-v2--andrerserrano",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:41:50.641113+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/AgentSubscriptionsV2.sol": "496b3b5006bf8b663548612ad78fe4464e99c1ce54243be522f8ee04294f3139",
+    "contracts/MockERC20.sol": "ca0e1e449acb593a7ce458ad5f7cf1de7e8efecb885e5a433953dd22f6e254bb",
+    "LICENSE": "ff2a737878bc89e8c69bf6a879553adc84eaf338ad579b7fcb13162f5007e651",
+    "manifest.json": "5a5d49be0dc7b7edb55e723538bf7492ed3c1183fc9915fec8135b90a2af0a18",
+    "test/AgentSubscriptionsV2.test.js": "1d3ecebd6234f8a1e88697ba49bd482ee4734625c0aefb1937dd5946bf0eb980"
+  },
+  "pair_sha256": "2ac636a0301c5ec2f6f454981ff62c8726fae05460c2b03d67801c8e83d45ea4",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "AgentSubscriptionsV2.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.157,
+        "signatures": 0.033,
+        "min_functions": 10
+      },
+      {
+        "contract": "AgentSubscriptionsV2.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.155,
+        "signatures": 0.0,
+        "min_functions": 11
+      },
+      {
+        "contract": "AgentSubscriptionsV2.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.155,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.9,
+      "mocha": {
+        "tests": 73,
+        "passes": 73,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 11.41,
+      "mocha": {
+        "tests": 73,
+        "passes": 71,
+        "failures": 2,
+        "pending": 0,
+        "failed": [
+          {
+            "title": "AgentSubscriptionsV2 Gas Usage Should measure subscribe gas",
+            "error": "expected 230316 to be below 230000."
+          },
+          {
+            "title": "AgentSubscriptionsV2 Gas Usage Should measure charge gas",
+            "error": "expected 140658 to be below 140000."
+          }
+        ]
+      },
+      "targets": {
+        "AgentSubscriptionsV2.sol": {
+          "statements": 81.51,
+          "branches": 66.67,
+          "functions": 92.0,
+          "lines": 82.2
+        },
+        "MockERC20.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 66.67,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

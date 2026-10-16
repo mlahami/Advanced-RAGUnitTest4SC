@@ -1,0 +1,41 @@
+{
+  "id": "tsvguard--themis-labs",
+  "domain": "rate-limiting",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "TSVGuard.sol",
+    "IERC8392.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/themis-labs/tsv-aegis",
+    "commit": "8cdf770f9377d41c075dbe834c5f737e543b7f38",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/TSVGuard.sol",
+      "contracts/interfaces/IERC8392.sol"
+    ],
+    "test_paths": [
+      "test/TSVGuard.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/TSVGuard.sol": "9da7d4196d735116e87ff9d70869e0dee0fbc73e090ec541e150b1fe2c06f56c",
+      "contracts/interfaces/IERC8392.sol": "e1ec2024c76f006b3d2be914105960ff90587c8f86f852cbf95ab7386c2cf878",
+      "test/TSVGuard.test.js": "34dee356af4237ec9c946d16115922ddf721be75b3667bd9795472bdd81ec268"
+    }
+  },
+  "transformations": [
+    {
+      "file": "TSVGuard.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IERC8392.sol",
+      "after": "./IERC8392.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 198 lines, closure 281 lines, 2 files; 16 it blocks; history: 66 commits 2026-09-22..2026-09-27",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:24:49.566337+00:00"
+}

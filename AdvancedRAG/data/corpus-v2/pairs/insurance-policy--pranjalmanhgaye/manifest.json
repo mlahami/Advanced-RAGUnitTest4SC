@@ -1,0 +1,56 @@
+{
+  "id": "insurance-policy--pranjalmanhgaye",
+  "domain": "insurance",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "InsurancePolicy.sol",
+    "MockOracle.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/PranjalManhgaye/Automate_India",
+    "commit": "a4a4e1e051a878149b54862d10fb38e0e27420cf",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/contracts/InsurancePolicy.sol",
+      "contracts/contracts/MockOracle.sol"
+    ],
+    "test_paths": [
+      "contracts/test/InsurancePolicy.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/InsurancePolicy.sol": "33492ca467ddf93c6584d636bac48017c93ec6fb6642fa242ddde8264aac28bf",
+      "contracts/contracts/MockOracle.sol": "b6e994911c20c0dffb6924ebe58f7599bc1d610feeb31929b8f63752287e3c70",
+      "contracts/test/InsurancePolicy.test.ts": "1c7330c9420901862b11740a469a91ad1f37a6ca14a122b7098024263361472a"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "InsurancePolicy.test.js",
+      "upstream_path": "contracts/test/InsurancePolicy.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "InsurancePolicy.test.js",
+      "upstream_path": "contracts/test/InsurancePolicy.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-network-helpers",
+      "names": [
+        "time"
+      ],
+      "file": "InsurancePolicy.test.js",
+      "upstream_path": "contracts/test/InsurancePolicy.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Parametric gig-worker insurance with oracle trigger, 139 lines; Hardhat project in contracts/ subdir; WEAK: only 2 it blocks, coverage likely <80%; LICENSE MIT. LICENSE file at repo root (MIT).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-29T09:45:55.455631+00:00"
+}

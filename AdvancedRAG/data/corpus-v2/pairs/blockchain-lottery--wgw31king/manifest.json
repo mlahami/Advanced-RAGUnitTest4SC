@@ -1,0 +1,60 @@
+{
+  "id": "blockchain-lottery--wgw31king",
+  "domain": "lottery",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "BlockchainLottery.sol",
+    "ReentrantDrawAttacker.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/wgw31king/blockchain-lottery",
+    "commit": "46e0e20e7d6cd34cc6ef5d7dbdbf92adcfab27a0",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/BlockchainLottery.sol",
+      "contracts/mocks/ReentrantDrawAttacker.sol"
+    ],
+    "test_paths": [
+      "test/BlockchainLottery.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/BlockchainLottery.sol": "7f8ccc19b369a734e4e66952c23c644837f2ff17cf0d8a79b8229dd66a55ea49",
+      "contracts/mocks/ReentrantDrawAttacker.sol": "49598909c9a41337e20eb727374fc64410914c7714e02699122807a80bbd6406",
+      "test/BlockchainLottery.test.ts": "a2c975e3a0df5704c61879157136a6db8c2411436f3c4d792d36cdecb487b8c7"
+    }
+  },
+  "transformations": [
+    {
+      "file": "ReentrantDrawAttacker.sol",
+      "kind": "import-path",
+      "before": "../BlockchainLottery.sol",
+      "after": "./BlockchainLottery.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "BlockchainLottery.test.js",
+      "upstream_path": "test/BlockchainLottery.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "BlockchainLottery.test.js",
+      "upstream_path": "test/BlockchainLottery.test.ts"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "BlockchainLottery.test.js",
+      "upstream_path": "test/BlockchainLottery.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Stake-weighted pool lottery: placeBet with min bet, owner closes betting, drawAndDistribute pays winners pro-rata by weight with dust to last winner, custom errors, duplicate check, ReentrancyGuard; mock re-entrant attacker. Primary 101 lines; 5 it blocks (dense, incl. custom-error reverts). Local run on frozen HH env: 5/5 pass, 100% stmts on primary. OZ 5 Ownable/ReentrancyGuard. Licence file LICENSE (MIT). History: 2 commits 2026-04-27 (single day) -> DOUBTFUL.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-30T08:13:54.008701+00:00"
+}

@@ -1,0 +1,89 @@
+{
+  "pair": "nftasset-token--mickap1",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:12:57.667745+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/KYCregistry.sol": "18a24bed158b875a475804454799c39c70be419f4fc30a8444b27ec8961f6ffd",
+    "contracts/NFTAssetToken.sol": "8e12af58fb43ff878eca72e14481ff366b380e9be47ac53e39d9c1f06f357c57",
+    "LICENSE": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b",
+    "manifest.json": "287e37ecbe990661cc5bf5e17c438de25e572affb30292e0c45270a5e1c62e2c",
+    "test/NFTAssetToken.test.js": "10a93af56d7e187eb6f3b551774304c8a25833f8743a40b81f99b24822d14004"
+  },
+  "pair_sha256": "ee9ca59f6310fe161f67bebfda02ed5f1020b6f5767cf839aefc879f21dd70ab",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "KYCregistry.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.157,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "NFTAssetToken.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.15,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "KYCregistry.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.141,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.85,
+      "mocha": {
+        "tests": 41,
+        "passes": 41,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 10.14,
+      "mocha": {
+        "tests": 41,
+        "passes": 41,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "NFTAssetToken.sol": {
+          "statements": 98.44,
+          "branches": 82.14,
+          "functions": 94.44,
+          "lines": 98.44
+        },
+        "KYCregistry.sol": {
+          "statements": 22.58,
+          "branches": 16.67,
+          "functions": 35.0,
+          "lines": 22.58
+        }
+      }
+    }
+  },
+  "accepted": true
+}

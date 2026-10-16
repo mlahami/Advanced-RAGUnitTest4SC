@@ -1,0 +1,28 @@
+{
+  "version": "corpus-v2-units-v1",
+  "corpus_sha256": "5cabf7d044a083ebddfb2477ea8f13a607464cfa32adc9e64d751935a1f85d4b",
+  "corpus_frozen": "D:\\Recherche\\ExtensionENASE2026\\workspace\\AdvancedRAG\\data\\corpus-v2\\CORPUS_FROZEN.json",
+  "indexed_types": [
+    "function",
+    "test_case"
+  ],
+  "entries": 7773,
+  "entries_embedding_truncated": 815,
+  "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+  "max_seq_length": 256,
+  "dense": "FAISS IndexFlatL2",
+  "bm25": {
+    "k1": 1.5,
+    "b": 0.75,
+    "tokenizer": "identifiers plus camelCase/snake_case components",
+    "text": "embedding_text"
+  },
+  "delivered_text": "full unit (test cases with setup); never truncated",
+  "parser_package": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject\\package.json",
+  "query_views": {
+    "full": "frozen server query (instructions first, target source last)",
+    "target_code": "solidityCode field only, dense branch only"
+  },
+  "initialization_seconds": 6.8741654000477865,
+  "api_calls": 0
+}

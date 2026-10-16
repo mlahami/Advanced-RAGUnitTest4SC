@@ -1,0 +1,36 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> ChainlinkPoRAdapter.sol
+> IAggregatorV3.sol
+> ReserveManager.sol
+> Stablecoin.sol
+
+Compilation:
+============
+
+Compiled 29 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+--------------------------|----------|----------|----------|----------|----------------|
+File                      |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+--------------------------|----------|----------|----------|----------|----------------|
+ contracts\               |    46.55 |    33.33 |    57.69 |    43.21 |                |
+  ChainlinkPoRAdapter.sol |        0 |        0 |        0 |        0 |... 80,82,83,85 |
+  IAggregatorV3.sol       |      100 |      100 |      100 |      100 |                |
+  ReserveManager.sol      |    36.36 |    20.59 |       50 |    39.13 |... 145,146,150 |
+  Stablecoin.sol          |      100 |    68.75 |      100 |      100 |                |
+--------------------------|----------|----------|----------|----------|----------------|
+All files                 |    46.55 |    33.33 |    57.69 |    43.21 |                |
+--------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

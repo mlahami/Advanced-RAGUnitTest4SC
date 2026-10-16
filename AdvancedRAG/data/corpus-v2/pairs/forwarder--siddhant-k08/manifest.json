@@ -1,0 +1,69 @@
+{
+  "id": "forwarder--siddhant-k08",
+  "domain": "meta-transactions",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "Forwarder.sol",
+    "ERC2771Context.sol",
+    "ExampleTarget.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/siddhant-k08/rsk-meta-tx-relayer",
+    "commit": "9d8c20b2b347d14c3f6b14d02221050cd17be830",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/Forwarder.sol",
+      "packages/hardhat/contracts/ERC2771Context.sol",
+      "packages/hardhat/contracts/ExampleTarget.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/Forwarder.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/Forwarder.sol": "bff189b7d7cff5272a6dbc10a2e99711d3bb2973ed0d96fe1197cde1074ddeed",
+      "packages/hardhat/contracts/ERC2771Context.sol": "6df45e942dd07dedb913d2a5050b10ad4703af58fd910d8e7c4f423a832a677f",
+      "packages/hardhat/contracts/ExampleTarget.sol": "f86190581d68d6b5ef77274e0ffc18c9df457640f70ea18be01e88a829f3f755",
+      "packages/hardhat/test/Forwarder.test.ts": "4d03120fe0f3c9af104b0288691feb630525e9ff18f1f2f1a76d06904f18b67a"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "Forwarder.test.js",
+      "upstream_path": "packages/hardhat/test/Forwarder.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "Forwarder.test.js",
+      "upstream_path": "packages/hardhat/test/Forwarder.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "Forwarder",
+        "ExampleTarget"
+      ],
+      "file": "Forwarder.test.js",
+      "upstream_path": "packages/hardhat/test/Forwarder.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "Forwarder.test.js",
+      "upstream_path": "packages/hardhat/test/Forwarder.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Hand-written EIP-712 forwarder + local ERC2771Context + ExampleTarget; typechain types used as types only; imports hardhat/console.sol; project under packages/hardhat. Primary 104 non-blank lines, closure 149 lines/3 files; 7 its, 9 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:03:17.695151+00:00"
+}

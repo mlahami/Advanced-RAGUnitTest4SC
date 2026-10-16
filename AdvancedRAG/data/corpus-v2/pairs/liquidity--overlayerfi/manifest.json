@@ -1,0 +1,101 @@
+{
+  "id": "liquidity--overlayerfi",
+  "domain": "amm-dex",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "Liquidity.sol",
+    "ILiquidityDefs.sol",
+    "IRewardAsset.sol",
+    "MintableERC20.sol",
+    "TokenLP_A_B.sol",
+    "MintableTokenBase.sol",
+    "OverlayerReferral.sol",
+    "IOverlayerReferral.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Overlayerfi/contracts",
+    "commit": "25c11023aa6aa64857df6b945203ca39c732166a",
+    "license": "GPL-3.0",
+    "contract_paths": [
+      "contracts/liquidity/Liquidity.sol",
+      "contracts/liquidity/interfaces/ILiquidityDefs.sol",
+      "contracts/liquidity/interfaces/IRewardAsset.sol",
+      "contracts/mock_ERC20/MintableERC20.sol",
+      "contracts/mock_ERC20/mocks/TokenLP_A_B.sol",
+      "contracts/overlayer/MintableTokenBase.sol",
+      "contracts/overlayer/OverlayerReferral.sol",
+      "contracts/overlayer/interfaces/IOverlayerReferral.sol"
+    ],
+    "test_paths": [
+      "test/Liquidity.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/liquidity/Liquidity.sol": "cddd618f9ce687b8f55736c62153e8a57ade1fe8aaf66107a20056fb91d36058",
+      "contracts/liquidity/interfaces/ILiquidityDefs.sol": "3bf1ada509510ea223cbd619046c7e05990fbdc970805ebf045a466764386b55",
+      "contracts/liquidity/interfaces/IRewardAsset.sol": "27472519a0da9ca5b9e86144f4ddd3a8889eb346a78b8452cac6c68955b45aa5",
+      "contracts/mock_ERC20/MintableERC20.sol": "9e4c6d1873eb4b757b6c83651954eb16aa2b93c7f8b2363a9f3391cfdea1e99e",
+      "contracts/mock_ERC20/mocks/TokenLP_A_B.sol": "72c109c4f9c407f6e5226de3af142604a01b33b68bd0af66c15b80c37a8371b3",
+      "contracts/overlayer/MintableTokenBase.sol": "3fd39d436c8014b498ae16b8d39695d602f786b723f3574d91369c05f20a4310",
+      "contracts/overlayer/OverlayerReferral.sol": "f1f5a55e0441969df2f34806210471d0da9b944bc333aa2884426c2d92c8efdc",
+      "contracts/overlayer/interfaces/IOverlayerReferral.sol": "b41fab20bac6883d8e13ed522e2b24e9acc65723362008581ea5f263e53ed484",
+      "test/Liquidity.ts": "0a8d919ce12cc26fb34b05711d398e0f0c1dd5c185de14cd43a6d35679aa4e68"
+    }
+  },
+  "transformations": [
+    {
+      "file": "Liquidity.sol",
+      "kind": "import-path",
+      "before": "./interfaces/ILiquidityDefs.sol",
+      "after": "./ILiquidityDefs.sol"
+    },
+    {
+      "file": "Liquidity.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IRewardAsset.sol",
+      "after": "./IRewardAsset.sol"
+    },
+    {
+      "file": "ILiquidityDefs.sol",
+      "kind": "import-path",
+      "before": "../../overlayer/interfaces/IOverlayerReferral.sol",
+      "after": "./IOverlayerReferral.sol"
+    },
+    {
+      "file": "TokenLP_A_B.sol",
+      "kind": "import-path",
+      "before": "../MintableERC20.sol",
+      "after": "./MintableERC20.sol"
+    },
+    {
+      "file": "OverlayerReferral.sol",
+      "kind": "import-path",
+      "before": "./interfaces/IOverlayerReferral.sol",
+      "after": "./IOverlayerReferral.sol"
+    },
+    {
+      "file": "OverlayerReferral.sol",
+      "kind": "import-path",
+      "before": "../liquidity/interfaces/ILiquidityDefs.sol",
+      "after": "./ILiquidityDefs.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "Liquidity.js",
+      "upstream_path": "test/Liquidity.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "Liquidity.js",
+      "upstream_path": "test/Liquidity.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 653 lines, closure 1201 lines, 8 files; 23 it blocks; history: 395 commits 2024-04-14..2026-06-09",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:30:42.004412+00:00"
+}

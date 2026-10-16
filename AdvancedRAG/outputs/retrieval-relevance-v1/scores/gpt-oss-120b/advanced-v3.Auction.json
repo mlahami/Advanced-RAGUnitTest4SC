@@ -1,0 +1,79 @@
+{
+  "id": "advanced-v3.Auction",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "Auction",
+  "chunk_ids": [
+    2326,
+    5367,
+    2331,
+    2325,
+    5368,
+    2332,
+    584,
+    6018,
+    662,
+    586
+  ],
+  "context_sha256": "cfffa28428291ac28fad146cadb930c9e61f52f3bdd715d43963f909200dc540",
+  "ratings": [
+    {
+      "chunk_id": 2326,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests a non‑existent start condition; only useful as a generic revert check template."
+    },
+    {
+      "chunk_id": 5367,
+      "rating": 1,
+      "reason": "Shows generic withdraw and balance‑increase check useful for testing Auction.withdrawRefund, but specific function and contract differ."
+    },
+    {
+      "chunk_id": 2331,
+      "rating": 1,
+      "reason": "Shows time manipulation and finalization after auction end, but tests ERC721 handling and start/end functions not present in target contract."
+    },
+    {
+      "chunk_id": 2325,
+      "rating": 2,
+      "reason": "Tests basic bid logic and highestBid/highestBidder checks, matching target’s core functionality; only NFT setup is irrelevant but core pattern is reusable."
+    },
+    {
+      "chunk_id": 5368,
+      "rating": 1,
+      "reason": "Shows generic revert testing pattern, but target lacks Ownable and withdrawFunds logic, so only a generic pattern applies."
+    },
+    {
+      "chunk_id": 2332,
+      "rating": 1,
+      "reason": "Only shows generic revert check pattern; target lacks start/end functions, so behavior not directly reusable."
+    },
+    {
+      "chunk_id": 584,
+      "rating": 2,
+      "reason": "Tests revert on low bid with same error message, directly reusable after adjusting setup"
+    },
+    {
+      "chunk_id": 6018,
+      "rating": 2,
+      "reason": "Tests revert on empty refund withdrawal, matching target's withdrawRefund revert behavior; can be renamed and reused."
+    },
+    {
+      "chunk_id": 662,
+      "rating": 2,
+      "reason": "Tests that finalization reverts before end time matches target’s finalize logic; can rename endAuction to finalize and reuse pattern."
+    },
+    {
+      "chunk_id": 586,
+      "rating": 2,
+      "reason": "Tests bid rejection when value not higher, matching Auction.bid's require; setup and revert check can be reused with renamed functions/variables."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 10109,
+    "completion_tokens": 1127,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 47.4,
+  "evaluated_utc": "2026-10-13T07:44:55.396072+00:00"
+}

@@ -1,0 +1,44 @@
+{
+  "contract": "RateLimiter",
+  "status": "test_failures",
+  "prompt_sha256": "ce5d326ffc0e29f7322f1e825c14fd5ae7553bb06a30adee70a0d6f2f35ffae3",
+  "generation_seconds": 12.06309599999804,
+  "usage": {
+    "prompt_tokens": 11996,
+    "total_tokens": 13424,
+    "completion_tokens": 1428,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.502256399951875
+  },
+  "passed_tests": 11,
+  "failed_tests": 3,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "RateLimiter Token Bucket Mechanics Should correctly calculate refilled tokens",
+      "error": "expected 100 to equal 10."
+    },
+    {
+      "title": "RateLimiter Rate Limited Actions Should revert when rate limit exceeded",
+      "error": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert"
+    },
+    {
+      "title": "RateLimiter Rate Limited Actions Should revert withdraw when rate limit exceeded",
+      "error": "Expected transaction to be reverted with reason 'Rate limit exceeded', but it didn't revert"
+    }
+  ],
+  "coverage": {
+    "statements": 94.74,
+    "branches": 71.43,
+    "functions": 85.71,
+    "lines": 94.44
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

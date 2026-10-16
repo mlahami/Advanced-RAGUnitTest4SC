@@ -1,0 +1,82 @@
+{
+  "pair": "yacht-squad-tokenization--cerlo",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:13:23.448006+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/YachtSquadTokenization.sol": "b641c1c25098d60f7d64ff7c7c43babe19eea06885de1a2dc2a5c75a972f45a0",
+    "LICENSE": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+    "manifest.json": "91f23bc20e077014d07a9f631d5e7949e108ca7869928a2695c78b96a4c77f0a",
+    "test/YachtSquadTokenization.test.js": "238c0d85afff058edcf4934179c5ce8c6eb95135926acef4466a625484348940"
+  },
+  "pair_sha256": "7109f53a0e60750523cd29c96fcb55884435ef7125972e2bc05b1437b357b6a5",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "YachtSquadTokenization.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.104,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "YachtSquadTokenization.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.091,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "YachtSquadTokenization.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.087,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.01,
+      "mocha": {
+        "tests": 21,
+        "passes": 21,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.75,
+      "mocha": {
+        "tests": 21,
+        "passes": 21,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "YachtSquadTokenization.sol": {
+          "statements": 100.0,
+          "branches": 75.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

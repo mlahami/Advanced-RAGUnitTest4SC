@@ -1,0 +1,62 @@
+{
+  "id": "your-contract--remesnik-elena",
+  "domain": "escrow",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "YourContract.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Remesnik-Elena/escrow",
+    "commit": "488bc3ec4cade63fdb64bab52a1ec4e2833c92b0",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/YourContract.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/YourContract.ts"
+    ],
+    "license_file": "LICENCE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/YourContract.sol": "a742f1609526782833ccc88ce90e33ba6d346ef0f62f3dbde24d4e61478f21f6",
+      "packages/hardhat/test/YourContract.ts": "2a8549bfe8500d2e0451b7d03cabf09413d13e2590acb382a11187158e035c03"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "YourContract.js",
+      "upstream_path": "packages/hardhat/test/YourContract.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "YourContract.js",
+      "upstream_path": "packages/hardhat/test/YourContract.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "YourContract"
+      ],
+      "file": "YourContract.js",
+      "upstream_path": "packages/hardhat/test/YourContract.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "HardhatEthersSigner"
+      ],
+      "file": "YourContract.js",
+      "upstream_path": "packages/hardhat/test/YourContract.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Buyer/seller escrow with delivery/receipt confirmation, disputes (resolveDispute), cancellation, platform fee and pull withdrawals (scaffold-eth contract name YourContract); 4 commits. Primary 302 non-blank lines, closure 302 lines/1 files; 43 its, 66 expects; pragma >=0.8.0 <0.9.0.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:36.783867+00:00"
+}

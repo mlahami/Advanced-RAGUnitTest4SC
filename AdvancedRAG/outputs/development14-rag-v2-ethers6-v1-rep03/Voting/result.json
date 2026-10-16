@@ -1,0 +1,40 @@
+{
+  "contract": "Voting",
+  "status": "test_failures",
+  "prompt_sha256": "e65af21e55d7e5d476ee474c190a0ef8d93e91c2b9a6f5f41e9fa6342376f9b5",
+  "generation_seconds": 6.282410199986771,
+  "usage": {
+    "prompt_tokens": 10638,
+    "total_tokens": 11494,
+    "completion_tokens": 856,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.136480399989523
+  },
+  "passed_tests": 9,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Voting Deployment Should initialize candidates correctly",
+      "error": "Transaction reverted without a reason string"
+    },
+    {
+      "title": "Voting Voting Should allow a voter to vote",
+      "error": "Event \"VoteCast\" doesn't exist in the contract"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

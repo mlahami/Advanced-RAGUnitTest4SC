@@ -1,0 +1,67 @@
+{
+  "id": "advanced-v3.TokenVesting",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "TokenVesting",
+  "chunk_ids": [
+    6866,
+    2454,
+    502,
+    5949,
+    5955,
+    6867,
+    2453,
+    499
+  ],
+  "context_sha256": "b494195a25df0342b3e2d2c3cdec512531d8af7f2885ae621b3752f67a8a030e",
+  "ratings": [
+    {
+      "chunk_id": 6866,
+      "rating": 1,
+      "reason": "Shows deployment, token approval, and schedule creation pattern, but uses different function names and state layout; only generic setup is reusable."
+    },
+    {
+      "chunk_id": 2454,
+      "rating": 1,
+      "reason": "Shows revoke call and revert check pattern, but target lacks AlreadyRevoked error, so only generic revoke testing is useful."
+    },
+    {
+      "chunk_id": 502,
+      "rating": 2,
+      "reason": "Tests revert on claim with no claimable tokens, matching TokenVesting claim behavior and revert message."
+    },
+    {
+      "chunk_id": 5949,
+      "rating": 2,
+      "reason": "Tests time‑based linear vesting and zero claimable at grant start, matching TokenVesting behavior; time helpers and assertions can be reused after renaming."
+    },
+    {
+      "chunk_id": 5955,
+      "rating": 1,
+      "reason": "Shows grantCount usage and time manipulation pattern, but tests a cap constant not present in target; still useful for grant creation checks."
+    },
+    {
+      "chunk_id": 6867,
+      "rating": 1,
+      "reason": "Shows zero‑address revert pattern similar to createGrant’s check"
+    },
+    {
+      "chunk_id": 2453,
+      "rating": 1,
+      "reason": "Shows revoke pattern and balance assertions, but target revokes differently (no token return), so only generic pattern applies."
+    },
+    {
+      "chunk_id": 499,
+      "rating": 1,
+      "reason": "Shows time‑increase and claim pattern relevant to vesting, but uses unrelated setClaimable function; only generic pattern applies."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 18909,
+    "completion_tokens": 866,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 89.7,
+  "evaluated_utc": "2026-10-15T13:42:11.845364+00:00"
+}

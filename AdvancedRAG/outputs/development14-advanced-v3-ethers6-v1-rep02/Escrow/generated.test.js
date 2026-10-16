@@ -1,0 +1,184 @@
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+
+describe("Escrow", function () {
+  let escrow;
+  let seller, buyer, arbiter, other;
+  const amount = ethers.parseEther("1");
+
+  beforeEach(async function () {
+    [seller, buyer, arbiter, other] = await ethers.getSigners();
+
+    const Escrow = await ethers.getContractFactory("Escrow");
+    escrow = await Escrow.deploy(seller.address, arbiter.address);
+    await escrow.waitForDeployment();
+  });
+
+  describe("Deployment", function () {
+    it("should set the correct seller, buyer, and arbiter", async function () {
+      expect(await escrow.seller()).to.equal(seller.address);
+      expect(await escrow.buyer()).to.equal(buyer.address);
+      expect(await escrow.arbiter()).to.equal(arbiter.address);
+    });
+
+    it("should initialize with funded and closed set to false", async function () {
+      expect(await escrow.funded()).to.be.false;
+      expect(await escrow.closed()).to.be.false;
+    });
+  });
+
+  describe("fund", function () {
+    it("should allow the buyer to fund the escrow", async function () {
+      await expect(escrow.connect(buyer).fund({ value: amount }))
+        .to.emit(escrow, "Funded")
+        .withArgs(amount);
+
+      expect(await escrow.funded()).to.be.true;
+      expect(await ethers.provider.getBalance(await escrow.getAddress())).to.equal(amount);
+    });
+
+    it("should revert if called by non-buyer", async function () {
+      await expect(escrow.connect(other).fund({ value: amount }))
+        .to.be.revertedWith("only buyer");
+    });
+
+    it("should revert if already funded", async function () {
+      await escrow.connect(buyer).fund({ value: amount });
+      await expect(escrow.connect(buyer).fund({ value: amount }))
+        .to.be.revertedWith("invalid funding");
+    });
+
+    it("should revert if no value is sent", async function () {
+      await expect(escrow.connect(buyer).fund({ value: 0 }))
+        .to.be.revertedWith("invalid funding");
+    });
+  });
+
+  describe("release", function () {
+    beforeEach(async function () {
+      await escrow.connect(buyer).fund({ value: amount });
+    });
+
+    it("should allow the buyer to release funds to the seller", async function () {
+      const sellerBalanceBefore = await ethers.provider.getBalance(seller.address);
+
+      await expect(escrow.connect(buyer).release())
+        .to.emit(escrow, "Released")
+        .withArgs(amount);
+
+      expect(await escrow.closed()).to.be.true;
+      expect(await ethers.provider.getBalance(await escrow.getAddress())).to.equal(0);
+      expect(await ethers.provider.getBalance(seller.address)).to.equal(sellerBalanceBefore + amount);
+    });
+
+    it("should allow the arbiter to release funds to the seller", async function () {
+      const sellerBalanceBefore = await ethers.provider.getBalance(seller.address);
+
+      await expect(escrow.connect(arbiter).release())
+        .to.emit(escrow, "Released")
+        .withArgs(amount);
+
+      expect(await escrow.closed()).to.be.true;
+      expect(await ethers.provider.getBalance(await escrow.getAddress())).to.equal(0);
+      expect(await ethers.provider.getBalance(seller.address)).to.equal(sellerBalanceBefore + amount);
+    });
+
+    it("should revert if called by non-authorized party", async function () {
+      await expect(escrow.connect(other).release())
+        .to.be.revertedWith("not authorized");
+    });
+
+    it("should revert if not funded", async function () {
+      const newEscrow = await (await ethers.getContractFactory("Escrow")).deploy(seller.address, arbiter.address);
+      await newEscrow.waitForDeployment();
+
+      await expect(newEscrow.connect(buyer).release())
+        .to.be.revertedWith("not releasable");
+    });
+
+    it("should revert if already closed", async function () {
+      await escrow.connect(buyer).release();
+      await expect(escrow.connect(buyer).release())
+        .to.be.revertedWith("not releasable");
+    });
+  });
+
+  describe("refund", function () {
+    beforeEach(async function () {
+      await escrow.connect(buyer).fund({ value: amount });
+    });
+
+    it("should allow the seller to refund the buyer", async function () {
+      const buyerBalanceBefore = await ethers.provider.getBalance(buyer.address);
+
+      await expect(escrow.connect(seller).refund())
+        .to.emit(escrow, "Refunded")
+        .withArgs(amount);
+
+      expect(await escrow.closed()).to.be.true;
+      expect(await ethers.provider.getBalance(await escrow.getAddress())).to.equal(0);
+      expect(await ethers.provider.getBalance(buyer.address)).to.be.gt(buyerBalanceBefore);
+    });
+
+    it("should allow the arbiter to refund the buyer", async function () {
+      const buyerBalanceBefore = await ethers.provider.getBalance(buyer.address);
+
+      await expect(escrow.connect(arbiter).refund())
+        .to.emit(escrow, "Refunded")
+        .withArgs(amount);
+
+      expect(await escrow.closed()).to.be.true;
+      expect(await ethers.provider.getBalance(await escrow.getAddress())).to.equal(0);
+      expect(await ethers.provider.getBalance(buyer.address)).to.be.gt(buyerBalanceBefore);
+    });
+
+    it("should revert if called by non-authorized party", async function () {
+      await expect(escrow.connect(other).refund())
+        .to.be.revertedWith("not authorized");
+    });
+
+    it("should revert if not funded", async function () {
+      const newEscrow = await (await ethers.getContractFactory("Escrow")).deploy(seller.address, arbiter.address);
+      await newEscrow.waitForDeployment();
+
+      await expect(newEscrow.connect(seller).refund())
+        .to.be.revertedWith("not refundable");
+    });
+
+    it("should revert if already closed", async function () {
+      await escrow.connect(seller).refund();
+      await expect(escrow.connect(seller).refund())
+        .to.be.revertedWith("not refundable");
+    });
+  });
+
+  describe("State changes", function () {
+    it("should not allow funding after release", async function () {
+      await escrow.connect(buyer).fund({ value: amount });
+      await escrow.connect(buyer).release();
+      await expect(escrow.connect(buyer).fund({ value: amount }))
+        .to.be.revertedWith("invalid funding");
+    });
+
+    it("should not allow funding after refund", async function () {
+      await escrow.connect(buyer).fund({ value: amount });
+      await escrow.connect(seller).refund();
+      await expect(escrow.connect(buyer).fund({ value: amount }))
+        .to.be.revertedWith("invalid funding");
+    });
+
+    it("should not allow release after refund", async function () {
+      await escrow.connect(buyer).fund({ value: amount });
+      await escrow.connect(seller).refund();
+      await expect(escrow.connect(buyer).release())
+        .to.be.revertedWith("not releasable");
+    });
+
+    it("should not allow refund after release", async function () {
+      await escrow.connect(buyer).fund({ value: amount });
+      await escrow.connect(buyer).release();
+      await expect(escrow.connect(seller).refund())
+        .to.be.revertedWith("not refundable");
+    });
+  });
+});

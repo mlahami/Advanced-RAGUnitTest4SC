@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"Adoption\", function () {\n  let adoption;\n  let owner;\n  let addr1;\n  let addr2;\n\n  beforeEach(async function () {\n    [owner, addr1, addr2] = await ethers.getSigners();\n\n    const Adoption = await ethers.getContractFactory(\"Adoption\");\n    adoption = await Adoption.deploy();\n    await adoption.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should initialize with empty adopters array\", async function () {\n      const adopters = await adoption.getAdopters();\n      expect(adopters.length).to.equal(16);\n      for (let i = 0; i < 16; i++) {\n        expect(adopters[i]).to.equal(ethers.ZeroAddress);\n      }\n    });\n  });\n\n  describe(\"Adopt\", function () {\n    it(\"Should allow adoption of a pet\", async function () {\n      const petId = 0n;\n      const tx = await adoption.connect(addr1).adopt(petId);\n      await expect(tx).to.emit(adoption, \"Adoption\").withArgs(addr1.address, petId);\n\n      const adopters = await adoption.getAdopters();\n      expect(adopters[petId]).to.equal(addr1.address);\n    });\n\n    it(\"Should revert when adopting an invalid pet ID\", async function () {\n      const invalidPetId = 16n;\n      await expect(adoption.connect(addr1).adopt(invalidPetId))\n        .to.be.revertedWith(\"invalid pet\");\n    });\n\n    it(\"Should allow multiple adoptions by different addresses\", async function () {\n      const petId1 = 0n;\n      const petId2 = 1n;\n\n      await adoption.connect(addr1).adopt(petId1);\n      await adoption.connect(addr2).adopt(petId2);\n\n      const adopters = await adoption.getAdopters();\n      expect(adopters[petId1]).to.equal(addr1.address);\n      expect(adopters[petId2]).to.equal(addr2.address);\n    });\n\n    it(\"Should allow re-adoption of a pet by the same address\", async function () {\n      const petId = 0n;\n      await adoption.connect(addr1).adopt(petId);\n      await adoption.connect(addr1).adopt(petId);\n\n      const adopters = await adoption.getAdopters();\n      expect(adopters[petId]).to.equal(addr1.address);\n    });\n\n    it(\"Should not allow re-adoption of a pet by a different address\", async function () {\n      const petId = 0n;\n      await adoption.connect(addr1).adopt(petId);\n      await adoption.connect(addr2).adopt(petId);\n\n      const adopters = await adoption.getAdopters();\n      expect(adopters[petId]).to.equal(addr2.address);\n    });\n  });\n\n  describe(\"View Functions\", function () {\n    it(\"Should return correct adopters array\", async function () {\n      await adoption.connect(addr1).adopt(0n);\n      await adoption.connect(addr2).adopt(1n);\n\n      const adopters = await adoption.getAdopters();\n      expect(adopters[0]).to.equal(addr1.address);\n      expect(adopters[1]).to.equal(addr2.address);\n      for (let i = 2; i < 16; i++) {\n        expect(adopters[i]).to.equal(ethers.ZeroAddress);\n      }\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 6.853790299966931,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 10745,
+      "total_tokens": 11502,
+      "completion_tokens": 757,
+      "prompt_tokens_details": {
+        "cached_tokens": 10624
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "fe6f6df66090fa390271199f4a44ecfb3a7cdfa480f77ecd1720d7849dd76092"
+}

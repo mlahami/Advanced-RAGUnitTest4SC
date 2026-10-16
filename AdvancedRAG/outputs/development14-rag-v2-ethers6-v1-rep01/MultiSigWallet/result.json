@@ -1,0 +1,56 @@
+{
+  "contract": "MultiSigWallet",
+  "status": "test_failures",
+  "prompt_sha256": "6b88b5f6981dd3eb7dd855229a3ffe415c6ee65720a42309152a044d9487e89d",
+  "generation_seconds": 11.255584300030023,
+  "usage": {
+    "prompt_tokens": 11038,
+    "total_tokens": 12354,
+    "completion_tokens": 1316,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.9291219000006095
+  },
+  "passed_tests": 12,
+  "failed_tests": 6,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "MultiSigWallet submit Should allow owner to submit transaction",
+      "error": "Event \"TransactionSubmitted\" doesn't exist in the contract"
+    },
+    {
+      "title": "MultiSigWallet confirm Should allow owner to confirm transaction",
+      "error": "Event \"TransactionConfirmed\" doesn't exist in the contract"
+    },
+    {
+      "title": "MultiSigWallet confirm Should revert if transaction already executed",
+      "error": "VM Exception while processing transaction: reverted with reason string 'transfer failed'"
+    },
+    {
+      "title": "MultiSigWallet execute Should allow owner to execute transaction",
+      "error": "VM Exception while processing transaction: reverted with reason string 'transfer failed'"
+    },
+    {
+      "title": "MultiSigWallet execute Should revert if transaction already executed",
+      "error": "VM Exception while processing transaction: reverted with reason string 'transfer failed'"
+    },
+    {
+      "title": "MultiSigWallet execute Should revert if transfer fails",
+      "error": "VM Exception while processing transaction: reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 90.91,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

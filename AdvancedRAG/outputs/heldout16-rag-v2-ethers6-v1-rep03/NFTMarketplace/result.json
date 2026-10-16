@@ -1,0 +1,40 @@
+{
+  "contract": "NFTMarketplace",
+  "status": "test_failures",
+  "prompt_sha256": "9a8ea4bbfee39d156f965ff6f61c41f415045ff3c89f9385f5aa213d6c153ac8",
+  "generation_seconds": 11.94710940006189,
+  "usage": {
+    "prompt_tokens": 11268,
+    "total_tokens": 12652,
+    "completion_tokens": 1384,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.617057799943723
+  },
+  "passed_tests": 4,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "NFTMarketplace list should list an NFT correctly",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Not approved'"
+    },
+    {
+      "title": "NFTMarketplace buy \"before each\" hook for \"should allow buying a listed NFT\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Not approved'"
+    }
+  ],
+  "coverage": {
+    "statements": 18.18,
+    "branches": 22.73,
+    "functions": 66.67,
+    "lines": 18.18
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

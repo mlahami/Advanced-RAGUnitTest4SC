@@ -1,0 +1,79 @@
+{
+  "id": "rag-v2.Registry",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "Registry",
+  "chunk_ids": [
+    4626,
+    258,
+    259,
+    3827,
+    3828,
+    2625,
+    2626,
+    1236,
+    1238,
+    4628
+  ],
+  "context_sha256": "6ba6c2eeea33019e2be1f84a13a3508ecda5e219c615ffd545e54c84ed226672",
+  "ratings": [
+    {
+      "chunk_id": 4626,
+      "rating": 2,
+      "reason": "Tests owner-only set, event emission, and retrieval—matches Registry's set/get behavior and events, just rename functions and types."
+    },
+    {
+      "chunk_id": 258,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests unrelated function and condition; not directly reusable for Registry’s owner check behavior."
+    },
+    {
+      "chunk_id": 259,
+      "rating": 1,
+      "reason": "Shows generic revert testing with fixture and expect.revertedWith, useful pattern but target behavior differs"
+    },
+    {
+      "chunk_id": 3827,
+      "rating": 1,
+      "reason": "Shows revert assertion pattern for access control, which can be adapted for owner‑only functions, but tests unrelated behavior."
+    },
+    {
+      "chunk_id": 3828,
+      "rating": 1,
+      "reason": "Shows generic access‑control revert test pattern, similar to owner‑only checks in Registry, but tests unrelated functionality."
+    },
+    {
+      "chunk_id": 2625,
+      "rating": 1,
+      "reason": "Only generic revert checking pattern applies; specific functions and state transitions are unrelated to Registry contract."
+    },
+    {
+      "chunk_id": 2626,
+      "rating": 1,
+      "reason": "Only generic event‑emission pattern applies; specific functions and behavior differ, so not directly reusable."
+    },
+    {
+      "chunk_id": 1236,
+      "rating": 2,
+      "reason": "Demonstrates owner‑only call and event emission pattern, directly reusable for Registry’s set function after renaming keys and event names."
+    },
+    {
+      "chunk_id": 1238,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but target contract has different functions; cannot directly reuse behavior."
+    },
+    {
+      "chunk_id": 4628,
+      "rating": 2,
+      "reason": "Shows access‑control revert test for non‑owner, matching Registry’s owner‑only set function; can be adapted by renaming and adjusting revert message."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9534,
+    "completion_tokens": 1073,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 57.5,
+  "evaluated_utc": "2026-10-12T08:51:35.016901+00:00"
+}

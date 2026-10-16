@@ -1,0 +1,155 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 8,
+    "passes": 4,
+    "pending": 0,
+    "failures": 4,
+    "start": "2026-10-01T06:23:38.174Z",
+    "end": "2026-10-01T06:23:38.693Z",
+    "duration": 519
+  },
+  "tests": [
+    {
+      "title": "Should set the correct merkle root",
+      "fullTitle": "MerkleAirdrop Deployment Should set the correct merkle root",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct token address",
+      "fullTitle": "MerkleAirdrop Deployment Should set the correct token address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should allow valid claim",
+      "fullTitle": "MerkleAirdrop Claim Should allow valid claim",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 19,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Invalid proof'\n    at MerkleAirdrop.claim (runs/heldout16-advanced-v3-ethers6-v1-rep03/MerkleAirdrop/contracts/MerkleAirdrop.sol:45)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.claim (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:69:7)"
+      }
+    },
+    {
+      "title": "Should revert when claiming twice",
+      "fullTitle": "MerkleAirdrop Claim Should revert when claiming twice",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Invalid proof'\n    at MerkleAirdrop.claim (runs/heldout16-advanced-v3-ethers6-v1-rep03/MerkleAirdrop/contracts/MerkleAirdrop.sol:45)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.claim (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:80:7)"
+      }
+    },
+    {
+      "title": "Should revert with invalid proof",
+      "fullTitle": "MerkleAirdrop Claim Should revert with invalid proof",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should revert when token transfer fails",
+      "fullTitle": "MerkleAirdrop Claim Should revert when token transfer fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 7,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'Invalid proof'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'Invalid proof'\n    at Context.<anonymous> (test\\generated.test.js:96:7)"
+      }
+    },
+    {
+      "title": "Should revert when claiming with wrong amount",
+      "fullTitle": "MerkleAirdrop Claim Should revert when claiming with wrong amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should track claimed status",
+      "fullTitle": "MerkleAirdrop State Should track claimed status",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Invalid proof'\n    at MerkleAirdrop.claim (runs/heldout16-advanced-v3-ethers6-v1-rep03/MerkleAirdrop/contracts/MerkleAirdrop.sol:45)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.claim (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:113:7)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should allow valid claim",
+      "fullTitle": "MerkleAirdrop Claim Should allow valid claim",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 19,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Invalid proof'\n    at MerkleAirdrop.claim (runs/heldout16-advanced-v3-ethers6-v1-rep03/MerkleAirdrop/contracts/MerkleAirdrop.sol:45)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.claim (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:69:7)"
+      }
+    },
+    {
+      "title": "Should revert when claiming twice",
+      "fullTitle": "MerkleAirdrop Claim Should revert when claiming twice",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Invalid proof'\n    at MerkleAirdrop.claim (runs/heldout16-advanced-v3-ethers6-v1-rep03/MerkleAirdrop/contracts/MerkleAirdrop.sol:45)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.claim (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:80:7)"
+      }
+    },
+    {
+      "title": "Should revert when token transfer fails",
+      "fullTitle": "MerkleAirdrop Claim Should revert when token transfer fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 7,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'Invalid proof'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'Invalid proof'\n    at Context.<anonymous> (test\\generated.test.js:96:7)"
+      }
+    },
+    {
+      "title": "Should track claimed status",
+      "fullTitle": "MerkleAirdrop State Should track claimed status",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Invalid proof'\n    at MerkleAirdrop.claim (runs/heldout16-advanced-v3-ethers6-v1-rep03/MerkleAirdrop/contracts/MerkleAirdrop.sol:45)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.claim (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:113:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct merkle root",
+      "fullTitle": "MerkleAirdrop Deployment Should set the correct merkle root",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct token address",
+      "fullTitle": "MerkleAirdrop Deployment Should set the correct token address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should revert with invalid proof",
+      "fullTitle": "MerkleAirdrop Claim Should revert with invalid proof",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should revert when claiming with wrong amount",
+      "fullTitle": "MerkleAirdrop Claim Should revert when claiming with wrong amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\MerkleAirdrop\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    }
+  ]
+}

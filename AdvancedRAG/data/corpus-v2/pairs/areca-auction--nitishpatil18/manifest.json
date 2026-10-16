@@ -1,0 +1,38 @@
+{
+  "id": "areca-auction--nitishpatil18",
+  "domain": "auction",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "ArecaAuction.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/nitishpatil18/areca-auction",
+    "commit": "5d3aa553f139a67a4483683a5af74d099218906e",
+    "license": "MIT",
+    "contract_paths": [
+      "blockchain/contracts/ArecaAuction.sol"
+    ],
+    "test_paths": [
+      "blockchain/test/areca.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "blockchain/contracts/ArecaAuction.sol": "e376628cc7383725ee5aec612b677e2535dbdf197c25499a74a7dacb2aef7458",
+      "blockchain/test/areca.test.js": "810fe9741e7f074a7ca4df6ac3472b1a67fccef1758a2e6a95d781db2b75a917"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "areca.test.js",
+      "upstream_path": "blockchain/test/areca.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Agricultural (areca nut) English auction: createAuction with base price/endTime, bid, withdraw outbid funds, finalize. 124 lines, no imports; 23 it blocks, 10 revert assertions. ESM test (import hre from 'hardhat'). Hardhat project in blockchain/ subfolder, MIT LICENSE at repo root (package.json says ISC). Forks exist (rahulm43/*) - original is nitishpatil18.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-29T09:56:34.023942+00:00"
+}

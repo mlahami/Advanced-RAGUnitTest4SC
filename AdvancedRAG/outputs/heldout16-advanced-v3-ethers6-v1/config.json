@@ -1,0 +1,55 @@
+{
+  "configuration": "advanced-v3-ethers6-v1",
+  "retrieval": "one query per public target function (its code); corpus functions ranked by BM25 + dense RRF fused by RRF with the cross-encoder fed with the target function code; pivot to linked tests; round-robin across target functions",
+  "top_k": 10,
+  "corpus_sha256": "e991da00b3b289db68d0f789d6a737d34342e03cbf63e228da8670584d19fd8c",
+  "prompt_policy": "frozen LLM-only ethers 6 prompt + appended retrieved corpus v2 tests; nothing else changed",
+  "fixture_version": "enase30-fixtures-v2",
+  "fixture_source": "D:\\Recherche\\ExtensionENASE2026\\workspace\\AdvancedRAG\\data\\fixtures\\v2\\BenchmarkFixtures.sol",
+  "fixture_source_sha256": "c00d4bc98b64f6f698c90ee777a2701db934787ee6c9c5be6971ed2b37d22b32",
+  "fixture_catalog_sha256": "49c1295ead1f5922606887dbbc96582a0ab920ec4713d755bb92aa052961bd39",
+  "fixture_retrieval_excluded": true,
+  "benchmark_manifest": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\data\\benchmarks\\enase30\\manifest.json",
+  "benchmark_split": "heldout-new16",
+  "protocol_version": "controlled-fixtures-v2",
+  "corrected_parent_prompt_source": "D:\\Recherche\\ExtensionENASE2026\\workspace\\AdvancedRAG\\outputs\\heldout16-llm-only-fixtures-v1",
+  "retrieval_unchanged": true,
+  "api_convention": "ethers6",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "ethers5_parent_prompt_source": "D:\\Recherche\\ExtensionENASE2026\\workspace\\AdvancedRAG\\outputs\\heldout16-llm-only-fixtures-v2",
+  "convention_replacements": [
+    {
+      "from": "Use Hardhat 2, ethers 5, Mocha and Chai, with hardhat-chai-matchers installed.",
+      "to": "Use Hardhat 2, ethers 6, Mocha and Chai, with hardhat-chai-matchers installed."
+    },
+    {
+      "from": "Use ethers.utils.parseEther, ethers.constants.MaxUint256, and contract.deployed() (ethers 5).",
+      "to": "Use ethers.parseEther, ethers.MaxUint256, await contract.waitForDeployment() and await contract.getAddress() (ethers 6)."
+    },
+    {
+      "from": "For BigNumber values use Chai equality matchers, not JavaScript number arithmetic.",
+      "to": "For uint256 values use BigInt literals (e.g. 10n) and Chai equality matchers, not JavaScript number arithmetic."
+    },
+    {
+      "from": "Use Hardhat 2, ethers 5, Mocha and hardhat-chai-matchers. No external helper files.",
+      "to": "Use Hardhat 2, ethers 6, Mocha and hardhat-chai-matchers. No external helper files."
+    }
+  ],
+  "max_context_chars": 15000,
+  "parent_prompt_source": "D:\\Recherche\\ExtensionENASE2026\\workspace\\AdvancedRAG\\outputs\\heldout16-llm-only-ethers6-v1",
+  "query": "frozen server query from the ethers 6 request (query view: full)",
+  "delivered_units": "test cases with their setup only (function -> test pivot, 2 tests per function)",
+  "corpus": "corpus-v2",
+  "corpus_v2_sha256": "5cabf7d044a083ebddfb2477ea8f13a607464cfa32adc9e64d751935a1f85d4b",
+  "corpus_path": "D:\\Recherche\\ExtensionENASE2026\\workspace\\AdvancedRAG\\data\\corpus-v2\\CORPUS_FROZEN.json",
+  "index_version": "corpus-v2-units-v1",
+  "chunk_catalogue_sha256": "0527a5cb1025a82275f445afd37fc62d3a0836fd8d3c2605945f297cfee680d2",
+  "index_entries": 7773,
+  "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+  "grounding": null,
+  "reranker_path": "D:\\Recherche\\ExtensionENASE2026\\workspace\\AdvancedRAG\\models\\ms-marco-MiniLM-L-6-v2",
+  "per_target": 8,
+  "candidates_per_branch": 50,
+  "rrf_constant": 60,
+  "defined_utc": "2026-10-01, before any held-out generation"
+}

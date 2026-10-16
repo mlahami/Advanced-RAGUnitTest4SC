@@ -1,0 +1,1697 @@
+You are a Solidity QA engineer. Generate one executable JavaScript test file.
+Use Hardhat 2, ethers 6, Mocha and Chai, with hardhat-chai-matchers installed.
+Import const { expect } = require("chai"); and const { ethers } = require("hardhat");
+Use ethers.parseEther, ethers.MaxUint256, await contract.waitForDeployment() and await contract.getAddress() (ethers 6).
+Deploy a fresh instance in beforeEach, passing the actual constructor arguments.
+Test the supplied contract's functions, state changes, events, boundaries and relevant reverts.
+Do not assume get/set functions exist. Do not invent functions, events or error messages.
+Use only the declared benchmark fixtures when an external dependency is required; do not reference other helper files or undeclared mock contracts.
+For uint256 values use BigInt literals (e.g. 10n) and Chai equality matchers, not JavaScript number arithmetic.
+Return only complete JavaScript code, without explanations or Markdown.
+
+USER TASK AND TARGET CONTRACT
+context: Generate a unit test suite for the supplied Solidity contract.
+
+generalInstructions: Use Hardhat 2, ethers 6, Mocha and hardhat-chai-matchers. No external helper files.
+
+requirements: Cover actual public functions, state changes, events, access restrictions, relevant boundaries and revert conditions. Use fresh deployments. Do not invent behavior.
+
+exampleTest: 
+
+solidityCode: // SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/**
+ * @title InsurancePool
+ * @notice Parametric insurance pool.
+ *         - Liquidity providers stake ETH to earn premiums.
+ *         - Policyholders pay a premium for coverage up to a cap.
+ *         - A trusted oracle (owner) triggers payouts on-chain.
+ *         - LP shares are tracked proportionally.
+ * Complexity: Complex
+ */
+contract InsurancePool {
+    struct Policy {
+        address holder;
+        uint256 coverage;   // max payout
+        uint256 premium;    // paid upfront
+        uint256 expiry;     // timestamp
+        bool    active;
+        bool    claimed;
+    }
+
+    struct LPPosition {
+        uint256 deposited;
+        uint256 rewardDebt; // snapshot of rewardPerShare at deposit
+    }
+
+    address public owner;
+    uint256 public totalLiquidity;
+    uint256 public totalCoverage;    // sum of active policy coverage
+    uint256 public rewardPerShare;   // scaled by 1e18
+    uint256 public constant SCALE = 1e18;
+
+    Policy[] public policies;
+    mapping(address => LPPosition) public lpPositions;
+    mapping(address => uint256)    public pendingRewards;
+
+    event Deposited(address indexed lp, uint256 amount);
+    event Withdrawn(address indexed lp, uint256 amount);
+    event PolicyPurchased(uint256 indexed policyId, address indexed holder, uint256 coverage, uint256 premium, uint256 expiry);
+    event Claimed(uint256 indexed policyId, address indexed holder, uint256 payout);
+    event PolicyExpired(uint256 indexed policyId);
+
+    modifier onlyOwner() { require(msg.sender == owner, "Not owner"); _; }
+
+    constructor() { owner = msg.sender; }
+
+    // â”€â”€â”€ LP actions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function deposit() external payable {
+        require(msg.value > 0, "Zero deposit");
+        _updateRewards(msg.sender);
+        lpPositions[msg.sender].deposited += msg.value;
+        totalLiquidity += msg.value;
+        emit Deposited(msg.sender, msg.value);
+    }
+
+    function withdraw(uint256 amount) external {
+        LPPosition storage pos = lpPositions[msg.sender];
+        require(pos.deposited >= amount, "Insufficient deposit");
+        require(totalLiquidity - amount >= totalCoverage, "Undercollateralized");
+        _updateRewards(msg.sender);
+        pos.deposited  -= amount;
+        totalLiquidity -= amount;
+        (bool ok,) = msg.sender.call{value: amount}("");
+        require(ok, "Transfer failed");
+        emit Withdrawn(msg.sender, amount);
+    }
+
+    function claimRewards() external {
+        _updateRewards(msg.sender);
+        uint256 reward = pendingRewards[msg.sender];
+        require(reward > 0, "No rewards");
+        pendingRewards[msg.sender] = 0;
+        (bool ok,) = msg.sender.call{value: reward}("");
+        require(ok, "Transfer failed");
+    }
+
+    // â”€â”€â”€ Policy actions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function buyPolicy(uint256 coverage, uint256 durationSeconds) external payable returns (uint256 policyId) {
+        require(coverage > 0, "Zero coverage");
+        require(totalLiquidity >= totalCoverage + coverage, "Insufficient pool");
+        uint256 premium = msg.value;
+        require(premium > 0, "No premium");
+
+        uint256 expiry = block.timestamp + durationSeconds;
+        policyId = policies.length;
+        policies.push(Policy({
+            holder:  msg.sender,
+            coverage: coverage,
+            premium:  premium,
+            expiry:   expiry,
+            active:   true,
+            claimed:  false
+        }));
+        totalCoverage += coverage;
+
+        // Distribute premium to LPs
+        if (totalLiquidity > 0) {
+            rewardPerShare += (premium * SCALE) / totalLiquidity;
+        }
+
+        emit PolicyPurchased(policyId, msg.sender, coverage, premium, expiry);
+    }
+
+    // â”€â”€â”€ Oracle-triggered payout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function triggerClaim(uint256 policyId) external onlyOwner {
+        Policy storage p = policies[policyId];
+        require(p.active && !p.claimed, "Not claimable");
+        require(block.timestamp <= p.expiry, "Policy expired");
+
+        p.claimed = true;
+        p.active  = false;
+        totalCoverage  -= p.coverage;
+        totalLiquidity -= p.coverage;
+
+        (bool ok,) = p.holder.call{value: p.coverage}("");
+        require(ok, "Payout failed");
+        emit Claimed(policyId, p.holder, p.coverage);
+    }
+
+    function expirePolicy(uint256 policyId) external {
+        Policy storage p = policies[policyId];
+        require(p.active && !p.claimed, "Not active");
+        require(block.timestamp > p.expiry, "Not expired");
+        p.active = false;
+        totalCoverage -= p.coverage;
+        emit PolicyExpired(policyId);
+    }
+
+    // â”€â”€â”€ Internal â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+    function _updateRewards(address lp) internal {
+        LPPosition storage pos = lpPositions[lp];
+        uint256 accrued = (pos.deposited * (rewardPerShare - pos.rewardDebt)) / SCALE;
+        pendingRewards[lp]  += accrued;
+        pos.rewardDebt       = rewardPerShare;
+    }
+
+    function policyCount() external view returns (uint256) { return policies.length; }
+}
+
+BENCHMARK FIXTURES (identical for every experimental configuration):
+The following precompiled auxiliary contracts are available by the exact canonical names below.
+Use them only when the target requires an external dependency. Do not invent aliases, other mocks,
+helper files, functions, or constructor signatures. Deploy and initialize a fresh fixture in beforeEach.
+These fixtures are test infrastructure; they are not retrieved evidence and do not describe target behavior.
+FIXTURE CATALOG:
+{
+  "fixture_version": "enase30-fixtures-v2",
+  "retrieval_policy": "excluded-from-all-retrieval-corpora",
+  "contracts": [
+    {
+      "name": "BenchmarkERC20",
+      "constructor": [
+        "string name",
+        "string symbol"
+      ],
+      "setup": "mint(account, amount), then approve(spender, amount) from that account when required",
+      "capabilities": [
+        "mint",
+        "burnFrom",
+        "transfer",
+        "transferFrom",
+        "approve",
+        "balanceOf",
+        "allowance"
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "name_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "allowance",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "burnFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "decimals",
+          "outputs": [
+            {
+              "internalType": "uint8",
+              "name": "",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transfer",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "name": "BenchmarkVotingToken",
+      "constructor": [
+        "string name",
+        "string symbol"
+      ],
+      "setup": "mint(voter, votingWeight)",
+      "capabilities": [
+        "mint",
+        "balanceOf",
+        "transfer",
+        "transferFrom",
+        "approve"
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "name_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "allowance",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "burnFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "decimals",
+          "outputs": [
+            {
+              "internalType": "uint8",
+              "name": "",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transfer",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "name": "BenchmarkERC721",
+      "constructor": [
+        "string name",
+        "string symbol"
+      ],
+      "setup": "mint(owner, tokenId), then approve(spender, tokenId) from the owner when required",
+      "capabilities": [
+        "mint",
+        "ownerOf",
+        "getApproved",
+        "approve",
+        "setApprovalForAll",
+        "transferFrom",
+        "safeTransferFrom"
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "name_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "approved",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool"
+            }
+          ],
+          "name": "ApprovalForAll",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "approved",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "getApproved",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "isApprovedForAll",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "ownerOf",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "safeTransferFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool"
+            }
+          ],
+          "name": "setApprovalForAll",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "name": "BenchmarkTarget",
+      "constructor": [],
+      "setup": "none",
+      "capabilities": [
+        "setValue",
+        "value",
+        "fail"
+      ],
+      "abi": [
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "ValueSet",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "fail",
+          "outputs": [],
+          "stateMutability": "pure",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "value_",
+              "type": "uint256"
+            }
+          ],
+          "name": "setValue",
+          "outputs": [],
+          "stateMutability": "payable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "value",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ]
+    }
+  ],
+  "compiler": "0.8.24+commit.e11b9ed9.Emscripten.clang"
+}
+FIXTURE SOURCE (authoritative for fixture behavior and revert conditions):
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+/// @notice Frozen auxiliary contracts available to every evaluated configuration.
+/// They are test infrastructure and are never indexed by the retriever.
+contract BenchmarkERC20 {
+    string public name;
+    string public symbol;
+    uint8 public constant decimals = 18;
+    uint256 public totalSupply;
+    mapping(address => uint256) public balanceOf;
+    mapping(address => mapping(address => uint256)) public allowance;
+
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+
+    constructor(string memory name_, string memory symbol_) {
+        name = name_;
+        symbol = symbol_;
+    }
+
+    function mint(address to, uint256 amount) external {
+        require(to != address(0), "zero address");
+        totalSupply += amount;
+        balanceOf[to] += amount;
+        emit Transfer(address(0), to, amount);
+    }
+
+    function approve(address spender, uint256 amount) external returns (bool) {
+        allowance[msg.sender][spender] = amount;
+        emit Approval(msg.sender, spender, amount);
+        return true;
+    }
+
+    function transfer(address to, uint256 amount) external returns (bool) {
+        _transfer(msg.sender, to, amount);
+        return true;
+    }
+
+    function transferFrom(address from, address to, uint256 amount) external returns (bool) {
+        uint256 permitted = allowance[from][msg.sender];
+        if (permitted != type(uint256).max) {
+            require(permitted >= amount, "insufficient allowance");
+            allowance[from][msg.sender] = permitted - amount;
+            emit Approval(from, msg.sender, allowance[from][msg.sender]);
+        }
+        _transfer(from, to, amount);
+        return true;
+    }
+
+    function burnFrom(address from, uint256 amount) external {
+        uint256 permitted = allowance[from][msg.sender];
+        if (msg.sender != from && permitted != type(uint256).max) {
+            require(permitted >= amount, "insufficient allowance");
+            allowance[from][msg.sender] = permitted - amount;
+        }
+        require(balanceOf[from] >= amount, "insufficient balance");
+        balanceOf[from] -= amount;
+        totalSupply -= amount;
+        emit Transfer(from, address(0), amount);
+    }
+
+    function _transfer(address from, address to, uint256 amount) internal {
+        require(to != address(0), "zero address");
+        require(balanceOf[from] >= amount, "insufficient balance");
+        balanceOf[from] -= amount;
+        balanceOf[to] += amount;
+        emit Transfer(from, to, amount);
+    }
+}
+
+contract BenchmarkVotingToken is BenchmarkERC20 {
+    constructor(string memory name_, string memory symbol_) BenchmarkERC20(name_, symbol_) {}
+}
+
+contract BenchmarkERC721 {
+    string public name;
+    string public symbol;
+    mapping(uint256 => address) private _ownerOf;
+    mapping(uint256 => address) private _approved;
+    mapping(address => mapping(address => bool)) public isApprovedForAll;
+
+    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
+    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);
+    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);
+
+    constructor(string memory name_, string memory symbol_) {
+        name = name_;
+        symbol = symbol_;
+    }
+
+    function ownerOf(uint256 tokenId) public view returns (address) {
+        address owner = _ownerOf[tokenId];
+        require(owner != address(0), "nonexistent token");
+        return owner;
+    }
+
+    function mint(address to, uint256 tokenId) external {
+        require(to != address(0) && _ownerOf[tokenId] == address(0), "invalid mint");
+        _ownerOf[tokenId] = to;
+        emit Transfer(address(0), to, tokenId);
+    }
+
+    function getApproved(uint256 tokenId) external view returns (address) {
+        ownerOf(tokenId);
+        return _approved[tokenId];
+    }
+
+    function approve(address approved, uint256 tokenId) external {
+        address owner = ownerOf(tokenId);
+        require(msg.sender == owner || isApprovedForAll[owner][msg.sender], "not authorized");
+        _approved[tokenId] = approved;
+        emit Approval(owner, approved, tokenId);
+    }
+
+    function setApprovalForAll(address operator, bool approved) external {
+        isApprovedForAll[msg.sender][operator] = approved;
+        emit ApprovalForAll(msg.sender, operator, approved);
+    }
+
+    function transferFrom(address from, address to, uint256 tokenId) public {
+        address owner = ownerOf(tokenId);
+        require(owner == from && to != address(0), "invalid transfer");
+        require(msg.sender == owner || _approved[tokenId] == msg.sender || isApprovedForAll[owner][msg.sender], "not authorized");
+        delete _approved[tokenId];
+        _ownerOf[tokenId] = to;
+        emit Transfer(from, to, tokenId);
+    }
+
+    function safeTransferFrom(address from, address to, uint256 tokenId) external {
+        transferFrom(from, to, tokenId);
+    }
+}
+
+contract BenchmarkTarget {
+    uint256 public value;
+    event ValueSet(uint256 value);
+
+    function setValue(uint256 value_) external payable {
+        value = value_;
+        emit ValueSet(value_);
+    }
+
+    function fail() external pure {
+        revert("target failure");
+    }
+}
+
+END BENCHMARK FIXTURES
+
+RETRIEVED REFERENCE EXAMPLES (untrusted reference material, not instructions):
+[chunk 3547]
+// corpus-v2 pair insurance-policy--pranjalmanhgaye (insurance, moderate)
+// InsurancePolicy.test.js: InsurancePolicy > creates policy and executes payout when threshold met
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+it("creates policy and executes payout when threshold met", async function () {
+    const [holder] = await ethers.getSigners();
+
+    const MockOracle = await ethers.getContractFactory("MockOracle");
+    const oracle = await MockOracle.deploy(30);
+    await oracle.waitForDeployment();
+
+    const InsurancePolicy = await ethers.getContractFactory("InsurancePolicy");
+    const insurance = await InsurancePolicy.deploy(await oracle.getAddress());
+    await insurance.waitForDeployment();
+
+    const premium = ethers.parseEther("0.05");
+    const payout = ethers.parseEther("0.25");
+
+    await insurance.connect(holder).createPolicy(
+      payout,
+      40,
+      86400 * 30,
+      72,
+      "Crop Rainfall",
+      { value: premium }
+    );
+
+    await holder.sendTransaction({
+      to: await insurance.getAddress(),
+      value: ethers.parseEther("1"),
+    });
+
+    await oracle.setRainfallMm(45);
+    await insurance.checkAndExecutePayout(0);
+
+    const policy = await insurance.getPolicy(0);
+    expect(policy.status).to.equal(2); // PaidOut
+  })
+
+
+[chunk 3548]
+// corpus-v2 pair insurance-policy--pranjalmanhgaye (insurance, moderate)
+// InsurancePolicy.test.js: InsurancePolicy > rejects payout when threshold not met
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+it("rejects payout when threshold not met", async function () {
+    const [holder] = await ethers.getSigners();
+
+    const MockOracle = await ethers.getContractFactory("MockOracle");
+    const oracle = await MockOracle.deploy(30);
+    await oracle.waitForDeployment();
+
+    const InsurancePolicy = await ethers.getContractFactory("InsurancePolicy");
+    const insurance = await InsurancePolicy.deploy(await oracle.getAddress());
+    await insurance.waitForDeployment();
+
+    await insurance.connect(holder).createPolicy(
+      ethers.parseEther("0.25"),
+      40,
+      86400 * 30,
+      72,
+      "Crop Rainfall",
+      { value: ethers.parseEther("0.05") }
+    );
+
+    await expect(insurance.checkAndExecutePayout(0)).to.be.revertedWith(
+      "Threshold not met"
+    );
+  })
+
+
+[chunk 7627]
+// corpus-v2 pair weather-shield-insurance--hassanmubiru (insurance, complex)
+// WeatherShield.test.js: PolicyFactory > Templates > Should create policy from template
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+const { time } = require("@nomicfoundation/hardhat-network-helpers");
+let flareDataConnector;
+let weatherShieldInsurance;
+let policyFactory;
+let owner;
+let farmer;
+let treasury;
+let testLocationHash;
+// beforeEach of suite "PolicyFactory"
+beforeEach(async function () {
+    [owner, farmer, treasury] = await ethers.getSigners();
+
+    const FlareDataConnector = await ethers.getContractFactory("FlareDataConnector");
+    flareDataConnector = await FlareDataConnector.deploy();
+    await flareDataConnector.waitForDeployment();
+
+    const WeatherShieldInsurance = await ethers.getContractFactory("WeatherShieldInsurance");
+    weatherShieldInsurance = await WeatherShieldInsurance.deploy(
+      await flareDataConnector.getAddress(),
+      treasury.address
+    );
+    await weatherShieldInsurance.waitForDeployment();
+
+    const PolicyFactory = await ethers.getContractFactory("PolicyFactory");
+    policyFactory = await PolicyFactory.deploy(await weatherShieldInsurance.getAddress());
+    await policyFactory.waitForDeployment();
+
+    testLocationHash = await flareDataConnector.createLocationHash(41900000, -93100000);
+
+    // Fund treasury
+    await weatherShieldInsurance.fundTreasury({ value: ethers.parseEther("10") });
+  })
+it("Should create policy from template", async function () {
+      const baseCoverage = ethers.parseEther("1");
+      const premium = await policyFactory.estimatePremium(1, baseCoverage);
+
+      await policyFactory.connect(farmer).createPolicyFromTemplate(
+        1, // Drought protection template
+        testLocationHash,
+        baseCoverage,
+        "Wheat",
+        30000,
+        { value: premium }
+      );
+
+      const policyCount = await weatherShieldInsurance.getPolicyCount();
+      expect(policyCount).to.equal(1);
+    })
+
+
+[chunk 7604]
+// corpus-v2 pair weather-shield-insurance--hassanmubiru (insurance, complex)
+// WeatherShield.test.js: WeatherShieldInsurance > Policy Creation > Should reject insufficient premium
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+const { time } = require("@nomicfoundation/hardhat-network-helpers");
+let flareDataConnector;
+let weatherShieldInsurance;
+let weatherOracle;
+let owner;
+let farmer1;
+let farmer2;
+let treasury;
+const TRIGGER_TYPES = {
+    RainfallBelow: 0,
+    RainfallAbove: 1,
+    TemperatureBelow: 2,
+    TemperatureAbove: 3,
+    WindSpeedAbove: 4,
+  };
+let testLocationHash;
+// beforeEach of suite "WeatherShieldInsurance"
+beforeEach(async function () {
+    [owner, farmer1, farmer2, treasury] = await ethers.getSigners();
+
+    // Deploy FlareDataConnector
+    const FlareDataConnector = await ethers.getContractFactory("FlareDataConnector");
+    flareDataConnector = await FlareDataConnector.deploy();
+    await flareDataConnector.waitForDeployment();
+
+    // Deploy WeatherShieldInsurance
+    const WeatherShieldInsurance = await ethers.getContractFactory("WeatherShieldInsurance");
+    weatherShieldInsurance = await WeatherShieldInsurance.deploy(
+      await flareDataConnector.getAddress(),
+      treasury.address
+    );
+    await weatherShieldInsurance.waitForDeployment();
+
+    // Deploy WeatherOracle
+    const WeatherOracle = await ethers.getContractFactory("WeatherOracle");
+    weatherOracle = await WeatherOracle.deploy(await flareDataConnector.getAddress());
+    await weatherOracle.waitForDeployment();
+
+    // Authorize oracle as FDC provider
+    await flareDataConnector.authorizeProvider(await weatherOracle.getAddress());
+
+    // Create test location hash
+    testLocationHash = await flareDataConnector.createLocationHash(41900000, -93100000);
+
+    // Fund treasury
+    await weatherShieldInsurance.fundTreasury({ value: ethers.parseEther("10") });
+  })
+it("Should reject insufficient premium", async function () {
+      const coverageAmount = ethers.parseEther("1");
+      const duration = 30 * 24 * 60 * 60;
+
+      await expect(
+        weatherShieldInsurance.connect(farmer1).createPolicy(
+          testLocationHash,
+          TRIGGER_TYPES.RainfallBelow,
+          5000,
+          coverageAmount,
+          duration,
+          "Corn",
+          50000,
+          { value: ethers.parseEther("0.0001") } // Too low
+        )
+      ).to.be.revertedWith("WS: insufficient premium");
+    })
+
+
+[chunk 7605]
+// corpus-v2 pair weather-shield-insurance--hassanmubiru (insurance, complex)
+// WeatherShield.test.js: WeatherShieldInsurance > Policy Creation > Should reject coverage below minimum
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+const { time } = require("@nomicfoundation/hardhat-network-helpers");
+let flareDataConnector;
+let weatherShieldInsurance;
+let weatherOracle;
+let owner;
+let farmer1;
+let farmer2;
+let treasury;
+const TRIGGER_TYPES = {
+    RainfallBelow: 0,
+    RainfallAbove: 1,
+    TemperatureBelow: 2,
+    TemperatureAbove: 3,
+    WindSpeedAbove: 4,
+  };
+let testLocationHash;
+// beforeEach of suite "WeatherShieldInsurance"
+beforeEach(async function () {
+    [owner, farmer1, farmer2, treasury] = await ethers.getSigners();
+
+    // Deploy FlareDataConnector
+    const FlareDataConnector = await ethers.getContractFactory("FlareDataConnector");
+    flareDataConnector = await FlareDataConnector.deploy();
+    await flareDataConnector.waitForDeployment();
+
+    // Deploy WeatherShieldInsurance
+    const WeatherShieldInsurance = await ethers.getContractFactory("WeatherShieldInsurance");
+    weatherShieldInsurance = await WeatherShieldInsurance.deploy(
+      await flareDataConnector.getAddress(),
+      treasury.address
+    );
+    await weatherShieldInsurance.waitForDeployment();
+
+    // Deploy WeatherOracle
+    const WeatherOracle = await ethers.getContractFactory("WeatherOracle");
+    weatherOracle = await WeatherOracle.deploy(await flareDataConnector.getAddress());
+    await weatherOracle.waitForDeployment();
+
+    // Authorize oracle as FDC provider
+    await flareDataConnector.authorizeProvider(await weatherOracle.getAddress());
+
+    // Create test location hash
+    testLocationHash = await flareDataConnector.createLocationHash(41900000, -93100000);
+
+    // Fund treasury
+    await weatherShieldInsurance.fundTreasury({ value: ethers.parseEther("10") });
+  })
+it("Should reject coverage below minimum", async function () {
+      await expect(
+        weatherShieldInsurance.connect(farmer1).createPolicy(
+          testLocationHash,
+          TRIGGER_TYPES.RainfallBelow,
+          5000,
+          ethers.parseEther("0.001"), // Below min
+          30 * 24 * 60 * 60,
+          "Corn",
+          50000,
+          { value: ethers.parseEther("0.1") }
+        )
+      ).to.be.revertedWith("WS: coverage too low");
+    })
+
+
+[chunk 7603]
+// corpus-v2 pair weather-shield-insurance--hassanmubiru (insurance, complex)
+// WeatherShield.test.js: WeatherShieldInsurance > Policy Creation > Should create a policy with correct parameters
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+const { time } = require("@nomicfoundation/hardhat-network-helpers");
+let flareDataConnector;
+let weatherShieldInsurance;
+let weatherOracle;
+let owner;
+let farmer1;
+let farmer2;
+let treasury;
+const TRIGGER_TYPES = {
+    RainfallBelow: 0,
+    RainfallAbove: 1,
+    TemperatureBelow: 2,
+    TemperatureAbove: 3,
+    WindSpeedAbove: 4,
+  };
+const POLICY_STATUS = {
+    Active: 0,
+    Expired: 1,
+    ClaimPaid: 2,
+    Cancelled: 3,
+  };
+let testLocationHash;
+// beforeEach of suite "WeatherShieldInsurance"
+beforeEach(async function () {
+    [owner, farmer1, farmer2, treasury] = await ethers.getSigners();
+
+    // Deploy FlareDataConnector
+    const FlareDataConnector = await ethers.getContractFactory("FlareDataConnector");
+    flareDataConnector = await FlareDataConnector.deploy();
+    await flareDataConnector.waitForDeployment();
+
+    // Deploy WeatherShieldInsurance
+    const WeatherShieldInsurance = await ethers.getContractFactory("WeatherShieldInsurance");
+    weatherShieldInsurance = await WeatherShieldInsurance.deploy(
+      await flareDataConnector.getAddress(),
+      treasury.address
+    );
+    await weatherShieldInsurance.waitForDeployment();
+
+    // Deploy WeatherOracle
+    const WeatherOracle = await ethers.getContractFactory("WeatherOracle");
+    weatherOracle = await WeatherOracle.deploy(await flareDataConnector.getAddress());
+    await weatherOracle.waitForDeployment();
+
+    // Authorize oracle as FDC provider
+    await flareDataConnector.authorizeProvider(await weatherOracle.getAddress());
+
+    // Create test location hash
+    testLocationHash = await flareDataConnector.createLocationHash(41900000, -93100000);
+
+    // Fund treasury
+    await weatherShieldInsurance.fundTreasury({ value: ethers.parseEther("10") });
+  })
+it("Should create a policy with correct parameters", async function () {
+      const coverageAmount = ethers.parseEther("1");
+      const duration = 30 * 24 * 60 * 60; // 30 days
+      const premium = await weatherShieldInsurance.calculatePremium(
+        coverageAmount,
+        duration,
+        TRIGGER_TYPES.RainfallBelow
+      );
+
+      await expect(
+        weatherShieldInsurance.connect(farmer1).createPolicy(
+          testLocationHash,
+          TRIGGER_TYPES.RainfallBelow,
+          5000, // 50mm threshold
+          coverageAmount,
+          duration,
+          "Corn",
+          50000, // 500 hectares
+          { value: premium }
+        )
+      )
+        .to.emit(weatherShieldInsurance, "PolicyCreated")
+        .withArgs(1, farmer1.address, testLocationHash);
+
+      const policy = await weatherShieldInsurance.getPolicy(1);
+      expect(policy.policyholder).to.equal(farmer1.address);
+      expect(policy.locationHash).to.equal(testLocationHash);
+      expect(policy.triggerType).to.equal(TRIGGER_TYPES.RainfallBelow);
+      expect(policy.triggerThreshold).to.equal(5000);
+      expect(policy.coverageAmount).to.equal(coverageAmount);
+      expect(policy.status).to.equal(POLICY_STATUS.Active);
+      expect(policy.cropType).to.equal("Corn");
+      expect(policy.farmSize).to.equal(50000);
+    })
+
+
+[chunk 5905]
+// corpus-v2 pair rolling-pot-game--romankytseniuk (games-lotteries, complex)
+// RollingPotGame.test.js: RollingPotGame (unit) > prevents claim() reentrancy
+const { expect } = require("chai");
+const { ethers, network } = require("hardhat");
+async function increaseTime(seconds) {
+  await network.provider.send("evm_increaseTime", [seconds]);
+  await network.provider.send("evm_mine");
+}
+async function deployInitializedGame(params
+ )
+{
+  const [deployer] = await ethers.getSigners();
+
+  const providerFactory = await ethers.getContractFactory("MockRandomnessProvider");
+  const provider = (await providerFactory.deploy());
+
+  const gameFactory = await ethers.getContractFactory("RollingPotGame");
+  const game = (await gameFactory.deploy());
+
+  await game
+    .connect(deployer)
+    .initialize(
+      params.roundDurationSeconds,
+      params.capPerRound,
+      params.resolveProbabilityBps,
+      params.feeBps,
+      params.feeStartRound,
+      deployer.address,
+      params.baseEntryPriceWei,
+      params.entryPriceIncrementWei,
+      params.randomnessTimeoutSeconds,
+      await provider.getAddress(),
+      { value: params.seedWei }
+    );
+
+  return { game, provider };
+}
+it("prevents claim() reentrancy", async function () {
+    const { game, provider } = await deployInitializedGame({
+      roundDurationSeconds: 30,
+      capPerRound: 3,
+      resolveProbabilityBps: 10_000,
+      feeBps: 0,
+      feeStartRound: 0,
+      baseEntryPriceWei: 2n,
+      entryPriceIncrementWei: 0n,
+      randomnessTimeoutSeconds: 10,
+      seedWei: 0n
+    });
+
+    const [deployer] = await ethers.getSigners();
+    const claimerFactory = await ethers.getContractFactory("ReentrantClaimer");
+    const claimer = await claimerFactory.connect(deployer).deploy();
+    await claimer.waitForDeployment();
+    await claimer.setGame(await game.getAddress());
+
+    await claimer.joinGame({ value: 2n });
+
+    await increaseTime(31);
+    await game.closeRound();
+    const requestId = await game.activeRequestId();
+    await provider.fulfillRequest(requestId, 0n);
+
+    expect(await game.claimableWei(await claimer.getAddress())).to.equal(2n);
+    await expect(() => claimer.claimFromGame()).to.changeEtherBalance(claimer, 2n);
+    expect(await game.claimableWei(await claimer.getAddress())).to.equal(0n);
+  })

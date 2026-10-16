@@ -1,0 +1,29 @@
+{
+  "id": "nftmarketplace--donguillotine",
+  "domain": "nft-marketplace",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "NFTMarketplace.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/DonGuillotine/nft_marketplace_contract",
+    "commit": "59bce47fc2a9a8191e170ee9e9161894a2d631cd",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/NFTMarketplace.sol"
+    ],
+    "test_paths": [
+      "test/NFTMarketplace.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/NFTMarketplace.sol": "81c31522c9eb8ff4d9d2d1171654dac4f920927841ffdb18ba839f271fa46f24",
+      "test/NFTMarketplace.js": "1eeafb47fbb54ab28da1dcc8569943d2d0e11d58f022aeab9ba708bd1e250096"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "same name as benchmark NFTMarketplace; 19 its",
+  "imported_utc": "2026-09-27T21:50:18.981852+00:00"
+}

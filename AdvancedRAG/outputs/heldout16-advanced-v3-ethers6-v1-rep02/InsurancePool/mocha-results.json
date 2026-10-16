@@ -1,0 +1,317 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 20,
+    "passes": 17,
+    "pending": 0,
+    "failures": 3,
+    "start": "2026-10-01T06:17:06.351Z",
+    "end": "2026-10-01T06:17:07.024Z",
+    "duration": 673
+  },
+  "tests": [
+    {
+      "title": "Should allow ETH deposit and emit Deposited event",
+      "fullTitle": "InsurancePool LP Actions Should allow ETH deposit and emit Deposited event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 23,
+      "err": {}
+    },
+    {
+      "title": "Should revert on zero deposit",
+      "fullTitle": "InsurancePool LP Actions Should revert on zero deposit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should allow ETH withdrawal and emit Withdrawn event",
+      "fullTitle": "InsurancePool LP Actions Should allow ETH withdrawal and emit Withdrawn event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "Should revert on insufficient deposit",
+      "fullTitle": "InsurancePool LP Actions Should revert on insufficient deposit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should revert on undercollateralized withdrawal",
+      "fullTitle": "InsurancePool LP Actions Should revert on undercollateralized withdrawal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should allow claiming rewards",
+      "fullTitle": "InsurancePool LP Actions Should allow claiming rewards",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should revert on claiming zero rewards",
+      "fullTitle": "InsurancePool LP Actions Should revert on claiming zero rewards",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should allow buying a policy and emit PolicyPurchased event",
+      "fullTitle": "InsurancePool Policy Actions Should allow buying a policy and emit PolicyPurchased event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 27,
+      "err": {}
+    },
+    {
+      "title": "Should revert on zero coverage",
+      "fullTitle": "InsurancePool Policy Actions Should revert on zero coverage",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert on insufficient pool liquidity",
+      "fullTitle": "InsurancePool Policy Actions Should revert on insufficient pool liquidity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should revert on zero premium",
+      "fullTitle": "InsurancePool Policy Actions Should revert on zero premium",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 4,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'\n    at Context.<anonymous> (test\\generated.test.js:142:7)"
+      }
+    },
+    {
+      "title": "Should allow owner to trigger a claim and emit Claimed event",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should allow owner to trigger a claim and emit Claimed event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 20,
+      "err": {
+        "message": "expected 10000099999999999094203 to equal 10000099999999999037365.",
+        "stack": "AssertionError: expected 10000099999999999094203 to equal 10000099999999999037365.\n    at Context.<anonymous> (test\\generated.test.js:171:31)"
+      }
+    },
+    {
+      "title": "Should revert on non-owner trying to trigger claim",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should revert on non-owner trying to trigger claim",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should revert on trying to claim an already claimed policy",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should revert on trying to claim an already claimed policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "Should revert on trying to claim an expired policy",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should revert on trying to claim an expired policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should allow expiring a policy and emit PolicyExpired event",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should allow expiring a policy and emit PolicyExpired event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "Should revert on trying to expire an already claimed policy",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should revert on trying to expire an already claimed policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should revert on trying to expire an active policy that hasn't expired yet",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should revert on trying to expire an active policy that hasn't expired yet",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should correctly distribute rewards to LPs",
+      "fullTitle": "InsurancePool Reward Distribution Should correctly distribute rewards to LPs",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 20,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Zero deposit'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Zero deposit'\n    at InsurancePool.deposit (runs/heldout16-advanced-v3-ethers6-v1-rep02/InsurancePool/contracts/InsurancePool.sol:77)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.deposit (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:296:7)"
+      }
+    },
+    {
+      "title": "Should handle reward distribution when totalLiquidity is zero",
+      "fullTitle": "InsurancePool Reward Distribution Should handle reward distribution when totalLiquidity is zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should revert on zero premium",
+      "fullTitle": "InsurancePool Policy Actions Should revert on zero premium",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 4,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'No premium', but it reverted with reason 'Insufficient pool'\n    at Context.<anonymous> (test\\generated.test.js:142:7)"
+      }
+    },
+    {
+      "title": "Should allow owner to trigger a claim and emit Claimed event",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should allow owner to trigger a claim and emit Claimed event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 20,
+      "err": {
+        "message": "expected 10000099999999999094203 to equal 10000099999999999037365.",
+        "stack": "AssertionError: expected 10000099999999999094203 to equal 10000099999999999037365.\n    at Context.<anonymous> (test\\generated.test.js:171:31)"
+      }
+    },
+    {
+      "title": "Should correctly distribute rewards to LPs",
+      "fullTitle": "InsurancePool Reward Distribution Should correctly distribute rewards to LPs",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 20,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Zero deposit'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Zero deposit'\n    at InsurancePool.deposit (runs/heldout16-advanced-v3-ethers6-v1-rep02/InsurancePool/contracts/InsurancePool.sol:77)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.deposit (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:296:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should allow ETH deposit and emit Deposited event",
+      "fullTitle": "InsurancePool LP Actions Should allow ETH deposit and emit Deposited event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 23,
+      "err": {}
+    },
+    {
+      "title": "Should revert on zero deposit",
+      "fullTitle": "InsurancePool LP Actions Should revert on zero deposit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should allow ETH withdrawal and emit Withdrawn event",
+      "fullTitle": "InsurancePool LP Actions Should allow ETH withdrawal and emit Withdrawn event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "Should revert on insufficient deposit",
+      "fullTitle": "InsurancePool LP Actions Should revert on insufficient deposit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should revert on undercollateralized withdrawal",
+      "fullTitle": "InsurancePool LP Actions Should revert on undercollateralized withdrawal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 14,
+      "err": {}
+    },
+    {
+      "title": "Should allow claiming rewards",
+      "fullTitle": "InsurancePool LP Actions Should allow claiming rewards",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should revert on claiming zero rewards",
+      "fullTitle": "InsurancePool LP Actions Should revert on claiming zero rewards",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should allow buying a policy and emit PolicyPurchased event",
+      "fullTitle": "InsurancePool Policy Actions Should allow buying a policy and emit PolicyPurchased event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 27,
+      "err": {}
+    },
+    {
+      "title": "Should revert on zero coverage",
+      "fullTitle": "InsurancePool Policy Actions Should revert on zero coverage",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert on insufficient pool liquidity",
+      "fullTitle": "InsurancePool Policy Actions Should revert on insufficient pool liquidity",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should revert on non-owner trying to trigger claim",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should revert on non-owner trying to trigger claim",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should revert on trying to claim an already claimed policy",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should revert on trying to claim an already claimed policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "Should revert on trying to claim an expired policy",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should revert on trying to claim an expired policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should allow expiring a policy and emit PolicyExpired event",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should allow expiring a policy and emit PolicyExpired event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "Should revert on trying to expire an already claimed policy",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should revert on trying to expire an already claimed policy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should revert on trying to expire an active policy that hasn't expired yet",
+      "fullTitle": "InsurancePool Oracle-triggered Payouts Should revert on trying to expire an active policy that hasn't expired yet",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should handle reward distribution when totalLiquidity is zero",
+      "fullTitle": "InsurancePool Reward Distribution Should handle reward distribution when totalLiquidity is zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\InsurancePool\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    }
+  ]
+}

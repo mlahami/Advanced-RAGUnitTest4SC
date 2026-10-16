@@ -1,0 +1,50 @@
+{
+  "id": "local-erc20-bridge--0xmdrakib",
+  "domain": "bridge",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "LocalERC20Bridge.sol",
+    "LocalNativeBridge.sol",
+    "MintableERC20.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/0xmdrakib/XphereSwap",
+    "commit": "9653e46d61e0bc9263690ec754bfbf4a06ff7f8c",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/contracts/contracts/bridge/LocalERC20Bridge.sol",
+      "packages/contracts/contracts/bridge/LocalNativeBridge.sol",
+      "packages/contracts/contracts/tokens/MintableERC20.sol"
+    ],
+    "test_paths": [
+      "packages/contracts/test/bridge.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "packages/contracts/contracts/bridge/LocalERC20Bridge.sol": "c767d3061787253173ab8e5ce6e812f2b421be9739d2d7a7051d30cab60af61f",
+      "packages/contracts/contracts/bridge/LocalNativeBridge.sol": "7bc60a7e58bf0d11074f080ab212d96f8edac7275afb0f375692daaf4cdb03d5",
+      "packages/contracts/contracts/tokens/MintableERC20.sol": "536c649a3474cd12e0b764e14f2e2681d1c017e2bab4d7d0a13bd021b9f9d899",
+      "packages/contracts/test/bridge.test.ts": "acb0757b061a9dadbb76a2c5ced18469b6bae112583f7c4f1e86d7b7c5635566"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "bridge.test.js",
+      "upstream_path": "packages/contracts/test/bridge.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "bridge.test.js",
+      "upstream_path": "packages/contracts/test/bridge.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Lock-collateral/mint-synthetic and burn/release bridges (ERC20 + native) with domain ids, per-message nonces, bridge-address-salted message ids and processedMessages replay protection; owner acts as relayer; no OZ imports. 10 its covering both bridges. 18 commits by one author (2026).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T15:52:41.701780+00:00"
+}

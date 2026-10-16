@@ -1,0 +1,89 @@
+{
+  "pair": "multi-sig-wallet-factory--donguillotine",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:14:53.539536+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Multisig.sol": "a6291e6220c07b3810e9362eabb830992169e858e57935d3f05990fbde22082a",
+    "contracts/MultiSigWalletFactory.sol": "367ceb98a9292833abab2dbc5a3489efa9f53f86a22020c539f76b64b88cf92d",
+    "LICENSE": "8c5c43219d047b47128b85c0138188b44ce72cc68491c1a45714e62a7e6835eb",
+    "manifest.json": "353f830d8e9edac2e25c1beca25ada9a18ea1590ca48792c7ef978982d7e761f",
+    "test/MultiSigWalletFactory.js": "3218a3d63f80cdd413a1e8bfa212cfc427857a3ab22eb776926a2ba557e4956e"
+  },
+  "pair_sha256": "54dad36ea815980b5930a4a4d81612f6c5726f23887359b61023610db1e221b4",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Multisig.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.164,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "Multisig.sol",
+        "reference": "MultiSigWallet.sol",
+        "structural": 0.157,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "Multisig.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.149,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.14,
+      "mocha": {
+        "tests": 5,
+        "passes": 5,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.44,
+      "mocha": {
+        "tests": 5,
+        "passes": 5,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MultiSigWalletFactory.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Multisig.sol": {
+          "statements": 18.42,
+          "branches": 11.11,
+          "functions": 20.0,
+          "lines": 18.42
+        }
+      }
+    }
+  },
+  "accepted": true
+}

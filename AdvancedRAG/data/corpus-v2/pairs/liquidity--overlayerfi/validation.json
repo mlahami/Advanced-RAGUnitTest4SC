@@ -1,0 +1,131 @@
+{
+  "pair": "liquidity--overlayerfi",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:45:39.536186+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ILiquidityDefs.sol": "8e26e73b36fc680fcae2970a7696dbad238e3b071f8d272f5e62f312eb80f964",
+    "contracts/IOverlayerReferral.sol": "8925ea4c973d334ca14624091786a5f2c350b0026e91889f61f7cd6c33a1c4e5",
+    "contracts/IRewardAsset.sol": "b1659972b87c7a210605d13aac2d105e5505c3e1f22f1ce5cf1f45620b781f02",
+    "contracts/Liquidity.sol": "f9c4fcfac92daddbefada3bd0d9c978e25fde3e8546e9e2e790cadba1a6a46df",
+    "contracts/MintableERC20.sol": "2eb7d92d719fec511b5f235378f7abe5992f2328d21f97fb6b469bf5d8c6074f",
+    "contracts/MintableTokenBase.sol": "d3bf232339e8b90f32ae5e221a9f0e39142a0fd55a4b89463f3c6f895285a458",
+    "contracts/OverlayerReferral.sol": "6a6501458a45c98d204b635ae2913830855bbce668a63f8a0131ae78a18761ea",
+    "contracts/TokenLP_A_B.sol": "8df256d98281ae5abaa7f5c5183146480ee8d6d73bb32725242f5600b946f984",
+    "LICENSE": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+    "manifest.json": "1acbb6c6e7a401082d60fac835a8d002f724114c2a70a61942d20f8f6849a0b1",
+    "test/Liquidity.js": "a3690c5b7cab0e26dd73022baf3c52d49396f183693e87606a4452b6b0f79d1f"
+  },
+  "pair_sha256": "dc9afca6cbd9328a9ecbc2877d7a8ac83e5ce813e88da1c4114f4f3d8ec569ea",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "OverlayerReferral.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.139,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "OverlayerReferral.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.129,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "Liquidity.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.127,
+        "signatures": 0.0,
+        "min_functions": 11
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.9,
+      "mocha": {
+        "tests": 23,
+        "passes": 23,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 10.95,
+      "mocha": {
+        "tests": 23,
+        "passes": 23,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Liquidity.sol": {
+          "statements": 81.4,
+          "branches": 53.7,
+          "functions": 79.17,
+          "lines": 81.4
+        },
+        "ILiquidityDefs.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IRewardAsset.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MintableERC20.sol": {
+          "statements": 16.67,
+          "branches": 7.14,
+          "functions": 33.33,
+          "lines": 16.67
+        },
+        "TokenLP_A_B.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MintableTokenBase.sol": {
+          "statements": 80.0,
+          "branches": 30.0,
+          "functions": 60.0,
+          "lines": 80.0
+        },
+        "OverlayerReferral.sol": {
+          "statements": 61.36,
+          "branches": 37.5,
+          "functions": 53.33,
+          "lines": 61.36
+        },
+        "IOverlayerReferral.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,56 @@
+{
+  "contract": "MerkleAirdrop",
+  "status": "test_failures",
+  "prompt_sha256": "0d0804e1c926ca7279dbf1b264c531fe3fa6041172a2aae3be16654c0f13c682",
+  "generation_seconds": 7.473986400058493,
+  "usage": {
+    "prompt_tokens": 7158,
+    "total_tokens": 8250,
+    "completion_tokens": 1092,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 7.799979500006884
+  },
+  "passed_tests": 3,
+  "failed_tests": 6,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "MerkleAirdrop Claim Should allow valid claim",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'"
+    },
+    {
+      "title": "MerkleAirdrop Claim Should revert when already claimed",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'"
+    },
+    {
+      "title": "MerkleAirdrop Claim Should revert when transfer fails",
+      "error": "Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'Invalid proof'"
+    },
+    {
+      "title": "MerkleAirdrop State Should track claimed status",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Invalid proof'"
+    },
+    {
+      "title": "MerkleAirdrop Verification Should verify correct proof",
+      "error": "Cannot read properties of undefined (reading 'staticCall')"
+    },
+    {
+      "title": "MerkleAirdrop Verification Should reject incorrect proof",
+      "error": "Cannot read properties of undefined (reading 'staticCall')"
+    }
+  ],
+  "coverage": {
+    "statements": 77.78,
+    "branches": 37.5,
+    "functions": 100.0,
+    "lines": 77.78
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

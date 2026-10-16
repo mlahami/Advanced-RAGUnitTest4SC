@@ -1,0 +1,96 @@
+{
+  "pair": "jubilee-yield-stream--jubilee-protocol",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:41:19.171886+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/JubileeYieldStream.sol": "e81282078522aac0fd8849e0b1e6622677556406c3a190f18d07b651e4ac2d08",
+    "contracts/MockERC20.sol": "dea24993f2e7029b15ac867e2b25a36d99c4a6d560365ea65cb944939af434a0",
+    "contracts/MockVault.sol": "f1f559fb8bcc269bdd09d81fdb6e4c51992b9a4cb67a7fdbb38ef12cb2379f3c",
+    "LICENSE": "5d18413826b5a94c057a4a68d686b4b588deab95bb0c9751803dca887486a727",
+    "manifest.json": "02f237b2a7798cffa3d2fadf970913a1245c6b3e82b610dedc0f47106ef8f057",
+    "test/JubileeYieldStream.test.js": "0fcb161d4490d257f4a880d3476957f37a0924e1740af502bffa505e4808a3c6"
+  },
+  "pair_sha256": "10100d50859934fc9fa13c4ecfdc43f5d4c02a702782e4e0112b790f60ab5cad",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "JubileeYieldStream.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.189,
+        "signatures": 0.0,
+        "min_functions": 11
+      },
+      {
+        "contract": "JubileeYieldStream.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.169,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "JubileeYieldStream.sol",
+        "reference": "DEX.sol",
+        "structural": 0.157,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.97,
+      "mocha": {
+        "tests": 20,
+        "passes": 20,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.75,
+      "mocha": {
+        "tests": 20,
+        "passes": 20,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "JubileeYieldStream.sol": {
+          "statements": 89.86,
+          "branches": 60.81,
+          "functions": 100.0,
+          "lines": 96.88
+        },
+        "MockERC20.sol": {
+          "statements": 66.67,
+          "branches": 100.0,
+          "functions": 75.0,
+          "lines": 66.67
+        },
+        "MockVault.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

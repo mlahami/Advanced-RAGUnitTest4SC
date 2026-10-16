@@ -1,0 +1,39 @@
+{
+  "id": "fauna--myriamchah",
+  "domain": "charity-dao",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "Fauna.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/myriamchah/fauna",
+    "commit": "1f7c32478f5f3ebfb58417e06fe43d2eec83b2a5",
+    "license": "MIT",
+    "contract_paths": [
+      "backend/contracts/Fauna.sol"
+    ],
+    "test_paths": [
+      "backend/test/fauna.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "backend/contracts/Fauna.sol": "e3341cfb659bce6a9352e0e048ece94ff9672fb475ebcb363561175b42a1f42f",
+      "backend/test/fauna.test.js": "fb1f6d67bcd1104181d0684bc1cca47fd90529e33ceb7080cf76c8c7c74fbd0a"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "fauna.test.js",
+      "upstream_path": "backend/test/fauna.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Wildlife-protection donation DAO: donations, curated projects, donor voting rounds, fund release and usage certification. Primary 196 non-blank lines, closure 196 lines/1 files; 44 its, 31 expects; pragma 0.8.23.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:07:19.050140+00:00"
+}

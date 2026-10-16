@@ -1,0 +1,89 @@
+{
+  "pair": "text-storage--azerckid",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:09:46.083454+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MinimalForwarder.sol": "773444ac18dc286185f1e3b5be9dde2116941f5d46d3088022f20ac156583f8d",
+    "contracts/TextStorage.sol": "8f4429dc7ab993d799bbf8bbb23c15a1547469b47e48ed3f580e94db9e3d01e9",
+    "LICENSE": "94b5370aa902aadf2b958767e8d1cc6ae966cf1565f79d437453e8596de1529d",
+    "manifest.json": "07c23667007f7ef652a515301286b70acb5bf4ec91f04e537f481a76f6b7037b",
+    "test/TextStorageTest.js": "c090a6837fb1b26b6cf22948fe79e3e4277194011879cbe78843533bdb913447"
+  },
+  "pair_sha256": "07be80f9d2d3239ffdd8b20185765a104ef4e527b3f13dfac92e87c83cbfff1d",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MinimalForwarder.sol",
+        "reference": "GaslessRelayer.sol",
+        "structural": 0.426,
+        "signatures": 0.429,
+        "min_functions": 4
+      },
+      {
+        "contract": "MinimalForwarder.sol",
+        "reference": "MerkleAirdrop.sol",
+        "structural": 0.081,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "MinimalForwarder.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.074,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.01,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.14,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "TextStorage.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MinimalForwarder.sol": {
+          "statements": 94.74,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 94.74
+        }
+      }
+    }
+  },
+  "accepted": true
+}

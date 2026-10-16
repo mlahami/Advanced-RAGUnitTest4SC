@@ -1,0 +1,36 @@
+{
+  "contract": "MerkleAirdrop",
+  "status": "test_failures",
+  "prompt_sha256": "0d0804e1c926ca7279dbf1b264c531fe3fa6041172a2aae3be16654c0f13c682",
+  "generation_seconds": 7.080391300027259,
+  "usage": {
+    "prompt_tokens": 7158,
+    "total_tokens": 8154,
+    "completion_tokens": 996,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 6.558477699989453
+  },
+  "passed_tests": 0,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "MerkleAirdrop \"before each\" hook for \"Should set the correct merkle root\"",
+      "error": "Cannot read properties of undefined (reading 'getAddress')"
+    }
+  ],
+  "coverage": {
+    "statements": 0.0,
+    "branches": 0.0,
+    "functions": 0.0,
+    "lines": 0.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

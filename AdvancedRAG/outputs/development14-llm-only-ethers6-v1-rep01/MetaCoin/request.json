@@ -1,0 +1,7 @@
+{
+  "solidityCode": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.24;\n\nlibrary ConvertLib {\n    function convert(uint256 amount, uint256 rate) internal pure returns (uint256) {\n        return amount * rate;\n    }\n}\n\ncontract MetaCoin {\n    mapping(address => uint256) private balances;\n    event Transfer(address indexed from, address indexed to, uint256 value);\n\n    constructor() {\n        balances[msg.sender] = 10000;\n    }\n\n    function sendCoin(address receiver, uint256 amount) external returns (bool) {\n        if (balances[msg.sender] < amount) return false;\n        balances[msg.sender] -= amount;\n        balances[receiver] += amount;\n        emit Transfer(msg.sender, receiver, amount);\n        return true;\n    }\n\n    function getBalance(address account) external view returns (uint256) {\n        return balances[account];\n    }\n\n    function getBalanceInEth(address account) external view returns (uint256) {\n        return ConvertLib.convert(balances[account], 2);\n    }\n}\n\n",
+  "context": "Generate a unit test suite for the supplied Solidity contract.",
+  "generalInstructions": "Use Hardhat 2, ethers 6, Mocha and hardhat-chai-matchers. No external helper files.",
+  "requirements": "Cover actual public functions, state changes, events, access restrictions, relevant boundaries and revert conditions. Use fresh deployments. Do not invent behavior.",
+  "exampleTest": ""
+}

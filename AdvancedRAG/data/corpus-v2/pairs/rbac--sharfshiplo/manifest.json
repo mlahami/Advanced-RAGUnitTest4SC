@@ -1,0 +1,50 @@
+{
+  "id": "rbac--sharfshiplo",
+  "domain": "access-control",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "RBAC.sol",
+    "Constants.sol",
+    "Errors.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/SharfShiplo/solidity-advanced-kit",
+    "commit": "aaf5aef121634780d1140d447cff5ca4f4b41d21",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/access/RBAC.sol",
+      "contracts/utils/Constants.sol",
+      "contracts/utils/Errors.sol"
+    ],
+    "test_paths": [
+      "test/rbac.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/access/RBAC.sol": "36494a07fdf654c375310d6824f09abdba3ed990799c7725c7ff4e63b6fb6899",
+      "contracts/utils/Constants.sol": "43134749686515a55ead0a950c492782b8aa752a489a97e90b02585413af4ab2",
+      "contracts/utils/Errors.sol": "11b5df556e13a2f080b9c9ce75d8b8e980438f00f7ff272f1ba4135a01a05312",
+      "test/rbac.test.js": "0d926e591bc07fdaca6ca852d56dc35ba91e6f572ba62782579aee4d2a48f83d"
+    }
+  },
+  "transformations": [
+    {
+      "file": "RBAC.sol",
+      "kind": "import-path",
+      "before": "../utils/Errors.sol",
+      "after": "./Errors.sol"
+    },
+    {
+      "file": "RBAC.sol",
+      "kind": "import-path",
+      "before": "../utils/Constants.sol",
+      "after": "./Constants.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Hierarchical RBAC with EIP-712 signed role grants; Constants.sol/Errors.sol libs; 3 commits same day. Primary 164 non-blank lines, closure 222 lines/3 files; 12 its, 19 expects; pragma ^0.8.22.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:20.985237+00:00"
+}

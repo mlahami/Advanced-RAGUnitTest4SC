@@ -1,0 +1,48 @@
+{
+  "contract": "PriceOracle",
+  "status": "test_failures",
+  "prompt_sha256": "f3d1c227fe66e2d5c73303d66f9dc0982184acbfd5b6fa5fb10432a23f4f551b",
+  "generation_seconds": 19.55691319995094,
+  "usage": {
+    "prompt_tokens": 8850,
+    "total_tokens": 10556,
+    "completion_tokens": 1706,
+    "prompt_tokens_details": {
+      "cached_tokens": 8832
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 7.9812968000769615
+  },
+  "passed_tests": 15,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "PriceOracle Price Submission Should aggregate prices when required feeders submit",
+      "error": "Expected event \"PriceUpdated\" to be emitted, but it wasn't"
+    },
+    {
+      "title": "PriceOracle Price Submission Should trip circuit breaker for large price deviation",
+      "error": "Expected event \"CircuitBreakerTripped\" to be emitted, but it wasn't"
+    },
+    {
+      "title": "PriceOracle Price Reading Should return latest price",
+      "error": "HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined"
+    },
+    {
+      "title": "PriceOracle Price Reading Should calculate TWAP correctly",
+      "error": "VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)"
+    }
+  ],
+  "coverage": {
+    "statements": 95.74,
+    "branches": 84.21,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

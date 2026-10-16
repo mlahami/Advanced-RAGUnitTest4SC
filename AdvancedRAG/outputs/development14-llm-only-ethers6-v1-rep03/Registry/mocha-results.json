@@ -1,0 +1,165 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 10,
+    "passes": 9,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-27T19:56:28.511Z",
+    "end": "2026-09-27T19:56:29.057Z",
+    "duration": 546
+  },
+  "tests": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "Registry Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should set a record and emit RecordSet event",
+      "fullTitle": "Registry set Should set a record and emit RecordSet event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 36,
+      "err": {}
+    },
+    {
+      "title": "Should revert if not called by owner",
+      "fullTitle": "Registry set Should revert if not called by owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should update an existing record",
+      "fullTitle": "Registry set Should update an existing record",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 35,
+      "err": {}
+    },
+    {
+      "title": "Should return the correct value for an existing key",
+      "fullTitle": "Registry get Should return the correct value for an existing key",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should revert for a non-existent key",
+      "fullTitle": "Registry get Should revert for a non-existent key",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should remove a record and emit RecordRemoved event",
+      "fullTitle": "Registry remove Should remove a record and emit RecordRemoved event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should revert if not called by owner",
+      "fullTitle": "Registry remove Should revert if not called by owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should revert for a non-existent key",
+      "fullTitle": "Registry remove Should revert for a non-existent key",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'missing', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'missing', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:86:7)"
+      }
+    },
+    {
+      "title": "Should maintain state between transactions",
+      "fullTitle": "Registry State persistence Should maintain state between transactions",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 38,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should revert for a non-existent key",
+      "fullTitle": "Registry remove Should revert for a non-existent key",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'missing', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'missing', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:86:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "Registry Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should set a record and emit RecordSet event",
+      "fullTitle": "Registry set Should set a record and emit RecordSet event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 36,
+      "err": {}
+    },
+    {
+      "title": "Should revert if not called by owner",
+      "fullTitle": "Registry set Should revert if not called by owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should update an existing record",
+      "fullTitle": "Registry set Should update an existing record",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 35,
+      "err": {}
+    },
+    {
+      "title": "Should return the correct value for an existing key",
+      "fullTitle": "Registry get Should return the correct value for an existing key",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should revert for a non-existent key",
+      "fullTitle": "Registry get Should revert for a non-existent key",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should remove a record and emit RecordRemoved event",
+      "fullTitle": "Registry remove Should remove a record and emit RecordRemoved event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should revert if not called by owner",
+      "fullTitle": "Registry remove Should revert if not called by owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should maintain state between transactions",
+      "fullTitle": "Registry State persistence Should maintain state between transactions",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep03\\Registry\\test\\generated.test.js",
+      "duration": 38,
+      "err": {}
+    }
+  ]
+}

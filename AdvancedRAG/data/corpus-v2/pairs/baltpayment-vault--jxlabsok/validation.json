@@ -1,0 +1,96 @@
+{
+  "pair": "baltpayment-vault--jxlabsok",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:52:47.274920+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/BALTPaymentsSubscriptionRegistry.sol": "69862e29a9d373b7bf7bab50f5de785af732ccd4e230c9440b7c3861aa386882",
+    "contracts/BALTPaymentVault.sol": "a201de720e8b7dcb0e6c40412a7daa9a8b3632364df0cb5934a147f08606d0a2",
+    "contracts/MockERC20.sol": "b33ea0e9d19234fabb4ccbfdb2108745412712a6b8d092d9072bcd143996a067",
+    "LICENSE": "9dc6f5f9cc75e0e02df8de0f3b1ceec9230ead0eec6ddd3e952c08df5d3116a2",
+    "manifest.json": "9c08369bd0b497a19795440297f8a2458aa71485d79571fa9501a46c9c7e7107",
+    "test/BALTPaymentVault.test.js": "4efe560d1439aa9299f591050b7472582549742065d6cf83f9845df995945d0e"
+  },
+  "pair_sha256": "9ffc371a7fb34ab72cd1167b45f9bf7de9342431e4fe7ce45747fd7e8a2ec38a",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MockERC20.sol",
+        "reference": "Token.sol",
+        "structural": 0.597,
+        "signatures": 0.75,
+        "min_functions": 3
+      },
+      {
+        "contract": "BALTPaymentVault.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.194,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "BALTPaymentVault.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.192,
+        "signatures": 0.067,
+        "min_functions": 10
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.27,
+      "mocha": {
+        "tests": 58,
+        "passes": 58,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 14.38,
+      "mocha": {
+        "tests": 58,
+        "passes": 58,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "BALTPaymentVault.sol": {
+          "statements": 100.0,
+          "branches": 91.18,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "BALTPaymentsSubscriptionRegistry.sol": {
+          "statements": 33.33,
+          "branches": 18.75,
+          "functions": 55.56,
+          "lines": 33.33
+        },
+        "MockERC20.sol": {
+          "statements": 100.0,
+          "branches": 60.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

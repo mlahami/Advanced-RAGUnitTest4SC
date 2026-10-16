@@ -1,0 +1,89 @@
+{
+  "pair": "x402-payment-receiver--confluxarena",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:56:35.984117+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MockERC20.sol": "c861bd39c525374dc91d3db08c437b2030788008ca658bf8fc034861137a4796",
+    "contracts/X402PaymentReceiver.sol": "f2a49a7cdb29247542d6eb0da9c392e8231d510f758decde84fe982d2d63b6cd",
+    "LICENSE": "466061974e424e60546927235f5e3666b322c78ccdcecad4f9932c895930f3d7",
+    "manifest.json": "ca4c4e9db8bf71f540b2777cb3a92e54b7b20043724ac9a7f0b6db0e79d08a10",
+    "test/X402PaymentReceiver.test.js": "2ace8a940e8cb1d26eaaec1fb38f5e8274403fa581bec95f3181d18877a68119"
+  },
+  "pair_sha256": "bf8dc4c0365a0c188183b5e04be8303b30405f86560cd01db6564d6c903efb63",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MockERC20.sol",
+        "reference": "Token.sol",
+        "structural": 0.416,
+        "signatures": 0.75,
+        "min_functions": 3
+      },
+      {
+        "contract": "MockERC20.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.283,
+        "signatures": 0.2,
+        "min_functions": 4
+      },
+      {
+        "contract": "X402PaymentReceiver.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.252,
+        "signatures": 0.0,
+        "min_functions": 9
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.19,
+      "mocha": {
+        "tests": 24,
+        "passes": 24,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.57,
+      "mocha": {
+        "tests": 24,
+        "passes": 24,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "X402PaymentReceiver.sol": {
+          "statements": 90.91,
+          "branches": 72.0,
+          "functions": 88.89,
+          "lines": 90.91
+        },
+        "MockERC20.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

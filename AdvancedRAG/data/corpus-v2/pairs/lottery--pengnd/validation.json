@@ -1,0 +1,82 @@
+{
+  "pair": "lottery--pengnd",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:16:37.463685+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Lottery.sol": "2ba6c5fd4e9d053f94f2505ff1ea9043cf7787af56941c3eb70239e86fca0132",
+    "LICENSE": "1718fd37c03d59682aced48d59b08744f87e3c3e82dcff287265a6ba66a60c56",
+    "manifest.json": "d8b2df70ce8b2fdf8cdcc055418d650fd953892ed421259467b8faa5e69f8da1",
+    "test/Lottery.js": "fe559b9eab6dfe044ae810abcaaac166288a93abcc2b21ef6682b64f871d8a7a"
+  },
+  "pair_sha256": "9090672293fe4d71336b59e72cafe643091bc2ae5fbb8f730942c83bce5a9976",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Lottery.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.179,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "Lottery.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.158,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "Lottery.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.157,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.94,
+      "mocha": {
+        "tests": 13,
+        "passes": 13,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.23,
+      "mocha": {
+        "tests": 13,
+        "passes": 13,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Lottery.sol": {
+          "statements": 100.0,
+          "branches": 81.82,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

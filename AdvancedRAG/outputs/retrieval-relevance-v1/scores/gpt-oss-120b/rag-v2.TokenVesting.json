@@ -1,0 +1,73 @@
+{
+  "id": "rag-v2.TokenVesting",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "TokenVesting",
+  "chunk_ids": [
+    2091,
+    2127,
+    2447,
+    2448,
+    6866,
+    6867,
+    1551,
+    5955,
+    570
+  ],
+  "context_sha256": "de7f9f48caab2e35724b1c6d24a1fa593f319cce7558f7245e77d88cf913f938",
+  "ratings": [
+    {
+      "chunk_id": 2091,
+      "rating": 1,
+      "reason": "Only shows generic revert test; target lacks a setup/funding function, so behavior not directly reusable, but pattern of expecting revert is somewhat useful."
+    },
+    {
+      "chunk_id": 2127,
+      "rating": 1,
+      "reason": "Shows admin‑only setup and event checks pattern, but the functions (fundContract, setup) don’t exist in TokenVesting, only generic access‑control style is reusable."
+    },
+    {
+      "chunk_id": 2447,
+      "rating": 1,
+      "reason": "Tests invalid‑parameter reverts, a useful pattern though target uses different error handling and function names"
+    },
+    {
+      "chunk_id": 2448,
+      "rating": 1,
+      "reason": "Tests event emission and token balance changes for a grant, which TokenVesting lacks; only generic pattern of time helpers is reusable."
+    },
+    {
+      "chunk_id": 6866,
+      "rating": 1,
+      "reason": "Shows deployment, token approval, and schedule creation pattern, but uses different function names and state layout; only generic setup is reusable."
+    },
+    {
+      "chunk_id": 6867,
+      "rating": 1,
+      "reason": "Shows zero‑address revert pattern similar to createGrant’s check"
+    },
+    {
+      "chunk_id": 1551,
+      "rating": 1,
+      "reason": "Shows generic fixture setup, ERC20 approve, event emission and balance checks useful pattern, but specific functions/events differ from TokenVesting."
+    },
+    {
+      "chunk_id": 5955,
+      "rating": 1,
+      "reason": "Shows grantCount usage and time manipulation pattern, but tests a cap constant not present in target; still useful for grant creation checks."
+    },
+    {
+      "chunk_id": 570,
+      "rating": 1,
+      "reason": "Only demonstrates generic revert testing; specific slash logic unrelated to vesting contract."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 20792,
+    "completion_tokens": 978,
+    "calls": 9
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 138.7,
+  "evaluated_utc": "2026-10-13T07:41:54.155501+00:00"
+}

@@ -1,0 +1,46 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BurnToll.sol
+> ChainlinkPoRAdapter.sol
+> ChainlinkPoRMock.sol
+> ComplianceModule.sol
+> DepegGuard.sol
+> IAggregatorV3.sol
+> Minter.sol
+> ReserveManager.sol
+> Stablecoin.sol
+
+Compilation:
+============
+
+Compiled 36 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+--------------------------|----------|----------|----------|----------|----------------|
+File                      |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+--------------------------|----------|----------|----------|----------|----------------|
+ contracts\               |    33.47 |    26.34 |    31.03 |    36.39 |                |
+  BurnToll.sol            |        0 |        0 |        0 |        0 |... 168,169,170 |
+  ChainlinkPoRAdapter.sol |        0 |        0 |        0 |        0 |... 80,82,83,85 |
+  ChainlinkPoRMock.sol    |    38.46 |        0 |     37.5 |       50 |... 81,91,92,93 |
+  ComplianceModule.sol    |        0 |        0 |     12.5 |        0 |... 84,85,91,92 |
+  DepegGuard.sol          |    78.57 |    63.95 |       80 |    79.82 |... 369,370,387 |
+  IAggregatorV3.sol       |      100 |      100 |      100 |      100 |                |
+  Minter.sol              |     4.76 |     6.25 |    23.08 |    18.18 |... 175,179,180 |
+  ReserveManager.sol      |        0 |        0 |     8.33 |     2.17 |... 156,157,160 |
+  Stablecoin.sol          |       40 |     12.5 |    33.33 |    35.29 |... 66,74,75,76 |
+--------------------------|----------|----------|----------|----------|----------------|
+All files                 |    33.47 |    26.34 |    31.03 |    36.39 |                |
+--------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

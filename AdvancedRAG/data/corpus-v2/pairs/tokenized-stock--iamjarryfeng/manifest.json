@@ -1,0 +1,53 @@
+{
+  "id": "tokenized-stock--iamjarryfeng",
+  "domain": "erc20-token",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "TokenizedStock.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/iamjarryfeng/stockx_poc_1.03",
+    "commit": "5ab087866c8640f4514e6c8349d91859d53610a0",
+    "license": "MIT",
+    "contract_paths": [
+      "smart-contracts/contracts/core/TokenizedStock.sol"
+    ],
+    "test_paths": [
+      "smart-contracts/test/unit/TokenizedStock.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "smart-contracts/contracts/core/TokenizedStock.sol": "ab1636fba72502ac18b97b8614ef5250bcdce4f99be9413a0b43c781110cf3f3",
+      "smart-contracts/test/unit/TokenizedStock.test.ts": "4846cb8e3bbadfa5468ce8718d4c8361301146fead254d003b4200eaccf12f58"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "TokenizedStock.test.js",
+      "upstream_path": "smart-contracts/test/unit/TokenizedStock.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "TokenizedStock.test.js",
+      "upstream_path": "smart-contracts/test/unit/TokenizedStock.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "TokenizedStock.test.js",
+      "upstream_path": "smart-contracts/test/unit/TokenizedStock.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 51 lines, closure 51 lines, 1 files; 10 it blocks; history: 168 commits 2026-01-16..2026-05-14",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:32:28.962814+00:00"
+}

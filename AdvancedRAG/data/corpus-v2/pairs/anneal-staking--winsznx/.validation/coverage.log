@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> AnnealStaking.sol
+> MockERC20.sol
+
+Compilation:
+============
+
+Compiled 15 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+--------------------|----------|----------|----------|----------|----------------|
+File                |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+--------------------|----------|----------|----------|----------|----------------|
+ contracts\         |       94 |    76.67 |    92.31 |    94.37 |                |
+  AnnealStaking.sol |    93.88 |    76.67 |    90.91 |    94.29 |154,176,177,178 |
+  MockERC20.sol     |      100 |      100 |      100 |      100 |                |
+--------------------|----------|----------|----------|----------|----------------|
+All files           |       94 |    76.67 |    92.31 |    94.37 |                |
+--------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

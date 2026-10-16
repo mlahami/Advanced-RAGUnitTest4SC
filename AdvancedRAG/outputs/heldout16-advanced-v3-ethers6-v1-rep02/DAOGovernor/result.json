@@ -1,0 +1,40 @@
+{
+  "contract": "DAOGovernor",
+  "status": "test_failures",
+  "prompt_sha256": "36af8d699c72845d411dc39925af7a69fa9006589fc7f8a0e68afbe430e87a77",
+  "generation_seconds": 18.293601299985312,
+  "usage": {
+    "prompt_tokens": 11548,
+    "total_tokens": 14306,
+    "completion_tokens": 2758,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.967525799991563
+  },
+  "passed_tests": 13,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "DAOGovernor Proposal Creation should store proposal details correctly",
+      "error": "time is not defined"
+    },
+    {
+      "title": "DAOGovernor Proposal Queueing should queue a successful proposal",
+      "error": "time is not defined"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

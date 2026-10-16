@@ -1,0 +1,31 @@
+{
+  "id": "orion-token--girishktas",
+  "domain": "erc20-token",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "OrionToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Girishktas/OrionDAO",
+    "commit": "c5bd134c8311981e4372083e368cf16160e3a3ce",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/OrionToken.sol"
+    ],
+    "test_paths": [
+      "test/OrionToken.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/OrionToken.sol": "81a117c0f13d0bf66016369dd1faffeb97b40f13a90925a9c9a38d9ba12559c6",
+      "test/OrionToken.test.js": "01b181df9a21033d7a14f8aa5a625f022f021de7c6cead9995fa70d9c230bece"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 47 lines, closure 47 lines, 1 files; 13 it blocks; history: 86 commits 2023-12-01..2024-11-30",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:32:17.455448+00:00"
+}

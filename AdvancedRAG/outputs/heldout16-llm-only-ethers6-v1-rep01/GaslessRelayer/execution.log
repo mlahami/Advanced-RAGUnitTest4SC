@@ -1,0 +1,35 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BenchmarkFixtures.sol
+> GaslessRelayer.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |        0 |        0 |      8.7 |     4.17 |                |
+  BenchmarkFixtures.sol |        0 |        0 |     5.56 |     3.51 |... 140,141,145 |
+  GaslessRelayer.sol    |        0 |        0 |       20 |     6.67 |... 8,95,97,102 |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |        0 |        0 |      8.7 |     4.17 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+Error in plugin solidity-coverage: ❌ 7 test(s) failed under coverage.
+
+For more info run Hardhat with --show-stack-traces

@@ -1,0 +1,82 @@
+{
+  "pair": "oma3-app-metadata--oma3dao",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:12:43.474879+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/OMA3AppMetadata.sol": "9dacd0998cbf6674adf67774e08a3a11c8c81d274ccfdc1c67c219679ae8b4c7",
+    "LICENSE": "51ad603bf14675bf5c5f2d4ec5b01aafde3d3f32821fe51bd4932f5be82538db",
+    "manifest.json": "7ab2138051ea036e6997d6e243ba645e1ddbd8087a94c3dde4dbb86a7afd594c",
+    "test/OMA3AppMetadata.js": "8de52dd92236a873447d50ac53e7d94ce17d40cbdc70fd0bbe787afbdfc16ee7"
+  },
+  "pair_sha256": "f8056eecab09881fe35bdf0133a25f30f2ddd9208ac8a90bb80259286cfdee60",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "OMA3AppMetadata.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.105,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "OMA3AppMetadata.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.098,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "OMA3AppMetadata.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.097,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.78,
+      "mocha": {
+        "tests": 11,
+        "passes": 11,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.02,
+      "mocha": {
+        "tests": 11,
+        "passes": 11,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "OMA3AppMetadata.sol": {
+          "statements": 100.0,
+          "branches": 95.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

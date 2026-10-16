@@ -1,0 +1,40 @@
+{
+  "contract": "MetaCoin",
+  "status": "test_failures",
+  "prompt_sha256": "9b584f59529fd3af0f6d29d7ec0eba0717e39afa14d88836dfc8d6c9db0f3c32",
+  "generation_seconds": 6.637862900039181,
+  "usage": {
+    "prompt_tokens": 7016,
+    "total_tokens": 7600,
+    "completion_tokens": 584,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 3.9009228000068106
+  },
+  "passed_tests": 6,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "MetaCoin sendCoin Should fail if sender doesn't have enough coins",
+      "error": "Expected transaction to be reverted"
+    },
+    {
+      "title": "MetaCoin sendCoin Should return false when transfer fails",
+      "error": "expected ContractTransactionResponse{ …(21) } to be false"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

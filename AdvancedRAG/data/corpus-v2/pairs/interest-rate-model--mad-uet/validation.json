@@ -1,0 +1,82 @@
+{
+  "pair": "interest-rate-model--mad-uet",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:39:59.892854+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/InterestRateModel.sol": "5813147ad5cb0c9972cd9f58806aad315f99b6bd7173a1bbdbff9431813b0eae",
+    "LICENSE": "caa3b6ad74241f1387b2d8fac8ed4e9ac0620fba7f7cdfc7abfb912ddd7c02e9",
+    "manifest.json": "c249d769a4ccd19a1961b6832c74aa4937385a255763d6b4dd6186d059b12d79",
+    "test/InterestRateModel.test.js": "c18ee795d482ec068869b3937114b6582e4a64b02ff7a4e51760201ee63dd716"
+  },
+  "pair_sha256": "cd6be6fa2d3936c39916a20ff51daec9056d5e7fa150733a1960b0e383697bd8",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "InterestRateModel.sol",
+        "reference": "SimpleStorage.sol",
+        "structural": 0.075,
+        "signatures": 0.0,
+        "min_functions": 1
+      },
+      {
+        "contract": "InterestRateModel.sol",
+        "reference": "DEX.sol",
+        "structural": 0.066,
+        "signatures": 0.0,
+        "min_functions": 1
+      },
+      {
+        "contract": "InterestRateModel.sol",
+        "reference": "Adoption.sol",
+        "structural": 0.064,
+        "signatures": 0.0,
+        "min_functions": 1
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.16,
+      "mocha": {
+        "tests": 16,
+        "passes": 16,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 13.59,
+      "mocha": {
+        "tests": 16,
+        "passes": 16,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "InterestRateModel.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

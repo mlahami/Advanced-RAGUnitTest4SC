@@ -1,0 +1,48 @@
+{
+  "contract": "DAOGovernor",
+  "status": "test_failures",
+  "prompt_sha256": "5ae04423626c5435f016802c33920b2e2bed0cfd2b5f0e823ba73c534151502a",
+  "generation_seconds": 18.059418700053357,
+  "usage": {
+    "prompt_tokens": 11245,
+    "total_tokens": 13723,
+    "completion_tokens": 2478,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.861290900036693
+  },
+  "passed_tests": 4,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "DAOGovernor Voting Should prevent voting before proposal is active",
+      "error": "Do not know how to serialize a BigInt"
+    },
+    {
+      "title": "DAOGovernor Voting Should prevent voting after proposal ends",
+      "error": "Do not know how to serialize a BigInt"
+    },
+    {
+      "title": "DAOGovernor Proposal Queueing \"before each\" hook for \"Should queue a successful proposal and emit ProposalQueued event\"",
+      "error": "Do not know how to serialize a BigInt"
+    },
+    {
+      "title": "DAOGovernor Proposal Execution \"before each\" hook for \"Should execute a queued proposal and emit ProposalExecuted event\"",
+      "error": "Do not know how to serialize a BigInt"
+    }
+  ],
+  "coverage": {
+    "statements": 45.0,
+    "branches": 30.0,
+    "functions": 60.0,
+    "lines": 45.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

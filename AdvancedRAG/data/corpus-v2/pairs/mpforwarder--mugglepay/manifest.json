@@ -1,0 +1,57 @@
+{
+  "id": "mpforwarder--mugglepay",
+  "domain": "payment-forwarder",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "MPForwarder.sol",
+    "DestinationMock.sol",
+    "ERC20Mock.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/MugglePay/mugglepayment-contract",
+    "commit": "1a5a864bda8acfdeaf2f0c3dda3055eed0bd2c6a",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MPForwarder.sol",
+      "contracts/mocks/DestinationMock.sol",
+      "contracts/mocks/ERC20Mock.sol"
+    ],
+    "test_paths": [
+      "test/MPFowarder.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MPForwarder.sol": "122bda5f08be42ac5ce6ec8e4d50625b2d900b0417644b055b39b581ff7d90a8",
+      "contracts/mocks/DestinationMock.sol": "ce636fca35e1e3945800aa308942b11827eb111b09746c41458827c95e09c898",
+      "contracts/mocks/ERC20Mock.sol": "2cfad90b0a46e9eb0e379d2f21e113e7cd44a72351eb93411d4305787366ed0c",
+      "test/MPFowarder.ts": "1ba0fd7fb016d598841041ab5e562ae410e09041008f37a0e2d6e3b8f9b1e454"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "MPFowarder.js",
+      "upstream_path": "test/MPFowarder.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "MPFowarder.js",
+      "upstream_path": "test/MPFowarder.ts"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "MPFowarder.js",
+      "upstream_path": "test/MPFowarder.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Deposit forwarder that flushes ETH/ERC20 to a fixed destination (not meta-tx); mocks DestinationMock/ERC20Mock; pragma ^0.8.0 with OZ5 imports (needs >=0.8.20). Primary 35 non-blank lines, closure 56 lines/3 files; 8 its, 13 expects; pragma ^0.8.0.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:03:30.984558+00:00"
+}

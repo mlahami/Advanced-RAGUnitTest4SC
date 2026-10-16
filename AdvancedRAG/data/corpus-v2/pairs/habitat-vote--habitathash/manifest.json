@@ -1,0 +1,39 @@
+{
+  "id": "habitat-vote--habitathash",
+  "domain": "voting",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "HabitatVote.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/HabitatHash/HabitatHash",
+    "commit": "fffe7e5f18a46f4c11ae9f5a823560bfde34e0ea",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/HabitatVote.sol"
+    ],
+    "test_paths": [
+      "test/HabitatVote.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/HabitatVote.sol": "7a1c88f8774ad1cbc728ffc733ade38e6d80638bcc2c2a6a50201410eb308c71",
+      "test/HabitatVote.test.js": "6d5966c7f1fb2b0aac42fe2edecf524af551c161755d13f2c3da47df0dcf4916"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "HabitatVote.test.js",
+      "upstream_path": "test/HabitatVote.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Small case-based voting contract (vote, per-address vote, result); student team project 2023. Primary 67 non-blank lines, closure 67 lines/1 files; 9 its, 12 expects; pragma ^0.8.9.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:07:16.049082+00:00"
+}

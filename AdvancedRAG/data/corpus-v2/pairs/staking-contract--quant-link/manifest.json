@@ -1,0 +1,31 @@
+{
+  "id": "staking-contract--quant-link",
+  "domain": "staking",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "StakingContract.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Quant-link/QLK-Staking-Archive-PoC",
+    "commit": "7b3c60bdef1e4186495cea0c02be3a29ea47b086",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MockToken.sol",
+      "contracts/StakingContract.sol"
+    ],
+    "test_paths": [
+      "test/StakingContract.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MockToken.sol": "03581b7a046a9c58c493276aad792dfbce58519a988349ef363c0648c2caff4b",
+      "contracts/StakingContract.sol": "503e6f2bf9f7c6fd02ff4f71edd324f742e2b1ab6d590f1e2d27466664718ec8",
+      "test/StakingContract.test.js": "7f288f58e916a637288b3b98c34b91970eeae125db4ec795f5a61fcc9aec5801"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "lock tiers; company PoC 2025",
+  "imported_utc": "2026-09-27T21:50:23.162228+00:00"
+}

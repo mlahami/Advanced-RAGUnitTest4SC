@@ -1,0 +1,31 @@
+{
+  "id": "veraci-tixnft--owezzy",
+  "domain": "ticketing-events",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "VeraciTIXNFT.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/owezzy/nft-ticket",
+    "commit": "e63683f42741259f1f0a27d0d3ba58a281d39399",
+    "license": "Apache-2.0",
+    "contract_paths": [
+      "contracts/contracts/VeraciTIXNFT.sol"
+    ],
+    "test_paths": [
+      "contracts/test/VeraciTIXNFT.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/VeraciTIXNFT.sol": "df9abd8792bac369e9c9e6842c6446be276e0dac237b14c8ba501b4d11c1aded",
+      "contracts/test/VeraciTIXNFT.test.js": "d7eeb232c1ad8261e28613c776ffe593d76fe2d2983d2ec9e138ca9dba9db998"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "ERC721 event tickets with events, purchase, resale caps, check-in; primary 334 lines; 37 it blocks (37/37 pass locally in frozen env, stmt cov 96.97%); licence file LICENSE (Apache-2.0); history: 53 commits 2025-12-07..2026-05-07",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:31:26.785024+00:00"
+}

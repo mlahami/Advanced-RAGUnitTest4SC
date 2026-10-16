@@ -1,0 +1,96 @@
+{
+  "pair": "mpforwarder--mugglepay",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:10:27.908468+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/DestinationMock.sol": "adae278d2c88800b2054a18ac8dce93ef86f09fa99a3860821da4d10335a8cca",
+    "contracts/ERC20Mock.sol": "ad39108e131694cd7b268c097eccd57471954cddcf40dfdaa57cd36783fc8824",
+    "contracts/MPForwarder.sol": "d892024f8d77642fd9a31316268d734accc39ba94138ebcb18e68f737e9e696c",
+    "LICENSE": "a826caba2d3a90c561b2f511d3fca861e7ca3ff3ffb8bd688aadc3044a7af987",
+    "manifest.json": "af0231feaba5c80b16a4c1b103a4c43904ae9011805856b85ce79a6a0b4b629d",
+    "test/MPFowarder.js": "b5a34422afacc29697c142cd68f9af2dc695ac75de35aa980467d3e22dab2fde"
+  },
+  "pair_sha256": "7f883bdcbf0a9f6bc3f69e3346d8fbe751fddf1cb7a4fafa026a653c63a614d3",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MPForwarder.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.185,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "MPForwarder.sol",
+        "reference": "BatchTransfer.sol",
+        "structural": 0.181,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "MPForwarder.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.176,
+        "signatures": 0.0,
+        "min_functions": 2
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.11,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.15,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MPForwarder.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 75.0,
+          "lines": 100.0
+        },
+        "DestinationMock.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ERC20Mock.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

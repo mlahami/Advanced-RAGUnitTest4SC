@@ -1,0 +1,181 @@
+{
+  "target_functions": [
+    {
+      "target_function": "increment",
+      "corpus_functions": [
+        "b3fd3a9119f9562432e4a1b8",
+        "2e4dfb6eb28a7044aaf7370e",
+        "9b84071a1f1b9124c8cb62f9",
+        "c9a5942b6ade6a86c35bf48d",
+        "a80b7bb05f16328073475b6e",
+        "7e2c5ef77b2b9470c18586b1",
+        "9f739bb9bf8bc6db34100d3d",
+        "89bb5046f63f804c0182bbc8"
+      ],
+      "candidate_tests": [
+        "ba2bf5cf14c2b1f410c7decc",
+        "d5685e518d5fd4e8596a7c60",
+        "c4e654244601b70c350bda1b",
+        "eedc5321c13a0751e3304c4f",
+        "3f720c6a4cd87a822e4bdff6",
+        "0b7a4fed7dbe0770688e6068",
+        "b868d1db7435b88be6a2ef99"
+      ]
+    },
+    {
+      "target_function": "decrement",
+      "corpus_functions": [
+        "72dbc3370078bf91e6818be7",
+        "b3fd3a9119f9562432e4a1b8",
+        "0111492370cb8d905018e849",
+        "8ca7be390193af8edb75f46e",
+        "2e4dfb6eb28a7044aaf7370e",
+        "df3aea79cadc1ba30c0606b4",
+        "7f38958b9b86129acd62d3cb",
+        "2dadb2105c8f1ed6d1340758"
+      ],
+      "candidate_tests": [
+        "474e7ed5fd33599be214f3f1",
+        "975bb4dd92a188be4c484c64",
+        "829ec80e6cd19a704ab6c37a",
+        "31676e0f5bc85f66f2e81be2"
+      ]
+    },
+    {
+      "target_function": "reset",
+      "corpus_functions": [
+        "7b485bac09ef9379a7da510e",
+        "30bb1d12476e4d475b9ed4c0",
+        "91d3920a6547ec555f0b92cd",
+        "e9ce94b19fdd4b2af92846ea",
+        "f33a20e7a318566ec3f3a764",
+        "19f10d3d19262d83b64441c2",
+        "4d5b8dab9c1fdb6a78822e17",
+        "ee9e1a26d7c3160533d905c0"
+      ],
+      "candidate_tests": [
+        "c188cf80d1320b4623a3997f",
+        "046aca67b3239661204aed61",
+        "34eed8de1e7d46f8d0994cec",
+        "88b2841f1244dd9b4c4e7da1",
+        "eb565f9aca91e3f444994424",
+        "b910ba6efb3c1dd624e02ba7",
+        "5e5831452f3d1ef572a89432",
+        "ce016951954a36e57d426241",
+        "32d194ef8f096d1b334d0a9e",
+        "3c9491dd81c404d0e67037bb",
+        "de90994cba8f664c377adfbd"
+      ]
+    }
+  ],
+  "selected": [
+    3768,
+    5300,
+    5554,
+    2913,
+    5298,
+    5555,
+    2916,
+    7448,
+    4329,
+    5895
+  ],
+  "context_chars": 14918,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "Counter",
+  "retrieval_seconds": 1.8987421999918297,
+  "hits": [
+    {
+      "chunk_id": 3768,
+      "test_id": "ba2bf5cf14c2b1f410c7decc",
+      "pair": "kusdoracle--frosty720",
+      "domain_group": "price-oracles",
+      "name": "Should return correct active node count",
+      "via_function": "9b84071a1f1b9124c8cb62f9",
+      "chars": 1960
+    },
+    {
+      "chunk_id": 5300,
+      "test_id": "474e7ed5fd33599be214f3f1",
+      "pair": "oracle-manager--aaravg42",
+      "domain_group": "price-oracles",
+      "name": "should return 0 for epoch with no reports",
+      "via_function": "8ca7be390193af8edb75f46e",
+      "chars": 1268
+    },
+    {
+      "chunk_id": 5554,
+      "test_id": "c188cf80d1320b4623a3997f",
+      "pair": "product-passport--ahmed1av",
+      "domain_group": "supply-chain",
+      "name": "Should allow owner to remove manufacturer",
+      "via_function": "7b485bac09ef9379a7da510e",
+      "chars": 1298
+    },
+    {
+      "chunk_id": 2913,
+      "test_id": "d5685e518d5fd4e8596a7c60",
+      "pair": "file-registry--salim-lakhal",
+      "domain_group": "registries-identity",
+      "name": "should start with zero file count",
+      "via_function": "c9a5942b6ade6a86c35bf48d",
+      "chars": 1826
+    },
+    {
+      "chunk_id": 5298,
+      "test_id": "975bb4dd92a188be4c484c64",
+      "pair": "oracle-manager--aaravg42",
+      "domain_group": "price-oracles",
+      "name": "should compute median with odd number of reports",
+      "via_function": "8ca7be390193af8edb75f46e",
+      "chars": 1528
+    },
+    {
+      "chunk_id": 5555,
+      "test_id": "046aca67b3239661204aed61",
+      "pair": "product-passport--ahmed1av",
+      "domain_group": "supply-chain",
+      "name": "Should not allow non-owner to remove manufacturer",
+      "via_function": "7b485bac09ef9379a7da510e",
+      "chars": 1158
+    },
+    {
+      "chunk_id": 2916,
+      "test_id": "c4e654244601b70c350bda1b",
+      "pair": "file-registry--salim-lakhal",
+      "domain_group": "registries-identity",
+      "name": "should increment file count",
+      "via_function": "c9a5942b6ade6a86c35bf48d",
+      "chars": 2455
+    },
+    {
+      "chunk_id": 7448,
+      "test_id": "829ec80e6cd19a704ab6c37a",
+      "pair": "voting--darshan36911",
+      "domain_group": "voting-governance",
+      "name": "emits a ProposalCreated event",
+      "via_function": "7f38958b9b86129acd62d3cb",
+      "chars": 830
+    },
+    {
+      "chunk_id": 4329,
+      "test_id": "34eed8de1e7d46f8d0994cec",
+      "pair": "marketplace--tejashree-likhar",
+      "domain_group": "nft-marketplace",
+      "name": "lets the owner delist an active item",
+      "via_function": "30bb1d12476e4d475b9ed4c0",
+      "chars": 1100
+    },
+    {
+      "chunk_id": 5895,
+      "test_id": "eedc5321c13a0751e3304c4f",
+      "pair": "rolling-pot-game--romankytseniuk",
+      "domain_group": "games-lotteries",
+      "name": "creates a game clone and registers it in the factory",
+      "via_function": "7e2c5ef77b2b9470c18586b1",
+      "chars": 1495
+    }
+  ]
+}

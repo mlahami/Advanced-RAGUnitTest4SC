@@ -1,0 +1,29 @@
+{
+  "id": "nfticket--sowadalmughni",
+  "domain": "ticketing",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "NFTicket.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/sowadalmughni/nfticket-protocol",
+    "commit": "1ef8a792d6c00d0838c1677ee43bb1a26529d97f",
+    "license": "MIT",
+    "contract_paths": [
+      "backend/contracts/NFTicket.sol"
+    ],
+    "test_paths": [
+      "backend/test/NFTicket.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "backend/contracts/NFTicket.sol": "a4f4ea50fb48a5f72c8f40a1b0d197f0b6c9d5d2af9c3596400e7b4fa8618090",
+      "backend/test/NFTicket.test.js": "c1c2d6060e1fc56f9f7c41e2899ebccb27fe684f925abccfbd3b62d50a30036e"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "anti-scalping resale caps; 25 its; 2025",
+  "imported_utc": "2026-09-27T21:50:23.417305+00:00"
+}

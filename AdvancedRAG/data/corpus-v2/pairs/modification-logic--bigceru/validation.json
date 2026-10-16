@@ -1,0 +1,138 @@
+{
+  "pair": "modification-logic--bigceru",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:12:10.157739+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/HistoryTracker.sol": "487bdb72e08a4a74226df52bce549b43c3826d9d6eb480d5342a29f541da3f8e",
+    "contracts/IRegistration.sol": "7c74e934666aa5149658f142d0fbb345efbf5635c3975bc8497d80ece9604cdf",
+    "contracts/ModificationLogic.sol": "a2e2020536389c3138520ad0fd5e693cc2d57edc205f9e59507b8714a0799b1e",
+    "contracts/ProfileManager.sol": "c7c14d60496f5ef9b45b1c9e2ee41e9ca84510c3105baafee15a947cd865539d",
+    "contracts/PropertyRegistry.sol": "59017600361c83addbb960f65835fcc300e7172ddb79e48796686fc2484e592c",
+    "contracts/PropertyStorage.sol": "8a76bdec6587e095c61a65b62842b9c12c2d86dc985885352cf71c024c0040da",
+    "contracts/Registration.sol": "ef38cd9aee9cf4634545e93a4106228ccbeecee96660f0229fdfded2d9104aa5",
+    "contracts/TransferLogic.sol": "f9e135c120abcb33bed6b699fb039ee771e6fbba16462788b23e3f758be1dae0",
+    "contracts/ViewGetFunctions.sol": "83572a611a3fdf2b7171e9232779087a15d73dbe2763e8c3641c2542917a4882",
+    "LICENSE": "748a425419eeb1181dc4e24f5227aea18ff5c0da8175b37af5928ec7f611feb8",
+    "manifest.json": "81ffe4a74a7998605ca3f246d1e857985d56b8b338a3cdd2911ecec4b07e15dc",
+    "test/ModificationLogic.js": "d842300bb3b785ba53434477b5826bad98212fcd7088fc9d821b57b202744804"
+  },
+  "pair_sha256": "14ab35ca6a8db1b3ef534facea59faf9bcb6dc360177ebc8a537dcd7aa0a27a7",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "HistoryTracker.sol",
+        "reference": "AccessControl.sol",
+        "structural": 0.223,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "HistoryTracker.sol",
+        "reference": "Registry.sol",
+        "structural": 0.16,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "Registration.sol",
+        "reference": "MultiSigWallet.sol",
+        "structural": 0.149,
+        "signatures": 0.0,
+        "min_functions": 1
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.46,
+      "mocha": {
+        "tests": 11,
+        "passes": 11,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 10.2,
+      "mocha": {
+        "tests": 11,
+        "passes": 11,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "ModificationLogic.sol": {
+          "statements": 96.97,
+          "branches": 70.45,
+          "functions": 100.0,
+          "lines": 96.97
+        },
+        "HistoryTracker.sol": {
+          "statements": 100.0,
+          "branches": 37.5,
+          "functions": 83.33,
+          "lines": 100.0
+        },
+        "IRegistration.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ProfileManager.sol": {
+          "statements": 11.11,
+          "branches": 10.0,
+          "functions": 37.5,
+          "lines": 11.11
+        },
+        "PropertyRegistry.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "PropertyStorage.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Registration.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "TransferLogic.sol": {
+          "statements": 0.0,
+          "branches": 0.0,
+          "functions": 0.0,
+          "lines": 0.0
+        },
+        "ViewGetFunctions.sol": {
+          "statements": 8.89,
+          "branches": 10.53,
+          "functions": 18.18,
+          "lines": 8.89
+        }
+      }
+    }
+  },
+  "accepted": true
+}

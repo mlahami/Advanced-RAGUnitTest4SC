@@ -1,0 +1,79 @@
+{
+  "id": "advanced-v3.RateLimiter",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "RateLimiter",
+  "chunk_ids": [
+    7099,
+    7105,
+    677,
+    7100,
+    7103,
+    2304,
+    6035,
+    588,
+    2305,
+    6036
+  ],
+  "context_sha256": "cc1a81e259fe66ee6155f283e4ca15ca14801ba1882e9f753ae56e4c7e2f2108",
+  "ratings": [
+    {
+      "chunk_id": 7099,
+      "rating": 2,
+      "reason": "Deposit test matches RateLimiter's deposit emitting Deposited event; same pattern of payable call and event assertion can be reused after renaming."
+    },
+    {
+      "chunk_id": 7105,
+      "rating": 2,
+      "reason": "Tests withdraw reverts on insufficient balance, matching RateLimiter's withdraw check."
+    },
+    {
+      "chunk_id": 677,
+      "rating": 0,
+      "reason": "Test targets unrelated Authenticator behavior; only generic fixture setup, not applicable to rate limiting logic."
+    },
+    {
+      "chunk_id": 7100,
+      "rating": 1,
+      "reason": "Tests revert on zero deposit, which RateLimiter does not enforce; only shows generic revert expectation pattern."
+    },
+    {
+      "chunk_id": 7103,
+      "rating": 1,
+      "reason": "Shows generic withdraw event assertion pattern, but event name and args differ from RateLimiter’s Withdrawn event"
+    },
+    {
+      "chunk_id": 2304,
+      "rating": 1,
+      "reason": "Shows generic deployment, setup, and ERC20 approval pattern useful for initializing contracts, but tests unrelated functionality of RateLimiter."
+    },
+    {
+      "chunk_id": 6035,
+      "rating": 2,
+      "reason": "Tests payable deposit and balance recording, matching RateLimiter's deposit logic; can be reused with renamed contract and variable names."
+    },
+    {
+      "chunk_id": 588,
+      "rating": 1,
+      "reason": "Shows generic balance‑change and gas‑cost verification for a withdraw function, which can be adapted to RateLimiter’s withdraw tests, though the contract logic differs."
+    },
+    {
+      "chunk_id": 2305,
+      "rating": 0,
+      "reason": "Test checks array return; RateLimiter has no array-returning functions, so pattern isn’t applicable."
+    },
+    {
+      "chunk_id": 6036,
+      "rating": 2,
+      "reason": "Tests deposit event emission, matching RateLimiter's deposit function and Deposited event, directly reusable after renaming."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 18281,
+    "completion_tokens": 1061,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 129.7,
+  "evaluated_utc": "2026-10-15T13:38:56.318839+00:00"
+}

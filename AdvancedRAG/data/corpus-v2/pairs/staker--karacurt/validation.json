@@ -1,0 +1,103 @@
+{
+  "pair": "staker--karacurt",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:58:52.024885+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/data.sol": "b30314452c49e1e6388b1d56c71dbe8b89c03a7ca347305a499ff6dc6c848465",
+    "contracts/PositionMetadata.sol": "5cf492ff68e6165a063ff5cb5d57c6c4c210a0b4b7a00f4865d6777b1f4852c7",
+    "contracts/Staker.sol": "f17b6d925dc0a3fe737fed646cdfba85c465f968365d5a20545cc662dda1fa39",
+    "contracts/tokens.sol": "4aa1638161ac06a0cc8975485e5555977268da7d5c8fa897655409357b793c60",
+    "LICENSE": "771196800f4dfda645d684b2010081a3d7dba7b2229c1917031dd43807c1a316",
+    "manifest.json": "083c9701b7857b29c6fac159fff438b5b6b0fc6065b1ec9be0607ade31a3c110",
+    "test/Staker.test.1.js": "ec4cde5f92b7e9cbdf6cc918ff606d07a97eabcf972a5a1f77066750d05990af"
+  },
+  "pair_sha256": "f0d383bf4f003f89175ea16c2d20d2b48d49789f45f7f1ea410aae67706cea71",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Staker.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.142,
+        "signatures": 0.045,
+        "min_functions": 10
+      },
+      {
+        "contract": "Staker.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.142,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "Staker.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.135,
+        "signatures": 0.05,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 9.96,
+      "mocha": {
+        "tests": 62,
+        "passes": 62,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 16.2,
+      "mocha": {
+        "tests": 62,
+        "passes": 62,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Staker.sol": {
+          "statements": 83.54,
+          "branches": 71.59,
+          "functions": 85.71,
+          "lines": 83.54
+        },
+        "tokens.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 66.67,
+          "lines": 50.0
+        },
+        "PositionMetadata.sol": {
+          "statements": 0.0,
+          "branches": 100.0,
+          "functions": 0.0,
+          "lines": 0.0
+        },
+        "data.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

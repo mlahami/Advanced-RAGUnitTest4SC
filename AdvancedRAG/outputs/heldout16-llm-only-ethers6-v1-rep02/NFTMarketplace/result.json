@@ -1,0 +1,36 @@
+{
+  "contract": "NFTMarketplace",
+  "status": "test_failures",
+  "prompt_sha256": "e7598cee4fc52aaee213470caec218aa3a21dac2ee25f705503c943c7bf167d7",
+  "generation_seconds": 10.58770979999099,
+  "usage": {
+    "prompt_tokens": 7525,
+    "total_tokens": 8996,
+    "completion_tokens": 1471,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 8.55860250000842
+  },
+  "passed_tests": 8,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "NFTMarketplace buy should buy NFT correctly",
+      "error": "expected 10000000000000000000000 to be close to 10000025000000000000000 +/- 10000000000000000"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 77.27,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

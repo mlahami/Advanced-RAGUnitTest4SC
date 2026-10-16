@@ -1,0 +1,67 @@
+{
+  "id": "rag-v2.Auction",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "Auction",
+  "chunk_ids": [
+    584,
+    586,
+    2362,
+    2363,
+    1085,
+    1086,
+    6015,
+    2326
+  ],
+  "context_sha256": "3b70c09272a9a8fd8588d110f3cfc68d5c7814a9a375af18b077bb16a8196c91",
+  "ratings": [
+    {
+      "chunk_id": 584,
+      "rating": 2,
+      "reason": "Tests revert on low bid with same error message, directly reusable after adjusting setup"
+    },
+    {
+      "chunk_id": 586,
+      "rating": 2,
+      "reason": "Tests bid rejection when value not higher, matching Auction.bid's require; setup and revert check can be reused with renamed functions/variables."
+    },
+    {
+      "chunk_id": 2362,
+      "rating": 1,
+      "reason": "Shows generic revert testing and fixture setup, but target lacks start-state and NotStarted error, so only pattern is partially useful."
+    },
+    {
+      "chunk_id": 2363,
+      "rating": 2,
+      "reason": "Tests bid revert after auction end, matching our Auction’s end-time check; setup and revert assertion can be reused with renamed contract and error string."
+    },
+    {
+      "chunk_id": 1085,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests a custom error unrelated to Auction contract behavior."
+    },
+    {
+      "chunk_id": 1086,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests unrelated NFT auction behavior; only pattern partially applicable."
+    },
+    {
+      "chunk_id": 6015,
+      "rating": 1,
+      "reason": "Shows pattern for checking highestBidder, highestBid and refunds, but uses different commit/reveal flow not present in target contract."
+    },
+    {
+      "chunk_id": 2326,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests a non‑existent start condition; only useful as a generic revert check template."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9322,
+    "completion_tokens": 930,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 66.7,
+  "evaluated_utc": "2026-10-12T08:44:14.361956+00:00"
+}

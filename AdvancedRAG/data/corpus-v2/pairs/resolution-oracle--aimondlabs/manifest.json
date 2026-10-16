@@ -1,0 +1,74 @@
+{
+  "id": "resolution-oracle--aimondlabs",
+  "domain": "oracle",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "ResolutionOracle.sol",
+    "IConditionalTokens.sol",
+    "ConditionalTokens.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/AimondLabs/nostra-contracts",
+    "commit": "75a1ed0b75610fae1a857fc78555e22e1e8db53e",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/contracts/contracts/oracle/ResolutionOracle.sol",
+      "packages/contracts/contracts/interfaces/IConditionalTokens.sol",
+      "packages/contracts/contracts/mocks/ConditionalTokens.sol"
+    ],
+    "test_paths": [
+      "packages/contracts/test/unit/ResolutionOracle.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "packages/contracts/contracts/oracle/ResolutionOracle.sol": "efc234a46076870dd9e9b55d4663d0d24c000fd0d8ebf554b10820ae3f1e7f74",
+      "packages/contracts/contracts/interfaces/IConditionalTokens.sol": "effceeaacba9c5b8a2fe87400448bfc34baf114ded3502e958f5bb2c8495751c",
+      "packages/contracts/contracts/mocks/ConditionalTokens.sol": "bc556d7bdaac9e412ce08a85cc804c3d183aa472157290a54de57b055d69c400",
+      "packages/contracts/test/unit/ResolutionOracle.test.ts": "f4948a1b4b2c86bfa29e46baf0ce6208a2b27ec5225b0758ce5d7105b9db8713"
+    }
+  },
+  "transformations": [
+    {
+      "file": "ResolutionOracle.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IConditionalTokens.sol",
+      "after": "./IConditionalTokens.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "ResolutionOracle.test.js",
+      "upstream_path": "packages/contracts/test/unit/ResolutionOracle.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "ResolutionOracle.test.js",
+      "upstream_path": "packages/contracts/test/unit/ResolutionOracle.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../../typechain-types",
+      "names": [
+        "ResolutionOracle"
+      ],
+      "file": "ResolutionOracle.test.js",
+      "upstream_path": "packages/contracts/test/unit/ResolutionOracle.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../../typechain-types",
+      "names": [
+        "IConditionalTokens"
+      ],
+      "file": "ResolutionOracle.test.js",
+      "upstream_path": "packages/contracts/test/unit/ResolutionOracle.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 237 lines, closure 602 lines, 3 files; 14 it blocks; history: 32 commits 2025-10-12..2026-01-15",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:29:19.528609+00:00"
+}

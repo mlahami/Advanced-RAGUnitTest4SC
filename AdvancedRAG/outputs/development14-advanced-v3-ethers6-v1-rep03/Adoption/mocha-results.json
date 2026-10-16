@@ -1,0 +1,123 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 7,
+    "passes": 6,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-10-01T06:03:00.923Z",
+    "end": "2026-10-01T06:03:01.511Z",
+    "duration": 588
+  },
+  "tests": [
+    {
+      "title": "Should initialize with empty adopters array",
+      "fullTitle": "Adoption Deployment Should initialize with empty adopters array",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 113,
+      "err": {}
+    },
+    {
+      "title": "Should allow adoption of a pet",
+      "fullTitle": "Adoption Adopt Should allow adoption of a pet",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "Event \"Adoption\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"Adoption\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:32:7)"
+      }
+    },
+    {
+      "title": "Should revert when adopting an invalid pet ID",
+      "fullTitle": "Adoption Adopt Should revert when adopting an invalid pet ID",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should allow multiple adoptions by different addresses",
+      "fullTitle": "Adoption Adopt Should allow multiple adoptions by different addresses",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 32,
+      "err": {}
+    },
+    {
+      "title": "Should allow re-adoption of a pet by the same address",
+      "fullTitle": "Adoption Adopt Should allow re-adoption of a pet by the same address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 25,
+      "err": {}
+    },
+    {
+      "title": "Should not allow re-adoption of a pet by a different address",
+      "fullTitle": "Adoption Adopt Should not allow re-adoption of a pet by a different address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "Should return correct adopters array",
+      "fullTitle": "Adoption View Functions Should return correct adopters array",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 88,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should allow adoption of a pet",
+      "fullTitle": "Adoption Adopt Should allow adoption of a pet",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "Event \"Adoption\" doesn't exist in the contract",
+        "stack": "AssertionError: Event \"Adoption\" doesn't exist in the contract\n    at onSuccess (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:80:17)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20\n    at Context.<anonymous> (test\\generated.test.js:32:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should initialize with empty adopters array",
+      "fullTitle": "Adoption Deployment Should initialize with empty adopters array",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 113,
+      "err": {}
+    },
+    {
+      "title": "Should revert when adopting an invalid pet ID",
+      "fullTitle": "Adoption Adopt Should revert when adopting an invalid pet ID",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should allow multiple adoptions by different addresses",
+      "fullTitle": "Adoption Adopt Should allow multiple adoptions by different addresses",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 32,
+      "err": {}
+    },
+    {
+      "title": "Should allow re-adoption of a pet by the same address",
+      "fullTitle": "Adoption Adopt Should allow re-adoption of a pet by the same address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 25,
+      "err": {}
+    },
+    {
+      "title": "Should not allow re-adoption of a pet by a different address",
+      "fullTitle": "Adoption Adopt Should not allow re-adoption of a pet by a different address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "Should return correct adopters array",
+      "fullTitle": "Adoption View Functions Should return correct adopters array",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-advanced-v3-ethers6-v1-rep03\\Adoption\\test\\generated.test.js",
+      "duration": 88,
+      "err": {}
+    }
+  ]
+}

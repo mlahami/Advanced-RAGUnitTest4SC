@@ -1,0 +1,67 @@
+{
+  "id": "rag-v2.MultiSigWallet",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "MultiSigWallet",
+  "chunk_ids": [
+    4774,
+    4760,
+    4766,
+    4759,
+    4748,
+    4744,
+    4740,
+    4749
+  ],
+  "context_sha256": "b6c0daf1498688594556d52edcf65cc145575b6f41987b13115ceabb38f796ff",
+  "ratings": [
+    {
+      "chunk_id": 4774,
+      "rating": 1,
+      "reason": "Shows pattern of testing revert when acting on an already executed transaction, applicable as a generic check for execution-state reverts."
+    },
+    {
+      "chunk_id": 4760,
+      "rating": 1,
+      "reason": "Tests revert on insufficient confirmations, a pattern applicable, but uses different function signatures and names, so only partially reusable."
+    },
+    {
+      "chunk_id": 4766,
+      "rating": 1,
+      "reason": "Shows revert‑on‑executed pattern useful generically, but target lacks revokeConfirmation function, so not directly adaptable."
+    },
+    {
+      "chunk_id": 4759,
+      "rating": 1,
+      "reason": "Tests similar execution‑already‑done revert pattern, but function names and revert messages differ, requiring adaptation."
+    },
+    {
+      "chunk_id": 4748,
+      "rating": 1,
+      "reason": "Shows pattern for confirming and executing with revert on already executed, but uses different function names; needs adaptation."
+    },
+    {
+      "chunk_id": 4744,
+      "rating": 1,
+      "reason": "Tests revert on confirming an already executed transaction, a similar pattern applies though function names and revert messages differ."
+    },
+    {
+      "chunk_id": 4740,
+      "rating": 1,
+      "reason": "Shows confirm/execute revert pattern similar to target but uses different function names and extra token deployments, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 4749,
+      "rating": 1,
+      "reason": "Shows generic fixture setup, owner array, and revert assertion pattern, but uses different function names and error messages not present in target contract."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 10412,
+    "completion_tokens": 978,
+    "calls": 8
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 69.7,
+  "evaluated_utc": "2026-10-12T08:49:27.934023+00:00"
+}

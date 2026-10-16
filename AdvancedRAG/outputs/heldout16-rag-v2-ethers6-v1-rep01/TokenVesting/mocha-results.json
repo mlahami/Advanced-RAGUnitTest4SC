@@ -1,0 +1,245 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 14,
+    "passes": 9,
+    "pending": 0,
+    "failures": 5,
+    "start": "2026-09-30T21:13:40.603Z",
+    "end": "2026-09-30T21:13:41.204Z",
+    "duration": 601
+  },
+  "tests": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "TokenVesting Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should set the right token address",
+      "fullTitle": "TokenVesting Deployment Should set the right token address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should create a grant with valid parameters",
+      "fullTitle": "TokenVesting Grant Creation Should create a grant with valid parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should revert when creating a grant with zero address",
+      "fullTitle": "TokenVesting Grant Creation Should revert when creating a grant with zero address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should revert when creating a grant with zero amount",
+      "fullTitle": "TokenVesting Grant Creation Should revert when creating a grant with zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should revert when creating a grant with zero duration",
+      "fullTitle": "TokenVesting Grant Creation Should revert when creating a grant with zero duration",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert when creating a grant with end before cliff",
+      "fullTitle": "TokenVesting Grant Creation Should revert when creating a grant with end before cliff",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should revoke a grant and emit event",
+      "fullTitle": "TokenVesting Grant Revocation Should revoke a grant and emit event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Error in \"GrantRevoked\" event: Error in the 3rd argument assertion: expected 834 to equal 1000.",
+        "stack": "AssertionError: Error in \"GrantRevoked\" event: Error in the 3rd argument assertion: expected 834 to equal 1000.\n    at Context.<anonymous> (test\\generated.test.js:116:7)"
+      }
+    },
+    {
+      "title": "Should revert when revoking a grant from non-owner",
+      "fullTitle": "TokenVesting Grant Revocation Should revert when revoking a grant from non-owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should allow beneficiary to claim tokens after cliff",
+      "fullTitle": "TokenVesting Token Claiming Should allow beneficiary to claim tokens after cliff",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient balance'\n    at BenchmarkERC20._transfer (runs/heldout16-rag-v2-ethers6-v1-rep01/TokenVesting/contracts/BenchmarkFixtures.sol:142)\n    at BenchmarkERC20.transfer (runs/heldout16-rag-v2-ethers6-v1-rep01/TokenVesting/contracts/BenchmarkFixtures.sol:65)\n    at TokenVesting.claim (runs/heldout16-rag-v2-ethers6-v1-rep01/TokenVesting/contracts/TokenVesting.sol:170)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.claim (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:152:7)"
+      }
+    },
+    {
+      "title": "Should revert when claiming before cliff",
+      "fullTitle": "TokenVesting Token Claiming Should revert when claiming before cliff",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 14,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with reason 'insufficient balance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with reason 'insufficient balance'\n    at Context.<anonymous> (test\\generated.test.js:166:7)"
+      }
+    },
+    {
+      "title": "Should revert when claiming from non-beneficiary",
+      "fullTitle": "TokenVesting Token Claiming Should revert when claiming from non-beneficiary",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)\n    at Context.<anonymous> (test\\generated.test.js:183:7)"
+      }
+    },
+    {
+      "title": "Should return correct claimable amount",
+      "fullTitle": "TokenVesting View Functions Should return correct claimable amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "expected 500 to equal 0.",
+        "stack": "AssertionError: expected 500 to equal 0.\n    at Context.<anonymous> (test\\generated.test.js:200:28)"
+      }
+    },
+    {
+      "title": "Should return correct grant count",
+      "fullTitle": "TokenVesting View Functions Should return correct grant count",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should revoke a grant and emit event",
+      "fullTitle": "TokenVesting Grant Revocation Should revoke a grant and emit event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Error in \"GrantRevoked\" event: Error in the 3rd argument assertion: expected 834 to equal 1000.",
+        "stack": "AssertionError: Error in \"GrantRevoked\" event: Error in the 3rd argument assertion: expected 834 to equal 1000.\n    at Context.<anonymous> (test\\generated.test.js:116:7)"
+      }
+    },
+    {
+      "title": "Should allow beneficiary to claim tokens after cliff",
+      "fullTitle": "TokenVesting Token Claiming Should allow beneficiary to claim tokens after cliff",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'insufficient balance'\n    at BenchmarkERC20._transfer (runs/heldout16-rag-v2-ethers6-v1-rep01/TokenVesting/contracts/BenchmarkFixtures.sol:142)\n    at BenchmarkERC20.transfer (runs/heldout16-rag-v2-ethers6-v1-rep01/TokenVesting/contracts/BenchmarkFixtures.sol:65)\n    at TokenVesting.claim (runs/heldout16-rag-v2-ethers6-v1-rep01/TokenVesting/contracts/TokenVesting.sol:170)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.claim (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at waitForPendingTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:28:17)\n    at Context.<anonymous> (test\\generated.test.js:152:7)"
+      }
+    },
+    {
+      "title": "Should revert when claiming before cliff",
+      "fullTitle": "TokenVesting Token Claiming Should revert when claiming before cliff",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 14,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with reason 'insufficient balance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with reason 'insufficient balance'\n    at Context.<anonymous> (test\\generated.test.js:166:7)"
+      }
+    },
+    {
+      "title": "Should revert when claiming from non-beneficiary",
+      "fullTitle": "TokenVesting Token Claiming Should revert when claiming from non-beneficiary",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Nothing to claim', but it reverted with panic code 0x32 (Array accessed at an out-of-bounds or negative index)\n    at Context.<anonymous> (test\\generated.test.js:183:7)"
+      }
+    },
+    {
+      "title": "Should return correct claimable amount",
+      "fullTitle": "TokenVesting View Functions Should return correct claimable amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "expected 500 to equal 0.",
+        "stack": "AssertionError: expected 500 to equal 0.\n    at Context.<anonymous> (test\\generated.test.js:200:28)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "TokenVesting Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "Should set the right token address",
+      "fullTitle": "TokenVesting Deployment Should set the right token address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should create a grant with valid parameters",
+      "fullTitle": "TokenVesting Grant Creation Should create a grant with valid parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should revert when creating a grant with zero address",
+      "fullTitle": "TokenVesting Grant Creation Should revert when creating a grant with zero address",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should revert when creating a grant with zero amount",
+      "fullTitle": "TokenVesting Grant Creation Should revert when creating a grant with zero amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should revert when creating a grant with zero duration",
+      "fullTitle": "TokenVesting Grant Creation Should revert when creating a grant with zero duration",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert when creating a grant with end before cliff",
+      "fullTitle": "TokenVesting Grant Creation Should revert when creating a grant with end before cliff",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should revert when revoking a grant from non-owner",
+      "fullTitle": "TokenVesting Grant Revocation Should revert when revoking a grant from non-owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "Should return correct grant count",
+      "fullTitle": "TokenVesting View Functions Should return correct grant count",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\TokenVesting\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    }
+  ]
+}

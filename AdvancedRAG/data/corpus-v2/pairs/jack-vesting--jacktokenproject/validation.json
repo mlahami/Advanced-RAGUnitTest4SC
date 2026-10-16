@@ -1,0 +1,89 @@
+{
+  "pair": "jack-vesting--jacktokenproject",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:48:50.905310+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/JackToken.sol": "3d9967f20fbebc60ce0d423e7f169083b430a63aa171cbf547d83d75aff8ba01",
+    "contracts/JackVesting.sol": "bda7e21669699d69c170c8f907a995c4bdb1080ee0fdf1774c37ecacab0083b2",
+    "LICENSE": "3da3a1f4e227299db7f9e9896b855149d70a02c1220c0286935585d88882f52a",
+    "manifest.json": "9d8358b0ec38c82bb244a90669582772a28156e0d5f754165902770d6930601c",
+    "test/JackVesting.js": "85d353f8d5a6eb195a568d0a39c04df1f14426f22534a711ac09f6bb9de757db"
+  },
+  "pair_sha256": "5eced1c78c8ec1b0d8d80b17ff9e15014d1c2c47ac7cd9a63ae3a5c53d8bd8f0",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "JackVesting.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.095,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "JackVesting.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.09,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "JackVesting.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.088,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.65,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.33,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "JackVesting.sol": {
+          "statements": 100.0,
+          "branches": 54.55,
+          "functions": 75.0,
+          "lines": 100.0
+        },
+        "JackToken.sol": {
+          "statements": 100.0,
+          "branches": 33.33,
+          "functions": 66.67,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

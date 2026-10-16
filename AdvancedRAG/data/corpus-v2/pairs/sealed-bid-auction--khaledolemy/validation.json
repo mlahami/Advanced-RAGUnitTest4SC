@@ -1,0 +1,89 @@
+{
+  "pair": "sealed-bid-auction--khaledolemy",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T16:01:26.650528+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ReentrancyAttacker.sol": "5a541febadd5700989f0a2528ee000323460809022973a3e412bf7724cf9febc",
+    "contracts/SealedBidAuction.sol": "89501abdaef6ab791a1c5de87a86fd0b21197c2df95925cd5d5ec47a3d84dc7e",
+    "LICENSE": "4bf7db5f538b7cbec661fc5a7ca867e04ebef5c0cca5bc72dfe3a0422b19af90",
+    "manifest.json": "a3d1086ca4367b8bec3c66005973b096384bd5e4335d1110ebd0a7e3bae23ccb",
+    "test/SealedBidAuction.test.js": "b0109f6428b47a21b15922778d766f86b77f059fb6c2f2e8a0abe7560460bacb"
+  },
+  "pair_sha256": "7584c18c0762043184613ae45ac587f06afaf408b2d9c8864681dfce95e07bc8",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "SealedBidAuction.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.138,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "SealedBidAuction.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.134,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "SealedBidAuction.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.132,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.05,
+      "mocha": {
+        "tests": 32,
+        "passes": 32,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.37,
+      "mocha": {
+        "tests": 32,
+        "passes": 32,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "SealedBidAuction.sol": {
+          "statements": 89.74,
+          "branches": 92.86,
+          "functions": 90.91,
+          "lines": 91.89
+        },
+        "ReentrancyAttacker.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

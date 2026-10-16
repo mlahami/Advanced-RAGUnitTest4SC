@@ -1,0 +1,79 @@
+{
+  "id": "advanced-v3.Voting",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "Voting",
+  "chunk_ids": [
+    7434,
+    225,
+    7435,
+    7362,
+    7478,
+    7363,
+    7479,
+    7433,
+    7453,
+    7436
+  ],
+  "context_sha256": "0fcf61cbb135878f41687dbdb1e99ebfa33a188ff16281350acd350449def17b",
+  "ratings": [
+    {
+      "chunk_id": 7434,
+      "rating": 1,
+      "reason": "Shows double‑vote revert pattern; target lacks addCandidate but can deploy with candidates and reuse double‑vote check."
+    },
+    {
+      "chunk_id": 225,
+      "rating": 1,
+      "reason": "Shows voting calls and winner verification pattern, but includes unrelated whitelist, deadline, and different getter signature, limiting direct reuse."
+    },
+    {
+      "chunk_id": 7435,
+      "rating": 1,
+      "reason": "Shows pattern for testing vote reverts on invalid candidate IDs, but uses non‑existent addCandidate setup; needs adaptation for constructor‑provided candidates."
+    },
+    {
+      "chunk_id": 7362,
+      "rating": 1,
+      "reason": "Shows voting, then checking winner, but uses different functions and data structures; only generic pattern of vote then winner check is reusable."
+    },
+    {
+      "chunk_id": 7478,
+      "rating": 1,
+      "reason": "Test calls vote via a different contract with extra args and expects an event; target lacks events and extra parameters, but the basic vote call pattern is reusable."
+    },
+    {
+      "chunk_id": 7363,
+      "rating": 1,
+      "reason": "Only demonstrates generic revert expectation; target lacks registration/startVoting/getWinner, so behavior not shared, but pattern of expect().to.be.revertedWith is reusable."
+    },
+    {
+      "chunk_id": 7479,
+      "rating": 1,
+      "reason": "Only demonstrates generic revert testing pattern; target lacks time checks, so specific behavior isn’t applicable."
+    },
+    {
+      "chunk_id": 7433,
+      "rating": 1,
+      "reason": "Shows generic vote call and hasVoted check pattern, but uses non‑existent addCandidate/getVotes functions, so only partially useful."
+    },
+    {
+      "chunk_id": 7453,
+      "rating": 0,
+      "reason": "Test targets non‑existent events and functions; pattern doesn’t apply to target contract lacking events or createProposal."
+    },
+    {
+      "chunk_id": 7436,
+      "rating": 1,
+      "reason": "Uses vote calls and multiple voters pattern, but target lacks addCandidate/getVotes functions, so only generic voting flow is reusable."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 10627,
+    "completion_tokens": 1269,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 74.4,
+  "evaluated_utc": "2026-10-14T18:12:26.500649+00:00"
+}

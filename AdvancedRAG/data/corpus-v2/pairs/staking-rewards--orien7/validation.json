@@ -1,0 +1,89 @@
+{
+  "pair": "staking-rewards--orien7",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:46:37.848484+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/StakingRewards.sol": "e356995007dbed62614bb72c86a2bac85b98b171f5d62bd303282ab3f9580f83",
+    "contracts/UDAYToken.sol": "8e8dbe26e1517918d51c7f7b5067c4e7eaae68fa9ad02b4adffc0f5a8e66819f",
+    "LICENSE": "95302983ed1a24a1219552bbfc17ee45722134f89cbb0b44dafcd948fb1fc71c",
+    "manifest.json": "1b013f3c52567f079c8259a06d2bd046f7b432e0f77537b076359fb271543a4f",
+    "test/StakingRewards.test.js": "7b27cdf7bb1022644ce2bfd923bd028e84b1e5afe5152e8acaaf36652d1eeb70"
+  },
+  "pair_sha256": "a0a762f9dcaf5e5431f392c4aa7b433f67fcfd2e3d12bf69398a578cf27ede4d",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "StakingRewards.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.23,
+        "signatures": 0.105,
+        "min_functions": 10
+      },
+      {
+        "contract": "StakingRewards.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.191,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "StakingRewards.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.175,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.33,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.5,
+      "mocha": {
+        "tests": 12,
+        "passes": 12,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "StakingRewards.sol": {
+          "statements": 90.7,
+          "branches": 57.89,
+          "functions": 81.82,
+          "lines": 92.68
+        },
+        "UDAYToken.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

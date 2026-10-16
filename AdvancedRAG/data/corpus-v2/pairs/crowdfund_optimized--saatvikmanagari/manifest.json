@@ -1,0 +1,39 @@
+{
+  "id": "crowdfund_optimized--saatvikmanagari",
+  "domain": "crowdfunding",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "crowdfund_optimized.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/SaatvikManagari/cs218-crowdfunding-chainsnatchers_1482",
+    "commit": "9240e951db2750f66f56310ca36315bb0a8b3139",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/crowdfund_optimized.sol"
+    ],
+    "test_paths": [
+      "test/CrowdFundOptimized.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/crowdfund_optimized.sol": "54499a09116d45d1cf86879a74b6fa1e2df16ba84d99a6fc4fcd4d40caaf376c",
+      "test/CrowdFundOptimized.test.js": "54c7cff0ec689f36d12404ca980af71bf36315649aab8495eda5497a8705ffb9"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "CrowdFundOptimized.test.js",
+      "upstream_path": "test/CrowdFundOptimized.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "University course project (CS218, 4 contributors, 36 commits 2026). Multi-campaign crowdfunding (contract CrowdFundOptimized): Active/Failed/Success/Withdrawn state machine, per-contributor mapping inside struct, owner withdraw on success, contributor refund on failure, OZ Ownable+ReentrancyGuard (v5). File has GPL-3.0 SPDX header but repo LICENSE is MIT. 18 it blocks with loadFixture/time; parses CampaignCreated from receipt logs. Sibling crowdfund_main.sol exists (similar, not included).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T15:51:42.503486+00:00"
+}

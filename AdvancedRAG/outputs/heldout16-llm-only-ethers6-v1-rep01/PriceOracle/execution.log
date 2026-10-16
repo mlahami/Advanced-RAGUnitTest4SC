@@ -1,0 +1,35 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BenchmarkFixtures.sol
+> PriceOracle.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |    52.94 |    45.71 |    37.93 |    49.57 |                |
+  BenchmarkFixtures.sol |        0 |        0 |        0 |        0 |... 140,141,145 |
+  PriceOracle.sol       |    95.74 |    84.21 |      100 |    98.28 |            141 |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |    52.94 |    45.71 |    37.93 |    49.57 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+Error in plugin solidity-coverage: ❌ 4 test(s) failed under coverage.
+
+For more info run Hardhat with --show-stack-traces

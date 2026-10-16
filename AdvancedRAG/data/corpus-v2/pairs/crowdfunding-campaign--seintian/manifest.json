@@ -1,0 +1,125 @@
+{
+  "id": "crowdfunding-campaign--seintian",
+  "domain": "crowdfunding",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "CrowdfundingCampaign.sol",
+    "CrowdfundingFactory.sol",
+    "MaliciousReentrantToken.sol",
+    "MockERC20.sol",
+    "MockFeeToken.sol",
+    "ICrowdfundingCampaign.sol",
+    "ICrowdfundingFactory.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Seintian/unito-blockchain-25-26-crowdfunding-protocol",
+    "commit": "f6c09d330b7a71ce34dc23cb7b85cecf89bc4ec6",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/CrowdfundingCampaign.sol",
+      "contracts/CrowdfundingFactory.sol",
+      "contracts/interfaces/ICrowdfundingCampaign.sol",
+      "contracts/interfaces/ICrowdfundingFactory.sol",
+      "contracts/mocks/MaliciousReentrantToken.sol",
+      "contracts/mocks/MockERC20.sol",
+      "contracts/mocks/MockFeeToken.sol"
+    ],
+    "test_paths": [
+      "test/CrowdfundingCampaign.test.ts",
+      "test/CrowdfundingFactory.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/CrowdfundingCampaign.sol": "5a4b469d872697ede4cf1eeef1067d1ec1d1911e30dd4a6eb2462ba51e053590",
+      "contracts/CrowdfundingFactory.sol": "539f51fedcd933d904664e1ba356fc38b9e216a1afea7eb44e4a6a2c30ca87a0",
+      "contracts/interfaces/ICrowdfundingCampaign.sol": "e3beced99037f3f3d51e22b50a8b464e15a69154277569ca6c1364f38955c2af",
+      "contracts/interfaces/ICrowdfundingFactory.sol": "639b4def9f34b1c4cbeb0f5de3779d53dace9b453ac4f8a61e0c543b13660c9d",
+      "contracts/mocks/MaliciousReentrantToken.sol": "ffae6c02299a9fb307cb5c583754a772083a708d5c1d6e823be2e0b1edb5583a",
+      "contracts/mocks/MockERC20.sol": "a92fb6cd0881c821ac5f18c838fd6341d18033c0c00dd79aaebc963200e2f0d4",
+      "contracts/mocks/MockFeeToken.sol": "1a774fa876254aa6e8ef4df3811227ba90e4a8a0e2703a8716fb384069f3798c",
+      "test/CrowdfundingCampaign.test.ts": "dee361c7d6ac963b346eee36eeaeec600548360d9382ce95f8188032f5fa064c",
+      "test/CrowdfundingFactory.test.ts": "779647746a9023f294cab726b876b25583811f56c0839890cfa772e160e882ca"
+    }
+  },
+  "transformations": [
+    {
+      "file": "CrowdfundingCampaign.sol",
+      "kind": "import-path",
+      "before": "./interfaces/ICrowdfundingCampaign.sol",
+      "after": "./ICrowdfundingCampaign.sol"
+    },
+    {
+      "file": "CrowdfundingFactory.sol",
+      "kind": "import-path",
+      "before": "./interfaces/ICrowdfundingFactory.sol",
+      "after": "./ICrowdfundingFactory.sol"
+    },
+    {
+      "file": "MaliciousReentrantToken.sol",
+      "kind": "import-path",
+      "before": "../interfaces/ICrowdfundingCampaign.sol",
+      "after": "./ICrowdfundingCampaign.sol"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "CrowdfundingCampaign.test.js",
+      "upstream_path": "test/CrowdfundingCampaign.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 5,
+      "file": "CrowdfundingCampaign.test.js",
+      "upstream_path": "test/CrowdfundingCampaign.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "CrowdfundingCampaign",
+        "MockERC20",
+        "MaliciousReentrantToken",
+        "MockFeeToken"
+      ],
+      "file": "CrowdfundingCampaign.test.js",
+      "upstream_path": "test/CrowdfundingCampaign.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "CrowdfundingCampaign.test.js",
+      "upstream_path": "test/CrowdfundingCampaign.test.ts"
+    },
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "CrowdfundingFactory.test.js",
+      "upstream_path": "test/CrowdfundingFactory.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "CrowdfundingFactory.test.js",
+      "upstream_path": "test/CrowdfundingFactory.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "CrowdfundingFactory",
+        "MockERC20"
+      ],
+      "file": "CrowdfundingFactory.test.js",
+      "upstream_path": "test/CrowdfundingFactory.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "All-or-nothing ERC-20 crowdfunding: factory deploys campaigns with creator collateral and reward pool; state machine (funding/successful/failed), pledge, withdraw before threshold, claimReward/claimRefund, creator claimFunds, recoverCollateral/recoverExcessRewards, fee-on-transfer and re-entrant token mocks. Primary 321 lines; 52 it blocks over 2 files. Local run on frozen HH env: 52/52 pass, 100% stmts on primary and factory. Typechain/signer imports are type-only (elided). OZ 5 SafeERC20/ReentrancyGuard. Licence file LICENSE (MIT). History: 19 commits 2026-08-25..2026-09-24, 2 author names; university course project (UniTo) but fully implemented. Same domain as benchmark Crowdfunding (token-based, collateral/reward design differs).",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T08:14:06.969672+00:00"
+}

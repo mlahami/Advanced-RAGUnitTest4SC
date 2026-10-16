@@ -1,0 +1,73 @@
+{
+  "id": "advanced-v3.Escrow",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "Escrow",
+  "chunk_ids": [
+    2788,
+    5952,
+    5407,
+    2790,
+    5930,
+    5408,
+    974,
+    5679,
+    4322
+  ],
+  "context_sha256": "2af004a7e8bd31fefb64e6892b750c27b71a53b7e013eae66bf569f14883bab6",
+  "ratings": [
+    {
+      "chunk_id": 2788,
+      "rating": 2,
+      "reason": "Tests zero‑value funding revert, matching Escrow's fund() requirement of non‑zero msg.value; pattern can be reused with renamed contract and adjusted revert message."
+    },
+    {
+      "chunk_id": 5952,
+      "rating": 0,
+      "reason": "Only tests vesting logic and time‑based release, unrelated to Escrow’s funding/release/refund flow; no applicable pattern."
+    },
+    {
+      "chunk_id": 5407,
+      "rating": 1,
+      "reason": "Shows generic revert test pattern for refund, but target lacks deadline condition, so only partially applicable"
+    },
+    {
+      "chunk_id": 2790,
+      "rating": 0,
+      "reason": "Escrow has no events; the test checks event emission, which isn’t applicable, and its behavior isn’t relevant to escrow functions."
+    },
+    {
+      "chunk_id": 5930,
+      "rating": 1,
+      "reason": "Shows generic revert checking and access‑control pattern, but tests unrelated vesting behavior not present in Escrow."
+    },
+    {
+      "chunk_id": 5408,
+      "rating": 1,
+      "reason": "Shows generic unauthorized refund revert pattern, but target uses different roles and ether, not token‑based fundTask, so only testing pattern is reusable."
+    },
+    {
+      "chunk_id": 974,
+      "rating": 1,
+      "reason": "Shows generic access‑control testing pattern (setup, approve, call, event/assert balance) but the specific behavior differs; can be adapted for Escrow’s fund/release checks."
+    },
+    {
+      "chunk_id": 5679,
+      "rating": 1,
+      "reason": "Shows escrow release flow, balance checks, and role‑based calls which map to release() in target, but uses different functions and state, so only a generic pattern."
+    },
+    {
+      "chunk_id": 4322,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests unrelated purchase logic; only useful as generic revert test template."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9797,
+    "completion_tokens": 1038,
+    "calls": 9
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 7.2,
+  "evaluated_utc": "2026-10-14T18:04:16.573647+00:00"
+}

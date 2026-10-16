@@ -1,0 +1,36 @@
+{
+  "contract": "Token",
+  "status": "test_failures",
+  "prompt_sha256": "787b8b5bc40b14b17bfcf1a61cd68c5a7af2398f74d2ea5bda22d39582c84c48",
+  "generation_seconds": 23.156105000001844,
+  "usage": {
+    "prompt_tokens": 7176,
+    "total_tokens": 8196,
+    "completion_tokens": 1020,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.038670799985994
+  },
+  "passed_tests": 13,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Token Edge Cases Should handle max uint256 value transfers",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient balance'"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

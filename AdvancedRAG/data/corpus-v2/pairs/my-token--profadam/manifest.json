@@ -1,0 +1,31 @@
+{
+  "id": "my-token--profadam",
+  "domain": "erc20-token",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "MyToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/PROFADAM/defi-token",
+    "commit": "40cb9bd9c3c893ae178af63afae0ca1b9289337f",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MyToken.sol"
+    ],
+    "test_paths": [
+      "test/MyToken.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MyToken.sol": "52e6ac87bae1d591aa2fb8dffe33e9199cf1366343ddf041a1aa6c83a19c1e9f",
+      "test/MyToken.test.js": "39f8cc4ae02ac222b42fb216c9820741c753cb7b2bc8b3e3dcf6106ae9e2eb79"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 203 lines, closure 203 lines, 1 files; 25 it blocks; history: 37 commits 2025-10-01..2025-10-21",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:32:11.964559+00:00"
+}

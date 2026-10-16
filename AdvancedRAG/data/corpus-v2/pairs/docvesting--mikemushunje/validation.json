@@ -1,0 +1,90 @@
+{
+  "pair": "docvesting--mikemushunje",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:48:59.995954+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/DOCVesting.sol": "16e2ca05f0e23fcc0e75962290dabf97b8e36a600cb0e63f91f266f3a58aac6d",
+    "contracts/MockDOC.sol": "8cec5ffc54e65ff181302b3e34cd5beb62c5d4951c7172212467eb5a3b891a40",
+    "LICENSE": "70f7de4b8fe0a9efb0d5b29de6d79065143baaf9b97cb3ee4bd43276ca6d3b69",
+    "manifest.json": "d40dc7494eaa8b5d6a02ea9b8e8acf12a1a047a3cace42cdbae67944c611d393",
+    "test/DOCVesting.security.test.js": "dacfc4c7f8f24a21e6cce3bc6fa2af1b0a37ec0cef011e4e8f6d02a3eee2a768",
+    "test/DOCVesting.test.js": "8df8163aa4deefc2ac6d3d0bda18ae474e11c1b88d6e0ef2c7cfadd2c94e87ee"
+  },
+  "pair_sha256": "5da77ea201160455bae7b716e383fbc2e825e0515e6a7212a7ca96b52aa665a5",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "DOCVesting.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.185,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "DOCVesting.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.185,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "DOCVesting.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.175,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.95,
+      "mocha": {
+        "tests": 80,
+        "passes": 80,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 9.38,
+      "mocha": {
+        "tests": 80,
+        "passes": 80,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "DOCVesting.sol": {
+          "statements": 98.15,
+          "branches": 90.32,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockDOC.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 50.0,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

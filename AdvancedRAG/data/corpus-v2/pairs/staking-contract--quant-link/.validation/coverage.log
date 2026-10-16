@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> MockToken.sol
+> StakingContract.sol
+
+Compilation:
+============
+
+Compiled 12 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+----------------------|----------|----------|----------|----------|----------------|
+File                  |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+----------------------|----------|----------|----------|----------|----------------|
+ contracts\           |    71.43 |       42 |    73.33 |    76.79 |                |
+  MockToken.sol       |    55.56 |       25 |    66.67 |    55.56 |    72,73,75,76 |
+  StakingContract.sol |    75.76 |    47.37 |       75 |    80.85 |... 372,375,377 |
+----------------------|----------|----------|----------|----------|----------------|
+All files             |    71.43 |       42 |    73.33 |    76.79 |                |
+----------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

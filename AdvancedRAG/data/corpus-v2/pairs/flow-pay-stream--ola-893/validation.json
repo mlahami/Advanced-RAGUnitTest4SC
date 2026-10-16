@@ -1,0 +1,89 @@
+{
+  "pair": "flow-pay-stream--ola-893",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:41:00.600544+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/FlowPayStream.sol": "fe0b4eba8914121795c421324e39fff244aab5df7661f62a0c36fa50857cec47",
+    "contracts/MockMNEE.sol": "28af50c835edf249acea20070c70797ecfdcb21b05fd274ed2c3f1d834a9629c",
+    "LICENSE": "5a1ab18fa6cb1278f5c994e5c7d30aa6031b0b05760609702e00d985eb2f2a39",
+    "manifest.json": "d2e2b0705ec97ab3657f91244d6df7dd2adc29f3f4fefd6671645cc4eb8783c6",
+    "test/FlowPayStream.test.js": "559fc5981f1096f94780a8a0d4647012f89adb61c20468669d20d2fff6511447"
+  },
+  "pair_sha256": "d51e277cc411e955b7512fbd16e91d25107406546568eb85f5a99d407d352f59",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MockMNEE.sol",
+        "reference": "Token.sol",
+        "structural": 0.333,
+        "signatures": 0.6,
+        "min_functions": 3
+      },
+      {
+        "contract": "MockMNEE.sol",
+        "reference": "MetaCoin.sol",
+        "structural": 0.241,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "FlowPayStream.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.215,
+        "signatures": 0.105,
+        "min_functions": 10
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.11,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.95,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "FlowPayStream.sol": {
+          "statements": 95.12,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 95.12
+        },
+        "MockMNEE.sol": {
+          "statements": 100.0,
+          "branches": 66.67,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,44 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> IRollingPotRandomnessConsumer.sol
+> IRollingPotRandomnessProvider.sol
+> MockRandomnessProvider.sol
+> ReentrantClaimer.sol
+> RollingPotFactory.sol
+> RollingPotGame.sol
+> SelfDestructSender.sol
+> ZeroRequestIdRandomnessProvider.sol
+
+Compilation:
+============
+
+Compiled 10 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+--------------------------------------|----------|----------|----------|----------|----------------|
+File                                  |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+--------------------------------------|----------|----------|----------|----------|----------------|
+ contracts\                           |    97.06 |       60 |    95.65 |    96.08 |                |
+  IRollingPotRandomnessConsumer.sol   |      100 |      100 |      100 |      100 |                |
+  IRollingPotRandomnessProvider.sol   |      100 |      100 |      100 |      100 |                |
+  MockRandomnessProvider.sol          |      100 |       50 |      100 |      100 |                |
+  ReentrantClaimer.sol                |      100 |       50 |      100 |      100 |                |
+  RollingPotFactory.sol               |      100 |       55 |      100 |      100 |                |
+  RollingPotGame.sol                  |    95.89 |     62.5 |    90.91 |    94.55 |... 374,375,392 |
+  SelfDestructSender.sol              |      100 |      100 |      100 |      100 |                |
+  ZeroRequestIdRandomnessProvider.sol |      100 |      100 |      100 |      100 |                |
+--------------------------------------|----------|----------|----------|----------|----------------|
+All files                             |    97.06 |       60 |    95.65 |    96.08 |                |
+--------------------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

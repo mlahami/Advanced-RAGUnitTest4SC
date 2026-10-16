@@ -1,0 +1,89 @@
+{
+  "pair": "invoice-vault--0xpenwright",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:56:03.181969+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/InvoiceVault.sol": "412ff54cd17e4732f7fe8776f7c61665b46a25817d7e5ea3b1866e6693743394",
+    "contracts/MockERC20.sol": "5fa94cbbb58701d32d4253c287f19ab487baf931331f93250591d62f4bf2c08b",
+    "LICENSE": "7355d48e7a046209980eaef2534b3d3a238edba37cc0d8cf1dc75423df23b57f",
+    "manifest.json": "ec2b103dbb66287dbeeba23cc5af95bb001ab9da3fd815a447400085b1ec10b6",
+    "test/InvoiceVault.test.js": "1963a6c81cdcac22b5b8396765ad6000ae480a99b422f1254d4a69edb38bc4db"
+  },
+  "pair_sha256": "7b3957ed6eab5ae0341a0b4d5369f9388d4e9cb9644d13350dd267dfd1450656",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "InvoiceVault.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.135,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "InvoiceVault.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.121,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "InvoiceVault.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.119,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.04,
+      "mocha": {
+        "tests": 24,
+        "passes": 24,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.22,
+      "mocha": {
+        "tests": 24,
+        "passes": 24,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "InvoiceVault.sol": {
+          "statements": 96.0,
+          "branches": 86.67,
+          "functions": 88.89,
+          "lines": 96.0
+        },
+        "MockERC20.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 66.67,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

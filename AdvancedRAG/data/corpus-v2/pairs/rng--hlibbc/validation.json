@@ -1,0 +1,89 @@
+{
+  "pair": "rng--hlibbc",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:09:16.874351+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Main.sol": "7a233c19b60e5735e5d661c7d21dbfaeb19ebc74f077888fabb58f7d597835dc",
+    "contracts/Rng.sol": "05ea3da2d8d82df988e37bf891e5107eba3eae16c0dceb57ddde4665fb4d3823",
+    "LICENSE": "88fe98ae6431a97a42009bc8e7d47b23e0a7391de18f19cbcd1c4e2170fe7164",
+    "manifest.json": "296c33fa501467b2df7312048424693372eec036390104bff2494fc6f899fb20",
+    "test/Rng.debug.test.js": "3b49c21d5aab463d2c1a81e1cb05ce34afe05815385c53b8303a9955d9b828a1"
+  },
+  "pair_sha256": "a8d8801c189d96836a9d7424d3d2d7f347b0b8a3da75985b7938ec7bb6e573e7",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Rng.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.166,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "Rng.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.163,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "Main.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.146,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.0,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.53,
+      "mocha": {
+        "tests": 14,
+        "passes": 14,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Rng.sol": {
+          "statements": 100.0,
+          "branches": 71.88,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Main.sol": {
+          "statements": 100.0,
+          "branches": 70.0,
+          "functions": 83.33,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "advanced-v3.DEX",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "DEX",
+  "chunk_ids": [
+    6196,
+    1975,
+    1979,
+    1980,
+    6197,
+    2668
+  ],
+  "context_sha256": "76bc7b22c14495afe4afa17be9b9778cd2594903c6c99fc7eb663af8e0c7788f",
+  "ratings": [
+    {
+      "chunk_id": 6196,
+      "rating": 1,
+      "reason": "Tests addLiquidity pattern and sqrt check, but function signature, events, and parameters differ from target contract."
+    },
+    {
+      "chunk_id": 1975,
+      "rating": 1,
+      "reason": "Shows liquidity removal pattern, but DEX lacks getReserves and different event signature, so only generic aspects apply."
+    },
+    {
+      "chunk_id": 1979,
+      "rating": 1,
+      "reason": "Shows generic revert‑on‑invalid‑input test pattern, but DEX lacks zero‑amount check, so behavior isn’t directly applicable."
+    },
+    {
+      "chunk_id": 1980,
+      "rating": 1,
+      "reason": "Tests generic revert of unsupported token swap, but target has specific swapAforB/BforA functions; pattern useful but behavior not present."
+    },
+    {
+      "chunk_id": 6197,
+      "rating": 1,
+      "reason": "Tests generic liquidity addition and event emission pattern, but event fields and function signature differ from DEX contract, so only partially useful."
+    },
+    {
+      "chunk_id": 2668,
+      "rating": 2,
+      "reason": "Tests insufficient liquidity revert on removeLiquidity, matching DEX’s share check pattern; can be adapted with renamed error and variables."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 11819,
+    "completion_tokens": 782,
+    "calls": 6
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 112.0,
+  "evaluated_utc": "2026-10-14T18:20:20.391533+00:00"
+}

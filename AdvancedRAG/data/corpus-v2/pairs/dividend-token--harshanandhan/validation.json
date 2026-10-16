@@ -1,0 +1,82 @@
+{
+  "pair": "dividend-token--harshanandhan",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:50:19.333501+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/DividendToken.sol": "1af820e1211cca04d16e8a0d999f5653c677d4ccb7cf19915075b78cd028b323",
+    "LICENSE": "52515c802172a85a426563257a4091f711c5c92b1f643cf7d0011c981d678fa2",
+    "manifest.json": "af9caeb17af5b156c79357220edf5914081e77238d12c490881ce00626f676c5",
+    "test/DividendToken.test.js": "faddce2e39f34ada778830753a3bc9507fb5df4628d058d3379f62c217fe5049"
+  },
+  "pair_sha256": "35344b8b8bf0ca40938127f5cd597ec4485c763808a2b1bd0f7515d8dfc680f5",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "DividendToken.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.213,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "DividendToken.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.196,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "DividendToken.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.188,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.62,
+      "mocha": {
+        "tests": 33,
+        "passes": 33,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.25,
+      "mocha": {
+        "tests": 33,
+        "passes": 33,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "DividendToken.sol": {
+          "statements": 88.68,
+          "branches": 59.26,
+          "functions": 92.86,
+          "lines": 90.38
+        }
+      }
+    }
+  },
+  "accepted": true
+}

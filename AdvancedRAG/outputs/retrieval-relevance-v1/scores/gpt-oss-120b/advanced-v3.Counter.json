@@ -1,0 +1,79 @@
+{
+  "id": "advanced-v3.Counter",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "Counter",
+  "chunk_ids": [
+    3768,
+    5300,
+    5554,
+    2913,
+    5298,
+    5555,
+    2916,
+    7448,
+    4329,
+    5895
+  ],
+  "context_sha256": "f9a589acd3418fe03e2e25b94297dbf29b2fbbb1a3bfe91673691a5336cf7bcb",
+  "ratings": [
+    {
+      "chunk_id": 3768,
+      "rating": 0,
+      "reason": "Test targets unrelated oracle functions and factory deployment; no applicable patterns for Counter’s simple increment/decrement/reset logic."
+    },
+    {
+      "chunk_id": 5300,
+      "rating": 0,
+      "reason": "Test targets unrelated contract; only generic deployment shown, no relevant behavior for Counter’s increment/decrement/reset logic."
+    },
+    {
+      "chunk_id": 5554,
+      "rating": 1,
+      "reason": "Shows owner‑only access control and state change pattern, useful for testing reset’s owner check, though specific functions/events differ."
+    },
+    {
+      "chunk_id": 2913,
+      "rating": 1,
+      "reason": "Shows generic pattern of asserting initial zero state after deployment, which can be applied to Counter’s count, but specific contracts and setup are unrelated."
+    },
+    {
+      "chunk_id": 5298,
+      "rating": 1,
+      "reason": "Only generic deployment and signer setup; specific behavior (median computation) irrelevant to Counter contract."
+    },
+    {
+      "chunk_id": 5555,
+      "rating": 1,
+      "reason": "Shows owner‑only revert pattern similar to Counter.reset, but tests unrelated function; only generic access‑control pattern applies."
+    },
+    {
+      "chunk_id": 2916,
+      "rating": 1,
+      "reason": "Demonstrates generic increment-and-assert pattern useful for testing Counter’s increment behavior."
+    },
+    {
+      "chunk_id": 7448,
+      "rating": 0,
+      "reason": "Test checks an event unrelated to Counter; no similar event or pattern applies"
+    },
+    {
+      "chunk_id": 4329,
+      "rating": 1,
+      "reason": "Shows generic revert and state‑check pattern, but tests unrelated marketplace functions; only generic pattern useful for Counter’s revert checks."
+    },
+    {
+      "chunk_id": 5895,
+      "rating": 1,
+      "reason": "Shows generic deployment and state‑assertion pattern, but Counter has no events or similar factory logic, so only minimal reusable structure."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9056,
+    "completion_tokens": 1026,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 56.2,
+  "evaluated_utc": "2026-10-13T07:45:51.648546+00:00"
+}

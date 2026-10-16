@@ -1,0 +1,79 @@
+{
+  "id": "advanced-v3.MetaCoin",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "MetaCoin",
+  "chunk_ids": [
+    2993,
+    4368,
+    4371,
+    2994,
+    6335,
+    7096,
+    4369,
+    6339,
+    7097,
+    4370
+  ],
+  "context_sha256": "d5b36c42673e6098e62dcdda083925cedf6d6574f4ae6224870d49753416b026",
+  "ratings": [
+    {
+      "chunk_id": 2993,
+      "rating": 1,
+      "reason": "Shows generic transfer and balance assertion pattern usable for MetaCoin’s sendCoin, but specifics (ERC‑20 functions, decimals) differ."
+    },
+    {
+      "chunk_id": 4368,
+      "rating": 1,
+      "reason": "Shows pattern of checking initial balance assignment in constructor, but tests token-specific functions not present in MetaCoin."
+    },
+    {
+      "chunk_id": 4371,
+      "rating": 1,
+      "reason": "Tests insufficient‑balance behavior; MetaCoin returns false instead of reverting, but balance‑unchanged check pattern is reusable."
+    },
+    {
+      "chunk_id": 2994,
+      "rating": 1,
+      "reason": "Shows generic revert expectation pattern, but MetaCoin lacks zero‑address transfer check, so only testing style is reusable."
+    },
+    {
+      "chunk_id": 6335,
+      "rating": 1,
+      "reason": "Shows generic deployment, caller interactions, and balance change verification, which can be adapted for MetaCoin transfers, but the specific auction logic is irrelevant."
+    },
+    {
+      "chunk_id": 7096,
+      "rating": 0,
+      "reason": "Test checks deposit function and balance tracking unrelated to MetaCoin’s sendCoin and balance getters; no applicable pattern."
+    },
+    {
+      "chunk_id": 4369,
+      "rating": 2,
+      "reason": "Tests token transfer and balance changes, matching MetaCoin sendCoin behavior; can be reused with renamed contract and function names."
+    },
+    {
+      "chunk_id": 6339,
+      "rating": 1,
+      "reason": "Shows generic view‑function testing and deployment pattern, but tests a different contract and behavior not present in MetaCoin."
+    },
+    {
+      "chunk_id": 7097,
+      "rating": 1,
+      "reason": "Shows pattern of multiple calls affecting balances and asserting final balance, which is generic but not directly matching MetaCoin’s sendCoin behavior."
+    },
+    {
+      "chunk_id": 4370,
+      "rating": 2,
+      "reason": "Tests Transfer event emission, matching MetaCoin's sendCoin behavior; setup and assertions can be reused after renaming."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9638,
+    "completion_tokens": 1059,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 58.0,
+  "evaluated_utc": "2026-10-14T18:05:14.617696+00:00"
+}

@@ -1,0 +1,89 @@
+{
+  "pair": "pledge-vault--winsznx",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:53:20.065594+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/PledgeVault.sol": "0718da4cb9179645b659d690aee5ea59510dade8514613115371d5e733d284ba",
+    "contracts/TestUSDC.sol": "02fc30a10f2c8cf5d0455cd214a5da4ca2766d2b4589378042e8ef521d8bce20",
+    "LICENSE": "4afd7a870012cee6555b464017f55436db25f601c6076229b90eec04f6e1a07a",
+    "manifest.json": "071ab3e38c9121dd5502b8368c6d9a86298b0abb40df3c593527f41636f2f9c5",
+    "test/PledgeVault.test.js": "4b3dcf8afa1fc959c3f96c15e6de5bc0f70c40bcf97447dfbff53a1360062795"
+  },
+  "pair_sha256": "7168713d63d7a8128094ff955e2bfde249fc0c012484ae74728c00c1827bd431",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "PledgeVault.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.171,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "PledgeVault.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.128,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "PledgeVault.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.121,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.5,
+      "mocha": {
+        "tests": 24,
+        "passes": 24,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.13,
+      "mocha": {
+        "tests": 24,
+        "passes": 24,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "PledgeVault.sol": {
+          "statements": 100.0,
+          "branches": 87.5,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "TestUSDC.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 66.67,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,186 @@
+{
+  "target_functions": [
+    {
+      "target_function": "sendCoin",
+      "corpus_functions": [
+        "833200e95e89fe36cb72a6cb",
+        "96ab2c84ad31b85c88249a92",
+        "e8ba0f5ede9b89b65b1b5f77",
+        "cb07a501bff48df503a7c1b0",
+        "bbc764324cfc11afa4c669cd",
+        "3e033ff918947598eff0e94a",
+        "02547351394de602fcdc5e0a",
+        "b6ab15b6ec02970054b573ca"
+      ],
+      "candidate_tests": [
+        "029cb5adf84fafbad65010ad",
+        "2778592ded38550b4991eae3",
+        "53027bb7cf6b77298dd4dac8",
+        "ed0b50638ace2bdcc1c9eb69",
+        "ebc31564a49997c719b29058",
+        "125e9c8908fa1ccc46550a3e"
+      ]
+    },
+    {
+      "target_function": "getBalance",
+      "corpus_functions": [
+        "bbceb18d88e2c4ec62549d2e",
+        "567cb357c235938bbf5949a6",
+        "eeeed1603af104d67a09553a",
+        "de072829e03120ef36606f7e",
+        "a9b140604aedaee612ff736a",
+        "d47c81dcbff434dc65ccb0cf",
+        "2539ffd7269fbccedbb8a1d9",
+        "e530757c09494866024832f3"
+      ],
+      "candidate_tests": [
+        "ff104465c97386cd72a600ba",
+        "f59d3ba4bad6fcc13dacf35a",
+        "70619b43bf85ad67a7015c76",
+        "dd07b4d61c1a4b9eecde36cf",
+        "da70e3a17dd1724754958ed7",
+        "87dd4bd810f47c915ba72d58",
+        "0b4a0ef24a014a641fb9938d",
+        "c04d5221554be9bd764fbf9a",
+        "4971aaac7fdc07c16ffad50b",
+        "d8e6808e469edc44a6cf8320",
+        "8deda748fc462ee5315e9d62",
+        "73edcf71facfffa035cb5fae"
+      ]
+    },
+    {
+      "target_function": "getBalanceInEth",
+      "corpus_functions": [
+        "bbceb18d88e2c4ec62549d2e",
+        "567cb357c235938bbf5949a6",
+        "d47c81dcbff434dc65ccb0cf",
+        "87dc8d74fc64aba692e77f2e",
+        "a9b140604aedaee612ff736a",
+        "eeeed1603af104d67a09553a",
+        "e530757c09494866024832f3",
+        "0c756dbf364f9a810c39b2e0"
+      ],
+      "candidate_tests": [
+        "ff104465c97386cd72a600ba",
+        "f59d3ba4bad6fcc13dacf35a",
+        "0b4a0ef24a014a641fb9938d",
+        "c04d5221554be9bd764fbf9a",
+        "71418c8375255f036854c8c7",
+        "70619b43bf85ad67a7015c76",
+        "dd07b4d61c1a4b9eecde36cf",
+        "8deda748fc462ee5315e9d62",
+        "73edcf71facfffa035cb5fae"
+      ]
+    }
+  ],
+  "selected": [
+    2993,
+    4368,
+    4371,
+    2994,
+    6335,
+    7096,
+    4369,
+    6339,
+    7097,
+    4370
+  ],
+  "context_chars": 11661,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "MetaCoin",
+  "retrieval_seconds": 1.0968656999757513,
+  "hits": [
+    {
+      "chunk_id": 2993,
+      "test_id": "029cb5adf84fafbad65010ad",
+      "pair": "flash-token--btcdanaindiaoff-arch",
+      "domain_group": "lending-collateral",
+      "name": "should transfer tokens",
+      "via_function": "833200e95e89fe36cb72a6cb",
+      "chars": 1205
+    },
+    {
+      "chunk_id": 4368,
+      "test_id": "ff104465c97386cd72a600ba",
+      "pair": "mh-token--gzliudan",
+      "domain_group": "fungible-tokens",
+      "name": "Should assign the total supply of tokens to the owner",
+      "via_function": "567cb357c235938bbf5949a6",
+      "chars": 1039
+    },
+    {
+      "chunk_id": 4371,
+      "test_id": "f59d3ba4bad6fcc13dacf35a",
+      "pair": "mh-token--gzliudan",
+      "domain_group": "fungible-tokens",
+      "name": "Should fail if sender doesn't have enough tokens",
+      "via_function": "567cb357c235938bbf5949a6",
+      "chars": 1211
+    },
+    {
+      "chunk_id": 2994,
+      "test_id": "2778592ded38550b4991eae3",
+      "pair": "flash-token--btcdanaindiaoff-arch",
+      "domain_group": "lending-collateral",
+      "name": "should revert transfer to zero address",
+      "via_function": "833200e95e89fe36cb72a6cb",
+      "chars": 1135
+    },
+    {
+      "chunk_id": 6335,
+      "test_id": "70619b43bf85ad67a7015c76",
+      "pair": "smart-chit--jadav-divyaraj",
+      "domain_group": "auctions",
+      "name": "ends auction and pays winner",
+      "via_function": "eeeed1603af104d67a09553a",
+      "chars": 1910
+    },
+    {
+      "chunk_id": 7096,
+      "test_id": "0b4a0ef24a014a641fb9938d",
+      "pair": "vault--balmha",
+      "domain_group": "staking-yield",
+      "name": "increases the caller's vault balance",
+      "via_function": "d47c81dcbff434dc65ccb0cf",
+      "chars": 934
+    },
+    {
+      "chunk_id": 4369,
+      "test_id": "53027bb7cf6b77298dd4dac8",
+      "pair": "mh-token--gzliudan",
+      "domain_group": "fungible-tokens",
+      "name": "Should transfer tokens between accounts",
+      "via_function": "e8ba0f5ede9b89b65b1b5f77",
+      "chars": 1159
+    },
+    {
+      "chunk_id": 6339,
+      "test_id": "dd07b4d61c1a4b9eecde36cf",
+      "pair": "smart-chit--jadav-divyaraj",
+      "domain_group": "auctions",
+      "name": "getBalance returns contract balance",
+      "via_function": "eeeed1603af104d67a09553a",
+      "chars": 952
+    },
+    {
+      "chunk_id": 7097,
+      "test_id": "c04d5221554be9bd764fbf9a",
+      "pair": "vault--balmha",
+      "domain_group": "staking-yield",
+      "name": "accumulates across multiple deposits",
+      "via_function": "d47c81dcbff434dc65ccb0cf",
+      "chars": 951
+    },
+    {
+      "chunk_id": 4370,
+      "test_id": "ed0b50638ace2bdcc1c9eb69",
+      "pair": "mh-token--gzliudan",
+      "domain_group": "fungible-tokens",
+      "name": "Should emit Transfer events",
+      "via_function": "e8ba0f5ede9b89b65b1b5f77",
+      "chars": 1165
+    }
+  ]
+}

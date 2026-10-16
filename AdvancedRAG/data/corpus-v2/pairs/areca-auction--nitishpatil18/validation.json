@@ -1,0 +1,82 @@
+{
+  "pair": "areca-auction--nitishpatil18",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-29T09:57:12.154571+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ArecaAuction.sol": "8d1aef250034bfa8b4937ac86bf60b9de7565862e63adb07770b4181b29904c4",
+    "LICENSE": "9f6b653c8514fa8fe3fb1c19df71d6672184bad7437d2b005668a66e6b3dc845",
+    "manifest.json": "0958db79dccb66a31af18d86e063cc67f8cccf17dc01a419cd81803c2e206ece",
+    "test/areca.test.js": "a52f2f81e6526bae3497dadde80286c4f906996321fa5ed67b350cd6e25354b3"
+  },
+  "pair_sha256": "0db9d0aabb39afef7a3fb840ba16c9041d7cba7aee75fd4b4fafce869ce77e9f",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "ArecaAuction.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.285,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "ArecaAuction.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.232,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "ArecaAuction.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.217,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 28.22,
+      "mocha": {
+        "tests": 23,
+        "passes": 23,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.06,
+      "mocha": {
+        "tests": 23,
+        "passes": 23,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "ArecaAuction.sol": {
+          "statements": 100.0,
+          "branches": 75.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

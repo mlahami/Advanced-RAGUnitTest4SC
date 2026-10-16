@@ -1,0 +1,41 @@
+{
+  "id": "secure-vault--abhishekabhang314",
+  "domain": "yield-vault",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "SecureVault.sol",
+    "IVault.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/abhishekabhang314/reentrancy-lab",
+    "commit": "8729113155ff4ee6382ee21a29d303f74dd1f1fd",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/secure/SecureVault.sol",
+      "contracts/interfaces/IVault.sol"
+    ],
+    "test_paths": [
+      "test/unit/SecureVault.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/secure/SecureVault.sol": "0538b53c36b12dc80b7f6ed33b31460b59bbab146bb32fc8b390f5c5169d0806",
+      "contracts/interfaces/IVault.sol": "b89fe72ad2ce92ac1663011ee1e47c869da7d8470702f1a83b71c86a531298d7",
+      "test/unit/SecureVault.test.js": "b502301db3c769bc9ea6e0b424dc118291d2bc81bf8a1cdade42522f2e76f83a"
+    }
+  },
+  "transformations": [
+    {
+      "file": "SecureVault.sol",
+      "kind": "import-path",
+      "before": "../interfaces/IVault.sol",
+      "after": "./IVault.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 32 lines, closure 53 lines, 2 files; 9 it blocks; history: 37 commits 2026-03-26..2026-04-23",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:33:30.859496+00:00"
+}

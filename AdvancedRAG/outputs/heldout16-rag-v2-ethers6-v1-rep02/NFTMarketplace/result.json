@@ -1,0 +1,36 @@
+{
+  "contract": "NFTMarketplace",
+  "status": "test_failures",
+  "prompt_sha256": "9a8ea4bbfee39d156f965ff6f61c41f415045ff3c89f9385f5aa213d6c153ac8",
+  "generation_seconds": 12.183996299980208,
+  "usage": {
+    "prompt_tokens": 11268,
+    "total_tokens": 13062,
+    "completion_tokens": 1794,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.000841100001708
+  },
+  "passed_tests": 0,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "NFTMarketplace \"before each\" hook for \"should set royalty correctly\"",
+      "error": "Cannot read properties of undefined (reading 'getAddress')"
+    }
+  ],
+  "coverage": {
+    "statements": 0.0,
+    "branches": 0.0,
+    "functions": 0.0,
+    "lines": 0.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

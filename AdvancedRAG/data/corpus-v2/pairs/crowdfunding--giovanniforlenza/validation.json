@@ -1,0 +1,82 @@
+{
+  "pair": "crowdfunding--giovanniforlenza",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-29T09:58:23.945142+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/Crowdfunding.sol": "c097cef0acbd3bf269b9cb667824aa7c88eecb9182e491dace9af841a32a7fea",
+    "LICENSE": "7b8f0630a82ade22575837c84f0f8858f96401d1e0c4da0ba00c9afb8eed02da",
+    "manifest.json": "5851a07e61176124fdaa6666625749f617b287580e54d222c68c707a46947631",
+    "test/Crowdfunding.js": "e25b06cb1f580e5a6f1006b66ddb9937adaf5b4752e6626a82122ec4d6eeab67"
+  },
+  "pair_sha256": "424fba5ff52d0c9fdcaf6f985dcb93a7e8ed9b1b64675f65e043aab99d6d292f",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Crowdfunding.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.274,
+        "signatures": 0.091,
+        "min_functions": 4
+      },
+      {
+        "contract": "Crowdfunding.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.274,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "Crowdfunding.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.233,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.81,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 9.32,
+      "mocha": {
+        "tests": 6,
+        "passes": 6,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Crowdfunding.sol": {
+          "statements": 100.0,
+          "branches": 61.76,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

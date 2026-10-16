@@ -1,0 +1,191 @@
+{
+  "base_trace": null,
+  "pivot_steps": [
+    {
+      "retrieved": "a2ad9a27bf5649ae8d5601c9",
+      "type": "function",
+      "delivered": []
+    },
+    {
+      "retrieved": "1139ff1f913c10182fa4e889",
+      "type": "function",
+      "delivered": [
+        "1cda248eb5e3b6f4edfb1cc3"
+      ]
+    },
+    {
+      "retrieved": "8a61e5f7df6138c32d253afb",
+      "type": "function",
+      "delivered": []
+    },
+    {
+      "retrieved": "5ecf11a8f87b9d166218984a",
+      "type": "function",
+      "delivered": [
+        "17c5a8444207f1a6d6c14b5c",
+        "ebcd9cb755d6bf0ade3115f1"
+      ]
+    },
+    {
+      "retrieved": "8530611f40e77b4740e087de",
+      "type": "function",
+      "delivered": []
+    },
+    {
+      "retrieved": "144467351c3021d1ac0fe2d9",
+      "type": "function",
+      "delivered": []
+    },
+    {
+      "retrieved": "0debcf410feb91a51c3dfba9",
+      "type": "function",
+      "delivered": [
+        "faea45a83e82c82117811394",
+        "01929873714a53f2cdd20b53"
+      ]
+    },
+    {
+      "retrieved": "eaea645138347d2f1d785236",
+      "type": "function",
+      "delivered": [
+        "607cdc76863372fd2c55d634",
+        "ca43ea47a9cd30eaeaedf188"
+      ]
+    },
+    {
+      "retrieved": "4fc2c79b1e208d5eeb49556a",
+      "type": "function",
+      "delivered": [
+        "31199e7be0a00d4c99c28571"
+      ]
+    },
+    {
+      "retrieved": "44929a138f25af625700e869",
+      "type": "function",
+      "delivered": [
+        "f3476a719fc55499b9dcb847"
+      ]
+    },
+    {
+      "retrieved": "43e8cbeff7acf1307eaf44ce",
+      "type": "function",
+      "delivered": []
+    },
+    {
+      "retrieved": "664d26ef42d5b3d4826144ec",
+      "type": "function",
+      "delivered": [
+        "cf9d6908418d2a9353014390",
+        "1c9e5b608377a79dfbae1ad4"
+      ]
+    }
+  ],
+  "selected": [
+    3308,
+    1528,
+    1562,
+    241,
+    238,
+    7287,
+    7288,
+    2613,
+    2610,
+    4622
+  ],
+  "context_chars": 10459,
+  "per_function": 2,
+  "contract": "Adoption",
+  "retrieval_seconds": 0.28293059999123216,
+  "hits": [
+    {
+      "chunk_id": 3308,
+      "test_id": "1cda248eb5e3b6f4edfb1cc3",
+      "pair": "griffin-dex--littlefingerrr",
+      "domain_group": "amm-dex",
+      "name": "returns correct reserves after adding liquidity",
+      "via_function": "1139ff1f913c10182fa4e889",
+      "chars": 1716
+    },
+    {
+      "chunk_id": 1528,
+      "test_id": "17c5a8444207f1a6d6c14b5c",
+      "pair": "cross-chain-governor--kdsmith18542",
+      "domain_group": "relayer-meta-transactions",
+      "name": "should set and get trusted remote",
+      "via_function": "5ecf11a8f87b9d166218984a",
+      "chars": 1086
+    },
+    {
+      "chunk_id": 1562,
+      "test_id": "ebcd9cb755d6bf0ade3115f1",
+      "pair": "cross-chain-governor--kdsmith18542",
+      "domain_group": "relayer-meta-transactions",
+      "name": "should set and get trusted remote",
+      "via_function": "5ecf11a8f87b9d166218984a",
+      "chars": 1074
+    },
+    {
+      "chunk_id": 241,
+      "test_id": "faea45a83e82c82117811394",
+      "pair": "agent-identity-registry--calderbuild",
+      "domain_group": "registries-identity",
+      "name": "Should let the owner revoke their agent",
+      "via_function": "0debcf410feb91a51c3dfba9",
+      "chars": 1030
+    },
+    {
+      "chunk_id": 238,
+      "test_id": "01929873714a53f2cdd20b53",
+      "pair": "agent-identity-registry--calderbuild",
+      "domain_group": "registries-identity",
+      "name": "Should register an agent and mint it to the caller",
+      "via_function": "0debcf410feb91a51c3dfba9",
+      "chars": 1012
+    },
+    {
+      "chunk_id": 7287,
+      "test_id": "607cdc76863372fd2c55d634",
+      "pair": "verifier--0xalexbel",
+      "domain_group": "registries-identity",
+      "name": "should return true",
+      "via_function": "eaea645138347d2f1d785236",
+      "chars": 522
+    },
+    {
+      "chunk_id": 7288,
+      "test_id": "ca43ea47a9cd30eaeaedf188",
+      "pair": "verifier--0xalexbel",
+      "domain_group": "registries-identity",
+      "name": "should return false",
+      "via_function": "eaea645138347d2f1d785236",
+      "chars": 640
+    },
+    {
+      "chunk_id": 2613,
+      "test_id": "31199e7be0a00d4c99c28571",
+      "pair": "evidence-registry--shreyas0047",
+      "domain_group": "registries-identity",
+      "name": "should register evidence and emit event",
+      "via_function": "4fc2c79b1e208d5eeb49556a",
+      "chars": 1392
+    },
+    {
+      "chunk_id": 2610,
+      "test_id": "f3476a719fc55499b9dcb847",
+      "pair": "evidence-registry--shreyas0047",
+      "domain_group": "registries-identity",
+      "name": "should return correct contract info",
+      "via_function": "44929a138f25af625700e869",
+      "chars": 934
+    },
+    {
+      "chunk_id": 4622,
+      "test_id": "cf9d6908418d2a9353014390",
+      "pair": "msmeidentity--aryan-chugh",
+      "domain_group": "registries-identity",
+      "name": "Should allow owner to approve operator",
+      "via_function": "664d26ef42d5b3d4826144ec",
+      "chars": 1053
+    }
+  ]
+}

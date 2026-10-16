@@ -1,0 +1,73 @@
+{
+  "id": "advanced-v3.YieldVault",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "YieldVault",
+  "chunk_ids": [
+    7153,
+    7534,
+    7535,
+    7521,
+    7524,
+    5297,
+    7154,
+    7166,
+    3495
+  ],
+  "context_sha256": "7fdaa30ad5e54543d3f9dab06d581f742e3e12b9eef29c744e1a6f2b63aa90e5",
+  "ratings": [
+    {
+      "chunk_id": 7153,
+      "rating": 1,
+      "reason": "Tests strategy setting pattern, but contract lacks StrategyUpdated event, so only setup logic is reusable"
+    },
+    {
+      "chunk_id": 7534,
+      "rating": 2,
+      "reason": "Tests convertToShares logic identical to YieldVault’s function, with similar setup and assertions, making it directly reusable after renaming."
+    },
+    {
+      "chunk_id": 7535,
+      "rating": 2,
+      "reason": "Tests convertToAssets logic, matching YieldVault's function; setup, deposit, and assertion can be reused with renamed contracts and token mock."
+    },
+    {
+      "chunk_id": 7521,
+      "rating": 1,
+      "reason": "Shows deposit/approve pattern useful, but asserts balanceOf which YieldVault lacks; only generic deposit flow applicable"
+    },
+    {
+      "chunk_id": 7524,
+      "rating": 2,
+      "reason": "Withdraw test mirrors YieldVault's withdraw logic, checking share burn and event emission, directly reusable after renaming"
+    },
+    {
+      "chunk_id": 5297,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests unrelated functionality; only useful as example of expecting a revert."
+    },
+    {
+      "chunk_id": 7154,
+      "rating": 0,
+      "reason": "Contract lacks ownership checks; setStrategy is unrestricted, so access‑control revert pattern isn’t applicable."
+    },
+    {
+      "chunk_id": 7166,
+      "rating": 1,
+      "reason": "Shows deposit, approval, and asset balance checks useful, but tests a non‑existent getVaultInfo view, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 3495,
+      "rating": 1,
+      "reason": "Only generic deposit setup is reusable; specific totalAssets vs position details check and extra functions don’t exist in YieldVault."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 13034,
+    "completion_tokens": 872,
+    "calls": 9
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 90.1,
+  "evaluated_utc": "2026-10-15T13:43:41.975202+00:00"
+}

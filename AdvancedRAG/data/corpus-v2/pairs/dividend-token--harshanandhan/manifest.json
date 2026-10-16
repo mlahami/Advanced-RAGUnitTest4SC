@@ -1,0 +1,39 @@
+{
+  "id": "dividend-token--harshanandhan",
+  "domain": "erc20-dividend",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "DividendToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Harshanandhan/dividend-token",
+    "commit": "80add620c4516ddda19f253cad7c22eeb4124dfe",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/DividendToken.sol"
+    ],
+    "test_paths": [
+      "test/DividendToken.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/DividendToken.sol": "e3adbf5bb80a485dd01c8c1608eea1c170a9b797eaf4a9546f7a7a8e68898ad3",
+      "test/DividendToken.test.js": "847b197b1f4584087a1f9cff0e6c5c58847b37da1153d6121dca772a31649124"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "DividendToken.test.js",
+      "upstream_path": "test/DividendToken.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 284 lines, closure 284 lines, 1 files; 33 it blocks; history: 10 commits 2026-01-15..2026-09-09",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:32:07.989366+00:00"
+}

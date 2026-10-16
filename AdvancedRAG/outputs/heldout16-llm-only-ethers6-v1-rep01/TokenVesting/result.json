@@ -1,0 +1,56 @@
+{
+  "contract": "TokenVesting",
+  "status": "test_failures",
+  "prompt_sha256": "d828fe970ce848632f75e30c2378585d420f26e7b69130acb7fee05d35aad9e9",
+  "generation_seconds": 17.687585199950263,
+  "usage": {
+    "prompt_tokens": 8336,
+    "total_tokens": 10495,
+    "completion_tokens": 2159,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 7.524226399953477
+  },
+  "passed_tests": 10,
+  "failed_tests": 6,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "TokenVesting Grant Revocation Should revoke a grant and emit event",
+      "error": "Error in \"GrantRevoked\" event: Error in the 3rd argument assertion: expected 362 to equal 1000."
+    },
+    {
+      "title": "TokenVesting Token Claiming Should allow claiming after cliff",
+      "error": "Timestamp 1790806989 is lower than the previous block's timestamp 1790806998"
+    },
+    {
+      "title": "TokenVesting Token Claiming Should not allow claiming before cliff",
+      "error": "Timestamp 1790804989 is lower than the previous block's timestamp 1790807002"
+    },
+    {
+      "title": "TokenVesting Token Claiming Should not allow claiming after end",
+      "error": "expected 641 to equal 1000."
+    },
+    {
+      "title": "TokenVesting Token Claiming Should allow partial claims during vesting period",
+      "error": "Cannot mix BigInt and other types, use explicit conversions"
+    },
+    {
+      "title": "TokenVesting View Functions Should return correct claimable amount",
+      "error": "Timestamp 1790804989 is lower than the previous block's timestamp 1790810600"
+    }
+  ],
+  "coverage": {
+    "statements": 80.0,
+    "branches": 77.27,
+    "functions": 87.5,
+    "lines": 82.14
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

@@ -1,0 +1,82 @@
+{
+  "pair": "bilateral-agreement--sh-sw",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:19:44.324871+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/BilateralAgreement.sol": "73152ad1276295bf3c3e061ae405e141a4e49ef050976af3a85b15b6790b2629",
+    "LICENSE": "0dbb2e1321ef0196514265377306f287e678234df695dbd15c76c5acabf9cf90",
+    "manifest.json": "02ac74558d9104030c6ea09ecea63077532e3e101111f0a7cc6e3cd725a680ed",
+    "test/BilateralAgreement.test.js": "142cb0232a98c9d8ae2abf3b1a9d3318fb1dbbe181f7cea9919ab07146020995"
+  },
+  "pair_sha256": "81676796add427da298d3fdb060c2f01d28c41106e16a9f59b00c51da2820a0e",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "BilateralAgreement.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.165,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "BilateralAgreement.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.144,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "BilateralAgreement.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.138,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.08,
+      "mocha": {
+        "tests": 33,
+        "passes": 33,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.15,
+      "mocha": {
+        "tests": 33,
+        "passes": 33,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "BilateralAgreement.sol": {
+          "statements": 100.0,
+          "branches": 83.64,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

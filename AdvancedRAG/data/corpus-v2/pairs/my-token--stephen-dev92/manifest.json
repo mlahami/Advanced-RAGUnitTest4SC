@@ -1,0 +1,31 @@
+{
+  "id": "my-token--stephen-dev92",
+  "domain": "erc20-token",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "MyToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/stephen-dev92/solidity-fundamentals",
+    "commit": "ee3cdd0b1fc22143bb38e4902ad8267fc6684ddd",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MyToken.sol"
+    ],
+    "test_paths": [
+      "test/MyToken.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MyToken.sol": "92871ffb04466476cd3c2da6f76dc1c2199862ec899624398568c8903b65f852",
+      "test/MyToken.test.js": "6b1c8ca1bd3b0a246c220a908ce9b213d486045933eab86fe27612d89405ed94"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (few commits, created 2026). | primary 32 lines, closure 32 lines, 1 files; 5 it blocks; history: 2 commits 2026-08-01..2026-09-05",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T10:34:04.058391+00:00"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "rag-v2.SimpleStorage",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "SimpleStorage",
+  "chunk_ids": [
+    1528,
+    1562,
+    5972,
+    5975,
+    2610,
+    6364,
+    3488,
+    3826,
+    6034
+  ],
+  "context_sha256": "cf79a6989c366b0531c6e24175ba59a0a5e89339fd0d72c91796bfa79f06ae12",
+  "ratings": [
+    {
+      "chunk_id": 1528,
+      "rating": 1,
+      "reason": "Shows generic set/get pattern, but unrelated function signatures and data types; only loosely applicable as a template for testing storage setters and getters."
+    },
+    {
+      "chunk_id": 1562,
+      "rating": 1,
+      "reason": "Shows generic pattern of deploying, calling a setter, then asserting getter returns the set value, which can be adapted for SimpleStorage’s set/get functions."
+    },
+    {
+      "chunk_id": 5972,
+      "rating": 1,
+      "reason": "Only shows generic deployment and function call pattern; does not test set/get behavior of SimpleStorage."
+    },
+    {
+      "chunk_id": 5975,
+      "rating": 0,
+      "reason": "Test targets unrelated SBT revocation logic; SimpleStorage only has set/get, no similar state changes or access control."
+    },
+    {
+      "chunk_id": 2610,
+      "rating": 1,
+      "reason": "Shows generic deployment and view-call pattern, but tests unrelated function; only basic setup is reusable."
+    },
+    {
+      "chunk_id": 6364,
+      "rating": 0,
+      "reason": "Test checks ERC721 interface support, unrelated to SimpleStorage’s set/get functionality; no applicable pattern."
+    },
+    {
+      "chunk_id": 3488,
+      "rating": 0,
+      "reason": "Test targets complex vault logic; no set/get pattern or generic storage testing applicable to SimpleStorage."
+    },
+    {
+      "chunk_id": 3826,
+      "rating": 0,
+      "reason": "The test targets a different contract with role management and events; no analogous functions or patterns apply to SimpleStorage’s simple set/get behavior."
+    },
+    {
+      "chunk_id": 6034,
+      "rating": 1,
+      "reason": "Shows generic deployment and state assertion pattern, but SimpleStorage lacks balance function, so only setup pattern is reusable"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8352,
+    "completion_tokens": 958,
+    "calls": 9
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 54.8,
+  "evaluated_utc": "2026-10-12T08:52:29.811857+00:00"
+}

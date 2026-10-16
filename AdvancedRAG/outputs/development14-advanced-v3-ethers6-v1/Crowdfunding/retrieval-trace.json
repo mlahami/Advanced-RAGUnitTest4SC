@@ -1,0 +1,192 @@
+{
+  "target_functions": [
+    {
+      "target_function": "contribute",
+      "corpus_functions": [
+        "efcda9eb77df8936f043c83a",
+        "91d3920a6547ec555f0b92cd",
+        "4505b2710858c9235197152f",
+        "bfbcd42ae0c3c863f8a8d8a8",
+        "a0ac5ce198d99afda92185e6",
+        "007188239c2b96dd2df07f87",
+        "2e7bba314f3b83542cd0d0e1",
+        "bf8bb0c0b8b1bf8aefde75f3"
+      ],
+      "candidate_tests": [
+        "0dbe9d28fade5f7ad2b5f866",
+        "06e2b81805ff759900489773",
+        "88b2841f1244dd9b4c4e7da1",
+        "eb565f9aca91e3f444994424",
+        "f0d5e12cefb9035c2bf8c0b4",
+        "b9a51871c42322933ee7b7dd",
+        "361dfa3498781a179d8e7ed3",
+        "edc77a67b906b9c00b705aec",
+        "b5974f857be66719f47aaefa"
+      ]
+    },
+    {
+      "target_function": "withdraw",
+      "corpus_functions": [
+        "c4000b75f6784404c4f14052",
+        "cdb7027ed8c1da648dd6f3d4",
+        "bb6a0e72bc4a2ff195a09eeb",
+        "8c6bca23f1ab32198b838dc6",
+        "5dbe6ac23ebf254af0960c68",
+        "24fea1d07c8d24af21d9ea3c",
+        "bf8bb0c0b8b1bf8aefde75f3",
+        "063586414aed28ee93833be6"
+      ],
+      "candidate_tests": [
+        "a61687bec26547cc046384bf",
+        "35d103745ea722623ab8ba47",
+        "94e9989b6daa7170380ac41f",
+        "c0d4d5ba7a04f0fc90fe14b7",
+        "0ce6309decd446e12fcb951d",
+        "f900bdc0cc98ee4c978da131",
+        "ab87bb8057e891b73e4b01d0",
+        "ca59848354c24db771b35982",
+        "a21f707ce122a82cce3e232a",
+        "8c5e2104ed695d527c3f1eb8",
+        "edc77a67b906b9c00b705aec",
+        "b5974f857be66719f47aaefa",
+        "326e4cd1b5def8b0c15404ec"
+      ]
+    },
+    {
+      "target_function": "refund",
+      "corpus_functions": [
+        "007188239c2b96dd2df07f87",
+        "809c89f16961932f0ff454f4",
+        "ae902f9fa091de810be2bffd",
+        "aad6c8a7707e06a0a53b7cc2",
+        "20896fbb547a6d16fd4dba89",
+        "2da8b93e8dffa16db6f2d9bd",
+        "bfbcd42ae0c3c863f8a8d8a8",
+        "bf8bb0c0b8b1bf8aefde75f3"
+      ],
+      "candidate_tests": [
+        "361dfa3498781a179d8e7ed3",
+        "ac93358d2c7f6c685cc8434f",
+        "bdf06776ddcbd77f448d7f9c",
+        "a3d779d912c49cfb259bf95f",
+        "172405fd684b306cb746194a",
+        "77d33ff4367e782909c9b066",
+        "69a770d964b09fa45ce9fe82",
+        "07b2b742ed57e1ea2f6b6730",
+        "f5e9343e928fea1878a19b5b",
+        "edc77a67b906b9c00b705aec",
+        "b5974f857be66719f47aaefa"
+      ]
+    }
+  ],
+  "selected": [
+    1613,
+    1614,
+    1615,
+    1618,
+    1616,
+    3103,
+    1597,
+    2472,
+    3107,
+    1598
+  ],
+  "context_chars": 14571,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "Crowdfunding",
+  "retrieval_seconds": 2.4807125000515953,
+  "hits": [
+    {
+      "chunk_id": 1613,
+      "test_id": "0dbe9d28fade5f7ad2b5f866",
+      "pair": "crowdfunding--giovanniforlenza",
+      "domain_group": "crowdfunding",
+      "name": "registra correttamente un contributo",
+      "via_function": "efcda9eb77df8936f043c83a",
+      "chars": 1150
+    },
+    {
+      "chunk_id": 1614,
+      "test_id": "a61687bec26547cc046384bf",
+      "pair": "crowdfunding--giovanniforlenza",
+      "domain_group": "crowdfunding",
+      "name": "SCENARIO SUCCESSO: obiettivo raggiunto -> il creatore preleva",
+      "via_function": "c4000b75f6784404c4f14052",
+      "chars": 1459
+    },
+    {
+      "chunk_id": 1615,
+      "test_id": "361dfa3498781a179d8e7ed3",
+      "pair": "crowdfunding--giovanniforlenza",
+      "domain_group": "crowdfunding",
+      "name": "SCENARIO FALLIMENTO: obiettivo non raggiunto -> rimborso ai contributori",
+      "via_function": "007188239c2b96dd2df07f87",
+      "chars": 1398
+    },
+    {
+      "chunk_id": 1618,
+      "test_id": "06e2b81805ff759900489773",
+      "pair": "crowdfunding--giovanniforlenza",
+      "domain_group": "crowdfunding",
+      "name": "non si puo' contribuire dopo la scadenza",
+      "via_function": "efcda9eb77df8936f043c83a",
+      "chars": 1052
+    },
+    {
+      "chunk_id": 1616,
+      "test_id": "35d103745ea722623ab8ba47",
+      "pair": "crowdfunding--giovanniforlenza",
+      "domain_group": "crowdfunding",
+      "name": "ACCESS CONTROL: solo il creatore puo' prelevare",
+      "via_function": "c4000b75f6784404c4f14052",
+      "chars": 1118
+    },
+    {
+      "chunk_id": 3103,
+      "test_id": "ac93358d2c7f6c685cc8434f",
+      "pair": "fund-chain-campaign--sergio11",
+      "domain_group": "crowdfunding",
+      "name": "should allow contributors to claim refund if the goal is not met",
+      "via_function": "809c89f16961932f0ff454f4",
+      "chars": 1814
+    },
+    {
+      "chunk_id": 1597,
+      "test_id": "88b2841f1244dd9b4c4e7da1",
+      "pair": "crowdfund_optimized--saatvikmanagari",
+      "domain_group": "crowdfunding",
+      "name": "Should allow contributions to an active campaign",
+      "via_function": "91d3920a6547ec555f0b92cd",
+      "chars": 1869
+    },
+    {
+      "chunk_id": 2472,
+      "test_id": "94e9989b6daa7170380ac41f",
+      "pair": "ether-staking--donguillotine",
+      "domain_group": "staking-yield",
+      "name": "Should not allow withdrawal with no stake",
+      "via_function": "cdb7027ed8c1da648dd6f3d4",
+      "chars": 1157
+    },
+    {
+      "chunk_id": 3107,
+      "test_id": "bdf06776ddcbd77f448d7f9c",
+      "pair": "fund-chain-campaign--sergio11",
+      "domain_group": "crowdfunding",
+      "name": "should allow contributors to claim a refund if the goal is not met",
+      "via_function": "809c89f16961932f0ff454f4",
+      "chars": 1714
+    },
+    {
+      "chunk_id": 1598,
+      "test_id": "eb565f9aca91e3f444994424",
+      "pair": "crowdfund_optimized--saatvikmanagari",
+      "domain_group": "crowdfunding",
+      "name": "Should fail to contribute after deadline (campaign expired)",
+      "via_function": "91d3920a6547ec555f0b92cd",
+      "chars": 1840
+    }
+  ]
+}

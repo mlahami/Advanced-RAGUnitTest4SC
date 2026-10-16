@@ -1,0 +1,42 @@
+{
+  "id": "multi-sig--muhammadkorra",
+  "domain": "multisig-wallet",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "MultiSig.sol",
+    "Test.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/muhammadkorra/multisig-wallet-eth",
+    "commit": "5f6118011febde4a0457480f72071020023d02af",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/MultiSig.sol",
+      "contracts/Test.sol"
+    ],
+    "test_paths": [
+      "test/MultiSig.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/MultiSig.sol": "ebabfe1ba8312c38254cd2987cf1ab184ababc16e4da01ce2c2278622a410439",
+      "contracts/Test.sol": "93c102a97cacd9de81ebad1faaf6997560f45e0ad1386917c359c9d115d14eac",
+      "test/MultiSig.js": "3f133e5a1a8ba6e82ed73001a57566f694fdd382d9cf9576d0709ea8026bc80b"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "MultiSig.js",
+      "upstream_path": "test/MultiSig.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Owner-confirmation multisig; Test.sol target contract; same domain as benchmark MultiSigWallet. Primary 118 non-blank lines, closure 134 lines/2 files; 12 its, 20 expects; pragma ^0.8.19.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:03:46.688298+00:00"
+}

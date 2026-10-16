@@ -1,0 +1,82 @@
+{
+  "pair": "evidence-registry--shreyas0047",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:22:34.524599+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/EvidenceRegistry.sol": "3346704470765a7e3e622ab1c870ad3b65a68f3dab62150f5f8aec16afc9a489",
+    "LICENSE": "83ef14e3a92f98dd55f5c52753f8034e3f0797602ee09ae73b70b204e2e88714",
+    "manifest.json": "6b568bfd68f61ec155cac5eb1b38db83dfde4b9b3c32a3a79ca189784ac9596f",
+    "test/EvidenceRegistry.test.js": "90807d73bd35c13e422f59a4c338339393787dd15b51b6e257e258360dd5df5b"
+  },
+  "pair_sha256": "2f81ea0b5ae2a447c21618561d5700f0b752e69c90e4c1bbe81e3e7db04b4f95",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "EvidenceRegistry.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.113,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "EvidenceRegistry.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.106,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "EvidenceRegistry.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.103,
+        "signatures": 0.0,
+        "min_functions": 10
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.87,
+      "mocha": {
+        "tests": 29,
+        "passes": 29,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.48,
+      "mocha": {
+        "tests": 29,
+        "passes": 29,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "EvidenceRegistry.sol": {
+          "statements": 97.67,
+          "branches": 68.57,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

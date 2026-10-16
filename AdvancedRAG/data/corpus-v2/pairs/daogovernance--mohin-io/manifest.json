@@ -1,0 +1,31 @@
+{
+  "id": "daogovernance--mohin-io",
+  "domain": "voting",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "DAOGovernance.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/mohin-io/Decentralized-Autonomous-Hedge-Fund-AI-DAO",
+    "commit": "8dbc75dbd1ab7b1dc89ac2a7265f624e7b0854a7",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/contracts/DAOGovernance.sol"
+    ],
+    "test_paths": [
+      "contracts/test/DAOGovernance.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/DAOGovernance.sol": "72befbc5286b410c814b9c9dda5cfcf0e86e22812265534aaa5164655e415d12",
+      "contracts/test/DAOGovernance.test.js": "1c3a3179c3695ef61feda65eccb6597d7af1c75d384a2c5a26be650aafbb7b85"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (single author, 67 commits Oct-Nov 2025, AI-themed project). Admin-granted voting power, typed proposals with threshold, for/against weighted votes, percentage quorum, execute/cancel, pause; no OZ Governor. May resemble the DAOGovernor benchmark structurally - check similarity. 38 it blocks with time helpers. Hardhat root contracts/.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T15:52:09.640585+00:00"
+}

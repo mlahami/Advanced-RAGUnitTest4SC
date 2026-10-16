@@ -1,0 +1,36 @@
+{
+  "contract": "BondingCurve",
+  "status": "test_failures",
+  "prompt_sha256": "715490ee7f9a6661f1d932eead2da1cdb2923ba2a9021e4068c5f18c16e2dbd0",
+  "generation_seconds": 12.285424399888143,
+  "usage": {
+    "prompt_tokens": 12884,
+    "total_tokens": 14746,
+    "completion_tokens": 1862,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.608890800038353
+  },
+  "passed_tests": 14,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "BondingCurve Owner Functions should allow owner to collect fees",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Insufficient ETH'"
+    }
+  ],
+  "coverage": {
+    "statements": 84.85,
+    "branches": 64.29,
+    "functions": 88.89,
+    "lines": 84.38
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

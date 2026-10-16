@@ -1,0 +1,31 @@
+{
+  "id": "loan-registry--quantsingularity",
+  "domain": "lending",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "LoanRegistry.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/QuantSingularity/LendSmart",
+    "commit": "48d6d263788b9aebeee5143da86db942f2867369",
+    "license": "MIT",
+    "contract_paths": [
+      "code/blockchain/contracts/LoanRegistry.sol"
+    ],
+    "test_paths": [
+      "code/blockchain/test/LoanRegistry.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "code/blockchain/contracts/LoanRegistry.sol": "3590dacf6e6f79af121f98dd1256e4a9130df06fac8d52e578f386503dab605c",
+      "code/blockchain/test/LoanRegistry.test.js": "558ffc2b9fd6b01265f8d49ebaf85b02275ab6f3ab1ef4e90d475e5f966cad90"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 230 lines, closure 230 lines, 1 files; 17 it blocks; history: 178 commits 2024-11-23..2026-08-20",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:26:00.663397+00:00"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "bit-brics--ac12644",
+  "domain": "nft-erc1155",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "BitBrics.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ac12644/bitbrics-erc1155",
+    "commit": "a914ff7fe87ad31d3a6a55f6550e2faed57983d5",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/BitBrics.sol"
+    ],
+    "test_paths": [
+      "test/BitBrics.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/BitBrics.sol": "9c25310be9b1059197417babb9e18f74e2d13bc8598c89646e88a1166aee996b",
+      "test/BitBrics.ts": "36a9379cb6cf1675b8e312efd8811d07aeb9916d6a5b89414456209587d469f3"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "BitBrics.js",
+      "upstream_path": "test/BitBrics.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "BitBrics.js",
+      "upstream_path": "test/BitBrics.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "BitBricsERC1155"
+      ],
+      "file": "BitBrics.js",
+      "upstream_path": "test/BitBrics.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "ERC1155 fractional brick tokens with supply caps/prices; 6 commits one day. Primary 112 non-blank lines, closure 112 lines/1 files; 11 its, 23 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:04:34.779246+00:00"
+}

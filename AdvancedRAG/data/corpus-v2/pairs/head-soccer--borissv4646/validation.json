@@ -1,0 +1,89 @@
+{
+  "pair": "head-soccer--borissv4646",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:16:29.225589+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/HeadSoccer.sol": "b69a14dc579c6d4810b32334561fb025e595afc0ff306f99747f0a11e31d2129",
+    "contracts/TestToken.sol": "535621a26616311c2d38b15c42ec6c7a352b6d929d893a25d34b992942c6bb62",
+    "LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+    "manifest.json": "8833be67704c2676901c99765c2d413f9c33235dc542d554217923abe7e46206",
+    "test/HeadSoccerTest.js": "2995bc56103670cbbb6b07638401b75c2f8d20ca47cbcda78aed630b86d50ea9"
+  },
+  "pair_sha256": "a66b93b47f4262727a572ef84822a273cb778bb366636c9a9c86a9a927157e6a",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "HeadSoccer.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.142,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "HeadSoccer.sol",
+        "reference": "DEX.sol",
+        "structural": 0.132,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "HeadSoccer.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.118,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.37,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.78,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "HeadSoccer.sol": {
+          "statements": 100.0,
+          "branches": 70.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "TestToken.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 50.0,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

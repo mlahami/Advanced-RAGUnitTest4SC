@@ -1,0 +1,89 @@
+{
+  "pair": "token-vesting--winsitoruser",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:49:25.823280+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/BaseToken.sol": "e20ca96328395bb51b258926fec7ab8e92f5d7595970895eff6a6f37b3477189",
+    "contracts/TokenVesting.sol": "f4f1dc7d2717efd63fc38d427566774fe6eff1e7c631e9eaedc39081354b40d4",
+    "LICENSE": "6308e6a36849d68f43a83a9dadc09b698d2c46947249eb0aa7e098f5bc1b970c",
+    "manifest.json": "d29fc4d33c1cf1701d85ed469cc0245cb7462d990583a2cee23bfeb2ab6ebb4a",
+    "test/TokenVesting.test.js": "d6861f299d6ed54ec01c0e7d4b713f1128fba6d418dfdb685d3c10df961844e5"
+  },
+  "pair_sha256": "5fa7b830d818dff22ac8f856afae5829f2e8babdfe73632ebc5338ac71d62ee5",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "TokenVesting.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.232,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "TokenVesting.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.209,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "TokenVesting.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.199,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.13,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.62,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "TokenVesting.sol": {
+          "statements": 97.06,
+          "branches": 62.5,
+          "functions": 87.5,
+          "lines": 97.06
+        },
+        "BaseToken.sol": {
+          "statements": 12.5,
+          "branches": 0.0,
+          "functions": 25.0,
+          "lines": 12.5
+        }
+      }
+    }
+  },
+  "accepted": true
+}

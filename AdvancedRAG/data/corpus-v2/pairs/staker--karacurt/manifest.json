@@ -1,0 +1,62 @@
+{
+  "id": "staker--karacurt",
+  "domain": "staking",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "Staker.sol",
+    "tokens.sol",
+    "PositionMetadata.sol",
+    "data.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/karacurt/protocol",
+    "commit": "94c6879aa59371a175c343108f7535274825b3e3",
+    "license": "MIT",
+    "contract_paths": [
+      "web3/contracts/staking/Staker.sol",
+      "web3/contracts/mock/tokens.sol",
+      "web3/contracts/staking/PositionMetadata.sol",
+      "web3/contracts/staking/data.sol"
+    ],
+    "test_paths": [
+      "web3/test/Staker.test.1.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "web3/contracts/staking/Staker.sol": "65dbd568118ffd60ad1e1f419c9b4b56bf88e001ba37c7d2d47422ad389607a2",
+      "web3/contracts/mock/tokens.sol": "510512734277eb905297aee3a807c0188758f002d78c70d1ce9e52689153fdc3",
+      "web3/contracts/staking/PositionMetadata.sol": "6df3a863bf0e9a8f7bbe6e4019de0b19adce3d24a3188d50c960e60975b61ed5",
+      "web3/contracts/staking/data.sol": "fd6d809500ccbfcb37d35941275a175f756dc2d5b5e3934bd3ba63373d7948f8",
+      "web3/test/Staker.test.1.ts": "581a6caa02a15c3c689b18ec8ef4a4658e7e7c6ee874ab0041b0f9fac62d55c7"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "Staker.test.1.js",
+      "upstream_path": "web3/test/Staker.test.1.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "Staker.test.1.js",
+      "upstream_path": "web3/test/Staker.test.1.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "removed_export": [
+        "setupFixture",
+        "setupStakingPoolsFixture"
+      ],
+      "file": "Staker.test.1.js",
+      "upstream_path": "web3/test/Staker.test.1.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 482 lines, closure 638 lines, 4 files; 62 it blocks; history: 716 commits 2024-05-23..2024-09-19",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:58:51.802783+00:00"
+}

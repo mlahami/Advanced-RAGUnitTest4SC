@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-30T21:41:50.886Z",
+    "end": "2026-09-30T21:41:51.300Z",
+    "duration": 414
+  },
+  "tests": [
+    {
+      "title": "Should set the correct payees and shares",
+      "fullTitle": "PaymentSplitter Deployment Should set the correct payees and shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 34,
+      "err": {}
+    },
+    {
+      "title": "Should revert with invalid input",
+      "fullTitle": "PaymentSplitter Deployment Should revert with invalid input",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 28,
+      "err": {}
+    },
+    {
+      "title": "Should revert with zero address or zero shares",
+      "fullTitle": "PaymentSplitter Deployment Should revert with zero address or zero shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should accept ETH",
+      "fullTitle": "PaymentSplitter Receive Should accept ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should distribute ETH according to shares",
+      "fullTitle": "PaymentSplitter Distribute Should distribute ETH according to shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 11,
+      "err": {
+        "message": "expected 1 to equal 0.",
+        "stack": "AssertionError: expected 1 to equal 0.\n    at Context.<anonymous> (test\\generated.test.js:111:80)"
+      }
+    },
+    {
+      "title": "Should revert when no funds to distribute",
+      "fullTitle": "PaymentSplitter Distribute Should revert when no funds to distribute",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should distribute ETH according to shares",
+      "fullTitle": "PaymentSplitter Distribute Should distribute ETH according to shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 11,
+      "err": {
+        "message": "expected 1 to equal 0.",
+        "stack": "AssertionError: expected 1 to equal 0.\n    at Context.<anonymous> (test\\generated.test.js:111:80)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct payees and shares",
+      "fullTitle": "PaymentSplitter Deployment Should set the correct payees and shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 34,
+      "err": {}
+    },
+    {
+      "title": "Should revert with invalid input",
+      "fullTitle": "PaymentSplitter Deployment Should revert with invalid input",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 28,
+      "err": {}
+    },
+    {
+      "title": "Should revert with zero address or zero shares",
+      "fullTitle": "PaymentSplitter Deployment Should revert with zero address or zero shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 20,
+      "err": {}
+    },
+    {
+      "title": "Should accept ETH",
+      "fullTitle": "PaymentSplitter Receive Should accept ETH",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert when no funds to distribute",
+      "fullTitle": "PaymentSplitter Distribute Should revert when no funds to distribute",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-rag-v2-ethers6-v1-rep03\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    }
+  ]
+}

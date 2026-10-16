@@ -1,0 +1,134 @@
+{
+  "pair": "rolling-pot-game--romankytseniuk",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T08:14:20.016362+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/IRollingPotRandomnessConsumer.sol": "2d07fb9c3ce7f5eb6d820f2dd4b917916cfd485b22e5a34998c0af705f326adb",
+    "contracts/IRollingPotRandomnessProvider.sol": "9718ab00f818194a279a055b13fcc266bd2b158e1de772206e1d73172ba23c22",
+    "contracts/MockRandomnessProvider.sol": "deba52ac41bed5d8307ff6b461e11395b89af2d94ccd15cf59ffa6f878fc006b",
+    "contracts/ReentrantClaimer.sol": "ffc1b17f8ed77d5fe671cc1c8b60f4c3105757b6e7edee5c8036d56975862fa2",
+    "contracts/RollingPotFactory.sol": "08bc7e366b03c7a8493df52400771529da8db15f05bd2112f0bffc06312be21d",
+    "contracts/RollingPotGame.sol": "1054e11c724655f46c964a38c9299a0f0f3c6a7a98ab7fb72591fedd639571ed",
+    "contracts/SelfDestructSender.sol": "ee720345fe8daa70122f4b199ac585889a0e8ad147444afab3e2a2086cb01deb",
+    "contracts/ZeroRequestIdRandomnessProvider.sol": "0e15225af96a6beade5e01bd14eddf86ea16cda7eecb67038e5d2ee0b2c8013f",
+    "LICENSE": "587eb18c994c4a05282a454e5ed5c3ac6c8c5a23446dd90c5cd7d34361e837e9",
+    "manifest.json": "eb520fd5196bfb3d2463eee9a5ce56998b45bb4c48a891718e0a4d9d3737cc15",
+    "test/GameFlow.test.js": "d74c5137c20d9895c2d725560ad97d7726b05f9e54bf15d5eab6d9d289953f11",
+    "test/MultiGame.test.js": "d50fe1634da9bcda8427cf4b5a9d221d1e9cffba7c6b6f53ebf37023c0463e77",
+    "test/RollingPotFactory.test.js": "9a76a54d94d1f9e0160f76cda87b0dd14f151ad98e62a7905d42cbfa3bb017f7",
+    "test/RollingPotGame.test.js": "3812e10333316906efff274802d51ad8ebfba9109e1847185ce57f694a9cedbe"
+  },
+  "pair_sha256": "21381ffc7eb1795fabb1d5d235a26881710ff3131933c4399a7e0d4b963f6a20",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "RollingPotGame.sol",
+        "reference": "BondingCurve.sol",
+        "structural": 0.184,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "MockRandomnessProvider.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.18,
+        "signatures": 0.0,
+        "min_functions": 2
+      },
+      {
+        "contract": "RollingPotGame.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.18,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.35,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.42,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "RollingPotGame.sol": {
+          "statements": 95.89,
+          "branches": 62.5,
+          "functions": 90.91,
+          "lines": 95.89
+        },
+        "RollingPotFactory.sol": {
+          "statements": 100.0,
+          "branches": 55.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockRandomnessProvider.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ZeroRequestIdRandomnessProvider.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "SelfDestructSender.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ReentrantClaimer.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IRollingPotRandomnessConsumer.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IRollingPotRandomnessProvider.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

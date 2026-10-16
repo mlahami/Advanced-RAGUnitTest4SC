@@ -1,0 +1,36 @@
+{
+  "contract": "GaslessRelayer",
+  "status": "test_failures",
+  "prompt_sha256": "4365755192f7144e0c0f5beaa369414d8cee0eeb1ca1f563d732d7602af821b6",
+  "generation_seconds": 26.51279930002056,
+  "usage": {
+    "prompt_tokens": 11859,
+    "total_tokens": 14501,
+    "completion_tokens": 2642,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.407148499973118
+  },
+  "passed_tests": 6,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "GaslessRelayer execute should execute a valid meta-transaction",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 87.5,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

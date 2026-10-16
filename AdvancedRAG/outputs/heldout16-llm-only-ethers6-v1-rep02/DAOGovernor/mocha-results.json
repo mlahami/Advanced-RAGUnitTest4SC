@@ -1,0 +1,121 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 5,
+    "passes": 3,
+    "pending": 0,
+    "failures": 4,
+    "start": "2026-09-30T20:51:45.027Z",
+    "end": "2026-09-30T20:51:45.879Z",
+    "duration": 852
+  },
+  "tests": [
+    {
+      "title": "should create a proposal",
+      "fullTitle": "DAOGovernor Proposal Creation should create a proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\DAOGovernor\\test\\generated.test.js",
+      "duration": 63,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:61:54)"
+      }
+    },
+    {
+      "title": "should allow voting on active proposal",
+      "fullTitle": "DAOGovernor Voting should allow voting on active proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\DAOGovernor\\test\\generated.test.js",
+      "duration": 32,
+      "err": {}
+    },
+    {
+      "title": "should revert when voting on inactive proposal",
+      "fullTitle": "DAOGovernor Voting should revert when voting on inactive proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\DAOGovernor\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:95:7)"
+      }
+    },
+    {
+      "title": "should revert when voting twice",
+      "fullTitle": "DAOGovernor Voting should revert when voting twice",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\DAOGovernor\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "should revert when voter has no voting power",
+      "fullTitle": "DAOGovernor Voting should revert when voter has no voting power",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\DAOGovernor\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "should create a proposal",
+      "fullTitle": "DAOGovernor Proposal Creation should create a proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\DAOGovernor\\test\\generated.test.js",
+      "duration": 63,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:61:54)"
+      }
+    },
+    {
+      "title": "should revert when voting on inactive proposal",
+      "fullTitle": "DAOGovernor Voting should revert when voting on inactive proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\DAOGovernor\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:95:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"should queue a successful proposal\"",
+      "fullTitle": "DAOGovernor Proposal Queueing \"before each\" hook for \"should queue a successful proposal\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\DAOGovernor\\test\\generated.test.js",
+      "duration": 30,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:135:7)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"should execute a queued proposal\"",
+      "fullTitle": "DAOGovernor Proposal Execution \"before each\" hook for \"should execute a queued proposal\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\DAOGovernor\\test\\generated.test.js",
+      "duration": 33,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:215:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "should allow voting on active proposal",
+      "fullTitle": "DAOGovernor Voting should allow voting on active proposal",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\DAOGovernor\\test\\generated.test.js",
+      "duration": 32,
+      "err": {}
+    },
+    {
+      "title": "should revert when voting twice",
+      "fullTitle": "DAOGovernor Voting should revert when voting twice",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\DAOGovernor\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "should revert when voter has no voting power",
+      "fullTitle": "DAOGovernor Voting should revert when voter has no voting power",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-llm-only-ethers6-v1-rep02\\DAOGovernor\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    }
+  ]
+}

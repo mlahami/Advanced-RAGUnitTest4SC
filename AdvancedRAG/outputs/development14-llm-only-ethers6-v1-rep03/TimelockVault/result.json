@@ -1,0 +1,36 @@
+{
+  "contract": "TimelockVault",
+  "status": "test_failures",
+  "prompt_sha256": "cff1abe48fe3ccadd28ecf78ab216d326590a2245ec849e1814b266e11ffd7b3",
+  "generation_seconds": 7.085327299952041,
+  "usage": {
+    "prompt_tokens": 6901,
+    "total_tokens": 7735,
+    "completion_tokens": 834,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.330307800031733
+  },
+  "passed_tests": 7,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "TimelockVault Deployment Should set the correct unlock time",
+      "error": "Cannot mix BigInt and other types, use explicit conversions"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

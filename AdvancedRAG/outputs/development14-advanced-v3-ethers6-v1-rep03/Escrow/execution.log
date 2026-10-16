@@ -1,0 +1,35 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> BenchmarkFixtures.sol
+> Escrow.sol
+
+Compilation:
+============
+
+Compiled 2 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+------------------------|----------|----------|----------|----------|----------------|
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------------|----------|----------|----------|----------|----------------|
+ contracts\             |     2.17 |     2.08 |     9.09 |     5.63 |                |
+  BenchmarkFixtures.sol |        0 |        0 |        0 |        0 |... 140,141,145 |
+  Escrow.sol            |     12.5 |     6.25 |       50 |    28.57 |... 31,32,33,34 |
+------------------------|----------|----------|----------|----------|----------------|
+All files               |     2.17 |     2.08 |     9.09 |     5.63 |                |
+------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+Error in plugin solidity-coverage: ❌ 9 test(s) failed under coverage.
+
+For more info run Hardhat with --show-stack-traces

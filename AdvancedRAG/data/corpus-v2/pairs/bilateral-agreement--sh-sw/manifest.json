@@ -1,0 +1,31 @@
+{
+  "id": "bilateral-agreement--sh-sw",
+  "domain": "commit-reveal",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "BilateralAgreement.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/SH-SW/BlockChain-Hackathon",
+    "commit": "08d714a08732d80b1707e7d02238fd21acb6e561",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/BilateralAgreement.sol"
+    ],
+    "test_paths": [
+      "test/BilateralAgreement.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/BilateralAgreement.sol": "f2867b798c1846b62efd065620e66f5e03fe81c3457a40bdd92c4dd9692dd6b4",
+      "test/BilateralAgreement.test.js": "533c844889eb2b35272880a1568661c89e1b6038703263aa6e9b2e4c366a0d52"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "DOUBTFUL human authorship (flagged in search report). Commit-reveal bilateral agreement with deposits and ECDSA-verified decisions; hackathon repo, 7 commits (2026). Primary 175 non-blank lines, closure 175 lines/1 files; 33 its, 55 expects; pragma ^0.8.20.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T12:06:49.206965+00:00"
+}

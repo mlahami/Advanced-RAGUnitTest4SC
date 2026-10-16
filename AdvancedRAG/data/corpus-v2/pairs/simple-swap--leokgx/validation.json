@@ -1,0 +1,83 @@
+{
+  "pair": "simple-swap--leokgx",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:15:49.350099+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/SimpleSwap.sol": "5c15c32dd929683083e029a5795732bb6a406c7d4a24ee9e65b2b9903cbde812",
+    "contracts/Token.sol": "af6e66f9d0760bee9ede90a4f0f5ce71271322282ca2d0228e82097a12df9d9f",
+    "LICENSE": "80abc2e03ffbc57bb088ad4eba6447484273b8236e1212b6c0ae065639d810a1",
+    "manifest.json": "63d48393b9f37377ede606fafd44f24cfd11d7c157696463d9fd78763afa1da6",
+    "test/SimpleSwap.test.js": "1bb0bb16a2d18fea93afcee3df9b3578e1092b9d35dcb5409c19ca4f34e9dc62"
+  },
+  "pair_sha256": "7547641edc72c3e1d1cc783206c3b52fd2a26a3fc63e3690d6c3d2faf1adbff1",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "SimpleSwap.sol",
+        "reference": "DEX.sol",
+        "structural": 0.234,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "SimpleSwap.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.136,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "SimpleSwap.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.098,
+        "signatures": 0.0,
+        "min_functions": 10
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.88,
+      "mocha": {
+        "tests": 20,
+        "passes": 20,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.67,
+      "mocha": {
+        "tests": 20,
+        "passes": 20,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "SimpleSwap.sol": {
+          "statements": 100.0,
+          "branches": 75.61,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

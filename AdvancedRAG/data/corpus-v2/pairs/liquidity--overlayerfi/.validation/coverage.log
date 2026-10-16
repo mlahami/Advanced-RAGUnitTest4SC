@@ -1,0 +1,44 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> ILiquidityDefs.sol
+> IOverlayerReferral.sol
+> IRewardAsset.sol
+> Liquidity.sol
+> MintableERC20.sol
+> MintableTokenBase.sol
+> OverlayerReferral.sol
+> TokenLP_A_B.sol
+
+Compilation:
+============
+
+Compiled 31 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+-------------------------|----------|----------|----------|----------|----------------|
+File                     |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-------------------------|----------|----------|----------|----------|----------------|
+ contracts\              |    74.46 |    44.44 |    64.71 |    65.28 |                |
+  ILiquidityDefs.sol     |      100 |      100 |      100 |      100 |                |
+  IOverlayerReferral.sol |      100 |      100 |      100 |      100 |                |
+  IRewardAsset.sol       |      100 |      100 |      100 |      100 |                |
+  Liquidity.sol          |     81.4 |     53.7 |    79.17 |    74.85 |... 521,608,647 |
+  MintableERC20.sol      |    16.67 |     7.14 |    33.33 |    18.18 |... 56,66,67,68 |
+  MintableTokenBase.sol  |       80 |       30 |       60 |     62.5 |       53,54,68 |
+  OverlayerReferral.sol  |    61.36 |     37.5 |    53.33 |    50.67 |... 233,239,245 |
+  TokenLP_A_B.sol        |      100 |      100 |      100 |      100 |                |
+-------------------------|----------|----------|----------|----------|----------------|
+All files                |    74.46 |    44.44 |    64.71 |    65.28 |                |
+-------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

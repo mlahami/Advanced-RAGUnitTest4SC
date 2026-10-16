@@ -1,0 +1,37 @@
+{
+  "id": "payment-escrow--center-for-ai-services-computing",
+  "domain": "escrow",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "PaymentEscrow.sol",
+    "MockERC20.sol",
+    "MaliciousERC20.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Center-for-AI-Services-Computing/ORACLE",
+    "commit": "537d52f9a6838b9f412e322ae1f2558b80ff920b",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/PaymentEscrow.sol",
+      "contracts/MockERC20.sol",
+      "contracts/mocks/MaliciousERC20.sol"
+    ],
+    "test_paths": [
+      "test/PaymentEscrow.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/PaymentEscrow.sol": "9db79cdfda4ae36a721c6cec738c67c0911268dfd586b1690e67c4d35d66935b",
+      "contracts/MockERC20.sol": "8cdfdbb6676a06ae716bcc2298575b41078c949406ab8f126409b55b6d42379c",
+      "contracts/mocks/MaliciousERC20.sol": "34752d212ececa1357e175082c934434de8d34b8052b15ac2618bbfc0b699440",
+      "test/PaymentEscrow.test.js": "62ef698458ba553a15ad1aa1530cb041623e37420d17fc1d880c43c0dee9fe37"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Task payment escrow for AI agents (ERC20), MaliciousERC20 reentrancy mock; research-lab repo, 63 commits (2026). Primary 109 non-blank lines, closure 172 lines/3 files; 28 its, 42 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:03:49.427707+00:00"
+}

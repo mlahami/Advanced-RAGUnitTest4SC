@@ -1,0 +1,199 @@
+{
+  "base_trace": null,
+  "pivot_steps": [
+    {
+      "retrieved": "66070cffd27a8da2e607caab",
+      "type": "function",
+      "delivered": []
+    },
+    {
+      "retrieved": "c38e7b8beb227cf422cf6c83",
+      "type": "function",
+      "delivered": [
+        "63b7b924f211baf859d46621"
+      ]
+    },
+    {
+      "retrieved": "3e4813d1823aba5e029dcb99",
+      "type": "function",
+      "delivered": [
+        "ffa0dc8a8d29fbfe91d00ab0"
+      ]
+    },
+    {
+      "retrieved": "b8e973d261cd4102c817b6f4",
+      "type": "function",
+      "delivered": [
+        "1659b76efc32dd4502522ef2",
+        "b12d491e1e2cb70246463c14"
+      ]
+    },
+    {
+      "retrieved": "9edc3b0eb21df4b58379cff7",
+      "type": "function",
+      "delivered": []
+    },
+    {
+      "retrieved": "47787cea72fefe0a8f5bfb68",
+      "type": "function",
+      "delivered": []
+    },
+    {
+      "retrieved": "e6b4200cf46f2b27a7344ff1",
+      "type": "function",
+      "delivered": [
+        "5c5de2d6f096b9f5a36b2aa1",
+        "24b778105e01a04532e2072d"
+      ]
+    },
+    {
+      "retrieved": "4918ae837c2e2ba16d6e79c4",
+      "type": "test_case",
+      "delivered": [
+        "4918ae837c2e2ba16d6e79c4"
+      ]
+    },
+    {
+      "retrieved": "5b7d27a8f1043996a8b77c05",
+      "type": "function",
+      "delivered": [
+        "dd361496a38db1e7fc48bae3",
+        "57ee6f1d9bebdb2e3e622ab9"
+      ]
+    },
+    {
+      "retrieved": "ffa0dc8a8d29fbfe91d00ab0",
+      "type": "test_case",
+      "delivered": [
+        "ffa0dc8a8d29fbfe91d00ab0"
+      ]
+    },
+    {
+      "retrieved": "57833a5e498ef9ece6c6e60d",
+      "type": "function",
+      "delivered": []
+    },
+    {
+      "retrieved": "63b7b924f211baf859d46621",
+      "type": "test_case",
+      "delivered": [
+        "63b7b924f211baf859d46621"
+      ]
+    },
+    {
+      "retrieved": "e614f54cefe57377080f21c3",
+      "type": "test_case",
+      "delivered": [
+        "e614f54cefe57377080f21c3"
+      ]
+    }
+  ],
+  "selected": [
+    86,
+    82,
+    5643,
+    5642,
+    168,
+    169,
+    5640,
+    463,
+    461,
+    5641
+  ],
+  "context_chars": 13301,
+  "per_function": 2,
+  "contract": "AccessControl",
+  "retrieval_seconds": 7.233443300006911,
+  "hits": [
+    {
+      "chunk_id": 86,
+      "test_id": "63b7b924f211baf859d46621",
+      "pair": "access-registry--adelmarcio0",
+      "domain_group": "access-control",
+      "name": "Should revoke job owner role",
+      "via_function": "c38e7b8beb227cf422cf6c83",
+      "chars": 938
+    },
+    {
+      "chunk_id": 82,
+      "test_id": "ffa0dc8a8d29fbfe91d00ab0",
+      "pair": "access-registry--adelmarcio0",
+      "domain_group": "access-control",
+      "name": "Should revoke executor role",
+      "via_function": "3e4813d1823aba5e029dcb99",
+      "chars": 935
+    },
+    {
+      "chunk_id": 5643,
+      "test_id": "1659b76efc32dd4502522ef2",
+      "pair": "rbac--sharfshiplo",
+      "domain_group": "access-control",
+      "name": "Should revert if revoking non-existent role",
+      "via_function": "b8e973d261cd4102c817b6f4",
+      "chars": 1424
+    },
+    {
+      "chunk_id": 5642,
+      "test_id": "b12d491e1e2cb70246463c14",
+      "pair": "rbac--sharfshiplo",
+      "domain_group": "access-control",
+      "name": "Should allow ADMIN to revoke MANAGER role",
+      "via_function": "b8e973d261cd4102c817b6f4",
+      "chars": 1369
+    },
+    {
+      "chunk_id": 168,
+      "test_id": "5c5de2d6f096b9f5a36b2aa1",
+      "pair": "administrable--rsksmart",
+      "domain_group": "access-control",
+      "name": "Should prevent changing to same role",
+      "via_function": "e6b4200cf46f2b27a7344ff1",
+      "chars": 1216
+    },
+    {
+      "chunk_id": 169,
+      "test_id": "24b778105e01a04532e2072d",
+      "pair": "administrable--rsksmart",
+      "domain_group": "access-control",
+      "name": "Should prevent changing to NONE role",
+      "via_function": "e6b4200cf46f2b27a7344ff1",
+      "chars": 1212
+    },
+    {
+      "chunk_id": 5640,
+      "test_id": "4918ae837c2e2ba16d6e79c4",
+      "pair": "rbac--sharfshiplo",
+      "domain_group": "access-control",
+      "name": "Should revert if non-admin tries to grant ADMIN role",
+      "via_function": null,
+      "chars": 1437
+    },
+    {
+      "chunk_id": 463,
+      "test_id": "dd361496a38db1e7fc48bae3",
+      "pair": "agri-bridge-traceability--mrnobody23-cloude",
+      "domain_group": "supply-chain",
+      "name": "Admin cannot self-revoke ADMIN_ROLE (lockout prevention)",
+      "via_function": "5b7d27a8f1043996a8b77c05",
+      "chars": 1700
+    },
+    {
+      "chunk_id": 461,
+      "test_id": "57ee6f1d9bebdb2e3e622ab9",
+      "pair": "agri-bridge-traceability--mrnobody23-cloude",
+      "domain_group": "supply-chain",
+      "name": "Admin can grant and revoke roles",
+      "via_function": "5b7d27a8f1043996a8b77c05",
+      "chars": 1717
+    },
+    {
+      "chunk_id": 5641,
+      "test_id": "e614f54cefe57377080f21c3",
+      "pair": "rbac--sharfshiplo",
+      "domain_group": "access-control",
+      "name": "Should revert if role already granted",
+      "via_function": null,
+      "chars": 1353
+    }
+  ]
+}

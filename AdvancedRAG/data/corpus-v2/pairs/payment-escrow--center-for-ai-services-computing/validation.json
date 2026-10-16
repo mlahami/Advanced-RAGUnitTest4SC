@@ -1,0 +1,96 @@
+{
+  "pair": "payment-escrow--center-for-ai-services-computing",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:11:23.987913+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MaliciousERC20.sol": "49ea9aeda1ac4842297df4fe19485122c4c233e0039b2b50bf93e325e4fb33c2",
+    "contracts/MockERC20.sol": "ec866f1de50017df5351a8c135a19d76652721846662b67e9cbb31c13daed0b6",
+    "contracts/PaymentEscrow.sol": "44f0f437e0e3d4b37e6533769aa8ae6fb643a16acd53765b723c9bbb2c8ade33",
+    "LICENSE": "52d523c41882b7341909ab501390c7a7bcc3550cae385614e807c719a359332e",
+    "manifest.json": "4e3bcac0eae1f93bd52755360491c63ed86c29cadec9c5ede4f80d918e4614a7",
+    "test/PaymentEscrow.test.js": "9a61d3f7bbb7606cf29d4b052ccd7089f72e725966626361abb92832419009e8"
+  },
+  "pair_sha256": "5bd61841a2d3d0fe42fd89015b0415a8c2a5f6194eeab5d302b76cd107ff6a14",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "PaymentEscrow.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.233,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "PaymentEscrow.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.227,
+        "signatures": 0.067,
+        "min_functions": 7
+      },
+      {
+        "contract": "PaymentEscrow.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.218,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.03,
+      "mocha": {
+        "tests": 28,
+        "passes": 28,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.89,
+      "mocha": {
+        "tests": 28,
+        "passes": 28,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "PaymentEscrow.sol": {
+          "statements": 96.55,
+          "branches": 80.0,
+          "functions": 100.0,
+          "lines": 96.55
+        },
+        "MockERC20.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MaliciousERC20.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

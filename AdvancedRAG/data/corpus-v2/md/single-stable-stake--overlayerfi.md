@@ -1,0 +1,1986 @@
+# single-stable-stake--overlayerfi
+
+- domain: fungible-tokens (stablecoin)
+- level: complex
+- origin: human
+- convention: hardhat2-ethers6
+- source: https://github.com/Overlayerfi/contracts @ 25c11023aa6aa64857df6b945203ca39c732166a
+- license: GPL-3.0
+- targets: SingleStableStake.sol, Liquidity.sol, ILiquidityDefs.sol, IRewardAsset.sol, MintableERC20.sol, TokenLP_A_B.sol, MintableTokenBase.sol, OverlayerReferral.sol, IOverlayerReferral.sol
+- validation: 15 passing tests, 0 failing; statement coverage SingleStableStake.sol 92.31 %, Liquidity.sol 40.31 %, ILiquidityDefs.sol 100.0 %, IRewardAsset.sol 100.0 %, MintableERC20.sol 16.67 %, TokenLP_A_B.sol 100.0 %, MintableTokenBase.sol 80.0 %, OverlayerReferral.sol 2.27 %, IOverlayerReferral.sol 100.0 %
+
+## Contract: ILiquidityDefs.sol (dependency)
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "./IOverlayerReferral.sol";
+
+interface ILiquidityDefs {
+    /**
+     * @notice Info on each user.
+     */
+    struct UserInfo {
+        uint256 amount; // How many tokens the user has provided.
+        uint256 rewardDebt; // Reward debt. See explanation below.
+        /**
+         * @notice The strategy used by the vault.
+         *
+         * We do some fancy math here. Basically, any point in time, the amount of REWARD
+         * entitled to a user but is pending to be distributed is:
+         *
+         *  pending reward = (user.amount * pool.accRewardPerShare)
+         *
+         * Whenever a user deposits or withdraws tokens to a pool. Here's what happens:
+         *  1. The pool's `accRewardPerShare` (and `lastRewardTime`) gets updated.
+         *  2. User receives the pending reward sent to his/her address.
+         *  3. User's `amount` gets updated.
+         */
+    }
+
+    /**
+     * @notice Info on each pool.
+     */
+    struct PoolInfo {
+        IERC20 stakedAsset; // Address of staked token contract
+        IERC20 rewardAsset; // REward token
+        uint256 allocPoints; // Pool weight
+        uint256 lastRewardTime; // Last timestamp that REWARD distribution occured
+        uint256 accRewardPerShare; // Accumulated REWARD per share, times 1e12. See below
+        uint256 endTimeStamp; // If the pool is active or not
+        bool vesting; // If harvest and withraw are allowed only at the end of the pool
+    }
+
+    event Deposit(address indexed user, uint256 indexed pid, uint256 amount);
+
+    event Withdraw(address indexed user, uint256 indexed pid, uint256 amount);
+
+    event Harvest(address indexed user, uint256 indexed pid, uint256 amount);
+
+    event EmergencyWithdraw(
+        address indexed user,
+        uint256 indexed pid,
+        uint256 amount
+    );
+
+    event NewBonusMultiplier(uint256 multiplier);
+
+    event NewReferralBonus(uint8 bonus);
+
+    event NewSelfReferralBonus(uint16 bonus);
+
+    event NewReferral(IOverlayerReferral referral);
+
+    event BonusPayed(address indexed recipient, uint256 amount);
+
+    event SelfBonusPayed(address indexed recipient, uint256 amount);
+
+    error NotAllowed();
+
+    error VestingPool();
+
+    error InvalidAmount();
+
+    error InvalidPid();
+
+    error InvalidZeroAddress();
+
+    error InvactiveReward();
+
+    error LiquidityNotActive();
+
+    error InvalidTimeRange();
+
+    error PoolNotActive();
+
+    error AlreadyUsedStakedAsset();
+
+    function poolLength() external view returns (uint256);
+
+    function deposit(uint256 pid, uint256 amount) external;
+
+    function withdraw(uint256 pid, uint256 amount) external;
+
+    function harvest(uint256 pid) external;
+
+    function harvestFor(uint256 pid, address target) external;
+
+    function pendingReward(
+        uint256 pid,
+        address _user
+    ) external view returns (uint256);
+
+    function userInfo(
+        uint256 pid,
+        address _user
+    ) external view returns (uint256, uint256);
+
+    function emergencyWithdraw(uint256 pid) external;
+}
+```
+
+## Contract: IOverlayerReferral.sol (dependency)
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/// @title IOverlayerReferral Interface
+/// @notice Interface for the Overlayer referral system that tracks referrals and rewards
+interface IOverlayerReferral {
+    /// @notice Get the address that referred a user
+    /// @param user The address of the user to check
+    /// @return The address that referred the user, or zero address if not referred
+    function referredFrom(address user) external view returns (address);
+
+    /// @notice Get the address associated with a referral code
+    /// @param code The referral code to look up
+    /// @return The address that created this referral code
+    function referralCodes(string memory code) external view returns (address);
+
+    /// @notice Get all addresses referred by a user
+    /// @param user The address to check referrals for
+    /// @return Array of addresses that were referred by this user
+    function seeReferred(address user) external view returns (address[] memory);
+
+    /// @notice Get the total points generated by a user through referrals
+    /// @param user The address to check points for
+    /// @return The total number of points generated
+    function generatedPoints(address user) external view returns (uint256);
+
+    /// @notice Track points for a referral action
+    /// @param user The address to track points for
+    /// @param amount The amount of points to add
+    function track(address user, uint256 amount) external;
+
+    /// @notice Use a referral code to establish a referral relationship
+    /// @param code The referral code to consume
+    function consumeReferral(string memory code) external;
+}
+```
+
+## Contract: IRewardAsset.sol (dependency)
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+interface IRewardAsset {
+    function mint(address to, uint256 amount) external;
+}
+```
+
+## Contract: Liquidity.sol (dependency)
+
+```solidity
+// SPDX-License-Identifier: GPL-3.0-or-later
+pragma solidity ^0.8.20;
+
+import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import {Math} from "@openzeppelin/contracts/utils/math/Math.sol";
+import "./ILiquidityDefs.sol";
+import "./IRewardAsset.sol";
+
+/**
+ * @notice Liquidity contract implementation.
+ */
+contract Liquidity is Ownable, ReentrancyGuard, ILiquidityDefs {
+    using SafeERC20 for IERC20;
+    using Math for uint256;
+
+    /**
+     * @notice The pool info.
+     */
+    PoolInfo[] public poolInfo;
+
+    /**
+     * @notice The users info.
+     */
+    mapping(uint256 => mapping(address => UserInfo)) public userInfo;
+
+    /**
+     * @notice The starting time for rewards.
+     */
+    uint256 public startTime;
+
+    /**
+     * @notice The emitted amount of reward for each second.
+     */
+    mapping(address => uint256) public rewardsPerSecond;
+
+    /**
+     * @notice Currently active reward.
+     */
+    mapping(address => bool) public activeRewards;
+
+    /**
+     * @notice The total allocation points for each reward.
+     */
+    mapping(address => uint256) public totalAllocPointsPerReward;
+
+    /**
+     * @notice The staking assets already present.
+     */
+    mapping(address => bool) private usedStakingAssets;
+
+    /**
+     * @notice The bonus multiplier.
+     */
+    uint256 public bonusMultiplier = 1;
+
+    /**
+     * @notice Referral bonus percentage.
+     * @dev 5%
+     */
+    uint8 public referralBonus = 5;
+
+    /**
+     * @notice Referral bonus percentage.
+     * @dev 2.5%
+     */
+    uint16 public selfReferralBonus = 25;
+
+    /**
+     * @notice Referral contract.
+     */
+    IOverlayerReferral public referral;
+
+    /**
+     * @notice Contract constructor.
+     * @param admin The contract admin
+     */
+    constructor(address admin) Ownable(admin) {
+        if (admin == address(0)) {
+            revert InvalidZeroAddress();
+        }
+        startTime = block.timestamp;
+    }
+
+    /**
+     * @notice Update the rewards starting time.
+     * @param startTime_ the new start time.
+     */
+    function updateStartTime(uint256 startTime_) external onlyOwner {
+        if (startTime_ < block.timestamp) {
+            revert InvalidAmount();
+        }
+        startTime = startTime_;
+    }
+
+    /**
+     * @notice Update the referral bonus amount.
+     * @dev It can not be over 100 (100%).
+     * @param referralBonus_ the bonus amount.
+     */
+    function updateReferralBonus(uint8 referralBonus_) external onlyOwner {
+        if (referralBonus_ <= 100) {
+            referralBonus = referralBonus_;
+            emit NewReferralBonus(referralBonus_);
+        }
+    }
+
+    /**
+     * @notice Update the referral bonus amount.
+     * @dev It can not be over 1000 (100%).
+     * @param selfReferralBonus_ the bonus amount.
+     */
+    function updateSelfReferralBonus(
+        uint16 selfReferralBonus_
+    ) external onlyOwner {
+        if (selfReferralBonus_ <= 1000) {
+            selfReferralBonus = selfReferralBonus_;
+            emit NewSelfReferralBonus(selfReferralBonus_);
+        }
+    }
+
+    /**
+     * @notice Update the referral contract.
+     * @param referral_ the referral contract.
+     */
+    function updateReferral(IOverlayerReferral referral_) external onlyOwner {
+        referral = referral_;
+        emit NewReferral(referral_);
+    }
+
+    /**
+     * @notice Update the multiplier value.
+     * @param bonusMultiplier_ the new multiplier value.
+     */
+    function updateMultiplier(uint256 bonusMultiplier_) external onlyOwner {
+        _massUpdatePools();
+        bonusMultiplier = bonusMultiplier_;
+        emit NewBonusMultiplier(bonusMultiplier_);
+    }
+
+    /**
+     * @notice Set a reward rate.
+     * @param rewardAsset the reward.
+     * @param rewardRate the new reward rate.
+     */
+    function setReward(
+        IERC20 rewardAsset,
+        uint256 rewardRate
+    ) external onlyOwner {
+        if (!activeRewards[address(rewardAsset)]) {
+            activeRewards[address(rewardAsset)] = true;
+        }
+        if (rewardsPerSecond[address(rewardAsset)] != rewardRate) {
+            rewardsPerSecond[address(rewardAsset)] = rewardRate;
+        }
+    }
+
+    /**
+     * @notice Modify the allocation points for a pool.
+     * @param pid the pool pid.
+     * @param newPoints the new weight.
+     * @return newTotal the new total allocation.
+     */
+    function setPoolAllocPoints(
+        uint256 pid,
+        uint256 newPoints,
+        bool update
+    ) external onlyOwner returns (uint256 newTotal) {
+        if (pid >= poolInfo.length) {
+            revert InvalidPid();
+        }
+
+        if (update) {
+            _massUpdatePools();
+        }
+        PoolInfo storage pool = poolInfo[pid];
+        uint256 oldPoints = pool.allocPoints;
+        pool.allocPoints = newPoints;
+        if (oldPoints != newPoints) {
+            totalAllocPointsPerReward[address(pool.rewardAsset)] =
+                totalAllocPointsPerReward[address(pool.rewardAsset)] -
+                (oldPoints) +
+                (newPoints);
+        }
+        newTotal = totalAllocPointsPerReward[address(pool.rewardAsset)];
+    }
+
+    /**
+
+    /**
+     * @notice Withdraw from the pool with harvest.
+     * @param pid the pool identifier.
+     * @param amount the amount to withdraw.
+     */
+    function withdraw(
+        uint256 pid,
+        uint256 amount
+    ) external override nonReentrant {
+        if (pid >= poolInfo.length) {
+            revert InvalidPid();
+        }
+
+        // Get pool and user
+        PoolInfo storage pool = poolInfo[pid];
+        UserInfo storage currentUser = userInfo[pid][msg.sender];
+        if (amount > currentUser.amount) {
+            revert InvalidAmount();
+        }
+        // Vesting pool
+        if (pool.vesting && block.timestamp < pool.endTimeStamp) {
+            revert VestingPool();
+        }
+
+        // update the pool up to date
+        updatePool(pid);
+
+        uint256 rewards = currentUser.amount.mulDiv(
+            pool.accRewardPerShare,
+            1e18
+        );
+        // Compute pending rewards
+        uint256 pending = rewards - currentUser.rewardDebt;
+        // Update user info
+        currentUser.amount = currentUser.amount - amount;
+        // update reward debt, there is harvest on withdraw so at every withdraw the debt will be updated with the new amount the user has.
+        currentUser.rewardDebt = currentUser.amount.mulDiv(
+            pool.accRewardPerShare,
+            1e18
+        );
+        //harvest accrued rewards
+        if (pending > 0) {
+            _payReward(pool.rewardAsset, msg.sender, pending);
+        }
+        // harvest referral bonus and track gained point from the referral source
+        if (address(referral) != address(0)) {
+            _payBonus(pending, pool.rewardAsset, msg.sender);
+        }
+        //return stating funds
+        if (amount > 0) {
+            _returnStakedTokens(pool.stakedAsset, address(msg.sender), amount);
+        }
+
+        emit Withdraw(msg.sender, pid, amount);
+    }
+
+    /**
+     * @notice Harvest reward for an account.
+     * @dev This is allowed both before and after the end of pool endTimeStamp
+     * @param pid the pool identifier.
+     * @param target the user to be harvested.
+     */
+    function harvestFor(
+        uint256 pid,
+        address target
+    ) external override nonReentrant {
+        if (pid >= poolInfo.length) {
+            revert InvalidPid();
+        }
+
+        // Get pool and user
+        PoolInfo memory pool = poolInfo[pid];
+        UserInfo storage currentUser = userInfo[pid][target];
+
+        // Compute pending rewards
+        uint256 pending = pendingReward(pid, target);
+        // Update reward debt
+        currentUser.rewardDebt = currentUser.rewardDebt + pending;
+
+        // Pay rewards
+        if (pending > 0) {
+            _payReward(pool.rewardAsset, target, pending);
+        }
+        // Pay bonus rewards
+        if (address(referral) != address(0)) {
+            _payBonus(pending, pool.rewardAsset, target);
+        }
+
+        emit Harvest(target, pid, pending);
+    }
+
+    /**
+     * @notice Harvest reward.
+     * @dev This is allowed both before and after the end of pool endTimeStamp
+     * @param pid the pool identifier.
+     */
+    function harvest(uint256 pid) external override nonReentrant {
+        if (pid >= poolInfo.length) {
+            revert InvalidPid();
+        }
+
+        // Get pool and user
+        PoolInfo memory pool = poolInfo[pid];
+        UserInfo storage currentUser = userInfo[pid][msg.sender];
+
+        // Compute pending rewards
+        uint256 pending = pendingReward(pid, msg.sender);
+        // Update reward debt
+        currentUser.rewardDebt = currentUser.rewardDebt + pending;
+
+        // Pay rewards
+        if (pending > 0) {
+            _payReward(pool.rewardAsset, msg.sender, pending);
+        }
+        // Pay bonus rewards
+        if (address(referral) != address(0)) {
+            _payBonus(pending, pool.rewardAsset, msg.sender);
+        }
+
+        emit Harvest(msg.sender, pid, pending);
+    }
+
+    /**
+     * @notice Emergency withdraw all the deposited funds.
+     * @param pid the pool identifier.
+     */
+    function emergencyWithdraw(uint256 pid) external override nonReentrant {
+        PoolInfo storage pool = poolInfo[pid];
+        UserInfo storage user = userInfo[pid][msg.sender];
+
+        uint256 amount = user.amount;
+        user.amount = 0;
+        user.rewardDebt = 0;
+        if (amount > 0) {
+            _returnStakedTokens(pool.stakedAsset, address(msg.sender), amount);
+        }
+
+        emit EmergencyWithdraw(msg.sender, pid, amount);
+    }
+
+    /**
+     * @notice Get the pool lenght.
+     * @return the lenght of the liquidity info.
+     */
+    function poolLength() external view override returns (uint256) {
+        return poolInfo.length;
+    }
+
+    /**
+     * @notice Get the total amount of tokens staked inside a pool.
+     * @param pid the pool identifier.
+     * @return the amount of token staked inside the given pool.
+     */
+    function getTotalStakedInPool(uint256 pid) external view returns (uint256) {
+        if (pid >= poolInfo.length) {
+            revert InvalidPid();
+        }
+        return (poolInfo[pid].stakedAsset.balanceOf(address(this)));
+    }
+
+    /**
+     * @notice Deposit into the pool with harvest.
+     * @param pid the pool identifier.
+     * @param amount the amount to deposit.
+     */
+    function deposit(uint256 pid, uint256 amount) public override nonReentrant {
+        if (pid >= poolInfo.length) {
+            revert InvalidPid();
+        }
+
+        PoolInfo storage pool = poolInfo[pid];
+        UserInfo storage currentUser = userInfo[pid][msg.sender];
+
+        // Block deposits if endtime is reached
+        if (pool.endTimeStamp > 0 && pool.endTimeStamp < block.timestamp) {
+            revert PoolNotActive();
+        }
+
+        // Cache old values
+        uint256 oldDebt = currentUser.rewardDebt;
+        uint256 oldAmount = currentUser.amount;
+
+        // update the pool up to date
+        updatePool(pid);
+
+        // Update user info
+        currentUser.amount = currentUser.amount + amount;
+
+        currentUser.rewardDebt = currentUser.amount.mulDiv(
+            pool.accRewardPerShare,
+            1e18
+        );
+
+        // Harvest is allowed for both vesting and not vesting pools
+        uint256 pending = oldAmount.mulDiv(pool.accRewardPerShare, 1e18) -
+            oldDebt;
+        if (pending > 0) {
+            _payReward(pool.rewardAsset, msg.sender, pending);
+        }
+
+        // harvest referral bonus and track gained point from the referral source
+        if (address(referral) != address(0)) {
+            _payBonus(pending, pool.rewardAsset, msg.sender);
+        }
+
+        // collect collateral
+        if (amount > 0) {
+            pool.stakedAsset.safeTransferFrom(
+                address(msg.sender),
+                address(this),
+                amount
+            );
+        }
+
+        emit Deposit(msg.sender, pid, amount);
+    }
+
+    /**
+     * @notice Add a new pool
+     * @dev It reverts if the starting time is set to zero
+     * @dev A vesting pool can not have endTime equal to 0
+     * @param stakedAsset the wanted token.
+     * @param rewardAsset the reward that will be payed out.
+     * @param allocationPoints the weight of the added pool.
+     * @param endTime the ending time for this pool. 0 to ignore.
+     * @param vested a boolean flag stating if harvest and withdraw have to wait for the end of the pool.
+     * @param update a boolean flag stating if update or not old pools.
+     */
+    function add(
+        IERC20 stakedAsset,
+        IERC20 rewardAsset,
+        uint256 allocationPoints,
+        uint256 endTime,
+        bool vested,
+        bool update
+    ) public onlyOwner {
+        if (usedStakingAssets[address(stakedAsset)]) {
+            revert AlreadyUsedStakedAsset();
+        }
+        if (vested && endTime == 0) {
+            revert NotAllowed();
+        }
+        if (!activeRewards[address(rewardAsset)]) {
+            revert InvactiveReward();
+        }
+        if (update) {
+            _massUpdatePools();
+        }
+
+        usedStakingAssets[address(stakedAsset)] = true;
+
+        uint256 lastRewardTime = block.timestamp > startTime
+            ? block.timestamp
+            : startTime;
+        totalAllocPointsPerReward[address(rewardAsset)] =
+            totalAllocPointsPerReward[address(rewardAsset)] +
+            (allocationPoints);
+        poolInfo.push(
+            PoolInfo({
+                stakedAsset: stakedAsset,
+                rewardAsset: rewardAsset,
+                allocPoints: allocationPoints,
+                lastRewardTime: lastRewardTime,
+                accRewardPerShare: 0,
+                endTimeStamp: endTime,
+                vesting: vested
+            })
+        );
+    }
+
+    /**
+     * @notice Get the pending reward for a given pool and user.
+     * @param pid the pool identifier.
+     * @param user the participant.
+     * @return the pending reward for given pool and user.
+     */
+    function pendingReward(
+        uint256 pid,
+        address user
+    ) public view virtual override returns (uint256) {
+        if (pid >= poolInfo.length) {
+            revert InvalidPid();
+        }
+
+        PoolInfo memory pool = poolInfo[pid];
+        UserInfo memory currentUser = userInfo[pid][user];
+
+        uint256 accRewardPerShare = pool.accRewardPerShare;
+        uint256 stakedAssetSupply = pool.stakedAsset.balanceOf(address(this));
+        if (block.timestamp > pool.lastRewardTime && stakedAssetSupply != 0) {
+            uint256 multiplier = _getMultiplier(pid);
+
+            // This is the same computation made in the updatePool function. Just a view version.
+            uint256 rewards = multiplier *
+                (
+                    rewardsPerSecond[address(pool.rewardAsset)].mulDiv(
+                        pool.allocPoints,
+                        totalAllocPointsPerReward[address(pool.rewardAsset)]
+                    )
+                );
+            accRewardPerShare =
+                accRewardPerShare +
+                rewards.mulDiv(1e18, stakedAssetSupply);
+
+            uint256 pending = currentUser.amount.mulDiv(
+                accRewardPerShare,
+                1e18
+            ) - currentUser.rewardDebt;
+            return pending;
+        } else {
+            return 0;
+        }
+    }
+
+    /**
+     * @notice Retrieve all the pending rewards under a given referral code.
+     * @param code The referral code
+     * @param pid The pool id
+     * @param startIndex The start referred array index to query from
+     * @param endIndex The end referred array index to query from
+     * @return The total pending rewards
+     */
+    function pendingRewardsReferral(
+        string memory code,
+        uint256 pid,
+        uint256 startIndex,
+        uint256 endIndex
+    ) public view returns (uint256) {
+        if (address(referral) == address(0)) {
+            return 0;
+        }
+        address refSource = referral.referralCodes(code);
+        address[] memory referredUsers = referral.seeReferred(refSource);
+        if (startIndex == 0 && endIndex == 0) {
+            endIndex = referredUsers.length;
+        }
+
+        uint256 total = 0;
+        for (uint256 i = startIndex; i < endIndex; ++i) {
+            total += pendingReward(pid, referredUsers[i]);
+        }
+        return total;
+    }
+
+    /**
+     * @notice Update all the pools.
+     */
+    function _massUpdatePools() internal {
+        uint256 length = poolInfo.length;
+        for (uint256 pid = 0; pid < length; ++pid) {
+            updatePool(pid);
+        }
+    }
+
+    /**
+     * @notice Pay the reward.
+     * @dev The reward asset is directly minted from the reward token
+     * @param rewardAsset the reward token.
+     * @param to the reward receiver.
+     * @param amount the amount to be payed.
+     */
+    function _payReward(
+        IERC20 rewardAsset,
+        address to,
+        uint256 amount
+    ) internal {
+        IRewardAsset(address(rewardAsset)).mint(to, amount);
+    }
+
+    /**
+     * @notice Return the staked tokens.
+     * @param token the staked token.
+     * @param to the reward receiver.
+     * @param amount the amount to be returned.
+     */
+    function _returnStakedTokens(
+        IERC20 token,
+        address to,
+        uint256 amount
+    ) internal {
+        token.safeTransfer(to, amount);
+    }
+
+    /**
+     * @notice Pay bonus referral tokens
+     * @dev The self bonus will be payed only if the current user is referred.
+     * @param originalAmount the original amount.
+     * @param source the reward source address.
+     */
+    function _payBonus(
+        uint256 originalAmount,
+        IERC20 asset,
+        address source
+    ) internal {
+        uint256 bonus = originalAmount.mulDiv(referralBonus, 100);
+        address recipient = referral.referredFrom(source);
+        if (bonus > 0 && recipient != address(0)) {
+            _payReward(asset, recipient, bonus);
+            referral.track(recipient, bonus);
+            emit BonusPayed(recipient, bonus);
+
+            // Pay also the self referral bonus (for having consumed a referral)
+            uint256 selfBonus = originalAmount.mulDiv(selfReferralBonus, 1000);
+            // Self bonus is not zero
+            _payReward(asset, source, selfBonus);
+            emit SelfBonusPayed(source, selfBonus);
+        }
+    }
+
+    /**
+     * @notice Update pool infos.
+     * @param pid the pool identifier.
+     */
+    function updatePool(uint256 pid) internal virtual {
+        PoolInfo storage pool = poolInfo[pid];
+        if (block.timestamp <= pool.lastRewardTime) {
+            return;
+        }
+        uint256 stakedAssetSupply = pool.stakedAsset.balanceOf(address(this));
+        if (stakedAssetSupply == 0) {
+            pool.lastRewardTime = block.timestamp;
+            return;
+        }
+        uint256 multiplier = _getMultiplier(pid);
+        uint256 rewards = multiplier *
+            (
+                rewardsPerSecond[address(pool.rewardAsset)].mulDiv(
+                    pool.allocPoints,
+                    totalAllocPointsPerReward[address(pool.rewardAsset)]
+                )
+            );
+        pool.accRewardPerShare =
+            pool.accRewardPerShare +
+            rewards.mulDiv(1e18, stakedAssetSupply);
+
+        pool.lastRewardTime = Math.min(
+            block.timestamp,
+            pool.endTimeStamp != 0 ? pool.endTimeStamp : block.timestamp
+        );
+    }
+
+    /**
+     * @notice Get the multiplier value calculated between two times.
+     * @param pid the pool id.
+     * @return The difference between the two sides multiplied for the bonus.
+     */
+    function _getMultiplier(uint256 pid) internal view returns (uint256) {
+        PoolInfo storage pool = poolInfo[pid];
+        uint256 from = pool.lastRewardTime;
+        uint256 to = Math.min(
+            block.timestamp,
+            pool.endTimeStamp != 0 ? pool.endTimeStamp : block.timestamp
+        );
+        // Sould never happen.
+        if (to < from) {
+            return 0;
+        }
+
+        uint256 delta = to - from;
+        return delta * bonusMultiplier;
+    }
+}
+```
+
+## Contract: MintableERC20.sol (dependency)
+
+```solidity
+// SPDX-License-Identifier: GPL-3.0-or-later
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract MintableERC20 is ERC20, Ownable {
+    /**
+     * @dev Minter addresses.
+     */
+    mapping(address => bool) public minter;
+
+    modifier onlyMinter() {
+        require(
+            (minter[msg.sender] && msg.sender != address(0)) ||
+                msg.sender == owner(),
+            "MintableERC20: NOT_ALLOWED"
+        );
+        _;
+    }
+
+    constructor(
+        uint256 initialSupply,
+        string memory name,
+        string memory symbol
+    ) ERC20(name, symbol) Ownable(msg.sender) {
+        _mint(msg.sender, initialSupply * 10 ** decimals());
+    }
+
+    /**
+     * @dev Set a new minter.
+     * @param _minter The minter address.
+     */
+    function setMinter(address _minter) external onlyOwner {
+        minter[_minter] = true;
+    }
+
+    /**
+     * @dev Remove a minter.
+     * @param _minter The minter address.
+     */
+    function removeMinter(address _minter) external onlyOwner {
+        minter[_minter] = false;
+    }
+
+    /**
+     * @dev Mint new supply.
+     * @param _amount the amount to be minted.
+     * @return newSupply the new totalSupply.
+     */
+    function mint(
+        uint256 _amount
+    ) external onlyMinter returns (uint256 newSupply) {
+        if (_amount > 0) {
+            _mint(msg.sender, _amount);
+            newSupply = totalSupply();
+        }
+    }
+
+    /**
+     * @dev Burn supply.
+     * @param _amount the amount to be minted.
+     * @return newSupply the new totalSupply.
+     */
+    function burn(uint256 _amount) external returns (uint256 newSupply) {
+        if (_amount > 0) {
+            _burn(msg.sender, _amount);
+            newSupply = totalSupply();
+        }
+    }
+}
+```
+
+## Contract: MintableTokenBase.sol (dependency)
+
+```solidity
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
+import "@openzeppelin/contracts/access/Ownable2Step.sol";
+
+/**
+ * @title MintableTokenBase
+ * @notice This token represent a mintable token by an allowed minter.
+ */
+contract MintableTokenBase is Ownable2Step, ERC20Burnable, ERC20Permit {
+    /// @notice Error thrown when a zero address is provided
+    error ZeroAddressException();
+
+    /// @notice Error thrown when caller is not an authorized minter
+    error OnlyMinter();
+
+    /// @notice Error thrown when attempting to renounce ownership
+    error CantRenounceOwnership();
+
+    /// @notice Event emitted when a minter's status changes
+    /// @param minter_ Address of the minter
+    /// @param _event New status of the minter (true=added, false=removed)
+    event MinterStateChanged(address indexed minter_, bool _event);
+
+    /// @notice The allowed minter
+    mapping(address => bool) public minter;
+
+    ///@notice The constructor
+    ///@param admin_ The contract admin
+    ///@param name_ The token name
+    ///@param symbol_ The token symbol
+    constructor(
+        address admin_,
+        string memory name_,
+        string memory symbol_
+    ) Ownable(admin_) ERC20(name_, symbol_) ERC20Permit(name_) {
+        if (admin_ == address(0)) revert ZeroAddressException();
+    }
+
+    ///@notice Set a new minter
+    ///@param minter_ The new minter address
+    function setMinter(address minter_) external onlyOwner {
+        minter[minter_] = true;
+        emit MinterStateChanged(minter_, true);
+    }
+
+    ///@notice Set a new minter
+    ///@param minter_ The new minter address
+    function removeMinter(address minter_) external onlyOwner {
+        minter[minter_] = false;
+        emit MinterStateChanged(minter_, false);
+    }
+
+    ///@notice Mint tokens
+    ///@param to_ The recipient address
+    ///@param amount_ The amount to be minted
+    function mint(address to_, uint256 amount_) external {
+        if (!minter[msg.sender]) revert OnlyMinter();
+        _mint(to_, amount_);
+    }
+
+    ///@notice Renounce contract ownership
+    ///@dev Reverts by design
+    function renounceOwnership() public view override onlyOwner {
+        revert CantRenounceOwnership();
+    }
+}
+```
+
+## Contract: OverlayerReferral.sol (dependency)
+
+```solidity
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.8.20;
+
+import "./MintableTokenBase.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+import "./IOverlayerReferral.sol";
+import {ILiquidityDefs} from "./ILiquidityDefs.sol";
+
+/**
+ * @title OverlayerReferral
+ * @notice This token tracks the referral points for the Overlayer airdrop.
+ */
+contract OverlayerReferral is
+    MintableTokenBase,
+    ReentrancyGuard,
+    IOverlayerReferral
+{
+    /// @notice Track the referral source for given address
+    mapping(address => address) public referredFrom;
+
+    /// @notice Track all the referred users for a given address
+    mapping(address => address[]) public referredUsers;
+
+    /// @notice Track all the generated referral points for given address
+    mapping(address => uint256) public generatedPoints;
+
+    /// @notice External entities who can control the points tracking
+    mapping(address => bool) public allowedPointsTrackers;
+
+    /// @notice Referral code to its creator address
+    mapping(string => address) public referralCodes;
+
+    /// @notice Referral code creator address to code
+    mapping(address => string) public referralCodesRev;
+
+    /// @notice All the referral codes
+    string[] public codes;
+
+    /// @notice All staking pools where this token is emitted from
+    address[] public stakingPools;
+
+    event Referral(address indexed source, address consumer);
+    event NewCode(string code, address holder);
+    event AddTracker(address tracker);
+    event RemoveTracker(address tracker);
+    event StakingPoolSet(address[] pools);
+
+    error OverlayerReferralAlreadyReferred();
+    error OverlayerReferralZeroAddress();
+    error OverlayerReferralNotAllowed();
+    error OverlayerReferralCodeNotValid();
+    error OverlayerReferralCodeAlreadyUsed();
+    error OverlayerReferralAlreadyCreatedACode();
+    error OverlayerReferralStakingPoolsNotSet();
+
+    modifier onlyTracker() {
+        if (!allowedPointsTrackers[msg.sender] && msg.sender != address(this)) {
+            revert OverlayerReferralNotAllowed();
+        }
+        _;
+    }
+
+    ///@notice The constructor
+    ///@param admin_ The contract admin
+    constructor(
+        address admin_
+    ) MintableTokenBase(admin_, "Airdrop Overlayer", "AOVER") {}
+
+    function getStakingPools() external view returns (address[] memory) {
+        return stakingPools;
+    }
+
+    function setStakingPools(address[] memory pools_) external onlyOwner {
+        stakingPools = pools_;
+        emit StakingPoolSet(pools_);
+    }
+
+    /// @notice Consume a referral code. This action will harvest all the user positions in the staking pools
+    /// @dev Code holders can not use any code
+    /// @dev Staking pools must be set
+    /// @param code_ The referral code
+    function consumeReferral(
+        string memory code_
+    ) external override nonReentrant {
+        address consumer = msg.sender;
+        if (referredFrom[consumer] != address(0)) {
+            revert OverlayerReferralAlreadyReferred();
+        }
+        if (referralCodes[code_] == address(0)) {
+            revert OverlayerReferralCodeNotValid();
+        }
+        // Code providers can not use any referral
+        if (bytes(referralCodesRev[consumer]).length > 0) {
+            revert OverlayerReferralNotAllowed();
+        }
+        address source = referralCodes[code_];
+        // Can not refer self
+        if (source == consumer) {
+            revert OverlayerReferralNotAllowed();
+        }
+        if (source == address(0)) {
+            revert OverlayerReferralZeroAddress();
+        }
+
+        if (stakingPools.length == 0) {
+            revert OverlayerReferralStakingPoolsNotSet();
+        }
+        for (uint256 i = 0; i < stakingPools.length; ) {
+            ILiquidityDefs stakingPool = ILiquidityDefs(stakingPools[i]);
+            uint256 stakingPoolLen = stakingPool.poolLength();
+            for (uint256 j = 0; j < stakingPoolLen; ) {
+                (uint256 userAmount, ) = stakingPool.userInfo(j, consumer);
+                if (userAmount > 0) {
+                    stakingPool.harvestFor(j, consumer);
+                }
+                unchecked {
+                    j++;
+                }
+            }
+            unchecked {
+                i++;
+            }
+        }
+
+        referredFrom[consumer] = source;
+        referredUsers[source].push(consumer);
+
+        emit Referral(source, consumer);
+    }
+
+    /// @notice Track a new points update
+    /// @param source_ The user address to track
+    /// @param amount_ The amount of points to be tracked
+    function track(
+        address source_,
+        uint256 amount_
+    ) external override onlyTracker {
+        generatedPoints[source_] += amount_;
+    }
+
+    /// @notice Add a new points tracker
+    /// @param tracker_ The tracker address
+    function addPointsTracker(address tracker_) external onlyOwner {
+        allowedPointsTrackers[tracker_] = true;
+        emit AddTracker(tracker_);
+    }
+
+    /// @notice Add a new referral code
+    /// @param code_ The tracker address
+    /// @param holder_ The code owner
+    function addCode(string memory code_, address holder_) external onlyOwner {
+        if (bytes(code_).length == 0) {
+            revert OverlayerReferralCodeNotValid();
+        }
+        if (holder_ == address(0)) {
+            revert OverlayerReferralZeroAddress();
+        }
+        // Code users can not create codes
+        if (referredFrom[holder_] != address(0)) {
+            revert OverlayerReferralAlreadyReferred();
+        }
+        if (referralCodes[code_] != address(0)) {
+            revert OverlayerReferralCodeAlreadyUsed();
+        }
+        if (bytes(referralCodesRev[holder_]).length > 0) {
+            revert OverlayerReferralAlreadyCreatedACode();
+        }
+        referralCodes[code_] = holder_;
+        referralCodesRev[holder_] = code_;
+        codes.push(code_);
+        emit NewCode(code_, holder_);
+    }
+
+    /// @notice Add a new referral code for the caller
+    /// @param code_ The tracker address
+    function addCodeSelf(string memory code_) external {
+        if (bytes(code_).length == 0) {
+            revert OverlayerReferralCodeNotValid();
+        }
+        address holder = msg.sender;
+        if (holder == address(0)) {
+            revert OverlayerReferralZeroAddress();
+        }
+        // Code users can not create codes
+        if (referredFrom[holder] != address(0)) {
+            revert OverlayerReferralAlreadyReferred();
+        }
+        if (referralCodes[code_] != address(0)) {
+            revert OverlayerReferralCodeAlreadyUsed();
+        }
+        if (bytes(referralCodesRev[holder]).length > 0) {
+            revert OverlayerReferralAlreadyCreatedACode();
+        }
+        referralCodes[code_] = holder;
+        referralCodesRev[holder] = code_;
+        codes.push(code_);
+        emit NewCode(code_, holder);
+    }
+
+    /// @notice Remove a points tracker
+    /// @param tracker_ The tracker address
+    function removePointsTracker(address tracker_) external onlyOwner {
+        allowedPointsTrackers[tracker_] = false;
+        emit RemoveTracker(tracker_);
+    }
+
+    /// @notice Retrieve all the referred user for a given address
+    /// @param source_ The query key
+    /// @return All the referred user addresses
+    function seeReferred(
+        address source_
+    ) external view override returns (address[] memory) {
+        return referredUsers[source_];
+    }
+
+    /// @notice Retrieve all the referred user for a given address
+    /// @param code_ The query key
+    /// @return All the referred user addresses
+    function seeReferredByCode(
+        string memory code_
+    ) external view returns (address[] memory) {
+        address source = referralCodes[code_];
+        return referredUsers[source];
+    }
+
+    /// @notice Retrieve all points earned by a given code
+    /// @param code_ The referral code
+    /// @return The total points
+    function codeTotalPoints(
+        string memory code_
+    ) external view returns (uint256) {
+        address source = referralCodes[code_];
+        return generatedPoints[source];
+    }
+
+    /// @notice Retrieve all the active referral codes
+    /// @return The active referral codes
+    function allCodes() external view returns (string[] memory) {
+        return codes;
+    }
+
+    /// @notice Retrieve referral codes count
+    /// @return The active referral codes count
+    function totalCodes() external view returns (uint256) {
+        return codes.length;
+    }
+}
+```
+
+## Contract: SingleStableStake.sol (primary target)
+
+```solidity
+// SPDX-License-Identifier: GPL-3.0-or-later
+pragma solidity ^0.8.20;
+
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import {Math} from "@openzeppelin/contracts/utils/math/Math.sol";
+import "./ILiquidityDefs.sol";
+import "./Liquidity.sol";
+
+/**
+ * @notice Single stable coin staking contract implementation.
+ * This contract supports multiple staking pools to be deployed in the same contract sharing the reward token.
+ */
+contract SingleStableStake is Liquidity {
+    using SafeERC20 for IERC20;
+    using Math for uint256;
+
+    /**
+     * @notice The emitted amount of reward for each year multiplier numerator.
+     */
+    mapping(address => uint256) public rewardsPerYearMultiplierNum;
+
+    /**
+     * @notice The emitted amount of reward for each year multiplier denominator.
+     */
+    mapping(address => uint256) public rewardsPerYearMultiplierDen;
+
+    /**
+     * @notice The seconds in a year.
+     */
+    uint256 internal constant SECONDS_IN_YEAR = 1 days * 365;
+
+    /**
+     * @notice Contract constructor.
+     * @param admin The contract admin
+     */
+    constructor(address admin) Liquidity(admin) {}
+
+    /**
+     * @notice Set a reward rate.
+     * @param rewardAsset the reward.
+     * @param rewardRateNum the new reward rate numerator.
+     * @param rewardRateDen the new reward rate denominator.
+     */
+    function setRewardForStakedAssets(
+        IERC20 rewardAsset,
+        uint256 rewardRateNum,
+        uint256 rewardRateDen
+    ) external onlyOwner {
+        if (!activeRewards[address(rewardAsset)]) {
+            activeRewards[address(rewardAsset)] = true;
+        }
+        _massUpdatePools();
+        if (
+            rewardsPerYearMultiplierNum[address(rewardAsset)] != rewardRateNum
+        ) {
+            rewardsPerYearMultiplierNum[address(rewardAsset)] = rewardRateNum;
+        }
+        if (
+            rewardsPerYearMultiplierDen[address(rewardAsset)] != rewardRateDen
+        ) {
+            rewardsPerYearMultiplierDen[address(rewardAsset)] = rewardRateDen;
+        }
+    }
+
+    /**
+     * @notice Get the pending reward for a given pool and user.
+     * @param pid the pool identifier.
+     * @param user the participant.
+     * @return the pending reward for given pool and user.
+     */
+    function pendingReward(
+        uint256 pid,
+        address user
+    ) public view override returns (uint256) {
+        if (pid >= poolInfo.length) {
+            revert InvalidPid();
+        }
+
+        PoolInfo memory pool = poolInfo[pid];
+        UserInfo memory currentUser = userInfo[pid][user];
+
+        uint256 accRewardPerShare = pool.accRewardPerShare;
+        uint256 stakedAssetSupply = pool.stakedAsset.balanceOf(address(this));
+        if (block.timestamp > pool.lastRewardTime && stakedAssetSupply != 0) {
+            uint256 multiplier = _getMultiplier(pid);
+
+            // This is the same computation made in the updatePool function. Just a view version.
+            uint256 rewards = multiplier *
+                (
+                    rewardsForStakedAssets(pool.stakedAsset, pool.rewardAsset)
+                        .mulDiv(
+                            pool.allocPoints,
+                            totalAllocPointsPerReward[address(pool.rewardAsset)]
+                        )
+                );
+            accRewardPerShare =
+                accRewardPerShare +
+                rewards.mulDiv(1e18, stakedAssetSupply);
+
+            return
+                currentUser.amount.mulDiv(accRewardPerShare, 1e18) -
+                currentUser.rewardDebt;
+        } else {
+            return 0;
+        }
+    }
+
+    /**
+     * @notice Update pool infos.
+     * @param pid the pool identifier.
+     */
+    function updatePool(uint256 pid) internal override {
+        PoolInfo storage pool = poolInfo[pid];
+        if (block.timestamp <= pool.lastRewardTime) {
+            return;
+        }
+        uint256 stakedAssetSupply = pool.stakedAsset.balanceOf(address(this));
+        if (stakedAssetSupply == 0) {
+            pool.lastRewardTime = block.timestamp;
+            return;
+        }
+        uint256 multiplier = _getMultiplier(pid);
+        uint256 rewards = multiplier *
+            (
+                rewardsForStakedAssets(pool.stakedAsset, pool.rewardAsset)
+                    .mulDiv(
+                        pool.allocPoints,
+                        totalAllocPointsPerReward[address(pool.rewardAsset)]
+                    )
+            );
+        pool.accRewardPerShare =
+            pool.accRewardPerShare +
+            rewards.mulDiv(1e18, stakedAssetSupply);
+
+        pool.lastRewardTime = Math.min(
+            block.timestamp,
+            pool.endTimeStamp != 0 ? pool.endTimeStamp : block.timestamp
+        );
+    }
+
+    /**
+     * @notice Get the reward amount for second based on the total staked liquidity.
+     * @dev If the staked amount is less than 1 ether or less than a second then the emitted amount will be zero.
+     * @param staked the staked asset.
+     * @param reward the reward asset.
+     * @return the emitted reward for staked asset for second.
+     */
+    function rewardsForStakedAssets(
+        IERC20 staked,
+        IERC20 reward
+    ) internal view returns (uint256) {
+        uint256 stakedAmount = staked.balanceOf(address(this));
+
+        // No liquidity
+        if (stakedAmount < 1 ether) {
+            return 0;
+        }
+
+        return
+            stakedAmount.mulDiv(
+                rewardsPerYearMultiplierNum[address(reward)],
+                rewardsPerYearMultiplierDen[address(reward)]
+            ) / SECONDS_IN_YEAR;
+    }
+}
+```
+
+## Contract: TokenLP_A_B.sol (dependency)
+
+```solidity
+// SPDX-License-Identifier: GPL-3.0-or-later
+pragma solidity ^0.8.20;
+
+import "./MintableERC20.sol";
+
+contract TokenLP_A_B is MintableERC20 {
+    constructor(
+        uint256 _initialSupply,
+        string memory _name,
+        string memory _symbol
+    ) MintableERC20(_initialSupply, _name, _symbol) {}
+}
+```
+
+## Tests: SingleStableStake.js
+
+```javascript
+const { time, loadFixture } = require("@nomicfoundation/hardhat-network-helpers");
+const { ethers } = require("hardhat");
+const { expect } = require("chai");
+
+// This contract shares the basic staking rewards math with `Liquidity.sol` and hence some tests are being ignored as tested within the other test
+describe("Single Stable Token Staking", function () {
+  async function deployFixture() {
+    const latestTime = await time.latest();
+    const [owner, notOwner, alice, bob] = await ethers.getSigners();
+
+    // For localhost
+    const block = await owner.provider.getBlock("latest");
+    const baseFee = block.baseFeePerGas;
+    const defaultTransactionOptions = {
+      maxFeePerGas: baseFee * BigInt(2)
+    };
+
+    const Liquidity = await ethers.getContractFactory("SingleStableStake");
+    const liquidity = await Liquidity.deploy(
+      owner.getAddress(),
+      defaultTransactionOptions
+    );
+
+    const StakedAsset = await ethers.getContractFactory("TokenLP_A_B");
+    const stakedAsset = await StakedAsset.deploy(
+      ethers.parseEther("1000"),
+      "LPABONE",
+      "LPABONE",
+      defaultTransactionOptions
+    );
+    await stakedAsset.setMinter(liquidity.getAddress());
+
+    const TokenRewardOne = await ethers.getContractFactory("OverlayerReferral");
+    const tokenRewardOneOverlayerReferral = await TokenRewardOne.deploy(
+      owner.address,
+      defaultTransactionOptions
+    );
+    await tokenRewardOneOverlayerReferral.setMinter(liquidity.getAddress());
+    await tokenRewardOneOverlayerReferral.setStakingPools([
+      await liquidity.getAddress()
+    ]);
+    // not using OverlayerReferral as in some tests we need to transfer it
+    const TokenRewardTwo = await ethers.getContractFactory("TokenLP_A_B");
+    const tokenRewardTwo = await TokenRewardTwo.deploy(
+      ethers.parseEther("1000"),
+      "LPABTWO",
+      "LPABTWO",
+      defaultTransactionOptions
+    );
+    await tokenRewardTwo.setMinter(liquidity.getAddress());
+
+    return {
+      liquidity,
+      stakedAsset,
+      tokenRewardOneOverlayerReferral,
+      tokenRewardTwo,
+      latestTime,
+      owner,
+      notOwner,
+      alice,
+      bob
+    };
+  }
+
+  describe("Contract Initialization", function () {
+    it("Should properly assign contract ownership", async function () {
+      const { liquidity, owner } = await loadFixture(deployFixture);
+      expect(await liquidity.owner()).to.equal(await owner.getAddress());
+    });
+  });
+
+  describe("Parameter Configuration", function () {
+    it("Should allow owner to update reward multiplier", async function () {
+      const { liquidity, owner } = await loadFixture(deployFixture);
+      await liquidity.connect(owner).updateMultiplier(2);
+      expect(await liquidity.bonusMultiplier()).to.equal(2);
+    });
+
+    it("Should prevent unauthorized multiplier modifications", async function () {
+      const { liquidity, notOwner } = await loadFixture(deployFixture);
+      await expect(liquidity.connect(notOwner).updateMultiplier(2)).to.be
+        .eventually.rejected;
+    });
+
+    // it("Should update starting timestamp", async function () {
+    // const { liquidity, owner, latestTime } = await loadFixture(deployFixture);
+    // await liquidity.connect(owner).updateStartTime(latestTime + 100);
+    // expect(await liquidity.startTime()).to.equal(latestTime + 100);
+    // });
+
+    it("Should prevent unauthorized start time modifications", async function () {
+      const { liquidity, notOwner } = await loadFixture(deployFixture);
+      await expect(liquidity.connect(notOwner).updateStartTime(2)).to.be
+        .eventually.rejected;
+    });
+  });
+
+  describe("Pool Information", function () {
+    it("Should initialize with correct pool count", async function () {
+      const { liquidity } = await loadFixture(deployFixture);
+      expect(await liquidity.poolLength()).to.equal(0);
+    });
+  });
+
+  describe("Pool Management", function () {
+    it("Should create new staking pool with correct parameters", async function () {
+      const { liquidity, stakedAsset, tokenRewardOneOverlayerReferral } =
+        await loadFixture(deployFixture);
+      await liquidity.setRewardForStakedAssets(
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1,
+        1
+      );
+      await liquidity.add(
+        stakedAsset.getAddress(),
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1,
+        0,
+        false,
+        true
+      );
+      expect(await liquidity.poolLength()).to.equal(1);
+    });
+
+    it("Should maintain accurate allocation points across pools", async function () {
+      const {
+        liquidity,
+        stakedAsset,
+        tokenRewardOneOverlayerReferral,
+        tokenRewardTwo
+      } = await loadFixture(deployFixture);
+      await liquidity.setRewardForStakedAssets(
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1,
+        1
+      );
+      await liquidity.add(
+        stakedAsset.getAddress(),
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1,
+        0,
+        false,
+        true
+      );
+      expect(await liquidity.poolLength()).to.equal(1);
+      await liquidity.setRewardForStakedAssets(stakedAsset.getAddress(), 1, 1);
+      await liquidity.add(
+        tokenRewardOneOverlayerReferral.getAddress(),
+        stakedAsset.getAddress(),
+        10,
+        0,
+        false,
+        true
+      );
+      expect(await liquidity.poolLength()).to.equal(2);
+      await liquidity.add(
+        tokenRewardTwo.getAddress(),
+        stakedAsset.getAddress(),
+        100,
+        0,
+        false,
+        true
+      );
+      expect(await liquidity.poolLength()).to.equal(3);
+      expect(
+        await liquidity.totalAllocPointsPerReward(
+          tokenRewardOneOverlayerReferral.getAddress()
+        )
+      ).to.be.equal(1);
+      expect(
+        await liquidity.totalAllocPointsPerReward(stakedAsset.getAddress())
+      ).to.be.equal(110);
+    });
+
+    it("Should restrict pool creation to owner only", async function () {
+      const {
+        liquidity,
+        stakedAsset,
+        tokenRewardOneOverlayerReferral,
+        notOwner
+      } = await loadFixture(deployFixture);
+      await liquidity.setRewardForStakedAssets(
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1,
+        1
+      );
+      await expect(
+        liquidity
+          .connect(notOwner)
+          .add(
+            stakedAsset.getAddress(),
+            tokenRewardOneOverlayerReferral.getAddress(),
+            1,
+            0,
+            false,
+            false
+          )
+      ).to.be.eventually.rejected;
+    });
+  });
+
+  describe("Reward Configuration", function () {
+    it("Should initialize reward parameters correctly", async function () {
+      const { liquidity, stakedAsset } = await loadFixture(deployFixture);
+      await liquidity.setRewardForStakedAssets(stakedAsset.getAddress(), 1, 1);
+      expect(
+        await liquidity.activeRewards(stakedAsset.getAddress())
+      ).to.be.equal(true);
+    });
+
+    it("Should properly update reward emission rates", async function () {
+      const { liquidity, stakedAsset } = await loadFixture(deployFixture);
+      await liquidity.setRewardForStakedAssets(stakedAsset.getAddress(), 1, 1);
+      expect(
+        await liquidity.activeRewards(stakedAsset.getAddress())
+      ).to.be.equal(true);
+      expect(
+        await liquidity.rewardsPerYearMultiplierNum(stakedAsset.getAddress())
+      ).to.be.equal(1);
+      await liquidity.setRewardForStakedAssets(stakedAsset.getAddress(), 10, 1);
+      expect(
+        await liquidity.rewardsPerYearMultiplierNum(stakedAsset.getAddress())
+      ).to.be.equal(10);
+    });
+
+    it("Should enforce reward configuration permissions", async function () {
+      const { liquidity, stakedAsset, notOwner } = await loadFixture(
+        deployFixture
+      );
+      await expect(
+        liquidity
+          .connect(notOwner)
+          .setRewardForStakedAssets(stakedAsset.getAddress(), 1, 1)
+      ).to.be.eventually.rejected;
+    });
+  });
+
+  describe("Staking Operations", function () {
+    it("Should process deposits and track balances correctly", async function () {
+      const {
+        liquidity,
+        stakedAsset,
+        tokenRewardOneOverlayerReferral,
+        alice,
+        bob
+      } = await loadFixture(deployFixture);
+
+      const latestTime = await time.latest();
+      await time.increaseTo(latestTime + 1);
+
+      await stakedAsset.transfer(alice.getAddress(), 10);
+      await stakedAsset.transfer(bob.getAddress(), 10);
+
+      await stakedAsset.connect(alice).approve(liquidity.getAddress(), 10);
+      await stakedAsset.connect(bob).approve(liquidity.getAddress(), 10);
+
+      expect(
+        await stakedAsset.allowance(alice.getAddress(), liquidity.getAddress())
+      ).to.equal(10);
+      expect(
+        await stakedAsset.allowance(bob.getAddress(), liquidity.getAddress())
+      ).to.equal(10);
+
+      await liquidity.setRewardForStakedAssets(
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1,
+        1
+      );
+      await liquidity.add(
+        stakedAsset.getAddress(),
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1,
+        0,
+        false,
+        true
+      );
+
+      await expect(await liquidity.connect(alice).deposit(0, 5)).to.emit(
+        liquidity,
+        "Deposit"
+      );
+      await expect(await liquidity.connect(bob).deposit(0, 5)).to.emit(
+        liquidity,
+        "Deposit"
+      );
+    });
+
+    it("Should calculate time-limited rewards accurately", async function () {
+      const {
+        liquidity,
+        stakedAsset,
+        tokenRewardOneOverlayerReferral,
+        alice,
+        bob
+      } = await loadFixture(deployFixture);
+
+      const amount = ethers.parseEther("1");
+      await stakedAsset.transfer(alice.getAddress(), amount);
+      await stakedAsset.connect(alice).approve(liquidity.getAddress(), amount);
+
+      await liquidity.setReward(
+        tokenRewardOneOverlayerReferral.getAddress(),
+        ethers.parseEther("1")
+      );
+      await liquidity.setRewardForStakedAssets(
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1,
+        1
+      );
+      const latestTime = await time.latest();
+      await liquidity.add(
+        stakedAsset.getAddress(),
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1,
+        latestTime + 60 * 60,
+        false,
+        true
+      );
+
+      await expect(await liquidity.connect(alice).deposit(0, amount)).to.emit(
+        liquidity,
+        "Deposit"
+      );
+
+      const expected = (1 / (60 * 60 * 24 * 365)) * (60 * 60);
+
+      await time.increase(60 * 60 * 100);
+
+      await expect(await liquidity.connect(alice).withdraw(0, amount)).to.emit(
+        liquidity,
+        "Withdraw"
+      );
+
+      const rewardsBal = ethers.formatEther(
+        await tokenRewardOneOverlayerReferral.balanceOf(alice.address)
+      );
+      expect(+rewardsBal).to.be.greaterThan(expected * 0.99);
+      expect(+rewardsBal).to.be.lessThan(expected * 1.01);
+    });
+
+    it("Should handle staking reward distribution correctly", async function () {
+      const {
+        owner,
+        liquidity,
+        stakedAsset,
+        tokenRewardOneOverlayerReferral,
+        alice
+      } = await loadFixture(deployFixture);
+
+      await stakedAsset.transfer(alice.getAddress(), ethers.parseEther("20"));
+      await stakedAsset
+        .connect(alice)
+        .approve(liquidity.getAddress(), ethers.MaxUint256);
+
+      await liquidity.setRewardForStakedAssets(
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1,
+        1
+      );
+      await liquidity.add(
+        stakedAsset.getAddress(),
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1,
+        0,
+        false,
+        true
+      );
+
+      await expect(
+        await liquidity.connect(alice).deposit(0, ethers.parseEther("1"))
+      ).to.emit(liquidity, "Deposit");
+
+      await time.increase(60 * 60 * 24); // 1 day
+
+      let pending = ethers.formatEther(
+        await liquidity.pendingReward(0, await alice.getAddress())
+      );
+
+      let expected = (
+        ((1 / (60 * 60 * 24 * 365)) * (60 * 60 * 24) * 1) /
+        1
+      ).toFixed(8);
+
+      expect(+pending).to.be.greaterThanOrEqual(+expected * 0.95);
+      expect(+pending).to.be.lessThanOrEqual(+expected * 1.05);
+
+      await liquidity.connect(alice).withdraw(0, ethers.parseEther("1"));
+      let rewardBalance = ethers.formatEther(
+        await tokenRewardOneOverlayerReferral.balanceOf(
+          await alice.getAddress()
+        )
+      );
+
+      expect(+rewardBalance).to.be.greaterThanOrEqual(+expected * 0.95);
+      expect(+rewardBalance).to.be.lessThanOrEqual(+expected * 1.05);
+
+      await time.increase(60 * 60 * 24 * 2); // 2 day
+
+      await expect(
+        await liquidity.connect(alice).deposit(0, ethers.parseEther("9"))
+      ).to.emit(liquidity, "Deposit");
+
+      await time.increase(60 * 60 * 24 * 30); // 30 day
+
+      pending = ethers.formatEther(
+        await liquidity.pendingReward(0, await alice.getAddress())
+      );
+
+      expected = (
+        ((9 / (60 * 60 * 24 * 365)) * (60 * 60 * 24 * 30) * 1) /
+        1
+      ).toFixed(8);
+
+      expect(+pending).to.be.greaterThanOrEqual(+expected * 0.95);
+      expect(+pending).to.be.lessThanOrEqual(+expected * 1.05);
+
+      await liquidity.connect(alice).withdraw(0, ethers.parseEther("9"));
+      rewardBalance = ethers.formatEther(
+        await tokenRewardOneOverlayerReferral.balanceOf(
+          await alice.getAddress()
+        )
+      );
+
+      expect(+rewardBalance).to.be.greaterThanOrEqual(+expected * 0.95);
+      expect(+rewardBalance).to.be.lessThanOrEqual(+expected * 1.05);
+
+      await time.increase(60 * 60 * 24); // 1 day
+
+      // clear reward balaance
+      await tokenRewardOneOverlayerReferral
+        .connect(alice)
+        .transfer(
+          await owner.getAddress(),
+          await tokenRewardOneOverlayerReferral.balanceOf(
+            await alice.getAddress()
+          )
+        );
+
+      await liquidity.connect(alice).deposit(0, ethers.parseEther("10"));
+
+      await time.increase(60 * 60 * 24 * 30); // 30 days
+
+      pending = ethers.formatEther(
+        await liquidity.pendingReward(0, await alice.getAddress())
+      );
+      expected = (
+        ((10 / (60 * 60 * 24 * 365)) * (60 * 60 * 24 * 30) * 1) /
+        1
+      ).toFixed(8);
+      expect(+pending).to.be.greaterThanOrEqual(+expected * 0.95);
+      expect(+pending).to.be.lessThanOrEqual(+expected * 1.05);
+
+      await liquidity.connect(alice).deposit(0, ethers.parseEther("10"));
+
+      // harvest on deposit
+      rewardBalance = ethers.formatEther(
+        await tokenRewardOneOverlayerReferral.balanceOf(
+          await alice.getAddress()
+        )
+      );
+      expect(+rewardBalance).to.be.greaterThanOrEqual(+expected * 0.95);
+      expect(+rewardBalance).to.be.lessThanOrEqual(+expected * 1.05);
+
+      await time.increase(60 * 60 * 24 * 30); // 30 days
+
+      pending = ethers.formatEther(
+        await liquidity.pendingReward(0, await alice.getAddress())
+      );
+      expected = (
+        ((20 / (60 * 60 * 24 * 365)) * (60 * 60 * 24 * 30) * 1) /
+        1
+      ).toFixed(8);
+      expect(+pending).to.be.greaterThanOrEqual(+expected * 0.95);
+      expect(+pending).to.be.lessThanOrEqual(+expected * 1.05);
+    });
+
+    it("Should scale rewards correctly with denominator", async function () {
+      const { liquidity, stakedAsset, tokenRewardOneOverlayerReferral, alice } =
+        await loadFixture(deployFixture);
+
+      await stakedAsset.transfer(alice.getAddress(), ethers.parseEther("10"));
+      await stakedAsset
+        .connect(alice)
+        .approve(liquidity.getAddress(), ethers.MaxUint256);
+
+      await liquidity.setRewardForStakedAssets(
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1000000,
+        1000000000
+      );
+      await liquidity.add(
+        stakedAsset.getAddress(),
+        tokenRewardOneOverlayerReferral.getAddress(),
+        1,
+        0,
+        false,
+        true
+      );
+
+      await expect(
+        await liquidity.connect(alice).deposit(0, ethers.parseEther("1"))
+      ).to.emit(liquidity, "Deposit");
+
+      await time.increase(60 * 60 * 24); // 1 day
+
+      let pending = ethers.formatEther(
+        await liquidity.pendingReward(0, await alice.getAddress())
+      );
+
+      let expected = (
+        ((1 / (60 * 60 * 24 * 365)) * (60 * 60 * 24) * 1) /
+        1000
+      ).toFixed(8);
+
+      expect(+pending).to.be.greaterThanOrEqual(+expected * 0.95);
+      expect(+pending).to.be.lessThanOrEqual(+expected * 1.05);
+
+      await liquidity.connect(alice).withdraw(0, ethers.parseEther("1"));
+      let rewardBalance = ethers.formatEther(
+        await tokenRewardOneOverlayerReferral.balanceOf(
+          await alice.getAddress()
+        )
+      );
+
+      expect(+rewardBalance).to.be.greaterThanOrEqual(+expected * 0.95);
+      expect(+rewardBalance).to.be.lessThanOrEqual(+expected * 1.05);
+
+      await time.increase(60 * 60 * 24 * 2); // 2 day
+
+      await expect(
+        await liquidity.connect(alice).deposit(0, ethers.parseEther("9"))
+      ).to.emit(liquidity, "Deposit");
+
+      await time.increase(60 * 60 * 24 * 30); // 1 day
+
+      pending = ethers.formatEther(
+        await liquidity.pendingReward(0, await alice.getAddress())
+      );
+
+      expected = (
+        ((9 / (60 * 60 * 24 * 365)) * (60 * 60 * 24 * 30) * 1) /
+        1000
+      ).toFixed(8);
+
+      expect(+pending).to.be.greaterThanOrEqual(+expected * 0.95);
+      expect(+pending).to.be.lessThanOrEqual(+expected * 1.05);
+
+      await liquidity.connect(alice).withdraw(0, ethers.parseEther("9"));
+      rewardBalance = ethers.formatEther(
+        await tokenRewardOneOverlayerReferral.balanceOf(
+          await alice.getAddress()
+        )
+      );
+
+      expect(+rewardBalance).to.be.greaterThanOrEqual(+expected * 0.95);
+      expect(+rewardBalance).to.be.lessThanOrEqual(+expected * 1.05);
+    });
+  });
+});
+```

@@ -1,0 +1,82 @@
+{
+  "pair": "smart-chit--jadav-divyaraj",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T08:14:36.975183+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/SmartChit.sol": "20bf7727e60ed09d04011c0bf1125d4aef78229502dc585f67f79f9e7c734f96",
+    "LICENSE": "572e53d86840ddc7c66af9b3970f703b756e4c904cc683636136444805429a25",
+    "manifest.json": "e3c41061b8ca8d7182561a79098abbc5cd348ebfeaf1d178941dee730920d42b",
+    "test/SmartChit.test.js": "fb484751df90fd83eae2a7ba36ae39f756e513ba36b6c6fa084659fde42eee7a"
+  },
+  "pair_sha256": "e289e3290062b3533c0564dff6b53a2f1077ed523080e0fdcc2e03bf7383ceac",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "SmartChit.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.185,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "SmartChit.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.173,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "SmartChit.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.165,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.86,
+      "mocha": {
+        "tests": 27,
+        "passes": 27,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.46,
+      "mocha": {
+        "tests": 27,
+        "passes": 27,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "SmartChit.sol": {
+          "statements": 95.83,
+          "branches": 77.78,
+          "functions": 91.67,
+          "lines": 95.74
+        }
+      }
+    }
+  },
+  "accepted": true
+}

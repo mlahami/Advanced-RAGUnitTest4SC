@@ -1,0 +1,31 @@
+{
+  "id": "botpass--agvswira",
+  "domain": "ticketing-events",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "BOTPass.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/agvswira/botpass",
+    "commit": "80708431829cb48befabba6f2462c865743a04a8",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/BOTPass.sol"
+    ],
+    "test_paths": [
+      "test/BOTPass.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/BOTPass.sol": "da337d2c765b4c91a0fdaf77c77fe3387ebc67509e81f64b5c1d77dde8561709",
+      "test/BOTPass.test.js": "d2b9bf5c44e36e6d6154f60d5d22416a1d20be581c445ca1a4f81e9690033142"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "multi-organizer event attendance passes (create event, open/close claim window, claim pass); primary 155 lines, no imports; 16 tests (16/16 pass, stmt cov 100%); licence file LICENSE; history: 25 commits 2026-07-31..2026-09-28; only BOTPass.test.js taken (other test files are frontend/deploy tests)",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:31:30.849724+00:00"
+}

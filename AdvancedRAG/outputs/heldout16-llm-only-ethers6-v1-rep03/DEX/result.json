@@ -1,0 +1,52 @@
+{
+  "contract": "DEX",
+  "status": "test_failures",
+  "prompt_sha256": "655833b35b703d7a6f60eb97ef5729ae2bc35ec809fd18fce7e8c9be1e9311f1",
+  "generation_seconds": 16.405412600026466,
+  "usage": {
+    "prompt_tokens": 7834,
+    "total_tokens": 9928,
+    "completion_tokens": 2094,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 9.140483499970287
+  },
+  "passed_tests": 6,
+  "failed_tests": 5,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "DEX addLiquidity Should add initial liquidity",
+      "error": "Error in \"LiquidityAdded\" event: Error in the 2nd argument assertion: expected 100000000000000000000 to equal 10000000000000000000000."
+    },
+    {
+      "title": "DEX swapAforB Should swap tokenA for tokenB",
+      "error": "expected 890000000000000000000 to equal 990000000000000000000."
+    },
+    {
+      "title": "DEX swapAforB Should revert when swapping zero amount",
+      "error": "Expected transaction to be reverted"
+    },
+    {
+      "title": "DEX swapBforA Should swap tokenB for tokenA",
+      "error": "expected 909066108938801491315 to equal 1009066108938801491315."
+    },
+    {
+      "title": "DEX swapBforA Should revert when swapping zero amount",
+      "error": "Expected transaction to be reverted"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 83.33,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

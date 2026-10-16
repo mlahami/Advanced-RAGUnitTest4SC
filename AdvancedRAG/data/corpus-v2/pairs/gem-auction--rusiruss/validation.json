@@ -1,0 +1,89 @@
+{
+  "pair": "gem-auction--rusiruss",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T16:01:37.285573+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/BidRejector.sol": "2402953e261b11f9ea459ec0b8e8186cdf3cadaf8390ad157aea6a6f5bd47d18",
+    "contracts/GemAuction.sol": "4eb744c3a197634d5589d8b22d060789467cbc6d21c62997b267ecc869c33444",
+    "LICENSE": "3e7ba12afaec75afe1f82c2a302add8e6a05f6f068a3d19da45f90dbf4fdf36b",
+    "manifest.json": "06ce77ff9a090b7cdf0af1845989b83c1a4e4328fe446deb7a614c4f87ebb0bd",
+    "test/GemAuction.test.js": "822fcdb0c41190a64aa7aea33e53c1e865656391968e6d3a791898e65dc48218"
+  },
+  "pair_sha256": "47c8c2abc0440682928f0fb422bf10b0246d1175518557ab5f1afd1c39b8bd8f",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "GemAuction.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.204,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "GemAuction.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.156,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "GemAuction.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.15,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.52,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.63,
+      "mocha": {
+        "tests": 19,
+        "passes": 19,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "GemAuction.sol": {
+          "statements": 100.0,
+          "branches": 98.08,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "BidRejector.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

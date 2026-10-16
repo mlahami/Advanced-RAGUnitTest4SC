@@ -1,0 +1,255 @@
+{
+  "stats": {
+    "suites": 8,
+    "tests": 16,
+    "passes": 14,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-09-30T21:13:58.979Z",
+    "end": "2026-09-30T21:13:59.971Z",
+    "duration": 992
+  },
+  "tests": [
+    {
+      "title": "Should set the correct asset, name, and symbol",
+      "fullTitle": "YieldVault Deployment Should set the correct asset, name, and symbol",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "Should initialize with zero total assets and shares",
+      "fullTitle": "YieldVault Deployment Should initialize with zero total assets and shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to set strategy",
+      "fullTitle": "YieldVault setStrategy Should allow owner to set strategy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should not allow non-owner to set strategy",
+      "fullTitle": "YieldVault setStrategy Should not allow non-owner to set strategy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Ownable: caller is not the owner', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Ownable: caller is not the owner', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:58:7)"
+      }
+    },
+    {
+      "title": "Should return assets when totalAssets is zero",
+      "fullTitle": "YieldVault convertToShares Should return assets when totalAssets is zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should calculate shares correctly when totalAssets > 0",
+      "fullTitle": "YieldVault convertToShares Should calculate shares correctly when totalAssets > 0",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should return shares when totalShares is zero",
+      "fullTitle": "YieldVault convertToAssets Should return shares when totalShares is zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should calculate assets correctly when totalShares > 0",
+      "fullTitle": "YieldVault convertToAssets Should calculate assets correctly when totalShares > 0",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should deposit assets and mint shares",
+      "fullTitle": "YieldVault deposit Should deposit assets and mint shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "Should revert when depositing zero assets",
+      "fullTitle": "YieldVault deposit Should revert when depositing zero assets",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should forward assets to strategy when strategy is set",
+      "fullTitle": "YieldVault deposit Should forward assets to strategy when strategy is set",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 21,
+      "err": {}
+    },
+    {
+      "title": "Should withdraw assets and burn shares",
+      "fullTitle": "YieldVault withdraw Should withdraw assets and burn shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "Should revert when withdrawing more shares than owned",
+      "fullTitle": "YieldVault withdraw Should revert when withdrawing more shares than owned",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert when withdrawing zero shares",
+      "fullTitle": "YieldVault withdraw Should revert when withdrawing zero shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Insufficient shares', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Insufficient shares', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:161:7)"
+      }
+    },
+    {
+      "title": "Should allow strategy to report profit",
+      "fullTitle": "YieldVault reportProfit Should allow strategy to report profit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert when non-strategy tries to report profit",
+      "fullTitle": "YieldVault reportProfit Should revert when non-strategy tries to report profit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should not allow non-owner to set strategy",
+      "fullTitle": "YieldVault setStrategy Should not allow non-owner to set strategy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Ownable: caller is not the owner', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Ownable: caller is not the owner', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:58:7)"
+      }
+    },
+    {
+      "title": "Should revert when withdrawing zero shares",
+      "fullTitle": "YieldVault withdraw Should revert when withdrawing zero shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 8,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Insufficient shares', but it didn't revert",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Insufficient shares', but it didn't revert\n    at Context.<anonymous> (test\\generated.test.js:161:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the correct asset, name, and symbol",
+      "fullTitle": "YieldVault Deployment Should set the correct asset, name, and symbol",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "Should initialize with zero total assets and shares",
+      "fullTitle": "YieldVault Deployment Should initialize with zero total assets and shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to set strategy",
+      "fullTitle": "YieldVault setStrategy Should allow owner to set strategy",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should return assets when totalAssets is zero",
+      "fullTitle": "YieldVault convertToShares Should return assets when totalAssets is zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should calculate shares correctly when totalAssets > 0",
+      "fullTitle": "YieldVault convertToShares Should calculate shares correctly when totalAssets > 0",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should return shares when totalShares is zero",
+      "fullTitle": "YieldVault convertToAssets Should return shares when totalShares is zero",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 2,
+      "err": {}
+    },
+    {
+      "title": "Should calculate assets correctly when totalShares > 0",
+      "fullTitle": "YieldVault convertToAssets Should calculate assets correctly when totalShares > 0",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should deposit assets and mint shares",
+      "fullTitle": "YieldVault deposit Should deposit assets and mint shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 22,
+      "err": {}
+    },
+    {
+      "title": "Should revert when depositing zero assets",
+      "fullTitle": "YieldVault deposit Should revert when depositing zero assets",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should forward assets to strategy when strategy is set",
+      "fullTitle": "YieldVault deposit Should forward assets to strategy when strategy is set",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 21,
+      "err": {}
+    },
+    {
+      "title": "Should withdraw assets and burn shares",
+      "fullTitle": "YieldVault withdraw Should withdraw assets and burn shares",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "Should revert when withdrawing more shares than owned",
+      "fullTitle": "YieldVault withdraw Should revert when withdrawing more shares than owned",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should allow strategy to report profit",
+      "fullTitle": "YieldVault reportProfit Should allow strategy to report profit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert when non-strategy tries to report profit",
+      "fullTitle": "YieldVault reportProfit Should revert when non-strategy tries to report profit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep01\\YieldVault\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    }
+  ]
+}

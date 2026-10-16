@@ -1,0 +1,40 @@
+{
+  "contract": "TimelockVault",
+  "status": "test_failures",
+  "prompt_sha256": "cff1abe48fe3ccadd28ecf78ab216d326590a2245ec849e1814b266e11ffd7b3",
+  "generation_seconds": 5.823472300020512,
+  "usage": {
+    "prompt_tokens": 6901,
+    "total_tokens": 7707,
+    "completion_tokens": 806,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 3.83331369998632
+  },
+  "passed_tests": 5,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "TimelockVault Deployment Should set the right unlock time",
+      "error": "Cannot mix BigInt and other types, use explicit conversions"
+    },
+    {
+      "title": "TimelockVault Withdrawals Events Should emit an event on withdrawals",
+      "error": "Event \"Withdrawal\" doesn't exist in the contract"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

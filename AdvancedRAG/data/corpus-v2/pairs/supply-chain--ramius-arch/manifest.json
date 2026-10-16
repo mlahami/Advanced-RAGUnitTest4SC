@@ -1,0 +1,39 @@
+{
+  "id": "supply-chain--ramius-arch",
+  "domain": "supply-chain",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "SupplyChain.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Ramius-arch/PharmaSupply-Chain",
+    "commit": "08cd9e8e723620a97753326ed7d9fe425688a53e",
+    "license": "MIT",
+    "contract_paths": [
+      "web3/contracts/SupplyChain.sol"
+    ],
+    "test_paths": [
+      "web3/test/SupplyChain.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "web3/contracts/SupplyChain.sol": "9c7c04257cd25ff0e6572270b335f0922051086b0998ac19bf4b99c41458f033",
+      "web3/test/SupplyChain.test.js": "59747f73087b823bc81dda5d5c2a37d1cc8ff6ba76139de0fd1158756539f11d"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "SupplyChain.test.js",
+      "upstream_path": "web3/test/SupplyChain.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Pharma supply chain items with AccessControl roles, status updates and status history; 86 commits. Primary 92 non-blank lines, closure 92 lines/1 files; 12 its, 18 expects; pragma ^0.8.24.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:06:43.004138+00:00"
+}

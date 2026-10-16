@@ -1,0 +1,72 @@
+{
+  "id": "certificate-registry--sahilleth",
+  "domain": "identity-registry",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "CertificateRegistry.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/sahilleth/BlockCert",
+    "commit": "b1c86e29e08a999de7213a00d868da11e0c83231",
+    "license": "MIT",
+    "contract_paths": [
+      "blockchain/contracts/CertificateRegistry.sol"
+    ],
+    "test_paths": [
+      "blockchain/test/CertificateRegistry.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "blockchain/contracts/CertificateRegistry.sol": "9ddac0cbad64f295fa9f6361aedec9196636b1dea407f82fc01a0efb9bcb6f75",
+      "blockchain/test/CertificateRegistry.test.ts": "09ce82d97a75f2340d3644646f8be8fb43bcf4c067cbcf40e8d400a0d83c194a"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "CertificateRegistry.test.js",
+      "upstream_path": "blockchain/test/CertificateRegistry.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 5,
+      "file": "CertificateRegistry.test.js",
+      "upstream_path": "blockchain/test/CertificateRegistry.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "CertificateRegistry"
+      ],
+      "file": "CertificateRegistry.test.js",
+      "upstream_path": "blockchain/test/CertificateRegistry.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "HardhatEthersSigner"
+      ],
+      "file": "CertificateRegistry.test.js",
+      "upstream_path": "blockchain/test/CertificateRegistry.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "ethers",
+      "names": [
+        "ContractTransactionReceipt",
+        "EventLog"
+      ],
+      "file": "CertificateRegistry.test.js",
+      "upstream_path": "blockchain/test/CertificateRegistry.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "certificate issuance/revocation/verification registry with authorised issuers (Ownable); primary 183 lines; 17 it blocks (TS, type-only typechain imports), 17/17 pass, stmt cov 100%; licence LICENSE; history: 11 commits 2026-07-04..2026-09-24",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:31:45.650074+00:00"
+}

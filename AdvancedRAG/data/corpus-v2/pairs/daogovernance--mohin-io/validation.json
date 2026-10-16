@@ -1,0 +1,82 @@
+{
+  "pair": "daogovernance--mohin-io",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T16:02:41.479663+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/DAOGovernance.sol": "a05962732ec380654edb830518cf68fb03acf85af3f904862139c5a9b5c5a3b9",
+    "LICENSE": "38a0e6658ebd80c39eb05c1a507760a0a8ad72e1849a034c6764b86778e8a488",
+    "manifest.json": "a526bcfc89b7ff6ff18f34b9e9631e8d29452917fa18d6340122f51ec3c59504",
+    "test/DAOGovernance.test.js": "74f2691a8099a6a944379bfffe1a93c9b9764cc7e303828eabad70fff538a915"
+  },
+  "pair_sha256": "8f679190999e3a95889c01e7464e40426c81470944ea62da0e8c490e553fb34d",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "DAOGovernance.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.24,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "DAOGovernance.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.238,
+        "signatures": 0.062,
+        "min_functions": 5
+      },
+      {
+        "contract": "DAOGovernance.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.214,
+        "signatures": 0.0,
+        "min_functions": 10
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.28,
+      "mocha": {
+        "tests": 38,
+        "passes": 38,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.88,
+      "mocha": {
+        "tests": 38,
+        "passes": 38,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "DAOGovernance.sol": {
+          "statements": 91.89,
+          "branches": 80.65,
+          "functions": 86.67,
+          "lines": 91.89
+        }
+      }
+    }
+  },
+  "accepted": true
+}

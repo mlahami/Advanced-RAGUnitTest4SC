@@ -1,0 +1,135 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 6,
+    "passes": 4,
+    "pending": 0,
+    "failures": 4,
+    "start": "2026-09-30T21:44:13.185Z",
+    "end": "2026-09-30T21:44:13.814Z",
+    "duration": 629
+  },
+  "tests": [
+    {
+      "title": "Should create a proposal and emit ProposalCreated event",
+      "fullTitle": "DAOGovernor Proposal Creation Should create a proposal and emit ProposalCreated event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 28,
+      "err": {}
+    },
+    {
+      "title": "Should allow voting and emit VoteCast event",
+      "fullTitle": "DAOGovernor Voting Should allow voting and emit VoteCast event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should prevent double voting",
+      "fullTitle": "DAOGovernor Voting Should prevent double voting",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should prevent voting with zero balance",
+      "fullTitle": "DAOGovernor Voting Should prevent voting with zero balance",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should prevent voting before proposal is active",
+      "fullTitle": "DAOGovernor Voting Should prevent voting before proposal is active",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 7,
+      "err": {
+        "message": "Do not know how to serialize a BigInt",
+        "stack": "TypeError: Do not know how to serialize a BigInt\n    at JSON.stringify (<anonymous>)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:280:34)\n    at AutomaticSenderProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\accounts.ts:415:34)\n    at FixedGasProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\gas-providers.ts:28:34)\n    at FixedGasPriceProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\gas-providers.ts:54:34)\n    at BackwardsCompatibilityProviderAdapter.send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\backwards-compatibility.ts:36:27)\n    at HardhatEthersProvider.send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\internal\\hardhat-ethers-provider.ts:105:34)\n    at Context.<anonymous> (test\\generated.test.js:100:29)"
+      }
+    },
+    {
+      "title": "Should prevent voting after proposal ends",
+      "fullTitle": "DAOGovernor Voting Should prevent voting after proposal ends",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "Do not know how to serialize a BigInt",
+        "stack": "TypeError: Do not know how to serialize a BigInt\n    at JSON.stringify (<anonymous>)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:280:34)\n    at AutomaticSenderProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\accounts.ts:415:34)\n    at FixedGasProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\gas-providers.ts:28:34)\n    at FixedGasPriceProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\gas-providers.ts:54:34)\n    at BackwardsCompatibilityProviderAdapter.send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\backwards-compatibility.ts:36:27)\n    at HardhatEthersProvider.send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\internal\\hardhat-ethers-provider.ts:105:34)\n    at Context.<anonymous> (test\\generated.test.js:109:29)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should prevent voting before proposal is active",
+      "fullTitle": "DAOGovernor Voting Should prevent voting before proposal is active",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 7,
+      "err": {
+        "message": "Do not know how to serialize a BigInt",
+        "stack": "TypeError: Do not know how to serialize a BigInt\n    at JSON.stringify (<anonymous>)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:280:34)\n    at AutomaticSenderProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\accounts.ts:415:34)\n    at FixedGasProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\gas-providers.ts:28:34)\n    at FixedGasPriceProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\gas-providers.ts:54:34)\n    at BackwardsCompatibilityProviderAdapter.send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\backwards-compatibility.ts:36:27)\n    at HardhatEthersProvider.send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\internal\\hardhat-ethers-provider.ts:105:34)\n    at Context.<anonymous> (test\\generated.test.js:100:29)"
+      }
+    },
+    {
+      "title": "Should prevent voting after proposal ends",
+      "fullTitle": "DAOGovernor Voting Should prevent voting after proposal ends",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 0,
+      "err": {
+        "message": "Do not know how to serialize a BigInt",
+        "stack": "TypeError: Do not know how to serialize a BigInt\n    at JSON.stringify (<anonymous>)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:280:34)\n    at AutomaticSenderProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\accounts.ts:415:34)\n    at FixedGasProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\gas-providers.ts:28:34)\n    at FixedGasPriceProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\gas-providers.ts:54:34)\n    at BackwardsCompatibilityProviderAdapter.send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\backwards-compatibility.ts:36:27)\n    at HardhatEthersProvider.send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\internal\\hardhat-ethers-provider.ts:105:34)\n    at Context.<anonymous> (test\\generated.test.js:109:29)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"Should queue a successful proposal and emit ProposalQueued event\"",
+      "fullTitle": "DAOGovernor Proposal Queueing \"before each\" hook for \"Should queue a successful proposal and emit ProposalQueued event\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 21,
+      "err": {
+        "message": "Do not know how to serialize a BigInt",
+        "stack": "TypeError: Do not know how to serialize a BigInt\n    at JSON.stringify (<anonymous>)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:280:34)\n    at AutomaticSenderProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\accounts.ts:415:34)\n    at FixedGasProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\gas-providers.ts:28:34)\n    at FixedGasPriceProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\gas-providers.ts:54:34)\n    at BackwardsCompatibilityProviderAdapter.send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\backwards-compatibility.ts:36:27)\n    at HardhatEthersProvider.send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\internal\\hardhat-ethers-provider.ts:105:34)\n    at Context.<anonymous> (test\\generated.test.js:135:29)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"Should execute a queued proposal and emit ProposalExecuted event\"",
+      "fullTitle": "DAOGovernor Proposal Execution \"before each\" hook for \"Should execute a queued proposal and emit ProposalExecuted event\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Do not know how to serialize a BigInt",
+        "stack": "TypeError: Do not know how to serialize a BigInt\n    at JSON.stringify (<anonymous>)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:280:34)\n    at AutomaticSenderProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\accounts.ts:415:34)\n    at FixedGasProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\gas-providers.ts:28:34)\n    at FixedGasPriceProvider.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\gas-providers.ts:54:34)\n    at BackwardsCompatibilityProviderAdapter.send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\core\\providers\\backwards-compatibility.ts:36:27)\n    at HardhatEthersProvider.send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\internal\\hardhat-ethers-provider.ts:105:34)\n    at Context.<anonymous> (test\\generated.test.js:213:29)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should create a proposal and emit ProposalCreated event",
+      "fullTitle": "DAOGovernor Proposal Creation Should create a proposal and emit ProposalCreated event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 28,
+      "err": {}
+    },
+    {
+      "title": "Should allow voting and emit VoteCast event",
+      "fullTitle": "DAOGovernor Voting Should allow voting and emit VoteCast event",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should prevent double voting",
+      "fullTitle": "DAOGovernor Voting Should prevent double voting",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "Should prevent voting with zero balance",
+      "fullTitle": "DAOGovernor Voting Should prevent voting with zero balance",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\DAOGovernor\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    }
+  ]
+}

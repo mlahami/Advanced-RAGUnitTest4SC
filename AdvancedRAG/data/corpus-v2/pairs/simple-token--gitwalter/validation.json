@@ -1,0 +1,82 @@
+{
+  "pair": "simple-token--gitwalter",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:51:50.152658+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/SimpleToken.sol": "2ecbc1bad25c3954c3c016b3fe7a8393f0a207a384f4868c42a52ffe05730c34",
+    "LICENSE": "c411ecf938d204725a63368b40e654ef6c10c5bb059c1afdd513598d6599feb4",
+    "manifest.json": "8203d4a19ab9c517d0b6979c0b4be1a5eb01d63eef7f587525ebd47beab791bf",
+    "test/SimpleToken.test.js": "53697f31018969d5e76fba449b91a429b7189f4cb2622fd126b0384a6e7b889e"
+  },
+  "pair_sha256": "6ce0db10c14dd3851761aee4e4a4a16b3a096c186bccc103f011b57713c5c4ac",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "SimpleToken.sol",
+        "reference": "MetaCoin.sol",
+        "structural": 0.067,
+        "signatures": 0.0,
+        "min_functions": 1
+      },
+      {
+        "contract": "SimpleToken.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.067,
+        "signatures": 0.0,
+        "min_functions": 1
+      },
+      {
+        "contract": "SimpleToken.sol",
+        "reference": "MerkleAirdrop.sol",
+        "structural": 0.06,
+        "signatures": 0.0,
+        "min_functions": 1
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.15,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.24,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "SimpleToken.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

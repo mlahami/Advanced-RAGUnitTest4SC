@@ -1,0 +1,73 @@
+{
+  "id": "advanced-v3.Adoption",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "Adoption",
+  "chunk_ids": [
+    2350,
+    2439,
+    588,
+    6338,
+    1181,
+    1170,
+    4066,
+    255,
+    261
+  ],
+  "context_sha256": "e421988c4259a52628df31a350d73e3bf3a3aec02a405392489317f98922f241",
+  "ratings": [
+    {
+      "chunk_id": 2350,
+      "rating": 1,
+      "reason": "Shows generic revert testing pattern and fixture setup, but tests unrelated functionality; cannot directly reuse calls for Adoption contract."
+    },
+    {
+      "chunk_id": 2439,
+      "rating": 1,
+      "reason": "Shows getter array test pattern applicable to Adoption’s getAdopters, but specific payee logic isn’t relevant"
+    },
+    {
+      "chunk_id": 588,
+      "rating": 0,
+      "reason": "Test targets auction refunds and balance checks, unrelated to simple adoption mapping functionality."
+    },
+    {
+      "chunk_id": 6338,
+      "rating": 1,
+      "reason": "Shows view function array retrieval and length/content checks, applicable to Adoption’s getAdopters, but different semantics"
+    },
+    {
+      "chunk_id": 1181,
+      "rating": 1,
+      "reason": "Shows generic view-array retrieval and length/assertion pattern, which can be adapted for Adoption.getAdopters, but tests unrelated behavior."
+    },
+    {
+      "chunk_id": 1170,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests unrelated functionality; only pattern is reusable, not behavior."
+    },
+    {
+      "chunk_id": 4066,
+      "rating": 1,
+      "reason": "Only demonstrates generic deployment and view‑function testing pattern; does not match Adoption’s adopt/getAdopters behavior."
+    },
+    {
+      "chunk_id": 255,
+      "rating": 1,
+      "reason": "Demonstrates generic fixture deployment and basic assertions pattern, but tests unrelated AgentRegistry behavior, not adopt logic."
+    },
+    {
+      "chunk_id": 261,
+      "rating": 1,
+      "reason": "Shows generic fixture deployment and state assertion pattern, but tests unrelated functionality; no direct relevance to adopt/getAdopters behavior."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8549,
+    "completion_tokens": 891,
+    "calls": 9
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 53.1,
+  "evaluated_utc": "2026-10-13T07:44:07.978535+00:00"
+}

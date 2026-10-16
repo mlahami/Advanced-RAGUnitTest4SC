@@ -1,0 +1,36 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> data.sol
+> PositionMetadata.sol
+> Staker.sol
+> tokens.sol
+
+Compilation:
+============
+
+Compiled 31 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+-----------------------|----------|----------|----------|----------|----------------|
+File                   |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-----------------------|----------|----------|----------|----------|----------------|
+ contracts\            |    77.53 |    71.59 |    69.23 |    73.91 |                |
+  PositionMetadata.sol |        0 |      100 |        0 |        0 |... 49,51,60,68 |
+  Staker.sol           |    83.54 |    71.59 |    85.71 |    80.49 |... 477,478,480 |
+  data.sol             |      100 |      100 |      100 |      100 |                |
+  tokens.sol           |       50 |      100 |    66.67 |       50 |       13,25,37 |
+-----------------------|----------|----------|----------|----------|----------------|
+All files              |    77.53 |    71.59 |    69.23 |    73.91 |                |
+-----------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

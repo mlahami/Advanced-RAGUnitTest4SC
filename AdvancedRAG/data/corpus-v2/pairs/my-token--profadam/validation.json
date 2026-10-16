@@ -1,0 +1,82 @@
+{
+  "pair": "my-token--profadam",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:50:28.445051+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MyToken.sol": "b523cf76d6182d9b7207867271f35332686948ced82873c6951b52fedc4751cf",
+    "LICENSE": "99397e6214d272c87f9303199a58e66fb02c622dc5fe6ba06513a7885ee4e682",
+    "manifest.json": "09bcadc7b9613e1903a948b76020781fd348de1e178eff2382cc0526f4e49332",
+    "test/MyToken.test.js": "20ff41d7d7802ce15d0422e9d5b160d91d0abbdc76270f329807f66de3c30b0e"
+  },
+  "pair_sha256": "02cfd420a8e582cee035ea3559cc96e89e2bd495d876b3e0d6bc691df1877610",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MyToken.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.212,
+        "signatures": 0.188,
+        "min_functions": 8
+      },
+      {
+        "contract": "MyToken.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.188,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "MyToken.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.179,
+        "signatures": 0.067,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.41,
+      "mocha": {
+        "tests": 25,
+        "passes": 25,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.01,
+      "mocha": {
+        "tests": 25,
+        "passes": 25,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MyToken.sol": {
+          "statements": 94.59,
+          "branches": 66.67,
+          "functions": 100.0,
+          "lines": 94.59
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,38 @@
+{
+  "id": "operations--lukasz-glen",
+  "domain": "storage-library",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Operations.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/lukasz-glen/hashless-tokens",
+    "commit": "18a5ae1a65f6ec2b27b4b1349f4b93f8b5905538",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/mock/OperationsMock.sol",
+      "contracts/utils/Operations.sol"
+    ],
+    "test_paths": [
+      "test/Operations.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/mock/OperationsMock.sol": "d3463f3b92de416b0d371304b6bb9a5a0339b31083950875c66d2ff7171aceca",
+      "contracts/utils/Operations.sol": "83ae8e9d333ffba1e616e3bdd21292909564dfbbb755fa9ecd08887a832231ea",
+      "test/Operations.test.js": "5bbe6ca2d02cd908dbbc5a3cb85abf44ce26b7e52a9193642bf4ba0ef28b0e5c"
+    }
+  },
+  "transformations": [
+    {
+      "file": "OperationsMock.sol",
+      "kind": "import-path",
+      "before": "../utils/Operations.sol",
+      "after": "./Operations.sol"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "library exercised through mock",
+  "imported_utc": "2026-09-27T21:50:15.274285+00:00"
+}

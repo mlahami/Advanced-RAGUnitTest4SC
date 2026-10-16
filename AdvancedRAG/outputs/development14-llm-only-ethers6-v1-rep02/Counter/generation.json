@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"Counter\", function () {\n  let counter;\n  let owner;\n  let otherAccount;\n\n  beforeEach(async function () {\n    [owner, otherAccount] = await ethers.getSigners();\n\n    const Counter = await ethers.getContractFactory(\"Counter\");\n    counter = await Counter.deploy();\n    await counter.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should set the right owner\", async function () {\n      expect(await counter.owner()).to.equal(owner.address);\n    });\n\n    it(\"Should initialize count to zero\", async function () {\n      expect(await counter.count()).to.equal(0n);\n    });\n  });\n\n  describe(\"Increment\", function () {\n    it(\"Should increment the count\", async function () {\n      await counter.increment();\n      expect(await counter.count()).to.equal(1n);\n    });\n\n    it(\"Should emit no events\", async function () {\n      await expect(counter.increment()).to.not.emit(counter, \"Incremented\");\n    });\n  });\n\n  describe(\"Decrement\", function () {\n    it(\"Should decrement the count\", async function () {\n      await counter.increment();\n      await counter.decrement();\n      expect(await counter.count()).to.equal(0n);\n    });\n\n    it(\"Should revert when count is zero\", async function () {\n      await expect(counter.decrement()).to.be.revertedWith(\"underflow\");\n    });\n  });\n\n  describe(\"Reset\", function () {\n    it(\"Should reset the count to zero\", async function () {\n      await counter.increment();\n      await counter.reset();\n      expect(await counter.count()).to.equal(0n);\n    });\n\n    it(\"Should revert if called by non-owner\", async function () {\n      await expect(counter.connect(otherAccount).reset()).to.be.revertedWith(\"not owner\");\n    });\n  });\n\n  describe(\"State Changes\", function () {\n    it(\"Should maintain correct count after multiple operations\", async function () {\n      await counter.increment();\n      await counter.increment();\n      await counter.decrement();\n      expect(await counter.count()).to.equal(1n);\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 5.670855199976359,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 6887,
+      "total_tokens": 7343,
+      "completion_tokens": 456,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "df8207ad74282402b4568afeb6e20f18dc80da9f8eacaaf61db913e00c8c4642"
+}

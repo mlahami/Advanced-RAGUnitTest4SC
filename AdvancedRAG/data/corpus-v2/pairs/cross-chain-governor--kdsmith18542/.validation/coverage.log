@@ -1,0 +1,40 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> CrossChainGovernor.sol
+> ERC20Mock.sol
+> ICrossChainBridge.sol
+> LayerZeroBridge.sol
+> MockCrossChainBridge.sol
+> ResurgeBridgeToken.sol
+
+Compilation:
+============
+
+Compiled 18 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+---------------------------|----------|----------|----------|----------|----------------|
+File                       |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+---------------------------|----------|----------|----------|----------|----------------|
+ contracts\                |    67.72 |    43.75 |    79.49 |    69.64 |                |
+  CrossChainGovernor.sol   |    71.67 |    42.22 |    85.71 |    70.67 |... 256,285,286 |
+  ERC20Mock.sol            |       50 |      100 |       50 |       50 |             14 |
+  ICrossChainBridge.sol    |      100 |      100 |      100 |      100 |                |
+  LayerZeroBridge.sol      |    26.92 |    23.53 |     62.5 |    33.33 |... 102,103,104 |
+  MockCrossChainBridge.sol |    86.67 |    57.14 |    85.71 |    90.48 |          58,59 |
+  ResurgeBridgeToken.sol   |    91.67 |    60.53 |     87.5 |    89.19 |  67,68,102,103 |
+---------------------------|----------|----------|----------|----------|----------------|
+All files                  |    67.72 |    43.75 |    79.49 |    69.64 |                |
+---------------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

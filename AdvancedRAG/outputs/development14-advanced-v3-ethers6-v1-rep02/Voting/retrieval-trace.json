@@ -1,0 +1,170 @@
+{
+  "target_functions": [
+    {
+      "target_function": "vote",
+      "corpus_functions": [
+        "153695ead9cd9b34fcf95e13",
+        "28882725788e38488652ae4a",
+        "4b66de97c359b7976b94a7dd",
+        "e50e9ebd50a24f8d5aa4c24a",
+        "ee309d89f7a15147849e9c19",
+        "98809df165d93b6169d8cbf9",
+        "9bc75829492b6b34d0a90e78",
+        "93d01ac17562fad1d894a8a5"
+      ],
+      "candidate_tests": [
+        "d1aea60b87b5e3f298dc5f1d",
+        "a9d45d30c00f70d1beb2903f",
+        "f7cc68fce40d4d63b56639f9",
+        "488c0aeb64376df63e54b103",
+        "4df7caa467e49b33356e79ac",
+        "75d6e05f28cb185dd30a6e7b",
+        "9367e8b289ee83711240ff62",
+        "f36da44cfee4721c791d1216",
+        "8ada5154b77da6b86f9f5677",
+        "a1d6770fcd96781e652f2726",
+        "014a985af9ecc93d8fc776d9",
+        "6fc7f11c78335ed7f24ee867",
+        "103758d5f4a40b7d8b24f66a",
+        "8f4643cf4fdfb5a20f424c93"
+      ]
+    },
+    {
+      "target_function": "winner",
+      "corpus_functions": [
+        "5ca9f33c274ac1862cf3eb12",
+        "9fcb9d640ee982f65ca112ee",
+        "9bc75829492b6b34d0a90e78",
+        "a1eb978c1cfa4328706a1013",
+        "db9f1b6251b73145aefb6c41",
+        "afc42598746f7a054cd59ef7",
+        "a2d36c493c5ea78da0c82e72",
+        "0ef4dfb2672f34178bbf0ab0"
+      ],
+      "candidate_tests": [
+        "145db442f709a514d6baa057",
+        "79b70d9d39c0c851f27ae8d6",
+        "d94268e473aae3936e300eb2",
+        "014a985af9ecc93d8fc776d9",
+        "6fc7f11c78335ed7f24ee867",
+        "91bf5af1a55af7e605a381f6",
+        "6d2ed34a0524744fcc2a4d41",
+        "27cae60aa7b2dc58ea4545e2",
+        "6e3b5f27894586e4852d8ec5",
+        "e76473e60b64e5d8cd06ab77",
+        "823fde51b4e2998ea5ef0f13",
+        "08c12096b44001ee0d0c7b10"
+      ]
+    }
+  ],
+  "selected": [
+    7434,
+    225,
+    7435,
+    7362,
+    7478,
+    7363,
+    7479,
+    7433,
+    7453,
+    7436
+  ],
+  "context_chars": 14051,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "Voting",
+  "retrieval_seconds": 1.7201554999919608,
+  "hits": [
+    {
+      "chunk_id": 7434,
+      "test_id": "d1aea60b87b5e3f298dc5f1d",
+      "pair": "voting--axysar",
+      "domain_group": "voting-governance",
+      "name": "should prevent double voting",
+      "via_function": "153695ead9cd9b34fcf95e13",
+      "chars": 912
+    },
+    {
+      "chunk_id": 225,
+      "test_id": "145db442f709a514d6baa057",
+      "pair": "advanced-voting--shree2160",
+      "domain_group": "voting-governance",
+      "name": "returns correct winner after deadline",
+      "via_function": "5ca9f33c274ac1862cf3eb12",
+      "chars": 1372
+    },
+    {
+      "chunk_id": 7435,
+      "test_id": "a9d45d30c00f70d1beb2903f",
+      "pair": "voting--axysar",
+      "domain_group": "voting-governance",
+      "name": "should reject votes for invalid candidates",
+      "via_function": "153695ead9cd9b34fcf95e13",
+      "chars": 1017
+    },
+    {
+      "chunk_id": 7362,
+      "test_id": "79b70d9d39c0c851f27ae8d6",
+      "pair": "vote--abidoyesimze",
+      "domain_group": "voting-governance",
+      "name": "Should get winner correctly",
+      "via_function": "9fcb9d640ee982f65ca112ee",
+      "chars": 2034
+    },
+    {
+      "chunk_id": 7478,
+      "test_id": "f7cc68fce40d4d63b56639f9",
+      "pair": "voting--stakljar",
+      "domain_group": "voting-governance",
+      "name": "Should vote",
+      "via_function": "28882725788e38488652ae4a",
+      "chars": 2237
+    },
+    {
+      "chunk_id": 7363,
+      "test_id": "d94268e473aae3936e300eb2",
+      "pair": "vote--abidoyesimze",
+      "domain_group": "voting-governance",
+      "name": "Should prevent getting winner while voting is active",
+      "via_function": "9fcb9d640ee982f65ca112ee",
+      "chars": 1404
+    },
+    {
+      "chunk_id": 7479,
+      "test_id": "488c0aeb64376df63e54b103",
+      "pair": "voting--stakljar",
+      "domain_group": "voting-governance",
+      "name": "Should fail if time is up",
+      "via_function": "28882725788e38488652ae4a",
+      "chars": 2268
+    },
+    {
+      "chunk_id": 7433,
+      "test_id": "014a985af9ecc93d8fc776d9",
+      "pair": "voting--axysar",
+      "domain_group": "voting-governance",
+      "name": "should allow a voter to cast a vote",
+      "via_function": "9bc75829492b6b34d0a90e78",
+      "chars": 930
+    },
+    {
+      "chunk_id": 7453,
+      "test_id": "4df7caa467e49b33356e79ac",
+      "pair": "voting--darshan36911",
+      "domain_group": "voting-governance",
+      "name": "emits a Voted event",
+      "via_function": "4b66de97c359b7976b94a7dd",
+      "chars": 887
+    },
+    {
+      "chunk_id": 7436,
+      "test_id": "6fc7f11c78335ed7f24ee867",
+      "pair": "voting--axysar",
+      "domain_group": "voting-governance",
+      "name": "should correctly tally votes from multiple voters",
+      "via_function": "9bc75829492b6b34d0a90e78",
+      "chars": 990
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "contract": "DAOGovernor",
+  "status": "test_failures",
+  "prompt_sha256": "30d58297e00ca4ab05f4c234477879b9f5515afcea10066b99aa983939feeb67",
+  "generation_seconds": 19.558699499932118,
+  "usage": {
+    "prompt_tokens": 7632,
+    "total_tokens": 10136,
+    "completion_tokens": 2504,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 6.022041899967007
+  },
+  "passed_tests": 0,
+  "failed_tests": 8,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "DAOGovernor Proposal Creation should create a proposal",
+      "error": "time is not defined"
+    },
+    {
+      "title": "DAOGovernor Voting should allow voting",
+      "error": "time is not defined"
+    },
+    {
+      "title": "DAOGovernor Voting should revert if voting before start time",
+      "error": "Expected transaction to be reverted with reason 'Not active', but it didn't revert"
+    },
+    {
+      "title": "DAOGovernor Voting should revert if voting after end time",
+      "error": "time is not defined"
+    },
+    {
+      "title": "DAOGovernor Voting should revert if voting without tokens",
+      "error": "time is not defined"
+    },
+    {
+      "title": "DAOGovernor Voting should revert if voting twice",
+      "error": "time is not defined"
+    },
+    {
+      "title": "DAOGovernor Proposal Queueing \"before each\" hook for \"should queue a successful proposal\"",
+      "error": "time is not defined"
+    },
+    {
+      "title": "DAOGovernor Proposal Execution \"before each\" hook for \"should execute a queued proposal after timelock\"",
+      "error": "time is not defined"
+    }
+  ],
+  "coverage": {
+    "statements": 45.0,
+    "branches": 20.0,
+    "functions": 60.0,
+    "lines": 45.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

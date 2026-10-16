@@ -1,0 +1,36 @@
+{
+  "contract": "Voting",
+  "status": "test_failures",
+  "prompt_sha256": "fe7290ead586a40e804eb7cb10cc9c96cac3e056e60b0aaa0c2a201b2324137d",
+  "generation_seconds": 7.311686100030784,
+  "usage": {
+    "prompt_tokens": 7009,
+    "total_tokens": 7646,
+    "completion_tokens": 637,
+    "prompt_tokens_details": {
+      "cached_tokens": 6912
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.016483400017023
+  },
+  "passed_tests": 8,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Voting Deployment should initialize candidates correctly",
+      "error": "Transaction reverted without a reason string"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

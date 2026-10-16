@@ -1,0 +1,103 @@
+{
+  "pair": "attention-stream--wildterralabs",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:35:59.478992+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ArticleRegistry.sol": "87c50fddd283aa38b9ae544a29346c9fc8268b8b8a4ffcba8b51c601fa33052f",
+    "contracts/AttentionStream.sol": "e1d73718e3177dd18bf522b434648994a0dce9f86679ba12f3d87f448c7e2210",
+    "contracts/IArticleRegistry.sol": "42d024e1b167f8c9dedd630c6184fd36ac72385a4d68a547083c77d847b01aa9",
+    "contracts/MockERC20.sol": "2bac94b7f382bb8af4d4a6860bae5ac4503885c50f9f63418edc9405c334b382",
+    "LICENSE": "7cef86eeeb2645703b9e1d714180f31f88cff9f752baa3c4ce0469d28cd9497b",
+    "manifest.json": "48edada3273e1aeca05abc94b34cae2ace54c7418c0f07117fb5d1566752d2c7",
+    "test/attention.test.js": "5111936aa64298971a4c7c18c922f7f49d4a8684b3cb0b7959ee207f3baf8ea6"
+  },
+  "pair_sha256": "bfeb888f157f507bd2e2f59ca1403dc6b0f0806bff4964918ec24be98c2b920c",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "ArticleRegistry.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.129,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "AttentionStream.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.118,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "AttentionStream.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.115,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.56,
+      "mocha": {
+        "tests": 16,
+        "passes": 16,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.46,
+      "mocha": {
+        "tests": 16,
+        "passes": 16,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "AttentionStream.sol": {
+          "statements": 75.76,
+          "branches": 59.52,
+          "functions": 76.92,
+          "lines": 78.69
+        },
+        "ArticleRegistry.sol": {
+          "statements": 78.57,
+          "branches": 50.0,
+          "functions": 71.43,
+          "lines": 78.57
+        },
+        "IArticleRegistry.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockERC20.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,82 @@
+{
+  "pair": "receipt-registry--calderbuild",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:22:08.874432+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ReceiptRegistry.sol": "5161e65bf619680be5823440c61b56ced34a02f326277121077e8fd41d84dd94",
+    "LICENSE": "4ec104352509f524a851cdbd3fe651593e9188e8f2392e27d0858e174d7ae3b9",
+    "manifest.json": "7b968e864dccdb19265aa898d460222568e97623a92e8e34efd30c93e3488d18",
+    "test/ReceiptRegistry.test.js": "6d78517ce3a191a82fe7739d7c6349229a7bb17b314aead941a37bb077ceadda"
+  },
+  "pair_sha256": "3cdcb376f7605577a87e6748ffe0393c04b2a5fc8a82cdce12748c35060daf17",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "ReceiptRegistry.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.181,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "ReceiptRegistry.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.151,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "ReceiptRegistry.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.135,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.86,
+      "mocha": {
+        "tests": 13,
+        "passes": 13,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.8,
+      "mocha": {
+        "tests": 13,
+        "passes": 13,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "ReceiptRegistry.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

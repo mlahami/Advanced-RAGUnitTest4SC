@@ -1,0 +1,36 @@
+{
+  "id": "docvesting--mikemushunje",
+  "domain": "vesting",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "DOCVesting.sol",
+    "MockDOC.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Mikemushunje/doc-vesting",
+    "commit": "da5e3bb4d3d8ddaf9d2ed6bed991cda30a31df0d",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/DOCVesting.sol",
+      "contracts/MockDOC.sol"
+    ],
+    "test_paths": [
+      "test/DOCVesting.test.js",
+      "test/DOCVesting.security.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/DOCVesting.sol": "6160b7aa259c0cbd4ec07544c4a41efa0be274dc42af8f2ebc81545578804efa",
+      "contracts/MockDOC.sol": "75724a8029b21038318592b758ad802178fae0ae3b417eb535bdff900fe61d5e",
+      "test/DOCVesting.test.js": "6075c4426d7b635f0d46bbf131fc88251ff9dbba0f5b4bc8d6cbc9653cc6591e",
+      "test/DOCVesting.security.test.js": "3bd16796a12a2a622b12a3c3164fb90f0c80ef2f0c563f7626bc92cb4d25c9c8"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 440 lines, closure 461 lines, 2 files; 80 it blocks; history: 12 commits 2026-03-23..2026-03-26",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:31:33.684539+00:00"
+}

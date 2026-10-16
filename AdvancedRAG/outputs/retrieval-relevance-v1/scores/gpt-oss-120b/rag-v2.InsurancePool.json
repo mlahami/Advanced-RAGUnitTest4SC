@@ -1,0 +1,61 @@
+{
+  "id": "rag-v2.InsurancePool",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "InsurancePool",
+  "chunk_ids": [
+    3547,
+    3548,
+    7627,
+    7604,
+    7605,
+    7603,
+    5905
+  ],
+  "context_sha256": "206d4c0b2040f6a10b969c7ad4b8f424e7dc520a2e5962b04a456552d862fdda",
+  "ratings": [
+    {
+      "chunk_id": 3547,
+      "rating": 0,
+      "reason": "Tests unrelated functions (oracle, createPolicy) not present in InsurancePool; no reusable patterns for deposit/withdraw/claim."
+    },
+    {
+      "chunk_id": 3548,
+      "rating": 1,
+      "reason": "Only generic revert‑expectation pattern applies; specific payout logic and functions differ from InsurancePool’s triggerClaim/expirePolicy behavior."
+    },
+    {
+      "chunk_id": 7627,
+      "rating": 1,
+      "reason": "Shows policy purchase pattern and count check, but uses different factory and functions; only generic purchase/assertion useful."
+    },
+    {
+      "chunk_id": 7604,
+      "rating": 1,
+      "reason": "Shows generic revert‑check pattern for premium validation, but target only requires non‑zero premium, not amount check."
+    },
+    {
+      "chunk_id": 7605,
+      "rating": 1,
+      "reason": "Tests generic revert behavior for invalid input, which can guide similar checks in InsurancePool, but the specific function and parameters differ."
+    },
+    {
+      "chunk_id": 7603,
+      "rating": 2,
+      "reason": "Tests policy creation, event emission and state verification; pattern directly maps to buyPolicy in InsurancePool after renaming."
+    },
+    {
+      "chunk_id": 5905,
+      "rating": 1,
+      "reason": "Shows generic ether balance change and reentrancy check pattern, but target contract has different functions; behavior not directly applicable."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 18136,
+    "completion_tokens": 818,
+    "calls": 7
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 141.6,
+  "evaluated_utc": "2026-10-13T07:27:52.680749+00:00"
+}

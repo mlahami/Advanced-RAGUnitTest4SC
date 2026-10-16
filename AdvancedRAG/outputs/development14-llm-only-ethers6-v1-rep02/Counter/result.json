@@ -1,0 +1,36 @@
+{
+  "contract": "Counter",
+  "status": "test_failures",
+  "prompt_sha256": "df8207ad74282402b4568afeb6e20f18dc80da9f8eacaaf61db913e00c8c4642",
+  "generation_seconds": 5.670855199976359,
+  "usage": {
+    "prompt_tokens": 6887,
+    "total_tokens": 7343,
+    "completion_tokens": 456,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 3.770787300018128
+  },
+  "passed_tests": 8,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Counter Increment Should emit no events",
+      "error": "Event \"Incremented\" doesn't exist in the contract"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

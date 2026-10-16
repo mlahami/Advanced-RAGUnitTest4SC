@@ -1,0 +1,103 @@
+{
+  "pair": "treasury--hockeyplaya48",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:50:09.991029+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/IRWASwapRouter.sol": "539c9f305dce7eabacb9cac5300cc55f64288d810e8521d48855add3e7e4ea4d",
+    "contracts/MockERC20.sol": "660ee54ab6e9a0356f0f373605f8182b7fd3a8954a616106ac9b094fbe329304",
+    "contracts/MockSwapRouter.sol": "4b6fb846926b253c67bc7829dabd0fdef78501cf4e970e187d95aa6cc3885267",
+    "contracts/Treasury.sol": "7aeef5f02ea200c57e68b5c91f80687e5af727114d620157c738a4933d97d9b0",
+    "LICENSE": "bf18f576dab8e0dc943d424e40442bbbf39b325a236e32fba50f8b2885da6447",
+    "manifest.json": "33a517ec72f8e64a04784c2a19fde8c3240d622291201200ff00cae0c9fc710b",
+    "test/Treasury.test.js": "3fcb2622f670286c4f191520fc90a45a515fa51a98bee3ee181535adf52b2a57"
+  },
+  "pair_sha256": "56aab1e0606f8e584143992448a90b0bf1e70c18ee9810f15cfd74a11ae31885",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Treasury.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.151,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "Treasury.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.128,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "Treasury.sol",
+        "reference": "DEX.sol",
+        "structural": 0.126,
+        "signatures": 0.0,
+        "min_functions": 4
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.69,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.43,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Treasury.sol": {
+          "statements": 100.0,
+          "branches": 82.14,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IRWASwapRouter.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockERC20.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 66.67,
+          "lines": 50.0
+        },
+        "MockSwapRouter.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> InsurancePolicy.sol
+> MockOracle.sol
+
+Compilation:
+============
+
+Compiled 5 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+----------------------|----------|----------|----------|----------|----------------|
+File                  |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+----------------------|----------|----------|----------|----------|----------------|
+ contracts\           |    81.25 |    41.67 |    61.54 |     81.4 |                |
+  InsurancePolicy.sol |    79.31 |    41.67 |    44.44 |    77.78 |... 121,133,137 |
+  MockOracle.sol      |      100 |      100 |      100 |      100 |                |
+----------------------|----------|----------|----------|----------|----------------|
+All files             |    81.25 |    41.67 |    61.54 |     81.4 |                |
+----------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

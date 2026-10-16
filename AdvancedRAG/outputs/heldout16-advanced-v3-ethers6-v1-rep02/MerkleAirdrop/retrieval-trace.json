@@ -1,0 +1,112 @@
+{
+  "target_functions": [
+    {
+      "target_function": "claim",
+      "corpus_functions": [
+        "34d71e1057691e1d98367700",
+        "19f10d3d19262d83b64441c2",
+        "c361a08f5936d3544c37a1f1",
+        "53d37945a5a898e5d8f391e5",
+        "9561536906e949e21ed5d52f",
+        "723264147fb689a4a0daac1f",
+        "05e5a5697872430d1bc0d773",
+        "819a1d3530b404fed733908d"
+      ],
+      "candidate_tests": [
+        "05eb7e80965241d81adcc109",
+        "7bccd286873c29c9230cb258",
+        "32d194ef8f096d1b334d0a9e",
+        "3c9491dd81c404d0e67037bb",
+        "d229759991482c975c4ebe6a",
+        "9a8ebcd6d4baf0e1f769f6e0",
+        "a29f6ff68a36cc0210e555c2",
+        "4b6dfb6ce7274c872d805f76",
+        "ee027803c81355c6bf79a238",
+        "a7189ea70e35cd60bf5b9e9d",
+        "ee0a11c4c64b392f9c85602a",
+        "1de7ce99da2e8e7db62f72ad",
+        "cb321afb996367774303e4bc"
+      ]
+    }
+  ],
+  "selected": [
+    502,
+    499,
+    810,
+    811,
+    480,
+    479,
+    5892
+  ],
+  "context_chars": 14208,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "MerkleAirdrop",
+  "retrieval_seconds": 1.3600804000161588,
+  "hits": [
+    {
+      "chunk_id": 502,
+      "test_id": "05eb7e80965241d81adcc109",
+      "pair": "airdrop-distributor--mdantis-dev",
+      "domain_group": "airdrop-merkle",
+      "name": "should revert on claim when nothing is claimable",
+      "via_function": "34d71e1057691e1d98367700",
+      "chars": 1477
+    },
+    {
+      "chunk_id": 499,
+      "test_id": "7bccd286873c29c9230cb258",
+      "pair": "airdrop-distributor--mdantis-dev",
+      "domain_group": "airdrop-merkle",
+      "name": "should allow claim and reset claimable balance",
+      "via_function": "34d71e1057691e1d98367700",
+      "chars": 1735
+    },
+    {
+      "chunk_id": 810,
+      "test_id": "32d194ef8f096d1b334d0a9e",
+      "pair": "baltpayment-vault--jxlabsok",
+      "domain_group": "staking-yield",
+      "name": "should revert claim before claimableAt",
+      "via_function": "19f10d3d19262d83b64441c2",
+      "chars": 3010
+    },
+    {
+      "chunk_id": 811,
+      "test_id": "3c9491dd81c404d0e67037bb",
+      "pair": "baltpayment-vault--jxlabsok",
+      "domain_group": "staking-yield",
+      "name": "should revert claim from non-recipient",
+      "via_function": "19f10d3d19262d83b64441c2",
+      "chars": 3216
+    },
+    {
+      "chunk_id": 480,
+      "test_id": "d229759991482c975c4ebe6a",
+      "pair": "airdrop--ramirohr",
+      "domain_group": "airdrop-merkle",
+      "name": "Should prevent claiming when no airdrop is asigned",
+      "via_function": "c361a08f5936d3544c37a1f1",
+      "chars": 1079
+    },
+    {
+      "chunk_id": 479,
+      "test_id": "9a8ebcd6d4baf0e1f769f6e0",
+      "pair": "airdrop--ramirohr",
+      "domain_group": "airdrop-merkle",
+      "name": "Should allow users to claim  their airdrop",
+      "via_function": "c361a08f5936d3544c37a1f1",
+      "chars": 1404
+    },
+    {
+      "chunk_id": 5892,
+      "test_id": "a29f6ff68a36cc0210e555c2",
+      "pair": "rolling-pot-game--romankytseniuk",
+      "domain_group": "games-lotteries",
+      "name": "creates a game, resolves it, and allows winners to claim",
+      "via_function": "53d37945a5a898e5d8f391e5",
+      "chars": 2287
+    }
+  ]
+}

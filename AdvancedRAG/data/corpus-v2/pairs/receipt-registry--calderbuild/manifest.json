@@ -1,0 +1,53 @@
+{
+  "id": "receipt-registry--calderbuild",
+  "domain": "registry",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "ReceiptRegistry.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/calderbuild/SafeReceipt",
+    "commit": "ae78bdae89f72b9ac68370136269774d36bb7b7a",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/ReceiptRegistry.sol"
+    ],
+    "test_paths": [
+      "test/ReceiptRegistry.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/ReceiptRegistry.sol": "966c8fe22b6d64235449b0d9496ddf18c86c414c221527e884dc51dd6d9e70a2",
+      "test/ReceiptRegistry.test.ts": "3f79c79a8527d041689fb59200c4cc4bdefced7da1cab1d1178ad65169d7a901"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "ReceiptRegistry.test.js",
+      "upstream_path": "test/ReceiptRegistry.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "ReceiptRegistry.test.js",
+      "upstream_path": "test/ReceiptRegistry.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "ReceiptRegistry"
+      ],
+      "file": "ReceiptRegistry.test.js",
+      "upstream_path": "test/ReceiptRegistry.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "DOUBTFUL human authorship (flagged in search report). Receipt registry linking transactions to receipts with verification status (2026). Primary 90 non-blank lines, closure 90 lines/1 files; 13 its, 24 expects; pragma ^0.8.19.",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T12:07:40.194902+00:00"
+}

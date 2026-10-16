@@ -1,0 +1,44 @@
+{
+  "id": "oracle-manager--aaravg42",
+  "domain": "oracle",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "OracleManager.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/AaravG42/blanc-protocol",
+    "commit": "e4b22af7c73bc86390f90ad479fffc992d7605c8",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/OracleManager.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/oracle.test.ts"
+    ],
+    "license_file": "LICENCE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/OracleManager.sol": "55e71983d709f7c3cfef36be23d5e8a4d52dbe63e8e70da93b23fca330d34471",
+      "packages/hardhat/test/oracle.test.ts": "0955589ab5971273992fb8971448cacbd48a29fbe22fe3241feb4839c63b3791"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "oracle.test.js",
+      "upstream_path": "packages/hardhat/test/oracle.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "oracle.test.js",
+      "upstream_path": "packages/hardhat/test/oracle.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 181 lines, closure 181 lines, 1 files; 10 it blocks; history: 4 commits 2025-12-05..2025-12-06",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:29:27.593672+00:00"
+}

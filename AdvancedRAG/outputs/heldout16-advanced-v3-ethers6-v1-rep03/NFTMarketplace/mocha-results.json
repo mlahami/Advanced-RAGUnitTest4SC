@@ -1,0 +1,231 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 13,
+    "passes": 8,
+    "pending": 0,
+    "failures": 5,
+    "start": "2026-10-01T06:24:04.554Z",
+    "end": "2026-10-01T06:24:05.243Z",
+    "duration": 689
+  },
+  "tests": [
+    {
+      "title": "should set royalty correctly",
+      "fullTitle": "NFTMarketplace setRoyalty should set royalty correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "should revert when setting royalty above 10%",
+      "fullTitle": "NFTMarketplace setRoyalty should revert when setting royalty above 10%",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "should list NFT correctly",
+      "fullTitle": "NFTMarketplace list should list NFT correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "should revert when listing NFT not owned by caller",
+      "fullTitle": "NFTMarketplace list should revert when listing NFT not owned by caller",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "should revert when listing NFT not approved for marketplace",
+      "fullTitle": "NFTMarketplace list should revert when listing NFT not approved for marketplace",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "should buy NFT correctly with royalty",
+      "fullTitle": "NFTMarketplace buy should buy NFT correctly with royalty",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 16,
+      "err": {
+        "message": "expected 10000974999999999436092 to equal 10000974999999999368808.",
+        "stack": "AssertionError: expected 10000974999999999436092 to equal 10000974999999999368808.\n    at Context.<anonymous> (test\\generated.test.js:104:37)"
+      }
+    },
+    {
+      "title": "should buy NFT correctly without royalty when bps is 0",
+      "fullTitle": "NFTMarketplace buy should buy NFT correctly without royalty when bps is 0",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 15,
+      "err": {
+        "message": "expected 10001974999999999283918 to equal 10001974999999999227027.",
+        "stack": "AssertionError: expected 10001974999999999283918 to equal 10001974999999999227027.\n    at Context.<anonymous> (test\\generated.test.js:137:37)"
+      }
+    },
+    {
+      "title": "should refund excess payment",
+      "fullTitle": "NFTMarketplace buy should refund excess payment",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "should revert when buying unlisted NFT",
+      "fullTitle": "NFTMarketplace buy should revert when buying unlisted NFT",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "should revert when paying insufficient amount",
+      "fullTitle": "NFTMarketplace buy should revert when paying insufficient amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "should revert when royalty transfer fails",
+      "fullTitle": "NFTMarketplace buy should revert when royalty transfer fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Max 10%'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Max 10%'\n    at NFTMarketplace.setRoyalty (runs/heldout16-advanced-v3-ethers6-v1-rep03/NFTMarketplace/contracts/NFTMarketplace.sol:43)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.setRoyalty (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:177:7)"
+      }
+    },
+    {
+      "title": "should revert when seller transfer fails",
+      "fullTitle": "NFTMarketplace buy should revert when seller transfer fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "unsupported addressable value (argument=\"target\", value=null, code=INVALID_ARGUMENT, version=6.17.0)",
+        "stack": "TypeError: unsupported addressable value (argument=\"target\", value=null, code=INVALID_ARGUMENT, version=6.17.0)\n    at makeError (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\utils\\errors.ts:691:21)\n    at assert (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\utils\\errors.ts:719:25)\n    at assertArgument (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\utils\\errors.ts:731:5)\n    at resolveAddress (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\address\\checks.ts:122:19)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:172:60\n    at ParamType.#walkAsync (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\abi\\fragments.ts:779:24)\n    at ParamType.walkAsync (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\abi\\fragments.ts:797:24)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:170:22\n    at Array.map (<anonymous>)\n    at resolveArgs (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:169:37)"
+      }
+    },
+    {
+      "title": "should revert when refund fails",
+      "fullTitle": "NFTMarketplace buy should revert when refund fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "contract runner does not support sending transactions (operation=\"sendTransaction\", code=UNSUPPORTED_OPERATION, version=6.17.0)",
+        "stack": "Error: contract runner does not support sending transactions (operation=\"sendTransaction\", code=UNSUPPORTED_OPERATION, version=6.17.0)\n    at makeError (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\utils\\errors.ts:698:21)\n    at assert (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\utils\\errors.ts:719:25)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:310:15)\n    at Proxy.buy (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:22)\n    at Context.<anonymous> (test\\generated.test.js:213:61)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "should buy NFT correctly with royalty",
+      "fullTitle": "NFTMarketplace buy should buy NFT correctly with royalty",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 16,
+      "err": {
+        "message": "expected 10000974999999999436092 to equal 10000974999999999368808.",
+        "stack": "AssertionError: expected 10000974999999999436092 to equal 10000974999999999368808.\n    at Context.<anonymous> (test\\generated.test.js:104:37)"
+      }
+    },
+    {
+      "title": "should buy NFT correctly without royalty when bps is 0",
+      "fullTitle": "NFTMarketplace buy should buy NFT correctly without royalty when bps is 0",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 15,
+      "err": {
+        "message": "expected 10001974999999999283918 to equal 10001974999999999227027.",
+        "stack": "AssertionError: expected 10001974999999999283918 to equal 10001974999999999227027.\n    at Context.<anonymous> (test\\generated.test.js:137:37)"
+      }
+    },
+    {
+      "title": "should revert when royalty transfer fails",
+      "fullTitle": "NFTMarketplace buy should revert when royalty transfer fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "VM Exception while processing transaction: reverted with reason string 'Max 10%'",
+        "stack": "Error: VM Exception while processing transaction: reverted with reason string 'Max 10%'\n    at NFTMarketplace.setRoyalty (runs/heldout16-advanced-v3-ethers6-v1-rep03/NFTMarketplace/contracts/NFTMarketplace.sol:43)\n    at EdrProviderWrapper.request (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\hardhat-network\\provider\\provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\signers.ts:181:18)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:313:20)\n    at Proxy.setRoyalty (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:16)\n    at Context.<anonymous> (test\\generated.test.js:177:7)"
+      }
+    },
+    {
+      "title": "should revert when seller transfer fails",
+      "fullTitle": "NFTMarketplace buy should revert when seller transfer fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 6,
+      "err": {
+        "message": "unsupported addressable value (argument=\"target\", value=null, code=INVALID_ARGUMENT, version=6.17.0)",
+        "stack": "TypeError: unsupported addressable value (argument=\"target\", value=null, code=INVALID_ARGUMENT, version=6.17.0)\n    at makeError (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\utils\\errors.ts:691:21)\n    at assert (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\utils\\errors.ts:719:25)\n    at assertArgument (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\utils\\errors.ts:731:5)\n    at resolveAddress (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\address\\checks.ts:122:19)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:172:60\n    at ParamType.#walkAsync (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\abi\\fragments.ts:779:24)\n    at ParamType.walkAsync (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\abi\\fragments.ts:797:24)\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:170:22\n    at Array.map (<anonymous>)\n    at resolveArgs (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:169:37)"
+      }
+    },
+    {
+      "title": "should revert when refund fails",
+      "fullTitle": "NFTMarketplace buy should revert when refund fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 5,
+      "err": {
+        "message": "contract runner does not support sending transactions (operation=\"sendTransaction\", code=UNSUPPORTED_OPERATION, version=6.17.0)",
+        "stack": "Error: contract runner does not support sending transactions (operation=\"sendTransaction\", code=UNSUPPORTED_OPERATION, version=6.17.0)\n    at makeError (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\utils\\errors.ts:698:21)\n    at assert (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\utils\\errors.ts:719:25)\n    at send (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:310:15)\n    at Proxy.buy (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\ethers\\src.ts\\contract\\contract.ts:352:22)\n    at Context.<anonymous> (test\\generated.test.js:213:61)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "should set royalty correctly",
+      "fullTitle": "NFTMarketplace setRoyalty should set royalty correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "should revert when setting royalty above 10%",
+      "fullTitle": "NFTMarketplace setRoyalty should revert when setting royalty above 10%",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "should list NFT correctly",
+      "fullTitle": "NFTMarketplace list should list NFT correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 19,
+      "err": {}
+    },
+    {
+      "title": "should revert when listing NFT not owned by caller",
+      "fullTitle": "NFTMarketplace list should revert when listing NFT not owned by caller",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "should revert when listing NFT not approved for marketplace",
+      "fullTitle": "NFTMarketplace list should revert when listing NFT not approved for marketplace",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "should refund excess payment",
+      "fullTitle": "NFTMarketplace buy should refund excess payment",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "should revert when buying unlisted NFT",
+      "fullTitle": "NFTMarketplace buy should revert when buying unlisted NFT",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 11,
+      "err": {}
+    },
+    {
+      "title": "should revert when paying insufficient amount",
+      "fullTitle": "NFTMarketplace buy should revert when paying insufficient amount",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\NFTMarketplace\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    }
+  ]
+}

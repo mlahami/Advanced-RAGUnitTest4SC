@@ -1,0 +1,48 @@
+{
+  "contract": "CrossChainBridge",
+  "status": "test_failures",
+  "prompt_sha256": "f885fbfbe1141e17e81b7566b749088e09215d7ea57e4eb1eaa0e55466cf11db",
+  "generation_seconds": 16.908434099983424,
+  "usage": {
+    "prompt_tokens": 11784,
+    "total_tokens": 13825,
+    "completion_tokens": 2041,
+    "prompt_tokens_details": {
+      "cached_tokens": 11776
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.119447399978526
+  },
+  "passed_tests": 16,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "CrossChainBridge Validator Management Should allow owner to remove validators",
+      "error": "expected 3 to equal 2."
+    },
+    {
+      "title": "CrossChainBridge Locking Tokens Should lock tokens and emit Locked event",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+    },
+    {
+      "title": "CrossChainBridge Validating and Minting \"before each\" hook for \"Should allow validators to validate requests\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+    },
+    {
+      "title": "CrossChainBridge Fee Withdrawal Should allow owner to withdraw fees",
+      "error": "VM Exception while processing transaction: reverted with reason string 'insufficient allowance'"
+    }
+  ],
+  "coverage": {
+    "statements": 52.17,
+    "branches": 61.76,
+    "functions": 70.0,
+    "lines": 52.17
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

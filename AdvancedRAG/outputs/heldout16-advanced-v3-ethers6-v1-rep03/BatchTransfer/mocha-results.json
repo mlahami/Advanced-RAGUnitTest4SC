@@ -1,0 +1,213 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 13,
+    "passes": 11,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-10-01T06:20:34.277Z",
+    "end": "2026-10-01T06:20:34.986Z",
+    "duration": 709
+  },
+  "tests": [
+    {
+      "title": "Should batch send equal ETH amounts",
+      "fullTitle": "BatchTransfer ETH Batch Transfers Should batch send equal ETH amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "Should batch send variable ETH amounts",
+      "fullTitle": "BatchTransfer ETH Batch Transfers Should batch send variable ETH amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should revert if ETH amount is incorrect for equal batch",
+      "fullTitle": "BatchTransfer ETH Batch Transfers Should revert if ETH amount is incorrect for equal batch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should revert if ETH amount is incorrect for variable batch",
+      "fullTitle": "BatchTransfer ETH Batch Transfers Should revert if ETH amount is incorrect for variable batch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should revert if no recipients for ETH batch",
+      "fullTitle": "BatchTransfer ETH Batch Transfers Should revert if no recipients for ETH batch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should revert if ETH send fails",
+      "fullTitle": "BatchTransfer ETH Batch Transfers Should revert if ETH send fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should batch send equal ERC20 amounts",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers Should batch send equal ERC20 amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 31,
+      "err": {}
+    },
+    {
+      "title": "Should batch send variable ERC20 amounts",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers Should batch send variable ERC20 amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 28,
+      "err": {}
+    },
+    {
+      "title": "Should revert if ERC20 transfer fails",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers Should revert if ERC20 transfer fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 27,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'insufficient balance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'insufficient balance'\n    at Context.<anonymous> (test\\generated.test.js:207:7)"
+      }
+    },
+    {
+      "title": "Should revert if no recipients for ERC20 batch",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers Should revert if no recipients for ERC20 batch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert if array lengths mismatch for ERC20 equal batch",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers Should revert if array lengths mismatch for ERC20 equal batch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert if array lengths mismatch for ERC20 variable batch",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers Should revert if array lengths mismatch for ERC20 variable batch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent reentrancy during ETH batch transfer",
+      "fullTitle": "BatchTransfer Reentrancy Protection Should prevent reentrancy during ETH batch transfer",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "HH700: Artifact for contract \"ReentrantContract\" not found. ",
+        "stack": "HardhatError: HH700: Artifact for contract \"ReentrantContract\" not found. \n    at Artifacts._handleWrongArtifactForContractName (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\artifacts.ts:721:11)\n    at Artifacts._getArtifactPathFromFiles (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\artifacts.ts:852:19)\n    at Artifacts._getArtifactPath (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\artifacts.ts:516:21)\n    at Artifacts.readArtifact (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\artifacts.ts:71:26)\n    at getContractFactory (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\internal\\helpers.ts:120:22)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js:256:40)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should revert if ERC20 transfer fails",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers Should revert if ERC20 transfer fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 27,
+      "err": {
+        "message": "Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'insufficient balance'",
+        "stack": "AssertionError: Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'insufficient balance'\n    at Context.<anonymous> (test\\generated.test.js:207:7)"
+      }
+    },
+    {
+      "title": "Should prevent reentrancy during ETH batch transfer",
+      "fullTitle": "BatchTransfer Reentrancy Protection Should prevent reentrancy during ETH batch transfer",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 3,
+      "err": {
+        "message": "HH700: Artifact for contract \"ReentrantContract\" not found. ",
+        "stack": "HardhatError: HH700: Artifact for contract \"ReentrantContract\" not found. \n    at Artifacts._handleWrongArtifactForContractName (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\artifacts.ts:721:11)\n    at Artifacts._getArtifactPathFromFiles (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\artifacts.ts:852:19)\n    at Artifacts._getArtifactPath (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\artifacts.ts:516:21)\n    at Artifacts.readArtifact (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\hardhat\\src\\internal\\artifacts.ts:71:26)\n    at getContractFactory (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-ethers\\src\\internal\\helpers.ts:120:22)\n    at Context.<anonymous> (D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js:256:40)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should batch send equal ETH amounts",
+      "fullTitle": "BatchTransfer ETH Batch Transfers Should batch send equal ETH amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 17,
+      "err": {}
+    },
+    {
+      "title": "Should batch send variable ETH amounts",
+      "fullTitle": "BatchTransfer ETH Batch Transfers Should batch send variable ETH amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should revert if ETH amount is incorrect for equal batch",
+      "fullTitle": "BatchTransfer ETH Batch Transfers Should revert if ETH amount is incorrect for equal batch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 15,
+      "err": {}
+    },
+    {
+      "title": "Should revert if ETH amount is incorrect for variable batch",
+      "fullTitle": "BatchTransfer ETH Batch Transfers Should revert if ETH amount is incorrect for variable batch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should revert if no recipients for ETH batch",
+      "fullTitle": "BatchTransfer ETH Batch Transfers Should revert if no recipients for ETH batch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should revert if ETH send fails",
+      "fullTitle": "BatchTransfer ETH Batch Transfers Should revert if ETH send fails",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    },
+    {
+      "title": "Should batch send equal ERC20 amounts",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers Should batch send equal ERC20 amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 31,
+      "err": {}
+    },
+    {
+      "title": "Should batch send variable ERC20 amounts",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers Should batch send variable ERC20 amounts",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 28,
+      "err": {}
+    },
+    {
+      "title": "Should revert if no recipients for ERC20 batch",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers Should revert if no recipients for ERC20 batch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should revert if array lengths mismatch for ERC20 equal batch",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers Should revert if array lengths mismatch for ERC20 equal batch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert if array lengths mismatch for ERC20 variable batch",
+      "fullTitle": "BatchTransfer ERC20 Batch Transfers Should revert if array lengths mismatch for ERC20 variable batch",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep03\\BatchTransfer\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    }
+  ]
+}

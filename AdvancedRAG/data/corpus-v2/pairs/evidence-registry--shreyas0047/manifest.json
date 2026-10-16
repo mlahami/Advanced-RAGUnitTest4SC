@@ -1,0 +1,62 @@
+{
+  "id": "evidence-registry--shreyas0047",
+  "domain": "registry",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "EvidenceRegistry.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Shreyas0047/NyxTrace",
+    "commit": "9e2f1c23b9590f620fcc1988d65b4641c4cb6dbb",
+    "license": "MIT",
+    "contract_paths": [
+      "blockchain/contracts/EvidenceRegistry.sol"
+    ],
+    "test_paths": [
+      "blockchain/test/EvidenceRegistry.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "blockchain/contracts/EvidenceRegistry.sol": "a1f398db6047bc6d9e313c447614631e4500198d38fb1690ffc359e6f2e1cdb3",
+      "blockchain/test/EvidenceRegistry.test.ts": "d559ecb7eaf25fa1250a9a7ba2608f4d6c6a3a526303596ae8c6aa26c0ac7bee"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "EvidenceRegistry.test.js",
+      "upstream_path": "blockchain/test/EvidenceRegistry.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 5,
+      "file": "EvidenceRegistry.test.js",
+      "upstream_path": "blockchain/test/EvidenceRegistry.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "EvidenceRegistry"
+      ],
+      "file": "EvidenceRegistry.test.js",
+      "upstream_path": "blockchain/test/EvidenceRegistry.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "EvidenceRegistry.test.js",
+      "upstream_path": "blockchain/test/EvidenceRegistry.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Digital-evidence registry with batch registration, verification history and status changes (457 lines). Primary 457 non-blank lines, closure 457 lines/1 files; 29 its, 53 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:07:52.935267+00:00"
+}

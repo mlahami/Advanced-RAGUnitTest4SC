@@ -1,0 +1,160 @@
+{
+  "base_trace": null,
+  "pivot_steps": [
+    {
+      "retrieved": "5ce08550625b2c62dd057878",
+      "type": "test_case",
+      "delivered": [
+        "5ce08550625b2c62dd057878"
+      ]
+    },
+    {
+      "retrieved": "61d09206984b09d67f3fa35b",
+      "type": "function",
+      "delivered": [
+        "e64c1792b32a648b617c5d7e",
+        "e3660ecc15aad71e06d44425"
+      ]
+    },
+    {
+      "retrieved": "46054dbd24a38121b56f6a1d",
+      "type": "function",
+      "delivered": [
+        "2797c74234c1cc2f4ae7e1a2",
+        "ee49a47a0e7e01b67587a9ec"
+      ]
+    },
+    {
+      "retrieved": "5423813278ae9b38ea73c27b",
+      "type": "function",
+      "delivered": [
+        "b82b47d64a715b396fb985cc",
+        "634e56d67fa186eef11b4682"
+      ]
+    },
+    {
+      "retrieved": "9600f848f76a7a79d1017301",
+      "type": "function",
+      "delivered": [
+        "9ce2265773474add76e7babf",
+        "d9a6679f38778c6650cf3931"
+      ]
+    },
+    {
+      "retrieved": "8bb2dc4df02f939ff9639e1d",
+      "type": "function",
+      "delivered": [
+        "22d6192683633bc27944e40f",
+        "5ce08550625b2c62dd057878"
+      ]
+    }
+  ],
+  "selected": [
+    4626,
+    258,
+    259,
+    3827,
+    3828,
+    2625,
+    2626,
+    1236,
+    1238,
+    4628
+  ],
+  "context_chars": 13257,
+  "per_function": 2,
+  "contract": "Registry",
+  "retrieval_seconds": 0.13972139998804778,
+  "hits": [
+    {
+      "chunk_id": 4626,
+      "test_id": "5ce08550625b2c62dd057878",
+      "pair": "msmeidentity--aryan-chugh",
+      "domain_group": "registries-identity",
+      "name": "Should allow owner to set data",
+      "via_function": null,
+      "chars": 1131
+    },
+    {
+      "chunk_id": 258,
+      "test_id": "e64c1792b32a648b617c5d7e",
+      "pair": "agent-registry--m31527",
+      "domain_group": "registries-identity",
+      "name": "reverts on zero address",
+      "via_function": "61d09206984b09d67f3fa35b",
+      "chars": 1098
+    },
+    {
+      "chunk_id": 259,
+      "test_id": "e3660ecc15aad71e06d44425",
+      "pair": "agent-registry--m31527",
+      "domain_group": "registries-identity",
+      "name": "reverts on empty name",
+      "via_function": "61d09206984b09d67f3fa35b",
+      "chars": 1091
+    },
+    {
+      "chunk_id": 3827,
+      "test_id": "2797c74234c1cc2f4ae7e1a2",
+      "pair": "land-registry--vaishnavadevi-r",
+      "domain_group": "registries-identity",
+      "name": "should reject duplicate property registration",
+      "via_function": "46054dbd24a38121b56f6a1d",
+      "chars": 2122
+    },
+    {
+      "chunk_id": 3828,
+      "test_id": "ee49a47a0e7e01b67587a9ec",
+      "pair": "land-registry--vaishnavadevi-r",
+      "domain_group": "registries-identity",
+      "name": "should reject unauthorized property registration",
+      "via_function": "46054dbd24a38121b56f6a1d",
+      "chars": 1869
+    },
+    {
+      "chunk_id": 2625,
+      "test_id": "b82b47d64a715b396fb985cc",
+      "pair": "evidence-registry--shreyas0047",
+      "domain_group": "registries-identity",
+      "name": "should reject invalid transition REGISTERED -> PENDING",
+      "via_function": "5423813278ae9b38ea73c27b",
+      "chars": 1237
+    },
+    {
+      "chunk_id": 2626,
+      "test_id": "634e56d67fa186eef11b4682",
+      "pair": "evidence-registry--shreyas0047",
+      "domain_group": "registries-identity",
+      "name": "should emit EvidenceStatusUpdated on valid transition",
+      "via_function": "5423813278ae9b38ea73c27b",
+      "chars": 1314
+    },
+    {
+      "chunk_id": 1236,
+      "test_id": "9ce2265773474add76e7babf",
+      "pair": "certi-chain-registry--amit01-developer",
+      "domain_group": "registries-identity",
+      "name": "owner can register a certificate",
+      "via_function": "9600f848f76a7a79d1017301",
+      "chars": 1219
+    },
+    {
+      "chunk_id": 1238,
+      "test_id": "d9a6679f38778c6650cf3931",
+      "pair": "certi-chain-registry--amit01-developer",
+      "domain_group": "registries-identity",
+      "name": "rejects duplicate hash registration",
+      "via_function": "9600f848f76a7a79d1017301",
+      "chars": 1117
+    },
+    {
+      "chunk_id": 4628,
+      "test_id": "22d6192683633bc27944e40f",
+      "pair": "msmeidentity--aryan-chugh",
+      "domain_group": "registries-identity",
+      "name": "Should not allow unauthorized address to set data",
+      "via_function": "8bb2dc4df02f939ff9639e1d",
+      "chars": 1059
+    }
+  ]
+}

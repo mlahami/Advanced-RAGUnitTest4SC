@@ -1,0 +1,56 @@
+{
+  "contract": "CrossChainBridge",
+  "status": "test_failures",
+  "prompt_sha256": "69f0a41f962654b08924410f4046419751fc652aac552da4f81c108216cc493b",
+  "generation_seconds": 15.95352019998245,
+  "usage": {
+    "prompt_tokens": 11614,
+    "total_tokens": 13900,
+    "completion_tokens": 2286,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.716463900054805
+  },
+  "passed_tests": 17,
+  "failed_tests": 6,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "CrossChainBridge Validator Management Should allow owner to add validators",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Already validator'"
+    },
+    {
+      "title": "CrossChainBridge Validator Management Should update validator count correctly",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Already validator'"
+    },
+    {
+      "title": "CrossChainBridge Signature Threshold Should allow owner to set required signatures",
+      "error": "Event \"RequiredSignaturesUpdated\" doesn't exist in the contract"
+    },
+    {
+      "title": "CrossChainBridge Lock Functionality Should lock tokens and emit Locked event",
+      "error": "Error in \"Locked\" event: Error in the 1st argument assertion: expected '0x9e1e8f284ef5422c4ccffbb6f8ce0584f9d…' to equal '0x987590bd99ce47b51b1f3fecf61de52814e…'"
+    },
+    {
+      "title": "CrossChainBridge Validation and Minting \"before each\" hook for \"Should allow validators to validate requests\"",
+      "error": "Cannot read properties of undefined (reading 'name')"
+    },
+    {
+      "title": "CrossChainBridge Fee Withdrawal Should handle failed transfers",
+      "error": "bridge.connect(...).transferOwnership is not a function"
+    }
+  ],
+  "coverage": {
+    "statements": 69.57,
+    "branches": 67.65,
+    "functions": 80.0,
+    "lines": 69.57
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

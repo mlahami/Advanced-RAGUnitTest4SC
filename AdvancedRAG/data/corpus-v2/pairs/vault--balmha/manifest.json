@@ -1,0 +1,51 @@
+{
+  "id": "vault--balmha",
+  "domain": "yield-vault",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Vault.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/balmha/Vaultis",
+    "commit": "d70236256bf929687729d95fa559439038fcae4d",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Vault.sol"
+    ],
+    "test_paths": [
+      "test/Vault.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Vault.sol": "ea4ab6239fe836d344cc84581aa0c8fad2a5518b96c45c0117c68e9ba1bd0942",
+      "test/Vault.test.ts": "1be6ece7985e5c0c8259b333e32a1b71156795f1dc2026b6f8d7a1677c414867"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "Vault.test.js",
+      "upstream_path": "test/Vault.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "Vault.test.js",
+      "upstream_path": "test/Vault.test.ts"
+    },
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "Vault.test.js",
+      "upstream_path": "test/Vault.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "DOUBTFUL human authorship (all commits on one day, created 2026). | primary 86 lines, closure 86 lines, 1 files; 14 it blocks; history: 8 commits 2026-09-07..2026-09-07",
+  "authorship_doubt": true,
+  "imported_utc": "2026-09-28T10:33:27.667806+00:00"
+}

@@ -1,0 +1,82 @@
+{
+  "pair": "certificate-registry--sahilleth",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-30T07:34:37.778777+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/CertificateRegistry.sol": "764308fcf7ab85889c32e5c4bc0ebd94e4b66173a3c057906f5faefe29625196",
+    "LICENSE": "2b4b3c4a482d2f53f6307eadf3478067102512abd9fc7509e125fa57ce471ae1",
+    "manifest.json": "3b66d0d16ca815b46b863340335b9d36333f133e60380809b784f83cc9b4a39d",
+    "test/CertificateRegistry.test.js": "d860ebed0449729c9700f566555e8ca5160274ade5d0cf976d808d49cd984f98"
+  },
+  "pair_sha256": "70f8966d6fcb4a7aa42aac13a8734ea68e8e20692e4f19244fa57bd08fd8cc48",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "CertificateRegistry.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.16,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "CertificateRegistry.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.139,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "CertificateRegistry.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.128,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.67,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.57,
+      "mocha": {
+        "tests": 17,
+        "passes": 17,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "CertificateRegistry.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

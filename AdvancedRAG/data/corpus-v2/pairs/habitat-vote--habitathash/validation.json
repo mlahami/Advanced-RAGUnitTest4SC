@@ -1,0 +1,82 @@
+{
+  "pair": "habitat-vote--habitathash",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:21:05.009489+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/HabitatVote.sol": "e22ec180057c2e935c468734e861e7047e7aad289146999e13f5f6fed5f83352",
+    "LICENSE": "ba5809be906cacf13147be7e547f752fa84d37a29060d2c3c8f973a515e70f98",
+    "manifest.json": "c1db0135fd4706028bb28ec3d0e77ed913096d7f13e19cdd160e677baa1162c1",
+    "test/HabitatVote.test.js": "4f375c87283b641aeef9893a81f5c7205176239f43499d76242f447307e7ad74"
+  },
+  "pair_sha256": "a35732cb101347c627b12ceb955d87e2fac1d5959f5842ed68d71821799ee3d4",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "HabitatVote.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.125,
+        "signatures": 0.0,
+        "min_functions": 4
+      },
+      {
+        "contract": "HabitatVote.sol",
+        "reference": "Token.sol",
+        "structural": 0.113,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "HabitatVote.sol",
+        "reference": "MultiSigWallet.sol",
+        "structural": 0.105,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.79,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.88,
+      "mocha": {
+        "tests": 9,
+        "passes": 9,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "HabitatVote.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

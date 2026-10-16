@@ -1,0 +1,182 @@
+{
+  "target_functions": [
+    {
+      "target_function": "grantRole",
+      "corpus_functions": [
+        "471299ddf8352330ca365c0f",
+        "c266df4ded718fd768575795",
+        "57833a5e498ef9ece6c6e60d",
+        "5b7d27a8f1043996a8b77c05",
+        "411aa3039a7a51b2ff936aef",
+        "4084d590379ce1a8211f2e40",
+        "f44cd304a5dd3cde5b463f13",
+        "156c08ca8c88dc0f7cb1e9d3"
+      ],
+      "candidate_tests": [
+        "8d0ae8c603ac1e4d3689a109",
+        "57ee6f1d9bebdb2e3e622ab9",
+        "4918ae837c2e2ba16d6e79c4",
+        "e614f54cefe57377080f21c3",
+        "dd361496a38db1e7fc48bae3",
+        "57ee6f1d9bebdb2e3e622ab9"
+      ]
+    },
+    {
+      "target_function": "revokeRole",
+      "corpus_functions": [
+        "5b7d27a8f1043996a8b77c05",
+        "b8e973d261cd4102c817b6f4",
+        "47787cea72fefe0a8f5bfb68",
+        "c363cd1d6e7928b8795aa825",
+        "c38e7b8beb227cf422cf6c83",
+        "5b931da6876066e7d0c442d0",
+        "72cbd3a7d63779e6c5012d70",
+        "7f29eaa892fc5311f4beca68"
+      ],
+      "candidate_tests": [
+        "dd361496a38db1e7fc48bae3",
+        "57ee6f1d9bebdb2e3e622ab9",
+        "1659b76efc32dd4502522ef2",
+        "b12d491e1e2cb70246463c14",
+        "63b7b924f211baf859d46621"
+      ]
+    },
+    {
+      "target_function": "hasRole",
+      "corpus_functions": [
+        "1ad94654f901a29d2bad7103",
+        "0a043d9f6a0b5642afc06143",
+        "c1c311e9cd0279a212a71378",
+        "036cc4f5f5051680623e0411",
+        "9edc3b0eb21df4b58379cff7",
+        "92cdaafea873e07a9a483815",
+        "944ebaeb5ecd8f63c5c9344b",
+        "6a1a51db47c214fcf80513c4"
+      ],
+      "candidate_tests": [
+        "d79c601116b25eaf045130fe",
+        "57ee6f1d9bebdb2e3e622ab9",
+        "d1bea586eb8d9d868ccfa787",
+        "7ec57eb5506841558260b18b",
+        "9c716b8b8fdd6d4602a1ba49",
+        "55b0e942f5a5689cfc500907",
+        "19b6ea5afe20bb51f3a6e481",
+        "6c5170c7b560bf57deb263f0",
+        "80aa9d13dccbb827333d942f",
+        "fcc41cd1c522df32e4299463",
+        "2a353098743b87b5f0873b47",
+        "22450ff330f90fefc92e718f"
+      ]
+    }
+  ],
+  "selected": [
+    462,
+    463,
+    460,
+    461,
+    5643,
+    5636,
+    5640,
+    5642,
+    5637,
+    79
+  ],
+  "context_chars": 14955,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "AccessControl",
+  "retrieval_seconds": 7.355958400061354,
+  "hits": [
+    {
+      "chunk_id": 462,
+      "test_id": "8d0ae8c603ac1e4d3689a109",
+      "pair": "agri-bridge-traceability--mrnobody23-cloude",
+      "domain_group": "supply-chain",
+      "name": "Non-admin cannot grant roles",
+      "via_function": "471299ddf8352330ca365c0f",
+      "chars": 1582
+    },
+    {
+      "chunk_id": 463,
+      "test_id": "dd361496a38db1e7fc48bae3",
+      "pair": "agri-bridge-traceability--mrnobody23-cloude",
+      "domain_group": "supply-chain",
+      "name": "Admin cannot self-revoke ADMIN_ROLE (lockout prevention)",
+      "via_function": "5b7d27a8f1043996a8b77c05",
+      "chars": 1700
+    },
+    {
+      "chunk_id": 460,
+      "test_id": "d79c601116b25eaf045130fe",
+      "pair": "agri-bridge-traceability--mrnobody23-cloude",
+      "domain_group": "supply-chain",
+      "name": "Deployer has ADMIN_ROLE",
+      "via_function": "1ad94654f901a29d2bad7103",
+      "chars": 1556
+    },
+    {
+      "chunk_id": 461,
+      "test_id": "57ee6f1d9bebdb2e3e622ab9",
+      "pair": "agri-bridge-traceability--mrnobody23-cloude",
+      "domain_group": "supply-chain",
+      "name": "Admin can grant and revoke roles",
+      "via_function": "471299ddf8352330ca365c0f",
+      "chars": 1717
+    },
+    {
+      "chunk_id": 5643,
+      "test_id": "1659b76efc32dd4502522ef2",
+      "pair": "rbac--sharfshiplo",
+      "domain_group": "access-control",
+      "name": "Should revert if revoking non-existent role",
+      "via_function": "b8e973d261cd4102c817b6f4",
+      "chars": 1424
+    },
+    {
+      "chunk_id": 5636,
+      "test_id": "d1bea586eb8d9d868ccfa787",
+      "pair": "rbac--sharfshiplo",
+      "domain_group": "access-control",
+      "name": "Should grant ADMIN role to deployer",
+      "via_function": "0a043d9f6a0b5642afc06143",
+      "chars": 1266
+    },
+    {
+      "chunk_id": 5640,
+      "test_id": "4918ae837c2e2ba16d6e79c4",
+      "pair": "rbac--sharfshiplo",
+      "domain_group": "access-control",
+      "name": "Should revert if non-admin tries to grant ADMIN role",
+      "via_function": "c266df4ded718fd768575795",
+      "chars": 1437
+    },
+    {
+      "chunk_id": 5642,
+      "test_id": "b12d491e1e2cb70246463c14",
+      "pair": "rbac--sharfshiplo",
+      "domain_group": "access-control",
+      "name": "Should allow ADMIN to revoke MANAGER role",
+      "via_function": "b8e973d261cd4102c817b6f4",
+      "chars": 1369
+    },
+    {
+      "chunk_id": 5637,
+      "test_id": "7ec57eb5506841558260b18b",
+      "pair": "rbac--sharfshiplo",
+      "domain_group": "access-control",
+      "name": "Should check role hierarchy: ADMIN > MANAGER > USER",
+      "via_function": "0a043d9f6a0b5642afc06143",
+      "chars": 2147
+    },
+    {
+      "chunk_id": 79,
+      "test_id": "19b6ea5afe20bb51f3a6e481",
+      "pair": "access-registry--adelmarcio0",
+      "domain_group": "access-control",
+      "name": "Should set the correct admin",
+      "via_function": "036cc4f5f5051680623e0411",
+      "chars": 757
+    }
+  ]
+}

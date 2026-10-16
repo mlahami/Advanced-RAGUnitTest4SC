@@ -1,0 +1,572 @@
+{
+  "total": 14,
+  "completed": 14,
+  "statuses": {
+    "test_failures": 8,
+    "passed": 6
+  },
+  "results": [
+    {
+      "contract": "AccessControl",
+      "status": "test_failures",
+      "prompt_sha256": "da3e0b8462457592514b13c77454f57a3e48471659a288f9008f5abc7a41669e",
+      "generation_seconds": 7.389905300107785,
+      "usage": {
+        "prompt_tokens": 11199,
+        "total_tokens": 12081,
+        "completion_tokens": 882,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 27.308093899977393
+      },
+      "passed_tests": 7,
+      "failed_tests": 4,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "AccessControl Role Management Should allow admin to grant role",
+          "error": "Event \"RoleGranted\" doesn't exist in the contract"
+        },
+        {
+          "title": "AccessControl Role Management Should allow admin to revoke role",
+          "error": "Event \"RoleRevoked\" doesn't exist in the contract"
+        },
+        {
+          "title": "AccessControl Edge Cases Should handle role revocation for non-existent role",
+          "error": "Event \"RoleRevoked\" doesn't exist in the contract"
+        },
+        {
+          "title": "AccessControl Edge Cases Should handle role granting for existing role",
+          "error": "Event \"RoleGranted\" doesn't exist in the contract"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Adoption",
+      "status": "test_failures",
+      "prompt_sha256": "fe6f6df66090fa390271199f4a44ecfb3a7cdfa480f77ecd1720d7849dd76092",
+      "generation_seconds": 6.293197700055316,
+      "usage": {
+        "prompt_tokens": 10745,
+        "total_tokens": 11348,
+        "completion_tokens": 603,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.044105799985118
+      },
+      "passed_tests": 3,
+      "failed_tests": 3,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "Adoption Adopt Should allow adoption of a pet",
+          "error": "Event \"AdoptionEvent\" doesn't exist in the contract"
+        },
+        {
+          "title": "Adoption Adopt Should return the adopted pet ID",
+          "error": "HH17: The input value cannot be normalized to a BigInt: Value {\"_type\":\"TransactionResponse\",\"accessList\":null,\"blockNumber\":5,\"blockHash\":\"0xdc4fe418af5bf38f85c7a3ad2b772c59dc14aa8727ba40ea45a01170fee15079\",\"blobVersionedHashes\":null,\"chainId\":\"31337\",\"data\":\"0x8588b2c50000000000000000000000000000000000000000000000000000000000000003\",\"from\":\"0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC\",\"gasLimit\":\"1099511627775\",\"gasPrice\":\"1\",\"hash\":\"0xadfc974cf9a0825c6019d7da3791bc61fb93b0f873ba301e80253af8c0762ab7\",\"maxFeePerGas\":null,\"maxPriorityFeePerGas\":null,\"maxFeePerBlobGas\":null,\"nonce\":0,\"signature\":{\"_type\":\"signature\",\"networkV\":\"62710\",\"r\":\"0x7c447c54593984f085554c23eb5a2431feb3bf3a378c86ca38fb60c3e7a0843a\",\"s\":\"0x6e93b5ddc74cd9eaf8fb642993588e4812e2f708ffe7ddbc5190d357a44da85a\",\"v\":28},\"to\":\"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0\",\"type\":0,\"value\":\"0\"} is of type \"object\" but is not an instanceof one of the known big number object types."
+        },
+        {
+          "title": "Adoption Adopt Should revert when adopting an already adopted pet",
+          "error": "Expected transaction to be reverted with reason 'pet already adopted', but it didn't revert"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Auction",
+      "status": "test_failures",
+      "prompt_sha256": "d3b760d4392d757b968abfcd3b04eb4412978543729d94829f716c35bcd6bea3",
+      "generation_seconds": 10.71633299998939,
+      "usage": {
+        "prompt_tokens": 10521,
+        "total_tokens": 11786,
+        "completion_tokens": 1265,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.009512100019492
+      },
+      "passed_tests": 9,
+      "failed_tests": 2,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "Auction Deployment Should set the correct seller and end time",
+          "error": "Cannot mix BigInt and other types, use explicit conversions"
+        },
+        {
+          "title": "Auction Bidding Should accept a valid bid",
+          "error": "Event \"Bid\" doesn't exist in the contract"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Counter",
+      "status": "passed",
+      "prompt_sha256": "281633174a1c30f6d5dc1f004bb8764699c536911028d9fae1c4360108ebccee",
+      "generation_seconds": 6.5853164999280125,
+      "usage": {
+        "prompt_tokens": 10609,
+        "total_tokens": 11126,
+        "completion_tokens": 517,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 0,
+        "seconds": 3.889554599998519
+      },
+      "passed_tests": 8,
+      "failed_tests": 0,
+      "pending_tests": 0,
+      "failures": [],
+      "coverage": {
+        "statements": 0.0,
+        "branches": 0.0,
+        "functions": 0.0,
+        "lines": 0.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Crowdfunding",
+      "status": "test_failures",
+      "prompt_sha256": "4bac730a2e022f08d2585127ae4593dad7eea3a585ffeb634ce92f59a5bba04a",
+      "generation_seconds": 15.463283599936403,
+      "usage": {
+        "prompt_tokens": 11111,
+        "total_tokens": 12981,
+        "completion_tokens": 1870,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.137734099989757
+      },
+      "passed_tests": 13,
+      "failed_tests": 2,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "Crowdfunding Contributions Should allow contributions before deadline",
+          "error": "Event \"Contribution\" doesn't exist in the contract"
+        },
+        {
+          "title": "Crowdfunding Refunds Should not allow double refunds",
+          "error": "Event \"Refund\" doesn't exist in the contract"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Escrow",
+      "status": "test_failures",
+      "prompt_sha256": "6f35b3e7a84273bbe7ca2ee5f865ac86ec914c13d1c1b240385d7f7ce0259544",
+      "generation_seconds": 13.910510700079612,
+      "usage": {
+        "prompt_tokens": 10952,
+        "total_tokens": 12528,
+        "completion_tokens": 1576,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.644039900042117
+      },
+      "passed_tests": 2,
+      "failed_tests": 9,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "Escrow Deployment Should set the correct seller, buyer, and arbiter",
+          "error": "expected '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266' to equal '0x70997970C51812dc3A010C7d01b50e0d17dc79C8'."
+        },
+        {
+          "title": "Escrow Funding Should allow the buyer to fund the escrow",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        },
+        {
+          "title": "Escrow Funding Should revert if already funded",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        },
+        {
+          "title": "Escrow Funding Should revert if funding amount is zero",
+          "error": "Expected transaction to be reverted with reason 'invalid funding', but it reverted with reason 'only buyer'"
+        },
+        {
+          "title": "Escrow Releasing funds \"before each\" hook for \"Should allow the buyer to release funds\"",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        },
+        {
+          "title": "Escrow Refunding funds \"before each\" hook for \"Should allow the seller to refund\"",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        },
+        {
+          "title": "Escrow State changes Should correctly update state when funding",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        },
+        {
+          "title": "Escrow State changes Should correctly update state when releasing",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        },
+        {
+          "title": "Escrow State changes Should correctly update state when refunding",
+          "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+        }
+      ],
+      "coverage": {
+        "statements": 12.5,
+        "branches": 6.25,
+        "functions": 50.0,
+        "lines": 12.5
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "MetaCoin",
+      "status": "test_failures",
+      "prompt_sha256": "9537f90a4fe54dd0f5bd4c73083eb17f59cab85c096bc097dd443424bd03a726",
+      "generation_seconds": 5.986868200008757,
+      "usage": {
+        "prompt_tokens": 10213,
+        "total_tokens": 10805,
+        "completion_tokens": 592,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.442805500002578
+      },
+      "passed_tests": 7,
+      "failed_tests": 2,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "MetaCoin sendCoin Should fail if sender doesn't have enough coins",
+          "error": "Expected transaction to be reverted"
+        },
+        {
+          "title": "MetaCoin sendCoin Should fail when transferring to zero address",
+          "error": "Expected transaction to be reverted"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "MultiSigWallet",
+      "status": "test_failures",
+      "prompt_sha256": "f6a70d211f226480d823467d9991ccd53a8dc7b01d6efb903344f6b64a908372",
+      "generation_seconds": 12.005546000087634,
+      "usage": {
+        "prompt_tokens": 11166,
+        "total_tokens": 12719,
+        "completion_tokens": 1553,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 5.4108626000816
+      },
+      "passed_tests": 14,
+      "failed_tests": 7,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "MultiSigWallet submit should allow owner to submit transaction",
+          "error": "Event \"TransactionSubmitted\" doesn't exist in the contract"
+        },
+        {
+          "title": "MultiSigWallet confirm should allow owner to confirm transaction",
+          "error": "Event \"TransactionConfirmed\" doesn't exist in the contract"
+        },
+        {
+          "title": "MultiSigWallet confirm should revert if transaction is already executed",
+          "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+        },
+        {
+          "title": "MultiSigWallet execute should allow owner to execute transaction when threshold is met",
+          "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+        },
+        {
+          "title": "MultiSigWallet execute should revert if transaction is already executed",
+          "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+        },
+        {
+          "title": "MultiSigWallet execute should transfer funds correctly",
+          "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+        },
+        {
+          "title": "MultiSigWallet execute should mark transaction as executed",
+          "error": "VM Exception while processing transaction: reverted with reason string 'not enough confirmations'"
+        }
+      ],
+      "coverage": {
+        "statements": 85.71,
+        "branches": 77.27,
+        "functions": 100.0,
+        "lines": 85.71
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "PaymentSplitter",
+      "status": "test_failures",
+      "prompt_sha256": "d2664c9e942bdb9160543938cd41a84a44316fa58d3ff3d94390ac0c6aeed6d6",
+      "generation_seconds": 8.10068220004905,
+      "usage": {
+        "prompt_tokens": 10938,
+        "total_tokens": 11947,
+        "completion_tokens": 1009,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 1,
+        "seconds": 4.674700199975632
+      },
+      "passed_tests": 5,
+      "failed_tests": 1,
+      "pending_tests": 0,
+      "failures": [
+        {
+          "title": "PaymentSplitter Distribute Should handle distribution with zero balance after transfers",
+          "error": "Expected transaction to be reverted with reason 'no funds', but it didn't revert"
+        }
+      ],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Registry",
+      "status": "passed",
+      "prompt_sha256": "6a8451c3fd6c010a83d41c7246c4d5f82013a0c06e2a0e2f10a30c194b02e667",
+      "generation_seconds": 7.882014700095169,
+      "usage": {
+        "prompt_tokens": 10060,
+        "total_tokens": 10883,
+        "completion_tokens": 823,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 0,
+        "seconds": 4.9489447000669315
+      },
+      "passed_tests": 12,
+      "failed_tests": 0,
+      "pending_tests": 0,
+      "failures": [],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "SimpleStorage",
+      "status": "passed",
+      "prompt_sha256": "530e0584f14b2bc6f31fbc6cdac2baa6f35d7c672e17ca721f1078409df40f21",
+      "generation_seconds": 7.356804400100373,
+      "usage": {
+        "prompt_tokens": 11020,
+        "total_tokens": 11616,
+        "completion_tokens": 596,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 0,
+        "seconds": 4.379305400070734
+      },
+      "passed_tests": 7,
+      "failed_tests": 0,
+      "pending_tests": 0,
+      "failures": [],
+      "coverage": {
+        "statements": 0.0,
+        "branches": 100.0,
+        "functions": 0.0,
+        "lines": 0.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "TimelockVault",
+      "status": "passed",
+      "prompt_sha256": "e4a11853746d335f90f6dc9b5aa0c02cd58153c02291f5d9d7dcf47ca4b8d88b",
+      "generation_seconds": 6.423454099916853,
+      "usage": {
+        "prompt_tokens": 10614,
+        "total_tokens": 11320,
+        "completion_tokens": 706,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 0,
+        "seconds": 4.249577599926852
+      },
+      "passed_tests": 7,
+      "failed_tests": 0,
+      "pending_tests": 0,
+      "failures": [],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Token",
+      "status": "passed",
+      "prompt_sha256": "1cc4374526c11acc811addcade611d6ddf16425be4f7da62b9b0d78a5cf6dad1",
+      "generation_seconds": 8.414222700055689,
+      "usage": {
+        "prompt_tokens": 10968,
+        "total_tokens": 12026,
+        "completion_tokens": 1058,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 0,
+        "seconds": 4.854502400034107
+      },
+      "passed_tests": 14,
+      "failed_tests": 0,
+      "pending_tests": 0,
+      "failures": [],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    },
+    {
+      "contract": "Voting",
+      "status": "passed",
+      "prompt_sha256": "0d5ab37bd4c6aba6a0bb2138242184740ab59834521485fe46e2c98df698134e",
+      "generation_seconds": 7.422826600028202,
+      "usage": {
+        "prompt_tokens": 11653,
+        "total_tokens": 12307,
+        "completion_tokens": 654,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "service_tier": "standard"
+      },
+      "syntax_valid": true,
+      "execution": {
+        "exit_code": 0,
+        "seconds": 4.488517199992202
+      },
+      "passed_tests": 10,
+      "failed_tests": 0,
+      "pending_tests": 0,
+      "failures": [],
+      "coverage": {
+        "statements": 100.0,
+        "branches": 100.0,
+        "functions": 100.0,
+        "lines": 100.0
+      },
+      "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+    }
+  ]
+}

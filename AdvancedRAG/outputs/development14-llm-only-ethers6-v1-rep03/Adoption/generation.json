@@ -1,0 +1,19 @@
+{
+  "code": "const { expect } = require(\"chai\");\nconst { ethers } = require(\"hardhat\");\n\ndescribe(\"Adoption\", function () {\n  let adoption;\n  let owner;\n  let addr1;\n  let addr2;\n\n  beforeEach(async function () {\n    [owner, addr1, addr2] = await ethers.getSigners();\n\n    const Adoption = await ethers.getContractFactory(\"Adoption\");\n    adoption = await Adoption.deploy();\n    await adoption.waitForDeployment();\n  });\n\n  describe(\"Deployment\", function () {\n    it(\"Should set the correct initial adopters array\", async function () {\n      const adopters = await adoption.getAdopters();\n      expect(adopters.length).to.equal(16);\n      for (let i = 0; i < 16; i++) {\n        expect(adopters[i]).to.equal(ethers.ZeroAddress);\n      }\n    });\n  });\n\n  describe(\"Adopt\", function () {\n    it(\"Should adopt a pet and update the adopters array\", async function () {\n      const petId = 5n;\n      await adoption.connect(addr1).adopt(petId);\n\n      const adopters = await adoption.getAdopters();\n      expect(adopters[petId]).to.equal(addr1.address);\n    });\n\n    it(\"Should return the correct petId\", async function () {\n      const petId = 3n;\n      const result = await adoption.connect(addr2).adopt(petId);\n      expect(result).to.equal(petId);\n    });\n\n    it(\"Should revert when adopting a pet with invalid ID\", async function () {\n      const invalidPetId = 16n;\n      await expect(adoption.connect(addr1).adopt(invalidPetId))\n        .to.be.revertedWith(\"invalid pet\");\n    });\n\n    it(\"Should allow multiple adoptions of the same pet by different addresses\", async function () {\n      const petId = 7n;\n      await adoption.connect(addr1).adopt(petId);\n      await adoption.connect(addr2).adopt(petId);\n\n      const adopters = await adoption.getAdopters();\n      expect(adopters[petId]).to.equal(addr2.address);\n    });\n  });\n\n  describe(\"getAdopters\", function () {\n    it(\"Should return the correct adopters array\", async function () {\n      await adoption.connect(addr1).adopt(2n);\n      await adoption.connect(addr2).adopt(4n);\n\n      const adopters = await adoption.getAdopters();\n      expect(adopters[2]).to.equal(addr1.address);\n      expect(adopters[4]).to.equal(addr2.address);\n      for (let i = 0; i < 16; i++) {\n        if (i !== 2 && i !== 4) {\n          expect(adopters[i]).to.equal(ethers.ZeroAddress);\n        }\n      }\n    });\n  });\n});",
+  "metadata": {
+    "generation_seconds": 6.922337699972559,
+    "provider": "mistral",
+    "requested_model": "codestral-2508",
+    "returned_model": "codestral-2508",
+    "usage": {
+      "prompt_tokens": 6888,
+      "total_tokens": 7500,
+      "completion_tokens": 612,
+      "prompt_tokens_details": {
+        "cached_tokens": 6784
+      },
+      "service_tier": "standard"
+    }
+  },
+  "prompt_sha256": "0c10df5983c210ddee595c41f9f8f2f70094b25146a4ab1aeabfbea0a702c4a0"
+}

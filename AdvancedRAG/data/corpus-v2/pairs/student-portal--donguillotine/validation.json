@@ -1,0 +1,82 @@
+{
+  "pair": "student-portal--donguillotine",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:16:23.396419+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/StudentPortal.sol": "e47a1f51f9320d50a16e393b45ec5d7538cd8b5e5d0fa45e2c2708b1f17649df",
+    "LICENSE": "8c5c43219d047b47128b85c0138188b44ce72cc68491c1a45714e62a7e6835eb",
+    "manifest.json": "ea899d465aaf849c2b178fa00baa58ea691325c3533a08c89ece023df7273376",
+    "test/StudentPortal.js": "1321124f415124d4455ddf1563a0e053ff108f6e6bff5fdc84a588c445c97ee0"
+  },
+  "pair_sha256": "1c9d1383077ffd785127701c6939d8c5b9117bec3d8ae397d77bc12321d63336",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "StudentPortal.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.147,
+        "signatures": 0.0,
+        "min_functions": 6
+      },
+      {
+        "contract": "StudentPortal.sol",
+        "reference": "Registry.sol",
+        "structural": 0.146,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "StudentPortal.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.14,
+        "signatures": 0.0,
+        "min_functions": 6
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.12,
+      "mocha": {
+        "tests": 20,
+        "passes": 20,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.88,
+      "mocha": {
+        "tests": 20,
+        "passes": 20,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "StudentPortal.sol": {
+          "statements": 100.0,
+          "branches": 94.44,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

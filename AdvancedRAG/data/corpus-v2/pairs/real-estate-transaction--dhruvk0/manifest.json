@@ -1,0 +1,31 @@
+{
+  "id": "real-estate-transaction--dhruvk0",
+  "domain": "escrow",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "RealEstateTransaction.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/DhruvK0/B17-Blockchain-Capstone",
+    "commit": "8d24b57a7a6476f2e4592266b56239b110d27150",
+    "license": "MIT",
+    "contract_paths": [
+      "real-estate-contract/contracts/RealEstateTransaction.sol"
+    ],
+    "test_paths": [
+      "real-estate-contract/test/RealEstateTransaction.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "real-estate-contract/contracts/RealEstateTransaction.sol": "8b525d51a56b8786b72a7259a17aafd099ab93b48aec0d6c6d41b088ca50e0e4",
+      "real-estate-contract/test/RealEstateTransaction.js": "2448cd33f0fc7129271c2b18bb4b7957b046a2b6c704c7279646b5d6693693a3"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Real-estate listing/offer/accept flow with escrowed funds released by owner; capstone project; 6 its. Primary 132 non-blank lines, closure 132 lines/1 files; 6 its, 19 expects; pragma ^0.8.0.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:03:55.026799+00:00"
+}

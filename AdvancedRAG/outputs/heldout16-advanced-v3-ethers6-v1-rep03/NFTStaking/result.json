@@ -1,0 +1,60 @@
+{
+  "contract": "NFTStaking",
+  "status": "test_failures",
+  "prompt_sha256": "4607f70443e7840214198cea2fe36ecafd9e34b8d06da6835134bd5de8d997f7",
+  "generation_seconds": 14.9968781999778,
+  "usage": {
+    "prompt_tokens": 12723,
+    "total_tokens": 14567,
+    "completion_tokens": 1844,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.154813900007866
+  },
+  "passed_tests": 8,
+  "failed_tests": 7,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "NFTStaking Staking Should allow staking multiple NFTs",
+      "error": "Cannot read properties of undefined (reading 'length')"
+    },
+    {
+      "title": "NFTStaking Staking Should prevent staking already staked NFTs",
+      "error": "Expected transaction to be reverted with reason 'Already staked', but it reverted with reason 'Not owner'"
+    },
+    {
+      "title": "NFTStaking Unstaking Should allow unstaking multiple NFTs",
+      "error": "Cannot read properties of undefined (reading 'length')"
+    },
+    {
+      "title": "NFTStaking Rewards Should calculate pending rewards correctly",
+      "error": "expected 10 to be close to 10000000000000000000 +/- 100000000000000000"
+    },
+    {
+      "title": "NFTStaking Rewards Should allow claiming rewards",
+      "error": "expected 11 to be close to 10000000000000000000 +/- 100000000000000000"
+    },
+    {
+      "title": "NFTStaking Rewards Should emit RewardClaimed event when claiming rewards",
+      "error": "Error in \"RewardClaimed\" event: Error in the 2nd argument assertion: expected 11 to equal 10."
+    },
+    {
+      "title": "NFTStaking Views Should return correct pending rewards",
+      "error": "expected 10 to be close to 10000000000000000000 +/- 100000000000000000"
+    }
+  ],
+  "coverage": {
+    "statements": 97.3,
+    "branches": 87.5,
+    "functions": 100.0,
+    "lines": 97.22
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

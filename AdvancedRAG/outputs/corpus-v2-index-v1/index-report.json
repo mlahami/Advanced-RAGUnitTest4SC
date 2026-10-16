@@ -1,0 +1,59 @@
+{
+  "version": "corpus-v2-units-v1",
+  "corpus_sha256": "5cabf7d044a083ebddfb2477ea8f13a607464cfa32adc9e64d751935a1f85d4b",
+  "pairs": 225,
+  "files": 758,
+  "parse_status": {
+    "ast": 758
+  },
+  "parse_failures": [],
+  "chunk_count": 8531,
+  "indexed_chunks": 7773,
+  "artifact_types": {
+    "source_artifact": 758,
+    "function": 3513,
+    "test_case": 4260
+  },
+  "test_cases_linked": 3826,
+  "test_cases_linked_to_primary": 3716,
+  "primary_functions": 2298,
+  "primary_functions_tested": 1501,
+  "test_types": {
+    "positive": 2402,
+    "event": 632,
+    "revert": 1858,
+    "boundary": 1206,
+    "access": 207,
+    "time": 472,
+    "balance": 35
+  },
+  "function_roles": {
+    "reverts": 1571,
+    "state_changing": 2189,
+    "payment": 537,
+    "emits_events": 1185,
+    "access_control": 905,
+    "temporal": 515,
+    "view": 1086
+  },
+  "delivered_chars": {
+    "test_case": {
+      "min": 314,
+      "median": 1611,
+      "p90": 2817,
+      "max": 9867
+    },
+    "function": {
+      "min": 146,
+      "median": 370,
+      "p90": 1011,
+      "max": 5964
+    }
+  },
+  "limitations": [
+    "Labels and test-to-function links are lexical heuristics, not validated annotations.",
+    "A link means the test body calls a function of that name on some object; overloads and same-named functions of several pair contracts are all linked.",
+    "Test setup keeps before/beforeEach hooks and referenced declarations; after hooks are omitted.",
+    "The dense encoder truncates embedding_text to its token limit; delivered text is never truncated."
+  ]
+}

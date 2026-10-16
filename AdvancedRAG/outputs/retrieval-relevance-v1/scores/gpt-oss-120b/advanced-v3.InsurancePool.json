@@ -1,0 +1,73 @@
+{
+  "id": "advanced-v3.InsurancePool",
+  "config": "advanced-v3",
+  "method": "Advanced-RAGUnitTest4SC",
+  "contract": "InsurancePool",
+  "chunk_ids": [
+    6035,
+    588,
+    574,
+    3548,
+    7612,
+    3547,
+    7627,
+    6036,
+    6018
+  ],
+  "context_sha256": "db01f62518b3f808cc643676c86e02573e6443a8c9f358cbde3de9ca7ca4bb93",
+  "ratings": [
+    {
+      "chunk_id": 6035,
+      "rating": 2,
+      "reason": "Deposit test matches target's ETH deposit logic; can rename contract and check lpPositions balance after deposit."
+    },
+    {
+      "chunk_id": 588,
+      "rating": 1,
+      "reason": "Shows generic withdraw‑balance check pattern useful for testing InsurancePool withdrawals, but specific auction logic isn’t present."
+    },
+    {
+      "chunk_id": 574,
+      "rating": 1,
+      "reason": "Shows claimRewards pattern with reward distribution and balance check, applicable to InsurancePool’s claimRewards though token type differs"
+    },
+    {
+      "chunk_id": 3548,
+      "rating": 1,
+      "reason": "Only generic revert‑expectation pattern applies; specific payout logic and functions differ from InsurancePool’s triggerClaim/expirePolicy behavior."
+    },
+    {
+      "chunk_id": 7612,
+      "rating": 1,
+      "reason": "Shows balance‑increase after payout and claim processing pattern, but target uses owner‑only triggerClaim and different policy flow, so only generic pattern is reusable."
+    },
+    {
+      "chunk_id": 3547,
+      "rating": 0,
+      "reason": "Tests unrelated functions (oracle, createPolicy) not present in InsurancePool; no reusable patterns for deposit/withdraw/claim."
+    },
+    {
+      "chunk_id": 7627,
+      "rating": 1,
+      "reason": "Shows policy purchase pattern and count check, but uses different factory and functions; only generic purchase/assertion useful."
+    },
+    {
+      "chunk_id": 6036,
+      "rating": 2,
+      "reason": "Deposit test matches target's deposit emitting Deposited event, can be reused after renaming contract and variable names."
+    },
+    {
+      "chunk_id": 6018,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but the specific function and error differ from InsurancePool’s withdraw logic."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 22449,
+    "completion_tokens": 1002,
+    "calls": 9
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 97.1,
+  "evaluated_utc": "2026-10-14T18:22:31.461202+00:00"
+}

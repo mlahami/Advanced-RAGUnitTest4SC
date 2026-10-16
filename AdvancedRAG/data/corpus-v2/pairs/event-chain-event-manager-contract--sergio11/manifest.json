@@ -1,0 +1,40 @@
+{
+  "id": "event-chain-event-manager-contract--sergio11",
+  "domain": "ticketing-events",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "EventChainEventManagerContract.sol",
+    "EventChainContract.sol",
+    "IEventChainContract.sol",
+    "IEventChainEventManagerContract.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/sergio11/eventchain_blockchain",
+    "commit": "69ba748ab14665390356ba4bce827eb65b3d14c5",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/EventChainEventManagerContract.sol",
+      "contracts/EventChainContract.sol",
+      "contracts/IEventChainContract.sol",
+      "contracts/IEventChainEventManagerContract.sol"
+    ],
+    "test_paths": [
+      "test/EventChainEventManagerContract.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/EventChainEventManagerContract.sol": "855b0f0b0e90a6f698a821a73c279bf22317d6824c4101a3a34f8c4785e8b6d4",
+      "contracts/EventChainContract.sol": "8d17666cfb391f14981cfc9a1fb241868a00ea3c14e6713979ea90a7c9996e02",
+      "contracts/IEventChainContract.sol": "241bb381ddbdd871ed3bb47291615f270c97dc684b07a1eceabd217895617f81",
+      "contracts/IEventChainEventManagerContract.sol": "95d947d9fb426516d2c4830255c93279cf461d814b51a19a6953d413eee8987e",
+      "test/EventChainEventManagerContract.js": "ec99eb1de23da671462d9b2413736df4cc12a4504ee469472e4ff4021fa282e1"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "event manager (create/update events, sell tickets via EventChainContract); primary 97 lines; 9 it blocks (9/9 pass, stmt cov 100% on primary); same repo as previous entry; licence LICENSE; history as above",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-30T07:31:35.099059+00:00"
+}

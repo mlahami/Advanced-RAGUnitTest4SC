@@ -1,0 +1,89 @@
+{
+  "pair": "market-nft--paul-abhirup",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:14:29.261565+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/MarketNFT.sol": "8b79212f435ef1144f1720cb86b9c55670e20811b8104aad308bc9e9a74442f8",
+    "contracts/TicketNFT.sol": "6b0e6394c63ed7011658243a4a20a708800416caf24de1121f2028a921631ac3",
+    "LICENSE": "f4ddcff5e158de6bd72cdbff4ecfa318f281cc9e751338aa57083d50a306a0c8",
+    "manifest.json": "fab44dd0070121434417d62cc2032ac1975454f6c0bbb2fbe97f323bb7b9a7e9",
+    "test/Marketplace.test.js": "23fb1dd69a2609d047df5b507829c22bc068c556de90972cd47197163e4a39c0"
+  },
+  "pair_sha256": "1370014496f27dfd9947cbcfb9af813a621a4aac7379039b7a1075055ebe43ff",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "MarketNFT.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.189,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "MarketNFT.sol",
+        "reference": "NFTMarketplace.sol",
+        "structural": 0.182,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "MarketNFT.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.158,
+        "signatures": 0.0,
+        "min_functions": 5
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.56,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.11,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "MarketNFT.sol": {
+          "statements": 95.83,
+          "branches": 54.55,
+          "functions": 100.0,
+          "lines": 95.83
+        },
+        "TicketNFT.sol": {
+          "statements": 50.0,
+          "branches": 33.33,
+          "functions": 40.0,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,82 @@
+{
+  "pair": "exchange-office--fant1k34",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:44:26.955908+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ExchangeOffice.sol": "6ef6cbeb62dcdb6091014edc48877ca17546dc9ffde974872d83269089e6da94",
+    "LICENSE": "b469ae64938908b99c0014ac427201007bd14a544773eb58433f2c9a83dc13f7",
+    "manifest.json": "37f8637246023360116ff0d9e8e8cf740ac25455e765877d140b97aacaebda00",
+    "test/exchangeOffice.js": "e7b83fd41940d8be0937b68eb4d741244148d873e8627de66345f5c2cd687e50"
+  },
+  "pair_sha256": "e88463d5049e1724599759225a45079fd1e643c2d286a736ece00cce17de9a6c",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "ExchangeOffice.sol",
+        "reference": "Crowdfunding.sol",
+        "structural": 0.172,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "ExchangeOffice.sol",
+        "reference": "Escrow.sol",
+        "structural": 0.152,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "ExchangeOffice.sol",
+        "reference": "TimelockVault.sol",
+        "structural": 0.134,
+        "signatures": 0.0,
+        "min_functions": 1
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.63,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.85,
+      "mocha": {
+        "tests": 8,
+        "passes": 8,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "ExchangeOffice.sol": {
+          "statements": 93.75,
+          "branches": 66.67,
+          "functions": 88.89,
+          "lines": 93.75
+        }
+      }
+    }
+  },
+  "accepted": true
+}

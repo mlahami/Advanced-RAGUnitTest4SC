@@ -1,0 +1,31 @@
+{
+  "id": "product-passport--ahmed1av",
+  "domain": "supply-chain",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "ProductPassport.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ahmed1av/Bucchain",
+    "commit": "385496dc51c320287e7119bd9d4f88b43920f2ae",
+    "license": "MIT",
+    "contract_paths": [
+      "blockchain/contracts/ProductPassport.sol"
+    ],
+    "test_paths": [
+      "blockchain/test/ProductPassport.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "blockchain/contracts/ProductPassport.sol": "e4d18f113c852c8ba59722c8aa0aa49dcf5a5063a35d480eaf60d359c4c3c4db",
+      "blockchain/test/ProductPassport.test.js": "a7ffd387f2e9428f64099d331c456e993925d65aedff4f55495c566ee6b667a7"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Digital product passport / provenance records with authorised manufacturers, status updates, tracking events and pause; 59 its; 13 commits over 2 days. Primary 197 non-blank lines, closure 197 lines/1 files; 59 its, 90 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:52.953855+00:00"
+}

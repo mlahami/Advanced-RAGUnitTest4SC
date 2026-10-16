@@ -1,0 +1,79 @@
+{
+  "id": "rag-v2.NFTMarketplace",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "NFTMarketplace",
+  "chunk_ids": [
+    5075,
+    5077,
+    1075,
+    1070,
+    1071,
+    4346,
+    1077,
+    1074,
+    4304,
+    4305
+  ],
+  "context_sha256": "80caa3ed7598e8eddabb6b749cffd574a0c4950b4592d0c7afce8fa9bad3f4d7",
+  "ratings": [
+    {
+      "chunk_id": 5075,
+      "rating": 1,
+      "reason": "Shows generic listing‑then‑buy flow and ownership check, but uses different function names and fee logic not present in target contract."
+    },
+    {
+      "chunk_id": 5077,
+      "rating": 1,
+      "reason": "Tests generic price-require revert pattern, but uses different function names and error messages not present in target contract."
+    },
+    {
+      "chunk_id": 1075,
+      "rating": 1,
+      "reason": "Tests approval, listing, and buy flow but checks a non‑existent owner‑self‑buy revert; pattern useful for setup but behavior not in target."
+    },
+    {
+      "chunk_id": 1070,
+      "rating": 2,
+      "reason": "Tests owner‑only sell with revert, matching marketplace list’s owner check; setup and revert assertion can be reused after renaming."
+    },
+    {
+      "chunk_id": 1071,
+      "rating": 1,
+      "reason": "Tests generic revert on invalid price, but NFTMarketplace.list has no price‑zero check, so only pattern is reusable, not behavior."
+    },
+    {
+      "chunk_id": 4346,
+      "rating": 1,
+      "reason": "Tests royalty setting and event emission, which loosely matches marketplace's setRoyalty pattern but not the core listing/buy logic."
+    },
+    {
+      "chunk_id": 1077,
+      "rating": 2,
+      "reason": "Tests listing, approval, buying, ownership transfer and listing removal—same core marketplace behavior, only contract names differ, making it directly reusable after renaming."
+    },
+    {
+      "chunk_id": 1074,
+      "rating": 2,
+      "reason": "Tests buying when item not listed, similar revert condition; pattern can be reused with target’s buy and \"Not listed\" revert message."
+    },
+    {
+      "chunk_id": 4304,
+      "rating": 1,
+      "reason": "Tests price‑validation revert pattern, but target uses different revert message and no custom error, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 4305,
+      "rating": 1,
+      "reason": "Tests buy revert when item not listed, similar logic but uses custom error not present in target contract"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 14456,
+    "completion_tokens": 1275,
+    "calls": 10
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 90.7,
+  "evaluated_utc": "2026-10-13T07:31:26.983711+00:00"
+}

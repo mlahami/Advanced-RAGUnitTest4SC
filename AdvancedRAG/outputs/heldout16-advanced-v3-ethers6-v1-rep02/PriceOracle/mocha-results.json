@@ -1,0 +1,295 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 18,
+    "passes": 14,
+    "pending": 0,
+    "failures": 4,
+    "start": "2026-10-01T06:18:39.266Z",
+    "end": "2026-10-01T06:18:39.801Z",
+    "duration": 535
+  },
+  "tests": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "PriceOracle Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct configuration parameters",
+      "fullTitle": "PriceOracle Deployment Should set the correct configuration parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to add feeders",
+      "fullTitle": "PriceOracle Feeder Management Should allow owner to add feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owner from adding feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent non-owner from adding feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should prevent adding duplicate feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent adding duplicate feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to remove feeders",
+      "fullTitle": "PriceOracle Feeder Management Should allow owner to remove feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owner from removing feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent non-owner from removing feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should allow feeders to submit prices",
+      "fullTitle": "PriceOracle Price Submission Should allow feeders to submit prices",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-feeders from submitting prices",
+      "fullTitle": "PriceOracle Price Submission Should prevent non-feeders from submitting prices",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent zero price submissions",
+      "fullTitle": "PriceOracle Price Submission Should prevent zero price submissions",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent duplicate submissions from the same feeder",
+      "fullTitle": "PriceOracle Price Submission Should prevent duplicate submissions from the same feeder",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should aggregate prices when required feeders submit",
+      "fullTitle": "PriceOracle Price Submission Should aggregate prices when required feeders submit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 4,
+      "err": {
+        "message": "anyValue is not defined",
+        "stack": "ReferenceError: anyValue is not defined\n    at Context.<anonymous> (test\\generated.test.js:110:50)"
+      }
+    },
+    {
+      "title": "Should trip circuit breaker for large price deviation",
+      "fullTitle": "PriceOracle Price Submission Should trip circuit breaker for large price deviation",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 28,
+      "err": {}
+    },
+    {
+      "title": "Should return the latest price",
+      "fullTitle": "PriceOracle Price Reading Should return the latest price",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 13,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:137:45)"
+      }
+    },
+    {
+      "title": "Should revert when no price data exists",
+      "fullTitle": "PriceOracle Price Reading Should revert when no price data exists",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert when price is stale",
+      "fullTitle": "PriceOracle Price Reading Should revert when price is stale",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:151:7)"
+      }
+    },
+    {
+      "title": "Should calculate TWAP correctly",
+      "fullTitle": "PriceOracle Price Reading Should calculate TWAP correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:166:7)"
+      }
+    },
+    {
+      "title": "Should revert when no TWAP data exists",
+      "fullTitle": "PriceOracle Price Reading Should revert when no TWAP data exists",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should aggregate prices when required feeders submit",
+      "fullTitle": "PriceOracle Price Submission Should aggregate prices when required feeders submit",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 4,
+      "err": {
+        "message": "anyValue is not defined",
+        "stack": "ReferenceError: anyValue is not defined\n    at Context.<anonymous> (test\\generated.test.js:110:50)"
+      }
+    },
+    {
+      "title": "Should return the latest price",
+      "fullTitle": "PriceOracle Price Reading Should return the latest price",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 13,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:137:45)"
+      }
+    },
+    {
+      "title": "Should revert when price is stale",
+      "fullTitle": "PriceOracle Price Reading Should revert when price is stale",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 10,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:151:7)"
+      }
+    },
+    {
+      "title": "Should calculate TWAP correctly",
+      "fullTitle": "PriceOracle Price Reading Should calculate TWAP correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "time is not defined",
+        "stack": "ReferenceError: time is not defined\n    at Context.<anonymous> (test\\generated.test.js:166:7)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "PriceOracle Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct configuration parameters",
+      "fullTitle": "PriceOracle Deployment Should set the correct configuration parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to add feeders",
+      "fullTitle": "PriceOracle Feeder Management Should allow owner to add feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owner from adding feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent non-owner from adding feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should prevent adding duplicate feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent adding duplicate feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to remove feeders",
+      "fullTitle": "PriceOracle Feeder Management Should allow owner to remove feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 8,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owner from removing feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent non-owner from removing feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "Should allow feeders to submit prices",
+      "fullTitle": "PriceOracle Price Submission Should allow feeders to submit prices",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-feeders from submitting prices",
+      "fullTitle": "PriceOracle Price Submission Should prevent non-feeders from submitting prices",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent zero price submissions",
+      "fullTitle": "PriceOracle Price Submission Should prevent zero price submissions",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should prevent duplicate submissions from the same feeder",
+      "fullTitle": "PriceOracle Price Submission Should prevent duplicate submissions from the same feeder",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should trip circuit breaker for large price deviation",
+      "fullTitle": "PriceOracle Price Submission Should trip circuit breaker for large price deviation",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 28,
+      "err": {}
+    },
+    {
+      "title": "Should revert when no price data exists",
+      "fullTitle": "PriceOracle Price Reading Should revert when no price data exists",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "Should revert when no TWAP data exists",
+      "fullTitle": "PriceOracle Price Reading Should revert when no TWAP data exists",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-advanced-v3-ethers6-v1-rep02\\PriceOracle\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "contract": "BatchTransfer",
+  "status": "test_failures",
+  "prompt_sha256": "72785913e555c914f9ba6b7d42f578533cb7f5507a1e8177531620a5bd2ccca4",
+  "generation_seconds": 11.94504030002281,
+  "usage": {
+    "prompt_tokens": 7954,
+    "total_tokens": 9937,
+    "completion_tokens": 1983,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 7.587685500038788
+  },
+  "passed_tests": 11,
+  "failed_tests": 2,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "BatchTransfer ERC20 Batch Transfers should revert when transfer fails for ERC20 equal batch",
+      "error": "Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'insufficient allowance'"
+    },
+    {
+      "title": "BatchTransfer ERC20 Batch Transfers should revert when transfer fails for ERC20 variable batch",
+      "error": "Expected transaction to be reverted with reason 'Transfer failed', but it reverted with reason 'insufficient allowance'"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 90.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

@@ -1,0 +1,82 @@
+{
+  "pair": "baltpayments-subscription-registry--jxlabsok",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:42:19.795802+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/BALTPaymentsSubscriptionRegistry.sol": "69862e29a9d373b7bf7bab50f5de785af732ccd4e230c9440b7c3861aa386882",
+    "LICENSE": "9dc6f5f9cc75e0e02df8de0f3b1ceec9230ead0eec6ddd3e952c08df5d3116a2",
+    "manifest.json": "dcec93e010bb63434a49b665c4f4f1740d63c54feb8de6cf4fbc86c30ecfc7fe",
+    "test/BALTPaymentsSubscriptionRegistry.test.js": "6628cee5eb5e88c5bc46bec5e66e90fb3b51d2e479af3a65b7f0feb0620eb852"
+  },
+  "pair_sha256": "bc58c170b71505347b3e6dc65d0675ddebb1c452f979805695cc6edbcd2b40d1",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "BALTPaymentsSubscriptionRegistry.sol",
+        "reference": "TokenVesting.sol",
+        "structural": 0.19,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "BALTPaymentsSubscriptionRegistry.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.189,
+        "signatures": 0.0,
+        "min_functions": 5
+      },
+      {
+        "contract": "BALTPaymentsSubscriptionRegistry.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.184,
+        "signatures": 0.0,
+        "min_functions": 7
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.88,
+      "mocha": {
+        "tests": 32,
+        "passes": 32,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.05,
+      "mocha": {
+        "tests": 32,
+        "passes": 32,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "BALTPaymentsSubscriptionRegistry.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

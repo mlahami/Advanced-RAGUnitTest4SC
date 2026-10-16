@@ -1,0 +1,61 @@
+{
+  "id": "rag-v2.DEX",
+  "config": "rag-v2",
+  "method": "RAGUnitTest4SC",
+  "contract": "DEX",
+  "chunk_ids": [
+    6109,
+    6110,
+    6114,
+    2664,
+    2665,
+    2666,
+    5710
+  ],
+  "context_sha256": "01e9369beda430268d7daec69d4dbe43a0f45391bc7c824a6c2f1b8b14813514",
+  "ratings": [
+    {
+      "chunk_id": 6109,
+      "rating": 1,
+      "reason": "Provides generic swap/approve/event/balance pattern useful, but target DEX uses different swap functions and no rate parameter, so not directly reusable."
+    },
+    {
+      "chunk_id": 6110,
+      "rating": 1,
+      "reason": "Shows approve‑swap pattern and balance assertion, but DEX uses specific swapAforB/BforA functions, not generic swap with rate, so only generic pattern applies."
+    },
+    {
+      "chunk_id": 6114,
+      "rating": 1,
+      "reason": "Tests generic swap revert on excess amount; DEX has different swap functions and messages, but pattern of expecting revert on insufficient liquidity is reusable."
+    },
+    {
+      "chunk_id": 2664,
+      "rating": 1,
+      "reason": "Tests addLiquidity revert pattern, but DEX lacks ZeroAmount check; only generic addLiquidity testing pattern applies."
+    },
+    {
+      "chunk_id": 2665,
+      "rating": 2,
+      "reason": "Tests proportional share minting on addLiquidity, matching DEX’s share calculation logic; setup and assertions can be reused after renaming."
+    },
+    {
+      "chunk_id": 2666,
+      "rating": 0,
+      "reason": "DEX lacks ERC‑20 LP token and transfer function; test checks LP token transfer, which DEX does not support."
+    },
+    {
+      "chunk_id": 5710,
+      "rating": 1,
+      "reason": "Shows generic revert assertion pattern, but tests unrelated function and uses custom error; only marginally useful for DEX’s require‑revert checks."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 13330,
+    "completion_tokens": 843,
+    "calls": 7
+  },
+  "judge": "gpt-oss-120b",
+  "seconds": 2.8,
+  "evaluated_utc": "2026-10-13T07:24:14.312540+00:00"
+}

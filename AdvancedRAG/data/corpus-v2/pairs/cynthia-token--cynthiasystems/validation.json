@@ -1,0 +1,82 @@
+{
+  "pair": "cynthia-token--cynthiasystems",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-27T22:12:22.506673+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/CynthiaToken.sol": "c94d16e167a1c284e55bf822c254187fb2551c47f8d2dd6941c10e8acb928010",
+    "LICENSE": "994d233544a1fcb1d8ac18f6ffb15f101eeb98545c23baeaf52e8b53ad80a9de",
+    "manifest.json": "b95d498886ab016fc239dca5f0bb80712ec31db70586d458fb25f7793f42e5e7",
+    "test/CynthiaToken.test.js": "1ce6a41e281d4394c4dbd08632b1c14e4786cde6226827a892c74e69910c865f"
+  },
+  "pair_sha256": "5983995b35651cb4091f15fcfca6f8797dbdf8dd5d8c2cb34785b563445073b6",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "CynthiaToken.sol",
+        "reference": "SimpleStorage.sol",
+        "structural": 0.034,
+        "signatures": 0.0,
+        "min_functions": 0
+      },
+      {
+        "contract": "CynthiaToken.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.031,
+        "signatures": 0.0,
+        "min_functions": 0
+      },
+      {
+        "contract": "CynthiaToken.sol",
+        "reference": "TimelockVault.sol",
+        "structural": 0.029,
+        "signatures": 0.0,
+        "min_functions": 0
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.85,
+      "mocha": {
+        "tests": 18,
+        "passes": 18,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.05,
+      "mocha": {
+        "tests": 18,
+        "passes": 18,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "CynthiaToken.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

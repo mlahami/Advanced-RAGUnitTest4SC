@@ -1,0 +1,117 @@
+{
+  "pair": "cross-chain-governor--kdsmith18542",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:36:54.326235+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/CrossChainGovernor.sol": "932ac3ea88dcfa458f7337888422dfb05632c5caffc14ebd7979a0b43cc9a39b",
+    "contracts/ERC20Mock.sol": "7a122ee9b01303eabb15996edc9c24f0d726be86ef976208b21e97f45afacf8a",
+    "contracts/ICrossChainBridge.sol": "fa9e81e2b475c8fe7911ddbd88ecb8f0119ecbbddcec922b36979c6e19888c9f",
+    "contracts/LayerZeroBridge.sol": "68897b9291a4ed3df1a17f98e57677a80ebb876c9be2a272f78163324320668a",
+    "contracts/MockCrossChainBridge.sol": "ad97191e0b9d30ce6a0529a495d089bc58bd85699a1a103d79c512fae77749b0",
+    "contracts/ResurgeBridgeToken.sol": "e29310ec013d817887ea06339ac2550137ec8b67d81608d6d0f7ba5516ffcf77",
+    "LICENSE": "f959b1471fb7cc90342f4495abbb3180854372e6001199c83d549bd8f2c410d3",
+    "manifest.json": "dda29bb766c56185badb28a78c83f1aad6fb233ef40f0ceaa2947d0971a5ad7c",
+    "test/CrossChain.test.js": "93d83dbc08f7f4d28fa930d67fc273ca11f0cb2d3ada9d5ae6e71c265d32275c"
+  },
+  "pair_sha256": "a255ef3d639737702e01fe4f0a2fe4b614dcbd7c1da5ff9b5234b8b041caf3b6",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "ResurgeBridgeToken.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.164,
+        "signatures": 0.0,
+        "min_functions": 7
+      },
+      {
+        "contract": "CrossChainGovernor.sol",
+        "reference": "DAOGovernor.sol",
+        "structural": 0.157,
+        "signatures": 0.059,
+        "min_functions": 5
+      },
+      {
+        "contract": "CrossChainGovernor.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.142,
+        "signatures": 0.0,
+        "min_functions": 9
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.1,
+      "mocha": {
+        "tests": 42,
+        "passes": 42,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.04,
+      "mocha": {
+        "tests": 42,
+        "passes": 42,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "CrossChainGovernor.sol": {
+          "statements": 71.67,
+          "branches": 42.22,
+          "functions": 85.71,
+          "lines": 71.67
+        },
+        "ICrossChainBridge.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "MockCrossChainBridge.sol": {
+          "statements": 86.67,
+          "branches": 57.14,
+          "functions": 85.71,
+          "lines": 86.67
+        },
+        "ResurgeBridgeToken.sol": {
+          "statements": 91.67,
+          "branches": 60.53,
+          "functions": 87.5,
+          "lines": 91.67
+        },
+        "LayerZeroBridge.sol": {
+          "statements": 26.92,
+          "branches": 23.53,
+          "functions": 62.5,
+          "lines": 26.92
+        },
+        "ERC20Mock.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 50.0,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

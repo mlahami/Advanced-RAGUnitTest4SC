@@ -1,0 +1,138 @@
+{
+  "pair": "depeg-guard--kcolbchain",
+  "validator": "corpus-v2-validate-pair-v4",
+  "validated_utc": "2026-09-29T23:34:35.704190+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/BurnToll.sol": "b2fb1c17891027c44ef73b8cc3f2f87323a318e4af620598b94bd109732abc14",
+    "contracts/ChainlinkPoRAdapter.sol": "45535f041157d73351977e4420d9909a1cf86e8095320f9b51a131e613088e95",
+    "contracts/ChainlinkPoRMock.sol": "3d32d825d22c95218758ff06a23838889d93dfc81470c911797606e35b4957bd",
+    "contracts/ComplianceModule.sol": "bada399f41bb1540e657a58f5bd48f7590860f926aef3c8f5c8c99a1f8b27cb6",
+    "contracts/DepegGuard.sol": "1d94c3d81251b37750f1ee591fe51a2e501a1320dde4051723cbdfe915e8adb5",
+    "contracts/IAggregatorV3.sol": "079784afbbd69d41c7b3e6acff5d4f8d4eaa2901c13f024c35cd7f8a14c0e6bf",
+    "contracts/Minter.sol": "609e875211f16c6241a78c7dc3f6cdf1ef32c1bc7298ecfd5c9574fd00ca1bd6",
+    "contracts/ReserveManager.sol": "7f0180ec0ec1a40d171142d8fa08103710c6e6cabd14d19c09ca50ec8ed6f18d",
+    "contracts/Stablecoin.sol": "ae90f9e9ddf49026a10bf1568a18a7fe0e0782e73b213d1a94b4ad081c0143db",
+    "LICENSE": "5aa670d6e29075b73a0d23d450cd1ffabd97de7155a95d38fe48c33b66aa7bce",
+    "manifest.json": "de85dd071424a90e0eaae67af6d5a70779d9139be5aa9e6fb592f41f99a3785d",
+    "test/DepegGuard.test.js": "6a65c3f308426d62d03b2ab9f1bf23b8d7c4f8f5fab6de3cf02a7ddc76976011"
+  },
+  "pair_sha256": "9f0748db4a13b228d1310f7ffde9608c09303657b102669b37d33525f01d1253",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Minter.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.201,
+        "signatures": 0.053,
+        "min_functions": 9
+      },
+      {
+        "contract": "Minter.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.2,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "BurnToll.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.188,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 70.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.51,
+      "mocha": {
+        "tests": 13,
+        "passes": 13,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 11.19,
+      "mocha": {
+        "tests": 13,
+        "passes": 13,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "DepegGuard.sol": {
+          "statements": 78.57,
+          "branches": 63.95,
+          "functions": 80.0,
+          "lines": 81.58
+        },
+        "ChainlinkPoRAdapter.sol": {
+          "statements": 0.0,
+          "branches": 0.0,
+          "functions": 0.0,
+          "lines": 0.0
+        },
+        "ComplianceModule.sol": {
+          "statements": 0.0,
+          "branches": 0.0,
+          "functions": 12.5,
+          "lines": 0.0
+        },
+        "Minter.sol": {
+          "statements": 4.76,
+          "branches": 6.25,
+          "functions": 23.08,
+          "lines": 5.0
+        },
+        "ReserveManager.sol": {
+          "statements": 0.0,
+          "branches": 0.0,
+          "functions": 8.33,
+          "lines": 0.0
+        },
+        "Stablecoin.sol": {
+          "statements": 40.0,
+          "branches": 12.5,
+          "functions": 33.33,
+          "lines": 40.0
+        },
+        "BurnToll.sol": {
+          "statements": 0.0,
+          "branches": 0.0,
+          "functions": 0.0,
+          "lines": 0.0
+        },
+        "IAggregatorV3.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "ChainlinkPoRMock.sol": {
+          "statements": 38.46,
+          "branches": 0.0,
+          "functions": 37.5,
+          "lines": 38.46
+        }
+      }
+    }
+  },
+  "accepted": true
+}

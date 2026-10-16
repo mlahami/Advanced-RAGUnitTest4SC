@@ -1,0 +1,39 @@
+{
+  "id": "job--bharat3645",
+  "domain": "freelance-bounty",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Job.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/bharat3645/GigX",
+    "commit": "b801e356ec9d7bb65119a2bc3ceb3b015190ab00",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Job.sol"
+    ],
+    "test_paths": [
+      "test/Job.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Job.sol": "a636f1cf3cd7e9ca2a42dcc59c4248ee484926ebe6228017adfa83815967f6ac",
+      "test/Job.test.js": "a2f6d04ba3f85474ef0718e091410b347b36d8265ba45a4930ee1d4ca8341cd3"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "Job.test.js",
+      "upstream_path": "test/Job.test.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Minimal freelance job posting/acceptance (27 lines). Primary 27 non-blank lines, closure 27 lines/1 files; 6 its, 14 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:07:25.147593+00:00"
+}

@@ -1,0 +1,82 @@
+{
+  "pair": "basic-dutch-auction--jicodes",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:20:02.144874+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/BasicDutchAuction.sol": "7438b413d4637230d5a4ee4d6f6878b787d84c1af7327385b0c401b6bfe663e3",
+    "LICENSE": "65d992a01974bf7b79c8a4e4229605d353183fa289b9387c2b702891fb6fd38d",
+    "manifest.json": "3c97ce558fe8f2b53d08b910a2363604ebbae48514cbe19dc60050ca475f49f0",
+    "test/BasicDutchAuction.js": "9d37394d44eb8a31e5ba53210de19912ec203e97277f28c166eb955ebc8a3e1f"
+  },
+  "pair_sha256": "12ef9fff52f2ee05bf11ebd449741bda3907900e20005c671421ddfafe40389c",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "BasicDutchAuction.sol",
+        "reference": "Auction.sol",
+        "structural": 0.19,
+        "signatures": 0.2,
+        "min_functions": 3
+      },
+      {
+        "contract": "BasicDutchAuction.sol",
+        "reference": "Crowdfunding.sol",
+        "structural": 0.161,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "BasicDutchAuction.sol",
+        "reference": "Escrow.sol",
+        "structural": 0.124,
+        "signatures": 0.0,
+        "min_functions": 3
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 2.69,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.72,
+      "mocha": {
+        "tests": 7,
+        "passes": 7,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "BasicDutchAuction.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

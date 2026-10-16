@@ -1,0 +1,192 @@
+{
+  "target_functions": [
+    {
+      "target_function": "deposit",
+      "corpus_functions": [
+        "6f20163f1d9d16dcdbae390d",
+        "ec9ae32e1b15fc90c5b7998e",
+        "f038c281a5a28aced7400fb5",
+        "ccada666ab9e03598bf94537",
+        "bf097429a33cf7f94d94c336",
+        "1f4d0313e989a16b3ee845f5",
+        "1ebcde38ff8e011769ff5eae",
+        "0be122da51118f6451505101"
+      ],
+      "candidate_tests": [
+        "3683bfc1315418b876b5bb43",
+        "c08401dff58fe0ce31ed8f58",
+        "54b33b1260413087a64db371",
+        "a97c56fe5d55fddbdf32c7df",
+        "daa4a3cb66f55306a1a9c1c7",
+        "8deda748fc462ee5315e9d62",
+        "a78a46a0dfa66524c7eb76e2",
+        "732a17a6fbaffdd753793c7a",
+        "78e3ac4bf68cb9e5de0fa1ab",
+        "0e95672e216316a46d401e72"
+      ]
+    },
+    {
+      "target_function": "withdraw",
+      "corpus_functions": [
+        "1f4d0313e989a16b3ee845f5",
+        "0c086c4482d0761209842ca9",
+        "db36e4c5f5936a2dd5368302",
+        "ccada666ab9e03598bf94537",
+        "4f78ad235647d82b4f4c073c",
+        "0a2da161b81eb3becd12402c",
+        "f9c8cdfadeac60c99ac12b34",
+        "cc94f481b4429a7767e28d10"
+      ],
+      "candidate_tests": [
+        "78e3ac4bf68cb9e5de0fa1ab",
+        "0e95672e216316a46d401e72",
+        "e0aed636f679466c7c08f79c",
+        "587e395e6a65f0ca57a9b0d1",
+        "f2184e84274493c42b217a6a",
+        "a78a46a0dfa66524c7eb76e2",
+        "732a17a6fbaffdd753793c7a",
+        "08016951e8bab144c4819bb5",
+        "28b059da261b5710f1ed3777",
+        "71cea823e3b0d723dc75f7c4",
+        "eb476c6e5d48046f6a59d1b5",
+        "e9902402dd32645ef05b1cd9",
+        "c05f3f27da4ec35f88173856",
+        "121f088caf09d4d198c46f01"
+      ]
+    },
+    {
+      "target_function": "availableTokens",
+      "corpus_functions": [
+        "2163652737d860fc6e0f1635",
+        "e037dc84676124aad0b9e1a6",
+        "6fdd01ccfd1c003d070b8237",
+        "96f0c0444a6aa1471e7bf159",
+        "7b02add5e8c22da1be17214b",
+        "44a296fb8867bb6de3b28de3",
+        "a65e37d427e6b97ecbff50f2",
+        "ef5dd1da5f7d9c275b6a5956"
+      ],
+      "candidate_tests": [
+        "3b1a15001fbd7cf09b229406",
+        "656c54c88e945c22c7c3e393",
+        "6458be015b776376d691f970",
+        "4e7002c153f138f3fe8e7b50",
+        "3a72dd9d135a266248c8eff7",
+        "a66e7ca111f7cd9d2c0a4fa2",
+        "7599f30eaae2032188b33cef",
+        "55a75595b4300c2fa3c60028",
+        "a5aaed9640e088004e18fc24"
+      ]
+    }
+  ],
+  "selected": [
+    7099,
+    7105,
+    677,
+    7100,
+    7103,
+    2304,
+    6035,
+    588,
+    2305,
+    6036
+  ],
+  "context_chars": 13444,
+  "per_target": 8,
+  "per_function": 2,
+  "reranker_input": "target function code",
+  "contract": "RateLimiter",
+  "retrieval_seconds": 1.6682781999697909,
+  "hits": [
+    {
+      "chunk_id": 7099,
+      "test_id": "3683bfc1315418b876b5bb43",
+      "pair": "vault--balmha",
+      "domain_group": "staking-yield",
+      "name": "emits a Deposit event",
+      "via_function": "6f20163f1d9d16dcdbae390d",
+      "chars": 863
+    },
+    {
+      "chunk_id": 7105,
+      "test_id": "78e3ac4bf68cb9e5de0fa1ab",
+      "pair": "vault--balmha",
+      "domain_group": "staking-yield",
+      "name": "reverts when a user with no deposit tries to withdraw",
+      "via_function": "1f4d0313e989a16b3ee845f5",
+      "chars": 877
+    },
+    {
+      "chunk_id": 677,
+      "test_id": "3b1a15001fbd7cf09b229406",
+      "pair": "authenticator--w3hc",
+      "domain_group": "access-control",
+      "name": "Should get the nonce for a given user",
+      "via_function": "2163652737d860fc6e0f1635",
+      "chars": 1850
+    },
+    {
+      "chunk_id": 7100,
+      "test_id": "c08401dff58fe0ce31ed8f58",
+      "pair": "vault--balmha",
+      "domain_group": "staking-yield",
+      "name": "reverts on a zero-value deposit",
+      "via_function": "6f20163f1d9d16dcdbae390d",
+      "chars": 816
+    },
+    {
+      "chunk_id": 7103,
+      "test_id": "0e95672e216316a46d401e72",
+      "pair": "vault--balmha",
+      "domain_group": "staking-yield",
+      "name": "emits a Withdraw event",
+      "via_function": "1f4d0313e989a16b3ee845f5",
+      "chars": 943
+    },
+    {
+      "chunk_id": 2304,
+      "test_id": "656c54c88e945c22c7c3e393",
+      "pair": "enerpay-remittance--edgadafi",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should return all remittance IDs for a user",
+      "via_function": "e037dc84676124aad0b9e1a6",
+      "chars": 2412
+    },
+    {
+      "chunk_id": 6035,
+      "test_id": "54b33b1260413087a64db371",
+      "pair": "secure-vault--abhishekabhang314",
+      "domain_group": "staking-yield",
+      "name": "should accept ETH and record user balance",
+      "via_function": "ec9ae32e1b15fc90c5b7998e",
+      "chars": 884
+    },
+    {
+      "chunk_id": 588,
+      "test_id": "e0aed636f679466c7c08f79c",
+      "pair": "areca-auction--nitishpatil18",
+      "domain_group": "auctions",
+      "name": "lets a refunded bidder withdraw",
+      "via_function": "0c086c4482d0761209842ca9",
+      "chars": 1599
+    },
+    {
+      "chunk_id": 2305,
+      "test_id": "6458be015b776376d691f970",
+      "pair": "enerpay-remittance--edgadafi",
+      "domain_group": "escrow-conditional-payments",
+      "name": "Should return empty array for user with no remittances",
+      "via_function": "e037dc84676124aad0b9e1a6",
+      "chars": 2326
+    },
+    {
+      "chunk_id": 6036,
+      "test_id": "a97c56fe5d55fddbdf32c7df",
+      "pair": "secure-vault--abhishekabhang314",
+      "domain_group": "staking-yield",
+      "name": "should emit Deposited event",
+      "via_function": "ec9ae32e1b15fc90c5b7998e",
+      "chars": 874
+    }
+  ]
+}

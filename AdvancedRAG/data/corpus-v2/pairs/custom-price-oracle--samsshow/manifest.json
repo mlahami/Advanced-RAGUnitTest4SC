@@ -1,0 +1,31 @@
+{
+  "id": "custom-price-oracle--samsshow",
+  "domain": "oracle",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "CustomPriceOracle.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/SamsShow/ShadowNox",
+    "commit": "0b1cdad52958e19eca86c05b13f094afe27ae14c",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/contracts/oracle/CustomPriceOracle.sol"
+    ],
+    "test_paths": [
+      "contracts/test/CustomPriceOracle.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/contracts/oracle/CustomPriceOracle.sol": "926e20794fee54b818bf578d6c04d8e007ed49f936e98cfadbc633c5fe7a14b9",
+      "contracts/test/CustomPriceOracle.test.js": "adb8d44511dd5e10a8168ae81f7017fd056457e7d084aea0452c5e535ca42234"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 335 lines, closure 335 lines, 1 files; 17 it blocks; history: 116 commits 2025-10-11..2025-10-23",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:29:35.851528+00:00"
+}

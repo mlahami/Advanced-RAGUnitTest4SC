@@ -1,0 +1,151 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 9,
+    "passes": 8,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-27T19:52:41.206Z",
+    "end": "2026-09-27T19:52:41.606Z",
+    "duration": 400
+  },
+  "tests": [
+    {
+      "title": "should deploy with correct initial state",
+      "fullTitle": "PaymentSplitter should deploy with correct initial state",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "should reject deployment with mismatched arrays",
+      "fullTitle": "PaymentSplitter should reject deployment with mismatched arrays",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "should reject deployment with empty payees array",
+      "fullTitle": "PaymentSplitter should reject deployment with empty payees array",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "should reject deployment with zero address payee",
+      "fullTitle": "PaymentSplitter should reject deployment with zero address payee",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "should reject deployment with zero share",
+      "fullTitle": "PaymentSplitter should reject deployment with zero share",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "should accept ether through receive function",
+      "fullTitle": "PaymentSplitter should accept ether through receive function",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "should distribute funds correctly",
+      "fullTitle": "PaymentSplitter should distribute funds correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "expected 1 to equal 0.",
+        "stack": "AssertionError: expected 1 to equal 0.\n    at Context.<anonymous> (test\\generated.test.js:106:85)"
+      }
+    },
+    {
+      "title": "should reject distribution when no funds are available",
+      "fullTitle": "PaymentSplitter should reject distribution when no funds are available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "should handle distribution with exact division",
+      "fullTitle": "PaymentSplitter should handle distribution with exact division",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "should distribute funds correctly",
+      "fullTitle": "PaymentSplitter should distribute funds correctly",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 9,
+      "err": {
+        "message": "expected 1 to equal 0.",
+        "stack": "AssertionError: expected 1 to equal 0.\n    at Context.<anonymous> (test\\generated.test.js:106:85)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "should deploy with correct initial state",
+      "fullTitle": "PaymentSplitter should deploy with correct initial state",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 26,
+      "err": {}
+    },
+    {
+      "title": "should reject deployment with mismatched arrays",
+      "fullTitle": "PaymentSplitter should reject deployment with mismatched arrays",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 12,
+      "err": {}
+    },
+    {
+      "title": "should reject deployment with empty payees array",
+      "fullTitle": "PaymentSplitter should reject deployment with empty payees array",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 5,
+      "err": {}
+    },
+    {
+      "title": "should reject deployment with zero address payee",
+      "fullTitle": "PaymentSplitter should reject deployment with zero address payee",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "should reject deployment with zero share",
+      "fullTitle": "PaymentSplitter should reject deployment with zero share",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 9,
+      "err": {}
+    },
+    {
+      "title": "should accept ether through receive function",
+      "fullTitle": "PaymentSplitter should accept ether through receive function",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 3,
+      "err": {}
+    },
+    {
+      "title": "should reject distribution when no funds are available",
+      "fullTitle": "PaymentSplitter should reject distribution when no funds are available",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "should handle distribution with exact division",
+      "fullTitle": "PaymentSplitter should handle distribution with exact division",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\development14-llm-only-ethers6-v1-rep02\\PaymentSplitter\\test\\generated.test.js",
+      "duration": 10,
+      "err": {}
+    }
+  ]
+}

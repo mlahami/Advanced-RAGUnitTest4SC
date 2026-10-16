@@ -1,0 +1,40 @@
+{
+  "id": "fund-chain-factory--sergio11",
+  "domain": "crowdfunding",
+  "level": "complex",
+  "origin": "human",
+  "targets": [
+    "FundChainFactory.sol",
+    "FundChainCampaign.sol",
+    "IFundChainCampaign.sol",
+    "IFundChainFactory.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/sergio11/fundchain_blockchain",
+    "commit": "bfe34107858fcd2002205f85f16ce2a21385c192",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/FundChainFactory.sol",
+      "contracts/FundChainCampaign.sol",
+      "contracts/IFundChainCampaign.sol",
+      "contracts/IFundChainFactory.sol"
+    ],
+    "test_paths": [
+      "test/FundChainFactory.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/FundChainFactory.sol": "c8efde703899b0c7874daae51f5e8b880aa42081cb735a698371492bb9414578",
+      "contracts/FundChainCampaign.sol": "76c629c049475e16affffc491d681deadb5cbfa6e66047d464c844d269c210eb",
+      "contracts/IFundChainCampaign.sol": "5dfb56fa01dbf16f6d16d109d9b2410dee2d062102f24f9946fe64814e0e9eed",
+      "contracts/IFundChainFactory.sol": "ca2a8a7b0cc15b47c1d4fde4a0e76d8d3cb1953d5d733d138a7b099534396003",
+      "test/FundChainFactory.test.js": "2536d4cc1765066b0a986037af5b27412608820a57b8eb82f4f79d882e9b7996"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "Factory deploying FundChainCampaign instances; only 7 its. Primary 77 non-blank lines, closure 369 lines/4 files; 7 its, 9 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:04.360195+00:00"
+}

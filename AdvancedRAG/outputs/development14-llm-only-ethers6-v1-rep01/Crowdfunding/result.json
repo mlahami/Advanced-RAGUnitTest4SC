@@ -1,0 +1,36 @@
+{
+  "contract": "Crowdfunding",
+  "status": "test_failures",
+  "prompt_sha256": "333e6db060346b9b248639bda602f241076c31a5e689139a290899b4f4497a87",
+  "generation_seconds": 11.530981299991254,
+  "usage": {
+    "prompt_tokens": 7076,
+    "total_tokens": 8613,
+    "completion_tokens": 1537,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.811244799988344
+  },
+  "passed_tests": 14,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Crowdfunding Contribute Should allow contributions before deadline",
+      "error": "Event \"Contribution\" doesn't exist in the contract"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

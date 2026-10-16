@@ -1,0 +1,36 @@
+{
+  "contract": "BondingCurve",
+  "status": "test_failures",
+  "prompt_sha256": "4f26e98e6a53bd6b17ab07c952582e6aba3932acb4e51cf04f7f81434a43b995",
+  "generation_seconds": 16.64101030002348,
+  "usage": {
+    "prompt_tokens": 12962,
+    "total_tokens": 14818,
+    "completion_tokens": 1856,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.878775399993174
+  },
+  "passed_tests": 0,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "BondingCurve \"before each\" hook for \"Should set the right owner\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'Insufficient ETH'"
+    }
+  ],
+  "coverage": {
+    "statements": 21.21,
+    "branches": 10.71,
+    "functions": 33.33,
+    "lines": 21.88
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

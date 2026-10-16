@@ -1,0 +1,82 @@
+{
+  "pair": "product-passport--ahmed1av",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:17:42.213448+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ProductPassport.sol": "07739b419cc54d271053bcc1f4b46cb71084477874b5098d27a916237f96774c",
+    "LICENSE": "c3abdcdc3e62445a4d9adf228e876797c548eabb6fa75a063b35a8c5dce78d94",
+    "manifest.json": "5993ad22dac96a75d4b82aca6c1d305a83b63f29f1e12423e875b40333815e92",
+    "test/ProductPassport.test.js": "0901f31ba6f7b6d3d3c7b38585f2cdf18b152f23ca36509c66f7b1b591757b5c"
+  },
+  "pair_sha256": "0ced0b33c0653bc7fabf20877c184265327f5c5e0e8aecbadcf1d31e5781e63c",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "ProductPassport.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.248,
+        "signatures": 0.0,
+        "min_functions": 9
+      },
+      {
+        "contract": "ProductPassport.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.224,
+        "signatures": 0.0,
+        "min_functions": 10
+      },
+      {
+        "contract": "ProductPassport.sol",
+        "reference": "PriceOracle.sol",
+        "structural": 0.205,
+        "signatures": 0.0,
+        "min_functions": 8
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.89,
+      "mocha": {
+        "tests": 59,
+        "passes": 59,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.04,
+      "mocha": {
+        "tests": 59,
+        "passes": 59,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "ProductPassport.sol": {
+          "statements": 100.0,
+          "branches": 94.44,
+          "functions": 100.0,
+          "lines": 100.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

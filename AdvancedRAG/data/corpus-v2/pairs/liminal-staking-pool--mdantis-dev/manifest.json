@@ -1,0 +1,32 @@
+{
+  "id": "liminal-staking-pool--mdantis-dev",
+  "domain": "staking",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "LiminalStakingPool.sol",
+    "LiminalToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/mdantis-dev/SOLIDITY-Liminal-Games",
+    "commit": "09a7484ac7f92e054eedc087b2d03431968e435b",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/LiminalStakingPool.sol",
+      "contracts/LiminalToken.sol"
+    ],
+    "test_paths": [
+      "test/LiminalStakingPool.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/LiminalStakingPool.sol": "e99ab3249aa32be3983da5e5a658f814f666cf02bbe5f04fef8eff8af3db60af",
+      "contracts/LiminalToken.sol": "4ccb7d99e266bb50c6b38ab3883e75be20d26a7cff6dbe371386508735524b3e",
+      "test/LiminalStakingPool.js": "463b5647ff29163be6c5cb0742bdd939f3c59b679c360db362f9b0ae6f379ddc"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "role-managed pool; 2025 repo, 0 stars",
+  "imported_utc": "2026-09-27T21:50:20.836015+00:00"
+}

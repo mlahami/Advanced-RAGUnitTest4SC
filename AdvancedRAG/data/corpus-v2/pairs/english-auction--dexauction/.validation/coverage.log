@@ -1,0 +1,32 @@
+
+Version
+=======
+> solidity-coverage: v0.8.16
+
+Instrumenting for coverage...
+=============================
+
+> EnglishAuction.sol
+> SKLERC721.sol
+
+Compilation:
+============
+
+Compiled 14 Solidity files successfully (evm target: paris).
+
+Network Info
+============
+> HardhatEVM: v2.26.3
+> network:    hardhat
+
+---------------------|----------|----------|----------|----------|----------------|
+File                 |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+---------------------|----------|----------|----------|----------|----------------|
+ contracts\          |    95.65 |    84.62 |      100 |    97.14 |                |
+  EnglishAuction.sol |    95.45 |     87.5 |      100 |    97.06 |             94 |
+  SKLERC721.sol      |      100 |       50 |      100 |      100 |                |
+---------------------|----------|----------|----------|----------|----------------|
+All files            |    95.65 |    84.62 |      100 |    97.14 |                |
+---------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json

@@ -1,0 +1,48 @@
+{
+  "contract": "AccessControl",
+  "status": "test_failures",
+  "prompt_sha256": "8819ccc759d79c8c78af8d3827dd80a4b20f74d32cd1275b3a44e5fff7c3b0cf",
+  "generation_seconds": 9.61847340001259,
+  "usage": {
+    "prompt_tokens": 6961,
+    "total_tokens": 7887,
+    "completion_tokens": 926,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.723901699995622
+  },
+  "passed_tests": 9,
+  "failed_tests": 4,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "AccessControl Role Management grantRole Should allow admin to grant role",
+      "error": "Event \"RoleGranted\" doesn't exist in the contract"
+    },
+    {
+      "title": "AccessControl Role Management grantRole Should revert when granting role to zero address",
+      "error": "Expected transaction to be reverted"
+    },
+    {
+      "title": "AccessControl Role Management revokeRole Should allow admin to revoke role",
+      "error": "Event \"RoleRevoked\" doesn't exist in the contract"
+    },
+    {
+      "title": "AccessControl Role Management revokeRole Should revert when revoking role from zero address",
+      "error": "Expected transaction to be reverted"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

@@ -1,0 +1,36 @@
+{
+  "contract": "CrossChainBridge",
+  "status": "test_failures",
+  "prompt_sha256": "69f0a41f962654b08924410f4046419751fc652aac552da4f81c108216cc493b",
+  "generation_seconds": 14.50787540001329,
+  "usage": {
+    "prompt_tokens": 11614,
+    "total_tokens": 13810,
+    "completion_tokens": 2196,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 5.066299700061791
+  },
+  "passed_tests": 0,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "CrossChainBridge \"before each\" hook for \"Should set the right owner\"",
+      "error": "Cannot read properties of undefined (reading 'getAddress')"
+    }
+  ],
+  "coverage": {
+    "statements": 0.0,
+    "branches": 0.0,
+    "functions": 0.0,
+    "lines": 0.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

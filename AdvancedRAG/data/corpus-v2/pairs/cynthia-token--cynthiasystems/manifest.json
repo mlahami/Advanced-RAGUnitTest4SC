@@ -1,0 +1,29 @@
+{
+  "id": "cynthia-token--cynthiasystems",
+  "domain": "fungible-token",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "CynthiaToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/cynthiasystems/CynthiaToken",
+    "commit": "0f5e7572cea7599da027b909999d78c0c96a9dd7",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/CynthiaToken.sol"
+    ],
+    "test_paths": [
+      "test/CynthiaToken.test.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/CynthiaToken.sol": "902f44fde1b273826b877417522cc20b17497c2d8a1561058b579ed21cab7dcf",
+      "test/CynthiaToken.test.js": "1ce6a41e281d4394c4dbd08632b1c14e4786cde6226827a892c74e69910c865f"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "ERC20 + Ownable mint/burn; 2024 project; 18 its",
+  "imported_utc": "2026-09-27T21:50:15.185761+00:00"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "voting--axysar",
+  "domain": "voting",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Voting.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/axysar/imavote",
+    "commit": "ef33645c63f6c078b253e8c0e240aae7f268d466",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Voting.sol"
+    ],
+    "test_paths": [
+      "test/Voting.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Voting.sol": "11d5cb80a61f48e9a05dd9f0bfb8292637bde5b0d3047175307510200fef2426",
+      "test/Voting.test.ts": "0d9f9ebf2b800f1e30d6b2ae48f8d168c8aed7ff4b9349c60d42776b5aa7dfce"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "Voting.test.js",
+      "upstream_path": "test/Voting.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 3,
+      "file": "Voting.test.js",
+      "upstream_path": "test/Voting.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "Voting"
+      ],
+      "file": "Voting.test.js",
+      "upstream_path": "test/Voting.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Simple candidate voting; basename identical to benchmark Voting - may be flagged. Primary 48 non-blank lines, closure 48 lines/1 files; 7 its, 11 expects; pragma ^0.8.20.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T12:05:59.705081+00:00"
+}

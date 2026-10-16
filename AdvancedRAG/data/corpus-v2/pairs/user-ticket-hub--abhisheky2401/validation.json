@@ -1,0 +1,103 @@
+{
+  "pair": "user-ticket-hub--abhisheky2401",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:17:29.213900+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/EventCore.sol": "3e01ef939b24d04c427a976442c636f1887962122ae3036741e45039c2e472f0",
+    "contracts/EventFactory.sol": "738b1e5b69cdf97d3c38982c106fcf21c0982c3e6a5e78c58ef48b564f0c25a9",
+    "contracts/TicketManager.sol": "43959b780e9cae317b09513c4b77eb6911008879a204f20a9e07726ef6a1f117",
+    "contracts/UserTicketHub.sol": "332bb364b0f9250d3dbfc8afa902b3e303d416378be23672ea7eb92ef3767347",
+    "LICENSE": "143cf4fc17e4717b50416608cb2be2ed4fdd11f546c50e6bde11ce4a8f184393",
+    "manifest.json": "7e8d62d54c2f9a00112ed2ed91efbc9db59d022e6585a03933dcd54754b6aa17",
+    "test/UserTicketHub.test.js": "7afe2e4a6b0e1f1b7fe88069c3912e0757c2ebbb0f69c9694efd5b63325f82a7"
+  },
+  "pair_sha256": "86613201b90b5a66d7483d584f44e87bb0c5cd4f4a49ed2d7dd3cbc1fb2580b8",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "TicketManager.sol",
+        "reference": "LendingPool.sol",
+        "structural": 0.192,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "TicketManager.sol",
+        "reference": "RateLimiter.sol",
+        "structural": 0.174,
+        "signatures": 0.0,
+        "min_functions": 3
+      },
+      {
+        "contract": "UserTicketHub.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.167,
+        "signatures": 0.0,
+        "min_functions": 11
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.55,
+      "mocha": {
+        "tests": 28,
+        "passes": 28,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.33,
+      "mocha": {
+        "tests": 28,
+        "passes": 28,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "UserTicketHub.sol": {
+          "statements": 95.4,
+          "branches": 61.84,
+          "functions": 100.0,
+          "lines": 95.4
+        },
+        "EventCore.sol": {
+          "statements": 83.33,
+          "branches": 37.5,
+          "functions": 75.0,
+          "lines": 83.33
+        },
+        "EventFactory.sol": {
+          "statements": 100.0,
+          "branches": 50.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "TicketManager.sol": {
+          "statements": 95.0,
+          "branches": 50.0,
+          "functions": 75.0,
+          "lines": 95.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

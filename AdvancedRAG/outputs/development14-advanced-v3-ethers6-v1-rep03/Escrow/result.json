@@ -1,0 +1,68 @@
+{
+  "contract": "Escrow",
+  "status": "test_failures",
+  "prompt_sha256": "6f35b3e7a84273bbe7ca2ee5f865ac86ec914c13d1c1b240385d7f7ce0259544",
+  "generation_seconds": 12.20908539998345,
+  "usage": {
+    "prompt_tokens": 10952,
+    "total_tokens": 12539,
+    "completion_tokens": 1587,
+    "prompt_tokens_details": {
+      "cached_tokens": 10880
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.824526199954562
+  },
+  "passed_tests": 2,
+  "failed_tests": 9,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Escrow Deployment Should set the correct seller, buyer, and arbiter",
+      "error": "expected '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266' to equal '0x70997970C51812dc3A010C7d01b50e0d17dc79C8'."
+    },
+    {
+      "title": "Escrow Funding Should allow buyer to fund the escrow",
+      "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+    },
+    {
+      "title": "Escrow Funding Should revert if funding with zero value",
+      "error": "Expected transaction to be reverted with reason 'invalid funding', but it reverted with reason 'only buyer'"
+    },
+    {
+      "title": "Escrow Funding Should revert if trying to fund twice",
+      "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+    },
+    {
+      "title": "Escrow Releasing funds \"before each\" hook for \"Should allow buyer to release funds\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+    },
+    {
+      "title": "Escrow Refunding \"before each\" hook for \"Should allow seller to refund\"",
+      "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+    },
+    {
+      "title": "Escrow State changes Should correctly update state when funding",
+      "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+    },
+    {
+      "title": "Escrow State changes Should correctly update state when releasing",
+      "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+    },
+    {
+      "title": "Escrow State changes Should correctly update state when refunding",
+      "error": "VM Exception while processing transaction: reverted with reason string 'only buyer'"
+    }
+  ],
+  "coverage": {
+    "statements": 12.5,
+    "branches": 6.25,
+    "functions": 50.0,
+    "lines": 12.5
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

@@ -1,0 +1,62 @@
+{
+  "id": "claim-token--sodofi",
+  "domain": "airdrop",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "ClaimToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/sodofi/celo-token-claim",
+    "commit": "b14c34d03cfdedbff668b139b6554715e105cd4c",
+    "license": "MIT",
+    "contract_paths": [
+      "packages/hardhat/contracts/ClaimToken.sol"
+    ],
+    "test_paths": [
+      "packages/hardhat/test/ClaimToken.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "packages/hardhat/contracts/ClaimToken.sol": "92a7ea8aa2e384effc9aeca517e51f69dda35f806bf5a77e817d8405b784e6e9",
+      "packages/hardhat/test/ClaimToken.test.ts": "31505b429cbf845b0823565c8e9d2109677358322ad1ea274ba0cf3914c2e718"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "ClaimToken.test.js",
+      "upstream_path": "packages/hardhat/test/ClaimToken.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 4,
+      "file": "ClaimToken.test.js",
+      "upstream_path": "packages/hardhat/test/ClaimToken.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "../typechain-types",
+      "names": [
+        "ClaimToken"
+      ],
+      "file": "ClaimToken.test.js",
+      "upstream_path": "packages/hardhat/test/ClaimToken.test.ts"
+    },
+    {
+      "kind": "type-only-import-elided",
+      "module": "@nomicfoundation/hardhat-ethers/signers",
+      "names": [
+        "SignerWithAddress"
+      ],
+      "file": "ClaimToken.test.js",
+      "upstream_path": "packages/hardhat/test/ClaimToken.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "Claim-once ERC20 airdrop token: each address may claim a fixed 10-token allocation (hasClaimed), capped by MAX_TOTAL_SUPPLY, plus owner mint; OZ v5 ERC20/Ownable/ReentrancyGuard. No Merkle proofs. 14 it blocks incl. OwnableUnauthorizedAccount custom error. Only 2 commits (June 2025, single author) - authorship plausible but thin history. Hardhat root packages/hardhat/.",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T15:52:00.360350+00:00"
+}

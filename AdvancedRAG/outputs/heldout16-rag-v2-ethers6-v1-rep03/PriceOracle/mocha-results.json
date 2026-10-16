@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 8,
+    "passes": 7,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-09-30T21:47:08.430Z",
+    "end": "2026-09-30T21:47:08.820Z",
+    "duration": 390
+  },
+  "tests": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "PriceOracle Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct configuration parameters",
+      "fullTitle": "PriceOracle Deployment Should set the correct configuration parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to add feeders",
+      "fullTitle": "PriceOracle Feeder Management Should allow owner to add feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should prevent adding duplicate feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent adding duplicate feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to remove feeders",
+      "fullTitle": "PriceOracle Feeder Management Should allow owner to remove feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from adding feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent non-owners from adding feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from removing feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent non-owners from removing feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should allow feeders to submit prices",
+      "fullTitle": "PriceOracle Price Submission Should allow feeders to submit prices",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 1,
+      "err": {
+        "message": "anyValue is not defined",
+        "stack": "ReferenceError: anyValue is not defined\n    at Context.<anonymous> (test\\generated.test.js:79:32)\n    at processImmediate (node:internal/timers:485:21)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Should allow feeders to submit prices",
+      "fullTitle": "PriceOracle Price Submission Should allow feeders to submit prices",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 1,
+      "err": {
+        "message": "anyValue is not defined",
+        "stack": "ReferenceError: anyValue is not defined\n    at Context.<anonymous> (test\\generated.test.js:79:32)\n    at processImmediate (node:internal/timers:485:21)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"Should prevent non-feeders from submitting prices\"",
+      "fullTitle": "PriceOracle \"before each\" hook for \"Should prevent non-feeders from submitting prices\"",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 18,
+      "err": {
+        "message": "Expected event \"PriceUpdated\" to be emitted, but it wasn't",
+        "stack": "AssertionError: Expected event \"PriceUpdated\" to be emitted, but it wasn't\n    at D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\node_modules\\@nomicfoundation\\hardhat-chai-matchers\\src\\internal\\emit.ts:130:20"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Should set the right owner",
+      "fullTitle": "PriceOracle Deployment Should set the right owner",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should set the correct configuration parameters",
+      "fullTitle": "PriceOracle Deployment Should set the correct configuration parameters",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to add feeders",
+      "fullTitle": "PriceOracle Feeder Management Should allow owner to add feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 18,
+      "err": {}
+    },
+    {
+      "title": "Should prevent adding duplicate feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent adding duplicate feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 16,
+      "err": {}
+    },
+    {
+      "title": "Should allow owner to remove feeders",
+      "fullTitle": "PriceOracle Feeder Management Should allow owner to remove feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 13,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from adding feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent non-owners from adding feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 6,
+      "err": {}
+    },
+    {
+      "title": "Should prevent non-owners from removing feeders",
+      "fullTitle": "PriceOracle Feeder Management Should prevent non-owners from removing feeders",
+      "file": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6\\runs\\heldout16-rag-v2-ethers6-v1-rep03\\PriceOracle\\test\\generated.test.js",
+      "duration": 7,
+      "err": {}
+    }
+  ]
+}

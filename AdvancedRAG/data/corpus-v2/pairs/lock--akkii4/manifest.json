@@ -1,0 +1,29 @@
+{
+  "id": "lock--akkii4",
+  "domain": "vesting-timelock",
+  "level": "simple",
+  "origin": "human",
+  "targets": [
+    "Lock.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/Akkii4/Solidity_HardhatJS-Boilerplate",
+    "commit": "c2e46f6f9402f68d389f756f54f7a2fe0a4cada4",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/Lock.sol"
+    ],
+    "test_paths": [
+      "test/Lock.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/Lock.sol": "9c6464ea28bb4adb426d52a6f2b0e11a1c9da3fc10c54259c6e1142744be8089",
+      "test/Lock.js": "f5faf2926c06070eb7c3d40e6c5bf030a7ccd21bb2ca5e71b979bb480ae011f0"
+    }
+  },
+  "transformations": [],
+  "convention": "hardhat2-ethers6",
+  "discovery_notes": "Hardhat sample Lock adapted in a 2023 JS boilerplate; OZ 4.x declared; close to default Hardhat sample",
+  "imported_utc": "2026-09-27T21:50:09.826947+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "contract": "Adoption",
+  "status": "test_failures",
+  "prompt_sha256": "fe6f6df66090fa390271199f4a44ecfb3a7cdfa480f77ecd1720d7849dd76092",
+  "generation_seconds": 6.853790299966931,
+  "usage": {
+    "prompt_tokens": 10745,
+    "total_tokens": 11502,
+    "completion_tokens": 757,
+    "prompt_tokens_details": {
+      "cached_tokens": 10624
+    },
+    "service_tier": "standard"
+  },
+  "syntax_valid": true,
+  "execution": {
+    "exit_code": 1,
+    "seconds": 4.552249400061555
+  },
+  "passed_tests": 6,
+  "failed_tests": 1,
+  "pending_tests": 0,
+  "failures": [
+    {
+      "title": "Adoption Adopt Should allow adoption of a pet",
+      "error": "Event \"Adoption\" doesn't exist in the contract"
+    }
+  ],
+  "coverage": {
+    "statements": 100.0,
+    "branches": 100.0,
+    "functions": 100.0,
+    "lines": 100.0
+  },
+  "coverage_scope": "target-contract-only; benchmark fixtures excluded"
+}

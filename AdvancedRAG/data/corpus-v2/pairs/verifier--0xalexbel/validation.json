@@ -1,0 +1,145 @@
+{
+  "pair": "verifier--0xalexbel",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T12:19:17.170772+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/ClaimIssuer.sol": "0f68d23d3aa906e9d0acf6df76ac4376007cfd32a773c2f3fcd6144e852423a8",
+    "contracts/IClaimIssuer.sol": "873ef35e26241322ca5cb5b052b1bd11d09491a22d7873a9bf953e7975204867",
+    "contracts/Identity.sol": "3a839b9ec0e632a4ffc7a6642c3b8f58f6a9fe9b2722992ea67ae34cc4643d6c",
+    "contracts/IERC734.sol": "42c9b8f861632d6a4166fb14b43e2e27a2496820aab0435f553ac02322686a53",
+    "contracts/IERC735.sol": "3e786411c57af963cfd8b17f896073bd6e42cf2ebbc337753efae338c51a3293",
+    "contracts/IIdentity.sol": "1e515a26dcf0d45021d1ff9dbb350b9a1f0ff9c9030920dd3b863570aa0a2c74",
+    "contracts/Storage.sol": "dbc0f7c02bdf0381aeba703735de74bed365953735fd5e676b9a6c1907b19be5",
+    "contracts/Structs.sol": "732f4891832a2fd8800218866e92dd303371a5e0df3a6c19c13dfae4a8cae7b2",
+    "contracts/Verifier.sol": "b277a7da949f74d3054101c9040edc22be806346be83e3e5231e596bfae2caaa",
+    "contracts/Version.sol": "5ddf6da986a43b4f065649b8397da5604aecde1ea8932662d64dc01b6e5d2336",
+    "LICENSE": "4e55a871b16329baf86dcd9a6d17881784e118ed54ac8c373358654456920561",
+    "manifest.json": "244337247444892fdb219bc8fe0ca7e0a894ce03cf97ee98c9d770800a603b58",
+    "test/verifier.test.js": "3ba8fc1f426caeb1377f7d82d96e474f620658f225bd859922ee1c13b206684a"
+  },
+  "pair_sha256": "d61349af7be840c9677a4962d6c9463dc8ae199be58dd0c71a327d565f836e68",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "Verifier.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.141,
+        "signatures": 0.0,
+        "min_functions": 11
+      },
+      {
+        "contract": "Version.sol",
+        "reference": "SimpleStorage.sol",
+        "structural": 0.127,
+        "signatures": 0.0,
+        "min_functions": 1
+      },
+      {
+        "contract": "Identity.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.113,
+        "signatures": 0.0,
+        "min_functions": 11
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.72,
+      "mocha": {
+        "tests": 27,
+        "passes": 27,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 9.73,
+      "mocha": {
+        "tests": 27,
+        "passes": 27,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "Verifier.sol": {
+          "statements": 96.67,
+          "branches": 83.82,
+          "functions": 92.86,
+          "lines": 96.67
+        },
+        "ClaimIssuer.sol": {
+          "statements": 60.0,
+          "branches": 43.75,
+          "functions": 80.0,
+          "lines": 60.0
+        },
+        "Identity.sol": {
+          "statements": 28.97,
+          "branches": 20.65,
+          "functions": 42.86,
+          "lines": 28.57
+        },
+        "IClaimIssuer.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IERC734.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IERC735.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "IIdentity.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Storage.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Structs.sol": {
+          "statements": 100.0,
+          "branches": 100.0,
+          "functions": 100.0,
+          "lines": 100.0
+        },
+        "Version.sol": {
+          "statements": 0.0,
+          "branches": 100.0,
+          "functions": 0.0,
+          "lines": 0.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

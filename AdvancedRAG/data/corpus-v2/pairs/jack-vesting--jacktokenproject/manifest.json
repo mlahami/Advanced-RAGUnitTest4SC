@@ -1,0 +1,42 @@
+{
+  "id": "jack-vesting--jacktokenproject",
+  "domain": "vesting",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "JackVesting.sol",
+    "JackToken.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/JackTokenProject/JackVesting",
+    "commit": "857354b633b663a90d6e3cd39260f05e15c87948",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/JackVesting.sol",
+      "contracts/JackToken.sol"
+    ],
+    "test_paths": [
+      "test/JackVesting.js"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/JackVesting.sol": "ba4a8f8d4972accae5bb866e73b4c9733c18aa11c8efea11cf1ff0b3dacf423c",
+      "contracts/JackToken.sol": "4f023e0c2a4305c2d3fc188a8a1df1df517a40bb38812ded194ba599a791f1d4",
+      "test/JackVesting.js": "72de0836ffb049467e14f695a72d85f38f78934ea9810833c7aabc9f1763a79f"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "test-import-path",
+      "before": "@nomicfoundation/hardhat-toolbox/network-helpers",
+      "after": "@nomicfoundation/hardhat-network-helpers",
+      "file": "JackVesting.js",
+      "upstream_path": "test/JackVesting.js"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "js",
+  "discovery_notes": "primary 120 lines, closure 149 lines, 2 files; 7 it blocks; history: 18 commits 2024-10-09..2024-12-27",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:31:28.443605+00:00"
+}

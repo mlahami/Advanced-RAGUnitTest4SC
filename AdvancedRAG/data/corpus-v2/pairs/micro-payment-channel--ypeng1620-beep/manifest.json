@@ -1,0 +1,44 @@
+{
+  "id": "micro-payment-channel--ypeng1620-beep",
+  "domain": "payments",
+  "level": "moderate",
+  "origin": "human",
+  "targets": [
+    "MicroPaymentChannel.sol"
+  ],
+  "source": {
+    "repository": "https://github.com/ypeng1620-beep/EM-A2A",
+    "commit": "d342ddeec75bc110dae00e880f28c8d1768f7227",
+    "license": "MIT",
+    "contract_paths": [
+      "contracts/src/MicroPaymentChannel.sol"
+    ],
+    "test_paths": [
+      "contracts/test/MicroPaymentChannel.test.ts"
+    ],
+    "license_file": "LICENSE",
+    "upstream_sha256": {
+      "contracts/src/MicroPaymentChannel.sol": "981f7f81fb873b7e170ca2a81d2d9eac9660314a8dbf4bc70af07cb227363054",
+      "contracts/test/MicroPaymentChannel.test.ts": "8f92dc2a77ff5d8880401b0fc2da9aadc9511dcd280abf2e6a85f5892c945f43"
+    }
+  },
+  "transformations": [
+    {
+      "kind": "ts-type-strip",
+      "tool": "node:module.stripTypeScriptTypes (mode strip)",
+      "file": "MicroPaymentChannel.test.js",
+      "upstream_path": "contracts/test/MicroPaymentChannel.test.ts"
+    },
+    {
+      "kind": "esm-to-cjs",
+      "statements": 2,
+      "file": "MicroPaymentChannel.test.js",
+      "upstream_path": "contracts/test/MicroPaymentChannel.test.ts"
+    }
+  ],
+  "convention": "hardhat2-ethers6",
+  "test_language": "ts",
+  "discovery_notes": "primary 139 lines, closure 139 lines, 1 files; 9 it blocks; history: 7 commits 2026-04-27..2026-04-29",
+  "authorship_doubt": false,
+  "imported_utc": "2026-09-28T10:33:53.752650+00:00"
+}

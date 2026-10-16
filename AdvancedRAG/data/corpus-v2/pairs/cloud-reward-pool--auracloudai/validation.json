@@ -1,0 +1,96 @@
+{
+  "pair": "cloud-reward-pool--auracloudai",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:47:01.217591+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/CloudRewardPool.sol": "049380116dc23c31224013a5b3b80f8511c730f489b8e80c9781e4cb13e9f32d",
+    "contracts/CloudStakeVault.sol": "e80815e552cb63e199233d06617c992aafeeb0f04a78cfe7e310f21808267744",
+    "contracts/CloudToken.sol": "fb7052a330b7042ddb4bc8f6d0e2bda922bd0dddc88c98611d3360ade1dfe5d0",
+    "LICENSE": "9db4fa38cdd20006f6eb1c0b67297e5bb3f0909010dcf88de7d071eca4537a34",
+    "manifest.json": "e92e0097ed698bf6ad753ec82882f145187b645345482324badcb78e3b5ee441",
+    "test/CloudRewardPool.test.js": "80f63b2ce5ccf8ee138864ddf8e1b749cbda0a4c2f83541bbc1b840ca59501c9"
+  },
+  "pair_sha256": "c9d5955aaf9100279d0e02a9d2f1b63eeda71967cf35685e576df77e854a7323",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "CloudRewardPool.sol",
+        "reference": "YieldVault.sol",
+        "structural": 0.259,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "CloudRewardPool.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.225,
+        "signatures": 0.0,
+        "min_functions": 11
+      },
+      {
+        "contract": "CloudRewardPool.sol",
+        "reference": "CrossChainBridge.sol",
+        "structural": 0.206,
+        "signatures": 0.0,
+        "min_functions": 9
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.67,
+      "mocha": {
+        "tests": 22,
+        "passes": 22,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.38,
+      "mocha": {
+        "tests": 22,
+        "passes": 22,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "CloudRewardPool.sol": {
+          "statements": 94.44,
+          "branches": 74.07,
+          "functions": 83.33,
+          "lines": 94.44
+        },
+        "CloudStakeVault.sol": {
+          "statements": 45.95,
+          "branches": 27.42,
+          "functions": 42.86,
+          "lines": 45.95
+        },
+        "CloudToken.sol": {
+          "statements": 25.0,
+          "branches": 0.0,
+          "functions": 25.0,
+          "lines": 25.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}

@@ -1,0 +1,89 @@
+{
+  "pair": "flow-pay-split--edhovx",
+  "validator": "corpus-v2-validate-pair-v2",
+  "validated_utc": "2026-09-28T10:56:15.595239+00:00",
+  "hardhat_project": "D:\\Recherche\\ExtensionENASE2026\\workspace\\RAGUnitTest4SC-\\src\\main\\resources\\HardhatProject-ethers6",
+  "hardhat_lock_sha256": "161b8a1e75e6200dbca669a7be6d00eaeaa3965b30719a7260310b21e44a29ef",
+  "hardhat_config_sha256": "41e6b438823d78b6571e1cab5c61cfe81533902f3885cfee4749ebe031f8c576",
+  "errors": [],
+  "warnings": [],
+  "files_sha256": {
+    "contracts/FlowPaySplit.sol": "4f1b5f96487676ba16b1de2cf01f92087486d159b8e615d7842ea242f47ed63f",
+    "contracts/MockUSDC.sol": "cb0e70710806ca11f8eba295b535ba8dd59c09aa81fae890a3fb13e0cb7fe0bb",
+    "LICENSE": "8100be2ed01082ae9166e82a517d1c67c447b133355d8b80dc13a817bc96bd92",
+    "manifest.json": "5bd2a3fa6c348361d12e05e7d4c8ab907856461f4c3b62c715e21e69c756668f",
+    "test/FlowPaySplit.js": "9efb1d3c95cc4cb368d74f58fa597157c30c6f80c87131639ef4eaedad282b0a"
+  },
+  "pair_sha256": "fc9ef8653341228a9c19b40b4c8107fb40e8cd515d3d171582e79d6b6f1446b7",
+  "leakage": {
+    "threshold_structural": 0.6,
+    "threshold_signatures": 0.8,
+    "closest": [
+      {
+        "contract": "FlowPaySplit.sol",
+        "reference": "NFTStaking.sol",
+        "structural": 0.188,
+        "signatures": 0.0,
+        "min_functions": 11
+      },
+      {
+        "contract": "FlowPaySplit.sol",
+        "reference": "InsurancePool.sol",
+        "structural": 0.166,
+        "signatures": 0.0,
+        "min_functions": 8
+      },
+      {
+        "contract": "FlowPaySplit.sol",
+        "reference": "SubscriptionService.sol",
+        "structural": 0.166,
+        "signatures": 0.0,
+        "min_functions": 10
+      }
+    ],
+    "flagged": []
+  },
+  "coverage_policy": "statements >= 80.0 % on primary target (manifest targets[0]) only",
+  "mutation": "not measured (validator v2)",
+  "execution": {
+    "test": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 4.39,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      }
+    },
+    "coverage": {
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.77,
+      "mocha": {
+        "tests": 10,
+        "passes": 10,
+        "failures": 0,
+        "pending": 0,
+        "failed": []
+      },
+      "targets": {
+        "FlowPaySplit.sol": {
+          "statements": 94.12,
+          "branches": 63.33,
+          "functions": 81.25,
+          "lines": 94.12
+        },
+        "MockUSDC.sol": {
+          "statements": 50.0,
+          "branches": 100.0,
+          "functions": 66.67,
+          "lines": 50.0
+        }
+      }
+    }
+  },
+  "accepted": true
+}
