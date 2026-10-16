@@ -33,7 +33,9 @@ TEXT = {
                cov='Mean target-contract coverage (all 30 contracts)', cov_keys=['Statements', 'Branches', 'Functions', 'Lines'],
                status_title='Final status of the 90 suites per method', suites='Number of suites',
                status_labels=['Fully passing', 'Failing tests', 'Syntax error', 'Execution error', 'Timeout', 'Pending tests'],
-               heat='Passing repetitions per contract (out of 3)',title='Corpus v2 campaign — three configurations',
+               heat='Fully passing repetitions per contract', heat_y='Repetitions (out of 3)',
+               heat_note='Only the {n} contracts with at least one fully passing suite are shown; the other {m} fail in all configurations and repetitions.',
+               title='Corpus v2 campaign — three configurations',
                subtitle='30 contracts · 3 repetitions · 90 suites per method · ethers 6 · Codestral 2508, temperature 0',
                notes=['FPSR is the primary endpoint. {pairs}',
                       'TPR = passing / (passing + failing) reported tests; failing hooks can prevent tests from running.',
@@ -46,7 +48,9 @@ TEXT = {
                cov='Couverture moyenne des contrats cibles (30 contrats)', cov_keys=['Instructions', 'Branches', 'Fonctions', 'Lignes'],
                status_title='Résultat final des 90 suites par méthode', suites='Nombre de suites',
                status_labels=['Suite réussie', 'Tests échoués', 'Erreur de syntaxe', "Erreur d’exécution", 'Délai dépassé', 'Tests en attente'],
-               heat='Répétitions réussies par contrat (sur 3)',title='Campagne corpus v2 — trois configurations',
+               heat='Répétitions entièrement réussies par contrat', heat_y='Répétitions (sur 3)',
+               heat_note='Seuls les {n} contrats ayant au moins une suite entièrement réussie sont représentés ; les {m} autres échouent dans toutes les configurations et répétitions.',
+               title='Campagne corpus v2 — trois configurations',
                subtitle='30 contrats · 3 répétitions · 90 suites par méthode · ethers 6 · Codestral 2508, température 0',
                notes=['FPSR : métrique principale. {pairs}',
                       'TPR = tests réussis / (réussis + échoués) ; les échecs de hooks peuvent empêcher certains tests de s’exécuter.',
@@ -162,18 +166,20 @@ def main():
         fig.subplots_adjust(top=.88, bottom=.14, hspace=.6, wspace=.2)
         fig.text(.06, .02, '\n'.join([notes[0]] + t['notes'][1:3] + [t['notes'][4]]), fontsize=8.5, color='#4B5563')
         save(fig, 'comparison_3_configurations')
-        # Per-contract heatmap.
-        grid = np.array([[passes[k][c] for k in KINDS] for c in contracts])
-        fig, ax = plt.subplots(figsize=(6.5, 11))
-        ax.imshow(grid, cmap='Greens', vmin=0, vmax=3, aspect='auto')
-        for i in range(grid.shape[0]):
-            for j in range(grid.shape[1]):
-                ax.text(j, i, str(grid[i, j]), ha='center', va='center', fontsize=9, color='white' if grid[i, j] >= 2 else '#172B4D')
-        ax.set_xticks(range(len(KINDS)), ticks)
-        ax.set_yticks(range(len(contracts)), contracts)
-        ax.xaxis.tick_top()
-        ax.set_title(t['heat'], fontsize=12, fontweight='bold', pad=30)
-        for s in ax.spines.values(): s.set_visible(False)
+        # Per-contract passes: grouped bars over the contracts solved at least once, most solved first.
+        solved = sorted((c for c in contracts if any(passes[k][c] for k in KINDS)),
+                        key=lambda c: (-sum(passes[k][c] for k in KINDS), c.lower()))
+        fig, ax = plt.subplots(figsize=(10, 4.6))
+        x = np.arange(len(solved)); w = .26
+        for i, k in enumerate(KINDS):
+            ax.bar(x + (i - (len(KINDS) - 1) / 2) * w, [passes[k][c] for c in solved], width=w * .92, color=COLORS[i], label=t['methods'][i])
+        ax.set_xticks(x, solved, rotation=35, ha='right')
+        ax.set_title(t['heat'], loc='left', fontsize=12, fontweight='bold', pad=15)
+        ax.set_ylim(0, 3.75); ax.set_yticks(range(4)); ax.set_ylabel(t['heat_y'])
+        ax.grid(axis='y', alpha=.18); ax.set_axisbelow(True)
+        ax.legend(loc='upper right', ncol=len(KINDS), frameon=False, fontsize=9)
+        fig.text(.06, .015, t['heat_note'].format(n=len(solved), m=len(contracts) - len(solved)), fontsize=8, color='#4B5563')
+        fig.subplots_adjust(bottom=.3, top=.88)
         save(fig, 'per_contract_passes')
     print(json.dumps({k: round(m['fpsr'], 1) for k, m in table.items()}, indent=2))
     print(f'Exports: {OUT}')
