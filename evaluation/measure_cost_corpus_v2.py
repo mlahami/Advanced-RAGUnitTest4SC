@@ -17,7 +17,7 @@ from statistics import mean, median
 ROOT = Path(__file__).resolve().parents[1]
 RUNS = ROOT / 'AdvancedRAG/outputs'
 OUT = RUNS / 'cost-corpus-v2-v1'
-CONFIGS = {'llm-only': 'LLM-only', 'rag-v2': 'RAGUnitTest4SC', 'advanced-v3': 'Advanced-RAGUnitTest4SC'}
+CONFIGS = {'llm-only': 'LLM-only', 'rag-v2': 'Modified-RAGUnitTest4SC', 'advanced-v3': 'Advanced-RAGUnitTest4SC'}
 SPLITS = ['development14', 'heldout16']  # run folder names only; results are reported over the 30 contracts
 REPS = ['rep01', 'rep02', 'rep03']
 

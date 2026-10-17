@@ -148,7 +148,7 @@ def report(args):
     lines = [f'# Relevance of the retrieved tests ({args.judge}, {PROTOCOL})', '',
              'One judge call per retrieved test; rubric 0/1/2 for template value (see judge_retrieval_relevance.py). '
              'Means over contracts; LLM-only has no retrieved context.', '',
-             '| Metric | ' + ' | '.join(CONFIGS.values()) + ' | Paired (Advanced - RAGUnitTest4SC) |', '|---|---:|---:|---|']
+             '| Metric | ' + ' | '.join(CONFIGS.values()) + ' | Paired (Advanced - Modified) |', '|---|---:|---:|---|']
     common = sorted({c for (_, c) in per if ('rag-v2', c) in per and ('advanced-v3', c) in per})
     summary = dict(contracts=len(common), metrics={})
     for m in names:

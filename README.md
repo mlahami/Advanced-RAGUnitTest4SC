@@ -23,7 +23,7 @@ The approach has three stages (see [docs/approach.pdf](docs/approach.pdf)):
 | Name in the paper | Folder suffix | Retrieval |
 |---|---|---|
 | LLM-only | `llm-only` | none |
-| RAGUnitTest4SC | `rag-v2` | dense MiniLM retrieval of the original pipeline on the validated corpus + function-to-test pivot |
+| Modified-RAGUnitTest4SC | `rag-v2` | retrieval strategy of the published RAGUnitTest4SC (MiniLM, exact L2, whole request as query, top 10) applied to the new knowledge base (validated corpus, structural units) + function-to-test pivot |
 | Advanced-RAGUnitTest4SC | `advanced-v3` | per-function code queries, dense + BM25, RRF, cross-encoder, pivot, round-robin |
 
 All three use the same prompt; only the block of retrieved tests differs. Generation: Codestral 2508,

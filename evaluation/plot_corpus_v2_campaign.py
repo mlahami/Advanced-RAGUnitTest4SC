@@ -28,7 +28,7 @@ KEYS = ['statements', 'branches', 'functions', 'lines']
 SCOPE = 'target-contract-only; benchmark fixtures excluded'
 STATUSES = ['passed', 'test_failures', 'syntax_error', 'execution_error', 'execution_timeout', 'incomplete_tests']
 TEXT = {
-    'en': dict(methods=['LLM-only', 'RAGUnitTest4SC', 'Advanced-RAGUnitTest4SC'],
+    'en': dict(methods=['LLM-only', 'Modified-RAGUnitTest4SC', 'Advanced-RAGUnitTest4SC'],
                pct='Percentage (%)', fpsr='Fully passing suites — FPSR (30 contracts)', tpr='Passing reported tests — TPR (30 contracts)',
                cov='Mean target-contract coverage (all 30 contracts)', cov_keys=['Statements', 'Branches', 'Functions', 'Lines'],
                status_title='Final status of the 90 suites per method', suites='Number of suites',
@@ -43,7 +43,7 @@ TEXT = {
                       'Every suite counts in the denominator; a completed run can contain failing tests or an error.',
                       'Repetitions use temperature 0 and seed 42; they are not independent draws.'],
                pairs='Paired vs LLM-only (exact McNemar, 30 contracts): {items}.'),
-    'fr': dict(methods=['LLM seul', 'RAGUnitTest4SC', 'Advanced-RAGUnitTest4SC'],
+    'fr': dict(methods=['LLM seul', 'Modified-RAGUnitTest4SC', 'Advanced-RAGUnitTest4SC'],
                pct='Pourcentage (%)', fpsr='Suites entièrement réussies — FPSR (30 contrats)', tpr='Tests rapportés réussis — TPR (30 contrats)',
                cov='Couverture moyenne des contrats cibles (30 contrats)', cov_keys=['Instructions', 'Branches', 'Fonctions', 'Lignes'],
                status_title='Résultat final des 90 suites par méthode', suites='Nombre de suites',
@@ -103,7 +103,7 @@ def main():
         out = OUT / lang
         out.mkdir(exist_ok=True)
         names = dict(zip(KINDS, t['methods']))
-        ticks = [m.replace('Advanced-', 'Advanced-\n') for m in t['methods']]
+        ticks = [m.replace('Advanced-', 'Advanced-\n').replace('Modified-', 'Modified-\n') for m in t['methods']]
         pair_note = t['pairs'].format(items='; '.join(f"{names[k]} {p['all30']['only_config_passes']} vs {p['all30']['only_llm_only_passes']}, p = {p['all30']['mcnemar_exact_p']:.3f}" for k, p in paired.items() if k in names))
 
         def style(ax, title, ymax=100):

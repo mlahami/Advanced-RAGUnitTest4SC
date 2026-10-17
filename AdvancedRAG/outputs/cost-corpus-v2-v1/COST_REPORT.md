@@ -2,7 +2,7 @@
 
 Codestral 2508 through the Mistral API (token counts returned by the API), 30 contracts x 3 repetitions = 90 suites per configuration. Retrieval runs on CPU once per contract and is shared by the repetitions. Means (medians).
 
-| | LLM-only | RAGUnitTest4SC | Advanced-RAGUnitTest4SC |
+| | LLM-only | Modified-RAGUnitTest4SC | Advanced-RAGUnitTest4SC |
 |---|---:|---:|---:|
 | Prompt tokens per suite | 7,569 (7,336) | 11,447 (11,256) | 11,417 (11,416) |
 | Completion tokens per suite | 1,422 (1,468) | 1,556 (1,618) | 1,577 (1,564) |
@@ -17,7 +17,7 @@ Codestral 2508 through the Mistral API (token counts returned by the API), 30 co
 | Execution time per suite (s) | 7.8 (5.7) | 5.0 (4.9) | 4.9 (4.6) |
 | End-to-end time per suite (s) | 20.1 (18.3) | 17.4 (16.9) | 19.9 (18.7) |
 
-RAGUnitTest4SC: retrieval max 7.23 s (cold start, model loading), min 0.04 s.
+Modified-RAGUnitTest4SC: retrieval max 7.23 s (cold start, model loading), min 0.04 s.
 
 Advanced-RAGUnitTest4SC: retrieval max 7.36 s (cold start, model loading), min 0.69 s.
 
