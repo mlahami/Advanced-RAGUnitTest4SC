@@ -155,9 +155,9 @@ def main():
         for (name, draw), note in zip(panels, notes):
             fig, ax = plt.subplots(figsize=(10, 6))
             draw(ax)
-            if name != 'fpsr':  # the FPSR figure of the paper carries no footnote
+            if name not in ('fpsr', 'coverage'):  # the figures of the paper carry no footnote
                 fig.text(.06, .015, note, fontsize=8, color='#4B5563', wrap=True)
-            fig.subplots_adjust(bottom=.25 if name != 'fpsr' else .15, top=.88)
+            fig.subplots_adjust(bottom={'fpsr': .15, 'coverage': .2}.get(name, .25), top=.88)
             save(fig, name)
         fig, axes = plt.subplots(2, 2, figsize=(16, 11.5))
         for ax, (_, draw) in zip(axes.flat, panels):
