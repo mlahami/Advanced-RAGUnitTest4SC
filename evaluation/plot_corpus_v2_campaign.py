@@ -179,8 +179,8 @@ def main():
         ax.set_ylim(0, 3.75); ax.set_yticks(range(4)); ax.set_ylabel(t['heat_y'])
         ax.grid(axis='y', alpha=.18); ax.set_axisbelow(True)
         ax.legend(loc='upper right', ncol=len(KINDS), frameon=False, fontsize=9)
-        fig.text(.06, .015, t['heat_note'].format(n=len(solved), m=len(contracts) - len(solved)), fontsize=8, color='#4B5563')
-        fig.subplots_adjust(bottom=.3, top=.88)
+        # No footnote: the caption of the paper states that only the contracts solved at least once are shown.
+        fig.subplots_adjust(bottom=.27, top=.88)
         save(fig, 'per_contract_passes')
     print(json.dumps({k: round(m['fpsr'], 1) for k, m in table.items()}, indent=2))
     print(f'Exports: {OUT}')
